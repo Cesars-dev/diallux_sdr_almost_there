@@ -1,0 +1,42 @@
+# secrets
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+# credentials / tokens (any location)
+*_token*.json
+*oauth*.json
+*credentials*.json
+google_*.json
+*.pem
+*.key
+# runtime artifacts
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+node_modules/
+*.db
+*.db-shm
+*.db-wal
+slots.db*
+*.log
+*.wav
+.DS_Store
+.kilo/
+.vscode/
+.claude/
+# evidence zone — never in git (DOCTRINE §4)
+research/
+# cold archive — tarballs only, never in git
+_cold_archive/
+# engine runtime outputs (already ignored by engine's own rules, restated)
+engine/tests/llm2llm/json_logs/
+engine/eval/*.json
+engine/public_repos/
+# old zones that no longer exist but keep guarded
+data/
+archive/

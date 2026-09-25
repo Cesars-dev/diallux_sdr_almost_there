@@ -1,0 +1,125 @@
+{
+  "chat_id": "chat_094d302d29a1c17561a32de7ef2",
+  "chat_type": "api_chat",
+  "agent_id": "agent_66df480ff8f240ee9e919d3b53",
+  "agent_version": 0,
+  "agent_name": "V7",
+  "retell_llm_dynamic_variables": {
+    "today_date": "2026-08-24",
+    "callback_number": "+12125550010"
+  },
+  "collected_dynamic_variables": {},
+  "chat_status": "ended",
+  "start_timestamp": 1787634008666,
+  "end_timestamp": 1787634023926,
+  "transcript": "User: yeah.\nAgent: Hey, I’ve got you here — what made you call in about Dialux today?\nUser: dunno, just curious.\nAgent: Gotcha, totally fair to just be curious.  \n\nSince you called in, are you more interested in getting more business from your calls, or in having someone cover missed calls when you’re busy?\nUser: dunno, whatever's fine.\nAgent: Totally get that, you’re just browsing.  \n\nQuick check so I don’t waste your time — do you run a business that gets incoming customer calls right now?\nUser: maybe.\nAgent: Makes sense, sounds like you’re still feeling it out.  \n\nWhen the phone does ring for you, is it more people wanting to book something, ask questions, or complain about issues?\nUser: whatever. dunno. maybe all three.\nAgent: Got it, sounds like you’re just kind of browsing today and not really looking to dig into this right now, and that’s totally fine. If you ever do want to stop losing business from missed calls, you can just call this same number and we can walk through it properly. Thanks for taking a minute with me — have a good one.",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_098cde94ebbcc1a5ace50700",
+      "role": "user",
+      "created_timestamp": 1787634009279,
+      "content": "yeah."
+    },
+    {
+      "message_id": "message_49a354e619d55d8649bc4652",
+      "role": "agent",
+      "created_timestamp": 1787634010409,
+      "content": "Hey, I’ve got you here — what made you call in about Dialux today?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_0e14e82f2d14bc8d89f5bc53",
+      "role": "user",
+      "created_timestamp": 1787634011944,
+      "content": "dunno, just curious."
+    },
+    {
+      "message_id": "message_05939c97fd7225ca0ad8dd3a",
+      "role": "agent",
+      "created_timestamp": 1787634013945,
+      "content": "Gotcha, totally fair to just be curious.  \n\nSince you called in, are you more interested in getting more business from your calls, or in having someone cover missed calls when you’re busy?",
+      "metadata": {
+        "response_id": 2
+      }
+    },
+    {
+      "message_id": "message_38cbac51a3f9736626478f9a",
+      "role": "user",
+      "created_timestamp": 1787634015352,
+      "content": "dunno, whatever's fine."
+    },
+    {
+      "message_id": "message_e6604385ee5a20b3c3ce3e8b",
+      "role": "agent",
+      "created_timestamp": 1787634016719,
+      "content": "Totally get that, you’re just browsing.  \n\nQuick check so I don’t waste your time — do you run a business that gets incoming customer calls right now?",
+      "metadata": {
+        "response_id": 3
+      }
+    },
+    {
+      "message_id": "message_5676186f48a46a5ef3919ea8",
+      "role": "user",
+      "created_timestamp": 1787634018282,
+      "content": "maybe."
+    },
+    {
+      "message_id": "message_51cac237770e4fd54a584014",
+      "role": "agent",
+      "created_timestamp": 1787634019902,
+      "content": "Makes sense, sounds like you’re still feeling it out.  \n\nWhen the phone does ring for you, is it more people wanting to book something, ask questions, or complain about issues?",
+      "metadata": {
+        "response_id": 4
+      }
+    },
+    {
+      "message_id": "message_c2826a08a6b24ffdc7858780",
+      "role": "user",
+      "created_timestamp": 1787634021709,
+      "content": "whatever. dunno. maybe all three."
+    },
+    {
+      "message_id": "message_761d5977d5877df0a8c3ecce",
+      "role": "agent",
+      "created_timestamp": 1787634023843,
+      "content": "Got it, sounds like you’re just kind of browsing today and not really looking to dig into this right now, and that’s totally fine. If you ever do want to stop losing business from missed calls, you can just call this same number and we can walk through it properly. Thanks for taking a minute with me — have a good one.",
+      "metadata": {
+        "response_id": 5
+      }
+    },
+    {
+      "message_id": "message_d8f84e11816d1784d264d8a0",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787634023844,
+      "tool_call_id": "call_Tdz8NZfrTygNvdpK5Vk5ShCM",
+      "name": "end_call",
+      "arguments": "{\"execution_message\":\"Got it, sounds like you’re just kind of browsing today and not really looking to dig into this right now, and that’s totally fine. If you ever do want to stop losing business from missed calls, you can just call this same number and we can walk through it properly. Thanks for taking a minute with me — have a good one.\"}",
+      "type": "end_call"
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/8272dc24657fcb2cd6ce1ca7b80b4d5f9b997e4af7c79d264224bafce35fa663/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "product_costs": [
+      {
+        "unit_price": 1.3,
+        "cost": 6.5,
+        "product": "gpt_5_1_text_testing"
+      },
+      {
+        "product": "gpt_4_1_text_testing",
+        "cost": 1.5,
+        "unit_price": 1.5
+      }
+    ],
+    "combined_cost": 8
+  },
+  "chat_analysis": {
+    "chat_successful": true,
+    "custom_analysis_data": {},
+    "chat_summary": "The user called in about Dialux but expressed only mild curiosity and gave non-committal answers to the agent's questions. The agent recognized the user's lack of engagement and ended the call politely, inviting the user to call back if interested in the future.",
+    "user_sentiment": "Neutral"
+  },
+  "data_storage_setting": "everything"
+}

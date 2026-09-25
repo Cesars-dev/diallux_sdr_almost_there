@@ -1,0 +1,131 @@
+{
+  "chat_id": "chat_f5adc3e513e349f5980d70ec692",
+  "chat_type": "api_chat",
+  "agent_id": "agent_b29a076e9a7295d407c8242390",
+  "agent_version": 0,
+  "agent_name": "Multi State Agent",
+  "collected_dynamic_variables": {
+    "callback_requested": "false",
+    "classified_intent": "boiler breakdown",
+    "past_customer": "false",
+    "intent_confirmed": "true",
+    "address_postcode": "",
+    "address_city": "",
+    "address_house_number": "",
+    "current_agent_state": "address",
+    "intent_clear": "true",
+    "address_street": "",
+    "greeting_exchanged": "true",
+    "customer_name": "Mike",
+    "previous_agent_state": "greeter"
+  },
+  "chat_status": "ended",
+  "start_timestamp": 1784632873001,
+  "end_timestamp": 1784632883290,
+  "transcript": "User: Hi, I need to book a boiler service. Actually wait \u2014 can I book a breakdown call-out instead? It's started making a noise.\nAgent: Right, breakdown call-out for a noisy boiler. Have you used us before?\nUser: Mike\nAgent: Mike, got it. Is the boiler showing an error code, or just making noise?",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_e6722885425a97694daf72b8",
+      "role": "user",
+      "created_timestamp": 1784632873651,
+      "content": "Hi, I need to book a boiler service. Actually wait \u2014 can I book a breakdown call-out instead? It's started making a noise."
+    },
+    {
+      "message_id": "message_23e57da76abcadf69c2b3e28",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784632875290,
+      "tool_call_id": "call_TjiWxFGnC2wqTbBnEz8m8Jis",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_37866c858bda77863f9cf1dd",
+      "role": "tool_call_result",
+      "created_timestamp": 1784632875291,
+      "tool_call_id": "call_TjiWxFGnC2wqTbBnEz8m8Jis",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"boiler breakdown\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_24d16c9424e36f9d54086f8c",
+      "role": "agent",
+      "created_timestamp": 1784632876642,
+      "content": "Right, breakdown call-out for a noisy boiler. Have you used us before?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_f1601fa3a024541819916b1f",
+      "role": "user",
+      "created_timestamp": 1784632877594,
+      "content": "Mike"
+    },
+    {
+      "message_id": "message_2375ec69e8fc16b8a40207b0",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784632879614,
+      "tool_call_id": "call_JykukuoEX6ZQL8vz7WED2OHK",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_3c9e28873657a412a7b69ed6",
+      "role": "tool_call_result",
+      "created_timestamp": 1784632879615,
+      "tool_call_id": "call_JykukuoEX6ZQL8vz7WED2OHK",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Mike\",\"classified_intent\":\"boiler breakdown\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_322580ce13b1c05fa7391248",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784632880814,
+      "tool_call_id": "call_cURhmZaF2OAQ6mqfpy9PuxNI",
+      "name": "transition_to_address",
+      "arguments": "{}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_fd24509a908542245ef76013",
+      "role": "state_transition",
+      "created_timestamp": 1784632880815,
+      "former_state_name": "greeter",
+      "new_state_name": "address"
+    },
+    {
+      "message_id": "message_e6de7593a40fd80afcf4b932",
+      "role": "agent",
+      "created_timestamp": 1784632882500,
+      "content": "Mike, got it. Is the boiler showing an error code, or just making noise?",
+      "metadata": {
+        "response_id": 2
+      }
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/92178b69ae2f357664615cecc11630c802046192273609962a9dfaa3cb8c1755/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "combined_cost": 6.7,
+    "product_costs": [
+      {
+        "unit_price": 2.6,
+        "product": "gpt_5_4_text_testing",
+        "cost": 5.2
+      },
+      {
+        "unit_price": 1.5,
+        "product": "gpt_4_1_text_testing",
+        "cost": 1.5
+      }
+    ]
+  },
+  "chat_analysis": {
+    "chat_summary": "The user initially requested a boiler service but changed their request to a breakdown call-out due to a noisy boiler. The agent confirmed the new intent, asked if the user was a past customer, and began collecting further details about the issue. The conversation progressed smoothly with the agent clarifying the situation and moving towards booking the call-out.",
+    "user_sentiment": "Positive",
+    "custom_analysis_data": {},
+    "chat_successful": true
+  },
+  "data_storage_setting": "everything"
+}

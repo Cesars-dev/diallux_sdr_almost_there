@@ -1,0 +1,19 @@
+[
+  {
+    "parameters": {
+      "type": "object",
+      "required": [
+        "booking_verified"
+      ],
+      "properties": {
+        "booking_verified": {
+          "description": "true ONLY when validate_booking returned valid:true.",
+          "type": "boolean"
+        }
+      }
+    },
+    "speak_during_transition": false,
+    "destination_state_name": "Closing",
+    "description": "When booking_verified is true - calendar accepted and validate_booking passed - transition to Closing."
+  }
+]

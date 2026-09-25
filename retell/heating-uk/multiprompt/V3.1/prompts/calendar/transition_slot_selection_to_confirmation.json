@@ -1,0 +1,21 @@
+{
+  "description": "Transition when slot is selected",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "selected_slot_start": {
+        "type": "string",
+        "description": "ISO 8601 UTC with Z suffix"
+      },
+      "slot_selected": {
+        "type": "boolean",
+        "description": "Whether a slot has been selected"
+      }
+    },
+    "required": [
+      "slot_selected",
+      "selected_slot_start"
+    ]
+  },
+  "destination_state_name": "confirmation"
+}

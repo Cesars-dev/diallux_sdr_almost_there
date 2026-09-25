@@ -1,0 +1,317 @@
+{
+  "chat_id": "chat_ffc04714b19dd7e0ac9ffe303a1",
+  "chat_type": "api_chat",
+  "agent_id": "agent_ff9d4b9646a85b82d7ce8fd837",
+  "agent_version": 0,
+  "agent_name": "Multi State Agent",
+  "collected_dynamic_variables": {
+    "callback_requested": "false",
+    "classified_intent": "Annual Boiler Service",
+    "past_customer": "false",
+    "intent_confirmed": "true",
+    "address_postcode": "",
+    "address_confirmed": "true",
+    "address_incomplete": "true",
+    "problem_category": "Annual Boiler Service",
+    "address_city": "Newcastle",
+    "boiler_make": "",
+    "address_house_number": "14",
+    "symptom_brief": "Boiler service requested",
+    "current_agent_state": "booking",
+    "intent_clear": "true",
+    "address_line1": "14 Victoria Terrace",
+    "address_street": "Victoria Terrace",
+    "greeting_exchanged": "true",
+    "error_code": "",
+    "customer_name": "",
+    "previous_agent_state": "address"
+  },
+  "chat_status": "ended",
+  "start_timestamp": 1784637792064,
+  "end_timestamp": 1784637819051,
+  "transcript": "User: Hi, I need a boiler service. I don't know my postcode off the top of my head.\nAgent: Got it, boiler service. No problem. What\u2019s your address?\nUser: It's 14 Victoria Terrace, Newcastle\nAgent: 14 Victoria Terrace, Newcastle \u2014 got it. What\u2019s the postcode?\nUser: Yes, that's correct\nAgent: I\u2019m checking the next available slots now.\nAgent: I\u2019ve got today after half five, or tomorrow afternoon. Which suits?\nUser: Tomorrow works\nAgent: I\u2019m checking tomorrow now.\nAgent: Tomorrow afternoon works. I\u2019ve got half twelve, or one o\u2019clock. Which suits?\nUser: Yes, book it\nAgent: Perfect. What\u2019s your name?\nUser: That's all, thanks",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_2a20803e41f1ac63eaf5c828",
+      "role": "user",
+      "created_timestamp": 1784637792696,
+      "content": "Hi, I need a boiler service. I don't know my postcode off the top of my head."
+    },
+    {
+      "message_id": "message_37c883d8ddd6e181db95ff7d",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637794339,
+      "tool_call_id": "call_s5AuOSMj3OkR4gc8b2i4PnCf",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_ff2c5b13720c05d8defd9346",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637794340,
+      "tool_call_id": "call_s5AuOSMj3OkR4gc8b2i4PnCf",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"Annual Boiler Service\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_a4ab388f918986d03a351c1c",
+      "role": "agent",
+      "created_timestamp": 1784637795764,
+      "content": "Got it, boiler service. No problem. What\u2019s your address?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_d8603a62af2a67df9c337cb6",
+      "role": "user",
+      "created_timestamp": 1784637796594,
+      "content": "It's 14 Victoria Terrace, Newcastle"
+    },
+    {
+      "message_id": "message_704d463309867b9af19fd7ac",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637798089,
+      "tool_call_id": "call_OxTSA99gn0buMyLNCoNdhOqG",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_7a8407bb3b8d6bc515635c8a",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637798090,
+      "tool_call_id": "call_OxTSA99gn0buMyLNCoNdhOqG",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"Annual Boiler Service\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"14\",\"address_street\":\"Victoria Terrace\",\"address_postcode\":\"\",\"address_city\":\"Newcastle\",\"callback_requested\":false,\"address_incomplete\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_1f6098935caaa83e9c536e1e",
+      "role": "agent",
+      "created_timestamp": 1784637799427,
+      "content": "14 Victoria Terrace, Newcastle \u2014 got it. What\u2019s the postcode?",
+      "metadata": {
+        "response_id": 2
+      }
+    },
+    {
+      "message_id": "message_3210cf928fcdd942d90278e8",
+      "role": "user",
+      "created_timestamp": 1784637800213,
+      "content": "Yes, that's correct"
+    },
+    {
+      "message_id": "message_fb232ed1071136068e6c70da",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637801647,
+      "tool_call_id": "call_57iAY8otRh9Qso32e77FR5Zr",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_481499e1854850210795ea17",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637801648,
+      "tool_call_id": "call_57iAY8otRh9Qso32e77FR5Zr",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"Annual Boiler Service\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"14\",\"address_street\":\"Victoria Terrace\",\"address_postcode\":\"\",\"address_city\":\"Newcastle\",\"callback_requested\":false,\"address_incomplete\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_ca166dd094e956f1d26a6d98",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637802673,
+      "tool_call_id": "call_NSKjQ3k4ExEjarAphz4NBzMs",
+      "name": "transition_to_address",
+      "arguments": "{}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_571409efb1b191ea88ffb3dd",
+      "role": "state_transition",
+      "created_timestamp": 1784637802674,
+      "former_state_name": "greeter",
+      "new_state_name": "address"
+    },
+    {
+      "message_id": "message_c8028649bb3e7dd0bc4920bd",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637804041,
+      "tool_call_id": "call_xC8E8EVKnKfLr2mW1VgQiS4q",
+      "name": "extract_address_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_1094c59f8a5258541c01d4c6",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637804042,
+      "tool_call_id": "call_xC8E8EVKnKfLr2mW1VgQiS4q",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"problem_category\":\"Annual Boiler Service\",\"symptom_brief\":\"Boiler service requested\",\"error_code\":\"\",\"boiler_make\":\"\",\"address_postcode\":\"N/A\",\"address_house_number\":\"14\",\"address_street\":\"Victoria Terrace\",\"address_line1\":\"14 Victoria Terrace\",\"address_city\":\"Newcastle\",\"address_confirmed\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_6ba830e696b2e0c2e24f2d3f",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637804986,
+      "tool_call_id": "call_ebBt061o4UEOD8oVXPGfWoB4",
+      "name": "transition_to_booking",
+      "arguments": "{}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_8610ea80d411eb59421684e7",
+      "role": "state_transition",
+      "created_timestamp": 1784637804987,
+      "former_state_name": "address",
+      "new_state_name": "booking"
+    },
+    {
+      "message_id": "message_d2647c1fabd5369abd9da0e5",
+      "role": "agent",
+      "created_timestamp": 1784637806345,
+      "content": "I\u2019m checking the next available slots now.",
+      "metadata": {
+        "response_id": 3
+      }
+    },
+    {
+      "message_id": "message_64caa336d5eee521cf5686b4",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637806346,
+      "tool_call_id": "call_XagH9ac6YavrsCBLIttJRQaI",
+      "name": "check_availability",
+      "arguments": "{\"start_time\":\"2026-07-21T00:00:00\",\"end_time\":\"2026-07-22T23:59:00\",\"timezone\":\"Europe/London\",\"execution_message\":\"I\u2019m checking the next available slots now.\"}",
+      "type": "check_availability_cal"
+    },
+    {
+      "message_id": "message_c09e01d4f4925e00feea6f28",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637806959,
+      "tool_call_id": "call_XagH9ac6YavrsCBLIttJRQaI",
+      "content": "{\"availability_for_selected_time\":[{\"date\":\"Tuesday, 2026 July 7/21/2026 British Summer Time\",\"availability_range\":[\"From 5:30 PM to 7:00 PM\"]},{\"date\":\"Wednesday, 2026 July 7/22/2026 British Summer Time\",\"availability_range\":[\"From 12:30 PM to 7:00 PM\"]}]}",
+      "successful": true
+    },
+    {
+      "message_id": "message_689c141c5163ce0b266f889e",
+      "role": "agent",
+      "created_timestamp": 1784637808272,
+      "content": "I\u2019ve got today after half five, or tomorrow afternoon. Which suits?",
+      "metadata": {
+        "response_id": 4
+      }
+    },
+    {
+      "message_id": "message_782efd22bcfdb9d06608e5fd",
+      "role": "user",
+      "created_timestamp": 1784637809092,
+      "content": "Tomorrow works"
+    },
+    {
+      "message_id": "message_6dd64677cc3282a0f055b1fc",
+      "role": "agent",
+      "created_timestamp": 1784637810813,
+      "content": "I\u2019m checking tomorrow now.",
+      "metadata": {
+        "response_id": 5
+      }
+    },
+    {
+      "message_id": "message_b421db3220c1c45f4637550a",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637810814,
+      "tool_call_id": "call_dGtdVVdI17SAqyczqY2XupFK",
+      "name": "check_availability",
+      "arguments": "{\"start_time\":\"2026-07-22T00:00:00\",\"end_time\":\"2026-07-23T23:59:00\",\"timezone\":\"Europe/London\",\"execution_message\":\"I\u2019m checking tomorrow now.\"}",
+      "type": "check_availability_cal"
+    },
+    {
+      "message_id": "message_0c2929095371ee943fa520d9",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637811243,
+      "tool_call_id": "call_dGtdVVdI17SAqyczqY2XupFK",
+      "content": "{\"availability_for_selected_time\":[{\"date\":\"Wednesday, 2026 July 7/22/2026 British Summer Time\",\"availability_range\":[\"From 12:30 PM to 7:00 PM\"]},{\"date\":\"Thursday, 2026 July 7/23/2026 British Summer Time\",\"availability_range\":[\"From 9:00 AM to 7:00 PM\"]}]}",
+      "successful": true
+    },
+    {
+      "message_id": "message_59ee94214ceb1aa619c7dc5f",
+      "role": "agent",
+      "created_timestamp": 1784637812820,
+      "content": "Tomorrow afternoon works. I\u2019ve got half twelve, or one o\u2019clock. Which suits?",
+      "metadata": {
+        "response_id": 6
+      }
+    },
+    {
+      "message_id": "message_2769e3a79349eb68b94ce59b",
+      "role": "user",
+      "created_timestamp": 1784637813610,
+      "content": "Yes, book it"
+    },
+    {
+      "message_id": "message_6f54021276f4a026993d41de",
+      "role": "agent",
+      "created_timestamp": 1784637815272,
+      "content": "Perfect. What\u2019s your name?",
+      "metadata": {
+        "response_id": 7
+      }
+    },
+    {
+      "message_id": "message_5deba5776c7953457ff23d95",
+      "role": "user",
+      "created_timestamp": 1784637816175,
+      "content": "That's all, thanks"
+    },
+    {
+      "message_id": "message_91e8ae8e7116fa2bb8dbbdb0",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637817979,
+      "tool_call_id": "call_FQtYOxwfMC41dTYAJvZrEIIb",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_fc0ecd3d9d24c04b1e3e01a6",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637817980,
+      "tool_call_id": "call_FQtYOxwfMC41dTYAJvZrEIIb",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"Annual Boiler Service\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"14\",\"address_street\":\"Victoria Terrace\",\"address_postcode\":\"\",\"address_city\":\"Newcastle\",\"callback_requested\":false,\"address_incomplete\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_c979435acb6b0d5789bf4d9e",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637819041,
+      "tool_call_id": "call_4QQBcBBhkKDRdZ8T8gfF3z9G",
+      "name": "end_call",
+      "arguments": "{}",
+      "type": "end_call"
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/5f3b11da31380957102664f5225c514c560f4e41c36d00cd3c72ddfca0fb3bee/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "combined_cost": 19.7,
+    "product_costs": [
+      {
+        "unit_price": 2.6,
+        "product": "gpt_5_4_text_testing",
+        "cost": 18.2
+      },
+      {
+        "unit_price": 1.5,
+        "product": "gpt_4_1_text_testing",
+        "cost": 1.5
+      }
+    ]
+  },
+  "chat_analysis": {
+    "chat_summary": "The user requested a boiler service but did not know their postcode. The agent collected the address, confirmed the service intent, checked availability, and offered booking slots. The user agreed to book for tomorrow afternoon but did not provide their name before ending the chat.",
+    "user_sentiment": "Neutral",
+    "custom_analysis_data": {},
+    "chat_successful": false
+  },
+  "data_storage_setting": "everything"
+}

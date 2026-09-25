@@ -1,0 +1,34 @@
+{
+  "scenario": 6,
+  "turn": 10,
+  "chat_id": "chat_2432707e2158befa27018f95d7f",
+  "caller_message": "That's all, thanks",
+  "agent_messages": [
+    {
+      "message_id": "message_7b5f0d4f1714781a2cabc65c",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639439898,
+      "tool_call_id": "call_5wA2sSD8MZ5dD3bMAhPhzKLR",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_b8433094b7d9b00cff3ed04e",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639439899,
+      "tool_call_id": "call_5wA2sSD8MZ5dD3bMAhPhzKLR",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"David\",\"classified_intent\":\"repair\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"14\",\"address_street\":\"Station Road\",\"address_postcode\":\"NE2 2BB\",\"address_city\":\"Newcastle\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_b2f8bae181da1e9c5bef9816",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639440818,
+      "tool_call_id": "call_xTPAewL8zRu4PiNZLkwZED8X",
+      "name": "end_call",
+      "arguments": "{}",
+      "type": "end_call"
+    }
+  ]
+}

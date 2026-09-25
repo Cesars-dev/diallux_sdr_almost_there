@@ -1,0 +1,17 @@
+{
+  "source": "Cal.com v2 API — cancel booking",
+  "endpoint": "POST https://api.cal.com/v2/bookings/{uid}/cancel",
+
+  "request_body": {
+    "cancellationReason": "Test booking — phone only verification"
+  },
+
+  "response": {
+    "data": {
+      "id": 22729270,
+      "uid": "gFps3DWTrGjbvJQ9mbk4Wn",
+      "status": "cancelled",
+      "cancellationReason": "API test clean-up"
+    }
+  }
+}

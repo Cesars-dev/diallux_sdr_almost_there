@@ -1,0 +1,154 @@
+[
+  {
+    "name": "extract_booking_details",
+    "description": "Capture `{{prospect_timezone}}` (if the prospect corrects it) and `{{booking_confirmed}}` = true — but ONLY after `create_livecall_booking` returns a successful booking. This is the gate that wraps up the call.",
+    "type": "extract_dynamic_variable",
+    "speak_after_execution": true,
+    "variables": [
+      {
+        "name": "prospect_timezone",
+        "description": "Prospect's timezone. Update ONLY if they correct it during booking. Conversion table — no guessing: Eastern/EST/EDT→America/New_York · Central/CST/CDT→America/Chicago · Mountain/MST/MDT→America/Denver · Pacific/PST/PDT→America/Los_Angeles. Speak friendly names aloud, store these exact values.",
+        "type": "enum",
+        "choices": [
+          "America/New_York",
+          "America/Chicago",
+          "America/Los_Angeles",
+          "America/Denver"
+        ]
+      },
+      {
+        "name": "booking_confirmed",
+        "description": "Set to TRUE only after create_livecall_booking returns a successful booking. Gates the move to the wrap-up.",
+        "type": "boolean"
+      },
+      {
+        "name": "selected_time",
+        "description": "The chosen slot's `time` value (bare local time in the prospect's zone), copied verbatim from the slot the prospect confirms — set it right after they confirm, before calling create_livecall_booking.",
+        "type": "string"
+      }
+    ]
+  },
+  {
+    "name": "query_livecall_slots",
+    "description": "Checks live-call availability and returns discrete slots ({day, time} — `time` is local in the requested timezone). Pass `slot_target_date` as YYYY-MM-DD for the day the prospect wants — convert 'tomorrow'/'next Monday' to the real date first; omit it only when they want the earliest possible. ALWAYS pass `timezone` = {{prospect_timezone}} so the returned `time` values are already in the prospect's zone — never convert or recompute them yourself. Every response is readable JSON year-200 style: on {\"ok\": false} read `error` and `message` and follow the message. On success offer the FIRST 1-2 slots — the earliest first.",
+    "type": "custom",
+    "method": "POST",
+    "url": "https://slots.diallux-ai.site/check_availability",
+    "headers": {},
+    "parameter_type": "json",
+    "query_params": {},
+    "args_at_root": false,
+    "timeout_ms": 15000,
+    "response_variables": {},
+    "speak_during_execution": false,
+    "speak_after_execution": true,
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "account_id": {
+          "type": "string",
+          "description": "Which calendar account to use. Fixed per agent — do not change.",
+          "default": "diallux_live"
+        },
+        "slot_target_date": {
+          "type": "string",
+          "description": "ISO date (YYYY-MM-DD) of the day the prospect wants a slot for. If they say 'next Monday'/'tomorrow'/'this week', convert to the actual date before passing. Omit only for 'as soon as possible'."
+        },
+        "timezone": {
+          "type": "string",
+          "description": "IANA timezone to return slot `time` values in — always pass {{prospect_timezone}}."
+        }
+      }
+    }
+  },
+  {
+    "name": "create_livecall_booking",
+    "description": "Creates the live call booking on Cal.com. CRITICAL: pass `time` as {{selected_time}} VERBATIM (the chosen slot's `time` value, bare local time in the prospect's zone — never recompute it, never use a UTC `iso`). Send `timezone` as {{prospect_timezone}} in IANA format — it must be the SAME zone the `time` value is in. ALWAYS use email = jaydiallux@gmail.com (system shared attendee) and format phoneNumber to E.164 from {{callback_number}} before calling.",
+    "event_type_id": 3801235,
+    "cal_api_key": "${CAL_KEY_2}",
+    "cal_fields": [
+      {
+        "name": "name",
+        "description": "attendee name",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "email",
+        "description": "attendee email (system shared: jaydiallux@gmail.com)",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "attendeePhoneNumber",
+        "description": "phone number in E.164 format (from {{callback_number}})",
+        "type": "string",
+        "required": false
+      },
+      {
+        "name": "title",
+        "description": "what this meeting is about",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "notes",
+        "description": "additional notes (industry, pain points)",
+        "type": "string",
+        "required": false
+      },
+      {
+        "name": "location",
+        "description": "location of the appointment (live/video call)",
+        "type": "string",
+        "required": false
+      },
+      {
+        "name": "guests",
+        "description": "additional guests (valid email addresses)",
+        "type": "array",
+        "required": false
+      },
+      {
+        "name": "rescheduleReason",
+        "description": "reason for reschedule",
+        "type": "string",
+        "required": false
+      }
+    ],
+    "type": "book_appointment_cal",
+    "speak_after_execution": true
+  },
+  {
+    "name": "check_current_date",
+    "description": "Returns today's REAL date in the system timezone (America/Mexico_City) as {{today_date}} (YYYY-MM-DD). Call it ONCE at the start of the booking flow — every date you compute (tomorrow, this week, next Monday) must be based on its result, never guessed.",
+    "type": "custom",
+    "method": "GET",
+    "url": "https://slots.diallux-ai.site/today",
+    "headers": {},
+    "query_params": {
+      "tz": "America/Mexico_City"
+    },
+    "parameter_type": "json",
+    "args_at_root": false,
+    "timeout_ms": 15000,
+    "response_variables": {
+      "today_date": "today"
+    },
+    "speak_during_execution": false,
+    "speak_after_execution": true
+  },
+  {
+    "name": "booking_completed",
+    "type": "extract_dynamic_variable",
+    "description": "Set booking_completed to true ONLY after: Only after the booking is confirmed on the calendar. Do not set it early.",
+    "speak_after_execution": false,
+    "variables": [
+      {
+        "name": "booking_completed",
+        "type": "boolean",
+        "description": "true ONLY after: Only after the booking is confirmed on the calendar."
+      }
+    ]
+  }
+]

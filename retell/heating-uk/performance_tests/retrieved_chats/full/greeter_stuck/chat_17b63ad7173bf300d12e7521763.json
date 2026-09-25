@@ -1,0 +1,80 @@
+{
+  "chat_id": "chat_17b63ad7173bf300d12e7521763",
+  "chat_type": "api_chat",
+  "agent_id": "agent_a2c81e038ca30c41c91cfab1bb",
+  "agent_version": 0,
+  "agent_name": "Multi State Agent",
+  "collected_dynamic_variables": {
+    "address_house_number": "",
+    "callback_requested": "false",
+    "intent_clear": "true",
+    "classified_intent": "plumbing service request",
+    "address_street": "",
+    "past_customer": "false",
+    "greeting_exchanged": "true",
+    "intent_confirmed": "false",
+    "address_postcode": "",
+    "customer_name": "",
+    "address_city": ""
+  },
+  "chat_status": "ended",
+  "start_timestamp": 1784632571613,
+  "end_timestamp": 1784632576074,
+  "transcript": "User: Hi, I need a plumber. Wait \u2014 are you a real person or one of those AI things?\nAgent: I'm Tom, the virtual receptionist for British Heat Services. What do you need help with?",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_7efe8cfdd2e64e263a49eb9f",
+      "role": "user",
+      "created_timestamp": 1784632572261,
+      "content": "Hi, I need a plumber. Wait \u2014 are you a real person or one of those AI things?"
+    },
+    {
+      "message_id": "message_0f672c05c587112fddff148a",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784632574050,
+      "tool_call_id": "call_GCXgFexTi95HYM787xL4nw92",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_07e02e8578415ad9790185c4",
+      "role": "tool_call_result",
+      "created_timestamp": 1784632574051,
+      "tool_call_id": "call_GCXgFexTi95HYM787xL4nw92",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"plumbing service request\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_717486551c8d6be2dcaec380",
+      "role": "agent",
+      "created_timestamp": 1784632575213,
+      "content": "I'm Tom, the virtual receptionist for British Heat Services. What do you need help with?",
+      "metadata": {
+        "response_id": 1
+      }
+    }
+  ],
+  "chat_cost": {
+    "combined_cost": 4.1,
+    "product_costs": [
+      {
+        "unit_price": 2.6,
+        "product": "gpt_5_4_text_testing",
+        "cost": 2.6
+      },
+      {
+        "unit_price": 1.5,
+        "product": "gpt_4_1_text_testing",
+        "cost": 1.5
+      }
+    ]
+  },
+  "chat_analysis": {
+    "chat_summary": "The user inquired about plumbing services and asked whether they were speaking to a real person or an AI. The agent introduced itself as a virtual receptionist and asked for more details about the user's needs.",
+    "user_sentiment": "Neutral",
+    "custom_analysis_data": {},
+    "chat_successful": true
+  },
+  "data_storage_setting": "everything"
+}

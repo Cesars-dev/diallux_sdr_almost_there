@@ -1,0 +1,97 @@
+[
+  {
+    "name": "extract_closer_details",
+    "description": "Capture the closer details: `{{objection_type}}`, `{{interest_level}}`, `{{last_name}}`, `{{monthly_leak}}`, `{{pain_points}}` (APPEND only). Call it when you've gauged interest and handled objections — once before you're done here.",
+    "type": "extract_dynamic_variable",
+    "speak_after_execution": true,
+    "variables": [
+      {
+        "name": "objection_type",
+        "description": "Type of objection raised during the conversation",
+        "type": "enum",
+        "choices": [
+          "pricing",
+          "competitor",
+          "timing",
+          "industry_fit",
+          "none",
+          "other"
+        ]
+      },
+      {
+        "name": "interest_level",
+        "description": "Prospect's interest level from their response to the value prop",
+        "type": "enum",
+        "choices": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      {
+        "name": "last_name",
+        "description": "Prospect's last name if mentioned during the conversation",
+        "type": "string"
+      },
+      {
+        "name": "monthly_leak",
+        "description": "The calculated monthly revenue loss from the leak reveal (their numbers only), e.g. \"$4,300/mo\"",
+        "type": "string"
+      },
+      {
+        "name": "pain_points",
+        "description": "Updated comma-separated list if NEW problems were mentioned. ADD to the existing list — keep all previous items.",
+        "type": "string"
+      }
+    ]
+  },
+  {
+    "name": "extract_leak_inputs",
+    "description": "Capture the three leak-reveal numbers the prospect just gave: `{{missed_calls_weekly}}` (voicemail calls per week, number only), `{{close_rate_pct}}` (percent as a number — 50 means 50%), `{{avg_job_value}}` (average job/ticket in dollars, number only). Call it once all three are captured, BEFORE calling calculate_monthly_leak. Never fabricate a number the prospect didn't give.",
+    "type": "extract_dynamic_variable",
+    "speak_after_execution": true,
+    "variables": [
+      {
+        "name": "missed_calls_weekly",
+        "description": "How many calls hit voicemail per week (number only, e.g. \"20\")",
+        "type": "string"
+      },
+      {
+        "name": "close_rate_pct",
+        "description": "Percent of missed calls that would have booked, as a number (e.g. \"50\" for 50%)",
+        "type": "string"
+      },
+      {
+        "name": "avg_job_value",
+        "description": "Average job or ticket value in dollars, number only (e.g. \"650\")",
+        "type": "string"
+      }
+    ]
+  },
+  {
+    "name": "calculate_monthly_leak",
+    "description": "Computes the monthly revenue leak from the prospect's own three numbers (already captured as {{missed_calls_weekly}}, {{close_rate_pct}}, {{avg_job_value}}). Call it ONLY after extract_leak_inputs has captured all three. It returns the leak rounded DOWN to the lower end (conservative) as {{monthly_leak}}, e.g. \"4,200\". If it returns ok:false with missing inputs, ask the prospect for the missing number(s) and call it again.",
+    "type": "code",
+    "code": "const w = Number(String(dv.missed_calls_weekly || \"\").replace(/[^0-9.]/g, \"\"));\nconst r = Number(String(dv.close_rate_pct || \"\").replace(/[^0-9.]/g, \"\"));\nconst a = Number(String(dv.avg_job_value || \"\").replace(/[$,]/g, \"\"));\nconst missing = [];\nif (!Number.isFinite(w) || w <= 0) missing.push(\"missed_calls_weekly\");\nif (!Number.isFinite(r) || r <= 0) missing.push(\"close_rate_pct\");\nif (!Number.isFinite(a) || a <= 0) missing.push(\"avg_job_value\");\nif (missing.length) return { ok: false, error: \"missing_leak_inputs\", missing };\nconst weekly = w * (r / 100) * a;\nconst monthly = Math.floor(weekly * 4.33 / 100) * 100;\nreturn { ok: true, weekly_leak: Math.floor(weekly).toLocaleString(\"en-US\"), monthly_leak: monthly.toLocaleString(\"en-US\") };",
+    "timeout_ms": 5000,
+    "response_variables": {
+      "monthly_leak": "monthly_leak",
+      "weekly_leak": "weekly_leak"
+    },
+    "speak_during_execution": false,
+    "speak_after_execution": true
+  },
+  {
+    "name": "closer_completed",
+    "type": "extract_dynamic_variable",
+    "description": "Set closer_completed to true ONLY after: When their interest level is gauged after quantifying their loss. Do not set it early.",
+    "speak_after_execution": false,
+    "variables": [
+      {
+        "name": "closer_completed",
+        "type": "boolean",
+        "description": "true ONLY after: When their interest level is gauged after quantifying their loss."
+      }
+    ]
+  }
+]

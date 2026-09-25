@@ -1,0 +1,34 @@
+{
+  "scenario": 6,
+  "turn": 1,
+  "chat_id": "chat_e0d668f6f1163479c63cc1e307d",
+  "caller_message": "Hi, so my boiler's been playing up for ages \u2014 it's a Worcester, had it about 8 years, the engineer who fitted it said it might need a new diverter valve eventually, but we've been putting it off, and now it's making this clicking sound every time it fires up, and the hot water goes cold after about 5 minutes...",
+  "agent_messages": [
+    {
+      "message_id": "message_b4ec369569947183ecab8b87",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639929163,
+      "tool_call_id": "call_OqVTEv4vogeeYIZDKiEdSVtC",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_5981a72be1f7388d0e1a651b",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639929164,
+      "tool_call_id": "call_OqVTEv4vogeeYIZDKiEdSVtC",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"repair\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_b086e806b57f5bba50148e42",
+      "role": "agent",
+      "created_timestamp": 1784639930562,
+      "content": "Right \u2014 clicking on firing up, and hot water goes cold.  \nWhat\u2019s the postcode?",
+      "metadata": {
+        "response_id": 1
+      }
+    }
+  ]
+}

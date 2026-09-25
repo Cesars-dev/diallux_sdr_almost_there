@@ -1,0 +1,177 @@
+{
+  "chat_id": "chat_161b667370f06d656be1d275e4f",
+  "chat_type": "api_chat",
+  "agent_id": "agent_ff9d4b9646a85b82d7ce8fd837",
+  "agent_version": 0,
+  "agent_name": "Multi State Agent",
+  "collected_dynamic_variables": {
+    "callback_requested": "false",
+    "classified_intent": "service",
+    "past_customer": "false",
+    "intent_confirmed": "true",
+    "address_postcode": "",
+    "address_incomplete": "true",
+    "address_city": "Hexham",
+    "address_house_number": "Rose Cottage",
+    "current_agent_state": "address",
+    "intent_clear": "true",
+    "address_street": "Mill Lane",
+    "greeting_exchanged": "true",
+    "customer_name": "",
+    "previous_agent_state": "greeter"
+  },
+  "chat_status": "ended",
+  "start_timestamp": 1784638404569,
+  "end_timestamp": 1784638424393,
+  "transcript": "User: Hi, I need a service. My address is Rose Cottage, Mill Lane, Hexham.\nAgent: Rose Cottage, Mill Lane, Hexham \u2014 got it. What\u2019s the postcode?\nUser: Yes, that's correct\nAgent: Brilliant. Who am I speaking with?\nUser: Today works\nAgent: Today works, noted. Who am I speaking with?\nUser: Yes, book it\nAgent: Right, I still need your name. Who am I speaking with?\nUser: That's all, thanks",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_99de3c787b2a7fa3ef5e3a54",
+      "role": "user",
+      "created_timestamp": 1784638405288,
+      "content": "Hi, I need a service. My address is Rose Cottage, Mill Lane, Hexham."
+    },
+    {
+      "message_id": "message_1a9469541dd35dc5336d973d",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638408399,
+      "tool_call_id": "call_voh8xOFYYWgMxk9wFiIJcgjl",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_04dbee58110e676b1234c189",
+      "role": "tool_call_result",
+      "created_timestamp": 1784638408400,
+      "tool_call_id": "call_voh8xOFYYWgMxk9wFiIJcgjl",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"service\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"Rose Cottage\",\"address_street\":\"Mill Lane\",\"address_postcode\":\"\",\"address_city\":\"Hexham\",\"callback_requested\":false,\"address_incomplete\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_4be29e9bef3cb6bce66dbfa7",
+      "role": "agent",
+      "created_timestamp": 1784638409202,
+      "content": "Rose Cottage, Mill Lane, Hexham \u2014 got it. What\u2019s the postcode?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_1ffb844f4f00cc05185b3a60",
+      "role": "user",
+      "created_timestamp": 1784638410023,
+      "content": "Yes, that's correct"
+    },
+    {
+      "message_id": "message_bfc44a8e46bd9d12532eab25",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638411729,
+      "tool_call_id": "call_yWCxFBAr143ydXjHrSSpBgzN",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_2990f6adc25a9e6b6926bf64",
+      "role": "tool_call_result",
+      "created_timestamp": 1784638411730,
+      "tool_call_id": "call_yWCxFBAr143ydXjHrSSpBgzN",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"service\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"Rose Cottage\",\"address_street\":\"Mill Lane\",\"address_postcode\":\"\",\"address_city\":\"Hexham\",\"callback_requested\":false,\"address_incomplete\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_ff30033f13d3a68e46dc1f71",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638417223,
+      "tool_call_id": "call_47DXBzeuY1mx1EVwAfFG6JW0",
+      "name": "transition_to_address",
+      "arguments": "{}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_e26cffa81388d75ce986b044",
+      "role": "state_transition",
+      "created_timestamp": 1784638417224,
+      "former_state_name": "greeter",
+      "new_state_name": "address"
+    },
+    {
+      "message_id": "message_f6d3291f4e16671d6c22901a",
+      "role": "agent",
+      "created_timestamp": 1784638418319,
+      "content": "Brilliant. Who am I speaking with?",
+      "metadata": {
+        "response_id": 2
+      }
+    },
+    {
+      "message_id": "message_930e75ad260318ea7b88635a",
+      "role": "user",
+      "created_timestamp": 1784638419263,
+      "content": "Today works"
+    },
+    {
+      "message_id": "message_7176efdf444464141e454272",
+      "role": "agent",
+      "created_timestamp": 1784638420564,
+      "content": "Today works, noted. Who am I speaking with?",
+      "metadata": {
+        "response_id": 3
+      }
+    },
+    {
+      "message_id": "message_93677d91a6ac2eac14153701",
+      "role": "user",
+      "created_timestamp": 1784638421452,
+      "content": "Yes, book it"
+    },
+    {
+      "message_id": "message_3a9ebf67501e00714d27a86f",
+      "role": "agent",
+      "created_timestamp": 1784638422766,
+      "content": "Right, I still need your name. Who am I speaking with?",
+      "metadata": {
+        "response_id": 4
+      }
+    },
+    {
+      "message_id": "message_410f4a292b3f35d2c8e61760",
+      "role": "user",
+      "created_timestamp": 1784638423639,
+      "content": "That's all, thanks"
+    },
+    {
+      "message_id": "message_1d60bcbd7b4ccaf92711ce48",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638424385,
+      "tool_call_id": "call_Z0ytWjtN7rtkr8E7z89pLVL8",
+      "name": "end_call",
+      "arguments": "{}",
+      "type": "end_call"
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/dd8bac4aed87bde99e61c2776bc520e4e103259f6a3ccfb421dd58e632123202/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "combined_cost": 11.9,
+    "product_costs": [
+      {
+        "unit_price": 2.6,
+        "product": "gpt_5_4_text_testing",
+        "cost": 10.4
+      },
+      {
+        "unit_price": 1.5,
+        "product": "gpt_4_1_text_testing",
+        "cost": 1.5
+      }
+    ]
+  },
+  "chat_analysis": {
+    "chat_summary": "The user requested a service at their address and confirmed the date for the service. However, the agent was unable to obtain the user's name or postcode, despite multiple attempts, before the user ended the conversation.",
+    "user_sentiment": "Neutral",
+    "custom_analysis_data": {},
+    "chat_successful": false
+  },
+  "data_storage_setting": "everything"
+}

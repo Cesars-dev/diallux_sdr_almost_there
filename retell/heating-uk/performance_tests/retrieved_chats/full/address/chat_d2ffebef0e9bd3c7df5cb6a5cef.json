@@ -1,0 +1,276 @@
+{
+  "chat_id": "chat_d2ffebef0e9bd3c7df5cb6a5cef",
+  "chat_type": "api_chat",
+  "agent_id": "agent_b29a076e9a7295d407c8242390",
+  "agent_version": 0,
+  "agent_name": "Multi State Agent",
+  "collected_dynamic_variables": {
+    "callback_requested": "false",
+    "classified_intent": "Annual Boiler Service",
+    "past_customer": "false",
+    "intent_confirmed": "true",
+    "address_postcode": "NE1 4AL",
+    "address_confirmed": "false",
+    "problem_category": "Annual Boiler Service",
+    "address_city": "",
+    "boiler_make": "",
+    "address_house_number": "42",
+    "current_agent_state": "address",
+    "symptom_brief": "Routine yearly boiler service requested",
+    "intent_clear": "true",
+    "address_line1": "",
+    "address_street": "",
+    "greeting_exchanged": "true",
+    "error_code": "",
+    "customer_name": "Priya",
+    "previous_agent_state": "greeter"
+  },
+  "chat_status": "ended",
+  "start_timestamp": 1784633023493,
+  "end_timestamp": 1784633053073,
+  "transcript": "User: Hi, I need a service on my boiler.\nAgent: British Heat Services, Tom speaking. Boiler service, got it. Have we been out before?\nUser: Priya\nAgent: Priya, thanks. Just to confirm, this is for a boiler service?\nUser: NE1 4AL\nAgent: Postcode N-E-1 4-A-L, got it. What's the house number or property name?\nUser: 42\nAgent: 42, thanks. And the street name?\nUser: Yes, correct\nAgent: Brilliant. What's the street name?\nUser: Can't do tomorrow, I'm at work\nAgent: No problem, you're not free tomorrow. What's the street name?\nUser: Thursday's no good either, I'm busy that day\nAgent: No problem, Thursday's awkward. What's the street name?\nUser: No, that doesn't work either. I'm really busy this week.\nAgent: No worries, busy this week. What's the street name?\nUser: No sorry, none of those work.\nAgent: That's fine. I still need the street name.",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_7eb8487a0cbe4e06a5e310c5",
+      "role": "user",
+      "created_timestamp": 1784633024099,
+      "content": "Hi, I need a service on my boiler."
+    },
+    {
+      "message_id": "message_4ee2c7f9828d4370bc8204f1",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784633025285,
+      "tool_call_id": "call_EJpUvwApdgzdhBMjVr0RKcFV",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_0fc20cd0131166d3818db273",
+      "role": "tool_call_result",
+      "created_timestamp": 1784633025286,
+      "tool_call_id": "call_EJpUvwApdgzdhBMjVr0RKcFV",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"Annual Boiler Service\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_4b0aaaee1bc081c2d0f32f58",
+      "role": "agent",
+      "created_timestamp": 1784633026493,
+      "content": "British Heat Services, Tom speaking. Boiler service, got it. Have we been out before?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_67c2a339eeeeb71e0abb76a8",
+      "role": "user",
+      "created_timestamp": 1784633027338,
+      "content": "Priya"
+    },
+    {
+      "message_id": "message_15aa1b39e9edc3ca9b56e15b",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784633028863,
+      "tool_call_id": "call_jyeG2WvvDQ7JSmJBtemEbx81",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_9b1e42c432df8e15ff16a6c3",
+      "role": "tool_call_result",
+      "created_timestamp": 1784633028864,
+      "tool_call_id": "call_jyeG2WvvDQ7JSmJBtemEbx81",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Priya\",\"classified_intent\":\"Annual Boiler Service\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_9c77b2c88d07f4096bf6b7ac",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784633029784,
+      "tool_call_id": "call_HzatzDf2Tq0cBdVokKcgewYY",
+      "name": "transition_to_address",
+      "arguments": "{}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_64254113ec52d7f51c3a2018",
+      "role": "state_transition",
+      "created_timestamp": 1784633029785,
+      "former_state_name": "greeter",
+      "new_state_name": "address"
+    },
+    {
+      "message_id": "message_d7665e4239e67418ae033cdd",
+      "role": "agent",
+      "created_timestamp": 1784633030903,
+      "content": "Priya, thanks. Just to confirm, this is for a boiler service?",
+      "metadata": {
+        "response_id": 2
+      }
+    },
+    {
+      "message_id": "message_d82e503fa9c0df258b72f952",
+      "role": "user",
+      "created_timestamp": 1784633031819,
+      "content": "NE1 4AL"
+    },
+    {
+      "message_id": "message_b3b51a0e2dcba608c68bb2fe",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784633033332,
+      "tool_call_id": "call_OQohxABh0gGmciNfJ6b3o3Ms",
+      "name": "extract_address_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_37170a817c8d022a14b484d2",
+      "role": "tool_call_result",
+      "created_timestamp": 1784633033333,
+      "tool_call_id": "call_OQohxABh0gGmciNfJ6b3o3Ms",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Priya\",\"problem_category\":\"Annual Boiler Service\",\"symptom_brief\":\"Routine yearly boiler service requested\",\"error_code\":\"\",\"boiler_make\":\"\",\"address_postcode\":\"NE1 4AL\",\"address_house_number\":\"\",\"address_street\":\"\",\"address_line1\":\"\",\"address_city\":\"\",\"address_confirmed\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_ca123dba3997e01ea7a540a9",
+      "role": "agent",
+      "created_timestamp": 1784633038763,
+      "content": "Postcode N-E-1 4-A-L, got it. What's the house number or property name?",
+      "metadata": {
+        "response_id": 3
+      }
+    },
+    {
+      "message_id": "message_fd4c7df85326cff5bece54bc",
+      "role": "user",
+      "created_timestamp": 1784633039498,
+      "content": "42"
+    },
+    {
+      "message_id": "message_70c25a266634d33a9d0c840c",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784633040838,
+      "tool_call_id": "call_hwNwCUWTNQ9vt9ocMBxcd7ly",
+      "name": "extract_address_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_6cc82d1aa90198bf42fbd679",
+      "role": "tool_call_result",
+      "created_timestamp": 1784633040839,
+      "tool_call_id": "call_hwNwCUWTNQ9vt9ocMBxcd7ly",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Priya\",\"problem_category\":\"Annual Boiler Service\",\"symptom_brief\":\"Routine yearly boiler service requested\",\"error_code\":\"\",\"boiler_make\":\"\",\"address_postcode\":\"NE1 4AL\",\"address_house_number\":\"42\",\"address_street\":\"\",\"address_line1\":\"\",\"address_city\":\"\",\"address_confirmed\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_2d56c7d14070efce1c978c9d",
+      "role": "agent",
+      "created_timestamp": 1784633042572,
+      "content": "42, thanks. And the street name?",
+      "metadata": {
+        "response_id": 4
+      }
+    },
+    {
+      "message_id": "message_679d622d7974ac5d00fc3c4c",
+      "role": "user",
+      "created_timestamp": 1784633043489,
+      "content": "Yes, correct"
+    },
+    {
+      "message_id": "message_c5a3fb1fdd0ce62113b5191e",
+      "role": "agent",
+      "created_timestamp": 1784633044732,
+      "content": "Brilliant. What's the street name?",
+      "metadata": {
+        "response_id": 5
+      }
+    },
+    {
+      "message_id": "message_531c9755628059027cceef80",
+      "role": "user",
+      "created_timestamp": 1784633045618,
+      "content": "Can't do tomorrow, I'm at work"
+    },
+    {
+      "message_id": "message_cd4f7b548ac53fac4ecd862f",
+      "role": "agent",
+      "created_timestamp": 1784633046560,
+      "content": "No problem, you're not free tomorrow. What's the street name?",
+      "metadata": {
+        "response_id": 6
+      }
+    },
+    {
+      "message_id": "message_46c8613dce37550e0b93e8d0",
+      "role": "user",
+      "created_timestamp": 1784633047350,
+      "content": "Thursday's no good either, I'm busy that day"
+    },
+    {
+      "message_id": "message_bdef77a608d749f16d8f0afd",
+      "role": "agent",
+      "created_timestamp": 1784633048448,
+      "content": "No problem, Thursday's awkward. What's the street name?",
+      "metadata": {
+        "response_id": 7
+      }
+    },
+    {
+      "message_id": "message_13470213e4af39d0e2bc8105",
+      "role": "user",
+      "created_timestamp": 1784633049245,
+      "content": "No, that doesn't work either. I'm really busy this week."
+    },
+    {
+      "message_id": "message_482d5a3f37bfec433a5fd7b1",
+      "role": "agent",
+      "created_timestamp": 1784633050388,
+      "content": "No worries, busy this week. What's the street name?",
+      "metadata": {
+        "response_id": 8
+      }
+    },
+    {
+      "message_id": "message_71d8f301cc7f715b9de9e663",
+      "role": "user",
+      "created_timestamp": 1784633051157,
+      "content": "No sorry, none of those work."
+    },
+    {
+      "message_id": "message_995ed06af8b8a3435675161a",
+      "role": "agent",
+      "created_timestamp": 1784633052314,
+      "content": "That's fine. I still need the street name.",
+      "metadata": {
+        "response_id": 9
+      }
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/f2522a57d56fef98b89813c1375eeae1f524057e546a247a52e2865c91d4767d/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "combined_cost": 24.9,
+    "product_costs": [
+      {
+        "unit_price": 2.6,
+        "product": "gpt_5_4_text_testing",
+        "cost": 23.400000000000002
+      },
+      {
+        "unit_price": 1.5,
+        "product": "gpt_4_1_text_testing",
+        "cost": 1.5
+      }
+    ]
+  },
+  "chat_analysis": {
+    "chat_summary": "The user, Priya, contacted the agent to request an annual boiler service and provided her postcode and house number. The agent repeatedly asked for the street name, but the user did not provide it and instead clarified her unavailability for several days. The conversation ended with the agent still needing the street name to proceed with the booking.",
+    "user_sentiment": "Neutral",
+    "custom_analysis_data": {},
+    "chat_successful": false
+  },
+  "data_storage_setting": "everything"
+}

@@ -1,0 +1,77 @@
+{
+  "scenario": 3,
+  "turn": 6,
+  "chat_id": "chat_928f27c32f25fdc984d1794af42",
+  "caller_message": "That's all, thanks",
+  "agent_messages": [
+    {
+      "message_id": "message_1e6d3eab075dc530295ab55e",
+      "role": "agent",
+      "created_timestamp": 1784639807560,
+      "content": "Brilliant, I\u2019m booking that in now.",
+      "metadata": {
+        "response_id": 8
+      }
+    },
+    {
+      "message_id": "message_003e0c049e059cccf6b3b395",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639807561,
+      "tool_call_id": "call_raQIxT5b5MhffJB7LiBeTfi7",
+      "name": "book_calendar",
+      "arguments": "{\"time\":\"2026-07-22T18:00:00\",\"timezone\":\"Europe/London\",\"name\":\"Sarah\",\"email\":\"jaydiallux@gmail.com\",\"attendeePhoneNumber\":null,\"title\":\"boiler pressure issue \u2014 Sarah\",\"notes\":\"CUSTOMER: Sarah | ADDRESS: 14 Victoria Terrace, Newcastle, NE4 5AB | PHONE: {{user_number}} | PROBLEM: boiler pressure issue | SYMPTOMS: boiler losing pressure | BOILER: boiler\",\"guests\":null,\"rescheduleReason\":null,\"execution_message\":\"Brilliant, I\u2019m booking that in now.\"}",
+      "type": "book_appointment_cal"
+    },
+    {
+      "message_id": "message_6c776bbc179d6ceffbf48688",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639812918,
+      "tool_call_id": "call_raQIxT5b5MhffJB7LiBeTfi7",
+      "content": "{\"status\":\"Successfully booked an appointment.\",\"booking_id\":22744333,\"booking_uid\":\"ggqcNNcCq3yB8GhaRCupNP\"}",
+      "successful": true
+    },
+    {
+      "message_id": "message_f282db1fc0119f166f3cd8b9",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639815073,
+      "tool_call_id": "call_7KkBIeGQaTK3cBQ2McXUTX04",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_b9e21640b5c5b621974b1eb5",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639815074,
+      "tool_call_id": "call_7KkBIeGQaTK3cBQ2McXUTX04",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Sarah\",\"classified_intent\":\"engineer visit\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"14\",\"address_street\":\"Victoria Terrace\",\"address_postcode\":\"NE4 5AB\",\"address_city\":\"Newcastle\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_70c7463631f9e5d8043f0906",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639816558,
+      "tool_call_id": "call_WYR28eVfkzq2GFu6IOVsdfBX",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_4c7986c19b6cbc1389332353",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639816559,
+      "tool_call_id": "call_WYR28eVfkzq2GFu6IOVsdfBX",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Sarah\",\"classified_intent\":\"engineer visit\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"14\",\"address_street\":\"Victoria Terrace\",\"address_postcode\":\"NE4 5AB\",\"address_city\":\"Newcastle\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_245851bc93518a4de732e22b",
+      "role": "agent",
+      "created_timestamp": 1784639817949,
+      "content": "Booked in, Sarah. Thanks for calling British Heat Services. Goodbye.",
+      "metadata": {
+        "response_id": 9
+      }
+    }
+  ]
+}

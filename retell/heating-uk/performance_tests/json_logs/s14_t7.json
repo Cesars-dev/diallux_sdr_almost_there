@@ -1,0 +1,34 @@
+{
+  "scenario": 14,
+  "turn": 7,
+  "chat_id": "chat_c853563d6d69fdfac1adfada062",
+  "caller_message": "Yes, book it",
+  "agent_messages": [
+    {
+      "message_id": "message_8d5641d75b171ab020c232d0",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638622851,
+      "tool_call_id": "call_ZLrj5RM4Y3UtbcrZqbsJQiCX",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_e5d75e293ca97abc0f8b3c22",
+      "role": "tool_call_result",
+      "created_timestamp": 1784638622852,
+      "tool_call_id": "call_ZLrj5RM4Y3UtbcrZqbsJQiCX",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Karen\",\"classified_intent\":\"boiler concern / possible breakdown\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"5\",\"address_street\":\"Elm St\",\"address_postcode\":\"NE6 6FF\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_d87cbe7fd65ec6dbc3890b71",
+      "role": "agent",
+      "created_timestamp": 1784638624054,
+      "content": "Booked noted. What town or city is the address in?",
+      "metadata": {
+        "response_id": 7
+      }
+    }
+  ]
+}

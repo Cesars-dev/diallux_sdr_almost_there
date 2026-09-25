@@ -1,0 +1,126 @@
+{
+  "chat_id": "chat_565c4bb4454dd7deaf966e29504",
+  "chat_type": "api_chat",
+  "agent_id": "agent_6226cbd3e8292efd1fea0581d8",
+  "agent_version": 0,
+  "agent_name": "HVAC Multi-Prompt Test (chat)",
+  "collected_dynamic_variables": {
+    "current_agent_state": "address",
+    "intent_clear": "true",
+    "classified_intent": "Annual Boiler Service",
+    "past_customer": "true",
+    "greeting_exchanged": "true",
+    "intent_confirmed": "true",
+    "customer_name": "Robert",
+    "previous_agent_state": "greeter"
+  },
+  "chat_status": "ended",
+  "start_timestamp": 1784626653864,
+  "end_timestamp": 1784626662462,
+  "transcript": "User: Hi, I need a service. Can Dave come out? He did our boiler last year.\nAgent: British Heat Services, Tom speaking. Boiler service, and Dave came last year.\n\nSo this is for your annual service, yeah?\nUser: Robert\nAgent: Robert, lovely.\n\nWhat\u2019s the postcode?",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_bd7ce79765f4d6d1082efb10",
+      "role": "user",
+      "created_timestamp": 1784626654514,
+      "content": "Hi, I need a service. Can Dave come out? He did our boiler last year."
+    },
+    {
+      "message_id": "message_777993501dcf24280019cbb6",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784626656054,
+      "tool_call_id": "call_6V4c1iF7qlYSGobodadh944d",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_6454289d071f0358bcebb9b3",
+      "role": "tool_call_result",
+      "created_timestamp": 1784626656055,
+      "tool_call_id": "call_6V4c1iF7qlYSGobodadh944d",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"Annual Boiler Service\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_d857bd214bb407580a28a296",
+      "role": "agent",
+      "created_timestamp": 1784626657371,
+      "content": "British Heat Services, Tom speaking. Boiler service, and Dave came last year.\n\nSo this is for your annual service, yeah?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_c52ff2dd7a84e022821d25f3",
+      "role": "user",
+      "created_timestamp": 1784626658228,
+      "content": "Robert"
+    },
+    {
+      "message_id": "message_1a7e7f1ef75abf56b0d3daa0",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784626659863,
+      "tool_call_id": "call_WzW71lSSM0LizMoZlYyXYiBZ",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_c42c826c74b793d843af3e43",
+      "role": "tool_call_result",
+      "created_timestamp": 1784626659864,
+      "tool_call_id": "call_WzW71lSSM0LizMoZlYyXYiBZ",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Robert\",\"classified_intent\":\"Annual Boiler Service\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_2f24d0bf6168a37067e5343c",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784626660631,
+      "tool_call_id": "call_0rYReIr5l6f4jsoQ5xpiFhVS",
+      "name": "transition_to_address",
+      "arguments": "{}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_1a701b2da78b4c22e05c39bb",
+      "role": "state_transition",
+      "created_timestamp": 1784626660632,
+      "former_state_name": "greeter",
+      "new_state_name": "address"
+    },
+    {
+      "message_id": "message_c2ca122710bcaa2fa909346a",
+      "role": "agent",
+      "created_timestamp": 1784626661605,
+      "content": "Robert, lovely.\n\nWhat\u2019s the postcode?",
+      "metadata": {
+        "response_id": 2
+      }
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/ccc01707720977ca896972a3481941831b19cb3eee4ba98358f34ab5a92c205b/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "combined_cost": 6.7,
+    "product_costs": [
+      {
+        "unit_price": 2.6,
+        "product": "gpt_5_4_text_testing",
+        "cost": 5.2
+      },
+      {
+        "unit_price": 1.5,
+        "product": "gpt_4_1_text_testing",
+        "cost": 1.5
+      }
+    ]
+  },
+  "chat_analysis": {
+    "chat_summary": "The user requested a boiler service and specifically asked for Dave, who serviced their boiler last year. The agent confirmed the intent for an annual boiler service and addressed the user by name, proceeding to request the postcode for further booking details.",
+    "user_sentiment": "Positive",
+    "custom_analysis_data": {},
+    "chat_successful": true
+  },
+  "data_storage_setting": "everything"
+}

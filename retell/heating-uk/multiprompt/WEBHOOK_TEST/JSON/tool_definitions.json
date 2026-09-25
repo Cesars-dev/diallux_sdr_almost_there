@@ -1,0 +1,85 @@
+{
+  "general_tools": [
+    {
+      "execution_message_type": "prompt",
+      "execution_message_description": "",
+      "speak_after_execution": true,
+      "name": "end_call",
+      "description": "End the call politely when the user has no more queries",
+      "type": "end_call",
+      "speak_during_execution": false
+    }
+  ],
+  "states": {
+    "booking_test": {
+      "tools": [
+        {
+          "type": "custom",
+          "name": "check_availability",
+          "description": "Check available appointment slots for a date. Returns discrete {day, time, iso} slots where time is local Europe/London.",
+          "url": "https://slots.diallux-ai.site/check_availability",
+          "method": "POST",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "slot_target_date": {
+                "type": "string",
+                "description": "ISO date (YYYY-MM-DD) of the day the caller wants a slot for. If the caller says 'next Monday'/'tomorrow'/'this week', convert to the actual date before passing. Omit only if the caller just wants the soonest available slot."
+              }
+            }
+          },
+          "args_at_root": true,
+          "speak_after_execution": false
+        },
+        {
+          "type": "book_appointment_cal",
+          "name": "book_calendar",
+          "description": "Book a confirmed appointment via Cal.com.",
+          "cal_api_key": "${CAL_KEY_3}",
+          "event_type_id": 6522694,
+          "timezone": "Europe/London",
+          "cal_fields": [
+            {
+              "name": "name",
+              "description": "attendee name",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "email",
+              "description": "attendee email",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "attendeePhoneNumber",
+              "description": "attendeePhoneNumber (E.164 format)",
+              "type": "string",
+              "required": false
+            },
+            {
+              "name": "title",
+              "description": "event title",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "notes",
+              "description": "notes",
+              "type": "string",
+              "required": false
+            },
+            {
+              "name": "location",
+              "description": "address of the appointment",
+              "type": "string",
+              "required": false
+            }
+          ],
+          "location_type": "somewhereElse",
+          "speak_after_execution": false
+        }
+      ]
+    }
+  }
+}

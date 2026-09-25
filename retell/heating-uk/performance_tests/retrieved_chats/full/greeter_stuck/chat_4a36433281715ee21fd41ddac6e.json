@@ -1,0 +1,52 @@
+{
+  "chat_id": "chat_4a36433281715ee21fd41ddac6e",
+  "chat_type": "api_chat",
+  "agent_id": "agent_b29a076e9a7295d407c8242390",
+  "agent_version": 0,
+  "agent_name": "Multi State Agent",
+  "collected_dynamic_variables": {},
+  "chat_status": "ended",
+  "start_timestamp": 1784632941687,
+  "end_timestamp": 1784632945255,
+  "transcript": "User: Hi, how much would you charge to fix a boiler that's leaking?\nAgent: Right, boiler leak. I can\u2019t quote a repair without seeing it.The call-out is \u00a375 + VAT weekdays 8\u20136, or \u00a3120 + VAT evenings, weekends and bank holidays.",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_e9065e4fd3895dbd9318795c",
+      "role": "user",
+      "created_timestamp": 1784632942312,
+      "content": "Hi, how much would you charge to fix a boiler that's leaking?"
+    },
+    {
+      "message_id": "message_5720f91db3a228490d1f5f78",
+      "role": "agent",
+      "created_timestamp": 1784632944402,
+      "content": "Right, boiler leak. I can\u2019t quote a repair without seeing it.The call-out is \u00a375 + VAT weekdays 8\u20136, or \u00a3120 + VAT evenings, weekends and bank holidays.",
+      "metadata": {
+        "response_id": 1
+      }
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/5b09a1ea78001165116517f5d0f38a73ff36ddac81c4720e12289b5f6a6086bb/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "combined_cost": 4.1,
+    "product_costs": [
+      {
+        "unit_price": 2.6,
+        "product": "gpt_5_4_text_testing",
+        "cost": 2.6
+      },
+      {
+        "unit_price": 1.5,
+        "product": "gpt_4_1_text_testing",
+        "cost": 1.5
+      }
+    ]
+  },
+  "chat_analysis": {
+    "chat_summary": "The user inquired about the cost to fix a leaking boiler. The agent explained that a repair quote cannot be given without inspection and provided the call-out charges for different times.",
+    "user_sentiment": "Neutral",
+    "custom_analysis_data": {},
+    "chat_successful": true
+  },
+  "data_storage_setting": "everything"
+}

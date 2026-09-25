@@ -1,0 +1,298 @@
+{
+  "chat_id": "chat_7a128f609c217dbe150785f276f",
+  "chat_type": "api_chat",
+  "agent_id": "agent_6226cbd3e8292efd1fea0581d8",
+  "agent_version": 0,
+  "agent_name": "HVAC Multi-Prompt Test (chat)",
+  "collected_dynamic_variables": {
+    "classified_intent": "Annual Boiler Service",
+    "past_customer": "false",
+    "intent_confirmed": "true",
+    "address_postcode": "NE1 4AL",
+    "address_confirmed": "true",
+    "problem_category": "Annual Boiler Service",
+    "address_city": "Newcastle upon Tyne",
+    "boiler_make": "",
+    "current_agent_state": "booking",
+    "symptom_brief": "annual boiler service requested",
+    "intent_clear": "true",
+    "address_line1": "42",
+    "greeting_exchanged": "true",
+    "error_code": "",
+    "customer_name": "Priya",
+    "previous_agent_state": "address"
+  },
+  "chat_status": "ended",
+  "start_timestamp": 1784626739094,
+  "end_timestamp": 1784626777260,
+  "transcript": "User: Hi, I need a service on my boiler.\nAgent: British Heat Services, Tom speaking.\n\nBoiler service, got it.\n\nSo this is for your annual service, yeah?\nUser: Priya\nAgent: Priya, lovely.\n\nAnnual boiler service.\n\nWhat\u2019s the postcode?\nUser: NE1 4AL\nAgent: Postcode N-E-1 4-A-L, got it.\n\nAnd the house number?\nUser: 42\nAgent: House number 42, right.\n\nWhat\u2019s the street name?\nUser: Yes, correct\nAgent: Right, I\u2019m checking the next available service slots now.\nAgent: Annual service, got it.\n\nI\u2019ve got today afternoon, or tomorrow morning.\n\nWhich suits?\nUser: Can't do tomorrow, I'm at work\nAgent: Tomorrow\u2019s no good, no problem.\n\nI can do today afternoon.\n\nDoes that work?\nUser: Thursday's no good either, I'm busy that day\nAgent: Thursday\u2019s no good, understood.\n\nWhat day works better for you?\nUser: No, that doesn't work either. I'm really busy this week.\nAgent: Busy this week, no worries.\n\nWhat about next week?\nUser: No sorry, none of those work.\nAgent: None of those work, alright.\n\nWhat day next week suits you?",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_f8347c8f362706b711dfb269",
+      "role": "user",
+      "created_timestamp": 1784626739740,
+      "content": "Hi, I need a service on my boiler."
+    },
+    {
+      "message_id": "message_b2d62952c6e9bd1a5a599475",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784626740996,
+      "tool_call_id": "call_0iOvDaJdySOIJBC4RjPYRU0t",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_2818723010e567310362316e",
+      "role": "tool_call_result",
+      "created_timestamp": 1784626740997,
+      "tool_call_id": "call_0iOvDaJdySOIJBC4RjPYRU0t",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"Annual Boiler Service\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_c539f11108412ff743ac22f9",
+      "role": "agent",
+      "created_timestamp": 1784626742573,
+      "content": "British Heat Services, Tom speaking.\n\nBoiler service, got it.\n\nSo this is for your annual service, yeah?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_d847c90acf5a575c384e3890",
+      "role": "user",
+      "created_timestamp": 1784626743405,
+      "content": "Priya"
+    },
+    {
+      "message_id": "message_3c785d93aae5736f96a1efa1",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784626744684,
+      "tool_call_id": "call_9rlz8jMDuFY3RfEl3cGFa0W3",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_e5ba4edd76f0875f976714d0",
+      "role": "tool_call_result",
+      "created_timestamp": 1784626744685,
+      "tool_call_id": "call_9rlz8jMDuFY3RfEl3cGFa0W3",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Priya\",\"classified_intent\":\"Annual Boiler Service\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_4ba83ea73b7d03685be75a9b",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784626745498,
+      "tool_call_id": "call_kwgfTevpym0Jwpdbi79u6YYW",
+      "name": "transition_to_address",
+      "arguments": "{}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_d0bc74f9a8bdac008188055b",
+      "role": "state_transition",
+      "created_timestamp": 1784626745499,
+      "former_state_name": "greeter",
+      "new_state_name": "address"
+    },
+    {
+      "message_id": "message_24335b07760c6907619b5c7c",
+      "role": "agent",
+      "created_timestamp": 1784626746784,
+      "content": "Priya, lovely.\n\nAnnual boiler service.\n\nWhat\u2019s the postcode?",
+      "metadata": {
+        "response_id": 2
+      }
+    },
+    {
+      "message_id": "message_8cbf047e75109dfcd4e4fe9c",
+      "role": "user",
+      "created_timestamp": 1784626747664,
+      "content": "NE1 4AL"
+    },
+    {
+      "message_id": "message_4d7c09de88e22f109e9bbab1",
+      "role": "agent",
+      "created_timestamp": 1784626748860,
+      "content": "Postcode N-E-1 4-A-L, got it.\n\nAnd the house number?",
+      "metadata": {
+        "response_id": 3
+      }
+    },
+    {
+      "message_id": "message_918db705eb2a7c4dc92d4f43",
+      "role": "user",
+      "created_timestamp": 1784626749713,
+      "content": "42"
+    },
+    {
+      "message_id": "message_ac04db3e712c23fa3d7f0413",
+      "role": "agent",
+      "created_timestamp": 1784626750776,
+      "content": "House number 42, right.\n\nWhat\u2019s the street name?",
+      "metadata": {
+        "response_id": 4
+      }
+    },
+    {
+      "message_id": "message_667c2e753569f5860cf46a3f",
+      "role": "user",
+      "created_timestamp": 1784626751606,
+      "content": "Yes, correct"
+    },
+    {
+      "message_id": "message_b87ffa1f239fa3908321e2a2",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784626754020,
+      "tool_call_id": "call_bBB3T6Nt4qJyn5NKuZ2xhPye",
+      "name": "extract_address_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_c949c1d66c835c15bfb8f45f",
+      "role": "tool_call_result",
+      "created_timestamp": 1784626754021,
+      "tool_call_id": "call_bBB3T6Nt4qJyn5NKuZ2xhPye",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Priya\",\"problem_category\":\"Annual Boiler Service\",\"symptom_brief\":\"annual boiler service requested\",\"error_code\":\"\",\"boiler_make\":\"\",\"address_postcode\":\"NE1 4AL\",\"address_line1\":\"42\",\"address_city\":\"Newcastle upon Tyne\",\"address_confirmed\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_cb983e909e59c847df9279d5",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784626754885,
+      "tool_call_id": "call_ktuBDksa5LGoD14UrkQgOXjB",
+      "name": "transition_to_booking",
+      "arguments": "{}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_e5a919d5b07535af54db69ee",
+      "role": "state_transition",
+      "created_timestamp": 1784626754886,
+      "former_state_name": "address",
+      "new_state_name": "booking"
+    },
+    {
+      "message_id": "message_e98ef7d81afec498cea6069f",
+      "role": "agent",
+      "created_timestamp": 1784626756349,
+      "content": "Right, I\u2019m checking the next available service slots now.",
+      "metadata": {
+        "response_id": 5
+      }
+    },
+    {
+      "message_id": "message_d9a16230cc2c4f3e03a9131f",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784626756350,
+      "tool_call_id": "call_7FXVaaC3LWUt0bl9P2lrzpCb",
+      "name": "check_availability",
+      "arguments": "{\"start_time\":\"2026-07-21T00:00:00\",\"end_time\":\"2026-07-22T23:59:00\",\"timezone\":\"Europe/London\",\"execution_message\":\"Right, I\u2019m checking the next available service slots now.\"}",
+      "type": "check_availability_cal"
+    },
+    {
+      "message_id": "message_4a4fc8d47b3de7e882bc2a5a",
+      "role": "tool_call_result",
+      "created_timestamp": 1784626756929,
+      "tool_call_id": "call_7FXVaaC3LWUt0bl9P2lrzpCb",
+      "content": "{\"availability_for_selected_time\":[{\"date\":\"Tuesday, 2026 July 7/21/2026 British Summer Time\",\"availability_range\":[\"From 1:00 PM to 7:00 PM\"]},{\"date\":\"Wednesday, 2026 July 7/22/2026 British Summer Time\",\"availability_range\":[\"From 9:30 AM to 7:00 PM\"]}]}",
+      "successful": true
+    },
+    {
+      "message_id": "message_cfd75edc2f8c653bc1a7d26e",
+      "role": "agent",
+      "created_timestamp": 1784626758166,
+      "content": "Annual service, got it.\n\nI\u2019ve got today afternoon, or tomorrow morning.\n\nWhich suits?",
+      "metadata": {
+        "response_id": 6
+      }
+    },
+    {
+      "message_id": "message_45f7c545de488f914c6e8e8f",
+      "role": "user",
+      "created_timestamp": 1784626758928,
+      "content": "Can't do tomorrow, I'm at work"
+    },
+    {
+      "message_id": "message_c62f491cad3a7e8f1640ba0d",
+      "role": "agent",
+      "created_timestamp": 1784626764538,
+      "content": "Tomorrow\u2019s no good, no problem.\n\nI can do today afternoon.\n\nDoes that work?",
+      "metadata": {
+        "response_id": 7
+      }
+    },
+    {
+      "message_id": "message_981da3cd1241f07fc84aa0ef",
+      "role": "user",
+      "created_timestamp": 1784626765384,
+      "content": "Thursday's no good either, I'm busy that day"
+    },
+    {
+      "message_id": "message_405170b100c9be174f69b64a",
+      "role": "agent",
+      "created_timestamp": 1784626766757,
+      "content": "Thursday\u2019s no good, understood.\n\nWhat day works better for you?",
+      "metadata": {
+        "response_id": 8
+      }
+    },
+    {
+      "message_id": "message_b844dfce39983722a3cef72a",
+      "role": "user",
+      "created_timestamp": 1784626767695,
+      "content": "No, that doesn't work either. I'm really busy this week."
+    },
+    {
+      "message_id": "message_3aca6fb78d23112bc5868f83",
+      "role": "agent",
+      "created_timestamp": 1784626774436,
+      "content": "Busy this week, no worries.\n\nWhat about next week?",
+      "metadata": {
+        "response_id": 9
+      }
+    },
+    {
+      "message_id": "message_f109515b1ac68b63bfd4d7f8",
+      "role": "user",
+      "created_timestamp": 1784626775198,
+      "content": "No sorry, none of those work."
+    },
+    {
+      "message_id": "message_ecf770ed311a86e84ac35e2e",
+      "role": "agent",
+      "created_timestamp": 1784626776403,
+      "content": "None of those work, alright.\n\nWhat day next week suits you?",
+      "metadata": {
+        "response_id": 10
+      }
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/717be004cf4477ae7a63d3e557dfac38309dde9c9806fe9b17f7c4b563420d9e/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "combined_cost": 27.5,
+    "product_costs": [
+      {
+        "unit_price": 2.6,
+        "product": "gpt_5_4_text_testing",
+        "cost": 26
+      },
+      {
+        "unit_price": 1.5,
+        "product": "gpt_4_1_text_testing",
+        "cost": 1.5
+      }
+    ]
+  },
+  "chat_analysis": {
+    "chat_summary": "The user, Priya, contacted the agent to schedule an annual boiler service. The agent collected address details and offered available service slots, but the user was unable to accept any of the proposed times due to a busy schedule. The conversation ended with the agent asking for Priya's availability next week.",
+    "user_sentiment": "Neutral",
+    "custom_analysis_data": {},
+    "chat_successful": false
+  },
+  "data_storage_setting": "everything"
+}

@@ -1,0 +1,60 @@
+{
+  "scenario": 7,
+  "turn": 5,
+  "chat_id": "chat_31ca7dbc536780cd71580c732fc",
+  "caller_message": "Yes, book it",
+  "agent_messages": [
+    {
+      "message_id": "message_0162a3503163f9f67a15ed19",
+      "role": "agent",
+      "created_timestamp": 1784639471280,
+      "content": "Booking that in now.",
+      "metadata": {
+        "response_id": 6
+      }
+    },
+    {
+      "message_id": "message_9772c8228e8bd57ec71ea112",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639471281,
+      "tool_call_id": "call_DRSik4vq2TWbr7byLQhSmNtb",
+      "name": "book_calendar",
+      "arguments": "{\"time\":\"2026-07-21T18:30:00\",\"timezone\":\"Europe/London\",\"name\":\"Emma\",\"email\":\"jaydiallux@gmail.com\",\"attendeePhoneNumber\":null,\"title\":\"boiler breakdown \u2014 Emma\",\"notes\":\"CUSTOMER: Emma | ADDRESS: 1 High St, Newcastle, NE3 3CC | PHONE: {{user_number}} | PROBLEM: boiler breakdown | SYMPTOMS: boiler not heating properly\",\"guests\":null,\"rescheduleReason\":null,\"execution_message\":\"Booking that in now.\"}",
+      "type": "book_appointment_cal"
+    },
+    {
+      "message_id": "message_d899347078c3858017ee8ab6",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639475212,
+      "tool_call_id": "call_DRSik4vq2TWbr7byLQhSmNtb",
+      "content": "{\"status\":\"Successfully booked an appointment.\",\"booking_id\":22744039,\"booking_uid\":\"dVyTCmUUQYg4wFnz3E9par\"}",
+      "successful": true
+    },
+    {
+      "message_id": "message_c24ec376e51dc89c4e56976d",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639476953,
+      "tool_call_id": "call_1QbngLghEXhjxnQPlebCvBSp",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_e9ef8dbc9e79d42806d41852",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639476954,
+      "tool_call_id": "call_1QbngLghEXhjxnQPlebCvBSp",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Emma\",\"classified_intent\":\"boiler breakdown\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"1\",\"address_street\":\"High St\",\"address_postcode\":\"NE3 3CC\",\"address_city\":\"Newcastle\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_baf6ea8e427227471bfb029b",
+      "role": "agent",
+      "created_timestamp": 1784639478388,
+      "content": "Brilliant, you're booked in. Is there anything else I can help you with?",
+      "metadata": {
+        "response_id": 7
+      }
+    }
+  ]
+}

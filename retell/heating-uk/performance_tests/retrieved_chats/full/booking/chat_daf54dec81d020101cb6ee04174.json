@@ -1,0 +1,259 @@
+{
+  "chat_id": "chat_daf54dec81d020101cb6ee04174",
+  "chat_type": "api_chat",
+  "agent_id": "agent_ff9d4b9646a85b82d7ce8fd837",
+  "agent_version": 0,
+  "agent_name": "Multi State Agent",
+  "collected_dynamic_variables": {
+    "callback_requested": "false",
+    "classified_intent": "service",
+    "past_customer": "false",
+    "intent_confirmed": "false",
+    "address_postcode": "N/A",
+    "address_confirmed": "true",
+    "address_incomplete": "false",
+    "problem_category": "",
+    "address_city": "Hexham",
+    "boiler_make": "",
+    "address_house_number": "Rose Cottage",
+    "symptom_brief": "",
+    "current_agent_state": "booking",
+    "intent_clear": "true",
+    "address_line1": "Rose Cottage Mill Lane",
+    "address_street": "Mill Lane",
+    "greeting_exchanged": "true",
+    "error_code": "",
+    "customer_name": "",
+    "previous_agent_state": "address"
+  },
+  "chat_status": "ended",
+  "start_timestamp": 1784637821939,
+  "end_timestamp": 1784637850375,
+  "transcript": "User: Hi, I need a service. My address is Rose Cottage, Mill Lane, Hexham.\nAgent: Rose Cottage, Mill Lane, Hexham \u2014 got it. Who am I speaking with?\nUser: Yes, that's correct\nAgent: I\u2019m just checking the next available slots now.\nAgent: I\u2019ve got today after half five, or tomorrow after half twelve. Which suits?\nUser: Today works\nAgent: Today works, lovely. What\u2019s your name?\nUser: Yes, book it\nAgent: Brilliant. What name should I put on the booking?\nUser: That's all, thanks",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_8b9624b97f9127efd725f9a5",
+      "role": "user",
+      "created_timestamp": 1784637822558,
+      "content": "Hi, I need a service. My address is Rose Cottage, Mill Lane, Hexham."
+    },
+    {
+      "message_id": "message_68fdef58ab57dd680e0de716",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637824209,
+      "tool_call_id": "call_d0LB0fgpEN4isvnnglzypzES",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_e2528657e3119479a6a0d640",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637824210,
+      "tool_call_id": "call_d0LB0fgpEN4isvnnglzypzES",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"service\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"Rose Cottage\",\"address_street\":\"Mill Lane\",\"address_postcode\":\"\",\"address_city\":\"Hexham\",\"callback_requested\":false,\"address_incomplete\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_7671adfcec3204212e8b8ae1",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637825132,
+      "tool_call_id": "call_iFKiYYoqiThuvmA5ysbdUAVI",
+      "name": "transition_to_address",
+      "arguments": "{}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_afcb91d4165d9932d4030a17",
+      "role": "state_transition",
+      "created_timestamp": 1784637825133,
+      "former_state_name": "greeter",
+      "new_state_name": "address"
+    },
+    {
+      "message_id": "message_3f614b132c74477eb1ee8b5c",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637826428,
+      "tool_call_id": "call_anJfF8fr1GL9kDmioOhm3qm6",
+      "name": "extract_address_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_88e58a71e7e3259d3510a6d1",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637826429,
+      "tool_call_id": "call_anJfF8fr1GL9kDmioOhm3qm6",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"problem_category\":\"\",\"symptom_brief\":\"\",\"error_code\":\"\",\"boiler_make\":\"\",\"address_postcode\":\"\",\"address_house_number\":\"Rose Cottage\",\"address_street\":\"Mill Lane\",\"address_line1\":\"Rose Cottage Mill Lane\",\"address_city\":\"Hexham\",\"address_confirmed\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_f3b21d7fb71b849e4e7e6cf7",
+      "role": "agent",
+      "created_timestamp": 1784637827821,
+      "content": "Rose Cottage, Mill Lane, Hexham \u2014 got it. Who am I speaking with?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_6f8a69ae7d92766f88316ae0",
+      "role": "user",
+      "created_timestamp": 1784637828569,
+      "content": "Yes, that's correct"
+    },
+    {
+      "message_id": "message_d7892aa4eabd63e2f660de24",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637834045,
+      "tool_call_id": "call_XbpUjxBTtuUzs1VYH0GYGYt5",
+      "name": "extract_address_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_67767d20b2965e3a8ad5565e",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637834046,
+      "tool_call_id": "call_XbpUjxBTtuUzs1VYH0GYGYt5",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"problem_category\":\"\",\"symptom_brief\":\"\",\"error_code\":\"\",\"boiler_make\":\"\",\"address_postcode\":\"N/A\",\"address_house_number\":\"Rose Cottage\",\"address_street\":\"Mill Lane\",\"address_line1\":\"Rose Cottage Mill Lane\",\"address_city\":\"Hexham\",\"address_confirmed\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_9b7aa2b1e90b6307c3b7e976",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637834991,
+      "tool_call_id": "call_X9bEvlsdSjz8fH1O01MB3ZNl",
+      "name": "transition_to_booking",
+      "arguments": "{}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_40e697442fa81b225e2786f4",
+      "role": "state_transition",
+      "created_timestamp": 1784637834992,
+      "former_state_name": "address",
+      "new_state_name": "booking"
+    },
+    {
+      "message_id": "message_4714f8543afe5f6e05f7c528",
+      "role": "agent",
+      "created_timestamp": 1784637836448,
+      "content": "I\u2019m just checking the next available slots now.",
+      "metadata": {
+        "response_id": 2
+      }
+    },
+    {
+      "message_id": "message_956cd31cc48d195d5572dccc",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637836449,
+      "tool_call_id": "call_6b22TidoKbQk5nAsgK4NZxzV",
+      "name": "check_availability",
+      "arguments": "{\"start_time\":\"2026-07-21T00:00:00\",\"end_time\":\"2026-07-22T23:59:00\",\"timezone\":\"Europe/London\",\"execution_message\":\"I\u2019m just checking the next available slots now.\"}",
+      "type": "check_availability_cal"
+    },
+    {
+      "message_id": "message_1728d39bcdda3052e55c9c6e",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637836995,
+      "tool_call_id": "call_6b22TidoKbQk5nAsgK4NZxzV",
+      "content": "{\"availability_for_selected_time\":[{\"date\":\"Tuesday, 2026 July 7/21/2026 British Summer Time\",\"availability_range\":[\"From 5:30 PM to 7:00 PM\"]},{\"date\":\"Wednesday, 2026 July 7/22/2026 British Summer Time\",\"availability_range\":[\"From 12:30 PM to 7:00 PM\"]}]}",
+      "successful": true
+    },
+    {
+      "message_id": "message_0200aec966f745f4be3ac381",
+      "role": "agent",
+      "created_timestamp": 1784637842483,
+      "content": "I\u2019ve got today after half five, or tomorrow after half twelve. Which suits?",
+      "metadata": {
+        "response_id": 3
+      }
+    },
+    {
+      "message_id": "message_fe9b8ebb4682334a2b02cd4d",
+      "role": "user",
+      "created_timestamp": 1784637843344,
+      "content": "Today works"
+    },
+    {
+      "message_id": "message_19848d2235222c508e10ac7a",
+      "role": "agent",
+      "created_timestamp": 1784637844561,
+      "content": "Today works, lovely. What\u2019s your name?",
+      "metadata": {
+        "response_id": 4
+      }
+    },
+    {
+      "message_id": "message_7aa1a7ef064d9e2d868e6ceb",
+      "role": "user",
+      "created_timestamp": 1784637845504,
+      "content": "Yes, book it"
+    },
+    {
+      "message_id": "message_2ffd59cf6b8980c94a15f17e",
+      "role": "agent",
+      "created_timestamp": 1784637847083,
+      "content": "Brilliant. What name should I put on the booking?",
+      "metadata": {
+        "response_id": 5
+      }
+    },
+    {
+      "message_id": "message_25fd7de94a2d92f14a62119f",
+      "role": "user",
+      "created_timestamp": 1784637847828,
+      "content": "That's all, thanks"
+    },
+    {
+      "message_id": "message_7ae26bebeaadbf8c9444c52d",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637849398,
+      "tool_call_id": "call_X5Dsq1l0r5e8e7LmBRiTFlLi",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_8cdabe8370e74d00d51b49ab",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637849399,
+      "tool_call_id": "call_X5Dsq1l0r5e8e7LmBRiTFlLi",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"service\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"Rose Cottage\",\"address_street\":\"Mill Lane\",\"address_postcode\":\"N/A\",\"address_city\":\"Hexham\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_23ac9c30f17d693f4c265918",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637850363,
+      "tool_call_id": "call_3pgww6o3BDaDChFIAz2vcooG",
+      "name": "end_call",
+      "arguments": "{}",
+      "type": "end_call"
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/8e713105d7c6bcb573066eee2783aa39a93c9974b10fd7fc6e53161af881220f/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "combined_cost": 14.5,
+    "product_costs": [
+      {
+        "unit_price": 2.6,
+        "product": "gpt_5_4_text_testing",
+        "cost": 13
+      },
+      {
+        "unit_price": 1.5,
+        "product": "gpt_4_1_text_testing",
+        "cost": 1.5
+      }
+    ]
+  },
+  "chat_analysis": {
+    "chat_summary": "The user requested a service at their address and confirmed the details. The agent checked availability and offered appointment slots, with the user selecting a slot for today. The agent attempted to collect the user's name for the booking, but the user ended the conversation without providing it.",
+    "user_sentiment": "Neutral",
+    "custom_analysis_data": {},
+    "chat_successful": false
+  },
+  "data_storage_setting": "everything"
+}

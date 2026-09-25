@@ -1,0 +1,60 @@
+{
+  "scenario": 4,
+  "turn": 4,
+  "chat_id": "chat_2e4ed008bd72076e54cbe064044",
+  "caller_message": "Tomorrow works",
+  "agent_messages": [
+    {
+      "message_id": "message_18568cdf27d425fc4fe8d9f4",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639849941,
+      "tool_call_id": "call_uJzIfonHSgDonC5v1F8tNK46",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_cf9468458e11468d3e326e19",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639849942,
+      "tool_call_id": "call_uJzIfonHSgDonC5v1F8tNK46",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Paul\",\"classified_intent\":\"Boiler Breakdown\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"7\",\"address_street\":\"Oak Ave\",\"address_postcode\":\"NE4 5AB\",\"address_city\":\"Newcastle\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_71c808c3fa78633e25a5c006",
+      "role": "agent",
+      "created_timestamp": 1784639851603,
+      "content": "Tomorrow works \u2014 I\u2019m checking that now.",
+      "metadata": {
+        "response_id": 5
+      }
+    },
+    {
+      "message_id": "message_bd8ab72d8561310ac68c7401",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639851604,
+      "tool_call_id": "call_KKfqnhzLMRxQBoFUWRx5mKS3",
+      "name": "check_availability",
+      "arguments": "{\"start_time\":\"2026-07-22T00:00:00\",\"end_time\":\"2026-07-23T23:59:00\",\"timezone\":\"Europe/London\",\"execution_message\":\"Tomorrow works \u2014 I\u2019m checking that now.\"}",
+      "type": "check_availability_cal"
+    },
+    {
+      "message_id": "message_8fded355f1485502d2eff7b8",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639852279,
+      "tool_call_id": "call_KKfqnhzLMRxQBoFUWRx5mKS3",
+      "content": "{\"availability_for_selected_time\":[{\"date\":\"Wednesday, 2026 July 7/22/2026 British Summer Time\",\"availability_range\":[\"From 6:30 PM to 7:00 PM\"]},{\"date\":\"Thursday, 2026 July 7/23/2026 British Summer Time\",\"availability_range\":[\"From 9:00 AM to 7:00 PM\"]}]}",
+      "successful": true
+    },
+    {
+      "message_id": "message_23887e1c1c82171edf1b2979",
+      "role": "agent",
+      "created_timestamp": 1784639853639,
+      "content": "I\u2019ve got tomorrow at 6.30pm, or Thursday morning. Which suits?",
+      "metadata": {
+        "response_id": 6
+      }
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "_comment": "Tool definitions reference for assembling the final LLM JSON payload. Apply these changes to the deployed LLM tool definitions when building a new LLM via POST /create-retell-llm.",
+
+  "section_4A_book_calendar_email_description": {
+    "description": "Update the email field description in book_calendar's cal_fields array",
+    "find": {
+      "name": "email",
+      "description": "attendee email"
+    },
+    "replace_with": {
+      "name": "email",
+      "description": "attendee email — use jaydiallux@gmail.com as default",
+      "type": "string",
+      "required": true
+    }
+  },
+
+  "section_4B_extract_address_details_variables": {
+    "description": "Append 2 new entries to extract_address_details variables array (address state tool)",
+    "name": "extract_address_details",
+    "type": "extract_dv",
+    "append_variables": [
+      { "name": "address_house_number", "type": "string", "description": "House number or property name e.g. '14' or 'Rose Cottage'" },
+      { "name": "address_street", "type": "string", "description": "Street name only e.g. 'Victoria Terrace' or 'Mill Lane'" }
+    ]
+  },
+
+  "section_4C_extract_user_details_variables": {
+    "description": "Append 5 new entries to extract_user_details variables array (used in greeter and booking states)",
+    "name": "extract_user_details",
+    "type": "extract_dv",
+    "append_variables": [
+      { "name": "address_house_number", "type": "string", "description": "House number or name if provided in opening" },
+      { "name": "address_street", "type": "string", "description": "Street name if provided in opening" },
+      { "name": "address_postcode", "type": "string", "description": "UK postcode if provided in opening" },
+      { "name": "address_city", "type": "string", "description": "City or town if provided in opening" },
+      { "name": "callback_requested", "type": "boolean", "description": "Set to true when customer rejects all slot offers and callback is offered" }
+    ]
+  }
+}

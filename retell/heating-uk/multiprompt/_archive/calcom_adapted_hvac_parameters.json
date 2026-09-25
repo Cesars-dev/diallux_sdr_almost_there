@@ -1,0 +1,46 @@
+{
+  "source": "Adapted from the Dialux parameter format → HVAC agent fields",
+  "note": "These are the exact parameters the agent should send when calling book_calendar. Every field maps to the Cal.com v2 booking payload.",
+
+  "book_calendar_parameters": {
+    "name": "{{customer_name}}",
+    "email": "no-email@example.com",
+    "attendeePhoneNumber": "+44{{customer_phone_digits}}",
+    "timeZone": "Europe/London",
+    "start": "<YYYY-MM-DDTHH:MM:SSZ — convert selected slot to UTC>",
+    "title": "{{problem_category}} — {{customer_name}}",
+    "notes": "CUSTOMER: {{customer_name}} | ADDRESS: {{address_line1}}, {{address_city}}, {{address_postcode}} | PHONE: {{caller_phone_number}} | PROBLEM: {{problem_category}} | SYMPTOMS: {{symptom_brief}}"
+  },
+
+  "example_populated_payload": {
+    "name": "Dave Smith",
+    "email": "no-email@example.com",
+    "attendeePhoneNumber": "+447700900567",
+    "timeZone": "Europe/London",
+    "start": "2026-07-21T08:30:00Z",
+    "title": "Boiler Breakdown — Dave Smith",
+    "notes": "CUSTOMER: Dave Smith | ADDRESS: 14 Victoria Terrace, Newcastle, NE4 5AB | PHONE: 07700 900567 | PROBLEM: Boiler Breakdown | SYMPTOMS: No heating, boiler not working"
+  },
+
+  "maps_to_calcom_v2_api": {
+    "endpoint": "POST https://api.cal.com/v2/bookings",
+    "headers": {
+      "Authorization": "Bearer {{cal_api_key}}",
+      "cal-api-version": "2024-08-13",
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "eventTypeId": 6389911,
+      "start": "2026-07-21T08:30:00Z",
+      "attendee": {
+        "name": "Dave Smith",
+        "email": "no-email@example.com",
+        "phoneNumber": "+447700900567",
+        "timeZone": "Europe/London",
+        "language": "en"
+      },
+      "location": "integration",
+      "metadata": {}
+    }
+  }
+}

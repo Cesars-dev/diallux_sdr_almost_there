@@ -1,0 +1,97 @@
+{
+  "chat_id": "chat_92971b5092c781b08792a6c847b",
+  "chat_type": "api_chat",
+  "agent_id": "agent_ff9d4b9646a85b82d7ce8fd837",
+  "agent_version": 0,
+  "agent_name": "Multi State Agent",
+  "collected_dynamic_variables": {
+    "address_house_number": "",
+    "callback_requested": "false",
+    "intent_clear": "false",
+    "classified_intent": "",
+    "address_street": "",
+    "past_customer": "false",
+    "greeting_exchanged": "true",
+    "intent_confirmed": "false",
+    "address_postcode": "",
+    "customer_name": "",
+    "address_incomplete": "false",
+    "address_city": ""
+  },
+  "chat_status": "ended",
+  "start_timestamp": 1784638342329,
+  "end_timestamp": 1784638347702,
+  "transcript": "User: Hi, I think I smell gas near my boiler.\nAgent: Right \u2014 got it. If you smell gas, call the National Gas team on 0800 111 999.\n\nZero, eight hundred, one, one, one, nine, nine, nine.\n\nGive them a call and they'll sort it from there. If that\u2019s not relevant, let me know.\nUser: Yes, I can smell gas",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_d685a8d4c84513e05274f220",
+      "role": "user",
+      "created_timestamp": 1784638343011,
+      "content": "Hi, I think I smell gas near my boiler."
+    },
+    {
+      "message_id": "message_91284a0b4269d0d3d833d571",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638344450,
+      "tool_call_id": "call_xC8vJAbMCFapFjYG9zbPlOfz",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_d11d7272e4f37cf4d5867a4e",
+      "role": "tool_call_result",
+      "created_timestamp": 1784638344451,
+      "tool_call_id": "call_xC8vJAbMCFapFjYG9zbPlOfz",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"\",\"greeting_exchanged\":true,\"intent_clear\":false,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_12a5fcb76413c45fadfc1777",
+      "role": "agent",
+      "created_timestamp": 1784638346063,
+      "content": "Right \u2014 got it. If you smell gas, call the National Gas team on 0800 111 999.\n\nZero, eight hundred, one, one, one, nine, nine, nine.\n\nGive them a call and they'll sort it from there. If that\u2019s not relevant, let me know.",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_896d35599524e863fec000b8",
+      "role": "user",
+      "created_timestamp": 1784638346802,
+      "content": "Yes, I can smell gas"
+    },
+    {
+      "message_id": "message_40e2d9bd1e28adb0ba06ef38",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638347631,
+      "tool_call_id": "call_ttCpdAbh5QIn1J5iJ02VhLWc",
+      "name": "end_call",
+      "arguments": "{}",
+      "type": "end_call"
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/5173c65bad27b62ee370fcb7cf9413d05c0e8847b62422e03235cb393e2ca57d/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "combined_cost": 4.1,
+    "product_costs": [
+      {
+        "unit_price": 2.6,
+        "product": "gpt_5_4_text_testing",
+        "cost": 2.6
+      },
+      {
+        "unit_price": 1.5,
+        "product": "gpt_4_1_text_testing",
+        "cost": 1.5
+      }
+    ]
+  },
+  "chat_analysis": {
+    "chat_summary": "The user reported smelling gas near their boiler. The agent advised the user to immediately call the National Gas emergency number for safety. The user confirmed the gas smell, and the chat was ended after the agent provided the necessary emergency instructions.",
+    "user_sentiment": "Neutral",
+    "custom_analysis_data": {},
+    "chat_successful": true
+  },
+  "data_storage_setting": "everything"
+}

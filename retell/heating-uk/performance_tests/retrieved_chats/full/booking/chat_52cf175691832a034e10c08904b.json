@@ -1,0 +1,329 @@
+{
+  "chat_id": "chat_52cf175691832a034e10c08904b",
+  "chat_type": "api_chat",
+  "agent_id": "agent_ff9d4b9646a85b82d7ce8fd837",
+  "agent_version": 0,
+  "agent_name": "Multi State Agent",
+  "collected_dynamic_variables": {
+    "callback_requested": "false",
+    "classified_intent": "plumber request",
+    "past_customer": "false",
+    "intent_confirmed": "true",
+    "address_postcode": "NE3 3CC",
+    "address_confirmed": "true",
+    "address_incomplete": "true",
+    "problem_category": "plumbing issue",
+    "address_city": "",
+    "boiler_make": "",
+    "address_house_number": "1",
+    "current_agent_state": "booking",
+    "symptom_brief": "",
+    "intent_clear": "true",
+    "address_line1": "1 High St",
+    "address_street": "High St",
+    "greeting_exchanged": "true",
+    "error_code": "",
+    "customer_name": "Emma",
+    "previous_agent_state": "address"
+  },
+  "chat_status": "ended",
+  "start_timestamp": 1784637588342,
+  "end_timestamp": 1784637622952,
+  "transcript": "User: Hi, I need a plumber. Wait \u2014 are you a real person or one of those AI things?\nAgent: I'm Tom, the virtual receptionist. You're after a plumber \u2014 what\u2019s the issue?\nUser: My name is Emma\nAgent: Emma, got it. What seems to be the problem?\nUser: NE3 3CC\nAgent: NE3 3CC, noted. What\u2019s the issue?\nUser: 1 High St\nAgent: 1 High St, noted. What town is that in?\nUser: Yes, that's correct\nAgent: 1 High St, postcode N-E-3-3-C-C. What\u2019s the issue?\nUser: Today works\nAgent: Right. What\u2019s the issue?\nUser: Yes, book it\nAgent: Right, Emma \u2014 I need the issue first. What needs looking at?\nUser: That's all, thanks",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_67330cdb53c3e0254250880f",
+      "role": "user",
+      "created_timestamp": 1784637588948,
+      "content": "Hi, I need a plumber. Wait \u2014 are you a real person or one of those AI things?"
+    },
+    {
+      "message_id": "message_bb9f0fc0639c0c469522af93",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637590766,
+      "tool_call_id": "call_IN4Pbp2bSUP0ugOo6lO4GnlP",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_ee08fe7b1a155e0736397f7e",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637590767,
+      "tool_call_id": "call_IN4Pbp2bSUP0ugOo6lO4GnlP",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"plumber request\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_48e3c53fbc2e9e3b01b13093",
+      "role": "agent",
+      "created_timestamp": 1784637592990,
+      "content": "I'm Tom, the virtual receptionist. You're after a plumber \u2014 what\u2019s the issue?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_231071759e5dd805d2600681",
+      "role": "user",
+      "created_timestamp": 1784637593792,
+      "content": "My name is Emma"
+    },
+    {
+      "message_id": "message_878c91615187538b55fa3364",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637595118,
+      "tool_call_id": "call_veq5CgGNsIuFfyBz0ncHpnU4",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_e9869752a220600d861ac301",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637595119,
+      "tool_call_id": "call_veq5CgGNsIuFfyBz0ncHpnU4",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Emma\",\"classified_intent\":\"plumber request\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_5a9404a03ef091f74f2b8bf0",
+      "role": "agent",
+      "created_timestamp": 1784637596152,
+      "content": "Emma, got it. What seems to be the problem?",
+      "metadata": {
+        "response_id": 2
+      }
+    },
+    {
+      "message_id": "message_7e2062d44a5c41f215eaa638",
+      "role": "user",
+      "created_timestamp": 1784637596879,
+      "content": "NE3 3CC"
+    },
+    {
+      "message_id": "message_98c4b5d0a4dddf8c7a93bc52",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637598551,
+      "tool_call_id": "call_EnjUAfA97nP3a5DClGs03oBN",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_4a0db0f14be05defc04a8603",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637598552,
+      "tool_call_id": "call_EnjUAfA97nP3a5DClGs03oBN",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Emma\",\"classified_intent\":\"plumber request\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"NE3 3CC\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_1682091c04fc560aec5e1231",
+      "role": "agent",
+      "created_timestamp": 1784637600147,
+      "content": "NE3 3CC, noted. What\u2019s the issue?",
+      "metadata": {
+        "response_id": 3
+      }
+    },
+    {
+      "message_id": "message_c13b5d69e7ad86614ae638ae",
+      "role": "user",
+      "created_timestamp": 1784637601097,
+      "content": "1 High St"
+    },
+    {
+      "message_id": "message_908eede7d3fd7c48d534f474",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637602629,
+      "tool_call_id": "call_OaDgXgh3fyYhaK8Xg1BhHPh9",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_6d77d1baab52de41bdf65c48",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637602630,
+      "tool_call_id": "call_OaDgXgh3fyYhaK8Xg1BhHPh9",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Emma\",\"classified_intent\":\"plumber request\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"1\",\"address_street\":\"High St\",\"address_postcode\":\"NE3 3CC\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_29e6869ef3ee7cb5ec3eb006",
+      "role": "agent",
+      "created_timestamp": 1784637604184,
+      "content": "1 High St, noted. What town is that in?",
+      "metadata": {
+        "response_id": 4
+      }
+    },
+    {
+      "message_id": "message_c68ee0b28128bc780eb6b56d",
+      "role": "user",
+      "created_timestamp": 1784637604952,
+      "content": "Yes, that's correct"
+    },
+    {
+      "message_id": "message_5d032792d28607e4bb28cdc4",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637608592,
+      "tool_call_id": "call_VOZqoeYEE8zmGCq28LfUV3hU",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_e350e2aac8e865a7bd791f16",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637608593,
+      "tool_call_id": "call_VOZqoeYEE8zmGCq28LfUV3hU",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Emma\",\"classified_intent\":\"plumber request\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"1\",\"address_street\":\"High St\",\"address_postcode\":\"NE3 3CC\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_1c53ac5068b45e6d885bf616",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637610586,
+      "tool_call_id": "call_WfW5D6qWrtMcyNpzTsveAUhO",
+      "name": "transition_to_address",
+      "arguments": "{}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_b8ac6f48be5a99c3d8f799b3",
+      "role": "state_transition",
+      "created_timestamp": 1784637610587,
+      "former_state_name": "greeter",
+      "new_state_name": "address"
+    },
+    {
+      "message_id": "message_6ba4e50600072837a1218f5d",
+      "role": "agent",
+      "created_timestamp": 1784637611920,
+      "content": "1 High St, postcode N-E-3-3-C-C. What\u2019s the issue?",
+      "metadata": {
+        "response_id": 5
+      }
+    },
+    {
+      "message_id": "message_4dba77766ba971323ad4bfd5",
+      "role": "user",
+      "created_timestamp": 1784637612725,
+      "content": "Today works"
+    },
+    {
+      "message_id": "message_31caaafed8bdd2061e643f7e",
+      "role": "agent",
+      "created_timestamp": 1784637614265,
+      "content": "Right. What\u2019s the issue?",
+      "metadata": {
+        "response_id": 6
+      }
+    },
+    {
+      "message_id": "message_02e395cbb123f88adc612f4c",
+      "role": "user",
+      "created_timestamp": 1784637615216,
+      "content": "Yes, book it"
+    },
+    {
+      "message_id": "message_7227f15560397be0057a07ed",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637617011,
+      "tool_call_id": "call_B1tpbw5Q3lcZfIHBVSMG0zzo",
+      "name": "extract_address_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_cc11432606abc6b2bea4b345",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637617012,
+      "tool_call_id": "call_B1tpbw5Q3lcZfIHBVSMG0zzo",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Emma\",\"problem_category\":\"plumbing issue\",\"symptom_brief\":\"\",\"error_code\":\"\",\"boiler_make\":\"\",\"address_postcode\":\"NE3 3CC\",\"address_house_number\":\"1\",\"address_street\":\"High St\",\"address_line1\":\"1 High St\",\"address_city\":\"\",\"address_confirmed\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_9e425259c3ea42d3cfead8d1",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637618060,
+      "tool_call_id": "call_eiSt8revnEssPl2HIZk7ftdk",
+      "name": "transition_to_booking",
+      "arguments": "{}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_e58d466033047f3defccceb3",
+      "role": "state_transition",
+      "created_timestamp": 1784637618061,
+      "former_state_name": "address",
+      "new_state_name": "booking"
+    },
+    {
+      "message_id": "message_bde67f9049e948fb99296847",
+      "role": "agent",
+      "created_timestamp": 1784637619423,
+      "content": "Right, Emma \u2014 I need the issue first. What needs looking at?",
+      "metadata": {
+        "response_id": 7
+      }
+    },
+    {
+      "message_id": "message_2b33578fb70633669e3e2ca7",
+      "role": "user",
+      "created_timestamp": 1784637620160,
+      "content": "That's all, thanks"
+    },
+    {
+      "message_id": "message_c908211c3a1392460273be87",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637621757,
+      "tool_call_id": "call_P76582jtxTk49EVBPw7d0RrY",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_a376e562204678e9398ef430",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637621758,
+      "tool_call_id": "call_P76582jtxTk49EVBPw7d0RrY",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Emma\",\"classified_intent\":\"plumber request\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"1\",\"address_street\":\"High St\",\"address_postcode\":\"NE3 3CC\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_27fccad3487283ec7b2fda50",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637622938,
+      "tool_call_id": "call_MLm47L7fcH5iIOH6ElyGbhnN",
+      "name": "end_call",
+      "arguments": "{}",
+      "type": "end_call"
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/eba29dcbf25d21c2f327b16526d0c4330586322d741a4ddaff080951afb38f90/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "combined_cost": 19.7,
+    "product_costs": [
+      {
+        "unit_price": 2.6,
+        "product": "gpt_5_4_text_testing",
+        "cost": 18.2
+      },
+      {
+        "unit_price": 1.5,
+        "product": "gpt_4_1_text_testing",
+        "cost": 1.5
+      }
+    ]
+  },
+  "chat_analysis": {
+    "chat_summary": "The user, Emma, contacted the agent to request a plumber and provided her name and address details. However, she did not specify the plumbing issue despite multiple prompts from the agent. The conversation ended with Emma thanking the agent without the booking being fully completed.",
+    "user_sentiment": "Neutral",
+    "custom_analysis_data": {},
+    "chat_successful": false
+  },
+  "data_storage_setting": "everything"
+}

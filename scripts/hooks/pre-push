@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# pre-push guard: never push secrets. Doctrine §5.2. Installed via hooks/pre-push.
+set -euo pipefail
+cd "$(git rev-parse --show-toplevel)"
+if ! ./scripts/keyhound >/dev/null 2>&1; then
+  echo "pre-push: keyhound found suspect secrets — fix before pushing" >&2
+  exit 1
+fi
+echo "pre-push: keyhound clean"

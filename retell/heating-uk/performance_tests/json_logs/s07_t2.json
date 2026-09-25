@@ -1,0 +1,67 @@
+{
+  "scenario": 7,
+  "turn": 2,
+  "chat_id": "chat_31ca7dbc536780cd71580c732fc",
+  "caller_message": "My name is Emma. I'm at 1 High St, NE3 3CC, Newcastle. The boiler's not heating properly.",
+  "agent_messages": [
+    {
+      "message_id": "message_52bedec2123cf3ebd98ac5d8",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639451488,
+      "tool_call_id": "call_KcW274S1ktNZ5NGwdmTVb6rH",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_dd1daaaba0ffdee97ed7fad2",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639451489,
+      "tool_call_id": "call_KcW274S1ktNZ5NGwdmTVb6rH",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Emma\",\"classified_intent\":\"boiler breakdown\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"1\",\"address_street\":\"High St\",\"address_postcode\":\"NE3 3CC\",\"address_city\":\"Newcastle\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_0a0d89e302b1f8916dfc5c52",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639452423,
+      "tool_call_id": "call_G0SMoTCv2WMo8c7PPkzOlODF",
+      "name": "transition_to_address",
+      "arguments": "{}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_5b9026accb6f0c9d08db56f8",
+      "role": "state_transition",
+      "created_timestamp": 1784639452424,
+      "former_state_name": "greeter",
+      "new_state_name": "address"
+    },
+    {
+      "message_id": "message_792a37c2a4e80b89d3303f4b",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639454097,
+      "tool_call_id": "call_E9GUyGTE7XDVyHewZISo6gXq",
+      "name": "extract_address_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_b1b0c1a8f9d0d83fdccc71e7",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639454098,
+      "tool_call_id": "call_E9GUyGTE7XDVyHewZISo6gXq",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Emma\",\"problem_category\":\"boiler breakdown\",\"symptom_brief\":\"boiler not heating properly\",\"error_code\":\"\",\"boiler_make\":\"\",\"address_postcode\":\"NE3 3CC\",\"address_house_number\":\"1\",\"address_street\":\"High St\",\"address_line1\":\"1 High St\",\"address_city\":\"Newcastle\",\"address_confirmed\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_f224dee5cb89f08a16558ce2",
+      "role": "agent",
+      "created_timestamp": 1784639455305,
+      "content": "Emma, 1 High St, Newcastle \u2014 got it. Is it showing an error code?",
+      "metadata": {
+        "response_id": 2
+      }
+    }
+  ]
+}

@@ -1,0 +1,268 @@
+{
+  "chat_id": "chat_cc132b99928dc3f16bd13ca5835",
+  "chat_type": "api_chat",
+  "agent_id": "agent_95e02efd34a529ecf2d5ac60a5",
+  "agent_version": 0,
+  "agent_name": "V6.90",
+  "retell_llm_dynamic_variables": {
+    "today_date": "2026-08-24"
+  },
+  "collected_dynamic_variables": {
+    "current_agent_state": "Discovery",
+    "interest_topic": "I miss delivery orders after hours",
+    "inbound_channel": "Google search",
+    "pain_frame": "I miss delivery orders after hours",
+    "previous_agent_state": "Intake",
+    "pain_points": "I miss delivery orders after hours,Lost customers when callers go to competitors",
+    "industry": "",
+    "call_volume": "3-4 missed after-hours delivery orders per week",
+    "pattern_matched": "true",
+    "pain_urgency": "high",
+    "interest_signal": "false",
+    "intake_completed": "true"
+  },
+  "chat_status": "ended",
+  "start_timestamp": 1787627181253,
+  "end_timestamp": 1787627212590,
+  "transcript": "User: Hey — before anything: are you a robot? Be honest with me.\nAgent: Yeah, I am — I’m Linda, an AI assistant on Jay’s team at Dialux, and I help with the intro and getting people to the right call. What made you call in today?\nUser: I found Dialux through a Google search. But, are you sure I'm not just talking to a machine?\nAgent: Got it, so you found us on Google — that helps.  \n\nYeah, you are talking to an AI assistant, I’m Linda on Jay’s team, and I handle the intro and scheduling so he can focus on the deep-dive calls… what were you hoping to fix when you started Googling around for Dialux?\nUser: Thanks for being honest, Linda. I miss delivery orders after hours. I'll think about it.\nAgent: Makes sense, and thanks for sharing that.  \n\nBefore you jump off, can I ask — when those delivery calls come in after hours and no one picks up, do they usually leave a message or just call the next place?\nUser: They usually call the next place. By the way, am I really talking to a human right now?\nAgent: Right, so those missed orders are just turning into business for your competitors.  \n\nAnd to your question — you’re talking to an AI assistant, not a human, but I’m here to understand your situation and then get you to Jay if it’s a fit… roughly how often would you say this happens in a week — a caller after hours that you lose to the next place?\nUser: Okay, thanks for clarifying. It happens about 3-4 times a week. I'll think about it.\nAgent: Gotcha, so you’re losing 3–4 delivery orders a week after hours — that adds up fast.  \n\nBefore you decide, are these higher-ticket orders where losing even one or two a week really stings on revenue?\nUser: Yes, they can be high-ticket, but I'm still concerned about whether I'm talking to a machine or a person.\nAgent: Yeah, that’s fair to be concerned about.  \n\nYou are talking to a machine — I’m an AI assistant named Linda on Jay’s team — but Jay’s the real human who walks through how we stop those 3–4 high-ticket orders a week from going to competitors… would it help if I just focused on whether this can actually plug that after-hours gap for you?\nUser: Thanks, Linda. I appreciate your honesty. I'll consider it and think about the options. Have a good day.\nAgent: Totally understand, and I appreciate you walking me through what’s going on after hours. If you ever want to turn those 3–4 missed high-ticket orders a week into booked business instead of lost calls, that’s exactly what Jay’s team does. Have a great rest of your day, and we’ll be here if you decide to take the next step.",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_75660c31c613f0980c7bcdd6",
+      "role": "user",
+      "created_timestamp": 1787627181874,
+      "content": "Hey — before anything: are you a robot? Be honest with me."
+    },
+    {
+      "message_id": "message_aff7700e6e4ebdaf914a0a1b",
+      "role": "agent",
+      "created_timestamp": 1787627183310,
+      "content": "Yeah, I am — I’m Linda, an AI assistant on Jay’s team at Dialux, and I help with the intro and getting people to the right call. What made you call in today?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_8e2cbe25d79a8d599b8302f9",
+      "role": "user",
+      "created_timestamp": 1787627185023,
+      "content": "I found Dialux through a Google search. But, are you sure I'm not just talking to a machine?"
+    },
+    {
+      "message_id": "message_888c1a54d18506cc3f1acdc5",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787627186710,
+      "tool_call_id": "call_z8xRXBv0zwwkLUYQKRI5TviR",
+      "name": "extract_intake_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_ea83c4dc095b06fc9b1dad0b",
+      "role": "tool_call_result",
+      "created_timestamp": 1787627186711,
+      "tool_call_id": "call_z8xRXBv0zwwkLUYQKRI5TviR",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"inbound_channel\":\"Google search\",\"interest_topic\":\"\",\"pain_frame\":\"\"}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_605c2f1ffef5d5713db19c66",
+      "role": "agent",
+      "created_timestamp": 1787627188612,
+      "content": "Got it, so you found us on Google — that helps.  \n\nYeah, you are talking to an AI assistant, I’m Linda on Jay’s team, and I handle the intro and scheduling so he can focus on the deep-dive calls… what were you hoping to fix when you started Googling around for Dialux?",
+      "metadata": {
+        "response_id": 2
+      }
+    },
+    {
+      "message_id": "message_9bb38822d5287fcae0249ac0",
+      "role": "user",
+      "created_timestamp": 1787627190045,
+      "content": "Thanks for being honest, Linda. I miss delivery orders after hours. I'll think about it."
+    },
+    {
+      "message_id": "message_5d9174c3b8340e39a1d70304",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787627190983,
+      "tool_call_id": "call_xrB4g9DCvuuSm1jg714T24W4",
+      "name": "extract_intake_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_3c89a08b3cbc8200dec19d08",
+      "role": "tool_call_result",
+      "created_timestamp": 1787627190984,
+      "tool_call_id": "call_xrB4g9DCvuuSm1jg714T24W4",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"inbound_channel\":\"Google search\",\"interest_topic\":\"I miss delivery orders after hours\",\"pain_frame\":\"I miss delivery orders after hours\"}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_8118e99d40c834a8f40fb6f0",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787627192456,
+      "tool_call_id": "call_qDS1hj9jIdJe2n4d6dR50How",
+      "name": "intake_completed",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_872d25b192c50b871555744a",
+      "role": "tool_call_result",
+      "created_timestamp": 1787627192457,
+      "tool_call_id": "call_qDS1hj9jIdJe2n4d6dR50How",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"intake_completed\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_590691b97c368a6f9a8f66fb",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787627194085,
+      "tool_call_id": "call_jtoAQc6OIVF7QcaYY5rK3Q7x",
+      "name": "transition_to_Discovery",
+      "arguments": "{\"interest_topic\":\"I miss delivery orders after hours\",\"inbound_channel\":\"Google search\",\"intake_completed\":true,\"pain_frame\":\"I miss delivery orders after hours\"}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_32ee1c066dfb3002196ece1b",
+      "role": "state_transition",
+      "created_timestamp": 1787627194086,
+      "former_state_name": "Intake",
+      "new_state_name": "Discovery"
+    },
+    {
+      "message_id": "message_7c32a65416914a82cd41eb0f",
+      "role": "agent",
+      "created_timestamp": 1787627195388,
+      "content": "Makes sense, and thanks for sharing that.  \n\nBefore you jump off, can I ask — when those delivery calls come in after hours and no one picks up, do they usually leave a message or just call the next place?",
+      "metadata": {
+        "response_id": 3
+      }
+    },
+    {
+      "message_id": "message_03b1631ea7089bcdc0356fef",
+      "role": "user",
+      "created_timestamp": 1787627196901,
+      "content": "They usually call the next place. By the way, am I really talking to a human right now?"
+    },
+    {
+      "message_id": "message_f37774ad5591de458ed3777a",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787627198813,
+      "tool_call_id": "call_tz73T83ETBn4vVg81dKdA3N5",
+      "name": "extract_discovery_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_281570afcae8aa9c61af8bf2",
+      "role": "tool_call_result",
+      "created_timestamp": 1787627198814,
+      "tool_call_id": "call_tz73T83ETBn4vVg81dKdA3N5",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"industry\":\"\",\"pain_points\":\"I miss delivery orders after hours,Lost customers when callers go to competitors\",\"interest_signal\":false,\"pattern_matched\":true,\"call_volume\":\"\",\"pain_urgency\":\"high\"}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_589c9ce9546e420cac4c2a47",
+      "role": "agent",
+      "created_timestamp": 1787627200720,
+      "content": "Right, so those missed orders are just turning into business for your competitors.  \n\nAnd to your question — you’re talking to an AI assistant, not a human, but I’m here to understand your situation and then get you to Jay if it’s a fit… roughly how often would you say this happens in a week — a caller after hours that you lose to the next place?",
+      "metadata": {
+        "response_id": 4
+      }
+    },
+    {
+      "message_id": "message_a90d3b03735405bf1b4d7e3d",
+      "role": "user",
+      "created_timestamp": 1787627202329,
+      "content": "Okay, thanks for clarifying. It happens about 3-4 times a week. I'll think about it."
+    },
+    {
+      "message_id": "message_0d25bdae27a2e08e94df9157",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787627204123,
+      "tool_call_id": "call_XiDbwJg5jBFpESIqkAMc8o7y",
+      "name": "extract_discovery_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_8470c34c68edb622239c1cdb",
+      "role": "tool_call_result",
+      "created_timestamp": 1787627204124,
+      "tool_call_id": "call_XiDbwJg5jBFpESIqkAMc8o7y",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"industry\":\"\",\"pain_points\":\"I miss delivery orders after hours,Lost customers when callers go to competitors\",\"interest_signal\":false,\"pattern_matched\":true,\"call_volume\":\"3-4 missed after-hours delivery orders per week\",\"pain_urgency\":\"high\"}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_d347e24f5fb8d2a11440d311",
+      "role": "agent",
+      "created_timestamp": 1787627205464,
+      "content": "Gotcha, so you’re losing 3–4 delivery orders a week after hours — that adds up fast.  \n\nBefore you decide, are these higher-ticket orders where losing even one or two a week really stings on revenue?",
+      "metadata": {
+        "response_id": 5
+      }
+    },
+    {
+      "message_id": "message_5c47a736e7b58f0f020a1905",
+      "role": "user",
+      "created_timestamp": 1787627207183,
+      "content": "Yes, they can be high-ticket, but I'm still concerned about whether I'm talking to a machine or a person."
+    },
+    {
+      "message_id": "message_5bb28a1d1a7027c020fc29bd",
+      "role": "agent",
+      "created_timestamp": 1787627208835,
+      "content": "Yeah, that’s fair to be concerned about.  \n\nYou are talking to a machine — I’m an AI assistant named Linda on Jay’s team — but Jay’s the real human who walks through how we stop those 3–4 high-ticket orders a week from going to competitors… would it help if I just focused on whether this can actually plug that after-hours gap for you?",
+      "metadata": {
+        "response_id": 6
+      }
+    },
+    {
+      "message_id": "message_7c02ef2faf331ab253bf3afc",
+      "role": "user",
+      "created_timestamp": 1787627210474,
+      "content": "Thanks, Linda. I appreciate your honesty. I'll consider it and think about the options. Have a good day."
+    },
+    {
+      "message_id": "message_8635edc2c0508d6ffdc1acb0",
+      "role": "agent",
+      "created_timestamp": 1787627212552,
+      "content": "Totally understand, and I appreciate you walking me through what’s going on after hours. If you ever want to turn those 3–4 missed high-ticket orders a week into booked business instead of lost calls, that’s exactly what Jay’s team does. Have a great rest of your day, and we’ll be here if you decide to take the next step.",
+      "metadata": {
+        "response_id": 7
+      }
+    },
+    {
+      "message_id": "message_0165b5167a9f738abea614fc",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787627212553,
+      "tool_call_id": "call_iL3gw60cBHdPgPWIfxwNXCFE",
+      "name": "end_call",
+      "arguments": "{\"execution_message\":\"Totally understand, and I appreciate you walking me through what’s going on after hours. If you ever want to turn those 3–4 missed high-ticket orders a week into booked business instead of lost calls, that’s exactly what Jay’s team does. Have a great rest of your day, and we’ll be here if you decide to take the next step.\"}",
+      "type": "end_call"
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/6e54db3477bf615043a9f661d8851c80f9041ab6429de360f5ca2584e9ef36df/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "product_costs": [
+      {
+        "cost": 9.1,
+        "unit_price": 1.3,
+        "product": "gpt_5_1_text_testing"
+      },
+      {
+        "product": "gpt_4_1_text_testing",
+        "unit_price": 1.5,
+        "cost": 1.5
+      }
+    ],
+    "combined_cost": 10.6
+  },
+  "chat_analysis": {
+    "custom_analysis_data": {},
+    "chat_summary": "The user inquired multiple times about whether they were speaking to a human or an AI, and the agent clarified they were an AI assistant named Linda. The user explained they miss 3-4 high-ticket delivery orders per week after hours, leading to lost business to competitors. The agent gathered relevant details and offered to connect the user with a human expert, but the user decided to think about their options and ended the conversation politely.",
+    "chat_successful": true,
+    "user_sentiment": "Neutral"
+  },
+  "data_storage_setting": "everything"
+}

@@ -1,0 +1,81 @@
+{
+  "chat_id": "chat_d5727fb6b02d94fa6b8943bbec3",
+  "chat_type": "api_chat",
+  "agent_id": "agent_ff9d4b9646a85b82d7ce8fd837",
+  "agent_version": 0,
+  "agent_name": "Multi State Agent",
+  "collected_dynamic_variables": {
+    "address_house_number": "Rose Cottage",
+    "callback_requested": "false",
+    "intent_clear": "true",
+    "classified_intent": "service",
+    "address_street": "Mill Lane",
+    "past_customer": "false",
+    "greeting_exchanged": "true",
+    "intent_confirmed": "false",
+    "address_postcode": "",
+    "customer_name": "",
+    "address_city": "Hexham"
+  },
+  "chat_status": "ended",
+  "start_timestamp": 1784633485558,
+  "end_timestamp": 1784633490417,
+  "transcript": "User: Hi, I need a service. My address is Rose Cottage, Mill Lane, Hexham.\nAgent: Mill Lane, Hexham \u2014 got it. What\u2019s the postcode?",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_c3f485685252ab1daf714a1c",
+      "role": "user",
+      "created_timestamp": 1784633486428,
+      "content": "Hi, I need a service. My address is Rose Cottage, Mill Lane, Hexham."
+    },
+    {
+      "message_id": "message_fcfd03590bca901e0289139a",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784633488575,
+      "tool_call_id": "call_kojrHtL2DuxEKhMvzIwHvlEQ",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_4bb8d7a343b67cefca4f31f8",
+      "role": "tool_call_result",
+      "created_timestamp": 1784633488576,
+      "tool_call_id": "call_kojrHtL2DuxEKhMvzIwHvlEQ",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"service\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"Rose Cottage\",\"address_street\":\"Mill Lane\",\"address_postcode\":\"\",\"address_city\":\"Hexham\",\"callback_requested\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_763af48d09382b3c3eabc8ae",
+      "role": "agent",
+      "created_timestamp": 1784633489610,
+      "content": "Mill Lane, Hexham \u2014 got it. What\u2019s the postcode?",
+      "metadata": {
+        "response_id": 1
+      }
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/e31a4eec0a0cce8bac795883a2dd37e4af278d72bc61efaf2520884360e982b6/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "combined_cost": 4.1,
+    "product_costs": [
+      {
+        "unit_price": 2.6,
+        "product": "gpt_5_4_text_testing",
+        "cost": 2.6
+      },
+      {
+        "unit_price": 1.5,
+        "product": "gpt_4_1_text_testing",
+        "cost": 1.5
+      }
+    ]
+  },
+  "chat_analysis": {
+    "chat_summary": "The user requested a service and provided their address as Rose Cottage, Mill Lane, Hexham. The agent acknowledged the address and asked for the postcode to complete the information.",
+    "user_sentiment": "Neutral",
+    "custom_analysis_data": {},
+    "chat_successful": true
+  },
+  "data_storage_setting": "everything"
+}

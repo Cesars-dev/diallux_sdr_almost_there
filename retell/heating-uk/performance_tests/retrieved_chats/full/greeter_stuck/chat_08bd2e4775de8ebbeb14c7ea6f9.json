@@ -1,0 +1,287 @@
+{
+  "chat_id": "chat_08bd2e4775de8ebbeb14c7ea6f9",
+  "chat_type": "api_chat",
+  "agent_id": "agent_ff9d4b9646a85b82d7ce8fd837",
+  "agent_version": 0,
+  "agent_name": "Multi State Agent",
+  "collected_dynamic_variables": {
+    "address_house_number": "7",
+    "callback_requested": "false",
+    "intent_clear": "true",
+    "classified_intent": "Boiler Breakdown",
+    "address_street": "Oak Ave",
+    "past_customer": "false",
+    "greeting_exchanged": "true",
+    "intent_confirmed": "true",
+    "address_postcode": "NE4 5AB",
+    "customer_name": "Paul",
+    "address_incomplete": "true",
+    "address_city": ""
+  },
+  "chat_status": "ended",
+  "start_timestamp": 1784637456566,
+  "end_timestamp": 1784637489410,
+  "transcript": "User: Hi, my boiler's making a funny noise. Can you send someone out? Oh, and how much is the call-out?\nAgent: Funny noise from the boiler \u2014 got it. Call-out is \u00a375 plus VAT weekdays.\nUser: My name is Paul\nAgent: Paul \u2014 got it. What\u2019s the postcode?\nUser: NE4 5AB\nAgent: NE4 5AB \u2014 thank you. What\u2019s the house number and street?\nUser: 7\nAgent: Number 7 \u2014 got it. What\u2019s the street name?\nUser: Oak Ave\nAgent: Oak Ave \u2014 got it. What\u2019s the town or city?\nUser: Yes, that's correct\nAgent: That\u2019s all right. What\u2019s the town or city?\nUser: Tomorrow works\nAgent: Tomorrow works \u2014 got it. What\u2019s the town or city?\nUser: Yes, book it\nAgent: Brilliant. What\u2019s the town or city?\nUser: That's all, thanks",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_79004bd2606989f59f5d3d33",
+      "role": "user",
+      "created_timestamp": 1784637457207,
+      "content": "Hi, my boiler's making a funny noise. Can you send someone out? Oh, and how much is the call-out?"
+    },
+    {
+      "message_id": "message_65241e43d558188b2c1dff2f",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637458992,
+      "tool_call_id": "call_nyL6Ey6Nplh621ionqR5ZHS4",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_d248f71d3ff5f60e585b02d5",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637458993,
+      "tool_call_id": "call_nyL6Ey6Nplh621ionqR5ZHS4",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"unknown\",\"classified_intent\":\"Boiler Breakdown\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_0de52242de088c87073b4664",
+      "role": "agent",
+      "created_timestamp": 1784637460097,
+      "content": "Funny noise from the boiler \u2014 got it. Call-out is \u00a375 plus VAT weekdays.",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_92a7cc9434dab10921b18795",
+      "role": "user",
+      "created_timestamp": 1784637460849,
+      "content": "My name is Paul"
+    },
+    {
+      "message_id": "message_cb3ba669e5f5f186e3386763",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637462305,
+      "tool_call_id": "call_YKKIutCmX1A31fwNhfwGdMgs",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_20f5ca97ea69667d7a6e17d2",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637462306,
+      "tool_call_id": "call_YKKIutCmX1A31fwNhfwGdMgs",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Paul\",\"classified_intent\":\"Boiler Breakdown\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_7dbbb17ef2bb79f6fd8c7f14",
+      "role": "agent",
+      "created_timestamp": 1784637463441,
+      "content": "Paul \u2014 got it. What\u2019s the postcode?",
+      "metadata": {
+        "response_id": 2
+      }
+    },
+    {
+      "message_id": "message_406197a8adc59948da50791e",
+      "role": "user",
+      "created_timestamp": 1784637464350,
+      "content": "NE4 5AB"
+    },
+    {
+      "message_id": "message_383fa5c4e9f9d29fcafcd62d",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637466092,
+      "tool_call_id": "call_JJpRn3AtvdpSlnQ2hIUvjFUL",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_917b4cc3a1df5f1d34359f60",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637466093,
+      "tool_call_id": "call_JJpRn3AtvdpSlnQ2hIUvjFUL",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Paul\",\"classified_intent\":\"Boiler Breakdown\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"NE4 5AB\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_edc1000169dba8cd925d426a",
+      "role": "agent",
+      "created_timestamp": 1784637471600,
+      "content": "NE4 5AB \u2014 thank you. What\u2019s the house number and street?",
+      "metadata": {
+        "response_id": 3
+      }
+    },
+    {
+      "message_id": "message_135d1248c54e4ed899dcde86",
+      "role": "user",
+      "created_timestamp": 1784637472434,
+      "content": "7"
+    },
+    {
+      "message_id": "message_c496591a61463247142f7c6b",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637473876,
+      "tool_call_id": "call_vi511J7OuyIZfhFiNCLivsTm",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_b79214a6ffeb182ae818776b",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637473877,
+      "tool_call_id": "call_vi511J7OuyIZfhFiNCLivsTm",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Paul\",\"classified_intent\":\"Boiler Breakdown\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"7\",\"address_street\":\"\",\"address_postcode\":\"NE4 5AB\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_5390083849b245c8c321ece2",
+      "role": "agent",
+      "created_timestamp": 1784637474926,
+      "content": "Number 7 \u2014 got it. What\u2019s the street name?",
+      "metadata": {
+        "response_id": 4
+      }
+    },
+    {
+      "message_id": "message_bd8dcebe5a5679da2ab007aa",
+      "role": "user",
+      "created_timestamp": 1784637475745,
+      "content": "Oak Ave"
+    },
+    {
+      "message_id": "message_adbc97848f1913235c78f094",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637477160,
+      "tool_call_id": "call_n7GjC253ZLEQRm25MphzfDS4",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_d76f695f2934d70fadff0b58",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637477161,
+      "tool_call_id": "call_n7GjC253ZLEQRm25MphzfDS4",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Paul\",\"classified_intent\":\"Boiler Breakdown\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"7\",\"address_street\":\"Oak Ave\",\"address_postcode\":\"NE4 5AB\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_1086e110a85ee48c559b5db6",
+      "role": "agent",
+      "created_timestamp": 1784637479685,
+      "content": "Oak Ave \u2014 got it. What\u2019s the town or city?",
+      "metadata": {
+        "response_id": 5
+      }
+    },
+    {
+      "message_id": "message_07924ac95a12b4925ccfaa3d",
+      "role": "user",
+      "created_timestamp": 1784637480460,
+      "content": "Yes, that's correct"
+    },
+    {
+      "message_id": "message_99040d793cc68f331ee85ca2",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637482206,
+      "tool_call_id": "call_lNRp4Sz8aXsrpq2MhZc0sh1O",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_69c12804911c4dbf2210e10a",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637482207,
+      "tool_call_id": "call_lNRp4Sz8aXsrpq2MhZc0sh1O",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Paul\",\"classified_intent\":\"Boiler Breakdown\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"7\",\"address_street\":\"Oak Ave\",\"address_postcode\":\"NE4 5AB\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_67c775b3514a889f2708052b",
+      "role": "agent",
+      "created_timestamp": 1784637483770,
+      "content": "That\u2019s all right. What\u2019s the town or city?",
+      "metadata": {
+        "response_id": 6
+      }
+    },
+    {
+      "message_id": "message_496302cc6393202fe889005c",
+      "role": "user",
+      "created_timestamp": 1784637484508,
+      "content": "Tomorrow works"
+    },
+    {
+      "message_id": "message_dc8b3ef3fcf032c326d0ce01",
+      "role": "agent",
+      "created_timestamp": 1784637485556,
+      "content": "Tomorrow works \u2014 got it. What\u2019s the town or city?",
+      "metadata": {
+        "response_id": 7
+      }
+    },
+    {
+      "message_id": "message_29321454a5c5fa0c84826138",
+      "role": "user",
+      "created_timestamp": 1784637486381,
+      "content": "Yes, book it"
+    },
+    {
+      "message_id": "message_5eb2717f2e59edeab84ded25",
+      "role": "agent",
+      "created_timestamp": 1784637487591,
+      "content": "Brilliant. What\u2019s the town or city?",
+      "metadata": {
+        "response_id": 8
+      }
+    },
+    {
+      "message_id": "message_f6f7b24b7d58481f458b045d",
+      "role": "user",
+      "created_timestamp": 1784637488595,
+      "content": "That's all, thanks"
+    },
+    {
+      "message_id": "message_d23aefd75c2efa6e26cfd732",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637489395,
+      "tool_call_id": "call_lnd6UG634uf0wf6g9KMXqXi1",
+      "name": "end_call",
+      "arguments": "{}",
+      "type": "end_call"
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/24227ba28402a524fb96f6e64b625ece6b4387d5ebf0270e7ad9d88d912199cb/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "combined_cost": 22.3,
+    "product_costs": [
+      {
+        "unit_price": 2.6,
+        "product": "gpt_5_4_text_testing",
+        "cost": 20.8
+      },
+      {
+        "unit_price": 1.5,
+        "product": "gpt_4_1_text_testing",
+        "cost": 1.5
+      }
+    ]
+  },
+  "chat_analysis": {
+    "chat_summary": "The user, Paul, reported a boiler making a funny noise and requested a call-out, inquiring about the cost. The agent collected Paul's name and address details, confirmed the booking for the next day, and attempted to obtain the town or city, but the user ended the chat before providing it. The booking was acknowledged as confirmed by the user.",
+    "user_sentiment": "Positive",
+    "custom_analysis_data": {},
+    "chat_successful": true
+  },
+  "data_storage_setting": "everything"
+}

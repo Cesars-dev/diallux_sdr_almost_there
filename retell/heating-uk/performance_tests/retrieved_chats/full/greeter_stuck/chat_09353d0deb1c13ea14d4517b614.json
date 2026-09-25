@@ -1,0 +1,255 @@
+{
+  "chat_id": "chat_09353d0deb1c13ea14d4517b614",
+  "chat_type": "api_chat",
+  "agent_id": "agent_ff9d4b9646a85b82d7ce8fd837",
+  "agent_version": 0,
+  "agent_name": "Multi State Agent",
+  "collected_dynamic_variables": {
+    "address_house_number": "7",
+    "callback_requested": "false",
+    "intent_clear": "true",
+    "classified_intent": "repair_quote",
+    "address_street": "Oak Ave",
+    "past_customer": "false",
+    "greeting_exchanged": "true",
+    "intent_confirmed": "true",
+    "address_postcode": "NE5 5EE",
+    "customer_name": "Mark",
+    "address_incomplete": "true",
+    "address_city": ""
+  },
+  "chat_status": "ended",
+  "start_timestamp": 1784638559444,
+  "end_timestamp": 1784638588168,
+  "transcript": "User: Hi, how much would you charge to fix a boiler that's leaking?\nAgent: Right, a leaking boiler. Repair cost needs an on-site quote.The call-out is \u00a375 + VAT weekdays, or \u00a3120 + VAT evenings and weekends.\n\nI can\u2019t quote the repair without the engineer seeing it.\nUser: My name is Mark\nAgent: Mark, got it. What\u2019s the property address?\nUser: NE5 5EE\nAgent: NE5 5EE, got it. What\u2019s the house number and street?\nUser: 7 Oak Ave\nAgent: 7 Oak Ave, got it. What town or city is that in?\nUser: Yes, that's right\nAgent: Thanks. What town or city is that in?\nUser: Today works\nAgent: Brilliant. What town or city is that in?\nUser: Yes, book it\nAgent: Right, happy to book it. What town or city is the property in?\nUser: That's all, thanks",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_9d43c99afe9127e3f9cae4b2",
+      "role": "user",
+      "created_timestamp": 1784638560070,
+      "content": "Hi, how much would you charge to fix a boiler that's leaking?"
+    },
+    {
+      "message_id": "message_04efb20e18b720aaff638126",
+      "role": "agent",
+      "created_timestamp": 1784638564369,
+      "content": "Right, a leaking boiler. Repair cost needs an on-site quote.The call-out is \u00a375 + VAT weekdays, or \u00a3120 + VAT evenings and weekends.\n\nI can\u2019t quote the repair without the engineer seeing it.",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_8592391e6a4589a7105747e6",
+      "role": "user",
+      "created_timestamp": 1784638565156,
+      "content": "My name is Mark"
+    },
+    {
+      "message_id": "message_5f6d2a26c1f58c30c6560e29",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638566874,
+      "tool_call_id": "call_McunYQbHHYUGSFHj2me9ZMIO",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_8a2c603c6908855f17a2fef0",
+      "role": "tool_call_result",
+      "created_timestamp": 1784638566875,
+      "tool_call_id": "call_McunYQbHHYUGSFHj2me9ZMIO",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Mark\",\"classified_intent\":\"repair_quote\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_978015073081ee5647c365bb",
+      "role": "agent",
+      "created_timestamp": 1784638568105,
+      "content": "Mark, got it. What\u2019s the property address?",
+      "metadata": {
+        "response_id": 2
+      }
+    },
+    {
+      "message_id": "message_624a1892ca1e983f4a102780",
+      "role": "user",
+      "created_timestamp": 1784638568929,
+      "content": "NE5 5EE"
+    },
+    {
+      "message_id": "message_db5495777ba7ab1bc7b738bb",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638570320,
+      "tool_call_id": "call_DGdi5lTK7HSjfQpnsEcMvKPk",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_f61555b520e2dd4fb6023ac3",
+      "role": "tool_call_result",
+      "created_timestamp": 1784638570321,
+      "tool_call_id": "call_DGdi5lTK7HSjfQpnsEcMvKPk",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Mark\",\"classified_intent\":\"repair_quote\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"NE5 5EE\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_c3b1234c907a74d7882ad82e",
+      "role": "agent",
+      "created_timestamp": 1784638572164,
+      "content": "NE5 5EE, got it. What\u2019s the house number and street?",
+      "metadata": {
+        "response_id": 3
+      }
+    },
+    {
+      "message_id": "message_aefbd8e163cc8ee6308f5a0c",
+      "role": "user",
+      "created_timestamp": 1784638573055,
+      "content": "7 Oak Ave"
+    },
+    {
+      "message_id": "message_9f695fc430317e46f7390975",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638575580,
+      "tool_call_id": "call_nKn8PMUBLixHAUTSPW8w1UKQ",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_46248b142a9dbec384fcee39",
+      "role": "tool_call_result",
+      "created_timestamp": 1784638575581,
+      "tool_call_id": "call_nKn8PMUBLixHAUTSPW8w1UKQ",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Mark\",\"classified_intent\":\"repair_quote\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"7\",\"address_street\":\"Oak Ave\",\"address_postcode\":\"NE5 5EE\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_989232a881921a99168060ac",
+      "role": "agent",
+      "created_timestamp": 1784638576699,
+      "content": "7 Oak Ave, got it. What town or city is that in?",
+      "metadata": {
+        "response_id": 4
+      }
+    },
+    {
+      "message_id": "message_a436b75beef9f773b670ac86",
+      "role": "user",
+      "created_timestamp": 1784638577520,
+      "content": "Yes, that's right"
+    },
+    {
+      "message_id": "message_e37dbdcbd90a2bbf3002a96b",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638579152,
+      "tool_call_id": "call_8zg1VW0ZquZbFDQ0IHNVwA1p",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_f308cc4171fbe43288ef85e9",
+      "role": "tool_call_result",
+      "created_timestamp": 1784638579153,
+      "tool_call_id": "call_8zg1VW0ZquZbFDQ0IHNVwA1p",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Mark\",\"classified_intent\":\"repair_quote\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"7\",\"address_street\":\"Oak Ave\",\"address_postcode\":\"NE5 5EE\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_7ed22bddb24947c29c5d3251",
+      "role": "agent",
+      "created_timestamp": 1784638580186,
+      "content": "Thanks. What town or city is that in?",
+      "metadata": {
+        "response_id": 5
+      }
+    },
+    {
+      "message_id": "message_3f0c497f6f03f7c6b68486db",
+      "role": "user",
+      "created_timestamp": 1784638581001,
+      "content": "Today works"
+    },
+    {
+      "message_id": "message_a0b3c5c100e019931fd367ad",
+      "role": "agent",
+      "created_timestamp": 1784638582228,
+      "content": "Brilliant. What town or city is that in?",
+      "metadata": {
+        "response_id": 6
+      }
+    },
+    {
+      "message_id": "message_8700f07149334134268b3759",
+      "role": "user",
+      "created_timestamp": 1784638582983,
+      "content": "Yes, book it"
+    },
+    {
+      "message_id": "message_f7939ccca9a771a213b5f2bf",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638584707,
+      "tool_call_id": "call_WeV7J4WfFTuxpp63kNPA4IC0",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_3d1f6bdfbf7e4d540838dc39",
+      "role": "tool_call_result",
+      "created_timestamp": 1784638584708,
+      "tool_call_id": "call_WeV7J4WfFTuxpp63kNPA4IC0",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Mark\",\"classified_intent\":\"repair_quote\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"7\",\"address_street\":\"Oak Ave\",\"address_postcode\":\"NE5 5EE\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_8705a4ee44da74781497881e",
+      "role": "agent",
+      "created_timestamp": 1784638586502,
+      "content": "Right, happy to book it. What town or city is the property in?",
+      "metadata": {
+        "response_id": 7
+      }
+    },
+    {
+      "message_id": "message_7e5922793fe1792646868901",
+      "role": "user",
+      "created_timestamp": 1784638587364,
+      "content": "That's all, thanks"
+    },
+    {
+      "message_id": "message_bd52e6bfd3fb2536ff247b88",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638588158,
+      "tool_call_id": "call_WwVMkgNPlnvNSmceYI2sIBZO",
+      "name": "end_call",
+      "arguments": "{}",
+      "type": "end_call"
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/b4273c0171bd194cf5bd6f0b7cf7155b910126f23952ed7410d83cac1869a722/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "combined_cost": 19.7,
+    "product_costs": [
+      {
+        "unit_price": 2.6,
+        "product": "gpt_5_4_text_testing",
+        "cost": 18.2
+      },
+      {
+        "unit_price": 1.5,
+        "product": "gpt_4_1_text_testing",
+        "cost": 1.5
+      }
+    ]
+  },
+  "chat_analysis": {
+    "chat_summary": "The user, Mark, inquired about the cost to repair a leaking boiler and provided his address details except for the town or city. The agent explained the call-out charges and repeatedly requested the missing city information, but the user did not provide it and ended the conversation. The booking could not be completed due to incomplete address information.",
+    "user_sentiment": "Neutral",
+    "custom_analysis_data": {},
+    "chat_successful": false
+  },
+  "data_storage_setting": "everything"
+}

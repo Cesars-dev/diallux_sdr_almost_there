@@ -1,0 +1,110 @@
+{
+  "chat_id": "chat_b8c260f713fc3b0befcd60788ee",
+  "chat_type": "api_chat",
+  "agent_id": "agent_c5e8c2f5fd28f6ba7b748412be",
+  "agent_version": 0,
+  "agent_name": "V7_personal_iteration3",
+  "retell_llm_dynamic_variables": {
+    "today_date": "2026-08-25",
+    "callback_number": "+12125550010"
+  },
+  "collected_dynamic_variables": {},
+  "chat_status": "ended",
+  "start_timestamp": 1787659673517,
+  "end_timestamp": 1787659686214,
+  "transcript": "User: yeah.\nAgent: Gotcha. So to get us started, what made you reach out about Dialux today?\nUser: it's fine.\nAgent: Totally fine. Just so I don’t assume anything—how did you first come across Dialux: was it a voicemail, an ad, or were you just searching around?\nUser: dunno, whatever's fine.\nAgent: Totally okay. Sounds like now might not be the best time to dive into this—do you want to just pause here and maybe circle back another day, or are you curious at all about how we help catch missed calls and turn them into booked jobs?\nUser: maybe another day.\nAgent: Totally fair, we can leave it there for now. If you ever want to look at stopping missed calls from slipping through the cracks, just reach out and we can walk through it live with you. Have a good one!",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_760a61af4f721e59e552dd41",
+      "role": "user",
+      "created_timestamp": 1787659674465,
+      "content": "yeah."
+    },
+    {
+      "message_id": "message_90e0c6812e51cd04b77b275f",
+      "role": "agent",
+      "created_timestamp": 1787659676300,
+      "content": "Gotcha. So to get us started, what made you reach out about Dialux today?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_dd6b0503d653b40be4d42780",
+      "role": "user",
+      "created_timestamp": 1787659677760,
+      "content": "it's fine."
+    },
+    {
+      "message_id": "message_aca0a7df790a38f48a459bc0",
+      "role": "agent",
+      "created_timestamp": 1787659679254,
+      "content": "Totally fine. Just so I don’t assume anything—how did you first come across Dialux: was it a voicemail, an ad, or were you just searching around?",
+      "metadata": {
+        "response_id": 2
+      }
+    },
+    {
+      "message_id": "message_0a702f639797c5a26b1724f2",
+      "role": "user",
+      "created_timestamp": 1787659680620,
+      "content": "dunno, whatever's fine."
+    },
+    {
+      "message_id": "message_1d5c5ddf4f0c197c55eb2f24",
+      "role": "agent",
+      "created_timestamp": 1787659682618,
+      "content": "Totally okay. Sounds like now might not be the best time to dive into this—do you want to just pause here and maybe circle back another day, or are you curious at all about how we help catch missed calls and turn them into booked jobs?",
+      "metadata": {
+        "response_id": 3
+      }
+    },
+    {
+      "message_id": "message_2d8163d2410134849555ffe4",
+      "role": "user",
+      "created_timestamp": 1787659684089,
+      "content": "maybe another day."
+    },
+    {
+      "message_id": "message_62aeb834cb752e9294ffbbd1",
+      "role": "agent",
+      "created_timestamp": 1787659686177,
+      "content": "Totally fair, we can leave it there for now. If you ever want to look at stopping missed calls from slipping through the cracks, just reach out and we can walk through it live with you. Have a good one!",
+      "metadata": {
+        "response_id": 4
+      }
+    },
+    {
+      "message_id": "message_4f6110605e697ee7f5282470",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787659686178,
+      "tool_call_id": "call_0laySe9MjEWarJdlH4FU3yJd",
+      "name": "end_call",
+      "arguments": "{\"execution_message\":\"Totally fair, we can leave it there for now. If you ever want to look at stopping missed calls from slipping through the cracks, just reach out and we can walk through it live with you. Have a good one!\"}",
+      "type": "end_call"
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/b86ecc0b200812b21ad1fe47f78d66ca23d36d0fc550938e39795f5582a20f78/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "product_costs": [
+      {
+        "product": "gpt_5_1_text_testing",
+        "unit_price": 1.3,
+        "cost": 5.2
+      },
+      {
+        "cost": 1.5,
+        "product": "gpt_4_1_text_testing",
+        "unit_price": 1.5
+      }
+    ],
+    "combined_cost": 6.7
+  },
+  "chat_analysis": {
+    "chat_summary": "The user was contacted about Dialux but showed little interest and provided minimal responses. The agent offered to pause the conversation and suggested reconnecting another day. The call ended amicably without further discussion.",
+    "user_sentiment": "Neutral",
+    "chat_successful": true,
+    "custom_analysis_data": {}
+  },
+  "data_storage_setting": "everything"
+}

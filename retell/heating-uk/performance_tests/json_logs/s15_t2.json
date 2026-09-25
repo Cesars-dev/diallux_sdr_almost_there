@@ -1,0 +1,34 @@
+{
+  "scenario": 15,
+  "turn": 2,
+  "chat_id": "chat_4cb57b0b89483f731c34ad79845",
+  "caller_message": "Yes, that's correct",
+  "agent_messages": [
+    {
+      "message_id": "message_7581010d7934a078ec53e4ad",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638636330,
+      "tool_call_id": "call_BFcHUY0aPEhZWieCUbpxyZGU",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_60601552a53c002869c69904",
+      "role": "tool_call_result",
+      "created_timestamp": 1784638636331,
+      "tool_call_id": "call_BFcHUY0aPEhZWieCUbpxyZGU",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"service\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"Rose Cottage\",\"address_street\":\"Mill Lane\",\"address_postcode\":\"\",\"address_city\":\"Hexham\",\"callback_requested\":false,\"address_incomplete\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_4709fbfe03aef0a784bb33ba",
+      "role": "agent",
+      "created_timestamp": 1784638637355,
+      "content": "Brilliant. What\u2019s the postcode?",
+      "metadata": {
+        "response_id": 2
+      }
+    }
+  ]
+}

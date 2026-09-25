@@ -1,0 +1,399 @@
+{
+  "chat_id": "chat_4f3844461644a52bd7ca6d9947b",
+  "chat_type": "api_chat",
+  "agent_id": "agent_ff9d4b9646a85b82d7ce8fd837",
+  "agent_version": 0,
+  "agent_name": "Multi State Agent",
+  "collected_dynamic_variables": {
+    "callback_requested": "false",
+    "classified_intent": "repair",
+    "past_customer": "false",
+    "intent_confirmed": "true",
+    "address_postcode": "NE6 6FF",
+    "address_confirmed": "true",
+    "address_incomplete": "true",
+    "problem_category": "",
+    "address_city": "",
+    "boiler_make": "",
+    "address_house_number": "5",
+    "current_agent_state": "booking",
+    "symptom_brief": "",
+    "intent_clear": "true",
+    "address_line1": "5 Elm St",
+    "address_street": "Elm St",
+    "greeting_exchanged": "true",
+    "error_code": "",
+    "customer_name": "Karen",
+    "previous_agent_state": "address"
+  },
+  "chat_status": "ended",
+  "start_timestamp": 1784638352934,
+  "end_timestamp": 1784638398924,
+  "transcript": "User: Hi, I've had a headache all day and I'm worried it might be the boiler.\nAgent: British Heat Services, Tom speaking. Right \u2014 headache all day. One moment.\nAgent: Right \u2014 got it. If you smell gas, call the National Gas team on 0800 111 999.\nUser: No, I don't smell gas. Just have a headache.\nAgent: Right, no gas \u2014 glad that\u2019s ruled out. Let\u2019s carry on.\nAgent: Awful timing. Who am I speaking with?\nUser: My name is Karen\nAgent: Karen \u2014 thanks. Is the boiler showing an error code, or blank?\nUser: 5 Elm St, NE6 6FF\nAgent: 5 Elm St \u2014 got it. Is the boiler showing an error code, or blank?\nUser: Yes, that's correct\nAgent: I\u2019m checking the nearest slots now.\nAgent: Karen \u2014 I\u2019ve got today at 6pm, or tomorrow at 2pm. Which suits?\nUser: Tomorrow works\nAgent: Tomorrow works \u2014 thanks. Just a second.Right, Karen, I\u2019ve got you at 5 Elm St \u2014 postcode N-E-6, 6-F-F \u2014 tomorrow at 2pm. Sound okay?\nUser: Yes, book it\nAgent: Brilliant, I\u2019m booking that in now.\nAgent: You\u2019re booked in, Karen. Is there anything else I can help you with?\nUser: That's all, thanks",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_f88ab4ba4d252a75560fbbd1",
+      "role": "user",
+      "created_timestamp": 1784638353554,
+      "content": "Hi, I've had a headache all day and I'm worried it might be the boiler."
+    },
+    {
+      "message_id": "message_4cdcfe2482f03e94f3062003",
+      "role": "agent",
+      "created_timestamp": 1784638355852,
+      "content": "British Heat Services, Tom speaking. Right \u2014 headache all day. One moment.",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_ef8ac128667043afa66e11b6",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638355853,
+      "tool_call_id": "call_59VGqtZgo6Jr8YTaEqwXrSlM",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_3eba8c5c456a5a799e909172",
+      "role": "tool_call_result",
+      "created_timestamp": 1784638355854,
+      "tool_call_id": "call_59VGqtZgo6Jr8YTaEqwXrSlM",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"unknown\",\"classified_intent\":\"possible_gas_or_co_concern\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_e2ae99b4ed519f40dd1468f8",
+      "role": "agent",
+      "created_timestamp": 1784638357153,
+      "content": "Right \u2014 got it. If you smell gas, call the National Gas team on 0800 111 999.",
+      "metadata": {
+        "response_id": 2
+      }
+    },
+    {
+      "message_id": "message_8e6aeb4d5dcf33a2b5fa5f93",
+      "role": "user",
+      "created_timestamp": 1784638357997,
+      "content": "No, I don't smell gas. Just have a headache."
+    },
+    {
+      "message_id": "message_fac96005330afd38e30a037d",
+      "role": "agent",
+      "created_timestamp": 1784638359694,
+      "content": "Right, no gas \u2014 glad that\u2019s ruled out. Let\u2019s carry on.",
+      "metadata": {
+        "response_id": 3
+      }
+    },
+    {
+      "message_id": "message_078794b2ba4c3e9c5914fc74",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638359695,
+      "tool_call_id": "call_s9AoG76uaFS13oPC4zHCviyw",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_2f1ae3cc449c78aabf12f2a9",
+      "role": "tool_call_result",
+      "created_timestamp": 1784638359696,
+      "tool_call_id": "call_s9AoG76uaFS13oPC4zHCviyw",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"unknown\",\"classified_intent\":\"repair\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_43fbe73b1a34513eb5744962",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638360752,
+      "tool_call_id": "call_UIaSUsGx9gAfVdiCZuLsUFMn",
+      "name": "transition_to_address",
+      "arguments": "{}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_272bb20c80706258ff2700e3",
+      "role": "state_transition",
+      "created_timestamp": 1784638360753,
+      "former_state_name": "greeter",
+      "new_state_name": "address"
+    },
+    {
+      "message_id": "message_73c2be21e21da30ef4b15fc9",
+      "role": "agent",
+      "created_timestamp": 1784638361797,
+      "content": "Awful timing. Who am I speaking with?",
+      "metadata": {
+        "response_id": 4
+      }
+    },
+    {
+      "message_id": "message_7c782efd5de946d11cb9ecd7",
+      "role": "user",
+      "created_timestamp": 1784638362619,
+      "content": "My name is Karen"
+    },
+    {
+      "message_id": "message_843f83392f0ac95385a14887",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638364042,
+      "tool_call_id": "call_LZl3SgorXKjot0aMr94SAIIc",
+      "name": "extract_address_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_f7bf1f73d405f4c8947fd689",
+      "role": "tool_call_result",
+      "created_timestamp": 1784638364043,
+      "tool_call_id": "call_LZl3SgorXKjot0aMr94SAIIc",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Karen\",\"problem_category\":\"\",\"symptom_brief\":\"\",\"error_code\":\"\",\"boiler_make\":\"\",\"address_postcode\":\"\",\"address_house_number\":\"\",\"address_street\":\"\",\"address_line1\":\"\",\"address_city\":\"\",\"address_confirmed\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_3cf1bd3582064b2cc802b603",
+      "role": "agent",
+      "created_timestamp": 1784638365349,
+      "content": "Karen \u2014 thanks. Is the boiler showing an error code, or blank?",
+      "metadata": {
+        "response_id": 5
+      }
+    },
+    {
+      "message_id": "message_6687909bb21faa3b2a677c6d",
+      "role": "user",
+      "created_timestamp": 1784638366065,
+      "content": "5 Elm St, NE6 6FF"
+    },
+    {
+      "message_id": "message_67bef5b87018e1c398eb87d4",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638367537,
+      "tool_call_id": "call_LcPa7ZG7GOtPpoj32xewFQ7l",
+      "name": "extract_address_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_1672df893274bb0bdc0da9a1",
+      "role": "tool_call_result",
+      "created_timestamp": 1784638367538,
+      "tool_call_id": "call_LcPa7ZG7GOtPpoj32xewFQ7l",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Karen\",\"problem_category\":\"\",\"symptom_brief\":\"\",\"error_code\":\"\",\"boiler_make\":\"\",\"address_postcode\":\"NE6 6FF\",\"address_house_number\":\"5\",\"address_street\":\"Elm St\",\"address_line1\":\"5 Elm St\",\"address_city\":\"\",\"address_confirmed\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_c3bfb90e36912b5fe7bc01f1",
+      "role": "agent",
+      "created_timestamp": 1784638368602,
+      "content": "5 Elm St \u2014 got it. Is the boiler showing an error code, or blank?",
+      "metadata": {
+        "response_id": 6
+      }
+    },
+    {
+      "message_id": "message_4720604f7969a60eea2b5f45",
+      "role": "user",
+      "created_timestamp": 1784638369406,
+      "content": "Yes, that's correct"
+    },
+    {
+      "message_id": "message_61ac6da7added1c0f221c7d3",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638371704,
+      "tool_call_id": "call_uvcBcVh33XM8HtcUea4s1gsw",
+      "name": "extract_address_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_46be448b4107ad3ba0ee8f49",
+      "role": "tool_call_result",
+      "created_timestamp": 1784638371705,
+      "tool_call_id": "call_uvcBcVh33XM8HtcUea4s1gsw",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Karen\",\"problem_category\":\"\",\"symptom_brief\":\"\",\"error_code\":\"\",\"boiler_make\":\"\",\"address_postcode\":\"NE6 6FF\",\"address_house_number\":\"5\",\"address_street\":\"Elm St\",\"address_line1\":\"5 Elm St\",\"address_city\":\"\",\"address_confirmed\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_99413a096003b7b2ca625d80",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638372594,
+      "tool_call_id": "call_JkU3OYAgyfBEhvojhk3sbcBX",
+      "name": "transition_to_booking",
+      "arguments": "{}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_aa89af7914ffcd51816953e8",
+      "role": "state_transition",
+      "created_timestamp": 1784638372595,
+      "former_state_name": "address",
+      "new_state_name": "booking"
+    },
+    {
+      "message_id": "message_203fe2573b84581fda35d8b8",
+      "role": "agent",
+      "created_timestamp": 1784638374134,
+      "content": "I\u2019m checking the nearest slots now.",
+      "metadata": {
+        "response_id": 7
+      }
+    },
+    {
+      "message_id": "message_65b40b6107465c2b4900d183",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638374135,
+      "tool_call_id": "call_kX9XCgr6k0FkAJj3b9x7tb4T",
+      "name": "check_availability",
+      "arguments": "{\"start_time\":\"2026-07-21T00:00:00\",\"end_time\":\"2026-07-22T23:59:00\",\"timezone\":\"Europe/London\",\"execution_message\":\"I\u2019m checking the nearest slots now.\"}",
+      "type": "check_availability_cal"
+    },
+    {
+      "message_id": "message_2552423fca04329e560a968a",
+      "role": "tool_call_result",
+      "created_timestamp": 1784638374605,
+      "tool_call_id": "call_kX9XCgr6k0FkAJj3b9x7tb4T",
+      "content": "{\"availability_for_selected_time\":[{\"date\":\"Tuesday, 2026 July 7/21/2026 British Summer Time\",\"availability_range\":[\"From 6:00 PM to 7:00 PM\"]},{\"date\":\"Wednesday, 2026 July 7/22/2026 British Summer Time\",\"availability_range\":[\"From 2:00 PM to 7:00 PM\"]}]}",
+      "successful": true
+    },
+    {
+      "message_id": "message_8efe9b81484535001c402eb0",
+      "role": "agent",
+      "created_timestamp": 1784638375867,
+      "content": "Karen \u2014 I\u2019ve got today at 6pm, or tomorrow at 2pm. Which suits?",
+      "metadata": {
+        "response_id": 8
+      }
+    },
+    {
+      "message_id": "message_4725912179278e9206bb31d7",
+      "role": "user",
+      "created_timestamp": 1784638376697,
+      "content": "Tomorrow works"
+    },
+    {
+      "message_id": "message_327bdd400bb14ee3ac38d8dd",
+      "role": "agent",
+      "created_timestamp": 1784638378219,
+      "content": "Tomorrow works \u2014 thanks. Just a second.Right, Karen, I\u2019ve got you at 5 Elm St \u2014 postcode N-E-6, 6-F-F \u2014 tomorrow at 2pm. Sound okay?",
+      "metadata": {
+        "response_id": 9
+      }
+    },
+    {
+      "message_id": "message_80cbfe2afc817da825781660",
+      "role": "user",
+      "created_timestamp": 1784638379010,
+      "content": "Yes, book it"
+    },
+    {
+      "message_id": "message_aa2ca39de810aeedb42028e5",
+      "role": "agent",
+      "created_timestamp": 1784638383142,
+      "content": "Brilliant, I\u2019m booking that in now.",
+      "metadata": {
+        "response_id": 10
+      }
+    },
+    {
+      "message_id": "message_9b7bb1783e29630931952c78",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638383143,
+      "tool_call_id": "call_iUINgTC9YbykH2TukNTfMtyv",
+      "name": "book_calendar",
+      "arguments": "{\"time\":\"2026-07-22T14:00:00\",\"timezone\":\"Europe/London\",\"name\":\"Karen\",\"email\":\"jaydiallux@gmail.com\",\"attendeePhoneNumber\":null,\"title\":\" \u2014 Karen\",\"notes\":\"CUSTOMER: Karen | ADDRESS: 5 Elm St, , NE6 6FF | PHONE: {{user_number}} | PROBLEM: Boiler Breakdown | SYMPTOMS: Headache all day and worried it might be the boiler\",\"guests\":null,\"rescheduleReason\":null,\"execution_message\":\"Brilliant, I\u2019m booking that in now.\"}",
+      "type": "book_appointment_cal"
+    },
+    {
+      "message_id": "message_24feb1d8af7474df90c30488",
+      "role": "tool_call_result",
+      "created_timestamp": 1784638391669,
+      "tool_call_id": "call_iUINgTC9YbykH2TukNTfMtyv",
+      "content": "{\"status\":\"Successfully booked an appointment.\",\"booking_id\":22743083,\"booking_uid\":\"cp3dkGCiCzxveXQVhzwJzT\"}",
+      "successful": true
+    },
+    {
+      "message_id": "message_b37c11e8ea18f35003edd057",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638393295,
+      "tool_call_id": "call_UeEOZ20bcX6omj3PoemJM9rs",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_6c0341e9b8a96eeeefc4345a",
+      "role": "tool_call_result",
+      "created_timestamp": 1784638393296,
+      "tool_call_id": "call_UeEOZ20bcX6omj3PoemJM9rs",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Karen\",\"classified_intent\":\"repair\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"5\",\"address_street\":\"Elm St\",\"address_postcode\":\"NE6 6FF\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_71f35f210673f9cda4df9594",
+      "role": "agent",
+      "created_timestamp": 1784638395524,
+      "content": "You\u2019re booked in, Karen. Is there anything else I can help you with?",
+      "metadata": {
+        "response_id": 11
+      }
+    },
+    {
+      "message_id": "message_5c44b937e3eaa93f7b833705",
+      "role": "user",
+      "created_timestamp": 1784638396383,
+      "content": "That's all, thanks"
+    },
+    {
+      "message_id": "message_76b87203cc131b4933425d58",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638398100,
+      "tool_call_id": "call_yfqVwWmyAXwiSVuFGOGG31j7",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_54d3dcf637e00b300ab47eab",
+      "role": "tool_call_result",
+      "created_timestamp": 1784638398101,
+      "tool_call_id": "call_yfqVwWmyAXwiSVuFGOGG31j7",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Karen\",\"classified_intent\":\"repair\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"5\",\"address_street\":\"Elm St\",\"address_postcode\":\"NE6 6FF\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_44e92c7114bbed561e3afcc0",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638398912,
+      "tool_call_id": "call_4QgAREEiSvMwZ44n9kZyih4e",
+      "name": "end_call",
+      "arguments": "{}",
+      "type": "end_call"
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/cccb25e5255d675792ad4ddaa6b77c9a0470a7ad6d7a64cbd0e3fb237286acc8/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "combined_cost": 30.1,
+    "product_costs": [
+      {
+        "unit_price": 2.6,
+        "product": "gpt_5_4_text_testing",
+        "cost": 28.6
+      },
+      {
+        "unit_price": 1.5,
+        "product": "gpt_4_1_text_testing",
+        "cost": 1.5
+      }
+    ]
+  },
+  "chat_analysis": {
+    "chat_summary": "The user, Karen, reported a headache and concern about her boiler. The agent confirmed there was no gas smell, collected Karen's details, and successfully booked a boiler repair appointment for the next day at 2pm. The user confirmed the booking and ended the chat satisfied.",
+    "user_sentiment": "Positive",
+    "custom_analysis_data": {},
+    "chat_successful": true
+  },
+  "data_storage_setting": "everything"
+}

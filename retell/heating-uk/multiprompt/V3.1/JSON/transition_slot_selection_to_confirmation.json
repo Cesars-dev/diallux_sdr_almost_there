@@ -1,0 +1,21 @@
+{
+  "description": "Transition when slot is selected",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "selected_slot_start": {
+        "type": "string",
+        "description": "The slot's LOCAL time in Europe/London (bare, no Z), e.g. 2026-08-21T14:00:00"
+      },
+      "slot_selection_completed": {
+        "type": "boolean",
+        "description": "Whether a slot has been selected"
+      }
+    },
+    "required": [
+      "slot_selection_completed",
+      "selected_slot_start"
+    ]
+  },
+  "destination_state_name": "confirmation"
+}

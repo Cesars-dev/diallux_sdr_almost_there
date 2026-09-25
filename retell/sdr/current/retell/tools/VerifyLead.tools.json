@@ -1,0 +1,50 @@
+[
+  {
+    "description": "Deterministic pre-booking gate. Call ONCE after your filler line, passing each field exactly as captured. Responses: {\"status\":\"ok\",\"data_verified\":true,\"problems\":[],\"actions\":[]} = call transition_to_booking; {\"status\":\"incomplete\",\"data_verified\":false,\"problems\":[...],\"actions\":[...]} = the listed field is missing - read `actions`, speak each 'Say: ...' line verbatim, capture the answer and call again with the complete set; {\"status\":\"error\",...} = system trouble - tell the caller honestly we'll get back to them shortly to confirm the slot. The server formats and injects corrected values itself. Never fabricate or reformat argument values - pass them exactly as captured.",
+    "args_at_root": false,
+    "timeout_ms": 15000,
+    "speak_after_execution": true,
+    "type": "custom",
+    "headers": {},
+    "method": "POST",
+    "response_variables": {
+      "data_verified": "data_verified",
+      "callback_number": "callback_number",
+      "first_name": "first_name",
+      "last_name": "last_name"
+    },
+    "url": "https://slots.diallux-ai.site/validator-function/verify-lead-data",
+    "name": "verify_lead_data",
+    "parameter_type": "json",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "first_name": {
+          "type": "string",
+          "description": "Pass {{first_name}} exactly as stored (may be empty)."
+        },
+        "last_name": {
+          "type": "string",
+          "description": "Pass {{last_name}} exactly as stored (may be empty)."
+        },
+        "company_name": {
+          "type": "string",
+          "description": "Pass {{company_name}} exactly as stored (may be empty)."
+        },
+        "callback_number": {
+          "type": "string",
+          "description": "Pass {{callback_number}} exactly as stored."
+        },
+        "prospect_timezone": {
+          "type": "string",
+          "description": "Pass {{prospect_timezone}} exactly as stored."
+        },
+        "selected_time": {
+          "type": "string",
+          "description": "Pass {{selected_time}} verbatim (the confirmed slot)."
+        }
+      }
+    },
+    "speak_during_execution": false
+  }
+]

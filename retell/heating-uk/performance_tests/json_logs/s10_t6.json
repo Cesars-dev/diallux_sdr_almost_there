@@ -1,0 +1,34 @@
+{
+  "scenario": 10,
+  "turn": 6,
+  "chat_id": "chat_a5815d084aa7f0ac9dc5f01f123",
+  "caller_message": "That's all, thanks",
+  "agent_messages": [
+    {
+      "message_id": "message_b676f75ad296e8877e399cdf",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639567584,
+      "tool_call_id": "call_lxY5sUkvQBV9RlQAunhW7Cpc",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_dfdda906e8156190ff742c11",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639567585,
+      "tool_call_id": "call_lxY5sUkvQBV9RlQAunhW7Cpc",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Robert\",\"classified_intent\":\"Annual Boiler Service\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":true,\"address_house_number\":\"25\",\"address_street\":\"Acacia Gardens\",\"address_postcode\":\"NE4 4DD\",\"address_city\":\"Newcastle\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_c05ea063197e90261add1602",
+      "role": "agent",
+      "created_timestamp": 1784639569742,
+      "content": "Thanks, Robert. Cheers for calling British Heat Services.",
+      "metadata": {
+        "response_id": 9
+      }
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+[
+  {
+    "description": "Creates the live call booking on Cal.com. CRITICAL: pass `time` as {{selected_time}} VERBATIM (bare local time in the prospect's zone — never recompute, never a UTC `iso`). Send `timezone` as {{prospect_timezone}} in IANA format. ALWAYS use email = jaydiallux@gmail.com (system shared attendee); name falls back to {{company_name}} when no name was provided; phoneNumber already E.164.",
+    "cal_api_key": "${CAL_KEY_2}",
+    "type": "book_appointment_cal",
+    "event_type_id": 3801235,
+    "cal_fields": [
+      {
+        "type": "string",
+        "description": "attendee name",
+        "required": true,
+        "name": "name"
+      },
+      {
+        "name": "email",
+        "description": "attendee email",
+        "type": "string",
+        "required": false
+      },
+      {
+        "name": "attendeePhoneNumber",
+        "required": true,
+        "description": "attendeePhoneNumber (number must be valid number in e.164 format)",
+        "type": "string"
+      },
+      {
+        "name": "title",
+        "description": "title",
+        "type": "string",
+        "required": true
+      },
+      {
+        "type": "string",
+        "description": "notes",
+        "required": false,
+        "name": "notes"
+      }
+    ],
+    "name": "create_livecall_booking",
+    "location_type": "integration",
+    "speak_after_execution": true
+  },
+  {
+    "type": "extract_dynamic_variable",
+    "speak_after_execution": false,
+    "name": "record_booking_uid",
+    "description": "Immediately after create_livecall_booking responds, record its booking id/uid here VERBATIM from the response. If the response contained no id, leave it empty - never invent one.",
+    "variables": [
+      {
+        "type": "string",
+        "name": "booking_uid",
+        "description": "The booking's id/uid copied verbatim from the create_livecall_booking response."
+      }
+    ]
+  },
+  {
+    "code": "const g = k => (dv[k] == null ? \"\" : String(dv[k])).trim();\nconst problems = [];\nfor (const k of [\"selected_time\"]) {\n  if (!g(k)) problems.push({field: k, issue: \"missing\"});\n}\nif (!/^\\+[1-9]\\d{6,14}$/.test(g(\"callback_number\"))) problems.push({field: \"callback_number\", issue: \"not E.164\"});\nif ([\"America/New_York\",\"America/Chicago\",\"America/Denver\",\"America/Los_Angeles\"].indexOf(g(\"prospect_timezone\")) < 0)\n  problems.push({field: \"prospect_timezone\", issue: \"not IANA\"});\nif (g(\"booking_uid\").length < 6) problems.push({field: \"booking_uid\", issue: \"calendar did not return an id\"});\nreturn { valid: problems.length === 0, problems };",
+    "timeout_ms": 5000,
+    "speak_after_execution": true,
+    "description": "Post-booking schema gate. Call ONLY AFTER record_booking_uid. Validates stored fields incl. the recorded booking id. Returns {valid, problems}. Call exactly ONCE per attempt.",
+    "speak_during_execution": false,
+    "name": "validate_booking",
+    "type": "code"
+  },
+  {
+    "type": "extract_dynamic_variable",
+    "description": "Records the slot outcome. Set booking_verified=true ONLY when validate_booking returned valid:true. Set booking_failed=true ONLY after two consecutive calendar failures. Never set both.",
+    "speak_after_execution": false,
+    "variables": [
+      {
+        "name": "booking_verified",
+        "type": "boolean",
+        "description": "true ONLY when validate_booking returned valid:true."
+      },
+      {
+        "type": "boolean",
+        "description": "true ONLY after a second create_livecall_booking failure.",
+        "name": "booking_failed"
+      }
+    ],
+    "name": "record_booking_outcome"
+  }
+]

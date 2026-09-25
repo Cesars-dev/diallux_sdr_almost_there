@@ -1,0 +1,23 @@
+{
+  "destination_state_name": "triage",
+  "description": "Transition when greeting is exchanged and intent classified",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "greeting_exchanged": {
+        "type": "boolean",
+        "description": "Whether greeting has been exchanged"
+      },
+      "customer_name": {
+        "type": "string",
+        "description": "The customer's full name"
+      },
+      "classified_intent": {
+        "type": "string",
+        "description": "Why the customer is calling",
+        "enum": ["booking", "quote", "other"]
+      }
+    },
+    "required": ["greeting_exchanged", "customer_name", "classified_intent"]
+  }
+}

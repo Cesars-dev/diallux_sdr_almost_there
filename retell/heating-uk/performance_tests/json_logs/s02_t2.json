@@ -1,0 +1,34 @@
+{
+  "scenario": 2,
+  "turn": 2,
+  "chat_id": "chat_461f5cee61e28983d8222140add",
+  "caller_message": "No issues, just the annual service",
+  "agent_messages": [
+    {
+      "message_id": "message_062eb804670533c1193ccad1",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784640696400,
+      "tool_call_id": "call_unQ9VOhIRsaXYlHOfxC3Dnfa",
+      "name": "extract_address_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_6f920b1d4882c890a516ba9e",
+      "role": "tool_call_result",
+      "created_timestamp": 1784640696401,
+      "tool_call_id": "call_unQ9VOhIRsaXYlHOfxC3Dnfa",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Linda\",\"problem_category\":\"Annual Boiler Service\",\"symptom_brief\":\"No issues, routine annual service\",\"error_code\":\"\",\"boiler_make\":\"\",\"address_postcode\":\"\",\"address_house_number\":\"\",\"address_street\":\"\",\"address_line1\":\"\",\"address_city\":\"\",\"address_confirmed\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_4e3491b8e07b7546ff931775",
+      "role": "agent",
+      "created_timestamp": 1784640701957,
+      "content": "No issues, routine service \u2014 lovely. What's the postcode?",
+      "metadata": {
+        "response_id": 2
+      }
+    }
+  ]
+}

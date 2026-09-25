@@ -1,0 +1,159 @@
+{
+  "chat_id": "chat_4cb57b0b89483f731c34ad79845",
+  "chat_type": "api_chat",
+  "agent_id": "agent_ff9d4b9646a85b82d7ce8fd837",
+  "agent_version": 0,
+  "agent_name": "Multi State Agent",
+  "collected_dynamic_variables": {
+    "address_house_number": "Rose Cottage",
+    "callback_requested": "false",
+    "intent_clear": "true",
+    "classified_intent": "service",
+    "address_street": "Mill Lane",
+    "past_customer": "false",
+    "greeting_exchanged": "true",
+    "intent_confirmed": "true",
+    "address_postcode": "",
+    "customer_name": "",
+    "address_incomplete": "true",
+    "address_city": "Hexham"
+  },
+  "chat_status": "ended",
+  "start_timestamp": 1784638629542,
+  "end_timestamp": 1784638647598,
+  "transcript": "User: Hi, I need a service. My address is Rose Cottage, Mill Lane, Hexham.\nAgent: Rose Cottage, Mill Lane, Hexham \u2014 got it. What\u2019s the postcode?\nUser: Yes, that's correct\nAgent: Brilliant. What\u2019s the postcode?\nUser: Today works\nAgent: Today works \u2014 lovely. I still need the postcode.\nUser: Yes, book it\nAgent: Right, I can do that once I\u2019ve got the postcode. What\u2019s the postcode?\nUser: That's all, thanks",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_bf650e7cef708e6dd9ceda1d",
+      "role": "user",
+      "created_timestamp": 1784638630294,
+      "content": "Hi, I need a service. My address is Rose Cottage, Mill Lane, Hexham."
+    },
+    {
+      "message_id": "message_eab6d043bf3406ead2c1e360",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638632296,
+      "tool_call_id": "call_FyM1fZGetgCQpmTtGlR5PcD6",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_e1145b1e1ff2d084500d978a",
+      "role": "tool_call_result",
+      "created_timestamp": 1784638632297,
+      "tool_call_id": "call_FyM1fZGetgCQpmTtGlR5PcD6",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"service\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"Rose Cottage\",\"address_street\":\"Mill Lane\",\"address_postcode\":\"\",\"address_city\":\"Hexham\",\"callback_requested\":false,\"address_incomplete\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_aeb0cf32b86c58b1b1fae596",
+      "role": "agent",
+      "created_timestamp": 1784638633646,
+      "content": "Rose Cottage, Mill Lane, Hexham \u2014 got it. What\u2019s the postcode?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_2522ba352dcb7c1704c52681",
+      "role": "user",
+      "created_timestamp": 1784638634412,
+      "content": "Yes, that's correct"
+    },
+    {
+      "message_id": "message_7581010d7934a078ec53e4ad",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638636330,
+      "tool_call_id": "call_BFcHUY0aPEhZWieCUbpxyZGU",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_60601552a53c002869c69904",
+      "role": "tool_call_result",
+      "created_timestamp": 1784638636331,
+      "tool_call_id": "call_BFcHUY0aPEhZWieCUbpxyZGU",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"service\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"Rose Cottage\",\"address_street\":\"Mill Lane\",\"address_postcode\":\"\",\"address_city\":\"Hexham\",\"callback_requested\":false,\"address_incomplete\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_4709fbfe03aef0a784bb33ba",
+      "role": "agent",
+      "created_timestamp": 1784638637355,
+      "content": "Brilliant. What\u2019s the postcode?",
+      "metadata": {
+        "response_id": 2
+      }
+    },
+    {
+      "message_id": "message_b52bf1f00a808258a4ac9b50",
+      "role": "user",
+      "created_timestamp": 1784638638092,
+      "content": "Today works"
+    },
+    {
+      "message_id": "message_5bf6c56ac743ee515a825ebd",
+      "role": "agent",
+      "created_timestamp": 1784638639179,
+      "content": "Today works \u2014 lovely. I still need the postcode.",
+      "metadata": {
+        "response_id": 3
+      }
+    },
+    {
+      "message_id": "message_83b00a626e91800100d2150e",
+      "role": "user",
+      "created_timestamp": 1784638640026,
+      "content": "Yes, book it"
+    },
+    {
+      "message_id": "message_23e3ffb1d1d1003b920e2fe9",
+      "role": "agent",
+      "created_timestamp": 1784638641206,
+      "content": "Right, I can do that once I\u2019ve got the postcode. What\u2019s the postcode?",
+      "metadata": {
+        "response_id": 4
+      }
+    },
+    {
+      "message_id": "message_5e6049cd2a5d7304eceef318",
+      "role": "user",
+      "created_timestamp": 1784638641976,
+      "content": "That's all, thanks"
+    },
+    {
+      "message_id": "message_b0006c2abdc3efb032a4d4d5",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638647553,
+      "tool_call_id": "call_UW5NSFuvOfVuP7JgNWIE2p4p",
+      "name": "end_call",
+      "arguments": "{}",
+      "type": "end_call"
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/bb8165fb6d197b1927e22cea776a72e4a6ac0fd9294491ba7f6df99ac122db0a/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "combined_cost": 11.9,
+    "product_costs": [
+      {
+        "unit_price": 2.6,
+        "product": "gpt_5_4_text_testing",
+        "cost": 10.4
+      },
+      {
+        "unit_price": 1.5,
+        "product": "gpt_4_1_text_testing",
+        "cost": 1.5
+      }
+    ]
+  },
+  "chat_analysis": {
+    "chat_summary": "The user requested a service at their address and confirmed the details but did not provide the postcode despite multiple prompts from the agent. The agent was unable to proceed with the booking due to the missing postcode, and the user ended the conversation without providing it.",
+    "user_sentiment": "Neutral",
+    "custom_analysis_data": {},
+    "chat_successful": false
+  },
+  "data_storage_setting": "everything"
+}

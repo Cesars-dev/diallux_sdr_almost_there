@@ -1,0 +1,76 @@
+{
+  "scenario": 1,
+  "turn": 3,
+  "chat_id": "chat_7e5598099766b8626b339e0c51f",
+  "caller_message": "Yes, that's correct",
+  "agent_messages": [
+    {
+      "message_id": "message_3da8e0aad78aed3c7651ccf2",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784640643655,
+      "tool_call_id": "call_Y45FuYL7euQUN7SGS7OVIVc5",
+      "name": "extract_address_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_72aa9169fa804674461e5fdd",
+      "role": "tool_call_result",
+      "created_timestamp": 1784640643656,
+      "tool_call_id": "call_Y45FuYL7euQUN7SGS7OVIVc5",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"John\",\"problem_category\":\"No Heating and Hot Water\",\"symptom_brief\":\"No error code, no heating or hot water since this morning\",\"error_code\":\"\",\"boiler_make\":\"\",\"address_postcode\":\"NE4 5AB\",\"address_house_number\":\"14\",\"address_street\":\"Victoria Terrace\",\"address_line1\":\"14 Victoria Terrace\",\"address_city\":\"Newcastle\",\"address_confirmed\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_710c6c70ccf3ce09e3157954",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784640644452,
+      "tool_call_id": "call_7XHfnBybjmQ39rqO35P0S4UU",
+      "name": "transition_to_booking",
+      "arguments": "{}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_3fb5a889e4df80a95ba846b8",
+      "role": "state_transition",
+      "created_timestamp": 1784640644453,
+      "former_state_name": "address",
+      "new_state_name": "booking"
+    },
+    {
+      "message_id": "message_790c6a37993f09150496fd8a",
+      "role": "agent",
+      "created_timestamp": 1784640645815,
+      "content": "I\u2019m just checking the nearest slots now.",
+      "metadata": {
+        "response_id": 3
+      }
+    },
+    {
+      "message_id": "message_8217b68f8ecac995af4e66cc",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784640645816,
+      "tool_call_id": "call_Mx96neR7P9Ca9pKK54Rmnyrp",
+      "name": "check_availability",
+      "arguments": "{\"start_time\":\"2026-07-21T00:00:00\",\"end_time\":\"2026-07-22T23:59:00\",\"timezone\":\"Europe/London\",\"execution_message\":\"I\u2019m just checking the nearest slots now.\"}",
+      "type": "check_availability_cal"
+    },
+    {
+      "message_id": "message_cc6c859017c943cdf60aab9b",
+      "role": "tool_call_result",
+      "created_timestamp": 1784640647075,
+      "tool_call_id": "call_Mx96neR7P9Ca9pKK54Rmnyrp",
+      "content": "{\"availability_for_selected_time\":\"No available slots for specified time range, but there are available slots on time range that's nearby.\",\"availability_nearby\":[{\"date\":\"Thursday, 2026 July 7/23/2026 British Summer Time\",\"availability_range\":[\"From 9:30 AM to 1:00 PM\",\"From 1:30 PM to 7:00 PM\"]}]}",
+      "successful": true
+    },
+    {
+      "message_id": "message_f2c2cf04273d8e3a5471664c",
+      "role": "agent",
+      "created_timestamp": 1784640648990,
+      "content": "John, nearest I\u2019ve got is Thursday morning or Thursday afternoon. Which suits?",
+      "metadata": {
+        "response_id": 4
+      }
+    }
+  ]
+}

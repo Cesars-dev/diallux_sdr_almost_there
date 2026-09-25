@@ -1,0 +1,34 @@
+{
+  "scenario": 16,
+  "turn": 1,
+  "chat_id": "chat_233eac3606cca3a3b5b78d5b5ce",
+  "caller_message": "Hi, I need a breakdown call-out. No heating since last night.",
+  "agent_messages": [
+    {
+      "message_id": "message_1b491f33bb4f42098f7f4489",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638653736,
+      "tool_call_id": "call_R9teLGM5aW3TdcHkBAicjPfS",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_e44fd6827484642a7795abf9",
+      "role": "tool_call_result",
+      "created_timestamp": 1784638653737,
+      "tool_call_id": "call_R9teLGM5aW3TdcHkBAicjPfS",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"Boiler Breakdown\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_cbfe040d032d993d94482322",
+      "role": "agent",
+      "created_timestamp": 1784638655427,
+      "content": "Right, no heating since last night \u2014 that's a pain. What's the address?",
+      "metadata": {
+        "response_id": 1
+      }
+    }
+  ]
+}

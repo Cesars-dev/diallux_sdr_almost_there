@@ -1,0 +1,96 @@
+{
+  "chat_id": "chat_df99ccb8410797ecf405a9cf423",
+  "chat_type": "api_chat",
+  "agent_id": "agent_b29a076e9a7295d407c8242390",
+  "agent_version": 0,
+  "agent_name": "Multi State Agent",
+  "collected_dynamic_variables": {
+    "address_house_number": "",
+    "callback_requested": "false",
+    "intent_clear": "true",
+    "classified_intent": "Gas emergency",
+    "address_street": "",
+    "past_customer": "false",
+    "greeting_exchanged": "true",
+    "intent_confirmed": "false",
+    "address_postcode": "",
+    "customer_name": "",
+    "address_city": ""
+  },
+  "chat_status": "ended",
+  "start_timestamp": 1784632946244,
+  "end_timestamp": 1784632952031,
+  "transcript": "User: Hi, I think I smell gas near my boiler.\nAgent: That sounds serious. Are you smelling gas?\nUser: Yes, I can smell gas",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_b18749c964624540ca3e3adc",
+      "role": "user",
+      "created_timestamp": 1784632946816,
+      "content": "Hi, I think I smell gas near my boiler."
+    },
+    {
+      "message_id": "message_3152bbcbe034c7f4be5e76fa",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784632948346,
+      "tool_call_id": "call_UVjgweIOsl3hMzunOsYQyemN",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_1accbbc3d2721d3d7759641a",
+      "role": "tool_call_result",
+      "created_timestamp": 1784632948347,
+      "tool_call_id": "call_UVjgweIOsl3hMzunOsYQyemN",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"Gas emergency\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_3f08ea7eb0b12ad46c6fc263",
+      "role": "agent",
+      "created_timestamp": 1784632949626,
+      "content": "That sounds serious. Are you smelling gas?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_75c795373787df33409ea0a2",
+      "role": "user",
+      "created_timestamp": 1784632950605,
+      "content": "Yes, I can smell gas"
+    },
+    {
+      "message_id": "message_88f7a9a69a347730feb3b352",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784632951989,
+      "tool_call_id": "call_x0Sbc2vbWIyTCOuPBCuUAH8k",
+      "name": "end_call",
+      "arguments": "{}",
+      "type": "end_call"
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/fac0ff9ba959dbbb38bfb9ca0d91d34e7dc6af0b0bee961e037f7a29265a79bc/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "combined_cost": 4.1,
+    "product_costs": [
+      {
+        "unit_price": 2.6,
+        "product": "gpt_5_4_text_testing",
+        "cost": 2.6
+      },
+      {
+        "unit_price": 1.5,
+        "product": "gpt_4_1_text_testing",
+        "cost": 1.5
+      }
+    ]
+  },
+  "chat_analysis": {
+    "chat_summary": "The user reported smelling gas near their boiler, indicating a potential gas emergency. The agent confirmed the seriousness of the situation and verified the user's report before ending the call, likely to escalate the issue appropriately.",
+    "user_sentiment": "Neutral",
+    "custom_analysis_data": {},
+    "chat_successful": true
+  },
+  "data_storage_setting": "everything"
+}

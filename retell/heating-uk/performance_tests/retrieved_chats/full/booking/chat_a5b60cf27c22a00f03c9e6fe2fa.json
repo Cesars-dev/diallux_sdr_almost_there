@@ -1,0 +1,343 @@
+{
+  "chat_id": "chat_a5b60cf27c22a00f03c9e6fe2fa",
+  "chat_type": "api_chat",
+  "agent_id": "agent_ff9d4b9646a85b82d7ce8fd837",
+  "agent_version": 0,
+  "agent_name": "Multi State Agent",
+  "collected_dynamic_variables": {
+    "callback_requested": "false",
+    "classified_intent": "Leak",
+    "past_customer": "false",
+    "intent_confirmed": "true",
+    "address_postcode": "NE5 5EE",
+    "address_confirmed": "true",
+    "address_incomplete": "false",
+    "problem_category": "Leak",
+    "address_city": "Newcastle",
+    "boiler_make": "",
+    "address_house_number": "7",
+    "symptom_brief": "Boiler leaking for about a day",
+    "current_agent_state": "booking",
+    "intent_clear": "true",
+    "address_line1": "7 Oak Ave",
+    "address_street": "Oak Ave",
+    "greeting_exchanged": "true",
+    "error_code": "",
+    "customer_name": "Mark",
+    "previous_agent_state": "address"
+  },
+  "chat_status": "ended",
+  "start_timestamp": 1784639599788,
+  "end_timestamp": 1784639645282,
+  "transcript": "User: Hi, how much would you charge to fix a boiler that's leaking?\nAgent: Boiler leak \u2014 got it.\n\nI can\u2019t quote a repair without the engineer seeing it. Call-out is \u00a375 + VAT weekdays, or \u00a3120 + VAT evenings and weekends.\n\nWhat\u2019s the postcode?\nUser: My name is Mark. 7 Oak Ave, NE5 5EE, Newcastle. It's been leaking for about a day.\nAgent: Mark, 7 Oak Ave, Newcastle, NE5 5EE \u2014 got it.\n\nLeaking for about a day.\n\nHow fast is it dripping?\nUser: Yes, that's right\nAgent: I\u2019m checking the nearest slots now.\nAgent: Right, I\u2019ve got Wednesday between 5 and 7.\n\nDoes that suit?\nUser: Today works\nAgent: I\u2019m checking today\u2019s slots now.\nAgent: No slot left today.\n\nI\u2019ve got Wednesday between 5 and 7 instead. Does that work?\nUser: Yes, book it\nAgent: I\u2019m booking that in now.\nAgent: Brilliant, you\u2019re booked in.\n\nIs there anything else I can help you with?\nUser: That's all, thanks",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_780b81b7746089bdacd9f7eb",
+      "role": "user",
+      "created_timestamp": 1784639600574,
+      "content": "Hi, how much would you charge to fix a boiler that's leaking?"
+    },
+    {
+      "message_id": "message_80bf5b8b032acd46d8e4e7d7",
+      "role": "agent",
+      "created_timestamp": 1784639602374,
+      "content": "Boiler leak \u2014 got it.\n\nI can\u2019t quote a repair without the engineer seeing it. Call-out is \u00a375 + VAT weekdays, or \u00a3120 + VAT evenings and weekends.\n\nWhat\u2019s the postcode?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_2c28c7741429007355a5bf5d",
+      "role": "user",
+      "created_timestamp": 1784639603193,
+      "content": "My name is Mark. 7 Oak Ave, NE5 5EE, Newcastle. It's been leaking for about a day."
+    },
+    {
+      "message_id": "message_608f0d7a63e2daf8f71f1bba",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639604984,
+      "tool_call_id": "call_NrVWHgZAnC8hyUi71RXpvloD",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_6ad68ddd5d531259d489fb04",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639604985,
+      "tool_call_id": "call_NrVWHgZAnC8hyUi71RXpvloD",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Mark\",\"classified_intent\":\"Leak\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"7\",\"address_street\":\"Oak Ave\",\"address_postcode\":\"NE5 5EE\",\"address_city\":\"Newcastle\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_e35a5312e76cdf76ea2b845a",
+      "role": "agent",
+      "created_timestamp": 1784639606378,
+      "content": "Mark, 7 Oak Ave, Newcastle, NE5 5EE \u2014 got it.\n\nLeaking for about a day.\n\nHow fast is it dripping?",
+      "metadata": {
+        "response_id": 2
+      }
+    },
+    {
+      "message_id": "message_7dd64ca56bf824337d6bab9f",
+      "role": "user",
+      "created_timestamp": 1784639607169,
+      "content": "Yes, that's right"
+    },
+    {
+      "message_id": "message_2b604801bb52dfbf394aa20f",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639610623,
+      "tool_call_id": "call_vBZ0Zye4XORmxv0sBKNjGipO",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_74bc8ee2803545507c9660af",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639610624,
+      "tool_call_id": "call_vBZ0Zye4XORmxv0sBKNjGipO",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Mark\",\"classified_intent\":\"Leak\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"7\",\"address_street\":\"Oak Ave\",\"address_postcode\":\"NE5 5EE\",\"address_city\":\"Newcastle\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_26d04f6d9d2f9d577e171a0a",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639611495,
+      "tool_call_id": "call_wgMh0DJBjrM4EIQnTQRxeYzl",
+      "name": "transition_to_address",
+      "arguments": "{}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_291e4fbfa9760f5ec7d1ebf1",
+      "role": "state_transition",
+      "created_timestamp": 1784639611496,
+      "former_state_name": "greeter",
+      "new_state_name": "address"
+    },
+    {
+      "message_id": "message_18be44c34e0eafb8a1c8b023",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639613116,
+      "tool_call_id": "call_l9mi8xyXZX354yTRVzXu4bhH",
+      "name": "extract_address_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_ecca63249e27eee1e640e41a",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639613117,
+      "tool_call_id": "call_l9mi8xyXZX354yTRVzXu4bhH",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Mark\",\"problem_category\":\"Leak\",\"symptom_brief\":\"Boiler leaking for about a day\",\"error_code\":\"\",\"boiler_make\":\"\",\"address_postcode\":\"NE5 5EE\",\"address_house_number\":\"7\",\"address_street\":\"Oak Ave\",\"address_line1\":\"7 Oak Ave\",\"address_city\":\"Newcastle\",\"address_confirmed\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_9cc5f7cc1ec6b435a54023a4",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639613998,
+      "tool_call_id": "call_Z2VfDV9khJsf0RLyRLong1PW",
+      "name": "transition_to_booking",
+      "arguments": "{}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_8d1867ea9ae77e01c34a46a0",
+      "role": "state_transition",
+      "created_timestamp": 1784639613999,
+      "former_state_name": "address",
+      "new_state_name": "booking"
+    },
+    {
+      "message_id": "message_532fc2967e526549323afb92",
+      "role": "agent",
+      "created_timestamp": 1784639615616,
+      "content": "I\u2019m checking the nearest slots now.",
+      "metadata": {
+        "response_id": 3
+      }
+    },
+    {
+      "message_id": "message_da6b2d9d2a6ae14892e5a95b",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639615617,
+      "tool_call_id": "call_07Vm6c6rFMnrTLAZ6WpB0P1J",
+      "name": "check_availability",
+      "arguments": "{\"start_time\":\"2026-07-21T00:00:00\",\"end_time\":\"2026-07-22T23:59:00\",\"timezone\":\"Europe/London\",\"execution_message\":\"I\u2019m checking the nearest slots now.\"}",
+      "type": "check_availability_cal"
+    },
+    {
+      "message_id": "message_b7bd5cf7a77685ef8d2b1f12",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639616094,
+      "tool_call_id": "call_07Vm6c6rFMnrTLAZ6WpB0P1J",
+      "content": "{\"availability_for_selected_time\":[{\"date\":\"Wednesday, 2026 July 7/22/2026 British Summer Time\",\"availability_range\":[\"From 5:00 PM to 7:00 PM\"]}]}",
+      "successful": true
+    },
+    {
+      "message_id": "message_80bc5b9bfba05e342fcb7e46",
+      "role": "agent",
+      "created_timestamp": 1784639621922,
+      "content": "Right, I\u2019ve got Wednesday between 5 and 7.\n\nDoes that suit?",
+      "metadata": {
+        "response_id": 4
+      }
+    },
+    {
+      "message_id": "message_f59ee4ec9466fd07c74a5300",
+      "role": "user",
+      "created_timestamp": 1784639622764,
+      "content": "Today works"
+    },
+    {
+      "message_id": "message_d0cc142dd8abdd4e4643a9d0",
+      "role": "agent",
+      "created_timestamp": 1784639624189,
+      "content": "I\u2019m checking today\u2019s slots now.",
+      "metadata": {
+        "response_id": 5
+      }
+    },
+    {
+      "message_id": "message_e1f73232b490e9b3dcb91ae6",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639624190,
+      "tool_call_id": "call_fqrD9gjPWTOgyshOY3IRMW2A",
+      "name": "check_availability",
+      "arguments": "{\"start_time\":\"2026-07-21T14:13:00\",\"end_time\":\"2026-07-21T23:59:00\",\"timezone\":\"Europe/London\",\"execution_message\":\"I\u2019m checking today\u2019s slots now.\"}",
+      "type": "check_availability_cal"
+    },
+    {
+      "message_id": "message_dbccadfc2277f994a9aa4974",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639625517,
+      "tool_call_id": "call_fqrD9gjPWTOgyshOY3IRMW2A",
+      "content": "{\"availability_for_selected_time\":\"No available slots for specified time range, but there are available slots on time range that's nearby.\",\"availability_nearby\":[{\"date\":\"Wednesday, 2026 July 7/22/2026 British Summer Time\",\"availability_range\":[\"From 5:00 PM to 7:00 PM\"]}]}",
+      "successful": true
+    },
+    {
+      "message_id": "message_3e83ee6168cfa35e7f8fe38f",
+      "role": "agent",
+      "created_timestamp": 1784639627338,
+      "content": "No slot left today.\n\nI\u2019ve got Wednesday between 5 and 7 instead. Does that work?",
+      "metadata": {
+        "response_id": 6
+      }
+    },
+    {
+      "message_id": "message_f086802505472a09027953f3",
+      "role": "user",
+      "created_timestamp": 1784639628220,
+      "content": "Yes, book it"
+    },
+    {
+      "message_id": "message_fc654db1df0d913939b6f82b",
+      "role": "agent",
+      "created_timestamp": 1784639630252,
+      "content": "I\u2019m booking that in now.",
+      "metadata": {
+        "response_id": 7
+      }
+    },
+    {
+      "message_id": "message_4778fae18c5278d82732cc25",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639630253,
+      "tool_call_id": "call_BJcSpUBdGp58kqc5YbqC1K8g",
+      "name": "book_calendar",
+      "arguments": "{\"time\":\"2026-07-22T17:00:00\",\"timezone\":\"Europe/London\",\"name\":\"Mark\",\"email\":\"jaydiallux@gmail.com\",\"attendeePhoneNumber\":null,\"title\":\"Leak \u2014 Mark\",\"notes\":\"CUSTOMER: Mark | ADDRESS: 7 Oak Ave, Newcastle, NE5 5EE | PHONE: {{user_number}} | PROBLEM: Leak | SYMPTOMS: Boiler leaking for about a day\",\"guests\":null,\"rescheduleReason\":null,\"execution_message\":\"I\u2019m booking that in now.\"}",
+      "type": "book_appointment_cal"
+    },
+    {
+      "message_id": "message_b7d0deb96f654236f42ad7f2",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639634511,
+      "tool_call_id": "call_BJcSpUBdGp58kqc5YbqC1K8g",
+      "content": "{\"status\":\"Successfully booked an appointment.\",\"booking_id\":22744188,\"booking_uid\":\"vC8EFjVeVQ5JpjehAbJY6y\"}",
+      "successful": true
+    },
+    {
+      "message_id": "message_eb89ea469f40cf076d71bda3",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639640172,
+      "tool_call_id": "call_KiwjnZGdXM1cHIei3nexVRDi",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_8cbd5a690c2a1ff36cab2363",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639640173,
+      "tool_call_id": "call_KiwjnZGdXM1cHIei3nexVRDi",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Mark\",\"classified_intent\":\"Leak\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"7\",\"address_street\":\"Oak Ave\",\"address_postcode\":\"NE5 5EE\",\"address_city\":\"Newcastle\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_01b78ec6a3431b5f598dea71",
+      "role": "agent",
+      "created_timestamp": 1784639641394,
+      "content": "Brilliant, you\u2019re booked in.\n\nIs there anything else I can help you with?",
+      "metadata": {
+        "response_id": 8
+      }
+    },
+    {
+      "message_id": "message_f19faa4ffb96f107f5b02607",
+      "role": "user",
+      "created_timestamp": 1784639642177,
+      "content": "That's all, thanks"
+    },
+    {
+      "message_id": "message_8ee02bf4b6c5173d49c1feb7",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639644030,
+      "tool_call_id": "call_YqAMvC5F0Eg9EgE9LQs8LzC0",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_61da1e3fc68ee038855a8555",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639644031,
+      "tool_call_id": "call_YqAMvC5F0Eg9EgE9LQs8LzC0",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Mark\",\"classified_intent\":\"Leak\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"7\",\"address_street\":\"Oak Ave\",\"address_postcode\":\"NE5 5EE\",\"address_city\":\"Newcastle\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_f64eb2021001241228583e0f",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639645271,
+      "tool_call_id": "call_7s0h6TFrLjrebYrBTm4Qh1vX",
+      "name": "end_call",
+      "arguments": "{}",
+      "type": "end_call"
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/77d5df758d4e1f802d5720502ca708e203c62f8f272d82fe1ab0b525dbbfc4c2/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "combined_cost": 22.3,
+    "product_costs": [
+      {
+        "unit_price": 2.6,
+        "product": "gpt_5_4_text_testing",
+        "cost": 20.8
+      },
+      {
+        "unit_price": 1.5,
+        "product": "gpt_4_1_text_testing",
+        "cost": 1.5
+      }
+    ]
+  },
+  "chat_analysis": {
+    "chat_summary": "The user, Mark, inquired about fixing a leaking boiler. The agent explained the call-out charges, collected Mark's address, checked appointment availability, and successfully booked a repair slot for the next available time. The user confirmed the booking and ended the chat satisfied.",
+    "user_sentiment": "Positive",
+    "custom_analysis_data": {},
+    "chat_successful": true
+  },
+  "data_storage_setting": "everything"
+}

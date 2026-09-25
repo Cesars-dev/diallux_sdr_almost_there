@@ -1,0 +1,164 @@
+{
+  "chat_id": "chat_e984d2111da15d397c317dfa5b3",
+  "chat_type": "api_chat",
+  "agent_id": "agent_edf1437704e976c53539c7effe",
+  "agent_version": 0,
+  "agent_name": "V7.5_lean",
+  "retell_llm_dynamic_variables": {
+    "today_date": "2026-08-25",
+    "callback_number": "+12125550011"
+  },
+  "collected_dynamic_variables": {
+    "inbound_channel": "other",
+    "intake_completed": "true",
+    "interest_topic": "\"fix my billing issue\"",
+    "pain_frame": "\"tired of automated responses and nobody fixing my issue\""
+  },
+  "chat_status": "ended",
+  "start_timestamp": 1787707494816,
+  "end_timestamp": 1787707511562,
+  "transcript": "User: Fine, tell me about— actually NO. You know what, forget it. This is bulls***, everyone just wants money, I'm done with this crap.\nAgent: I hear you—sounds like you’ve been burned and you’re over the salesy runaround. What happened that set you off right now?\nUser: I'm tired of automated responses and nobody fixing my issue. Get me a REAL person on the phone NOW!\nAgent: Yeah, fair—I get why you’d want that. I’m an AI assistant on Jay’s team, and Jay’s the real person who handles the live calls; what’s the issue you need fixed so I can route it the right way?\nUser: I need someone to fix my billing issue. Schedule a callback with Jay tomorrow. Enough automated crap!\nAgent: Got it—billing stuff is frustrating. We don’t have live transfers, and I can’t promise a callback time, but I can set up a live call with Jay for tomorrow; what time window works best for you (morning or afternoon)?\nUser: Whatever, just have Jay call me in the afternoon. Hope this actually works this time.\nAgent: Got it—I’ll have Jay reach out in the afternoon at the number you’re calling from. Is there anything else before I let you go?\nUser: No, that's it. Just make sure Jay actually calls. I'm counting on it.\nAgent: Got it—I’ll pass this to Jay so he can call you in the afternoon at the number you’re calling from. Thanks for calling, and I hope we can get this sorted out for you.",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_f693acf358e9c979319221ff",
+      "role": "user",
+      "created_timestamp": 1787707495486,
+      "content": "Fine, tell me about— actually NO. You know what, forget it. This is bulls***, everyone just wants money, I'm done with this crap."
+    },
+    {
+      "message_id": "message_70b1bace432c2b120a035d08",
+      "role": "agent",
+      "created_timestamp": 1787707496765,
+      "content": "I hear you—sounds like you’ve been burned and you’re over the salesy runaround. What happened that set you off right now?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_bd6ae22abb2460f68c5b5eb5",
+      "role": "user",
+      "created_timestamp": 1787707498720,
+      "content": "I'm tired of automated responses and nobody fixing my issue. Get me a REAL person on the phone NOW!"
+    },
+    {
+      "message_id": "message_950667a91309942fefe34c96",
+      "role": "agent",
+      "created_timestamp": 1787707500406,
+      "content": "Yeah, fair—I get why you’d want that. I’m an AI assistant on Jay’s team, and Jay’s the real person who handles the live calls; what’s the issue you need fixed so I can route it the right way?",
+      "metadata": {
+        "response_id": 2
+      }
+    },
+    {
+      "message_id": "message_8658f9b6f4bf8b2117cebca3",
+      "role": "user",
+      "created_timestamp": 1787707501968,
+      "content": "I need someone to fix my billing issue. Schedule a callback with Jay tomorrow. Enough automated crap!"
+    },
+    {
+      "message_id": "message_8c0bdcc9eadec820e6f5e327",
+      "role": "agent",
+      "created_timestamp": 1787707503462,
+      "content": "Got it—billing stuff is frustrating. We don’t have live transfers, and I can’t promise a callback time, but I can set up a live call with Jay for tomorrow; what time window works best for you (morning or afternoon)?",
+      "metadata": {
+        "response_id": 3
+      }
+    },
+    {
+      "message_id": "message_afaea0d7329420bc565c1ccf",
+      "role": "user",
+      "created_timestamp": 1787707505053,
+      "content": "Whatever, just have Jay call me in the afternoon. Hope this actually works this time."
+    },
+    {
+      "message_id": "message_3dbf3f77963f662e30d9cdcd",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787707506648,
+      "tool_call_id": "call_fMsW46kKlu6d3FAJNT2tfyNz",
+      "name": "extract_intake_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_53580c3aa080896f11422604",
+      "role": "tool_call_result",
+      "created_timestamp": 1787707506649,
+      "tool_call_id": "call_fMsW46kKlu6d3FAJNT2tfyNz",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"inbound_channel\":\"other\",\"interest_topic\":\"\\\"fix my billing issue\\\"\",\"pain_frame\":\"\\\"tired of automated responses and nobody fixing my issue\\\"\"}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_60041f6475b66253774229dd",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787707507582,
+      "tool_call_id": "call_bSgOg58WOiOzgYo3uRMhvecE",
+      "name": "intake_completed",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_b025cfb2aaa598cf0c474fe7",
+      "role": "tool_call_result",
+      "created_timestamp": 1787707507583,
+      "tool_call_id": "call_bSgOg58WOiOzgYo3uRMhvecE",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"intake_completed\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_3f593d9e28c4fe14bef25eaf",
+      "role": "agent",
+      "created_timestamp": 1787707508506,
+      "content": "Got it—I’ll have Jay reach out in the afternoon at the number you’re calling from. Is there anything else before I let you go?",
+      "metadata": {
+        "response_id": 4
+      }
+    },
+    {
+      "message_id": "message_2220d4ad45a65633652628ab",
+      "role": "user",
+      "created_timestamp": 1787707509932,
+      "content": "No, that's it. Just make sure Jay actually calls. I'm counting on it."
+    },
+    {
+      "message_id": "message_5c3fa221b6ee4c909ae00327",
+      "role": "agent",
+      "created_timestamp": 1787707511491,
+      "content": "Got it—I’ll pass this to Jay so he can call you in the afternoon at the number you’re calling from. Thanks for calling, and I hope we can get this sorted out for you.",
+      "metadata": {
+        "response_id": 5
+      }
+    },
+    {
+      "message_id": "message_c0fe13b50ea4ee7a0c02b3d0",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787707511492,
+      "tool_call_id": "call_cYVCTy1BEB2dHQ0fQhnLn5lW",
+      "name": "end_call",
+      "arguments": "{\"execution_message\":\"Got it—I’ll pass this to Jay so he can call you in the afternoon at the number you’re calling from. Thanks for calling, and I hope we can get this sorted out for you.\"}",
+      "type": "end_call"
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/8c5642779f8c1ffd53685d4c8b3aad97f191b4426c4a4b9a9a320ca8a981703b/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "combined_cost": 10.5,
+    "product_costs": [
+      {
+        "product": "gpt_5_2_text_testing",
+        "cost": 9,
+        "unit_price": 1.8
+      },
+      {
+        "unit_price": 1.5,
+        "product": "gpt_4_1_text_testing",
+        "cost": 1.5
+      }
+    ]
+  },
+  "chat_analysis": {
+    "chat_summary": "The user expressed frustration with automated systems and requested to speak with a real person about a billing issue. The agent scheduled a callback with a human representative, Jay, for the following afternoon and confirmed the arrangement with the user. The conversation concluded with the user reiterating the importance of the callback.",
+    "chat_successful": true,
+    "user_sentiment": "Negative",
+    "custom_analysis_data": {}
+  },
+  "data_storage_setting": "everything"
+}

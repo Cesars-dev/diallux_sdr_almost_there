@@ -1,0 +1,105 @@
+{
+  "greeter": [
+    {
+      "description": "Transition when all greeter fields are populated",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "greeting_exchanged": {
+            "type": "boolean",
+            "description": "Whether greeting has been exchanged"
+          },
+          "intent_clear": {
+            "type": "boolean",
+            "description": "Whether the intent is understood"
+          },
+          "classified_intent": {
+            "type": "string",
+            "description": "Why the customer is calling",
+            "enum": [
+              "booking",
+              "quote",
+              "other"
+            ]
+          },
+          "past_customer": {
+            "type": "boolean",
+            "description": "Whether the customer has used the service before"
+          }
+        },
+        "required": [
+          "greeting_exchanged",
+          "intent_clear",
+          "classified_intent"
+        ]
+      },
+      "destination_state_name": "address"
+    }
+  ],
+  "address": [
+    {
+      "description": "Transition when all address fields are populated",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "boiler_make": {
+            "type": "string",
+            "description": "Boiler brand if mentioned"
+          },
+          "address_house_number": {
+            "type": "string",
+            "description": "House number or property name"
+          },
+          "symptom_brief": {
+            "type": "string",
+            "description": "Brief description of symptoms"
+          },
+          "address_line1": {
+            "type": "string",
+            "description": "Combined house number + street for booking notes"
+          },
+          "address_street": {
+            "type": "string",
+            "description": "Street name"
+          },
+          "address_postcode": {
+            "type": "string",
+            "description": "UK postcode"
+          },
+          "error_code": {
+            "type": "string",
+            "description": "Error code shown on boiler display if any"
+          },
+          "customer_name": {
+            "type": "string",
+            "description": "The customer's full name"
+          },
+          "address_confirmed": {
+            "type": "boolean",
+            "description": "Whether the customer has confirmed their address"
+          },
+          "problem_category": {
+            "type": "string",
+            "description": "Category of the heating issue"
+          },
+          "address_city": {
+            "type": "string",
+            "description": "City or town"
+          }
+        },
+        "required": [
+          "customer_name",
+          "problem_category",
+          "symptom_brief",
+          "address_house_number",
+          "address_street",
+          "address_line1",
+          "address_city",
+          "address_confirmed"
+        ]
+      },
+      "destination_state_name": "booking"
+    }
+  ],
+  "booking": []
+}

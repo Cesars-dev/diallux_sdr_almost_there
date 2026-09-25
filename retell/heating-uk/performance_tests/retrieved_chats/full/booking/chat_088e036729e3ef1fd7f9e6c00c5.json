@@ -1,0 +1,338 @@
+{
+  "chat_id": "chat_088e036729e3ef1fd7f9e6c00c5",
+  "chat_type": "api_chat",
+  "agent_id": "agent_ff9d4b9646a85b82d7ce8fd837",
+  "agent_version": 0,
+  "agent_name": "Multi State Agent",
+  "collected_dynamic_variables": {
+    "callback_requested": "false",
+    "classified_intent": "repair enquiry",
+    "past_customer": "false",
+    "intent_confirmed": "true",
+    "address_postcode": "NE5 5EE",
+    "address_confirmed": "true",
+    "address_incomplete": "true",
+    "problem_category": "Leak",
+    "address_city": "",
+    "boiler_make": "",
+    "address_house_number": "7",
+    "current_agent_state": "booking",
+    "symptom_brief": "boiler leaking",
+    "intent_clear": "true",
+    "address_line1": "7 Oak Ave",
+    "address_street": "Oak Ave",
+    "greeting_exchanged": "true",
+    "error_code": "",
+    "customer_name": "Mark",
+    "previous_agent_state": "address"
+  },
+  "chat_status": "ended",
+  "start_timestamp": 1784637733310,
+  "end_timestamp": 1784637778584,
+  "transcript": "User: Hi, how much would you charge to fix a boiler that's leaking?\nAgent: British Heat Services, Tom speaking \u2014 call-out is \u00a375 plus VAT weekdays, \u00a3120 plus VAT out of hours.\nUser: My name is Mark\nAgent: Mark \u2014 got it. What\u2019s the address?\nUser: NE5 5EE\nAgent: NE5 5EE \u2014 got it. What\u2019s the house number and street?\nUser: 7 Oak Ave\nAgent: 7 Oak Ave \u2014 got it. What\u2019s the town or city?\nUser: Yes, that's right\nAgent: 7 Oak Ave \u2014 thanks. What\u2019s happening with the leak?\nUser: Today works\nAgent: Today works \u2014 noted. What\u2019s the town or city?\nUser: Yes, book it\nAgent: I\u2019m just checking the nearest slots now.\nAgent: I\u2019ve got today 5:30pm, or tomorrow 12:30pm. Which suits?\nUser: That's all, thanks",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_6f2d3c28af6027f9681eba0b",
+      "role": "user",
+      "created_timestamp": 1784637733937,
+      "content": "Hi, how much would you charge to fix a boiler that's leaking?"
+    },
+    {
+      "message_id": "message_cd5df4cc0c2589374dc89876",
+      "role": "agent",
+      "created_timestamp": 1784637735504,
+      "content": "British Heat Services, Tom speaking \u2014 call-out is \u00a375 plus VAT weekdays, \u00a3120 plus VAT out of hours.",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_4745e101134ebbbe72f5c64a",
+      "role": "user",
+      "created_timestamp": 1784637736328,
+      "content": "My name is Mark"
+    },
+    {
+      "message_id": "message_e9222ad92079bf3d3af706f8",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637738102,
+      "tool_call_id": "call_6LWnYmr6O2asDlHheoWcBM9a",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_2c14001003c96ac690fdb719",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637738103,
+      "tool_call_id": "call_6LWnYmr6O2asDlHheoWcBM9a",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Mark\",\"classified_intent\":\"repair enquiry\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_19dc246f88a267f2bd6b2261",
+      "role": "agent",
+      "created_timestamp": 1784637739585,
+      "content": "Mark \u2014 got it. What\u2019s the address?",
+      "metadata": {
+        "response_id": 2
+      }
+    },
+    {
+      "message_id": "message_4ac5b74995a319744e850877",
+      "role": "user",
+      "created_timestamp": 1784637740402,
+      "content": "NE5 5EE"
+    },
+    {
+      "message_id": "message_a1cc95e4c5fef65bf000c9d3",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637741943,
+      "tool_call_id": "call_OOBhWzwu1t7PVOwlzNhABtgF",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_c5304829341d1b73888619dd",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637741944,
+      "tool_call_id": "call_OOBhWzwu1t7PVOwlzNhABtgF",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Mark\",\"classified_intent\":\"repair enquiry\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"NE5 5EE\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_9a66eef71b127efab31a0e71",
+      "role": "agent",
+      "created_timestamp": 1784637743002,
+      "content": "NE5 5EE \u2014 got it. What\u2019s the house number and street?",
+      "metadata": {
+        "response_id": 3
+      }
+    },
+    {
+      "message_id": "message_46e661c6c1a8f707b69ca84c",
+      "role": "user",
+      "created_timestamp": 1784637743817,
+      "content": "7 Oak Ave"
+    },
+    {
+      "message_id": "message_9831ad13127f81a37f28c553",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637745424,
+      "tool_call_id": "call_6AQPgvYZEPgqO8h8PXRWtdJv",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_816f87856510e4201ab7a149",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637745425,
+      "tool_call_id": "call_6AQPgvYZEPgqO8h8PXRWtdJv",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Mark\",\"classified_intent\":\"repair enquiry\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"7\",\"address_street\":\"Oak Ave\",\"address_postcode\":\"NE5 5EE\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_2dc905ac601f848c213acec3",
+      "role": "agent",
+      "created_timestamp": 1784637746416,
+      "content": "7 Oak Ave \u2014 got it. What\u2019s the town or city?",
+      "metadata": {
+        "response_id": 4
+      }
+    },
+    {
+      "message_id": "message_4c6ac06e70a27faa1561f4b9",
+      "role": "user",
+      "created_timestamp": 1784637747223,
+      "content": "Yes, that's right"
+    },
+    {
+      "message_id": "message_83a4150b47bafa5e802e8afe",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637748783,
+      "tool_call_id": "call_vD3wkNbKndX1K3Eg6vaNEnHv",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_f64a0b8dfde9fa345ffdc3f9",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637748784,
+      "tool_call_id": "call_vD3wkNbKndX1K3Eg6vaNEnHv",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Mark\",\"classified_intent\":\"repair enquiry\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"7\",\"address_street\":\"Oak Ave\",\"address_postcode\":\"NE5 5EE\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_a498beb24a747d7fa5d63ea6",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637749772,
+      "tool_call_id": "call_C1HRirA2rfrREhqL01iLsFot",
+      "name": "transition_to_address",
+      "arguments": "{}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_8bfbf287c156f3a768ad5eab",
+      "role": "state_transition",
+      "created_timestamp": 1784637749773,
+      "former_state_name": "greeter",
+      "new_state_name": "address"
+    },
+    {
+      "message_id": "message_0fa954d0fbfbdbdc5da41c5f",
+      "role": "agent",
+      "created_timestamp": 1784637755329,
+      "content": "7 Oak Ave \u2014 thanks. What\u2019s happening with the leak?",
+      "metadata": {
+        "response_id": 5
+      }
+    },
+    {
+      "message_id": "message_e6b541823a0f64d823aa9208",
+      "role": "user",
+      "created_timestamp": 1784637756160,
+      "content": "Today works"
+    },
+    {
+      "message_id": "message_f95adcc716d86164527d0eb5",
+      "role": "agent",
+      "created_timestamp": 1784637759768,
+      "content": "Today works \u2014 noted. What\u2019s the town or city?",
+      "metadata": {
+        "response_id": 6
+      }
+    },
+    {
+      "message_id": "message_6ec00be0e5b292f93a5a8674",
+      "role": "user",
+      "created_timestamp": 1784637760663,
+      "content": "Yes, book it"
+    },
+    {
+      "message_id": "message_0a7cdfd45d14af244c00a6e8",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637766342,
+      "tool_call_id": "call_6bcK6vOY5rUCcUnoO9cQ8o0j",
+      "name": "extract_address_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_d39e641cf96ec3a01451957b",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637766343,
+      "tool_call_id": "call_6bcK6vOY5rUCcUnoO9cQ8o0j",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Mark\",\"problem_category\":\"Leak\",\"symptom_brief\":\"boiler leaking\",\"error_code\":\"\",\"boiler_make\":\"\",\"address_postcode\":\"NE5 5EE\",\"address_house_number\":\"7\",\"address_street\":\"Oak Ave\",\"address_line1\":\"7 Oak Ave\",\"address_city\":\"\",\"address_confirmed\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_31c0cea4128c1868bcc09cef",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637767323,
+      "tool_call_id": "call_faXQ652Izl0gJTyfmlOScGdf",
+      "name": "transition_to_booking",
+      "arguments": "{}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_a95c7b244042fff15bd47c05",
+      "role": "state_transition",
+      "created_timestamp": 1784637767324,
+      "former_state_name": "address",
+      "new_state_name": "booking"
+    },
+    {
+      "message_id": "message_63cfb2df7164cea2a980c10e",
+      "role": "agent",
+      "created_timestamp": 1784637769117,
+      "content": "I\u2019m just checking the nearest slots now.",
+      "metadata": {
+        "response_id": 7
+      }
+    },
+    {
+      "message_id": "message_86c7d672560da1aaaa8a4dc5",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637769118,
+      "tool_call_id": "call_SfUas3le6SYwlruJYOBCtduD",
+      "name": "check_availability",
+      "arguments": "{\"start_time\":\"2026-07-21T00:00:00\",\"end_time\":\"2026-07-22T23:59:00\",\"timezone\":\"Europe/London\",\"execution_message\":\"I\u2019m just checking the nearest slots now.\"}",
+      "type": "check_availability_cal"
+    },
+    {
+      "message_id": "message_95c3f501405bc2e23678ae79",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637769649,
+      "tool_call_id": "call_SfUas3le6SYwlruJYOBCtduD",
+      "content": "{\"availability_for_selected_time\":[{\"date\":\"Tuesday, 2026 July 7/21/2026 British Summer Time\",\"availability_range\":[\"From 5:30 PM to 7:00 PM\"]},{\"date\":\"Wednesday, 2026 July 7/22/2026 British Summer Time\",\"availability_range\":[\"From 12:30 PM to 7:00 PM\"]}]}",
+      "successful": true
+    },
+    {
+      "message_id": "message_be004738240cbca680180ff0",
+      "role": "agent",
+      "created_timestamp": 1784637773941,
+      "content": "I\u2019ve got today 5:30pm, or tomorrow 12:30pm. Which suits?",
+      "metadata": {
+        "response_id": 8
+      }
+    },
+    {
+      "message_id": "message_e00051283bc7aef210694b6d",
+      "role": "user",
+      "created_timestamp": 1784637774876,
+      "content": "That's all, thanks"
+    },
+    {
+      "message_id": "message_3f97a4bfa8ea3314d8b6ee87",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637777193,
+      "tool_call_id": "call_2ba0ZyaGwxDdY7d1OwnrshEf",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_00f616c242cc7ad4ed921a7a",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637777194,
+      "tool_call_id": "call_2ba0ZyaGwxDdY7d1OwnrshEf",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Mark\",\"classified_intent\":\"repair enquiry\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"7\",\"address_street\":\"Oak Ave\",\"address_postcode\":\"NE5 5EE\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_83ab3307fa3d8b61c747dc8e",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637778571,
+      "tool_call_id": "call_eU0ijbsBRLTQHLnSgJ7Sy8RP",
+      "name": "end_call",
+      "arguments": "{}",
+      "type": "end_call"
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/5cb16229f10935760a2071f719c8660b1ded62879ba999eba30e008bc8a96eb2/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "combined_cost": 22.3,
+    "product_costs": [
+      {
+        "unit_price": 2.6,
+        "product": "gpt_5_4_text_testing",
+        "cost": 20.8
+      },
+      {
+        "unit_price": 1.5,
+        "product": "gpt_4_1_text_testing",
+        "cost": 1.5
+      }
+    ]
+  },
+  "chat_analysis": {
+    "chat_summary": "The user, Mark, inquired about the cost to fix a leaking boiler and provided his address details. The agent explained the call-out charges, confirmed the address, and offered available appointment slots for the repair. The user thanked the agent and ended the conversation without selecting a specific time slot.",
+    "user_sentiment": "Positive",
+    "custom_analysis_data": {},
+    "chat_successful": true
+  },
+  "data_storage_setting": "everything"
+}

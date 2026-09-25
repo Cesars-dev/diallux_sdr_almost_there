@@ -1,0 +1,95 @@
+{
+  "chat_id": "chat_910dc22ddb3f72c6a967c926e91",
+  "chat_type": "api_chat",
+  "agent_id": "agent_66df480ff8f240ee9e919d3b53",
+  "agent_version": 0,
+  "agent_name": "V7",
+  "retell_llm_dynamic_variables": {
+    "callback_number": "+12125550011",
+    "today_date": "2026-08-24"
+  },
+  "collected_dynamic_variables": {},
+  "chat_status": "ended",
+  "start_timestamp": 1787634008670,
+  "end_timestamp": 1787634018528,
+  "transcript": "User: Fine, tell me about— actually NO. You know what, forget it. This is bulls***, everyone just wants money, I'm done with this crap.\nAgent: Yeah, I hear you — it can really feel like everyone just wants to sell you something.  \n\nBefore you hang this up completely, do you want to tell me what set you off about this in the first place, or would you rather I just stop here?\nUser: It's always the same runaround. I want a real person, not this robotic crap. Get me someone now!\nAgent: You’re right to be frustrated — it does feel like that a lot lately.  \n\nI’m actually Linda, an AI assistant on Jay’s team, and my job’s just to get you to the right real person at the right time — do you want me to set up a call with Jay so he can talk you through things directly?\nUser: Fine, whatever. Just have Jay call me tomorrow. Let's see if he can actually help.\nAgent: Got it, I’ll let Jay know you want a call back tomorrow on this number and that you’re looking to see if he can actually help. There’s no exact time locked in, so he’ll reach out as his schedule allows. Before I let you go, is there anything specific you want him to be ready to talk about, like missed calls, lead follow-up, or something else?",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_414758b80b728738b0023197",
+      "role": "user",
+      "created_timestamp": 1787634009364,
+      "content": "Fine, tell me about— actually NO. You know what, forget it. This is bulls***, everyone just wants money, I'm done with this crap."
+    },
+    {
+      "message_id": "message_eed974eae3ef9bc74ade2961",
+      "role": "agent",
+      "created_timestamp": 1787634011227,
+      "content": "Yeah, I hear you — it can really feel like everyone just wants to sell you something.  \n\nBefore you hang this up completely, do you want to tell me what set you off about this in the first place, or would you rather I just stop here?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_3dc6a4a84515a175bcdcf0bb",
+      "role": "user",
+      "created_timestamp": 1787634013065,
+      "content": "It's always the same runaround. I want a real person, not this robotic crap. Get me someone now!"
+    },
+    {
+      "message_id": "message_0c150a7a8b1386a779e40f21",
+      "role": "agent",
+      "created_timestamp": 1787634014271,
+      "content": "You’re right to be frustrated — it does feel like that a lot lately.  \n\nI’m actually Linda, an AI assistant on Jay’s team, and my job’s just to get you to the right real person at the right time — do you want me to set up a call with Jay so he can talk you through things directly?",
+      "metadata": {
+        "response_id": 2
+      }
+    },
+    {
+      "message_id": "message_7a3784fdac4d4756a984cf81",
+      "role": "user",
+      "created_timestamp": 1787634016751,
+      "content": "Fine, whatever. Just have Jay call me tomorrow. Let's see if he can actually help."
+    },
+    {
+      "message_id": "message_b917678abe475b4d97c24169",
+      "role": "agent",
+      "created_timestamp": 1787634018459,
+      "content": "Got it, I’ll let Jay know you want a call back tomorrow on this number and that you’re looking to see if he can actually help. There’s no exact time locked in, so he’ll reach out as his schedule allows. Before I let you go, is there anything specific you want him to be ready to talk about, like missed calls, lead follow-up, or something else?",
+      "metadata": {
+        "response_id": 3
+      }
+    },
+    {
+      "message_id": "message_f05ffe0b8c4af6080c2583eb",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787634018460,
+      "tool_call_id": "call_bS6Dpt2JVdnvs0sGsbFgZm20",
+      "name": "end_call",
+      "arguments": "{\"execution_message\":\"Got it, I’ll let Jay know you want a call back tomorrow on this number and that you’re looking to see if he can actually help. There’s no exact time locked in, so he’ll reach out as his schedule allows. Before I let you go, is there anything specific you want him to be ready to talk about, like missed calls, lead follow-up, or something else?\"}",
+      "type": "end_call"
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/ff29dae5a4aa855748b70fa046dbea4bbdac99aa26783400c448e6ddf2e9aba7/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "combined_cost": 5.4,
+    "product_costs": [
+      {
+        "product": "gpt_5_1_text_testing",
+        "unit_price": 1.3,
+        "cost": 3.9000000000000004
+      },
+      {
+        "product": "gpt_4_1_text_testing",
+        "unit_price": 1.5,
+        "cost": 1.5
+      }
+    ]
+  },
+  "chat_analysis": {
+    "chat_successful": true,
+    "chat_summary": "The user expressed strong frustration with automated systems and requested to speak with a real person. The agent acknowledged the user's feelings and arranged for Jay, a real person, to call the user the next day. The agent also asked if there were any specific topics Jay should be prepared to discuss.",
+    "user_sentiment": "Negative",
+    "custom_analysis_data": {}
+  },
+  "data_storage_setting": "everything"
+}

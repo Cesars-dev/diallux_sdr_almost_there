@@ -1,0 +1,52 @@
+{
+  "chat_id": "chat_a9d14fe76cbfc784da2511e1c24",
+  "chat_type": "api_chat",
+  "agent_id": "agent_ff9d4b9646a85b82d7ce8fd837",
+  "agent_version": 0,
+  "agent_name": "Multi State Agent",
+  "collected_dynamic_variables": {},
+  "chat_status": "ended",
+  "start_timestamp": 1784633822240,
+  "end_timestamp": 1784633825392,
+  "transcript": "User: Hi, how much would you charge to fix a boiler that's leaking?\nAgent: Right, a leaking boiler. I can\u2019t quote repairs without seeing it.Anything beyond the call-out, we\u2019ll quote on the spot \u2014 no obligation.\n\nThe call-out is \u00a375 plus VAT weekdays 8 to 6, or \u00a3120 plus VAT evenings and weekends.\n\nAre you smelling gas?",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_901391272f6bea6b042bc2a2",
+      "role": "user",
+      "created_timestamp": 1784633822838,
+      "content": "Hi, how much would you charge to fix a boiler that's leaking?"
+    },
+    {
+      "message_id": "message_dbb5ce9e4e5475c29c9ecf27",
+      "role": "agent",
+      "created_timestamp": 1784633824524,
+      "content": "Right, a leaking boiler. I can\u2019t quote repairs without seeing it.Anything beyond the call-out, we\u2019ll quote on the spot \u2014 no obligation.\n\nThe call-out is \u00a375 plus VAT weekdays 8 to 6, or \u00a3120 plus VAT evenings and weekends.\n\nAre you smelling gas?",
+      "metadata": {
+        "response_id": 1
+      }
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/dec9ce3702ad459fa6c22db06359954331e163177a401a6247710cd9d8f990a8/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "combined_cost": 4.1,
+    "product_costs": [
+      {
+        "unit_price": 2.6,
+        "product": "gpt_5_4_text_testing",
+        "cost": 2.6
+      },
+      {
+        "unit_price": 1.5,
+        "product": "gpt_4_1_text_testing",
+        "cost": 1.5
+      }
+    ]
+  },
+  "chat_analysis": {
+    "chat_summary": "The user inquired about the cost to fix a leaking boiler. The agent explained the call-out charges and clarified that repair costs would be quoted after inspection, also asking if there was a gas smell for safety reasons.",
+    "user_sentiment": "Neutral",
+    "custom_analysis_data": {},
+    "chat_successful": true
+  },
+  "data_storage_setting": "everything"
+}

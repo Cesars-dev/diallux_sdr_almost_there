@@ -1,0 +1,110 @@
+{
+  "chat_id": "chat_740e11eafb6af31f63ee70b32c8",
+  "chat_type": "api_chat",
+  "agent_id": "agent_663dda0046b81630fa0a2c1f0a",
+  "agent_version": 0,
+  "agent_name": "Dialux SDR V6.8",
+  "retell_llm_dynamic_variables": {
+    "callback_number": "+12065550033",
+    "today_date": "2026-08-24"
+  },
+  "collected_dynamic_variables": {},
+  "chat_status": "ended",
+  "start_timestamp": 1787576360636,
+  "end_timestamp": 1787576374532,
+  "transcript": "User: Before you start your pitch — is this one of those AI robots? Be straight with me.\nAgent: Yeah, you’re right to ask — I am, I’m Linda, an AI assistant on Jay’s team at Dialux who handles the intro and scheduling so he can focus on the deep-dive calls.  \n\nWhat made you call in today—was it an ad, a voicemail from Jay, or were you just searching around for options?\nUser: Great, a robot answering robots. Just get me a human callback, won't schedule anything with software.\nAgent: Got it, I hear you — you’d rather have an actual person call you back instead of booking something through me.  \n\nI can flag this for Jay’s team as a callback request; what’s the best time window for a human to ring you back — mornings, afternoons, or late in the day?\nUser: Afternoons work best. Just make sure it's an actual person who calls, not another robot.\nAgent: Got it, afternoons and definitely a real person — no more robots.  \n\nQuick thing so I can get you to the right human: are you mainly calling about missed customer calls, or something else on your phones that’s bugging you?\nUser: Mainly about missed calls. Just ensure a real person calls me back in the afternoon. No more robots, please.\nAgent: Got it, you’re calling mainly about missed calls, and you only want to talk with a real person, in the afternoon — no more robots. I’ll pass that to Jay’s team exactly that way so a human gives you a call back this afternoon; you don’t need to do anything else on your end. Thanks for letting me know what you prefer, we’ll take it from here and have a real person follow up with you.",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_550a10c73bed5983b2752abf",
+      "role": "user",
+      "created_timestamp": 1787576361212,
+      "content": "Before you start your pitch — is this one of those AI robots? Be straight with me."
+    },
+    {
+      "message_id": "message_62ed10d4721e6879a7719b20",
+      "role": "agent",
+      "created_timestamp": 1787576363243,
+      "content": "Yeah, you’re right to ask — I am, I’m Linda, an AI assistant on Jay’s team at Dialux who handles the intro and scheduling so he can focus on the deep-dive calls.  \n\nWhat made you call in today—was it an ad, a voicemail from Jay, or were you just searching around for options?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_46197e53c39e92e54d69d9c4",
+      "role": "user",
+      "created_timestamp": 1787576365260,
+      "content": "Great, a robot answering robots. Just get me a human callback, won't schedule anything with software."
+    },
+    {
+      "message_id": "message_6d33d4ab406b7b2a6b60fc79",
+      "role": "agent",
+      "created_timestamp": 1787576367049,
+      "content": "Got it, I hear you — you’d rather have an actual person call you back instead of booking something through me.  \n\nI can flag this for Jay’s team as a callback request; what’s the best time window for a human to ring you back — mornings, afternoons, or late in the day?",
+      "metadata": {
+        "response_id": 2
+      }
+    },
+    {
+      "message_id": "message_c4e4c2bd7585012b974cc2be",
+      "role": "user",
+      "created_timestamp": 1787576369017,
+      "content": "Afternoons work best. Just make sure it's an actual person who calls, not another robot."
+    },
+    {
+      "message_id": "message_1fd383e5c71b1103f97bdb46",
+      "role": "agent",
+      "created_timestamp": 1787576370381,
+      "content": "Got it, afternoons and definitely a real person — no more robots.  \n\nQuick thing so I can get you to the right human: are you mainly calling about missed customer calls, or something else on your phones that’s bugging you?",
+      "metadata": {
+        "response_id": 3
+      }
+    },
+    {
+      "message_id": "message_e42792be75b6934a17fd94cd",
+      "role": "user",
+      "created_timestamp": 1787576372353,
+      "content": "Mainly about missed calls. Just ensure a real person calls me back in the afternoon. No more robots, please."
+    },
+    {
+      "message_id": "message_b849d2b390200602439b506a",
+      "role": "agent",
+      "created_timestamp": 1787576374492,
+      "content": "Got it, you’re calling mainly about missed calls, and you only want to talk with a real person, in the afternoon — no more robots. I’ll pass that to Jay’s team exactly that way so a human gives you a call back this afternoon; you don’t need to do anything else on your end. Thanks for letting me know what you prefer, we’ll take it from here and have a real person follow up with you.",
+      "metadata": {
+        "response_id": 4
+      }
+    },
+    {
+      "message_id": "message_e0fd00951469c9bfa095d6d9",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787576374493,
+      "tool_call_id": "call_AGaYqN3FYtLMOpvT6L8RFHM5",
+      "name": "end_call",
+      "arguments": "{\"execution_message\":\"Got it, you’re calling mainly about missed calls, and you only want to talk with a real person, in the afternoon — no more robots. I’ll pass that to Jay’s team exactly that way so a human gives you a call back this afternoon; you don’t need to do anything else on your end. Thanks for letting me know what you prefer, we’ll take it from here and have a real person follow up with you.\"}",
+      "type": "end_call"
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/32b2b68e2779f5381045d14469cf23c3e2705e678b8dc164c5f06005b673c9a3/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "combined_cost": 6.7,
+    "product_costs": [
+      {
+        "unit_price": 1.3,
+        "product": "gpt_5_1_text_testing",
+        "cost": 5.2
+      },
+      {
+        "unit_price": 1.5,
+        "cost": 1.5,
+        "product": "gpt_4_1_text_testing"
+      }
+    ]
+  },
+  "chat_analysis": {
+    "chat_successful": true,
+    "chat_summary": "The user asked if they were speaking to an AI and requested a callback from a real person, specifically in the afternoon, regarding missed customer calls. The agent confirmed the request, clarified the user's needs, and assured that a human would follow up as requested.",
+    "user_sentiment": "Negative",
+    "custom_analysis_data": {}
+  },
+  "data_storage_setting": "everything"
+}

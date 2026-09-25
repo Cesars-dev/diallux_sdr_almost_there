@@ -1,0 +1,193 @@
+{
+  "_comment": "V3 — 6-state architecture, 2-tool pattern (extract details + trigger boolean), filler phrases for latency management. No backward transitions.",
+
+  "general_tools": [
+    {
+      "execution_message_type": "prompt",
+      "execution_message_description": "",
+      "speak_after_execution": true,
+      "name": "end_call",
+      "description": "End the call politely when the user has no more queries",
+      "type": "end_call",
+      "speak_during_execution": false
+    }
+  ],
+
+  "states": {
+    "greeter": {
+      "tools": [
+        {
+          "type": "extract_dynamic_variable",
+          "name": "extract_greeter_details",
+          "description": "Extract caller name and intent. Call ONCE when intent is confirmed and name is captured. Pass actual values — never empty arguments.",
+          "variables": [
+            {"name": "customer_name", "type": "string", "description": "The customer's full name. Required for transition."},
+            {"name": "classified_intent", "type": "string", "description": "Why the customer is calling", "choices": ["booking", "quote", "other"]}
+          ],
+          "speak_after_execution": false
+        },
+        {
+          "type": "extract_dynamic_variable",
+          "name": "trigger_greeter_transition",
+          "description": "Trigger the transition to triage. Call ONLY after extract_greeter_details has been called with non-null values.",
+          "variables": [
+            {"name": "greeting_exchanged", "type": "boolean", "description": "Set to true to transition to triage"}
+          ],
+          "speak_after_execution": false
+        }
+      ]
+    },
+
+    "triage": {
+      "tools": [
+        {
+          "type": "extract_dynamic_variable",
+          "name": "extract_triage_details",
+          "description": "Extract symptom details, problem category, boiler brand, and error code. Call ONCE when all are captured. Pass actual values — never empty arguments.",
+          "variables": [
+            {"name": "problem_category", "type": "string", "description": "Category of the heating issue", "choices": ["Heating", "service", "plumbing", "other"]},
+            {"name": "symptom_brief", "type": "string", "description": "1-2 sentence summary of symptoms for the engineer"},
+            {"name": "boiler_make", "type": "string", "description": "Boiler brand (Worcester, Vaillant, Ideal, Baxi, etc.) or 'unknown' if customer doesn't know"},
+            {"name": "error_code", "type": "string", "description": "Error code shown on boiler display, or 'none' if no error code"}
+          ],
+          "speak_after_execution": false
+        },
+        {
+          "type": "extract_dynamic_variable",
+          "name": "trigger_triage_transition",
+          "description": "Trigger the transition to address. Call ONLY after extract_triage_details has been called with non-null values.",
+          "variables": [
+            {"name": "triage_complete", "type": "boolean", "description": "Set to true to transition to address"}
+          ],
+          "speak_after_execution": false
+        }
+      ]
+    },
+
+    "address": {
+      "tools": [
+        {
+          "type": "extract_dynamic_variable",
+          "name": "extract_address_details",
+          "description": "Extract address fields. Call ONCE when customer has confirmed the full address. Pass actual values — never empty arguments.",
+          "variables": [
+            {"name": "address_house_number", "type": "string", "description": "House number or property name. Required for transition."},
+            {"name": "address_street", "type": "string", "description": "Street name"},
+            {"name": "address_city", "type": "string", "description": "City or town"},
+            {"name": "address_postcode", "type": "string", "description": "UK postcode or 'N/A' if customer doesn't know. Required for transition."}
+          ],
+          "speak_after_execution": false
+        },
+        {
+          "type": "extract_dynamic_variable",
+          "name": "trigger_address_transition",
+          "description": "Trigger the transition to slot_selection. Call ONLY after extract_address_details has been called and customer confirmed the address.",
+          "variables": [
+            {"name": "address_confirmed", "type": "boolean", "description": "Set to true ONLY after customer has confirmed the full address readback"}
+          ],
+          "speak_after_execution": false
+        }
+      ]
+    },
+
+    "slot_selection": {
+      "tools": [
+        {
+          "event_type_id": 6389911,
+          "cal_api_key": "${CAL_KEY_1}",
+          "timezone": "Europe/London",
+          "speak_after_execution": true,
+          "name": "check_availability",
+          "description": "Check available appointment slots for a date range",
+          "type": "check_availability_cal"
+        },
+        {
+          "type": "extract_dynamic_variable",
+          "name": "extract_slot_details",
+          "description": "Extract the selected slot details. Pass actual values — never empty arguments.",
+          "variables": [
+            {"name": "selected_slot_start", "type": "string", "description": "ISO 8601 UTC with Z suffix — the exact start time from check_availability result. Required for transition."},
+            {"name": "selected_slot_label", "type": "string", "description": "The spoken form used when offering the slot, e.g. 'Thursday at 2 PM'"}
+          ],
+          "speak_after_execution": false
+        },
+        {
+          "type": "extract_dynamic_variable",
+          "name": "trigger_slot_transition",
+          "description": "Trigger the transition to confirmation. Call ONLY after extract_slot_details has been called with non-null values.",
+          "variables": [
+            {"name": "slot_selected", "type": "boolean", "description": "Set to true to transition to confirmation"}
+          ],
+          "speak_after_execution": false
+        }
+      ]
+    },
+
+    "confirmation": {
+      "tools": [
+        {
+          "event_type_id": 6389911,
+          "cal_api_key": "${CAL_KEY_1}",
+          "timezone": "Europe/London",
+          "speak_after_execution": true,
+          "name": "check_availability",
+          "description": "Safeguard: refetch slots if customer wants a different slot.",
+          "type": "check_availability_cal"
+        },
+        {
+          "type": "extract_dynamic_variable",
+          "name": "extract_confirm_details",
+          "description": "Extract and lock in confirmation details. Pass actual values — never empty arguments.",
+          "variables": [
+            {"name": "selected_slot_start", "type": "string", "description": "ISO 8601 UTC with Z suffix — the new slot start time"},
+            {"name": "selected_slot_label", "type": "string", "description": "The new spoken form, e.g. 'Friday at 10 AM'"},
+            {"name": "booking_slot_string", "type": "string", "description": "Copy the exact value of selected_slot_start (ISO 8601 UTC). Required for transition."}
+          ],
+          "speak_after_execution": false
+        },
+        {
+          "type": "extract_dynamic_variable",
+          "name": "trigger_confirm_transition",
+          "description": "Trigger the transition to booking. Call ONLY after extract_confirm_details has been called and customer has confirmed.",
+          "variables": [
+            {"name": "booking_confirmed", "type": "boolean", "description": "Set to true ONLY after customer has confirmed the slot"}
+          ],
+          "speak_after_execution": false
+        }
+      ]
+    },
+
+    "booking": {
+      "tools": [
+        {
+          "event_type_id": 6389911,
+          "cal_api_key": "${CAL_KEY_1}",
+          "cal_fields": [
+            {"name": "name", "description": "attendee name", "type": "string", "required": true},
+            {"name": "email", "description": "attendee email — use jaydiallux@gmail.com", "type": "string", "required": true},
+            {"name": "attendeePhoneNumber", "description": "attendee phone (E.164)", "type": "string", "required": false},
+            {"name": "title", "description": "event title", "type": "string", "required": true},
+            {"name": "notes", "description": "engineer handover notes", "type": "string", "required": false}
+          ],
+          "timezone": "Europe/London",
+          "speak_after_execution": true,
+          "name": "book_calendar",
+          "description": "Book a confirmed appointment via Cal.com API. Only call after pre-flight check passes.",
+          "location_type": "integration",
+          "type": "book_appointment_cal"
+        },
+        {
+          "type": "extract_dynamic_variable",
+          "name": "extract_booking_details",
+          "description": "Extract missing booking details if pre-flight check fails. Pass actual values — never empty arguments.",
+          "variables": [
+            {"name": "customer_name", "type": "string", "description": "The customer's full name"},
+            {"name": "address_house_number", "type": "string", "description": "House number or property name"},
+            {"name": "booking_slot_string", "type": "string", "description": "ISO 8601 UTC with Z suffix, copied from selected_slot_start"}
+          ],
+          "speak_after_execution": false
+        }
+      ]
+    }
+  }
+}

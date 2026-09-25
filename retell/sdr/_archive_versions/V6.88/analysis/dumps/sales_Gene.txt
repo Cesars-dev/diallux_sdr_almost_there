@@ -1,0 +1,72 @@
+CALLER: Yeah, what.
+AGENT: Yeah, I’m Linda, an AI assistant on Jay’s team at Dialux — I help figure out what you’re looking for and set up the live walkthroughs with him. So, what made you call in today?
+CALLER: Didn't call. You called me.
+  [extract_intake_details]
+AGENT: Got it, thanks for picking up then. Mhm, since I’ve got you for a minute — when it comes to people calling your business, what’s the main thing you’re running into right now?
+CALLER: Missed calls. Too many.
+  [extract_intake_details]
+AGENT: Got it — so you’re dealing with “missed calls, too many.” When a call comes in and you’re out working or busy, who’s usually picking it up right now?
+CALLER: Nobody picks up. Missed calls, lost jobs.
+  [extract_intake_details]
+  [intake_completed]
+  [transition_to_Discovery]
+  [extract_discovery_details]
+AGENT: Yeah, that’s rough — “missed calls, lost jobs” pretty much says it all. So on a typical day for you, how many calls do you think are hitting voicemail or just ringing out?
+CALLER: About 9 a week.
+  [extract_discovery_details]
+AGENT: Gotcha, about nine a week just slipping by. Of those missed calls, do you feel like most of them would’ve turned into real jobs if someone had actually picked up?
+CALLER: Maybe half would've booked. Can't say for sure.
+  [extract_discovery_details]
+AGENT: Makes sense — even if it’s half, that’s still real money walking away every week. So, just so I’m clear, what kind of work are those callers usually looking to book with you?
+CALLER: Plumbing jobs. Fixes, installs, emergencies. You know, the usual.
+  [extract_discovery_details]
+  [discovery_completed]
+  [transition_to_Closer]
+  [extract_leak_inputs]
+AGENT: Got it, plumbing — fixes, installs, emergencies. So ballpark, what’s your average job worth for you, are we talking more like $400, $650, or closer to $850 a job?
+CALLER: $380 average. Not $400, not $650, not $850.
+  [extract_leak_inputs]
+  [calculate_monthly_leak]
+  [extract_closer_details]
+AGENT: Got it, $380’s clear. Based on what you told me, that’s roughly $1,710 a week just walking out the door… and about $7,400 a month in jobs you never even get to talk to — does that feel about right to you?
+CALLER: Sure, sure. Keep it simple. Stop with the math.
+  [closer_completed]
+  [transition_to_Offer]
+  [extract_offer_details]
+AGENT: Got it, I hear you — we’ll skip the math. So… would you be open to a quick 20‑minute walkthrough this week to see how we can stop those missed plumbing calls from turning into lost jobs?
+CALLER: Unbelievable. Fine, fine. Book the thing. Got time Wednesday at 2 PM, Central.
+  [extract_offer_details]
+  [offer_completed]
+  [transition_to_contact_details]
+  [extract_person_details]
+AGENT: Got it, Wednesday at 2 PM Central works. First thing I need so I can lock that in for you — what’s your first name?
+CALLER: Gene. Now hurry up, don’t have all day.
+  [extract_person_details]
+AGENT: Got it, Gene. Mhm, next thing I need so we can lock in Wednesday at 2 Central — what’s your last name?
+CALLER: Szymanski. Like the company, Szymanski & Sons. Enough questions?
+  [extract_person_details]
+  [extract_reach_details]
+  [extract_contact_timezone]
+  [contact_details_completed]
+  [transition_to_ConfirmSlots]
+  [check_current_date]
+CALLER: Mm-hmm.
+  [query_livecall_slots]
+  [extract_confirm_details]
+  [verify_info]
+  [verify_info]
+AGENT: Got it, Gene — I’ve got Wednesday the 26th at 2:30 PM Central open, which is the closest to what you asked for. Just to confirm, is the number I’m talking to you on right now the best one for that call?
+CALLER: Fine, 2:30 PM Central works. Number's +18165550022. Done?
+  [extract_confirm_details]
+  [verify_info]
+  [extract_slot_verified]
+  [extract_slot_verified]
+  [transition_to_Booking]
+AGENT: One moment while I confirm that.
+  [create_livecall_booking]
+  [record_booking_uid]
+  [validate_booking]
+  [record_booking_outcome]
+  [transition_to_Closing]
+AGENT: Thanks, Gene! You're all set for Wednesday at 2:30 PM Central with Jay — you'll get an SMS confirmation shortly where you can save it to your calendar or reschedule if something comes up. Is there anything else I can help you with before we wrap up? 
+  [end_call]

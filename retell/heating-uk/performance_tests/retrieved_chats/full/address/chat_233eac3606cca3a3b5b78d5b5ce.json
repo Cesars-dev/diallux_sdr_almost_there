@@ -1,0 +1,273 @@
+{
+  "chat_id": "chat_233eac3606cca3a3b5b78d5b5ce",
+  "chat_type": "api_chat",
+  "agent_id": "agent_ff9d4b9646a85b82d7ce8fd837",
+  "agent_version": 0,
+  "agent_name": "Multi State Agent",
+  "collected_dynamic_variables": {
+    "callback_requested": "false",
+    "classified_intent": "Boiler Breakdown",
+    "past_customer": "false",
+    "intent_confirmed": "true",
+    "address_postcode": "NE3 2TH",
+    "address_incomplete": "true",
+    "address_city": "",
+    "address_house_number": "25",
+    "current_agent_state": "address",
+    "intent_clear": "true",
+    "address_street": "",
+    "greeting_exchanged": "true",
+    "customer_name": "James",
+    "previous_agent_state": "greeter"
+  },
+  "chat_status": "ended",
+  "start_timestamp": 1784638651677,
+  "end_timestamp": 1784638688187,
+  "transcript": "User: Hi, I need a breakdown call-out. No heating since last night.\nAgent: Right, no heating since last night \u2014 that's a pain. What's the address?\nUser: James\nAgent: James, got it. What's the address?\nUser: NE3 2TH\nAgent: NE3 2TH, got it. What's the house number and street?\nUser: 25\nAgent: 25, got it. What's the street name?\nUser: Yes that's right\nAgent: 25, got it. What's the street name?\nUser: Tomorrow morning works\nAgent: Tomorrow morning works. What's the street name?\nUser: Yes, book it\nAgent: Before I book it, what's the street name?\nUser: That's all, thanks",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_e6a9c3c8c061fcf9f337a616",
+      "role": "user",
+      "created_timestamp": 1784638652304,
+      "content": "Hi, I need a breakdown call-out. No heating since last night."
+    },
+    {
+      "message_id": "message_1b491f33bb4f42098f7f4489",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638653736,
+      "tool_call_id": "call_R9teLGM5aW3TdcHkBAicjPfS",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_e44fd6827484642a7795abf9",
+      "role": "tool_call_result",
+      "created_timestamp": 1784638653737,
+      "tool_call_id": "call_R9teLGM5aW3TdcHkBAicjPfS",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"Boiler Breakdown\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_cbfe040d032d993d94482322",
+      "role": "agent",
+      "created_timestamp": 1784638655427,
+      "content": "Right, no heating since last night \u2014 that's a pain. What's the address?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_50cde10861159b702b715787",
+      "role": "user",
+      "created_timestamp": 1784638656324,
+      "content": "James"
+    },
+    {
+      "message_id": "message_524582a93acbbea7194b5a85",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638657836,
+      "tool_call_id": "call_EJlvrxMTYpptLqNkEOWFwuc7",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_99ae1b72c718d6cbd6c415e0",
+      "role": "tool_call_result",
+      "created_timestamp": 1784638657837,
+      "tool_call_id": "call_EJlvrxMTYpptLqNkEOWFwuc7",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"James\",\"classified_intent\":\"Boiler Breakdown\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_5bf48abc6538aa1dbc293115",
+      "role": "agent",
+      "created_timestamp": 1784638659051,
+      "content": "James, got it. What's the address?",
+      "metadata": {
+        "response_id": 2
+      }
+    },
+    {
+      "message_id": "message_692cac80eddb14b99eb3a381",
+      "role": "user",
+      "created_timestamp": 1784638659804,
+      "content": "NE3 2TH"
+    },
+    {
+      "message_id": "message_6b59bf5c18ba1cb96ae3b65f",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638661641,
+      "tool_call_id": "call_H1MeVroqJeNd4gY4GKvq57cs",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_5a1f2f3b0d5e37b4812afb6b",
+      "role": "tool_call_result",
+      "created_timestamp": 1784638661642,
+      "tool_call_id": "call_H1MeVroqJeNd4gY4GKvq57cs",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"James\",\"classified_intent\":\"Boiler Breakdown\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"NE3 2TH\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_f5e0cbc5e612de5b87ec686a",
+      "role": "agent",
+      "created_timestamp": 1784638667434,
+      "content": "NE3 2TH, got it. What's the house number and street?",
+      "metadata": {
+        "response_id": 3
+      }
+    },
+    {
+      "message_id": "message_483f923ff65b398dc7a2e589",
+      "role": "user",
+      "created_timestamp": 1784638668162,
+      "content": "25"
+    },
+    {
+      "message_id": "message_64fce2a523f14e761768b7fe",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638669494,
+      "tool_call_id": "call_8chhsLJcg6665cbrQjJSngeO",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_68bdad467e2a8a4b1999175e",
+      "role": "tool_call_result",
+      "created_timestamp": 1784638669495,
+      "tool_call_id": "call_8chhsLJcg6665cbrQjJSngeO",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"James\",\"classified_intent\":\"Boiler Breakdown\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"25\",\"address_street\":\"\",\"address_postcode\":\"NE3 2TH\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_b2ddfd93b231739a30550b16",
+      "role": "agent",
+      "created_timestamp": 1784638670678,
+      "content": "25, got it. What's the street name?",
+      "metadata": {
+        "response_id": 4
+      }
+    },
+    {
+      "message_id": "message_85759b805104342f86ef1dfe",
+      "role": "user",
+      "created_timestamp": 1784638671481,
+      "content": "Yes that's right"
+    },
+    {
+      "message_id": "message_dcdbf2a3e173c93ee655c49b",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638672917,
+      "tool_call_id": "call_wynwT62EIJ5UBRUMDtKl2p32",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_7f457495b2c899b2a711895a",
+      "role": "tool_call_result",
+      "created_timestamp": 1784638672918,
+      "tool_call_id": "call_wynwT62EIJ5UBRUMDtKl2p32",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"James\",\"classified_intent\":\"Boiler Breakdown\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"25\",\"address_street\":\"\",\"address_postcode\":\"NE3 2TH\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_f5a11e178d04ed103d42e194",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638678397,
+      "tool_call_id": "call_PdgEGxEDVRg8cZg6DdhNjq9K",
+      "name": "transition_to_address",
+      "arguments": "{}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_0291cc87e37a00420b3b06f9",
+      "role": "state_transition",
+      "created_timestamp": 1784638678398,
+      "former_state_name": "greeter",
+      "new_state_name": "address"
+    },
+    {
+      "message_id": "message_48293c26e250ad22d22c28df",
+      "role": "agent",
+      "created_timestamp": 1784638681849,
+      "content": "25, got it. What's the street name?",
+      "metadata": {
+        "response_id": 5
+      }
+    },
+    {
+      "message_id": "message_17d598e8a56b7ee0d1850cc0",
+      "role": "user",
+      "created_timestamp": 1784638682759,
+      "content": "Tomorrow morning works"
+    },
+    {
+      "message_id": "message_2ead605b0f0358266ea5dd81",
+      "role": "agent",
+      "created_timestamp": 1784638683944,
+      "content": "Tomorrow morning works. What's the street name?",
+      "metadata": {
+        "response_id": 6
+      }
+    },
+    {
+      "message_id": "message_64980d078a805b83aa1e11b6",
+      "role": "user",
+      "created_timestamp": 1784638684748,
+      "content": "Yes, book it"
+    },
+    {
+      "message_id": "message_030e981f896a7c1e988cc78a",
+      "role": "agent",
+      "created_timestamp": 1784638685887,
+      "content": "Before I book it, what's the street name?",
+      "metadata": {
+        "response_id": 7
+      }
+    },
+    {
+      "message_id": "message_28217ff84620ab09e544a7a4",
+      "role": "user",
+      "created_timestamp": 1784638686660,
+      "content": "That's all, thanks"
+    },
+    {
+      "message_id": "message_3cf2fc16a81be82b94853924",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638688180,
+      "tool_call_id": "call_iplUH5bDjJNgx6Iumts5RNGD",
+      "name": "end_call",
+      "arguments": "{}",
+      "type": "end_call"
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/0ae849c38afed7ee758067ab5c27075d5dd7b3c70b5d73f0624c70be108659f2/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "combined_cost": 19.7,
+    "product_costs": [
+      {
+        "unit_price": 2.6,
+        "product": "gpt_5_4_text_testing",
+        "cost": 18.2
+      },
+      {
+        "unit_price": 1.5,
+        "product": "gpt_4_1_text_testing",
+        "cost": 1.5
+      }
+    ]
+  },
+  "chat_analysis": {
+    "chat_summary": "The user requested a breakdown call-out due to no heating since last night and provided their name, postcode, and house number, but did not provide the street name despite multiple prompts from the agent. The booking could not be completed as the address remained incomplete, and the user ended the chat without providing the missing information.",
+    "user_sentiment": "Neutral",
+    "custom_analysis_data": {},
+    "chat_successful": false
+  },
+  "data_storage_setting": "everything"
+}

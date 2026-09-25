@@ -1,0 +1,108 @@
+{
+  "chat_id": "chat_314f1bc3fed9c4b2c79e59183f6",
+  "chat_type": "api_chat",
+  "agent_id": "agent_6226cbd3e8292efd1fea0581d8",
+  "agent_version": 0,
+  "agent_name": "HVAC Multi-Prompt Test (chat)",
+  "collected_dynamic_variables": {
+    "greeting_exchanged": "true",
+    "intent_confirmed": "false",
+    "customer_name": "Alex",
+    "intent_clear": "true",
+    "classified_intent": "Heat Pump Enquiry",
+    "past_customer": "false"
+  },
+  "chat_status": "ended",
+  "start_timestamp": 1784626778248,
+  "end_timestamp": 1784626786919,
+  "transcript": "User: Hi, I'm interested in getting a heat pump. What's the process?\nAgent: British Heat Services, Tom speaking.\n\nHeat pump enquiry, right. The estimator will talk you through the grant and eligibility.\n\nSo you're after a heat pump installation, yeah?\nUser: Alex\nAgent: Alex, lovely.\n\nHeat pump installation enquiry. Is that right?",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_dff66e5d4430bc95b4f28d10",
+      "role": "user",
+      "created_timestamp": 1784626779072,
+      "content": "Hi, I'm interested in getting a heat pump. What's the process?"
+    },
+    {
+      "message_id": "message_89feadf9b03d926d6d1aafa1",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784626780671,
+      "tool_call_id": "call_uegbNV8YU3QO0NTxUhTDAf9Q",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_6a50b407c63469eeb04f24ea",
+      "role": "tool_call_result",
+      "created_timestamp": 1784626780672,
+      "tool_call_id": "call_uegbNV8YU3QO0NTxUhTDAf9Q",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"Heat Pump Enquiry\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_108e368c3e22c061604eb443",
+      "role": "agent",
+      "created_timestamp": 1784626782756,
+      "content": "British Heat Services, Tom speaking.\n\nHeat pump enquiry, right. The estimator will talk you through the grant and eligibility.\n\nSo you're after a heat pump installation, yeah?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_b14673be71144a0fe9ed7c34",
+      "role": "user",
+      "created_timestamp": 1784626783550,
+      "content": "Alex"
+    },
+    {
+      "message_id": "message_199b65cf272bb2e496ce6e50",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784626784800,
+      "tool_call_id": "call_DSaUQhZ2wjjkcX8NHVMZ36ta",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_39615e36c6b097cc4e9a22a5",
+      "role": "tool_call_result",
+      "created_timestamp": 1784626784801,
+      "tool_call_id": "call_DSaUQhZ2wjjkcX8NHVMZ36ta",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Alex\",\"classified_intent\":\"Heat Pump Enquiry\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_7c42d4f39f69844feaf3cebf",
+      "role": "agent",
+      "created_timestamp": 1784626786139,
+      "content": "Alex, lovely.\n\nHeat pump installation enquiry. Is that right?",
+      "metadata": {
+        "response_id": 2
+      }
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/636d4db98e308bca41d45473ea9517f4d476bd907a6f2c8c462afa00f30868f9/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "combined_cost": 6.7,
+    "product_costs": [
+      {
+        "unit_price": 2.6,
+        "product": "gpt_5_4_text_testing",
+        "cost": 5.2
+      },
+      {
+        "unit_price": 1.5,
+        "product": "gpt_4_1_text_testing",
+        "cost": 1.5
+      }
+    ]
+  },
+  "chat_analysis": {
+    "chat_summary": "The user, Alex, inquired about the process for getting a heat pump. The agent confirmed the user's intent and explained that an estimator would discuss grants and eligibility. The conversation established the user's name and clarified the service requested.",
+    "user_sentiment": "Positive",
+    "custom_analysis_data": {},
+    "chat_successful": true
+  },
+  "data_storage_setting": "everything"
+}

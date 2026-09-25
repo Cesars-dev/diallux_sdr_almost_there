@@ -1,0 +1,34 @@
+{
+  "scenario": 2,
+  "turn": 10,
+  "chat_id": "chat_e835587b8c4e27d962a033f1aff",
+  "caller_message": "No, that's all thanks. Bye!",
+  "agent_messages": [
+    {
+      "message_id": "message_7629bb3b7078812934f9b6c3",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639764990,
+      "tool_call_id": "call_un37YZq5aoXrUiolBLycyLPt",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_da6c94064ccbfba68d6cef6e",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639764991,
+      "tool_call_id": "call_un37YZq5aoXrUiolBLycyLPt",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Linda\",\"classified_intent\":\"Annual Boiler Service\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":true,\"address_house_number\":\"10\",\"address_street\":\"Green Rd\",\"address_postcode\":\"NE4 5AB\",\"address_city\":\"Newcastle\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_70fb659149fe6e4e32e9d817",
+      "role": "agent",
+      "created_timestamp": 1784639766537,
+      "content": "Thanks, Linda. Bye for now.",
+      "metadata": {
+        "response_id": 13
+      }
+    }
+  ]
+}

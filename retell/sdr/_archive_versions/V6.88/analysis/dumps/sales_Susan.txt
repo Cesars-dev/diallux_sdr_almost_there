@@ -1,0 +1,82 @@
+CALLER: Hello — I got your flyer about after-hours calls. We miss calls when we're out on jobs.
+  [extract_intake_details]
+  [intake_completed]
+  [transition_to_Discovery]
+AGENT: Got it, thanks for calling in — missing those calls while you’re out working is exactly what the flyer was about.  
+
+When a call comes in and you’re out on a job, what usually happens — does it go to voicemail, or just ring out?
+CALLER: It usually goes to voicemail.
+  [extract_discovery_details]
+AGENT: Mhm, yeah, that’s common.  
+
+Those calls that hit voicemail — do people usually leave a message, or do they just end up calling the next company they find?
+CALLER: About 50% leave a message and would book if we answered.
+  [extract_discovery_details]
+AGENT: Got it — so you’re literally watching bookable jobs slip away when no one can pick up.  
+
+Roughly how many calls a week would you say end up in voicemail instead of being answered live?
+CALLER: About 8 calls a week go to voicemail.
+  [extract_discovery_details]
+  [discovery_completed]
+  [transition_to_Closer]
+  [extract_leak_inputs]
+AGENT: Got it, 8 a week is a decent number of missed opportunities.  
+
+And when you do book one of those jobs, what’s your average ticket worth — are we talking more like $400, $650, or $800+ per job?
+CALLER: Our average job value is about $2,500.
+  [extract_leak_inputs]
+  [calculate_monthly_leak]
+  [extract_closer_details]
+  [closer_completed]
+  [transition_to_Offer]
+AGENT: Got it — so roughly $43K a month in potential work is tied to calls that don’t get answered live.  
+
+So… to stop losing that revenue from missed calls, would you be open to a quick 20‑minute walkthrough this week where we show you exactly how many jobs we can recover and how it would work for your business?
+CALLER: Yes, I'm open to a walkthrough. Please let me know the available times.
+  [extract_offer_details]
+  [offer_completed]
+  [transition_to_contact_details]
+  [extract_person_details]
+AGENT: Nice, that makes sense — a 20‑minute call with Jay where you see it in action is usually worth it at your numbers.  
+
+First thing, what’s your first name?
+CALLER: I'm Susan, owner of Cornerstone Remodeling.
+  [extract_person_details]
+AGENT: Got it Susan, and thanks for sharing that — Cornerstone Remodeling, nice.  
+
+And what’s your last name?
+CALLER: I prefer not to share my last name. Let's proceed with booking the walkthrough.
+AGENT: Got it, I hear you — thanks for letting me know.  
+
+No worries on the last name; to get your walkthrough booked and send the SMS confirmation, what’s the best phone number for you?
+CALLER: My best contact number is +13039150001.
+  [extract_reach_details]
+  [extract_contact_timezone]
+  [contact_details_completed]
+  [transition_to_ConfirmSlots]
+  [check_current_date]
+AGENT: Perfect, thanks Susan.  
+
+One moment while I check availability — would you prefer later today or tomorrow for the walkthrough?
+CALLER: Tomorrow would work best for me.
+  [query_livecall_slots]
+AGENT: Makes sense, tomorrow’s great.  
+
+I can get you in tomorrow at either 11:00am or 11:45am Eastern — which works better for you?
+CALLER: 11:00am Eastern works for me.
+  [extract_confirm_details]
+  [verify_info]
+  [extract_slot_verified]
+  [transition_to_Booking]
+AGENT: One moment while I confirm that.
+  [create_livecall_booking]
+  [record_booking_uid]
+  [validate_booking]
+  [record_booking_outcome]
+  [transition_to_Closing]
+AGENT: Thanks Susan! You’re all set for tomorrow at 11:00am Eastern with Jay to walk through how we stop lost revenue from missed calls. You’ll receive an SMS text with the confirmation details — you can add it to your calendar in one click, or reschedule if you need to.
+
+Is there anything else I can help you with?
+
+Really glad you called. Jay’s looking forward to it. Have a great rest of your day. Bye!
+  [end_call]

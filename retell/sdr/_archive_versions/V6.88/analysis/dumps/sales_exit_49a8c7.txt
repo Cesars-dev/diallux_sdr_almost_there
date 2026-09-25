@@ -1,0 +1,33 @@
+CALLER: Yeah, I got a voicemail from you people. This better be quick, I've got three jobs waiting.
+  [extract_intake_details]
+AGENT: Got it, I’ll keep this tight. When you heard the voicemail, what made you call back — was it more about missed calls, more jobs, or something else?
+CALLER: My wife insisted I call. Personally, I think this might be some kind of scam.
+AGENT: Mhm, I hear you — if you’re slammed with work, anything extra feels like a distraction. What did your wife hear or see that made her say, “You should call these people”?
+CALLER: She said something about saving money on insurance. Everyone says that, though. What's the catch?
+  [extract_intake_details]
+AGENT: Totally get that — if it sounds like “save money on insurance,” it’s usually a gimmick. The only thing we focus on is helping shops stop losing money from missed calls and drive more booked jobs… before we go further, what kind of work are those three jobs you’ve got waiting — auto, home services, something else?
+CALLER: That's none of your business. I run a plumbing company. Why do you need to know that anyway?
+  [extract_intake_details]
+  [intake_completed]
+  [transition_to_Discovery]
+  [extract_discovery_details]
+AGENT: Makes sense, and thanks for telling me you’re a plumber. So let me ask it this way—when a customer calls while you’re out on a job and no one picks up, what usually happens to that job?
+CALLER: None of your business. I handle my business just fine. What's that got to do with insurance?
+  [extract_discovery_details]
+AGENT: Got it, you’re saying you’ve got things under control and this “insurance” angle feels off. When you’re out on a job and the phone rings, is it usually you picking up, your wife, or does it roll to voicemail?
+CALLER: Voicemail mostly. I don’t have time to chat when I’m knee-deep in plumbing. What's your point?
+  [extract_discovery_details]
+AGENT: Right, that makes sense—if you’re knee‑deep in a job, the phone’s the last thing you can deal with. Roughly how many calls on a busy week would you say end up in voicemail instead of getting answered live?
+CALLER: That's not your concern. I don't keep track of that. I’m busy working, not counting calls.
+AGENT: Yeah, that’s fair—you’re focused on fixing pipes, not tallying phone stats. Those calls that hit voicemail now… do people usually leave a message, or do they just hang up and call the next plumber?
+CALLER: Some leave messages, others hang up. Typical. Why does it matter? I'm busy, not running a call center.
+  [extract_discovery_details]
+AGENT: Makes sense—you’re out fixing emergencies, not sitting by a phone. The only reason it matters is every hang‑up is usually a job that goes to the next plumber, and what we do is step in on those missed calls so they still turn into booked work instead of lost work… does that kind of thing sound even worth a minute to explore, or are you totally set with how it is now?
+CALLER: I don't need anyone stepping in on my business. I handle my own calls. Is this a scam?
+AGENT: I hear you—you’re protective of your business, and “someone stepping in” sounds sketchy. No, this isn’t a scam; we don’t touch your pricing or jobs, we just turn those hang‑ups into booked work when you can’t get to the phone… given how busy you are, would it help at all if those missed calls automatically turned into scheduled appointments without you having to pick up?
+CALLER: Everyone says that. I don’t need strangers meddling. How do you even know what I charge?
+  [extract_discovery_details]
+AGENT: Yeah, I get that—last thing you want is some company guessing at your prices. We don’t need to know what you charge; we just know when a caller hangs up and books the next plumber, that’s money off your table… given how strongly you feel, do you want to just leave things as they are and I’ll note you’re not interested, or is there *any* scenario where turning more of those voicemails into paid jobs would be worth revisiting?
+CALLER: I don't have time for this. My business is fine as it is. Bye.
+AGENT: Got it, I’ll mark you as not interested so you won’t get follow‑ups from us. Thanks for taking the time between jobs today, and I hope the rest of your work goes smoothly.
+  [end_call]

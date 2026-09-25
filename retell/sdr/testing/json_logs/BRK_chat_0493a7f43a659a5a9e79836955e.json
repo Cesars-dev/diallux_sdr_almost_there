@@ -1,0 +1,80 @@
+{
+  "chat_id": "chat_0493a7f43a659a5a9e79836955e",
+  "chat_type": "api_chat",
+  "agent_id": "agent_95e02efd34a529ecf2d5ac60a5",
+  "agent_version": 0,
+  "agent_name": "V6.90",
+  "retell_llm_dynamic_variables": {
+    "callback_number": "+12125550011",
+    "today_date": "2026-08-24"
+  },
+  "collected_dynamic_variables": {},
+  "chat_status": "ended",
+  "start_timestamp": 1787627959629,
+  "end_timestamp": 1787627966481,
+  "transcript": "User: Fine, tell me about— actually NO. You know what, forget it. This is bulls***, everyone just wants money, I'm done with this crap.\nAgent: I hear you, that sounds really frustrating… it honestly makes sense you’d feel that way if it seems like everyone just wants to sell you something.  \n\nBefore we hang up, do you want to tell me what had you curious enough to check this out in the first place, or would you rather I just let you go for today?\nUser: Whatever, just have someone call me tomorrow. I'm tired of dealing with this crap today.\nAgent: Got it, sounds like today’s been a lot and I don’t want to add to that—someone from our team will give you a call tomorrow on this number so you don’t have to deal with it right now. If anything changes or you decide you’re not interested, you can just ignore the call or let them know, no pressure at all. Thanks for picking up today, I’ll let you go now—take care and get some rest.",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_5e0559e742c05efae3853aea",
+      "role": "user",
+      "created_timestamp": 1787627960239,
+      "content": "Fine, tell me about— actually NO. You know what, forget it. This is bulls***, everyone just wants money, I'm done with this crap."
+    },
+    {
+      "message_id": "message_77b47e285a3d400d66d308ea",
+      "role": "agent",
+      "created_timestamp": 1787627961982,
+      "content": "I hear you, that sounds really frustrating… it honestly makes sense you’d feel that way if it seems like everyone just wants to sell you something.  \n\nBefore we hang up, do you want to tell me what had you curious enough to check this out in the first place, or would you rather I just let you go for today?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_07e35ea87bfcf42eae618a89",
+      "role": "user",
+      "created_timestamp": 1787627963694,
+      "content": "Whatever, just have someone call me tomorrow. I'm tired of dealing with this crap today."
+    },
+    {
+      "message_id": "message_15656de2e24992f71e3b5788",
+      "role": "agent",
+      "created_timestamp": 1787627966415,
+      "content": "Got it, sounds like today’s been a lot and I don’t want to add to that—someone from our team will give you a call tomorrow on this number so you don’t have to deal with it right now. If anything changes or you decide you’re not interested, you can just ignore the call or let them know, no pressure at all. Thanks for picking up today, I’ll let you go now—take care and get some rest.",
+      "metadata": {
+        "response_id": 2
+      }
+    },
+    {
+      "message_id": "message_f1da1b6dea03535f93d7fd24",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787627966416,
+      "tool_call_id": "call_JBnfddpojGoFOckpoXO2aDDZ",
+      "name": "end_call",
+      "arguments": "{\"execution_message\":\"Got it, sounds like today’s been a lot and I don’t want to add to that—someone from our team will give you a call tomorrow on this number so you don’t have to deal with it right now. If anything changes or you decide you’re not interested, you can just ignore the call or let them know, no pressure at all. Thanks for picking up today, I’ll let you go now—take care and get some rest.\"}",
+      "type": "end_call"
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/74dcd8e52cdb77d4fad438df6b8f36886982c0d277e9672ccd6136fd8c74ed30/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "product_costs": [
+      {
+        "product": "gpt_5_1_text_testing",
+        "cost": 2.6,
+        "unit_price": 1.3
+      },
+      {
+        "unit_price": 1.5,
+        "cost": 1.5,
+        "product": "gpt_4_1_text_testing"
+      }
+    ],
+    "combined_cost": 4.1
+  },
+  "chat_analysis": {
+    "chat_successful": true,
+    "custom_analysis_data": {},
+    "chat_summary": "The user expressed strong frustration and dissatisfaction, indicating they were tired of being solicited and wanted to end the conversation. The agent responded empathetically and arranged for someone to call the user the next day, respecting their wishes to end the interaction for now.",
+    "user_sentiment": "Negative"
+  },
+  "data_storage_setting": "everything"
+}

@@ -1,0 +1,39 @@
+[
+  {
+    "description": "When closer_completed, industry, pain_points, interest_level are all filled, transition to Offer.",
+    "destination_state_name": "Offer",
+    "parameters": {
+      "required": [
+        "closer_completed",
+        "industry",
+        "pain_points",
+        "interest_level"
+      ],
+      "properties": {
+        "industry": {
+          "description": "Business industry",
+          "type": "string"
+        },
+        "interest_level": {
+          "description": "Prospect's interest level",
+          "enum": [
+            "high",
+            "medium",
+            "low"
+          ],
+          "type": "string"
+        },
+        "closer_completed": {
+          "type": "boolean",
+          "description": "true ONLY after: When their interest level is gauged after quantifying their loss."
+        },
+        "pain_points": {
+          "description": "Comma-separated challenges (cumulative)",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "speak_during_transition": false
+  }
+]

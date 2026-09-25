@@ -1,0 +1,67 @@
+{
+  "scenario": 6,
+  "turn": 4,
+  "chat_id": "chat_e0d668f6f1163479c63cc1e307d",
+  "caller_message": "NE2 2BB",
+  "agent_messages": [
+    {
+      "message_id": "message_b0b77065eec6ffba1a80e970",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639941142,
+      "tool_call_id": "call_0FvoFNvRMrf4sKzGsQpDvD29",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_883c2bd6cac4ca3f6f9a8897",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639941143,
+      "tool_call_id": "call_0FvoFNvRMrf4sKzGsQpDvD29",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"David\",\"classified_intent\":\"repair\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"NE2 2BB\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_2151d8e59f94ed3308f86e26",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639942613,
+      "tool_call_id": "call_2uusJDmHRPycmBw0KTBxdYzZ",
+      "name": "transition_to_address",
+      "arguments": "{}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_c11954beabbb7ca322b3b926",
+      "role": "state_transition",
+      "created_timestamp": 1784639942614,
+      "former_state_name": "greeter",
+      "new_state_name": "address"
+    },
+    {
+      "message_id": "message_331c150cd609ccd511cba64f",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639944200,
+      "tool_call_id": "call_I6mAwIUx0C902GKFeCbASlo5",
+      "name": "extract_address_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_4d1ccb30aee01fb08dd2cccc",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639944201,
+      "tool_call_id": "call_I6mAwIUx0C902GKFeCbASlo5",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"David\",\"problem_category\":\"No Hot Water (but heating works)\",\"symptom_brief\":\"Clicking sound when boiler fires up; hot water goes cold after about 5 minutes\",\"error_code\":\"\",\"boiler_make\":\"Worcester\",\"address_postcode\":\"NE2 2BB\",\"address_house_number\":\"\",\"address_street\":\"\",\"address_line1\":\"\",\"address_city\":\"\",\"address_confirmed\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_68f4fa243b30de9bdf2107d4",
+      "role": "agent",
+      "created_timestamp": 1784639945686,
+      "content": "Postcode N-E-2 2-B-B \u2014 right.  \nWhat\u2019s the house number or property name?",
+      "metadata": {
+        "response_id": 4
+      }
+    }
+  ]
+}

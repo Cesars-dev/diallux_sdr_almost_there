@@ -1,0 +1,28 @@
+[
+  {
+    "name": "extract_offer_details",
+    "description": "Capture the commitment: `{{livecall_agreed}}` = true the moment they agree to a live call this week. Call it the instant a commit signal lands \u2014 this is the gate.",
+    "type": "extract_dynamic_variable",
+    "speak_after_execution": true,
+    "variables": [
+      {
+        "name": "livecall_agreed",
+        "description": "True the moment the prospect agrees to a live call this week.",
+        "type": "boolean"
+      }
+    ]
+  },
+  {
+    "name": "offer_completed",
+    "type": "extract_dynamic_variable",
+    "description": "Set offer_completed to true ONLY after: The moment they commit to the live call (or clearly request a callback instead). Do not set it early.",
+    "speak_after_execution": false,
+    "variables": [
+      {
+        "name": "offer_completed",
+        "type": "boolean",
+        "description": "true ONLY after: The moment they commit to the live call (or clearly request a callback instead)."
+      }
+    ]
+  }
+]

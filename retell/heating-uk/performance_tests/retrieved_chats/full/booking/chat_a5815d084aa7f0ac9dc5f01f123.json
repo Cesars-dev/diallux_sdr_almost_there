@@ -1,0 +1,360 @@
+{
+  "chat_id": "chat_a5815d084aa7f0ac9dc5f01f123",
+  "chat_type": "api_chat",
+  "agent_id": "agent_ff9d4b9646a85b82d7ce8fd837",
+  "agent_version": 0,
+  "agent_name": "Multi State Agent",
+  "collected_dynamic_variables": {
+    "callback_requested": "false",
+    "classified_intent": "Annual Boiler Service",
+    "past_customer": "true",
+    "intent_confirmed": "true",
+    "address_postcode": "NE4 4DD",
+    "address_confirmed": "true",
+    "address_incomplete": "false",
+    "problem_category": "",
+    "address_city": "Newcastle",
+    "boiler_make": "",
+    "address_house_number": "25",
+    "symptom_brief": "",
+    "current_agent_state": "booking",
+    "intent_clear": "true",
+    "address_line1": "25 Acacia Gardens",
+    "address_street": "Acacia Gardens",
+    "greeting_exchanged": "true",
+    "error_code": "",
+    "customer_name": "Robert",
+    "previous_agent_state": "address"
+  },
+  "chat_status": "ended",
+  "start_timestamp": 1784639520375,
+  "end_timestamp": 1784639570708,
+  "transcript": "User: Hi, I need a service. Can Dave come out? He did our boiler last year.\nAgent: Annual service, and Dave came last year \u2014 lovely. What's your postcode?\nUser: Robert. 25 Acacia Gardens, NE4 4DD, Newcastle.\nAgent: Robert \u2014 25 Acacia Gardens, Newcastle, postcode N-E-4 4-D-D. Is that right?\nUser: Yes, that's right\nAgent: I\u2019m just checking the next available service slots now.\nAgent: Right, I can do Wednesday afternoon between half four and seven. Does that suit?\nUser: Today works\nAgent: I\u2019m checking today\u2019s slots now.\nAgent: No slot today. I can do Wednesday between half four and seven. Does that work?\nUser: Yes, book it\nAgent: Right, Robert \u2014 Wednesday between half four and seven at 25 Acacia Gardens, Newcastle \u2014 postcode N-E-4 4-D-D.\nAgent: Brilliant, you're booked in. Anything else I can help with?\nUser: That's all, thanks\nAgent: Thanks, Robert. Cheers for calling British Heat Services.",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_ced8b19376ab52f8996d0ade",
+      "role": "user",
+      "created_timestamp": 1784639521061,
+      "content": "Hi, I need a service. Can Dave come out? He did our boiler last year."
+    },
+    {
+      "message_id": "message_ab0f24a59d5ecca5817ecdf2",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639523252,
+      "tool_call_id": "call_Dy4WU6zfZEJNbSCE7CyDwxi4",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_ed050518b6fb656b0c788106",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639523253,
+      "tool_call_id": "call_Dy4WU6zfZEJNbSCE7CyDwxi4",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"Annual Boiler Service\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":true,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_8c44f58adb4249dc136f7851",
+      "role": "agent",
+      "created_timestamp": 1784639524868,
+      "content": "Annual service, and Dave came last year \u2014 lovely. What's your postcode?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_89978d71176e172207083bc3",
+      "role": "user",
+      "created_timestamp": 1784639525674,
+      "content": "Robert. 25 Acacia Gardens, NE4 4DD, Newcastle."
+    },
+    {
+      "message_id": "message_c33c3c9e0843411dd8184915",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639527765,
+      "tool_call_id": "call_SVz4KzVx1zjaSJ1WLovswLqK",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_524bf1c0b2aab904287bee1e",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639527766,
+      "tool_call_id": "call_SVz4KzVx1zjaSJ1WLovswLqK",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Robert\",\"classified_intent\":\"Annual Boiler Service\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":true,\"address_house_number\":\"25\",\"address_street\":\"Acacia Gardens\",\"address_postcode\":\"NE4 4DD\",\"address_city\":\"Newcastle\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_0e1a9a5dd1a600cded909890",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639529354,
+      "tool_call_id": "call_lLCqCqa703RF3ndiga1WFfL0",
+      "name": "transition_to_address",
+      "arguments": "{}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_b640f1420ea12ef2b8e2f612",
+      "role": "state_transition",
+      "created_timestamp": 1784639529355,
+      "former_state_name": "greeter",
+      "new_state_name": "address"
+    },
+    {
+      "message_id": "message_5cc02c17025e3566e8fd0936",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639531354,
+      "tool_call_id": "call_7IdVRD1YnbO0xR9Zmn3nKz2D",
+      "name": "extract_address_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_707478c5bd1341e7c0ac65be",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639531355,
+      "tool_call_id": "call_7IdVRD1YnbO0xR9Zmn3nKz2D",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Robert\",\"problem_category\":\"\",\"symptom_brief\":\"\",\"error_code\":\"\",\"boiler_make\":\"\",\"address_postcode\":\"NE4 4DD\",\"address_house_number\":\"25\",\"address_street\":\"Acacia Gardens\",\"address_line1\":\"25 Acacia Gardens\",\"address_city\":\"Newcastle\",\"address_confirmed\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_ad9d257dd28ec7d5f9e7b9cb",
+      "role": "agent",
+      "created_timestamp": 1784639533244,
+      "content": "Robert \u2014 25 Acacia Gardens, Newcastle, postcode N-E-4 4-D-D. Is that right?",
+      "metadata": {
+        "response_id": 2
+      }
+    },
+    {
+      "message_id": "message_76498c8570f4347953652d98",
+      "role": "user",
+      "created_timestamp": 1784639534371,
+      "content": "Yes, that's right"
+    },
+    {
+      "message_id": "message_c39a703dc7125cd29760fa5b",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639536851,
+      "tool_call_id": "call_g8V3Vix9ginjQzCrdqXZRLr0",
+      "name": "extract_address_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_3c2f3ce3e04df76303a9e205",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639536852,
+      "tool_call_id": "call_g8V3Vix9ginjQzCrdqXZRLr0",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Robert\",\"problem_category\":\"\",\"symptom_brief\":\"\",\"error_code\":\"\",\"boiler_make\":\"\",\"address_postcode\":\"NE4 4DD\",\"address_house_number\":\"25\",\"address_street\":\"Acacia Gardens\",\"address_line1\":\"25 Acacia Gardens\",\"address_city\":\"Newcastle\",\"address_confirmed\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_c82bb719814d91811ef0cfa5",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639538363,
+      "tool_call_id": "call_z51mPXDYEcnIrrc7qA8soJ5b",
+      "name": "transition_to_booking",
+      "arguments": "{}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_7b744c812666092a0fdfd8b9",
+      "role": "state_transition",
+      "created_timestamp": 1784639538364,
+      "former_state_name": "address",
+      "new_state_name": "booking"
+    },
+    {
+      "message_id": "message_996cc768702a9de3e5e24bfb",
+      "role": "agent",
+      "created_timestamp": 1784639540393,
+      "content": "I\u2019m just checking the next available service slots now.",
+      "metadata": {
+        "response_id": 3
+      }
+    },
+    {
+      "message_id": "message_c71a370dd1050f2cd0457ebe",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639540394,
+      "tool_call_id": "call_AH6m270d4ljVh5gMti4FozgW",
+      "name": "check_availability",
+      "arguments": "{\"start_time\":\"2026-07-21T00:00:00\",\"end_time\":\"2026-07-22T23:59:00\",\"timezone\":\"Europe/London\",\"execution_message\":\"I\u2019m just checking the next available service slots now.\"}",
+      "type": "check_availability_cal"
+    },
+    {
+      "message_id": "message_0ff030d6db794daf69410897",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639540867,
+      "tool_call_id": "call_AH6m270d4ljVh5gMti4FozgW",
+      "content": "{\"availability_for_selected_time\":[{\"date\":\"Wednesday, 2026 July 7/22/2026 British Summer Time\",\"availability_range\":[\"From 4:30 PM to 7:00 PM\"]}]}",
+      "successful": true
+    },
+    {
+      "message_id": "message_d015a46e8a6c8b387b5a9af7",
+      "role": "agent",
+      "created_timestamp": 1784639542918,
+      "content": "Right, I can do Wednesday afternoon between half four and seven. Does that suit?",
+      "metadata": {
+        "response_id": 4
+      }
+    },
+    {
+      "message_id": "message_05a03bd9acdca6fc97427e66",
+      "role": "user",
+      "created_timestamp": 1784639543865,
+      "content": "Today works"
+    },
+    {
+      "message_id": "message_8b59b9aa78db1b0deccfc92f",
+      "role": "agent",
+      "created_timestamp": 1784639546175,
+      "content": "I\u2019m checking today\u2019s slots now.",
+      "metadata": {
+        "response_id": 5
+      }
+    },
+    {
+      "message_id": "message_d1193d22d863d2aa5c999f45",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639546176,
+      "tool_call_id": "call_HvDNwDxUd6kcIKN5gHLSL28Y",
+      "name": "check_availability",
+      "arguments": "{\"start_time\":\"2026-07-21T14:12:00\",\"end_time\":\"2026-07-21T23:59:00\",\"timezone\":\"Europe/London\",\"execution_message\":\"I\u2019m checking today\u2019s slots now.\"}",
+      "type": "check_availability_cal"
+    },
+    {
+      "message_id": "message_eabfd223fd60b5395c02d811",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639547096,
+      "tool_call_id": "call_HvDNwDxUd6kcIKN5gHLSL28Y",
+      "content": "{\"availability_for_selected_time\":\"No available slots for specified time range, but there are available slots on time range that's nearby.\",\"availability_nearby\":[{\"date\":\"Wednesday, 2026 July 7/22/2026 British Summer Time\",\"availability_range\":[\"From 4:30 PM to 7:00 PM\"]}]}",
+      "successful": true
+    },
+    {
+      "message_id": "message_c7ccf685a35971f83a4c1eca",
+      "role": "agent",
+      "created_timestamp": 1784639549252,
+      "content": "No slot today. I can do Wednesday between half four and seven. Does that work?",
+      "metadata": {
+        "response_id": 6
+      }
+    },
+    {
+      "message_id": "message_60571da3f73608d503279bde",
+      "role": "user",
+      "created_timestamp": 1784639550105,
+      "content": "Yes, book it"
+    },
+    {
+      "message_id": "message_807fd4b76edbbfab51a77bb7",
+      "role": "agent",
+      "created_timestamp": 1784639553283,
+      "content": "Right, Robert \u2014 Wednesday between half four and seven at 25 Acacia Gardens, Newcastle \u2014 postcode N-E-4 4-D-D.",
+      "metadata": {
+        "response_id": 7
+      }
+    },
+    {
+      "message_id": "message_06c69ea9b481227700ef192a",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639553284,
+      "tool_call_id": "call_0uNLrAO9ypzCDedyJeSBgayZ",
+      "name": "book_calendar",
+      "arguments": "{\"time\":\"2026-07-22T16:30:00\",\"timezone\":\"Europe/London\",\"name\":\"Robert\",\"email\":\"jaydiallux@gmail.com\",\"attendeePhoneNumber\":null,\"title\":\" \u2014 Robert\",\"notes\":\"CUSTOMER: Robert | ADDRESS: 25 Acacia Gardens, Newcastle, NE4 4DD | PHONE: {{user_number}} | PROBLEM: Annual Boiler Service | SYMPTOMS: Annual service requested\",\"guests\":null,\"rescheduleReason\":null,\"execution_message\":\"Right, I\u2019m getting that booked in now.\"}",
+      "type": "book_appointment_cal"
+    },
+    {
+      "message_id": "message_15a4452db6a24429229b7ee5",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639558135,
+      "tool_call_id": "call_0uNLrAO9ypzCDedyJeSBgayZ",
+      "content": "{\"status\":\"Successfully booked an appointment.\",\"booking_id\":22744112,\"booking_uid\":\"2hT4MgMWFkjoAPjpLufVDK\"}",
+      "successful": true
+    },
+    {
+      "message_id": "message_f6ee6626aa7c0387321e5890",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639561925,
+      "tool_call_id": "call_pFrINPipEFP0feai8JRrIyqI",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_b145caec00cbe4c9361bb9ab",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639561926,
+      "tool_call_id": "call_pFrINPipEFP0feai8JRrIyqI",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Robert\",\"classified_intent\":\"Annual Boiler Service\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":true,\"address_house_number\":\"25\",\"address_street\":\"Acacia Gardens\",\"address_postcode\":\"NE4 4DD\",\"address_city\":\"Newcastle\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_f73dfeb88161bd306c235294",
+      "role": "agent",
+      "created_timestamp": 1784639563825,
+      "content": "Brilliant, you're booked in. Anything else I can help with?",
+      "metadata": {
+        "response_id": 8
+      }
+    },
+    {
+      "message_id": "message_ab2dad11069543c470fdda14",
+      "role": "user",
+      "created_timestamp": 1784639564760,
+      "content": "That's all, thanks"
+    },
+    {
+      "message_id": "message_b676f75ad296e8877e399cdf",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639567584,
+      "tool_call_id": "call_lxY5sUkvQBV9RlQAunhW7Cpc",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_dfdda906e8156190ff742c11",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639567585,
+      "tool_call_id": "call_lxY5sUkvQBV9RlQAunhW7Cpc",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Robert\",\"classified_intent\":\"Annual Boiler Service\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":true,\"address_house_number\":\"25\",\"address_street\":\"Acacia Gardens\",\"address_postcode\":\"NE4 4DD\",\"address_city\":\"Newcastle\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_c05ea063197e90261add1602",
+      "role": "agent",
+      "created_timestamp": 1784639569742,
+      "content": "Thanks, Robert. Cheers for calling British Heat Services.",
+      "metadata": {
+        "response_id": 9
+      }
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/73f7111de18ee004c86a56581e2c413af47838e8ab143f4aeb007c26de85ba05/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "combined_cost": 24.9,
+    "product_costs": [
+      {
+        "unit_price": 2.6,
+        "product": "gpt_5_4_text_testing",
+        "cost": 23.400000000000002
+      },
+      {
+        "unit_price": 1.5,
+        "product": "gpt_4_1_text_testing",
+        "cost": 1.5
+      }
+    ]
+  },
+  "chat_analysis": {
+    "chat_summary": "The user requested an annual boiler service and specifically asked for Dave, who serviced their boiler last year. The agent confirmed the user's details, checked availability, and successfully booked an appointment for the requested service. The user confirmed the booking and expressed satisfaction with the process.",
+    "user_sentiment": "Positive",
+    "custom_analysis_data": {},
+    "chat_successful": true
+  },
+  "data_storage_setting": "everything"
+}

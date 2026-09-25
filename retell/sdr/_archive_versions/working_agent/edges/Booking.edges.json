@@ -1,0 +1,24 @@
+[
+  {
+    "description": "When booking_completed, booking_confirmed are all filled, transition to Closing.",
+    "speak_during_transition": false,
+    "destination_state_name": "Closing",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "booking_confirmed": {
+          "type": "boolean",
+          "description": "True after a successful create_livecall_booking."
+        },
+        "booking_completed": {
+          "type": "boolean",
+          "description": "true ONLY after: Only after the booking is confirmed on the calendar."
+        }
+      },
+      "required": [
+        "booking_completed",
+        "booking_confirmed"
+      ]
+    }
+  }
+]

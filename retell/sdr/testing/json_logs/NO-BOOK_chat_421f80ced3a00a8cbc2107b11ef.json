@@ -1,0 +1,160 @@
+{
+  "chat_id": "chat_421f80ced3a00a8cbc2107b11ef",
+  "chat_type": "api_chat",
+  "agent_id": "agent_95e02efd34a529ecf2d5ac60a5",
+  "agent_version": 0,
+  "agent_name": "V6.90",
+  "retell_llm_dynamic_variables": {
+    "today_date": "2026-08-24"
+  },
+  "collected_dynamic_variables": {
+    "inbound_channel": "voicemail",
+    "pain_frame": "",
+    "interest_topic": ""
+  },
+  "chat_status": "ended",
+  "start_timestamp": 1787627181263,
+  "end_timestamp": 1787627202443,
+  "transcript": "User: Yeah, I got a voicemail from you people. This better be quick, I've got three jobs waiting.\nAgent: Got it, I’ll keep this super quick.  \n\nYou mentioned you’re heading into three jobs — when a new customer calls while you’re out working, who usually answers your phone, or does it just ring through to voicemail?\nUser: That's none of your business. Why do you need to know that? Is this some kind of scam?\nAgent: Yeah, I hear you — if you’re slammed with jobs, random questions feel annoying.  \n\nThis isn’t a scam; we help contractors stop losing work from missed calls. Do you remember anything specific from the voicemail that made you call back, like “missed calls” or “lost jobs” or something else?\nUser: Everyone claims they can help with missed calls. How are you different? I'm tired of these pitches.\nAgent: Totally fair, you’re not wrong — you must get pitched nonstop.  \n\nSo, instead of you chasing calls or hiring more staff, we actually pick up the calls you miss and turn them into booked jobs or detailed messages, then send them straight to you. Before I go further, are you mainly losing calls during the day while you’re on-site, or after-hours?\nUser: That's none of your concern. I handle my business just fine. Why do you need to know?\nAgent: Makes sense, if you’ve got it handled you don’t want someone poking around in it.  \n\nThe only reason I ask is to see if we can actually put money back in your pocket from calls you can’t get to—otherwise I’ll tell you straight up it’s not a fit and let you go. Do you feel like you’re booked solid from calls as is, or are there times you wish the phone brought in a few more good jobs?\nUser: I get plenty of calls. I don't need help. This sounds like a waste of time.\nAgent: Totally hear you — if it feels like a waste of time, we should keep this under a minute.  \n\nIf you’re already getting plenty of calls, is your main focus right now just keeping up with the work you’ve got, not trying to squeeze in any more jobs?\nUser: Exactly. I'm doing fine. I don't need more work or your help. Thanks, but no thanks.\nAgent: Got it, I appreciate you telling me straight. I’ll let you get back to your jobs — if things ever change and you decide you want a system that turns missed calls into booked work without you answering the phone, you can always reach back out. Have a good one and stay safe out there.",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_b990c371ff6670a74cb17268",
+      "role": "user",
+      "created_timestamp": 1787627181867,
+      "content": "Yeah, I got a voicemail from you people. This better be quick, I've got three jobs waiting."
+    },
+    {
+      "message_id": "message_064d1887020998d38b125c8b",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787627182943,
+      "tool_call_id": "call_kHDpqeZHBlHvU27a8wtV4mBb",
+      "name": "extract_intake_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_a6ec0746c954253e3b2a24bb",
+      "role": "tool_call_result",
+      "created_timestamp": 1787627182944,
+      "tool_call_id": "call_kHDpqeZHBlHvU27a8wtV4mBb",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"inbound_channel\":\"voicemail\",\"interest_topic\":\"\",\"pain_frame\":\"\"}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_c0e27c8851c40091a77ad96b",
+      "role": "agent",
+      "created_timestamp": 1787627184199,
+      "content": "Got it, I’ll keep this super quick.  \n\nYou mentioned you’re heading into three jobs — when a new customer calls while you’re out working, who usually answers your phone, or does it just ring through to voicemail?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_28df4441b35225c3e856a265",
+      "role": "user",
+      "created_timestamp": 1787627185615,
+      "content": "That's none of your business. Why do you need to know that? Is this some kind of scam?"
+    },
+    {
+      "message_id": "message_124870dbb2022e9f1e158ab2",
+      "role": "agent",
+      "created_timestamp": 1787627187827,
+      "content": "Yeah, I hear you — if you’re slammed with jobs, random questions feel annoying.  \n\nThis isn’t a scam; we help contractors stop losing work from missed calls. Do you remember anything specific from the voicemail that made you call back, like “missed calls” or “lost jobs” or something else?",
+      "metadata": {
+        "response_id": 2
+      }
+    },
+    {
+      "message_id": "message_c645fbca601fd6d00fb38225",
+      "role": "user",
+      "created_timestamp": 1787627189648,
+      "content": "Everyone claims they can help with missed calls. How are you different? I'm tired of these pitches."
+    },
+    {
+      "message_id": "message_aec7be2d198311fce2fa53c6",
+      "role": "agent",
+      "created_timestamp": 1787627191663,
+      "content": "Totally fair, you’re not wrong — you must get pitched nonstop.  \n\nSo, instead of you chasing calls or hiring more staff, we actually pick up the calls you miss and turn them into booked jobs or detailed messages, then send them straight to you. Before I go further, are you mainly losing calls during the day while you’re on-site, or after-hours?",
+      "metadata": {
+        "response_id": 3
+      }
+    },
+    {
+      "message_id": "message_bc1e2792310a3f8732ceb1eb",
+      "role": "user",
+      "created_timestamp": 1787627193195,
+      "content": "That's none of your concern. I handle my business just fine. Why do you need to know?"
+    },
+    {
+      "message_id": "message_14e7844d42780dbb90243def",
+      "role": "agent",
+      "created_timestamp": 1787627195598,
+      "content": "Makes sense, if you’ve got it handled you don’t want someone poking around in it.  \n\nThe only reason I ask is to see if we can actually put money back in your pocket from calls you can’t get to—otherwise I’ll tell you straight up it’s not a fit and let you go. Do you feel like you’re booked solid from calls as is, or are there times you wish the phone brought in a few more good jobs?",
+      "metadata": {
+        "response_id": 4
+      }
+    },
+    {
+      "message_id": "message_49d964af815ba8a8f5654259",
+      "role": "user",
+      "created_timestamp": 1787627197093,
+      "content": "I get plenty of calls. I don't need help. This sounds like a waste of time."
+    },
+    {
+      "message_id": "message_cea56f1ec2be96fb08e61fa1",
+      "role": "agent",
+      "created_timestamp": 1787627199052,
+      "content": "Totally hear you — if it feels like a waste of time, we should keep this under a minute.  \n\nIf you’re already getting plenty of calls, is your main focus right now just keeping up with the work you’ve got, not trying to squeeze in any more jobs?",
+      "metadata": {
+        "response_id": 5
+      }
+    },
+    {
+      "message_id": "message_3a98588d34f9529f0838751a",
+      "role": "user",
+      "created_timestamp": 1787627200546,
+      "content": "Exactly. I'm doing fine. I don't need more work or your help. Thanks, but no thanks."
+    },
+    {
+      "message_id": "message_4f7b05206bac35f658467e64",
+      "role": "agent",
+      "created_timestamp": 1787627202435,
+      "content": "Got it, I appreciate you telling me straight. I’ll let you get back to your jobs — if things ever change and you decide you want a system that turns missed calls into booked work without you answering the phone, you can always reach back out. Have a good one and stay safe out there.",
+      "metadata": {
+        "response_id": 6
+      }
+    },
+    {
+      "message_id": "message_e5854fd242996f92d83463a8",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787627202436,
+      "tool_call_id": "call_XstkbPwdCbbL88DItzrKnwfg",
+      "name": "end_call",
+      "arguments": "{\"execution_message\":\"Got it, I appreciate you telling me straight. I’ll let you get back to your jobs — if things ever change and you decide you want a system that turns missed calls into booked work without you answering the phone, you can always reach back out. Have a good one and stay safe out there.\"}",
+      "type": "end_call"
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/94a70583160d2ce6bb63ec354fcc3edc5119a8fff442e217730f3cd76311f80c/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "product_costs": [
+      {
+        "unit_price": 1.3,
+        "cost": 7.800000000000001,
+        "product": "gpt_5_1_text_testing"
+      },
+      {
+        "cost": 1.5,
+        "product": "gpt_4_1_text_testing",
+        "unit_price": 1.5
+      }
+    ],
+    "combined_cost": 9.3
+  },
+  "chat_analysis": {
+    "user_sentiment": "Negative",
+    "chat_summary": "The user responded to a voicemail from the agent but expressed frustration and skepticism about the call, repeatedly stating they did not need help with missed calls and were satisfied with their current workload. The agent attempted to explain their service but ultimately respected the user's wishes and ended the conversation politely.",
+    "custom_analysis_data": {},
+    "chat_successful": true
+  },
+  "data_storage_setting": "everything"
+}

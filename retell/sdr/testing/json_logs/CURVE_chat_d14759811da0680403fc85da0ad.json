@@ -1,0 +1,109 @@
+{
+  "chat_id": "chat_d14759811da0680403fc85da0ad",
+  "chat_type": "api_chat",
+  "agent_id": "agent_a9a7205fa6085e1b0c0246ae60",
+  "agent_version": 0,
+  "agent_name": "V7.4_hard_gpt52",
+  "retell_llm_dynamic_variables": {
+    "today_date": "2026-08-25"
+  },
+  "collected_dynamic_variables": {},
+  "chat_status": "ended",
+  "start_timestamp": 1787666315456,
+  "end_timestamp": 1787666337002,
+  "transcript": "User: This is Frank. Whoever you people are, I want to know how you got this number.\nAgent: Frank, I hear you—that’s a fair question. Did you see us from an ad or search for anything like “missed calls” or “after-hours answering,” or did someone leave you a voicemail?\nUser: None of your damn business. You people are all liars and thieves.\nAgent: I hear you, Frank—I’m not here to argue with you. Would you like me to stop contacting you going forward?\nUser: Well, maybe you're not all crooks. Leave your number, I might look you up.\nAgent: I get it—but I can’t leave a personal number from this line. What’s the best place to look us up: did you want the company name “Dialux,” or the website?\nUser: None of your damn business. I'll find it if I want to. Don't call again.\nAgent: Got it, Frank—I won’t contact you again. Take care.",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_18b2b7eb176142f7efd5f292",
+      "role": "user",
+      "created_timestamp": 1787666316114,
+      "content": "This is Frank. Whoever you people are, I want to know how you got this number."
+    },
+    {
+      "message_id": "message_2748c6601fb8bd9aff3ef680",
+      "role": "agent",
+      "created_timestamp": 1787666317960,
+      "content": "Frank, I hear you—that’s a fair question. Did you see us from an ad or search for anything like “missed calls” or “after-hours answering,” or did someone leave you a voicemail?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_65cc86b95d1f269d5e1c5bb2",
+      "role": "user",
+      "created_timestamp": 1787666328217,
+      "content": "None of your damn business. You people are all liars and thieves."
+    },
+    {
+      "message_id": "message_c528798b1845ada5ee87b8a8",
+      "role": "agent",
+      "created_timestamp": 1787666329807,
+      "content": "I hear you, Frank—I’m not here to argue with you. Would you like me to stop contacting you going forward?",
+      "metadata": {
+        "response_id": 2
+      }
+    },
+    {
+      "message_id": "message_8735014bf4ebf693ce8bd02b",
+      "role": "user",
+      "created_timestamp": 1787666331490,
+      "content": "Well, maybe you're not all crooks. Leave your number, I might look you up."
+    },
+    {
+      "message_id": "message_978871f819e3a4afa0a49016",
+      "role": "agent",
+      "created_timestamp": 1787666333291,
+      "content": "I get it—but I can’t leave a personal number from this line. What’s the best place to look us up: did you want the company name “Dialux,” or the website?",
+      "metadata": {
+        "response_id": 3
+      }
+    },
+    {
+      "message_id": "message_d58c0f66cf3c448e70237dfb",
+      "role": "user",
+      "created_timestamp": 1787666335083,
+      "content": "None of your damn business. I'll find it if I want to. Don't call again."
+    },
+    {
+      "message_id": "message_d7136f797d68dbe119061ee1",
+      "role": "agent",
+      "created_timestamp": 1787666336957,
+      "content": "Got it, Frank—I won’t contact you again. Take care.",
+      "metadata": {
+        "response_id": 4
+      }
+    },
+    {
+      "message_id": "message_fc16f95958e36dd62b7a7819",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787666336958,
+      "tool_call_id": "call_at6NJDFVy7BlPAAU67Ln7HZJ",
+      "name": "end_call",
+      "arguments": "{\"execution_message\":\"Got it, Frank—I won’t contact you again. Take care.\"}",
+      "type": "end_call"
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/f81557cc381cba712aab9bc2563bfae76960ce4ea087cef75aea4999fae391d4/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "combined_cost": 8.7,
+    "product_costs": [
+      {
+        "unit_price": 1.8,
+        "product": "gpt_5_2_text_testing",
+        "cost": 7.2
+      },
+      {
+        "product": "gpt_4_1_text_testing",
+        "unit_price": 1.5,
+        "cost": 1.5
+      }
+    ]
+  },
+  "chat_analysis": {
+    "custom_analysis_data": {},
+    "chat_successful": true,
+    "user_sentiment": "Negative",
+    "chat_summary": "Frank contacted the agent expressing frustration and suspicion about being contacted. The agent attempted to clarify the situation and offered to stop further contact, which Frank requested. The agent confirmed they would not contact Frank again and ended the call."
+  },
+  "data_storage_setting": "everything"
+}

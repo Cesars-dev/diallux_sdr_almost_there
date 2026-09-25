@@ -1,0 +1,34 @@
+{
+  "scenario": 5,
+  "turn": 1,
+  "chat_id": "chat_c494fb17f78cbca2fc391d8179f",
+  "caller_message": "Hi, I need to book a boiler service. Actually wait \u2014 can I book a breakdown call-out instead? It's started making a noise.",
+  "agent_messages": [
+    {
+      "message_id": "message_ed00c041154da6ced7f3d02e",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639878023,
+      "tool_call_id": "call_Dx4oKlmzrIp053pvDezuUfBx",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_dde3cfc12072647e5b87da91",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639878024,
+      "tool_call_id": "call_Dx4oKlmzrIp053pvDezuUfBx",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"boiler breakdown\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_dac6bf2e88f1a1fbffe67af8",
+      "role": "agent",
+      "created_timestamp": 1784639879400,
+      "content": "Right, breakdown call-out for a boiler noise. What\u2019s your name?",
+      "metadata": {
+        "response_id": 1
+      }
+    }
+  ]
+}

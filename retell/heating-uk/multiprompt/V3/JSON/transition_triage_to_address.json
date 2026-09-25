@@ -1,0 +1,23 @@
+{
+  "destination_state_name": "address",
+  "description": "Transition when triage is complete",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "triage_complete": {
+        "type": "boolean",
+        "description": "Whether triage is complete"
+      },
+      "problem_category": {
+        "type": "string",
+        "description": "Category of the heating issue",
+        "enum": ["Heating", "service", "plumbing", "other"]
+      },
+      "symptom_brief": {
+        "type": "string",
+        "description": "Brief description of symptoms"
+      }
+    },
+    "required": ["triage_complete", "problem_category", "symptom_brief"]
+  }
+}

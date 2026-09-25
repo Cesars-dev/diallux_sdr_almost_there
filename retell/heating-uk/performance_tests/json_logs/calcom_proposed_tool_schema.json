@@ -1,0 +1,101 @@
+{
+  "note": "Proposed update to book_calendar tool definitions on Retell LLM (llm_f590da6bf200b042e3dcb25b3648)",
+  "reason": "Current cal_fields descriptions are too generic — agent needs to know the exact schema and where data comes from",
+
+  "tool": "check_availability",
+  "current_description": "Check available appointment slots for the next 7 days",
+  "proposed_description": "Check available appointment slots for the next 7 days. Retell sends start_time/end_time to Cal.com GET /v2/slots/available. The response returns availability_range per date. Offer 1-2 slots to the customer from the available times. Never offer a slot that isn't in the results.",
+
+  "tool": "book_calendar",
+  "current_description": "Book a confirmed appointment slot",
+  "proposed_description": "Book a confirmed appointment slot via Cal.com v2 API. Call ONLY after customer has verbally confirmed the full booking readback. Retell sends the payload below to POST /v2/bookings.",
+
+  "cal_fields": {
+    "current": [
+      { "name": "name",         "description": "attendee name" },
+      { "name": "email",        "description": "attendee email" },
+      { "name": "attendeePhoneNumber", "description": "attendeePhoneNumber (number must be valid number in e.164 format)" },
+      { "name": "title",        "description": "title" },
+      { "name": "notes",        "description": "notes" },
+      { "name": "guests",       "description": "guests (must be valid email addresses)" },
+      { "name": "rescheduleReason", "description": "rescheduleReason" }
+    ],
+    "proposed": [
+      {
+        "name": "name",
+        "type": "string",
+        "required": true,
+        "description": "Customer's full name — {{customer_name}} captured earlier in the call. Maps to attendee.name in Cal.com."
+      },
+      {
+        "name": "email",
+        "type": "string",
+        "required": true,
+        "description": "Customer's email address. If customer has no email or refuses to provide one, use 'no-email@example.com' as a required placeholder. Maps to attendee.email in Cal.com."
+      },
+      {
+        "name": "attendeePhoneNumber",
+        "type": "string",
+        "required": false,
+        "description": "Customer's phone number in E.164 format (e.g., +447700900567). Extracted from {{caller_phone_number}} or what the customer stated during the call. Maps to attendee.phoneNumber in Cal.com."
+      },
+      {
+        "name": "title",
+        "type": "string",
+        "required": true,
+        "description": "Appointment title shown in the calendar event. Format: '{{problem_category}} — {{customer_name}}'. Example: 'Boiler Breakdown — Dave Smith'. Maps to booking title in Cal.com."
+      },
+      {
+        "name": "notes",
+        "type": "string",
+        "required": false,
+        "description": "Engineer handover notes — the full summary shown in the calendar event. Use this exact format:\nCUSTOMER: {{customer_name}} | ADDRESS: {{address_line1}}, {{address_city}}, {{address_postcode}} | PHONE: {{caller_phone_number}} | PROBLEM: {{problem_category}} | SYMPTOMS: {{symptom_brief}}{{error_code_block}}{{boiler_make_block}}\n\nWhere {{error_code_block}} = ' | ERROR CODE: {{error_code}}' (if exists), {{boiler_make_block}} = ' | BOILER: {{boiler_make}}' (if exists). Maps to booking description in Cal.com."
+      },
+      {
+        "name": "guests",
+        "type": "array",
+        "required": false,
+        "description": "Additional email addresses to add as guests/CC on the calendar event. Only populate if the customer explicitly provides additional email addresses. Each must be a valid email. Maps to Cal.com attendees list."
+      },
+      {
+        "name": "rescheduleReason",
+        "type": "string",
+        "required": false,
+        "description": "Only used when rebooking/rescheduling an existing appointment. For new bookings, leave empty or omit. Maps to rescheduleReason in Cal.com."
+      }
+    ]
+  },
+
+  "calcom_v2_mapping": {
+    "retell_field": "attendeePhoneNumber",
+    "calcom_field": "attendee.phoneNumber",
+    "format": "E.164 (e.g., +447700900567)",
+    "note": "Not 'phone' or 'phone_number' — must be attendeePhoneNumber in Retell, maps to phoneNumber in Cal.com"
+  },
+
+  "example_payload": {
+    "retell_tool_call": {
+      "name": "Dave Smith",
+      "email": "no-email@example.com",
+      "attendeePhoneNumber": "+447700900567",
+      "title": "Boiler Breakdown — Dave Smith",
+      "notes": "CUSTOMER: Dave Smith | ADDRESS: 14 Victoria Terrace, Newcastle, NE4 5AB | PHONE: 07700 900567 | PROBLEM: Boiler Breakdown | SYMPTOMS: No heating, boiler not working"
+    },
+    "maps_to_calcom_v2": {
+      "endpoint": "POST /v2/bookings",
+      "body": {
+        "eventTypeId": 6389911,
+        "start": "<calculated_utc_time>",
+        "attendee": {
+          "name": "Dave Smith",
+          "email": "no-email@example.com",
+          "phoneNumber": "+447700900567",
+          "timeZone": "Europe/London",
+          "language": "en"
+        },
+        "location": "integration",
+        "metadata": {}
+      }
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "chat_id": "chat_1540f6945c49c615da7901d5227",
+  "chat_type": "api_chat",
+  "agent_id": "agent_c3bed9963cf528c85f58d1d521",
+  "agent_version": 0,
+  "agent_name": "V7.2_production",
+  "retell_llm_dynamic_variables": {
+    "today_date": "2026-08-25"
+  },
+  "collected_dynamic_variables": {},
+  "chat_status": "ended",
+  "start_timestamp": 1787661078214,
+  "end_timestamp": 1787661089723,
+  "transcript": "User: This is Frank. Whoever you people are, I want to know how you got this number.\nAgent: Hey Frank, I hear you — getting unexpected calls is frustrating.  \n\nI’m Linda with Dialux; we work with local businesses on handling missed phone calls — do you remember if you might’ve filled out anything online recently about missed calls or getting more leads, or does this feel totally out of the blue?\nUser: I didn't fill out a damn thing. You people are all liars and thieves, trying to snatch my info.\nAgent: Got it, Frank — I hear how upset you are, and I’m not here to argue with you.  \n\nWe don’t buy random lists or sell anyone’s info; your number likely came from standard business listings or public directories — is this a business line you use publicly, or more of a private/personal number?\nUser: None of your damn business. I still don't trust you people, and that guarantee ain't worth squat.\nAgent: I hear you, Frank, and I respect that you don’t want to engage with us — we won’t bother you further. If you ever change your mind or have questions down the road, you can ignore any future calls or let us know you’re not interested and we’ll mark it; thanks for telling me directly, and take care.",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_6f625aea8c6372a6cbf8d83e",
+      "role": "user",
+      "created_timestamp": 1787661078845,
+      "content": "This is Frank. Whoever you people are, I want to know how you got this number."
+    },
+    {
+      "message_id": "message_8a27af7086cd0073e0000ad1",
+      "role": "agent",
+      "created_timestamp": 1787661081442,
+      "content": "Hey Frank, I hear you — getting unexpected calls is frustrating.  \n\nI’m Linda with Dialux; we work with local businesses on handling missed phone calls — do you remember if you might’ve filled out anything online recently about missed calls or getting more leads, or does this feel totally out of the blue?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_52867c80e79e5ad10af6bf20",
+      "role": "user",
+      "created_timestamp": 1787661083983,
+      "content": "I didn't fill out a damn thing. You people are all liars and thieves, trying to snatch my info."
+    },
+    {
+      "message_id": "message_6b3373d2cbaee853c3b30820",
+      "role": "agent",
+      "created_timestamp": 1787661085862,
+      "content": "Got it, Frank — I hear how upset you are, and I’m not here to argue with you.  \n\nWe don’t buy random lists or sell anyone’s info; your number likely came from standard business listings or public directories — is this a business line you use publicly, or more of a private/personal number?",
+      "metadata": {
+        "response_id": 2
+      }
+    },
+    {
+      "message_id": "message_07214d9864c12fba9a43ed8c",
+      "role": "user",
+      "created_timestamp": 1787661087659,
+      "content": "None of your damn business. I still don't trust you people, and that guarantee ain't worth squat."
+    },
+    {
+      "message_id": "message_08a4155d565285326c0d18c3",
+      "role": "agent",
+      "created_timestamp": 1787661089663,
+      "content": "I hear you, Frank, and I respect that you don’t want to engage with us — we won’t bother you further. If you ever change your mind or have questions down the road, you can ignore any future calls or let us know you’re not interested and we’ll mark it; thanks for telling me directly, and take care.",
+      "metadata": {
+        "response_id": 3
+      }
+    },
+    {
+      "message_id": "message_de0bff1af690a01d46ed8315",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787661089664,
+      "tool_call_id": "call_6KGokq8PAKK1AlpC75S8pjms",
+      "name": "end_call",
+      "arguments": "{\"execution_message\":\"I hear you, Frank, and I respect that you don’t want to engage with us — we won’t bother you further. If you ever change your mind or have questions down the road, you can ignore any future calls or let us know you’re not interested and we’ll mark it; thanks for telling me directly, and take care.\"}",
+      "type": "end_call"
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/8da204a807b2d4901f2406361735420abe3ce46f0b9a38363b9a3735b4fa9d58/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "combined_cost": 5.4,
+    "product_costs": [
+      {
+        "cost": 3.9000000000000004,
+        "product": "gpt_5_1_text_testing",
+        "unit_price": 1.3
+      },
+      {
+        "unit_price": 1.5,
+        "cost": 1.5,
+        "product": "gpt_4_1_text_testing"
+      }
+    ]
+  },
+  "chat_analysis": {
+    "custom_analysis_data": {},
+    "chat_summary": "Frank received an unexpected call from Dialux and expressed strong distrust and frustration, accusing the agent of dishonesty. The agent attempted to clarify the source of the contact and respected Frank's wishes by ending the conversation and assuring no further contact.",
+    "chat_successful": true,
+    "user_sentiment": "Negative"
+  },
+  "data_storage_setting": "everything"
+}

@@ -1,0 +1,283 @@
+{
+  "chat_id": "chat_85dcda49f2cca257b26a0b90b3c",
+  "chat_type": "api_chat",
+  "agent_id": "agent_a9a7205fa6085e1b0c0246ae60",
+  "agent_version": 0,
+  "agent_name": "V7.4_hard_gpt52",
+  "retell_llm_dynamic_variables": {
+    "today_date": "2026-08-25"
+  },
+  "collected_dynamic_variables": {
+    "pain_frame": "miss delivery orders after hours",
+    "pattern_matched": "true",
+    "pain_urgency": "high",
+    "industry": "restaurant",
+    "intake_completed": "true",
+    "current_agent_state": "Discovery",
+    "interest_topic": "curious but wary about talking to a machine; \"need to know who I'm talking to\"",
+    "pain_points": "miss delivery orders after hours,after-hours calls ring out,callers move on/no callback",
+    "call_volume": "",
+    "interest_signal": "false",
+    "inbound_channel": "Google search",
+    "previous_agent_state": "Intake"
+  },
+  "chat_status": "ended",
+  "start_timestamp": 1787666315481,
+  "end_timestamp": 1787666372882,
+  "transcript": "User: Hey — before anything: are you a robot? Be honest with me.\nAgent: Yeah, I am — I’m Linda, an AI assistant on Jay’s team at Dialux, and I help with the intro and getting a live walkthrough set up. What made you call today?\nUser: I found you through a Google search. I'm curious but wary about talking to a machine.\nAgent: Totally fair — a lot of people feel that way at first. What made you start looking for something like this right now?\nUser: I miss delivery orders after hours and thought this might help, but I need to know who I'm talking to.\nAgent: Makes sense — you’re talking to Linda, and I’m an AI assistant on Jay’s team at Dialux; my job is to help you figure out if we can stop those after-hours delivery orders from slipping through. After you close, where do those calls go right now—voicemail, a cell phone, or just ring out?\nUser: Thanks, Linda. Right now, they just ring out. Still, are you sure there's no human involved here?\nAgent: Got it — if they just ring out, that’s exactly where orders slip away after hours. And yes: I’m the AI on Jay’s team; Jay’s a real person and handles the live walkthrough and setup—what happens to those after-hours callers today, do they try back, leave a message somewhere, or just move on?\nUser: They usually move on. Thanks for clarifying about Jay. I'll think about it and get back to you.\nAgent: Yeah… if they’re moving on, that’s revenue just walking away after hours. Before you go, what kind of business is this—restaurant, moving company, something else?\nUser: It's a restaurant. I appreciate the help, but I need to be sure I'm talking to a person.\nAgent: Got it — restaurant, and I hear you on only wanting to talk with a person. I’m not a person; I’m Linda, the AI assistant, and Jay (the founder) is the human—roughly how many after-hours calls do you think you miss in a typical week?\nUser: Thanks for being honest, Linda. I'll think about it and discuss with Jay later. Appreciate your help.\nAgent: Got it — totally fair. Before you hop, what’s the best number for Jay to reach you at when you’re ready?\nUser: I'll contact Jay directly when I'm ready. Thanks for the info, Linda. Have a great day!\nAgent: You got it—thanks for calling, and I’m glad I could clarify things. Wishing you a great day!",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_6f58a73514f57155a25c00ea",
+      "role": "user",
+      "created_timestamp": 1787666316117,
+      "content": "Hey — before anything: are you a robot? Be honest with me."
+    },
+    {
+      "message_id": "message_0a1cd3068a58723a4a4d3803",
+      "role": "agent",
+      "created_timestamp": 1787666317734,
+      "content": "Yeah, I am — I’m Linda, an AI assistant on Jay’s team at Dialux, and I help with the intro and getting a live walkthrough set up. What made you call today?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_8bb731571cb5334d51d77335",
+      "role": "user",
+      "created_timestamp": 1787666331127,
+      "content": "I found you through a Google search. I'm curious but wary about talking to a machine."
+    },
+    {
+      "message_id": "message_c86a95e2ca87240901e07aaa",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787666333372,
+      "tool_call_id": "call_sT3wRpNpOFL3uKjsYWkdg7oz",
+      "name": "extract_intake_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_7f9f1fda47e08ba755cf7ae8",
+      "role": "tool_call_result",
+      "created_timestamp": 1787666333373,
+      "tool_call_id": "call_sT3wRpNpOFL3uKjsYWkdg7oz",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"inbound_channel\":\"Google search\",\"interest_topic\":\"curious but wary about talking to a machine\",\"pain_frame\":\"\"}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_e8e84711fbb7ca7e6e605292",
+      "role": "agent",
+      "created_timestamp": 1787666334650,
+      "content": "Totally fair — a lot of people feel that way at first. What made you start looking for something like this right now?",
+      "metadata": {
+        "response_id": 2
+      }
+    },
+    {
+      "message_id": "message_5402ab8d709f94930965415d",
+      "role": "user",
+      "created_timestamp": 1787666336299,
+      "content": "I miss delivery orders after hours and thought this might help, but I need to know who I'm talking to."
+    },
+    {
+      "message_id": "message_facbd192ad5c0c2849bd591c",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787666337804,
+      "tool_call_id": "call_FL4YJliFhw3CyWEBe0Qug4Tz",
+      "name": "extract_intake_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_cbdc5e1d9c83d03892da116d",
+      "role": "tool_call_result",
+      "created_timestamp": 1787666337805,
+      "tool_call_id": "call_FL4YJliFhw3CyWEBe0Qug4Tz",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"inbound_channel\":\"Google search\",\"interest_topic\":\"curious but wary about talking to a machine; \\\"need to know who I'm talking to\\\"\",\"pain_frame\":\"miss delivery orders after hours\"}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_ec0b71158c38b41a26dbb904",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787666339566,
+      "tool_call_id": "call_0xA6X7YKF8H0OPzPZEkYKLRy",
+      "name": "intake_completed",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_6bb79e4c2bab5406ab60e6a5",
+      "role": "tool_call_result",
+      "created_timestamp": 1787666339567,
+      "tool_call_id": "call_0xA6X7YKF8H0OPzPZEkYKLRy",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"intake_completed\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_576b8d01985f1edfe7d0bbcc",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787666342841,
+      "tool_call_id": "call_i6d9r5CuL5AEB8iNYPpHnCdF",
+      "name": "transition_to_Discovery",
+      "arguments": "{\"inbound_channel\":\"Google search\",\"interest_topic\":\"curious but wary about talking to a machine; \\\"need to know who I'm talking to\\\"\",\"intake_completed\":true,\"pain_frame\":\"miss delivery orders after hours\"}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_b7ee1543721e0af6d3408d6b",
+      "role": "state_transition",
+      "created_timestamp": 1787666342842,
+      "former_state_name": "Intake",
+      "new_state_name": "Discovery"
+    },
+    {
+      "message_id": "message_66b5c8561a85c703e8b6bf1b",
+      "role": "agent",
+      "created_timestamp": 1787666344992,
+      "content": "Makes sense — you’re talking to Linda, and I’m an AI assistant on Jay’s team at Dialux; my job is to help you figure out if we can stop those after-hours delivery orders from slipping through. After you close, where do those calls go right now—voicemail, a cell phone, or just ring out?",
+      "metadata": {
+        "response_id": 3
+      }
+    },
+    {
+      "message_id": "message_28f9dddb7ae06c7bf830ea27",
+      "role": "user",
+      "created_timestamp": 1787666346880,
+      "content": "Thanks, Linda. Right now, they just ring out. Still, are you sure there's no human involved here?"
+    },
+    {
+      "message_id": "message_8da916c0e196e17def1c660e",
+      "role": "agent",
+      "created_timestamp": 1787666349116,
+      "content": "Got it — if they just ring out, that’s exactly where orders slip away after hours. And yes: I’m the AI on Jay’s team; Jay’s a real person and handles the live walkthrough and setup—what happens to those after-hours callers today, do they try back, leave a message somewhere, or just move on?",
+      "metadata": {
+        "response_id": 4
+      }
+    },
+    {
+      "message_id": "message_e0c5c63d4208ea6bfbdd5a99",
+      "role": "user",
+      "created_timestamp": 1787666351008,
+      "content": "They usually move on. Thanks for clarifying about Jay. I'll think about it and get back to you."
+    },
+    {
+      "message_id": "message_a5f66919477f2dccd410a206",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787666352696,
+      "tool_call_id": "call_KGrn7QqMcbIaSn4IlQAWcJjE",
+      "name": "extract_discovery_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_bd915b11939c96d87d037ab0",
+      "role": "tool_call_result",
+      "created_timestamp": 1787666352697,
+      "tool_call_id": "call_KGrn7QqMcbIaSn4IlQAWcJjE",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"industry\":\"unknown\",\"pain_points\":\"miss delivery orders after hours,after-hours calls ring out,callers move on/no callback\",\"interest_signal\":false,\"pattern_matched\":true,\"call_volume\":\"\",\"pain_urgency\":\"high\"}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_bacd77538ff243875bd641cc",
+      "role": "agent",
+      "created_timestamp": 1787666354933,
+      "content": "Yeah… if they’re moving on, that’s revenue just walking away after hours. Before you go, what kind of business is this—restaurant, moving company, something else?",
+      "metadata": {
+        "response_id": 5
+      }
+    },
+    {
+      "message_id": "message_b306449bd702295763040dd1",
+      "role": "user",
+      "created_timestamp": 1787666357189,
+      "content": "It's a restaurant. I appreciate the help, but I need to be sure I'm talking to a person."
+    },
+    {
+      "message_id": "message_1cf1e34d6ad8943d57923ae7",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787666359618,
+      "tool_call_id": "call_4DH5EsZtUF1jAOT1WMiOlMCV",
+      "name": "extract_discovery_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_d819813f99a06f68cdd7a0fa",
+      "role": "tool_call_result",
+      "created_timestamp": 1787666359619,
+      "tool_call_id": "call_4DH5EsZtUF1jAOT1WMiOlMCV",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"industry\":\"restaurant\",\"pain_points\":\"miss delivery orders after hours,after-hours calls ring out,callers move on/no callback\",\"interest_signal\":false,\"pattern_matched\":true,\"call_volume\":\"\",\"pain_urgency\":\"high\"}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_5e291e0e09918fe3d25d05f3",
+      "role": "agent",
+      "created_timestamp": 1787666361925,
+      "content": "Got it — restaurant, and I hear you on only wanting to talk with a person. I’m not a person; I’m Linda, the AI assistant, and Jay (the founder) is the human—roughly how many after-hours calls do you think you miss in a typical week?",
+      "metadata": {
+        "response_id": 6
+      }
+    },
+    {
+      "message_id": "message_e07653a8dcfb44a3f767a55e",
+      "role": "user",
+      "created_timestamp": 1787666363743,
+      "content": "Thanks for being honest, Linda. I'll think about it and discuss with Jay later. Appreciate your help."
+    },
+    {
+      "message_id": "message_7deb604182dcc8ed1cd67e18",
+      "role": "agent",
+      "created_timestamp": 1787666367930,
+      "content": "Got it — totally fair. Before you hop, what’s the best number for Jay to reach you at when you’re ready?",
+      "metadata": {
+        "response_id": 7
+      }
+    },
+    {
+      "message_id": "message_06d3650409b91b2120bba6a7",
+      "role": "user",
+      "created_timestamp": 1787666371234,
+      "content": "I'll contact Jay directly when I'm ready. Thanks for the info, Linda. Have a great day!"
+    },
+    {
+      "message_id": "message_8235cdb5a0ecba28f519f8e0",
+      "role": "agent",
+      "created_timestamp": 1787666372846,
+      "content": "You got it—thanks for calling, and I’m glad I could clarify things. Wishing you a great day!",
+      "metadata": {
+        "response_id": 8
+      }
+    },
+    {
+      "message_id": "message_9c5444b67ed2437fefa4d0db",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787666372847,
+      "tool_call_id": "call_fgPpsKWNhLzA5Tn0QIykcCBX",
+      "name": "end_call",
+      "arguments": "{\"execution_message\":\"You got it—thanks for calling, and I’m glad I could clarify things. Wishing you a great day!\"}",
+      "type": "end_call"
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/5ab7b388ec79b9f36e36b4291feb123c271550df90b4f046ce8f2011772084e2/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "product_costs": [
+      {
+        "cost": 14.4,
+        "product": "gpt_5_2_text_testing",
+        "unit_price": 1.8
+      },
+      {
+        "product": "gpt_4_1_text_testing",
+        "cost": 1.5,
+        "unit_price": 1.5
+      }
+    ],
+    "combined_cost": 15.9
+  },
+  "chat_analysis": {
+    "custom_analysis_data": {},
+    "user_sentiment": "Neutral",
+    "chat_summary": "The user contacted the AI assistant, Linda, to inquire about solutions for missed after-hours delivery orders at their restaurant. The user expressed wariness about speaking to an AI and repeatedly sought clarification about whether they were interacting with a human or a machine. The agent provided transparent information, addressed the user's concerns, and explained the process, but the user ultimately decided to think about it and contact the human representative, Jay, directly if interested.",
+    "chat_successful": true
+  },
+  "data_storage_setting": "everything"
+}

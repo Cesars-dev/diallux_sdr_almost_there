@@ -1,0 +1,77 @@
+{
+  "scenario": 1,
+  "turn": 6,
+  "chat_id": "chat_7e5598099766b8626b339e0c51f",
+  "caller_message": "No, that's all thanks",
+  "agent_messages": [
+    {
+      "message_id": "message_2f327e3e7f5e28162d6c1a67",
+      "role": "agent",
+      "created_timestamp": 1784640660231,
+      "content": "Brilliant, I\u2019m getting that booked in now.",
+      "metadata": {
+        "response_id": 8
+      }
+    },
+    {
+      "message_id": "message_c801de211702e6f1f5fd02e9",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784640660232,
+      "tool_call_id": "call_DYzB9WFDxwoI6G6aN5IUU54v",
+      "name": "book_calendar",
+      "arguments": "{\"time\":\"2026-07-23T09:30:00\",\"timezone\":\"Europe/London\",\"name\":\"John\",\"email\":\"jaydiallux@gmail.com\",\"attendeePhoneNumber\":null,\"title\":\"No Heating and Hot Water \u2014 John\",\"notes\":\"CUSTOMER: John | ADDRESS: 14 Victoria Terrace, Newcastle, NE4 5AB | PHONE: {{user_number}} | PROBLEM: No Heating and Hot Water | SYMPTOMS: No error code, no heating or hot water since this morning\",\"guests\":null,\"rescheduleReason\":null,\"execution_message\":\"Brilliant, I\u2019m getting that booked in now.\"}",
+      "type": "book_appointment_cal"
+    },
+    {
+      "message_id": "message_9c97654bf6cc7eeb5a0f92fc",
+      "role": "tool_call_result",
+      "created_timestamp": 1784640664996,
+      "tool_call_id": "call_DYzB9WFDxwoI6G6aN5IUU54v",
+      "content": "{\"status\":\"Successfully booked an appointment.\",\"booking_id\":22745146,\"booking_uid\":\"tYQsTkQq6xfKxyXENnoEEk\"}",
+      "successful": true
+    },
+    {
+      "message_id": "message_7e1fc114844ff51794b7c7f1",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784640666846,
+      "tool_call_id": "call_OJFYQfKx3QK2hGKOmKl5iOmD",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_3707a67dcb2f639e68f3c9c6",
+      "role": "tool_call_result",
+      "created_timestamp": 1784640666847,
+      "tool_call_id": "call_OJFYQfKx3QK2hGKOmKl5iOmD",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"John\",\"classified_intent\":\"Boiler Breakdown\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"14\",\"address_street\":\"Victoria Terrace\",\"address_postcode\":\"NE4 5AB\",\"address_city\":\"Newcastle\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_d9724b2373beb11de28de5d7",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784640672497,
+      "tool_call_id": "call_zMc7OOZPzlidnr45bZYQspiT",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_75fd279e350aca8fbf607d40",
+      "role": "tool_call_result",
+      "created_timestamp": 1784640672498,
+      "tool_call_id": "call_zMc7OOZPzlidnr45bZYQspiT",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"John\",\"classified_intent\":\"Boiler Breakdown\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"14\",\"address_street\":\"Victoria Terrace\",\"address_postcode\":\"NE4 5AB\",\"address_city\":\"Newcastle\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_6cca5ab56b2e3c5197d86fa3",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784640673555,
+      "tool_call_id": "call_i2BRkejihWsknQOdH17606Cn",
+      "name": "end_call",
+      "arguments": "{}",
+      "type": "end_call"
+    }
+  ]
+}

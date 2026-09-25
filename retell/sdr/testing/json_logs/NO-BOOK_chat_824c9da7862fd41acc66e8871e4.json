@@ -1,0 +1,236 @@
+{
+  "chat_id": "chat_824c9da7862fd41acc66e8871e4",
+  "chat_type": "api_chat",
+  "agent_id": "agent_edf1437704e976c53539c7effe",
+  "agent_version": 0,
+  "agent_name": "V7.5_lean",
+  "retell_llm_dynamic_variables": {
+    "today_date": "2026-08-25"
+  },
+  "collected_dynamic_variables": {
+    "current_agent_state": "Discovery",
+    "intake_completed": "true",
+    "pain_points": "miss delivery orders after hours, calls after hours go to voicemail, worry about missing urgent calls",
+    "pain_urgency": "high",
+    "inbound_channel": "Google search",
+    "pattern_matched": "true",
+    "pain_frame": "miss delivery orders after hours",
+    "previous_agent_state": "Intake",
+    "interest_topic": "how this works",
+    "industry": "",
+    "interest_signal": "true",
+    "call_volume": ""
+  },
+  "chat_status": "ended",
+  "start_timestamp": 1787670684815,
+  "end_timestamp": 1787670716853,
+  "transcript": "User: Hey — before anything: are you a robot? Be honest with me.\nAgent: Yeah, I am — I’m Linda, an AI assistant on Jay’s team at Dialux, and I help with the intro and setting up the live walkthroughs. What made you call today?\nUser: I found you through a Google search. But are you sure you're not a human pretending to be AI?\nAgent: Nope—I’m not a human pretending; I’m an AI assistant, and Jay handles the live, human walkthrough if you want to go deeper. What caught your attention in the Google search result?\nUser: Just curious about how this works. But back to my question—are you sure you're not a human?\nAgent: Fair question—I’m AI, and I’m not a human pretending; I handle the intro, and Jay (a real person) does the deep dive on a live call. What challenges are you hoping to fix right now?\nUser: I often miss delivery orders after hours. But really, is Jay a real person or another AI?\nAgent: Jay’s a real person—he’s the founder and does the live calls himself. When you miss delivery orders after hours, what usually happens next—do they leave a voicemail, try online, or just call somewhere else?\nUser: They usually leave a voicemail, but I worry about missing urgent calls. Still unsure if I'm speaking to a human.\nAgent: You’re speaking with me—Linda—and I’m AI; if you want a human, Jay can join on a live call. Roughly how many after-hours calls hit voicemail in a typical week?\nUser: Thanks, Linda. I'll think about it. I usually get a few each week. Appreciate your help.\nAgent: Got it—thanks for sharing that. If you decide you want to see how we’d catch those after-hours voicemails and turn them into confirmed orders, just come back and we’ll pick it up from there. Take care.",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_7e550716db7cfd74b48bb53c",
+      "role": "user",
+      "created_timestamp": 1787670685486,
+      "content": "Hey — before anything: are you a robot? Be honest with me."
+    },
+    {
+      "message_id": "message_52e2d4873d3f1d6f6d1ad593",
+      "role": "agent",
+      "created_timestamp": 1787670686952,
+      "content": "Yeah, I am — I’m Linda, an AI assistant on Jay’s team at Dialux, and I help with the intro and setting up the live walkthroughs. What made you call today?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_bcddc7f67d56df809dbfd5bb",
+      "role": "user",
+      "created_timestamp": 1787670690122,
+      "content": "I found you through a Google search. But are you sure you're not a human pretending to be AI?"
+    },
+    {
+      "message_id": "message_6367644d7a6b3b71b210108f",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787670691456,
+      "tool_call_id": "call_PBKYs4bO8zWuAsS5lS63beZX",
+      "name": "extract_intake_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_517ea3d688da8e07087acd20",
+      "role": "tool_call_result",
+      "created_timestamp": 1787670691457,
+      "tool_call_id": "call_PBKYs4bO8zWuAsS5lS63beZX",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"inbound_channel\":\"Google search\",\"interest_topic\":\"\",\"pain_frame\":\"\"}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_ee7a36e7556248f543f02888",
+      "role": "agent",
+      "created_timestamp": 1787670693505,
+      "content": "Nope—I’m not a human pretending; I’m an AI assistant, and Jay handles the live, human walkthrough if you want to go deeper. What caught your attention in the Google search result?",
+      "metadata": {
+        "response_id": 2
+      }
+    },
+    {
+      "message_id": "message_0539d86f78897e0b11aabb7c",
+      "role": "user",
+      "created_timestamp": 1787670695595,
+      "content": "Just curious about how this works. But back to my question—are you sure you're not a human?"
+    },
+    {
+      "message_id": "message_8edb933f3e8b4224ee770c04",
+      "role": "agent",
+      "created_timestamp": 1787670697864,
+      "content": "Fair question—I’m AI, and I’m not a human pretending; I handle the intro, and Jay (a real person) does the deep dive on a live call. What challenges are you hoping to fix right now?",
+      "metadata": {
+        "response_id": 3
+      }
+    },
+    {
+      "message_id": "message_610e2357909c08c6d806979e",
+      "role": "user",
+      "created_timestamp": 1787670699859,
+      "content": "I often miss delivery orders after hours. But really, is Jay a real person or another AI?"
+    },
+    {
+      "message_id": "message_93c64eac8f6c779754a05111",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787670701285,
+      "tool_call_id": "call_hKVMS1o7erfoDhLjPY4Fi3cg",
+      "name": "extract_intake_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_56d993110ad999dc13e1b5ee",
+      "role": "tool_call_result",
+      "created_timestamp": 1787670701286,
+      "tool_call_id": "call_hKVMS1o7erfoDhLjPY4Fi3cg",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"inbound_channel\":\"Google search\",\"interest_topic\":\"how this works\",\"pain_frame\":\"miss delivery orders after hours\"}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_0b57ae9b7177aa47876211c8",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787670703438,
+      "tool_call_id": "call_gcxqKCk4HqkGjCBOHWEoyzDQ",
+      "name": "intake_completed",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_94c357cb11688d558c9aff63",
+      "role": "tool_call_result",
+      "created_timestamp": 1787670703439,
+      "tool_call_id": "call_gcxqKCk4HqkGjCBOHWEoyzDQ",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"intake_completed\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_d191c2df5a400ac3e291db57",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787670705027,
+      "tool_call_id": "call_SVNlrK4RIO7Vspy1peqsbRa5",
+      "name": "transition_to_Discovery",
+      "arguments": "{\"inbound_channel\":\"Google search\",\"interest_topic\":\"how this works\",\"pain_frame\":\"miss delivery orders after hours\",\"intake_completed\":true}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_3bf10ea88e850c03bb9d0172",
+      "role": "state_transition",
+      "created_timestamp": 1787670705028,
+      "former_state_name": "Intake",
+      "new_state_name": "Discovery"
+    },
+    {
+      "message_id": "message_7424b3667dcf56ca930fe029",
+      "role": "agent",
+      "created_timestamp": 1787670707056,
+      "content": "Jay’s a real person—he’s the founder and does the live calls himself. When you miss delivery orders after hours, what usually happens next—do they leave a voicemail, try online, or just call somewhere else?",
+      "metadata": {
+        "response_id": 4
+      }
+    },
+    {
+      "message_id": "message_d86607d18004c4f5130800e3",
+      "role": "user",
+      "created_timestamp": 1787670709036,
+      "content": "They usually leave a voicemail, but I worry about missing urgent calls. Still unsure if I'm speaking to a human."
+    },
+    {
+      "message_id": "message_242b5594a530fd31a5e0fb4d",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787670711051,
+      "tool_call_id": "call_X6XReyunR4Rc1pTYA0pa9Skp",
+      "name": "extract_discovery_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_dcbf6315f4a7a8b256f35a76",
+      "role": "tool_call_result",
+      "created_timestamp": 1787670711052,
+      "tool_call_id": "call_X6XReyunR4Rc1pTYA0pa9Skp",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"industry\":\"\",\"pain_points\":\"miss delivery orders after hours, calls after hours go to voicemail, worry about missing urgent calls\",\"interest_signal\":true,\"pattern_matched\":true,\"call_volume\":\"\",\"pain_urgency\":\"high\"}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_f7fe64c1a6648d5e64214a41",
+      "role": "agent",
+      "created_timestamp": 1787670713160,
+      "content": "You’re speaking with me—Linda—and I’m AI; if you want a human, Jay can join on a live call. Roughly how many after-hours calls hit voicemail in a typical week?",
+      "metadata": {
+        "response_id": 5
+      }
+    },
+    {
+      "message_id": "message_c3ac862369d34d66290f40d5",
+      "role": "user",
+      "created_timestamp": 1787670714851,
+      "content": "Thanks, Linda. I'll think about it. I usually get a few each week. Appreciate your help."
+    },
+    {
+      "message_id": "message_151539cbc2a2ee1f373ad550",
+      "role": "agent",
+      "created_timestamp": 1787670716801,
+      "content": "Got it—thanks for sharing that. If you decide you want to see how we’d catch those after-hours voicemails and turn them into confirmed orders, just come back and we’ll pick it up from there. Take care.",
+      "metadata": {
+        "response_id": 6
+      }
+    },
+    {
+      "message_id": "message_92e0ab0964e293ae6344aa0d",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787670716802,
+      "tool_call_id": "call_6xiRpdkpD4VbDzXLHR4N1d3y",
+      "name": "end_call",
+      "arguments": "{\"execution_message\":\"Got it—thanks for sharing that. If you decide you want to see how we’d catch those after-hours voicemails and turn them into confirmed orders, just come back and we’ll pick it up from there. Take care.\"}",
+      "type": "end_call"
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/c3bf34820164b3e7ec4baa7bf94c1d769198bb3dd6c962a4d861c7c25dac27ae/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "product_costs": [
+      {
+        "cost": 10.8,
+        "unit_price": 1.8,
+        "product": "gpt_5_2_text_testing"
+      },
+      {
+        "cost": 1.5,
+        "unit_price": 1.5,
+        "product": "gpt_4_1_text_testing"
+      }
+    ],
+    "combined_cost": 12.3
+  },
+  "chat_analysis": {
+    "custom_analysis_data": {},
+    "user_sentiment": "Neutral",
+    "chat_summary": "The user engaged with the AI assistant, Linda, to clarify whether they were speaking to a human or AI, expressing curiosity and some skepticism. The user shared their pain point of missing delivery orders after hours and concerns about missing urgent calls. The agent provided clear answers about its AI identity, explained the process, and offered to connect the user with a human for further assistance, ending the conversation amicably.",
+    "chat_successful": true
+  },
+  "data_storage_setting": "everything"
+}

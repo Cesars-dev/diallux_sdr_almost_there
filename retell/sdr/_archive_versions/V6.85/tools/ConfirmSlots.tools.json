@@ -1,0 +1,102 @@
+[
+  {
+    "name": "check_current_date",
+    "description": "Returns today's REAL date in the system timezone (America/Mexico_City) as {{today_date}} (YYYY-MM-DD). Call it ONCE at the start \u2014 every date you compute (tomorrow, this week, next Monday) must be based on its result, never guessed.",
+    "type": "custom",
+    "method": "GET",
+    "url": "https://slots.diallux-ai.site/today",
+    "headers": {},
+    "query_params": {
+      "tz": "America/Mexico_City"
+    },
+    "parameter_type": "json",
+    "args_at_root": false,
+    "timeout_ms": 15000,
+    "response_variables": {
+      "today_date": "today"
+    },
+    "speak_during_execution": false,
+    "speak_after_execution": true
+  },
+  {
+    "name": "query_livecall_slots",
+    "description": "Checks live-call availability and returns discrete slots ({day, time} \u2014 `time` is local in the requested timezone). Pass `slot_target_date` as YYYY-MM-DD for the day the prospect wants \u2014 convert 'tomorrow'/'next Monday' to the real date first; omit it only when they want the earliest possible. ALWAYS pass `timezone` = {{prospect_timezone}} so the returned `time` values are already in the prospect's zone \u2014 never convert or recompute them yourself. Every response is readable JSON: on {\"ok\": false} read `error` and `message` and follow the message.",
+    "type": "custom",
+    "method": "POST",
+    "url": "https://slots.diallux-ai.site/check_availability",
+    "headers": {},
+    "parameter_type": "json",
+    "query_params": {},
+    "args_at_root": false,
+    "timeout_ms": 15000,
+    "response_variables": {
+      "requested_slot": "time"
+    },
+    "speak_during_execution": false,
+    "speak_after_execution": true,
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "account_id": {
+          "type": "string",
+          "description": "Which calendar account to use. Fixed per agent \u2014 do not change.",
+          "default": "diallux_live"
+        },
+        "slot_target_date": {
+          "type": "string",
+          "description": "ISO date (YYYY-MM-DD) of the day the prospect wants a slot for. If they say 'next Monday'/'tomorrow'/'this week', convert to the actual date before passing. Omit only for 'as soon as possible'."
+        },
+        "timezone": {
+          "type": "string",
+          "description": "IANA timezone to return slot `time` values in \u2014 always pass {{prospect_timezone}}."
+        }
+      }
+    }
+  },
+  {
+    "name": "extract_confirm_details",
+    "description": "Capture the confirmed choice and corrections: selected_time = the chosen slot's `time` value copied verbatim after the prospect confirms; prospect_timezone only if they corrected it (IANA mapping: Eastern\u2192America/New_York \u00b7 Central\u2192America/Chicago \u00b7 Mountain\u2192America/Denver \u00b7 Pacific\u2192America/Los_Angeles). Never store guesses.",
+    "type": "extract_dynamic_variable",
+    "speak_after_execution": false,
+    "variables": [
+      {
+        "name": "selected_time",
+        "type": "string",
+        "description": "The chosen slot's `time` value, copied verbatim from query_livecall_slots output."
+      },
+      {
+        "name": "prospect_timezone",
+        "type": "enum",
+        "choices": [
+          "America/New_York",
+          "America/Chicago",
+          "America/Denver",
+          "America/Los_Angeles"
+        ],
+        "description": "Update ONLY if the prospect corrects their timezone during this phase."
+      }
+    ]
+  },
+  {
+    "name": "verify_info",
+    "description": "Deterministic data gate. Call it after the prospect confirms a slot and whenever you have upserted new values. Returns {data_complete, problems, suggestions}. On false: apply each suggestion verbatim via your extract tools, refill missing values from THIS conversation, then call verify_info again. Never transition before data_complete:true.",
+    "type": "code",
+    "code": "const g = k => (dv[k] == null ? \"\" : String(dv[k])).trim();\nconst problems = [];\nconst suggestions = {};\nlet ok = true;\nif (!g(\"first_name\") && !g(\"company_name\")) { problems.push({field: \"first_name\", issue: \"missing - need at least one name for the booking\"}); ok = false; }\nif (!g(\"company_name\")) { problems.push({field: \"company_name\", issue: \"missing\"}); ok = false; }\nconst cb = g(\"callback_number\");\nif (!/^\\+[1-9]\\d{6,14}$/.test(cb)) {\n  const digits = cb.replace(/\\D/g, \"\");\n  if (digits.length === 10) { suggestions[\"callback_number\"] = \"+1\" + digits; problems.push({field: \"callback_number\", issue: \"not E.164 - apply the suggestion verbatim\"}); }\n  else { problems.push({field: \"callback_number\", issue: cb ? \"not E.164\" : \"missing\"}); }\n  ok = false;\n}\nif ([\"America/New_York\",\"America/Chicago\",\"America/Denver\",\"America/Los_Angeles\"].indexOf(g(\"prospect_timezone\")) < 0) { problems.push({field: \"prospect_timezone\", issue: \"not IANA\"}); ok = false; }\nconst st = g(\"selected_time\") || g(\"requested_slot\");\nif (!st) { problems.push({field: \"selected_time\", issue: \"no confirmed slot\"}); ok = false; }\nreturn { data_complete: ok && problems.length === 0, problems, suggestions };",
+    "timeout_ms": 5000,
+    "speak_during_execution": false,
+    "speak_after_execution": true
+  },
+  {
+    "name": "extract_slot_verified",
+    "description": "The state gate. Set slot_verified = true ONLY when verify_info returned data_complete:true. Set slot_verified = false while any problem remains. Never guess this value.",
+    "type": "extract_dynamic_variable",
+    "speak_after_execution": false,
+    "variables": [
+      {
+        "name": "slot_verified",
+        "type": "boolean",
+        "description": "true ONLY when verify_info returned data_complete:true. Gates the transition to Booking."
+      }
+    ]
+  }
+]

@@ -1,0 +1,461 @@
+{
+  "chat_id": "chat_914e98a51fde0855fbc3aa4a745",
+  "chat_type": "api_chat",
+  "agent_id": "agent_87e4d5f08475e5bc558b2f390f",
+  "agent_version": 0,
+  "agent_name": "V7.7_set_callback_number",
+  "retell_llm_dynamic_variables": {
+    "today_date": "2026-08-27",
+    "callback_number": "+12125550011"
+  },
+  "collected_dynamic_variables": {
+    "call_volume": "~3 calls/week",
+    "last_name": "",
+    "industry": "unknown",
+    "discovery_completed": "true",
+    "objection_type": "none",
+    "pattern_matched": "true",
+    "monthly_leak": "",
+    "interest_topic": "\"billing issue\" / \"being overcharged\"",
+    "interest_signal": "true",
+    "inbound_channel": "other (billing support inbound)",
+    "current_agent_state": "Closer",
+    "pain_points": "billing issue, being overcharged, wants a real person, long wait times, felt like talking to a robot, repeatedly stuck waiting, every time I call, gives up for the day",
+    "interest_level": "high",
+    "intake_completed": "true",
+    "pain_frame": "\"I'm being overcharged\" and wants a real person to fix it tomorrow after 10 AM",
+    "previous_agent_state": "Discovery",
+    "pain_urgency": "high"
+  },
+  "chat_status": "ended",
+  "start_timestamp": 1787829265320,
+  "end_timestamp": 1787829334878,
+  "transcript": "User: Fine, tell me about— actually NO. You know what, forget it. This is bulls***, everyone just wants money, I'm done with this crap.\nAgent: I hear you—sounds like you’ve been burned and you’re over getting sold to. What happened that made you feel that way?\nUser: You people are all the same, never listen, always pushing sales. I just want a real person!\nAgent: Yeah, I hear you. I am AI—I'm Linda on Jay’s team at Dialux, and Jay’s the real person who does the live call; what’s the one thing you want to make sure a human actually hears about your situation?\nUser: Get me a real person on the phone NOW. I need to discuss a billing issue, damn it!\nAgent: I hear you—billing stuff is stressful. I can’t put a live person on the phone right this second; what’s the billing issue about (charge amount, invoice error, or a refund)?\nUser: You gotta be kidding! I want a real person! I'm being overcharged, and this is ridiculous!\nAgent: Got it—you’re being overcharged, and you want a human to fix it. Before we go further, is this billing issue with Dialux specifically, or with a different company?\nUser: Of course it's with Dialux! You guys messed up. Get me someone who knows what they're doing!\nAgent: Got it — it’s with Dialux, and you feel like we messed up. What name is the invoice under?\nUser: You think I’m just giving out info? Just get a damn human involved or I’ll report you!\nAgent: I hear you. I can’t connect you to a live person instantly, but I can get this to Jay if you tell me the invoice number. What’s the invoice number?\nUser: Fine, whatever! Someone better call me tomorrow. The invoice number is 12345. Get it sorted out!\nAgent: Got it—invoice 12345. What’s the best email address to send the billing team’s reply to?\nUser: You already have my email on file. Just make sure a real person follows up tomorrow.\nAgent: Got it — I won’t ask for your email. What time tomorrow works best for Jay to call you about invoice 12345?\nUser: Anytime after 10 AM works. Make sure Jay actually knows what he's doing. No more crap, please.\nAgent: Got it—after 10 AM tomorrow works, and I hear you on wanting someone who actually knows what they’re doing. What timezone are you in?\nUser: Pacific Time. And this better not be a waste of time like this call was.\nAgent: Got it—Pacific Time, and I hear you on not wanting your time wasted. When you tried calling about the overcharge, did you end up hitting voicemail or getting stuck waiting for someone?\nUser: Got stuck waiting forever. Felt like I was just talking to a damn robot.\nAgent: Makes sense—long waits and feeling like you’re talking to a robot would make anyone mad. Roughly how often do calls like that happen in a week?\nUser: Honestly, it feels like every damn time I call. It's beyond frustrating dealing with this crap repeatedly.\nAgent: Yeah—that’s a lot, especially if it’s basically every time you call. Roughly how many times a week are you having to call in about billing or account stuff?\nUser: About three times a week. It's a damn nightmare, wasting my time over and over.\nAgent: Got it—about three times a week is a lot to deal with. When you call and get stuck waiting, do you usually hang up and try again later, or do you end up giving up for the day?\nUser: I usually give up for the day. It's just too damn frustrating to keep trying when nothing changes.\nAgent: Yeah… if you’re giving up for the day, that overcharge just stays unresolved and you’re stuck carrying it. Mind if I do a quick 30‑second calculation on what that kind of “can’t get a human” problem typically costs each week?\nUser: Whatever, I’ll wait for the callback. Just make sure it actually happens tomorrow. Don't waste my time.\nAgent: Got it—I’ll make sure Jay has the details: invoice 12345, you’re in Pacific Time, and anytime after 10 AM tomorrow works. Is there anything else before I let you go?",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_b3558a49e9ac7e7e70ccdcc9",
+      "role": "user",
+      "created_timestamp": 1787829265967,
+      "content": "Fine, tell me about— actually NO. You know what, forget it. This is bulls***, everyone just wants money, I'm done with this crap."
+    },
+    {
+      "message_id": "message_38cbe4752c4b2d0c173bc533",
+      "role": "agent",
+      "created_timestamp": 1787829268008,
+      "content": "I hear you—sounds like you’ve been burned and you’re over getting sold to. What happened that made you feel that way?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_f9acbf93d5632ca22768df37",
+      "role": "user",
+      "created_timestamp": 1787829271469,
+      "content": "You people are all the same, never listen, always pushing sales. I just want a real person!"
+    },
+    {
+      "message_id": "message_d06a9b210d86ef93a8f56dfc",
+      "role": "agent",
+      "created_timestamp": 1787829273513,
+      "content": "Yeah, I hear you. I am AI—I'm Linda on Jay’s team at Dialux, and Jay’s the real person who does the live call; what’s the one thing you want to make sure a human actually hears about your situation?",
+      "metadata": {
+        "response_id": 2
+      }
+    },
+    {
+      "message_id": "message_5d8e280c4968f1d37452b81a",
+      "role": "user",
+      "created_timestamp": 1787829275438,
+      "content": "Get me a real person on the phone NOW. I need to discuss a billing issue, damn it!"
+    },
+    {
+      "message_id": "message_d91c268828b775e4a1e668fa",
+      "role": "agent",
+      "created_timestamp": 1787829276908,
+      "content": "I hear you—billing stuff is stressful. I can’t put a live person on the phone right this second; what’s the billing issue about (charge amount, invoice error, or a refund)?",
+      "metadata": {
+        "response_id": 3
+      }
+    },
+    {
+      "message_id": "message_272e0ece6790ebfbfad43d11",
+      "role": "user",
+      "created_timestamp": 1787829278569,
+      "content": "You gotta be kidding! I want a real person! I'm being overcharged, and this is ridiculous!"
+    },
+    {
+      "message_id": "message_7312d9fab60863cd4272746c",
+      "role": "agent",
+      "created_timestamp": 1787829280280,
+      "content": "Got it—you’re being overcharged, and you want a human to fix it. Before we go further, is this billing issue with Dialux specifically, or with a different company?",
+      "metadata": {
+        "response_id": 4
+      }
+    },
+    {
+      "message_id": "message_f010fdbcca610d4496baba65",
+      "role": "user",
+      "created_timestamp": 1787829282036,
+      "content": "Of course it's with Dialux! You guys messed up. Get me someone who knows what they're doing!"
+    },
+    {
+      "message_id": "message_77fd4dd39f8792a61bf1ecff",
+      "role": "agent",
+      "created_timestamp": 1787829283980,
+      "content": "Got it — it’s with Dialux, and you feel like we messed up. What name is the invoice under?",
+      "metadata": {
+        "response_id": 5
+      }
+    },
+    {
+      "message_id": "message_d79b08fe1957affb8af31c54",
+      "role": "user",
+      "created_timestamp": 1787829285874,
+      "content": "You think I’m just giving out info? Just get a damn human involved or I’ll report you!"
+    },
+    {
+      "message_id": "message_02236b24c5f0fdb2f4f3e796",
+      "role": "agent",
+      "created_timestamp": 1787829287259,
+      "content": "I hear you. I can’t connect you to a live person instantly, but I can get this to Jay if you tell me the invoice number. What’s the invoice number?",
+      "metadata": {
+        "response_id": 6
+      }
+    },
+    {
+      "message_id": "message_823d283bca4c84c87ff09fd5",
+      "role": "user",
+      "created_timestamp": 1787829289059,
+      "content": "Fine, whatever! Someone better call me tomorrow. The invoice number is 12345. Get it sorted out!"
+    },
+    {
+      "message_id": "message_49a7b3ac5eaa079c40dcda52",
+      "role": "agent",
+      "created_timestamp": 1787829290294,
+      "content": "Got it—invoice 12345. What’s the best email address to send the billing team’s reply to?",
+      "metadata": {
+        "response_id": 7
+      }
+    },
+    {
+      "message_id": "message_600693fd5245e956ca5c50a3",
+      "role": "user",
+      "created_timestamp": 1787829291953,
+      "content": "You already have my email on file. Just make sure a real person follows up tomorrow."
+    },
+    {
+      "message_id": "message_7992fc64423542c5ca4f6620",
+      "role": "agent",
+      "created_timestamp": 1787829293288,
+      "content": "Got it — I won’t ask for your email. What time tomorrow works best for Jay to call you about invoice 12345?",
+      "metadata": {
+        "response_id": 8
+      }
+    },
+    {
+      "message_id": "message_a331aa1c6e5a433f27aeef8e",
+      "role": "user",
+      "created_timestamp": 1787829294770,
+      "content": "Anytime after 10 AM works. Make sure Jay actually knows what he's doing. No more crap, please."
+    },
+    {
+      "message_id": "message_144567028bf94090f948c59f",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787829296777,
+      "tool_call_id": "call_Roh2zkxQAYiwhTrBXXvrhOdS",
+      "name": "extract_intake_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_bc0b38e3c107f74c3115ad4d",
+      "role": "tool_call_result",
+      "created_timestamp": 1787829296778,
+      "tool_call_id": "call_Roh2zkxQAYiwhTrBXXvrhOdS",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"inbound_channel\":\"other (billing support inbound)\",\"interest_topic\":\"\\\"billing issue\\\" / \\\"being overcharged\\\"\",\"pain_frame\":\"\\\"I'm being overcharged\\\" and wants a real person to fix it tomorrow after 10 AM\"}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_c6edc6828e08c8f43fd5f320",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787829298074,
+      "tool_call_id": "call_TOIWnx7kTEbNWtETKIfRB1K1",
+      "name": "intake_completed",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_be1fe79fc0496cf925e4c9e0",
+      "role": "tool_call_result",
+      "created_timestamp": 1787829298075,
+      "tool_call_id": "call_TOIWnx7kTEbNWtETKIfRB1K1",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"intake_completed\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_67bbaea033b5517efc08e5a6",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787829299560,
+      "tool_call_id": "call_BOyICPerxsE7J0uQIVHLiutk",
+      "name": "transition_to_Discovery",
+      "arguments": "{\"pain_frame\":\"\\\"I'm being overcharged\\\" and wants a real person to fix it tomorrow after 10 AM\",\"intake_completed\":true,\"interest_topic\":\"\\\"billing issue\\\" / \\\"being overcharged\\\"\",\"inbound_channel\":\"other (billing support inbound)\"}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_9e14ab350dcac6fe3b9bab65",
+      "role": "state_transition",
+      "created_timestamp": 1787829299561,
+      "former_state_name": "Intake",
+      "new_state_name": "Discovery"
+    },
+    {
+      "message_id": "message_7d1e47d78b85830cfbc814e5",
+      "role": "agent",
+      "created_timestamp": 1787829300969,
+      "content": "Got it—after 10 AM tomorrow works, and I hear you on wanting someone who actually knows what they’re doing. What timezone are you in?",
+      "metadata": {
+        "response_id": 9
+      }
+    },
+    {
+      "message_id": "message_8ddeceb54b581804d0fbb0bb",
+      "role": "user",
+      "created_timestamp": 1787829302678,
+      "content": "Pacific Time. And this better not be a waste of time like this call was."
+    },
+    {
+      "message_id": "message_4d27270ce92181e8264934a7",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787829305105,
+      "tool_call_id": "call_pJ798Wqx7QFqXDF7RL5ac4a3",
+      "name": "extract_discovery_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_e53c01ca8a3b8499ff85c790",
+      "role": "tool_call_result",
+      "created_timestamp": 1787829305106,
+      "tool_call_id": "call_pJ798Wqx7QFqXDF7RL5ac4a3",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"industry\":\"unknown\",\"pain_points\":\"billing issue, being overcharged, wants a real person\",\"interest_signal\":true,\"pattern_matched\":false,\"call_volume\":\"unknown\",\"pain_urgency\":\"high\"}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_ae5b2ec25db25e577ad8fff1",
+      "role": "agent",
+      "created_timestamp": 1787829306776,
+      "content": "Got it—Pacific Time, and I hear you on not wanting your time wasted. When you tried calling about the overcharge, did you end up hitting voicemail or getting stuck waiting for someone?",
+      "metadata": {
+        "response_id": 10
+      }
+    },
+    {
+      "message_id": "message_7b50e35116b12dc44c8192a8",
+      "role": "user",
+      "created_timestamp": 1787829308363,
+      "content": "Got stuck waiting forever. Felt like I was just talking to a damn robot."
+    },
+    {
+      "message_id": "message_4ed80dfbe80bac89a645326b",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787829309943,
+      "tool_call_id": "call_IRpytqLqOpmeS4NpAPUui8ln",
+      "name": "extract_discovery_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_2f271774a4fa255e84611518",
+      "role": "tool_call_result",
+      "created_timestamp": 1787829309944,
+      "tool_call_id": "call_IRpytqLqOpmeS4NpAPUui8ln",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"industry\":\"unknown\",\"pain_points\":\"billing issue, being overcharged, wants a real person, long wait times, felt like talking to a robot\",\"interest_signal\":true,\"pattern_matched\":true,\"call_volume\":\"unknown\",\"pain_urgency\":\"high\"}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_118b410fdd30a800b490458c",
+      "role": "agent",
+      "created_timestamp": 1787829311633,
+      "content": "Makes sense—long waits and feeling like you’re talking to a robot would make anyone mad. Roughly how often do calls like that happen in a week?",
+      "metadata": {
+        "response_id": 11
+      }
+    },
+    {
+      "message_id": "message_fa61ba04894e6a907e2d8394",
+      "role": "user",
+      "created_timestamp": 1787829313279,
+      "content": "Honestly, it feels like every damn time I call. It's beyond frustrating dealing with this crap repeatedly."
+    },
+    {
+      "message_id": "message_62430433e444114f0feba282",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787829315280,
+      "tool_call_id": "call_K7QxpdG5lJRyBOeozWiHhFLm",
+      "name": "extract_discovery_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_f4d2085a1b41f321f807d366",
+      "role": "tool_call_result",
+      "created_timestamp": 1787829315281,
+      "tool_call_id": "call_K7QxpdG5lJRyBOeozWiHhFLm",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"industry\":\"unknown\",\"pain_points\":\"billing issue, being overcharged, wants a real person, long wait times, felt like talking to a robot, repeatedly stuck waiting, every time I call\",\"interest_signal\":true,\"pattern_matched\":true,\"call_volume\":\"unknown\",\"pain_urgency\":\"high\"}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_a4cae8766deced19a3df6acf",
+      "role": "agent",
+      "created_timestamp": 1787829316787,
+      "content": "Yeah—that’s a lot, especially if it’s basically every time you call. Roughly how many times a week are you having to call in about billing or account stuff?",
+      "metadata": {
+        "response_id": 12
+      }
+    },
+    {
+      "message_id": "message_92c4602695d747f870a8a4a5",
+      "role": "user",
+      "created_timestamp": 1787829318677,
+      "content": "About three times a week. It's a damn nightmare, wasting my time over and over."
+    },
+    {
+      "message_id": "message_de445b684c3aed12406827e2",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787829320615,
+      "tool_call_id": "call_kQtQzrloADppMkAJDoc8RmH8",
+      "name": "extract_discovery_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_ca6674cabc5cae41fa4dc5c0",
+      "role": "tool_call_result",
+      "created_timestamp": 1787829320616,
+      "tool_call_id": "call_kQtQzrloADppMkAJDoc8RmH8",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"industry\":\"unknown\",\"pain_points\":\"billing issue, being overcharged, wants a real person, long wait times, felt like talking to a robot, repeatedly stuck waiting, every time I call\",\"interest_signal\":true,\"pattern_matched\":true,\"call_volume\":\"~3 calls/week\",\"pain_urgency\":\"high\"}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_5ddc6b6822444b53933c55c5",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787829321723,
+      "tool_call_id": "call_M0A8fKtIpkBf8YqEmm2Wh6Cf",
+      "name": "discovery_completed",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_8b89c5126870a36de6260a40",
+      "role": "tool_call_result",
+      "created_timestamp": 1787829321724,
+      "tool_call_id": "call_M0A8fKtIpkBf8YqEmm2Wh6Cf",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"discovery_completed\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_6e2f8d42c46e8479a0738fa5",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787829323207,
+      "tool_call_id": "call_DGRyDdjb0nl9FF0ovOMN6KDg",
+      "name": "transition_to_Closer",
+      "arguments": "{\"pattern_matched\":true,\"discovery_completed\":true,\"interest_signal\":true,\"industry\":\"unknown\",\"pain_points\":\"billing issue, being overcharged, wants a real person, long wait times, felt like talking to a robot, repeatedly stuck waiting, every time I call\"}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_14598129e48e3dd6ede87c50",
+      "role": "state_transition",
+      "created_timestamp": 1787829323208,
+      "former_state_name": "Discovery",
+      "new_state_name": "Closer"
+    },
+    {
+      "message_id": "message_2040e72df4e2a4dc5736460d",
+      "role": "agent",
+      "created_timestamp": 1787829325087,
+      "content": "Got it—about three times a week is a lot to deal with. When you call and get stuck waiting, do you usually hang up and try again later, or do you end up giving up for the day?",
+      "metadata": {
+        "response_id": 13
+      }
+    },
+    {
+      "message_id": "message_17d87c9dc14ff38c7852cbc8",
+      "role": "user",
+      "created_timestamp": 1787829326699,
+      "content": "I usually give up for the day. It's just too damn frustrating to keep trying when nothing changes."
+    },
+    {
+      "message_id": "message_be8bd55965333af79c3eb333",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787829328641,
+      "tool_call_id": "call_XPf5McU6AyuqP7caE97DFcsz",
+      "name": "extract_closer_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_aa0719cd7bcbd1834fc5431c",
+      "role": "tool_call_result",
+      "created_timestamp": 1787829328642,
+      "tool_call_id": "call_XPf5McU6AyuqP7caE97DFcsz",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"objection_type\":\"none\",\"interest_level\":\"high\",\"last_name\":\"\",\"monthly_leak\":\"\",\"pain_points\":\"billing issue, being overcharged, wants a real person, long wait times, felt like talking to a robot, repeatedly stuck waiting, every time I call, gives up for the day\"}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_9186e1dced77cc352167ab0a",
+      "role": "agent",
+      "created_timestamp": 1787829331048,
+      "content": "Yeah… if you’re giving up for the day, that overcharge just stays unresolved and you’re stuck carrying it. Mind if I do a quick 30‑second calculation on what that kind of “can’t get a human” problem typically costs each week?",
+      "metadata": {
+        "response_id": 14
+      }
+    },
+    {
+      "message_id": "message_d84b6d4bf7cbce39b38c32db",
+      "role": "user",
+      "created_timestamp": 1787829332679,
+      "content": "Whatever, I’ll wait for the callback. Just make sure it actually happens tomorrow. Don't waste my time."
+    },
+    {
+      "message_id": "message_76500ad5973ff4b5a8a95ffe",
+      "role": "agent",
+      "created_timestamp": 1787829334836,
+      "content": "Got it—I’ll make sure Jay has the details: invoice 12345, you’re in Pacific Time, and anytime after 10 AM tomorrow works. Is there anything else before I let you go?",
+      "metadata": {
+        "response_id": 15
+      }
+    },
+    {
+      "message_id": "message_d3fd75b4d9187c703c29c4b9",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787829334837,
+      "tool_call_id": "call_08Gl92u6DfKaEIxMGjCFL2Pp",
+      "name": "end_call",
+      "arguments": "{\"execution_message\":\"Got it—I’ll make sure Jay has the details: invoice 12345, you’re in Pacific Time, and anytime after 10 AM tomorrow works. Is there anything else before I let you go?\"}",
+      "type": "end_call"
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/85c6108d42d8a7dec3f91b5bafe419fe43c33348d2cdd54c2af697420f376934/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "combined_cost": 28.5,
+    "product_costs": [
+      {
+        "product": "gpt_5_2_text_testing",
+        "cost": 27,
+        "unit_price": 1.8
+      },
+      {
+        "product": "gpt_4_1_text_testing",
+        "unit_price": 1.5,
+        "cost": 1.5
+      }
+    ]
+  },
+  "chat_analysis": {
+    "chat_summary": "The user expressed strong frustration about being overcharged by Dialux and repeatedly encountering long wait times and automated systems when seeking billing support. Despite initial resistance, the agent collected the necessary details (invoice number, callback time, and timezone) to escalate the issue to a human representative for follow-up. The user insisted on a callback from a real person and made it clear that previous experiences had been unsatisfactory.",
+    "chat_successful": true,
+    "custom_analysis_data": {},
+    "user_sentiment": "Negative"
+  },
+  "data_storage_setting": "everything"
+}

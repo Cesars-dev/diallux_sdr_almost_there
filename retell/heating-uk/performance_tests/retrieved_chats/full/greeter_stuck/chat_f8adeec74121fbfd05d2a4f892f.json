@@ -1,0 +1,81 @@
+{
+  "chat_id": "chat_f8adeec74121fbfd05d2a4f892f",
+  "chat_type": "api_chat",
+  "agent_id": "agent_b29a076e9a7295d407c8242390",
+  "agent_version": 0,
+  "agent_name": "Multi State Agent",
+  "collected_dynamic_variables": {
+    "address_house_number": "",
+    "callback_requested": "false",
+    "intent_clear": "true",
+    "classified_intent": "Boiler Breakdown",
+    "address_street": "",
+    "past_customer": "false",
+    "greeting_exchanged": "true",
+    "intent_confirmed": "false",
+    "address_postcode": "",
+    "customer_name": "",
+    "address_city": ""
+  },
+  "chat_status": "ended",
+  "start_timestamp": 1784632867810,
+  "end_timestamp": 1784632872007,
+  "transcript": "User: Hi, my boiler's making a funny noise. Can you send someone out? Oh, and how much is the call-out?\nAgent: Funny noise from the boiler, got it. Call-out is \u00a375 plus VAT weekdays.",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_197ee8b348e667619d59d87d",
+      "role": "user",
+      "created_timestamp": 1784632868453,
+      "content": "Hi, my boiler's making a funny noise. Can you send someone out? Oh, and how much is the call-out?"
+    },
+    {
+      "message_id": "message_4a597001732b374dc7697ec0",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784632869721,
+      "tool_call_id": "call_3oWV6LxcPU4PH5lJeZOGPiW0",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_72ef8f7c7bd1bb73d66fa6dc",
+      "role": "tool_call_result",
+      "created_timestamp": 1784632869722,
+      "tool_call_id": "call_3oWV6LxcPU4PH5lJeZOGPiW0",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"Boiler Breakdown\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_eb237064e58567f1b74314d1",
+      "role": "agent",
+      "created_timestamp": 1784632871207,
+      "content": "Funny noise from the boiler, got it. Call-out is \u00a375 plus VAT weekdays.",
+      "metadata": {
+        "response_id": 1
+      }
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/4cf874f12cc3dde30bbc9a25bf44619e5229544d5f855221cf7289054badd20b/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "combined_cost": 4.1,
+    "product_costs": [
+      {
+        "unit_price": 2.6,
+        "product": "gpt_5_4_text_testing",
+        "cost": 2.6
+      },
+      {
+        "unit_price": 1.5,
+        "product": "gpt_4_1_text_testing",
+        "cost": 1.5
+      }
+    ]
+  },
+  "chat_analysis": {
+    "chat_summary": "The user reported a boiler making a funny noise and requested a technician visit, also inquiring about the call-out cost. The agent confirmed the issue and provided the call-out fee information.",
+    "user_sentiment": "Neutral",
+    "custom_analysis_data": {},
+    "chat_successful": true
+  },
+  "data_storage_setting": "everything"
+}

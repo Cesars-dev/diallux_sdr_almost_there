@@ -1,0 +1,34 @@
+{
+  "scenario": 14,
+  "turn": 3,
+  "chat_id": "chat_c853563d6d69fdfac1adfada062",
+  "caller_message": "My name is Karen",
+  "agent_messages": [
+    {
+      "message_id": "message_4f779d93826ef700ab4c3ea7",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638608873,
+      "tool_call_id": "call_FSprft92HrvPygs0gOhRm9OU",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_02754e5ed0213c7b136590be",
+      "role": "tool_call_result",
+      "created_timestamp": 1784638608874,
+      "tool_call_id": "call_FSprft92HrvPygs0gOhRm9OU",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Karen\",\"classified_intent\":\"boiler concern / possible breakdown\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_1b34d2e07e154715b9f3231d",
+      "role": "agent",
+      "created_timestamp": 1784638610608,
+      "content": "Karen, got it. Are several people in the property affected?",
+      "metadata": {
+        "response_id": 3
+      }
+    }
+  ]
+}

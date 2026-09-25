@@ -1,0 +1,67 @@
+{
+  "chat_id": "chat_535184af4a6ab3ff445c8721d00",
+  "chat_type": "api_chat",
+  "agent_id": "agent_a2c81e038ca30c41c91cfab1bb",
+  "agent_version": 0,
+  "agent_name": "Multi State Agent",
+  "collected_dynamic_variables": {},
+  "chat_status": "ended",
+  "start_timestamp": 1784632613595,
+  "end_timestamp": 1784632618003,
+  "transcript": "User: Hi, I think I smell gas near my boiler.\nAgent: Are you smelling gas?\nUser: Yes, I can smell gas",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_5a14c87bc6c898273bd514ed",
+      "role": "user",
+      "created_timestamp": 1784632614274,
+      "content": "Hi, I think I smell gas near my boiler."
+    },
+    {
+      "message_id": "message_f21c967c842314a3941d6981",
+      "role": "agent",
+      "created_timestamp": 1784632615795,
+      "content": "Are you smelling gas?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_41a000f6642fc80119370011",
+      "role": "user",
+      "created_timestamp": 1784632616713,
+      "content": "Yes, I can smell gas"
+    },
+    {
+      "message_id": "message_0402f1d3103ee25ffbc097d3",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784632617894,
+      "tool_call_id": "call_6E1kSfkiVKurE0yBOKAVrwQh",
+      "name": "end_call",
+      "arguments": "{}",
+      "type": "end_call"
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/75992a7c1a4e9fad0c7a13df26b8c42e0b1c879d7ef350bbdc52b4ad0e201119/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "combined_cost": 4.1,
+    "product_costs": [
+      {
+        "unit_price": 2.6,
+        "product": "gpt_5_4_text_testing",
+        "cost": 2.6
+      },
+      {
+        "unit_price": 1.5,
+        "product": "gpt_4_1_text_testing",
+        "cost": 1.5
+      }
+    ]
+  },
+  "chat_analysis": {
+    "chat_summary": "The user reported smelling gas near their boiler. The agent confirmed the situation and initiated an emergency end call procedure, likely to escalate the issue for safety reasons.",
+    "user_sentiment": "Neutral",
+    "custom_analysis_data": {},
+    "chat_successful": true
+  },
+  "data_storage_setting": "everything"
+}

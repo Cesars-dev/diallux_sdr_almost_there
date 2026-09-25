@@ -1,0 +1,34 @@
+{
+  "scenario": 12,
+  "turn": 6,
+  "chat_id": "chat_a5b60cf27c22a00f03c9e6fe2fa",
+  "caller_message": "That's all, thanks",
+  "agent_messages": [
+    {
+      "message_id": "message_8ee02bf4b6c5173d49c1feb7",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639644030,
+      "tool_call_id": "call_YqAMvC5F0Eg9EgE9LQs8LzC0",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_61da1e3fc68ee038855a8555",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639644031,
+      "tool_call_id": "call_YqAMvC5F0Eg9EgE9LQs8LzC0",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Mark\",\"classified_intent\":\"Leak\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"7\",\"address_street\":\"Oak Ave\",\"address_postcode\":\"NE5 5EE\",\"address_city\":\"Newcastle\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_f64eb2021001241228583e0f",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639645271,
+      "tool_call_id": "call_7s0h6TFrLjrebYrBTm4Qh1vX",
+      "name": "end_call",
+      "arguments": "{}",
+      "type": "end_call"
+    }
+  ]
+}

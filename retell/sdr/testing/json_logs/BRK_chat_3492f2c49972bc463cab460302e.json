@@ -1,0 +1,110 @@
+{
+  "chat_id": "chat_3492f2c49972bc463cab460302e",
+  "chat_type": "api_chat",
+  "agent_id": "agent_f724da044b38ca7e11098933ec",
+  "agent_version": 0,
+  "agent_name": "V7.3_craft_kb",
+  "retell_llm_dynamic_variables": {
+    "today_date": "2026-08-25",
+    "callback_number": "+12125550011"
+  },
+  "collected_dynamic_variables": {},
+  "chat_status": "ended",
+  "start_timestamp": 1787664297487,
+  "end_timestamp": 1787664311269,
+  "transcript": "User: Fine, tell me about— actually NO. You know what, forget it. This is bulls***, everyone just wants money, I'm done with this crap.\nAgent: I hear you — it sounds like you’ve had a few too many people just trying to sell you something and not actually help.  \n\nTotally fair if you want to walk away, but before we hang up: did something specific just happen with another vendor or call that pushed you over the edge today?\nUser: Yeah, I'm just sick of being bounced around with no real help. I need a real person to talk to!\nAgent: Yeah, I get that — getting bounced around and never getting real answers is exhausting.  \n\nSo we’re on the same page: I’m the “front door,” and Jay’s the real human you’d talk to for actual answers — what’s the main thing you’d want him to help you with if we got you in front of him?\nUser: I need Jay to help with my billing issue. Get me a real person on the phone, now!\nAgent: Got it, so this is a billing issue and you want an actual human, not another runaround — totally fair.  \n\nI can’t pull Jay in live right this second, but I can get you lined up for a call with him so you’re not bounced around again — are you open to scheduling a quick call time, or do you prefer he call you back when he’s free?\nUser: Fine, whatever. Just have Jay call me tomorrow. I'm tired of this nonsense.\nAgent: Got it, I hear you — I’ll have Jay reach out to you at this number tomorrow so he can go over that billing issue with you directly. If anything changes on your end before he calls, you can just ignore us or call back when it’s a better time. Thanks for hanging in there with me today — I’ll let you go now, take care.",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_ebeb0f746bfa6e5d4dee523e",
+      "role": "user",
+      "created_timestamp": 1787664298203,
+      "content": "Fine, tell me about— actually NO. You know what, forget it. This is bulls***, everyone just wants money, I'm done with this crap."
+    },
+    {
+      "message_id": "message_11b2c9b6b70501cbf63552c4",
+      "role": "agent",
+      "created_timestamp": 1787664300033,
+      "content": "I hear you — it sounds like you’ve had a few too many people just trying to sell you something and not actually help.  \n\nTotally fair if you want to walk away, but before we hang up: did something specific just happen with another vendor or call that pushed you over the edge today?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_70ca83bb40772b46d443f751",
+      "role": "user",
+      "created_timestamp": 1787664302028,
+      "content": "Yeah, I'm just sick of being bounced around with no real help. I need a real person to talk to!"
+    },
+    {
+      "message_id": "message_16241b1c83e998cc843a9bdd",
+      "role": "agent",
+      "created_timestamp": 1787664304018,
+      "content": "Yeah, I get that — getting bounced around and never getting real answers is exhausting.  \n\nSo we’re on the same page: I’m the “front door,” and Jay’s the real human you’d talk to for actual answers — what’s the main thing you’d want him to help you with if we got you in front of him?",
+      "metadata": {
+        "response_id": 2
+      }
+    },
+    {
+      "message_id": "message_5da6e86affe16b81f0c70217",
+      "role": "user",
+      "created_timestamp": 1787664305813,
+      "content": "I need Jay to help with my billing issue. Get me a real person on the phone, now!"
+    },
+    {
+      "message_id": "message_da82ce098989353f3eb07062",
+      "role": "agent",
+      "created_timestamp": 1787664307797,
+      "content": "Got it, so this is a billing issue and you want an actual human, not another runaround — totally fair.  \n\nI can’t pull Jay in live right this second, but I can get you lined up for a call with him so you’re not bounced around again — are you open to scheduling a quick call time, or do you prefer he call you back when he’s free?",
+      "metadata": {
+        "response_id": 3
+      }
+    },
+    {
+      "message_id": "message_0a31ae4846ee0913e5f8535e",
+      "role": "user",
+      "created_timestamp": 1787664309481,
+      "content": "Fine, whatever. Just have Jay call me tomorrow. I'm tired of this nonsense."
+    },
+    {
+      "message_id": "message_d05e94638c1fad2efd1d3c5c",
+      "role": "agent",
+      "created_timestamp": 1787664311232,
+      "content": "Got it, I hear you — I’ll have Jay reach out to you at this number tomorrow so he can go over that billing issue with you directly. If anything changes on your end before he calls, you can just ignore us or call back when it’s a better time. Thanks for hanging in there with me today — I’ll let you go now, take care.",
+      "metadata": {
+        "response_id": 4
+      }
+    },
+    {
+      "message_id": "message_5331227157a33644be68a532",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787664311233,
+      "tool_call_id": "call_dAdEArVDklAn10diOQSfXySW",
+      "name": "end_call",
+      "arguments": "{\"execution_message\":\"Got it, I hear you — I’ll have Jay reach out to you at this number tomorrow so he can go over that billing issue with you directly. If anything changes on your end before he calls, you can just ignore us or call back when it’s a better time. Thanks for hanging in there with me today — I’ll let you go now, take care.\"}",
+      "type": "end_call"
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/a471832f7795ae3f5e21e8f8d806dfa1879354c1346a3ae2d63ab1a98a2e8570/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "product_costs": [
+      {
+        "unit_price": 1.3,
+        "cost": 5.2,
+        "product": "gpt_5_1_text_testing"
+      },
+      {
+        "unit_price": 1.5,
+        "cost": 1.5,
+        "product": "gpt_4_1_text_testing"
+      }
+    ],
+    "combined_cost": 6.7
+  },
+  "chat_analysis": {
+    "chat_successful": true,
+    "chat_summary": "The user expressed frustration with being bounced around and not receiving real help, specifically regarding a billing issue. The agent empathized with the user's concerns and arranged for a real person, Jay, to call the user the next day to address the billing issue directly. The conversation ended with the agent confirming the follow-up and thanking the user for their patience.",
+    "user_sentiment": "Negative",
+    "custom_analysis_data": {}
+  },
+  "data_storage_setting": "everything"
+}

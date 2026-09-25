@@ -1,0 +1,67 @@
+{
+  "scenario": 10,
+  "turn": 2,
+  "chat_id": "chat_a5815d084aa7f0ac9dc5f01f123",
+  "caller_message": "Robert. 25 Acacia Gardens, NE4 4DD, Newcastle.",
+  "agent_messages": [
+    {
+      "message_id": "message_c33c3c9e0843411dd8184915",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639527765,
+      "tool_call_id": "call_SVz4KzVx1zjaSJ1WLovswLqK",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_524bf1c0b2aab904287bee1e",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639527766,
+      "tool_call_id": "call_SVz4KzVx1zjaSJ1WLovswLqK",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Robert\",\"classified_intent\":\"Annual Boiler Service\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":true,\"address_house_number\":\"25\",\"address_street\":\"Acacia Gardens\",\"address_postcode\":\"NE4 4DD\",\"address_city\":\"Newcastle\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_0e1a9a5dd1a600cded909890",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639529354,
+      "tool_call_id": "call_lLCqCqa703RF3ndiga1WFfL0",
+      "name": "transition_to_address",
+      "arguments": "{}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_b640f1420ea12ef2b8e2f612",
+      "role": "state_transition",
+      "created_timestamp": 1784639529355,
+      "former_state_name": "greeter",
+      "new_state_name": "address"
+    },
+    {
+      "message_id": "message_5cc02c17025e3566e8fd0936",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639531354,
+      "tool_call_id": "call_7IdVRD1YnbO0xR9Zmn3nKz2D",
+      "name": "extract_address_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_707478c5bd1341e7c0ac65be",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639531355,
+      "tool_call_id": "call_7IdVRD1YnbO0xR9Zmn3nKz2D",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Robert\",\"problem_category\":\"\",\"symptom_brief\":\"\",\"error_code\":\"\",\"boiler_make\":\"\",\"address_postcode\":\"NE4 4DD\",\"address_house_number\":\"25\",\"address_street\":\"Acacia Gardens\",\"address_line1\":\"25 Acacia Gardens\",\"address_city\":\"Newcastle\",\"address_confirmed\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_ad9d257dd28ec7d5f9e7b9cb",
+      "role": "agent",
+      "created_timestamp": 1784639533244,
+      "content": "Robert \u2014 25 Acacia Gardens, Newcastle, postcode N-E-4 4-D-D. Is that right?",
+      "metadata": {
+        "response_id": 2
+      }
+    }
+  ]
+}

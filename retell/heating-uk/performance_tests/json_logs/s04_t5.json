@@ -1,0 +1,60 @@
+{
+  "scenario": 4,
+  "turn": 5,
+  "chat_id": "chat_2e4ed008bd72076e54cbe064044",
+  "caller_message": "Yes, book it",
+  "agent_messages": [
+    {
+      "message_id": "message_60254f58fec851d9929ce1ab",
+      "role": "agent",
+      "created_timestamp": 1784639857387,
+      "content": "Right, Paul \u2014 I\u2019ve got 7 Oak Ave, Newcastle, postcode N-E-4 5-A-B, on Wednesday at 6.30pm.",
+      "metadata": {
+        "response_id": 7
+      }
+    },
+    {
+      "message_id": "message_97699b71b45dece6d6757cc2",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639857388,
+      "tool_call_id": "call_uGeJl9JeFoiw8gDP5mfT02c6",
+      "name": "book_calendar",
+      "arguments": "{\"time\":\"2026-07-22T18:30:00\",\"timezone\":\"Europe/London\",\"name\":\"Paul\",\"email\":\"jaydiallux@gmail.com\",\"attendeePhoneNumber\":null,\"title\":\"Banging / Kettling / Rumbling Noise \u2014 Paul\",\"notes\":\"CUSTOMER: Paul | ADDRESS: 7 Oak Ave, Newcastle, NE4 5AB | PHONE: {{user_number}} | PROBLEM: Banging / Kettling / Rumbling Noise | SYMPTOMS: Boiler making a rattling sound when it fires up\",\"guests\":null,\"rescheduleReason\":null,\"execution_message\":\"I\u2019m booking that in now.\"}",
+      "type": "book_appointment_cal"
+    },
+    {
+      "message_id": "message_0da028dbad822ac039108fa0",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639861984,
+      "tool_call_id": "call_uGeJl9JeFoiw8gDP5mfT02c6",
+      "content": "{\"status\":\"Successfully booked an appointment.\",\"booking_id\":22744385,\"booking_uid\":\"wgSGFCFYqjFGxkuZZDDGp6\"}",
+      "successful": true
+    },
+    {
+      "message_id": "message_0e31b090d26831df5d7c0c3b",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639863619,
+      "tool_call_id": "call_ljmHigUMQiwYMRSexrO8iOsD",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_ad339037f34cdfd3335f3994",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639863620,
+      "tool_call_id": "call_ljmHigUMQiwYMRSexrO8iOsD",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Paul\",\"classified_intent\":\"Boiler Breakdown\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"7\",\"address_street\":\"Oak Ave\",\"address_postcode\":\"NE4 5AB\",\"address_city\":\"Newcastle\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_9fa44485e408667998b0c6a6",
+      "role": "agent",
+      "created_timestamp": 1784639865677,
+      "content": "Brilliant, you\u2019re booked in.\n\nIs there anything else I can help you with?",
+      "metadata": {
+        "response_id": 8
+      }
+    }
+  ]
+}

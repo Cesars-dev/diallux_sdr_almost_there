@@ -1,0 +1,76 @@
+{
+  "chat_id": "chat_24aa4a4b2ed8042d6a0baab51f3",
+  "chat_type": "api_chat",
+  "agent_id": "agent_6226cbd3e8292efd1fea0581d8",
+  "agent_version": 0,
+  "agent_name": "HVAC Multi-Prompt Test (chat)",
+  "collected_dynamic_variables": {
+    "greeting_exchanged": "true",
+    "intent_confirmed": "false",
+    "customer_name": "",
+    "intent_clear": "true",
+    "classified_intent": "service",
+    "past_customer": "false"
+  },
+  "chat_status": "ended",
+  "start_timestamp": 1784626689069,
+  "end_timestamp": 1784626693917,
+  "transcript": "User: Hi, I need a service. My address is Rose Cottage, Mill Lane, Hexham.\nAgent: Got it, you need a service. So this is for a service, yeah?",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_9bda9d4916a73e7d4bd5db07",
+      "role": "user",
+      "created_timestamp": 1784626689876,
+      "content": "Hi, I need a service. My address is Rose Cottage, Mill Lane, Hexham."
+    },
+    {
+      "message_id": "message_1a797a83bbeced25207d32a9",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784626691495,
+      "tool_call_id": "call_lbMMnnEPylPKd3bLhjYAYkbu",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_32f76773935df528f748aa97",
+      "role": "tool_call_result",
+      "created_timestamp": 1784626691496,
+      "tool_call_id": "call_lbMMnnEPylPKd3bLhjYAYkbu",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"service\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_ac73b4f331e1341a64414cd0",
+      "role": "agent",
+      "created_timestamp": 1784626693100,
+      "content": "Got it, you need a service. So this is for a service, yeah?",
+      "metadata": {
+        "response_id": 1
+      }
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/1fef7f2344bd58411ae576deba06921b5df3115fc9b026885fc5b7d64db02563/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "combined_cost": 4.1,
+    "product_costs": [
+      {
+        "unit_price": 2.6,
+        "product": "gpt_5_4_text_testing",
+        "cost": 2.6
+      },
+      {
+        "unit_price": 1.5,
+        "product": "gpt_4_1_text_testing",
+        "cost": 1.5
+      }
+    ]
+  },
+  "chat_analysis": {
+    "chat_summary": "The user requested a service and provided their address. The agent confirmed the user's intent to ensure clarity about the service request.",
+    "user_sentiment": "Neutral",
+    "custom_analysis_data": {},
+    "chat_successful": true
+  },
+  "data_storage_setting": "everything"
+}

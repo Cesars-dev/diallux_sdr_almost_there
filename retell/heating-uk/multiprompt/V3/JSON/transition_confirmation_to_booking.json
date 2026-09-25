@@ -1,0 +1,18 @@
+{
+  "destination_state_name": "booking",
+  "description": "Transition when booking is confirmed by customer",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "booking_confirmed": {
+        "type": "boolean",
+        "description": "Whether the customer has confirmed the booking"
+      },
+      "booking_slot_string": {
+        "type": "string",
+        "description": "The final ISO 8601 UTC string for Cal.com"
+      }
+    },
+    "required": ["booking_confirmed", "booking_slot_string"]
+  }
+}

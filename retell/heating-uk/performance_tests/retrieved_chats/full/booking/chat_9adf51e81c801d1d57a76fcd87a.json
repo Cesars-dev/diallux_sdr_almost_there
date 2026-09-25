@@ -1,0 +1,396 @@
+{
+  "chat_id": "chat_9adf51e81c801d1d57a76fcd87a",
+  "chat_type": "api_chat",
+  "agent_id": "agent_ff9d4b9646a85b82d7ce8fd837",
+  "agent_version": 0,
+  "agent_name": "Multi State Agent",
+  "collected_dynamic_variables": {
+    "callback_requested": "false",
+    "classified_intent": "Annual Boiler Service",
+    "past_customer": "true",
+    "intent_confirmed": "true",
+    "address_postcode": "NE4 5AB",
+    "address_confirmed": "true",
+    "address_incomplete": "false",
+    "problem_category": "Annual Boiler Service",
+    "address_city": "",
+    "boiler_make": "",
+    "address_house_number": "10",
+    "current_agent_state": "booking",
+    "symptom_brief": "No issues, routine annual service",
+    "intent_clear": "true",
+    "address_line1": "10 Green Rd",
+    "address_street": "Green Rd",
+    "greeting_exchanged": "true",
+    "error_code": "",
+    "customer_name": "Linda",
+    "previous_agent_state": "address"
+  },
+  "chat_status": "ended",
+  "start_timestamp": 1784637573117,
+  "end_timestamp": 1784637620742,
+  "transcript": "User: Hi Tom, it's Linda \u2014 we did a service with you last March, time for the annual one again.\nAgent: Linda, annual service again \u2014 lovely. Just confirming, it's for the boiler service?\nUser: No issues, just the annual service\nAgent: No issues, annual service \u2014 perfect. What\u2019s the postcode?\nUser: NE4 5AB\nAgent: Postcode N-E-4-5-A-B \u2014 got it. What\u2019s the house number or property name?\nUser: 10\nAgent: Number 10 \u2014 right. And the street name?\nUser: Green Rd\nAgent: Green Rd \u2014 brilliant. So that's 10 Green Rd, postcode N-E-4-5-A-B. Is that right?\nUser: Yes, that's right\nAgent: I\u2019m just checking the next slots now.\nAgent: I\u2019ve got today after 5, or tomorrow at half eleven. Which suits?\nUser: Tomorrow works\nAgent: Tomorrow works \u2014 perfect. Let me check the best slot.\nAgent: I\u2019ve got tomorrow at half eleven, or tomorrow after half twelve. Which suits?\nUser: Yes, book it\nAgent: Half eleven tomorrow \u2014 lovely.Right, Linda \u2014 I\u2019ve got 10 Green Rd, postcode N-E-4-5-A-B, tomorrow at half eleven. Sound okay?\nUser: No, that's all thanks. Bye!",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_349cb032425c85695c400ecb",
+      "role": "user",
+      "created_timestamp": 1784637573800,
+      "content": "Hi Tom, it's Linda \u2014 we did a service with you last March, time for the annual one again."
+    },
+    {
+      "message_id": "message_7b39097f37bff41dd383d8bc",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637575143,
+      "tool_call_id": "call_YnuPB0ieTAw9aIVjfnx7q9RN",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_162425fff6bc10c43bf9bbe2",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637575144,
+      "tool_call_id": "call_YnuPB0ieTAw9aIVjfnx7q9RN",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Linda\",\"classified_intent\":\"Annual Boiler Service\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":true,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_d5718c0bc55e56b2e041ff25",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637575859,
+      "tool_call_id": "call_cckQM26syWYNPiplUtr6oNLD",
+      "name": "transition_to_address",
+      "arguments": "{}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_6d0d5c2c13b7d89f06257764",
+      "role": "state_transition",
+      "created_timestamp": 1784637575860,
+      "former_state_name": "greeter",
+      "new_state_name": "address"
+    },
+    {
+      "message_id": "message_60d2cd070eca65a374e11016",
+      "role": "agent",
+      "created_timestamp": 1784637576801,
+      "content": "Linda, annual service again \u2014 lovely. Just confirming, it's for the boiler service?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_be80e5e79f0e45116eab2748",
+      "role": "user",
+      "created_timestamp": 1784637577650,
+      "content": "No issues, just the annual service"
+    },
+    {
+      "message_id": "message_1b80bc1ab9952bfff3497624",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637580978,
+      "tool_call_id": "call_hhhWxFIEiJU54x5KfwYtrHIj",
+      "name": "extract_address_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_e81710229e7a9e9c52e0fc97",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637580979,
+      "tool_call_id": "call_hhhWxFIEiJU54x5KfwYtrHIj",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Linda\",\"problem_category\":\"Annual Boiler Service\",\"symptom_brief\":\"No issues, routine annual service\",\"error_code\":\"\",\"boiler_make\":\"\",\"address_postcode\":\"\",\"address_house_number\":\"\",\"address_street\":\"\",\"address_line1\":\"\",\"address_city\":\"\",\"address_confirmed\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_c85d4fea3ccde3c22efd6dfb",
+      "role": "agent",
+      "created_timestamp": 1784637582100,
+      "content": "No issues, annual service \u2014 perfect. What\u2019s the postcode?",
+      "metadata": {
+        "response_id": 2
+      }
+    },
+    {
+      "message_id": "message_5048a9cd4e2a5452db4f82c9",
+      "role": "user",
+      "created_timestamp": 1784637582955,
+      "content": "NE4 5AB"
+    },
+    {
+      "message_id": "message_33509e70672d971fa883dff3",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637584591,
+      "tool_call_id": "call_D2z8XcnUZGDgfzjT2GDjj1kB",
+      "name": "extract_address_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_2fff34a2569f9cd123ad7863",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637584592,
+      "tool_call_id": "call_D2z8XcnUZGDgfzjT2GDjj1kB",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Linda\",\"problem_category\":\"Annual Boiler Service\",\"symptom_brief\":\"No issues, routine annual service\",\"error_code\":\"\",\"boiler_make\":\"\",\"address_postcode\":\"NE4 5AB\",\"address_house_number\":\"\",\"address_street\":\"\",\"address_line1\":\"\",\"address_city\":\"\",\"address_confirmed\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_63389342683db4fb4ae29e1a",
+      "role": "agent",
+      "created_timestamp": 1784637590085,
+      "content": "Postcode N-E-4-5-A-B \u2014 got it. What\u2019s the house number or property name?",
+      "metadata": {
+        "response_id": 3
+      }
+    },
+    {
+      "message_id": "message_3f2df09c5401434fdabbbabd",
+      "role": "user",
+      "created_timestamp": 1784637590952,
+      "content": "10"
+    },
+    {
+      "message_id": "message_74f93c40ecdb4cc0fd6212e9",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637592436,
+      "tool_call_id": "call_ljmZvf9WSPjXyCQIvlIKjP3r",
+      "name": "extract_address_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_edcd5615e855def4270abdfb",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637592437,
+      "tool_call_id": "call_ljmZvf9WSPjXyCQIvlIKjP3r",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Linda\",\"problem_category\":\"Annual Boiler Service\",\"symptom_brief\":\"No issues, routine annual service\",\"error_code\":\"\",\"boiler_make\":\"\",\"address_postcode\":\"NE4 5AB\",\"address_house_number\":\"10\",\"address_street\":\"\",\"address_line1\":\"\",\"address_city\":\"\",\"address_confirmed\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_7eade73ab050b4ead8934487",
+      "role": "agent",
+      "created_timestamp": 1784637595703,
+      "content": "Number 10 \u2014 right. And the street name?",
+      "metadata": {
+        "response_id": 4
+      }
+    },
+    {
+      "message_id": "message_88b5773955f7b470058fa71b",
+      "role": "user",
+      "created_timestamp": 1784637596538,
+      "content": "Green Rd"
+    },
+    {
+      "message_id": "message_e746c20dfa90f43579a3320a",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637598055,
+      "tool_call_id": "call_Lu88mvfp3hYOCicGR1HOBx5d",
+      "name": "extract_address_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_b34fc702a77d9e12df482f9c",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637598056,
+      "tool_call_id": "call_Lu88mvfp3hYOCicGR1HOBx5d",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Linda\",\"problem_category\":\"Annual Boiler Service\",\"symptom_brief\":\"No issues, routine annual service\",\"error_code\":\"\",\"boiler_make\":\"\",\"address_postcode\":\"NE4 5AB\",\"address_house_number\":\"10\",\"address_street\":\"Green Rd\",\"address_line1\":\"10 Green Rd\",\"address_city\":\"\",\"address_confirmed\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_b73a7200b76205dcd438e98c",
+      "role": "agent",
+      "created_timestamp": 1784637599259,
+      "content": "Green Rd \u2014 brilliant. So that's 10 Green Rd, postcode N-E-4-5-A-B. Is that right?",
+      "metadata": {
+        "response_id": 5
+      }
+    },
+    {
+      "message_id": "message_066af1764df8225e74ac3f86",
+      "role": "user",
+      "created_timestamp": 1784637600089,
+      "content": "Yes, that's right"
+    },
+    {
+      "message_id": "message_690113da653f733b4c6ed0f7",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637602157,
+      "tool_call_id": "call_mkXMGpIxTiazoymEJ1e1s4ve",
+      "name": "extract_address_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_30231f70c3e7af5eec4ee6c3",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637602158,
+      "tool_call_id": "call_mkXMGpIxTiazoymEJ1e1s4ve",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Linda\",\"problem_category\":\"Annual Boiler Service\",\"symptom_brief\":\"No issues, routine annual service\",\"error_code\":\"\",\"boiler_make\":\"\",\"address_postcode\":\"NE4 5AB\",\"address_house_number\":\"10\",\"address_street\":\"Green Rd\",\"address_line1\":\"10 Green Rd\",\"address_city\":\"\",\"address_confirmed\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_ca66540e54632d6247cf2490",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637602955,
+      "tool_call_id": "call_g3tv0T3hXqcEZchgEpqujzCi",
+      "name": "transition_to_booking",
+      "arguments": "{}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_b24a1ca2ec616c0da185debc",
+      "role": "state_transition",
+      "created_timestamp": 1784637602956,
+      "former_state_name": "address",
+      "new_state_name": "booking"
+    },
+    {
+      "message_id": "message_39369b6a9c881a1cb96174e3",
+      "role": "agent",
+      "created_timestamp": 1784637604505,
+      "content": "I\u2019m just checking the next slots now.",
+      "metadata": {
+        "response_id": 6
+      }
+    },
+    {
+      "message_id": "message_d06b6433d907bfa4a6b20079",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637604506,
+      "tool_call_id": "call_nPDrj03sTescSYFcTLnoNX7a",
+      "name": "check_availability",
+      "arguments": "{\"start_time\":\"2026-07-21T00:00:00\",\"end_time\":\"2026-07-22T23:59:00\",\"timezone\":\"Europe/London\",\"execution_message\":\"I\u2019m just checking the next slots now.\"}",
+      "type": "check_availability_cal"
+    },
+    {
+      "message_id": "message_63e5d4b7aa2f53366157db06",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637605295,
+      "tool_call_id": "call_nPDrj03sTescSYFcTLnoNX7a",
+      "content": "{\"availability_for_selected_time\":[{\"date\":\"Tuesday, 2026 July 7/21/2026 British Summer Time\",\"availability_range\":[\"From 5:00 PM to 7:00 PM\"]},{\"date\":\"Wednesday, 2026 July 7/22/2026 British Summer Time\",\"availability_range\":[\"From 11:30 AM to 12:00 PM\",\"From 12:30 PM to 7:00 PM\"]}]}",
+      "successful": true
+    },
+    {
+      "message_id": "message_6b4ad958e399b09521bc5f2f",
+      "role": "agent",
+      "created_timestamp": 1784637607196,
+      "content": "I\u2019ve got today after 5, or tomorrow at half eleven. Which suits?",
+      "metadata": {
+        "response_id": 7
+      }
+    },
+    {
+      "message_id": "message_da1cfcf5040f96644d453982",
+      "role": "user",
+      "created_timestamp": 1784637607974,
+      "content": "Tomorrow works"
+    },
+    {
+      "message_id": "message_71156e1e43d0bf44b66b7762",
+      "role": "agent",
+      "created_timestamp": 1784637610228,
+      "content": "Tomorrow works \u2014 perfect. Let me check the best slot.",
+      "metadata": {
+        "response_id": 8
+      }
+    },
+    {
+      "message_id": "message_ab144af942eb682f0bb3359a",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637610229,
+      "tool_call_id": "call_zEql599iKV92WKnrZXuQjeVY",
+      "name": "check_availability",
+      "arguments": "{\"start_time\":\"2026-07-22T00:00:00\",\"end_time\":\"2026-07-22T23:59:00\",\"timezone\":\"Europe/London\",\"execution_message\":\"Tomorrow works \u2014 perfect. Let me check the best slot.\"}",
+      "type": "check_availability_cal"
+    },
+    {
+      "message_id": "message_e7f01575bdb0ce55d653b4b0",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637612859,
+      "tool_call_id": "call_zEql599iKV92WKnrZXuQjeVY",
+      "content": "{\"availability_for_selected_time\":[{\"date\":\"Wednesday, 2026 July 7/22/2026 British Summer Time\",\"availability_range\":[\"From 11:30 AM to 12:00 PM\",\"From 12:30 PM to 7:00 PM\"]}]}",
+      "successful": true
+    },
+    {
+      "message_id": "message_c678440ddc1c4df5640e6608",
+      "role": "agent",
+      "created_timestamp": 1784637614319,
+      "content": "I\u2019ve got tomorrow at half eleven, or tomorrow after half twelve. Which suits?",
+      "metadata": {
+        "response_id": 9
+      }
+    },
+    {
+      "message_id": "message_c0fc09b990422d9822cb582b",
+      "role": "user",
+      "created_timestamp": 1784637615189,
+      "content": "Yes, book it"
+    },
+    {
+      "message_id": "message_e85ee70f76708c525bb69053",
+      "role": "agent",
+      "created_timestamp": 1784637617093,
+      "content": "Half eleven tomorrow \u2014 lovely.Right, Linda \u2014 I\u2019ve got 10 Green Rd, postcode N-E-4-5-A-B, tomorrow at half eleven. Sound okay?",
+      "metadata": {
+        "response_id": 10
+      }
+    },
+    {
+      "message_id": "message_82a8e1f6df8023997ffb3e9e",
+      "role": "user",
+      "created_timestamp": 1784637617993,
+      "content": "No, that's all thanks. Bye!"
+    },
+    {
+      "message_id": "message_5d5c90599ace84873beffe65",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637619491,
+      "tool_call_id": "call_kMI1kMFBF9uiMVNumMMlDeRp",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_a89c2673f427a3b543d6e8d2",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637619492,
+      "tool_call_id": "call_kMI1kMFBF9uiMVNumMMlDeRp",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Linda\",\"classified_intent\":\"Annual Boiler Service\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":true,\"address_house_number\":\"10\",\"address_street\":\"Green Rd\",\"address_postcode\":\"NE4 5AB\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_ea6bdf0e8535a92d2030d4a6",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637620731,
+      "tool_call_id": "call_p6OXsS7U0GuC3Zoli8hnM2Br",
+      "name": "end_call",
+      "arguments": "{}",
+      "type": "end_call"
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/70c9e4e18c3dbf72c21c2b09fe5c37d1972516ed6eaea6baeb1d349c32d1d92e/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "combined_cost": 27.5,
+    "product_costs": [
+      {
+        "unit_price": 2.6,
+        "product": "gpt_5_4_text_testing",
+        "cost": 26
+      },
+      {
+        "unit_price": 1.5,
+        "product": "gpt_4_1_text_testing",
+        "cost": 1.5
+      }
+    ]
+  },
+  "chat_analysis": {
+    "chat_summary": "Linda contacted the agent to schedule her annual boiler service. The agent confirmed her address details and offered available appointment slots, successfully booking her for the requested time. The conversation was efficient and concluded with Linda confirming all details and ending the chat politely.",
+    "user_sentiment": "Positive",
+    "custom_analysis_data": {},
+    "chat_successful": true
+  },
+  "data_storage_setting": "everything"
+}

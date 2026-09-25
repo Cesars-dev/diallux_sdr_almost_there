@@ -1,0 +1,76 @@
+{
+  "scenario": 4,
+  "turn": 3,
+  "chat_id": "chat_2e4ed008bd72076e54cbe064044",
+  "caller_message": "Yes, that's correct",
+  "agent_messages": [
+    {
+      "message_id": "message_eb4704f9b212895ced92707b",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639842016,
+      "tool_call_id": "call_e1JWAuVEiEM2HR0JN7u2OQDY",
+      "name": "extract_address_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_b14a7eeff64178fb4431817e",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639842017,
+      "tool_call_id": "call_e1JWAuVEiEM2HR0JN7u2OQDY",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Paul\",\"problem_category\":\"Banging / Kettling / Rumbling Noise\",\"symptom_brief\":\"Boiler making a rattling sound when it fires up\",\"error_code\":\"\",\"boiler_make\":\"\",\"address_postcode\":\"NE4 5AB\",\"address_house_number\":\"7\",\"address_street\":\"Oak Ave\",\"address_line1\":\"7 Oak Ave\",\"address_city\":\"Newcastle\",\"address_confirmed\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_1153c719a8dbe4cbccce2098",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639843298,
+      "tool_call_id": "call_g1V8f4hqw9tN2sBQYIuw2OKD",
+      "name": "transition_to_booking",
+      "arguments": "{}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_e51c8cfa7ffdb0019403ffb2",
+      "role": "state_transition",
+      "created_timestamp": 1784639843299,
+      "former_state_name": "address",
+      "new_state_name": "booking"
+    },
+    {
+      "message_id": "message_d90fc799908792eed82c1af6",
+      "role": "agent",
+      "created_timestamp": 1784639844990,
+      "content": "I\u2019m just checking the nearest engineer slots now.",
+      "metadata": {
+        "response_id": 3
+      }
+    },
+    {
+      "message_id": "message_3f1bc71c9a6bd731bbf43a95",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639844991,
+      "tool_call_id": "call_0U4Uz3hgY76HzQRSU7CRVRm3",
+      "name": "check_availability",
+      "arguments": "{\"start_time\":\"2026-07-21T00:00:00\",\"end_time\":\"2026-07-22T23:59:00\",\"timezone\":\"Europe/London\",\"execution_message\":\"I\u2019m just checking the nearest engineer slots now.\"}",
+      "type": "check_availability_cal"
+    },
+    {
+      "message_id": "message_f8aad5c8534253d4dfde26d3",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639845609,
+      "tool_call_id": "call_0U4Uz3hgY76HzQRSU7CRVRm3",
+      "content": "{\"availability_for_selected_time\":[{\"date\":\"Wednesday, 2026 July 7/22/2026 British Summer Time\",\"availability_range\":[\"From 6:30 PM to 7:00 PM\"]}]}",
+      "successful": true
+    },
+    {
+      "message_id": "message_0d81e307e140927a5f674633",
+      "role": "agent",
+      "created_timestamp": 1784639847367,
+      "content": "Paul, I\u2019ve got Wednesday at 6.30pm. Does that suit?",
+      "metadata": {
+        "response_id": 4
+      }
+    }
+  ]
+}

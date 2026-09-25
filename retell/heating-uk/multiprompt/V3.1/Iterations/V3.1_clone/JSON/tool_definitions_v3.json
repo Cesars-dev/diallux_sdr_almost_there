@@ -1,0 +1,338 @@
+{
+  "general_tools": [
+    {
+      "execution_message_type": "prompt",
+      "execution_message_description": "",
+      "speak_after_execution": true,
+      "name": "end_call",
+      "description": "End the call politely when the user has no more queries",
+      "type": "end_call",
+      "speak_during_execution": false
+    }
+  ],
+  "states": {
+    "greeter": {
+      "tools": [
+        {
+          "name": "extract_greeter_details",
+          "description": "Extract caller name and intent. Call ONCE when intent is confirmed and name is captured. Pass actual values \u2014 never empty arguments.",
+          "variables": [
+            {
+              "name": "customer_name",
+              "type": "string",
+              "description": "The customer's full name."
+            },
+            {
+              "name": "classified_intent",
+              "description": "Why the customer is calling",
+              "type": "string",
+              "choices": [
+                "booking",
+                "quote",
+                "other"
+              ]
+            }
+          ],
+          "type": "extract_dynamic_variable",
+          "speak_after_execution": false
+        },
+        {
+          "name": "greeter_completed",
+          "description": "Set greeter_completed to true ONLY after the caller has been greeted and their name and intent have been captured.",
+          "variables": [
+            {
+              "name": "greeter_completed",
+              "type": "boolean",
+              "description": "true ONLY after the caller has been greeted and their name and intent captured"
+            }
+          ],
+          "type": "extract_dynamic_variable",
+          "speak_after_execution": false
+        }
+      ]
+    },
+    "triage": {
+      "tools": [
+        {
+          "name": "extract_triage_details",
+          "description": "Extract symptom details, problem category, boiler brand, and error code. Call ONCE when all are captured. Pass actual values \u2014 never empty arguments.",
+          "variables": [
+            {
+              "name": "problem_category",
+              "description": "Category of the heating issue",
+              "type": "string",
+              "choices": [
+                "Heating",
+                "service",
+                "plumbing",
+                "other"
+              ]
+            },
+            {
+              "name": "symptom_brief",
+              "type": "string",
+              "description": "1-2 sentence summary of symptoms for the engineer"
+            },
+            {
+              "name": "boiler_make",
+              "type": "string",
+              "description": "Boiler brand (Worcester, Vaillant, Ideal, Baxi, etc.) or 'unknown' if customer doesn't know"
+            },
+            {
+              "name": "error_code",
+              "type": "string",
+              "description": "Error code shown on boiler display, or 'none' if no error code"
+            }
+          ],
+          "type": "extract_dynamic_variable",
+          "speak_after_execution": false
+        },
+        {
+          "name": "triage_completed",
+          "description": "Set triage_completed to true ONLY after you capture symptom details (as many or as little as the user provided).",
+          "variables": [
+            {
+              "name": "triage_completed",
+              "type": "boolean",
+              "description": "true ONLY after the symptom details, boiler brand, and error code are captured"
+            }
+          ],
+          "type": "extract_dynamic_variable",
+          "speak_after_execution": false
+        }
+      ]
+    },
+    "address": {
+      "tools": [
+        {
+          "name": "extract_address_details",
+          "description": "Extract address fields. Call ONCE when customer has confirmed the full address. Pass actual values \u2014 never empty arguments.",
+          "variables": [
+            {
+              "name": "address_house_number",
+              "type": "string",
+              "description": "House number or property name."
+            },
+            {
+              "name": "address_street",
+              "type": "string",
+              "description": "Street name"
+            },
+            {
+              "name": "address_city",
+              "type": "string",
+              "description": "City or town"
+            },
+            {
+              "name": "address_postcode",
+              "type": "string",
+              "description": "UK postcode or 'N/A' if customer doesn't know."
+            }
+          ],
+          "type": "extract_dynamic_variable",
+          "speak_after_execution": false
+        },
+        {
+          "name": "address_completed",
+          "description": "Set address_completed to true ONLY after the customer has confirmed the full address readback.",
+          "variables": [
+            {
+              "name": "address_completed",
+              "type": "boolean",
+              "description": "true ONLY after the customer has confirmed the full address readback"
+            }
+          ],
+          "type": "extract_dynamic_variable",
+          "speak_after_execution": false
+        }
+      ]
+    },
+    "slot_selection": {
+      "tools": [
+        {
+          "type": "custom",
+          "name": "check_availability",
+          "description": "To query available appointment slots on the calendar.\n\nCRITICAL: This tool ALWAYS returns HTTP 200. A 200 does NOT mean success — you must READ the body and act on its contents, never assume.\n\nOn SUCCESS the body is: {\"ok\": true, \"slots\": [{\"day\": \"YYYY-MM-DD\", \"time\": \"YYYY-MM-DDTHH:MM:SS\", \"iso\": \"YYYY-MM-DDTHH:MM:SS.000Z\"}, ...]}\n- \"time\" = The value for booking.\n- \"iso\" = Reference only, not needed.\n- ONLY offer/book slots literally in the slots list.\n\nOn ERROR the body is: {\"ok\": false, \"error\": \"CODE\", \"message\": \"explanation\"} — please correct the call and retry:\n- \"no_start_time\": the day argument was missing. Retry with a concrete YYYY-MM-DD date.\n- \"invalid_slot_target_date\": the date was missformatted. Retry with a valid YYYY-MM-DD date.\n- \"no_availability_in_window\": no free slots in that window. Check the next available day and offer its closest slots.\n- \"upstream_unavailable\": the calendar is temporarily down. Say you'll retry shortly, then retry.",
+          "url": "https://slots.diallux-ai.site/check_availability",
+          "method": "POST",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "slot_target_date": {
+                "type": "string",
+                "description": "ISO date (YYYY-MM-DD) of the day the caller wants a slot for."
+              }
+            }
+          },
+          "args_at_root": true,
+          "speak_after_execution": false
+        },
+        {
+          "name": "extract_slot_details",
+          "description": "Extract the selected slot details. Pass actual values \u2014 never empty arguments.",
+          "variables": [
+            {
+              "name": "selected_slot_start",
+              "type": "string",
+              "description": "ISO 8601 UTC with Z suffix \u2014 the exact start time from check_availability result."
+            },
+            {
+              "name": "selected_slot_label",
+              "type": "string",
+              "description": "The spoken form used when offering the slot, e.g. 'Thursday at 2 PM'"
+            }
+          ],
+          "type": "extract_dynamic_variable",
+          "speak_after_execution": false
+        },
+        {
+          "name": "slot_selection_completed",
+          "description": "Set slot_selection_completed to true ONLY after the selected slot details have been captured.",
+          "variables": [
+            {
+              "name": "slot_selection_completed",
+              "type": "boolean",
+              "description": "true ONLY after a slot has been selected"
+            }
+          ],
+          "type": "extract_dynamic_variable",
+          "speak_after_execution": false
+        }
+      ]
+    },
+    "confirmation": {
+      "tools": [
+        {
+          "type": "custom",
+          "name": "check_availability",
+          "description": "To query available appointment slots on the calendar.\n\nCRITICAL: This tool ALWAYS returns HTTP 200. A 200 does NOT mean success — you must READ the body and act on its contents, never assume.\n\nOn SUCCESS the body is: {\"ok\": true, \"slots\": [{\"day\": \"YYYY-MM-DD\", \"time\": \"YYYY-MM-DDTHH:MM:SS\", \"iso\": \"YYYY-MM-DDTHH:MM:SS.000Z\"}, ...]}\n- \"time\" = The value for booking.\n- \"iso\" = Reference only, not needed.\n- ONLY offer/book slots literally in the slots list.\n\nOn ERROR the body is: {\"ok\": false, \"error\": \"CODE\", \"message\": \"explanation\"} — please correct the call and retry:\n- \"no_start_time\": the day argument was missing. Retry with a concrete YYYY-MM-DD date.\n- \"invalid_slot_target_date\": the date was missformatted. Retry with a valid YYYY-MM-DD date.\n- \"no_availability_in_window\": no free slots in that window. Check the next available day and offer its closest slots.\n- \"upstream_unavailable\": the calendar is temporarily down. Say you'll retry shortly, then retry.",
+          "url": "https://slots.diallux-ai.site/check_availability",
+          "method": "POST",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "slot_target_date": {
+                "type": "string",
+                "description": "ISO date (YYYY-MM-DD) of the day the caller wants a slot for."
+              }
+            }
+          },
+          "args_at_root": true,
+          "speak_after_execution": false
+        },
+        {
+          "name": "extract_confirm_details",
+          "description": "Extract and lock in confirmation details. Pass actual values \u2014 never empty arguments.",
+          "variables": [
+            {
+              "name": "selected_slot_start",
+              "type": "string",
+              "description": "ISO 8601 UTC with Z suffix \u2014 the new slot start time"
+            },
+            {
+              "name": "selected_slot_label",
+              "type": "string",
+              "description": "The new spoken form, e.g. 'Friday at 10 AM'"
+            },
+            {
+              "name": "booking_slot_string",
+              "type": "string",
+              "description": "Copy the exact value of selected_slot_start (ISO 8601 UTC)."
+            }
+          ],
+          "type": "extract_dynamic_variable",
+          "speak_after_execution": false
+        },
+        {
+          "name": "confirmation_completed",
+          "description": "Set confirmation_completed to true ONLY after the customer has clearly confirmed the slot.",
+          "variables": [
+            {
+              "name": "confirmation_completed",
+              "type": "boolean",
+              "description": "true ONLY after the customer has clearly confirmed the slot"
+            }
+          ],
+          "type": "extract_dynamic_variable",
+          "speak_after_execution": false
+        },
+        {
+          "name": "explicit_confirmation",
+          "description": "set explicit_confirmation to true ONLY when the customer has verbally confirmed the exact slot that was read back. Never set it to true after the customer merely gives a name or phone number, or says anything that is not an absolute clear yes. If there is no explicit verbal agreement, set it to false. --",
+          "variables": [
+            {
+              "name": "explicit_confirmation",
+              "type": "boolean",
+              "description": "true ONLY when the customer verbally confirmed/agreed to the slot offered"
+            }
+          ],
+          "type": "extract_dynamic_variable",
+          "speak_after_execution": false
+        }
+      ]
+    },
+    "booking": {
+      "tools": [
+        {
+          "event_type_id": 6522694,
+          "cal_api_key": "${CAL_KEY_3}",
+          "cal_fields": [
+            {
+              "name": "name",
+              "description": "attendee name",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "email",
+              "description": "attendee email \u2014 use jaydiallux@gmail.com",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "attendeePhoneNumber",
+              "description": "attendee phone (E.164)",
+              "type": "string",
+              "required": false
+            },
+            {
+              "name": "title",
+              "description": "event title",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "notes",
+              "description": "engineer handover notes",
+              "type": "string",
+              "required": false
+            },
+            {
+              "name": "location",
+              "description": "address of the appointment",
+              "type": "string",
+              "required": false
+            }
+          ],
+          "timezone": "Europe/London",
+          "speak_after_execution": false,
+          "name": "book_calendar",
+          "description": "Book a confirmed appointment via Cal.com API. Only call after pre-flight check passes.",
+          "location_type": "somewhereElse",
+          "type": "book_appointment_cal"
+        },
+        {
+          "type": "extract_dynamic_variable",
+          "name": "extract_booking_details",
+          "description": "Extract missing booking details if pre-flight check fails. Pass actual values — never empty arguments.",
+          "variables": [
+            {"name": "customer_name", "type": "string", "description": "The customer's full name"},
+            {"name": "address_house_number", "type": "string", "description": "House number or property name"},
+            {"name": "booking_slot_string", "type": "string", "description": "ISO 8601 UTC with Z suffix, copied from selected_slot_start"}
+          ],
+          "speak_after_execution": false
+        }
+      ]
+    }
+  }
+}

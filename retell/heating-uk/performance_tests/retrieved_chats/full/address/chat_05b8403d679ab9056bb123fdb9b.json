@@ -1,0 +1,137 @@
+{
+  "chat_id": "chat_05b8403d679ab9056bb123fdb9b",
+  "chat_type": "api_chat",
+  "agent_id": "agent_ff9d4b9646a85b82d7ce8fd837",
+  "agent_version": 0,
+  "agent_name": "Multi State Agent",
+  "collected_dynamic_variables": {
+    "callback_requested": "false",
+    "classified_intent": "Boiler Breakdown",
+    "past_customer": "false",
+    "intent_confirmed": "true",
+    "address_postcode": "",
+    "address_confirmed": "false",
+    "problem_category": "",
+    "address_city": "",
+    "boiler_make": "",
+    "address_house_number": "",
+    "current_agent_state": "address",
+    "symptom_brief": "",
+    "intent_clear": "true",
+    "address_line1": "",
+    "address_street": "",
+    "greeting_exchanged": "true",
+    "error_code": "",
+    "customer_name": "Mike",
+    "previous_agent_state": "greeter"
+  },
+  "chat_status": "ended",
+  "start_timestamp": 1784633190188,
+  "end_timestamp": 1784633202081,
+  "transcript": "User: Hi, I need to book a boiler service. Actually wait \u2014 can I book a breakdown call-out instead? It's started making a noise.\nAgent: Boiler breakdown instead \u2014 got it. Who am I speaking with?\nUser: Mike\nAgent: Mike, got it. Is it showing an error code, or just making a noise?",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_8cfaa967ee230c7347ad9529",
+      "role": "user",
+      "created_timestamp": 1784633190887,
+      "content": "Hi, I need to book a boiler service. Actually wait \u2014 can I book a breakdown call-out instead? It's started making a noise."
+    },
+    {
+      "message_id": "message_8aad9331bbc1c7c7e1ec6b1d",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784633192420,
+      "tool_call_id": "call_CDGM8sqagkrXqAfeIBRLusZ0",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_865f093d347c4e9cdce56a98",
+      "role": "tool_call_result",
+      "created_timestamp": 1784633192421,
+      "tool_call_id": "call_CDGM8sqagkrXqAfeIBRLusZ0",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"Boiler Breakdown\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_976f809705d79426708985d7",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784633193633,
+      "tool_call_id": "call_CyFg9vPjDxbddC5dSK6cKYRF",
+      "name": "transition_to_address",
+      "arguments": "{}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_c930eb1ee7208f0217743a99",
+      "role": "state_transition",
+      "created_timestamp": 1784633193634,
+      "former_state_name": "greeter",
+      "new_state_name": "address"
+    },
+    {
+      "message_id": "message_09d8ef343dbab7ddce783cf9",
+      "role": "agent",
+      "created_timestamp": 1784633195094,
+      "content": "Boiler breakdown instead \u2014 got it. Who am I speaking with?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_d8ae9166dea3fa136aec46e0",
+      "role": "user",
+      "created_timestamp": 1784633195982,
+      "content": "Mike"
+    },
+    {
+      "message_id": "message_c751c4d12270a58fa7ef92c2",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784633197682,
+      "tool_call_id": "call_a93VyZtj7oPLneNo9eZGReMX",
+      "name": "extract_address_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_f5e0fda5a76541b1d46c0bb0",
+      "role": "tool_call_result",
+      "created_timestamp": 1784633197683,
+      "tool_call_id": "call_a93VyZtj7oPLneNo9eZGReMX",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Mike\",\"problem_category\":\"\",\"symptom_brief\":\"\",\"error_code\":\"\",\"boiler_make\":\"\",\"address_postcode\":\"\",\"address_house_number\":\"\",\"address_street\":\"\",\"address_line1\":\"\",\"address_city\":\"\",\"address_confirmed\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_25385ac6a0dc18d88aef3f76",
+      "role": "agent",
+      "created_timestamp": 1784633201319,
+      "content": "Mike, got it. Is it showing an error code, or just making a noise?",
+      "metadata": {
+        "response_id": 2
+      }
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/0636e0a8b2244c5ecef7ad498d51af68f83009f8c667e141b0ed42242f8464d2/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "combined_cost": 6.7,
+    "product_costs": [
+      {
+        "unit_price": 2.6,
+        "product": "gpt_5_4_text_testing",
+        "cost": 5.2
+      },
+      {
+        "unit_price": 1.5,
+        "product": "gpt_4_1_text_testing",
+        "cost": 1.5
+      }
+    ]
+  },
+  "chat_analysis": {
+    "chat_summary": "The user initially requested to book a boiler service but changed their request to a breakdown call-out due to a noise from the boiler. The agent confirmed the new intent, asked for the user's name, and began gathering further details about the issue.",
+    "user_sentiment": "Neutral",
+    "custom_analysis_data": {},
+    "chat_successful": true
+  },
+  "data_storage_setting": "everything"
+}

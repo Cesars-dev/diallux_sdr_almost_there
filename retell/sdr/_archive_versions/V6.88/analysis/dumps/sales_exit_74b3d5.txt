@@ -1,0 +1,19 @@
+CALLER: This is Frank. Whoever you people are, I want to know how you got this number.
+  [extract_intake_details]
+  [intake_completed]
+  [transition_to_Discovery]
+AGENT: Got it, Frank — I hear you, that’s frustrating.  
+
+So when someone calls this number for your business and you’re tied up, who usually ends up answering the phone, if anyone?
+CALLER: None of your damn business who answers my phone. What do you really want?
+  [extract_discovery_details]
+AGENT: Yeah, fair enough, Frank — I hear you.  
+
+What I actually do is help businesses stop losing customers when calls go unanswered... but let me back up: what kind of work do you do tied to this number?
+CALLER: None of your damn business what kind of work I do. How do I know you're not just another liar?
+AGENT: Yeah, I hear the distrust, Frank — you’ve probably had more than a few nonsense calls.  
+
+I don’t want to waste your time or push anything on you, so I’ll keep it simple: this clearly isn’t a fit right now, and I won’t bug you further — is there anything you actually *do* want from me before I let you go?
+CALLER: Well, maybe you're not all crooks. Leave your number, I might look you up.
+AGENT: Totally fair, Frank — I’ll respect that and won’t bug you. Our company name is Dialux; you can look us up anytime and Jay’s info is right there if you ever want to talk. Thanks for hanging in there with me, and take care.
+  [end_call]

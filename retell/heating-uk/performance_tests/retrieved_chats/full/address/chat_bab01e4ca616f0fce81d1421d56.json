@@ -1,0 +1,241 @@
+{
+  "chat_id": "chat_bab01e4ca616f0fce81d1421d56",
+  "chat_type": "api_chat",
+  "agent_id": "agent_ff9d4b9646a85b82d7ce8fd837",
+  "agent_version": 0,
+  "agent_name": "Multi State Agent",
+  "collected_dynamic_variables": {
+    "callback_requested": "false",
+    "classified_intent": "Heat Pump Enquiry",
+    "past_customer": "false",
+    "intent_confirmed": "true",
+    "address_postcode": "NE7 7GG",
+    "address_incomplete": "true",
+    "address_city": "",
+    "address_house_number": "12",
+    "current_agent_state": "address",
+    "intent_clear": "true",
+    "address_street": "Park Rd",
+    "greeting_exchanged": "true",
+    "customer_name": "Alex",
+    "previous_agent_state": "greeter"
+  },
+  "chat_status": "ended",
+  "start_timestamp": 1784638495693,
+  "end_timestamp": 1784638521010,
+  "transcript": "User: Hi, I'm interested in getting a heat pump. What's the process?\nAgent: Right, heat pump enquiry. An estimator handles that. What sort of property is it?\nUser: Alex\nAgent: Alex, got it. What sort of property is it?\nUser: 12 Park Rd, NE7 7GG\nAgent: 12 Park Road, NE7 7GG \u2014 got it. Which town or city is that in?\nUser: Yes, that's correct\nAgent: Perfect. What sort of property is it?\nUser: Tomorrow works\nAgent: Tomorrow works. I can pass that on for the estimator.\nUser: Yes, book it\nAgent: Brilliant. Is it a house, flat, bungalow, or something else?\nUser: That's all, thanks",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_37cd08f2c55fcd5bc2c0b009",
+      "role": "user",
+      "created_timestamp": 1784638496381,
+      "content": "Hi, I'm interested in getting a heat pump. What's the process?"
+    },
+    {
+      "message_id": "message_80562003ccf7f48283cefcc0",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638498433,
+      "tool_call_id": "call_xVMQ8diuXfzcNAekZFwFfFq5",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_51771313708a442122775cff",
+      "role": "tool_call_result",
+      "created_timestamp": 1784638498434,
+      "tool_call_id": "call_xVMQ8diuXfzcNAekZFwFfFq5",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"Heat Pump Enquiry\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_9b9b2cb71081e9934b1be063",
+      "role": "agent",
+      "created_timestamp": 1784638500278,
+      "content": "Right, heat pump enquiry. An estimator handles that. What sort of property is it?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_d344c6c26eedffcadc6bca27",
+      "role": "user",
+      "created_timestamp": 1784638501058,
+      "content": "Alex"
+    },
+    {
+      "message_id": "message_13f22a9476c969e95c2e4609",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638503025,
+      "tool_call_id": "call_HoD5HeVIS1UQ061m6psZxRNW",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_99c396610fda94df37b847cf",
+      "role": "tool_call_result",
+      "created_timestamp": 1784638503026,
+      "tool_call_id": "call_HoD5HeVIS1UQ061m6psZxRNW",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Alex\",\"classified_intent\":\"Heat Pump Enquiry\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_53a47bd5ccc15757e43a3bd7",
+      "role": "agent",
+      "created_timestamp": 1784638504490,
+      "content": "Alex, got it. What sort of property is it?",
+      "metadata": {
+        "response_id": 2
+      }
+    },
+    {
+      "message_id": "message_067d395496d8faf9d032ffec",
+      "role": "user",
+      "created_timestamp": 1784638505338,
+      "content": "12 Park Rd, NE7 7GG"
+    },
+    {
+      "message_id": "message_7ed79ccfacf361d1443521cc",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638507079,
+      "tool_call_id": "call_GiBtn74H7BnvmFFtPy959jkU",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_7486c77da78eb0aee1359b72",
+      "role": "tool_call_result",
+      "created_timestamp": 1784638507080,
+      "tool_call_id": "call_GiBtn74H7BnvmFFtPy959jkU",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Alex\",\"classified_intent\":\"Heat Pump Enquiry\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"12\",\"address_street\":\"Park Rd\",\"address_postcode\":\"NE7 7GG\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_ac51de2b6cd2cdd0f1699a8e",
+      "role": "agent",
+      "created_timestamp": 1784638508326,
+      "content": "12 Park Road, NE7 7GG \u2014 got it. Which town or city is that in?",
+      "metadata": {
+        "response_id": 3
+      }
+    },
+    {
+      "message_id": "message_a8a57950cb775485dfb664bb",
+      "role": "user",
+      "created_timestamp": 1784638509211,
+      "content": "Yes, that's correct"
+    },
+    {
+      "message_id": "message_20bd9f6fd85493e154af9a43",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638510752,
+      "tool_call_id": "call_tBjjSkN9zXAagiq8rclw0xPz",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_4626b93a8a47b300549d33b2",
+      "role": "tool_call_result",
+      "created_timestamp": 1784638510753,
+      "tool_call_id": "call_tBjjSkN9zXAagiq8rclw0xPz",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Alex\",\"classified_intent\":\"Heat Pump Enquiry\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"12\",\"address_street\":\"Park Rd\",\"address_postcode\":\"NE7 7GG\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_6b938167801bd894aca08933",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638511759,
+      "tool_call_id": "call_SEnVA9RKL0kbxzcoHy0HwdeM",
+      "name": "transition_to_address",
+      "arguments": "{}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_4d5b97d1f3d09a504c657fae",
+      "role": "state_transition",
+      "created_timestamp": 1784638511760,
+      "former_state_name": "greeter",
+      "new_state_name": "address"
+    },
+    {
+      "message_id": "message_4df22fe2c63b25dd6831d899",
+      "role": "agent",
+      "created_timestamp": 1784638514952,
+      "content": "Perfect. What sort of property is it?",
+      "metadata": {
+        "response_id": 4
+      }
+    },
+    {
+      "message_id": "message_38e11f116a89e0a2af9966f3",
+      "role": "user",
+      "created_timestamp": 1784638515827,
+      "content": "Tomorrow works"
+    },
+    {
+      "message_id": "message_2d3bee8baf871963ab96988f",
+      "role": "agent",
+      "created_timestamp": 1784638517014,
+      "content": "Tomorrow works. I can pass that on for the estimator.",
+      "metadata": {
+        "response_id": 5
+      }
+    },
+    {
+      "message_id": "message_86e587e242e1aa27ec85d9c2",
+      "role": "user",
+      "created_timestamp": 1784638517802,
+      "content": "Yes, book it"
+    },
+    {
+      "message_id": "message_f73287b998551d3318ef8f17",
+      "role": "agent",
+      "created_timestamp": 1784638519231,
+      "content": "Brilliant. Is it a house, flat, bungalow, or something else?",
+      "metadata": {
+        "response_id": 6
+      }
+    },
+    {
+      "message_id": "message_a66bf0036d797c5486c0fe20",
+      "role": "user",
+      "created_timestamp": 1784638520019,
+      "content": "That's all, thanks"
+    },
+    {
+      "message_id": "message_3646fcdce6f221d6be872109",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638520980,
+      "tool_call_id": "call_JCi2cla6ksuZZoSu2udJwn07",
+      "name": "end_call",
+      "arguments": "{}",
+      "type": "end_call"
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/62aa59f86b946895f4739001c41d28ab5817e071a834aaebd439575d6b98036f/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "combined_cost": 17.1,
+    "product_costs": [
+      {
+        "unit_price": 2.6,
+        "product": "gpt_5_4_text_testing",
+        "cost": 15.600000000000001
+      },
+      {
+        "unit_price": 1.5,
+        "product": "gpt_4_1_text_testing",
+        "cost": 1.5
+      }
+    ]
+  },
+  "chat_analysis": {
+    "chat_summary": "The user, Alex, inquired about getting a heat pump and provided their address for an estimator visit. The agent confirmed the details and arranged for an estimator to visit the next day, confirming the booking process. The user ended the conversation politely after the booking was acknowledged.",
+    "user_sentiment": "Positive",
+    "custom_analysis_data": {},
+    "chat_successful": true
+  },
+  "data_storage_setting": "everything"
+}

@@ -1,0 +1,25 @@
+[
+  {
+    "description": "When slot_verified is true - verify_info confirmed every value and the prospect confirmed the slot - transition to Booking to book it.",
+    "speak_during_transition": false,
+    "destination_state_name": "Booking",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "slot_verified": {
+          "type": "boolean",
+          "description": "true ONLY when verify_info returned data_complete:true."
+        },
+        "selected_time": {
+          "type": "string",
+          "description": "The chosen slot's `time` value copied verbatim."
+        },
+        "prospect_timezone": {
+          "type": "string",
+          "description": "IANA timezone of the selected time."
+        }
+      },
+      "required": ["slot_verified", "selected_time", "prospect_timezone"]
+    }
+  }
+]

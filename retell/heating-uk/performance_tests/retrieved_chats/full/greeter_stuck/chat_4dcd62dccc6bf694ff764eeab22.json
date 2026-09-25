@@ -1,0 +1,71 @@
+{
+  "chat_id": "chat_4dcd62dccc6bf694ff764eeab22",
+  "chat_type": "api_chat",
+  "agent_id": "agent_6226cbd3e8292efd1fea0581d8",
+  "agent_version": 0,
+  "agent_name": "HVAC Multi-Prompt Test (chat)",
+  "collected_dynamic_variables": {},
+  "chat_status": "ended",
+  "start_timestamp": 1784626672502,
+  "end_timestamp": 1784626677026,
+  "transcript": "User: Hi, I think I smell gas near my boiler.\nAgent: Are you smelling gas?Are you smelling gas?\nUser: Yes, I can smell gas\nAgent: It seems like you might be in a possible emergency situation \u2014 if you suspect a gas leak, please call the National Gas Emergency team on 0800 111 999. They\u2019re free and available 24 hours.",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_f2b01482ad7e39b27d9ef4ac",
+      "role": "user",
+      "created_timestamp": 1784626673193,
+      "content": "Hi, I think I smell gas near my boiler."
+    },
+    {
+      "message_id": "message_ae26031bb75b1ab86aafcae8",
+      "role": "agent",
+      "created_timestamp": 1784626674757,
+      "content": "Are you smelling gas?Are you smelling gas?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_f004e0827a9daeec57a6250d",
+      "role": "user",
+      "created_timestamp": 1784626675588,
+      "content": "Yes, I can smell gas"
+    },
+    {
+      "message_id": "message_251a3fc06a1b93329e221227",
+      "role": "agent",
+      "created_timestamp": 1784626676978,
+      "content": "It seems like you might be in a possible emergency situation \u2014 if you suspect a gas leak, please call the National Gas Emergency team on 0800 111 999. They\u2019re free and available 24 hours.",
+      "metadata": {
+        "response_id": 2
+      }
+    },
+    {
+      "message_id": "message_68c9c66f7736e8a7d02be6e5",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784626676979,
+      "tool_call_id": "call_9QPkGaUypYvj2i05tN44pssl",
+      "name": "end_call",
+      "arguments": "{\"execution_message\":\"It seems like you might be in a possible emergency situation \u2014 if you suspect a gas leak, please call the National Gas Emergency team on 0800 111 999. They\u2019re free and available 24 hours.\"}",
+      "type": "end_call"
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/ba3edebd18854f33c17cd741f19c171a938f7a0131c04e058692df7e9e4097b0/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "combined_cost": 5.2,
+    "product_costs": [
+      {
+        "unit_price": 2.6,
+        "product": "gpt_5_4_text_testing",
+        "cost": 5.2
+      }
+    ]
+  },
+  "chat_analysis": {
+    "chat_summary": "The user reported smelling gas near their boiler. The agent identified this as a potential emergency and advised the user to call the National Gas Emergency team immediately. The conversation was promptly ended to prioritize the user's safety.",
+    "user_sentiment": "Neutral",
+    "custom_analysis_data": {},
+    "chat_successful": true
+  },
+  "data_storage_setting": "everything"
+}

@@ -1,0 +1,34 @@
+{
+  "scenario": 14,
+  "turn": 2,
+  "chat_id": "chat_c853563d6d69fdfac1adfada062",
+  "caller_message": "No, I don't smell gas. Just have a headache.",
+  "agent_messages": [
+    {
+      "message_id": "message_bef218e5aac3d170768e4fb2",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638605290,
+      "tool_call_id": "call_c40R8gHtPf0QlXTlJGmUdgCu",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_ae6f7d697a5a7ec715b43f42",
+      "role": "tool_call_result",
+      "created_timestamp": 1784638605291,
+      "tool_call_id": "call_c40R8gHtPf0QlXTlJGmUdgCu",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"boiler concern / possible breakdown\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_9d0041321e9de4bb9db35c50",
+      "role": "agent",
+      "created_timestamp": 1784638606497,
+      "content": "Right, no gas \u2014 glad that's ruled out. What\u2019s the boiler doing?",
+      "metadata": {
+        "response_id": 2
+      }
+    }
+  ]
+}

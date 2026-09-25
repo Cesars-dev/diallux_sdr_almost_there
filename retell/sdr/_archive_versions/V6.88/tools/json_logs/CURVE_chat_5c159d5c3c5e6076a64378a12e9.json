@@ -1,0 +1,220 @@
+{
+  "chat_id": "chat_5c159d5c3c5e6076a64378a12e9",
+  "chat_type": "api_chat",
+  "agent_id": "agent_d355c76e75908afc4e944fb3be",
+  "agent_version": 0,
+  "agent_name": "V6.88",
+  "retell_llm_dynamic_variables": {
+    "today_date": "2026-08-24",
+    "callback_number": "+12065550033"
+  },
+  "collected_dynamic_variables": {
+    "previous_agent_state": "Intake",
+    "industry": "other",
+    "pain_urgency": "low",
+    "pain_frame": "does not want to use software/AI for bookings",
+    "interest_topic": "clear communication with a human",
+    "call_volume": "unknown",
+    "current_agent_state": "Discovery",
+    "pain_points": "does not want to use software/AI for bookings",
+    "inbound_channel": "other",
+    "intake_completed": "true",
+    "interest_signal": "false",
+    "pattern_matched": "false"
+  },
+  "chat_status": "ended",
+  "start_timestamp": 1787606437469,
+  "end_timestamp": 1787606462424,
+  "transcript": "User: Before you start your pitch — is this one of those AI robots? Be straight with me.\nAgent: Yeah, it is — I’m Linda, an AI assistant on Jay’s team at Dialux, and I handle the intro side so he can do the deep dive with you live.  \n\nWhat made you pick up the phone and call in today?\nUser: Great, a robot answering robots. Just have Jay, the actual human, call me back. I'm not booking anything with AI.\nAgent: Got it, I hear you — you’d rather talk straight with Jay than book through me.  \n\nSo I can let him know how urgent this is, what made you start looking for help with your calls right now?\nUser: I just need a human for clear communication. No urgency, just not dealing with software for bookings.\nAgent: Mhm, makes sense — you want a real person handling things, not another layer of software.  \n\nWhen a customer calls and you’re busy or away from the phone, what usually happens to that call right now?\nUser: We handle calls directly. If missed, they leave a message, and we call back personally. Simple and straightforward.\nAgent: Got it, so either you or your team picks up, and if you miss it, voicemail and a personal call-back.  \n\nWhen you think about the last few weeks, have there been any callers who didn’t leave a message and you just never knew who they were?\nUser: Yeah, happens sometimes, but I'd rather miss a call than deal with an automated system. Just personal preference.\nAgent: Totally hear you — you’d rather protect that personal feel, even if it means a few calls slip by.  \n\nSince you’re not looking to change how you book right now, is there anything specific you wanted Jay to explain, or should I just let him know you’re not interested at this time?\nUser: Just let Jay know I'm not interested now. Appreciate a real human callback, but no booking today.\nAgent: Got it, I’ll let Jay know you’re not interested right now and that you prefer a human if anything changes down the line, and he can reach out to you at the number you’re calling from if needed. There’s nothing else you need to do on your side. Thanks for taking the time to explain your preferences — I’ll let you go here. Take care.",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_dcdb79c8f61b13dc12428697",
+      "role": "user",
+      "created_timestamp": 1787606438185,
+      "content": "Before you start your pitch — is this one of those AI robots? Be straight with me."
+    },
+    {
+      "message_id": "message_9a8aa75cfffcd53b3b8a6a0b",
+      "role": "agent",
+      "created_timestamp": 1787606439545,
+      "content": "Yeah, it is — I’m Linda, an AI assistant on Jay’s team at Dialux, and I handle the intro side so he can do the deep dive with you live.  \n\nWhat made you pick up the phone and call in today?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_8b04b1af01b888dad4470da1",
+      "role": "user",
+      "created_timestamp": 1787606441468,
+      "content": "Great, a robot answering robots. Just have Jay, the actual human, call me back. I'm not booking anything with AI."
+    },
+    {
+      "message_id": "message_48944b46777f92a1317d113f",
+      "role": "agent",
+      "created_timestamp": 1787606442907,
+      "content": "Got it, I hear you — you’d rather talk straight with Jay than book through me.  \n\nSo I can let him know how urgent this is, what made you start looking for help with your calls right now?",
+      "metadata": {
+        "response_id": 2
+      }
+    },
+    {
+      "message_id": "message_be765c21ea15aea7d31d7f48",
+      "role": "user",
+      "created_timestamp": 1787606444792,
+      "content": "I just need a human for clear communication. No urgency, just not dealing with software for bookings."
+    },
+    {
+      "message_id": "message_3ea21e3e9e96b7769b2f9336",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787606446340,
+      "tool_call_id": "call_SO3ZRdWSnqPiBsyaQhvuEh1b",
+      "name": "extract_intake_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_d38ca2114f6640621400772f",
+      "role": "tool_call_result",
+      "created_timestamp": 1787606446341,
+      "tool_call_id": "call_SO3ZRdWSnqPiBsyaQhvuEh1b",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"inbound_channel\":\"other\",\"interest_topic\":\"clear communication with a human\",\"pain_frame\":\"does not want to use software/AI for bookings\"}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_03da73c759049df47ee82e77",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787606447180,
+      "tool_call_id": "call_YrGFY0fvNsDIcf0whSA6CSnI",
+      "name": "intake_completed",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_b8bfdd3884759b61c28bbeb9",
+      "role": "tool_call_result",
+      "created_timestamp": 1787606447181,
+      "tool_call_id": "call_YrGFY0fvNsDIcf0whSA6CSnI",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"intake_completed\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_b4e5a11512ca9b26d4307e82",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787606448181,
+      "tool_call_id": "call_Q2BVuqrxmgwoxwAap8XNx6MF",
+      "name": "transition_to_Discovery",
+      "arguments": "{\"interest_topic\":\"clear communication with a human\",\"pain_frame\":\"does not want to use software/AI for bookings\",\"intake_completed\":true,\"inbound_channel\":\"other\"}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_f0dc3499cfba2b0f45aca932",
+      "role": "state_transition",
+      "created_timestamp": 1787606448182,
+      "former_state_name": "Intake",
+      "new_state_name": "Discovery"
+    },
+    {
+      "message_id": "message_321675b30616c65aa736bd73",
+      "role": "agent",
+      "created_timestamp": 1787606449355,
+      "content": "Mhm, makes sense — you want a real person handling things, not another layer of software.  \n\nWhen a customer calls and you’re busy or away from the phone, what usually happens to that call right now?",
+      "metadata": {
+        "response_id": 3
+      }
+    },
+    {
+      "message_id": "message_1be62063bdbb9071a0f4ae41",
+      "role": "user",
+      "created_timestamp": 1787606451747,
+      "content": "We handle calls directly. If missed, they leave a message, and we call back personally. Simple and straightforward."
+    },
+    {
+      "message_id": "message_c7a1d17c00b9cbd303f4b16c",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787606452854,
+      "tool_call_id": "call_7DRZZaBbtqoitj2AHJsz0Dgm",
+      "name": "extract_discovery_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_dfb897ac8c949652eaff052b",
+      "role": "tool_call_result",
+      "created_timestamp": 1787606452855,
+      "tool_call_id": "call_7DRZZaBbtqoitj2AHJsz0Dgm",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"industry\":\"other\",\"pain_points\":\"does not want to use software/AI for bookings\",\"interest_signal\":false,\"pattern_matched\":false,\"call_volume\":\"unknown\",\"pain_urgency\":\"low\"}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_c06420dcdbaf78168efe7c4d",
+      "role": "agent",
+      "created_timestamp": 1787606454551,
+      "content": "Got it, so either you or your team picks up, and if you miss it, voicemail and a personal call-back.  \n\nWhen you think about the last few weeks, have there been any callers who didn’t leave a message and you just never knew who they were?",
+      "metadata": {
+        "response_id": 4
+      }
+    },
+    {
+      "message_id": "message_b9686c7963c47ce33a7b6294",
+      "role": "user",
+      "created_timestamp": 1787606456501,
+      "content": "Yeah, happens sometimes, but I'd rather miss a call than deal with an automated system. Just personal preference."
+    },
+    {
+      "message_id": "message_32d4534235bb2c5acac78053",
+      "role": "agent",
+      "created_timestamp": 1787606458902,
+      "content": "Totally hear you — you’d rather protect that personal feel, even if it means a few calls slip by.  \n\nSince you’re not looking to change how you book right now, is there anything specific you wanted Jay to explain, or should I just let him know you’re not interested at this time?",
+      "metadata": {
+        "response_id": 5
+      }
+    },
+    {
+      "message_id": "message_663fcadd567bdfc292881d64",
+      "role": "user",
+      "created_timestamp": 1787606460730,
+      "content": "Just let Jay know I'm not interested now. Appreciate a real human callback, but no booking today."
+    },
+    {
+      "message_id": "message_6bee7cfd016947c6f708cf44",
+      "role": "agent",
+      "created_timestamp": 1787606462344,
+      "content": "Got it, I’ll let Jay know you’re not interested right now and that you prefer a human if anything changes down the line, and he can reach out to you at the number you’re calling from if needed. There’s nothing else you need to do on your side. Thanks for taking the time to explain your preferences — I’ll let you go here. Take care.",
+      "metadata": {
+        "response_id": 6
+      }
+    },
+    {
+      "message_id": "message_c81cee8769741d56b652394b",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787606462345,
+      "tool_call_id": "call_NqNSDZZ4tB2hdH6SyANIUS2F",
+      "name": "end_call",
+      "arguments": "{\"execution_message\":\"Got it, I’ll let Jay know you’re not interested right now and that you prefer a human if anything changes down the line, and he can reach out to you at the number you’re calling from if needed. There’s nothing else you need to do on your side. Thanks for taking the time to explain your preferences — I’ll let you go here. Take care.\"}",
+      "type": "end_call"
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/d2d4df9d309ce74a06e6a75e0ccf099a6805d0befb00e220d075283bb645b2ff/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "product_costs": [
+      {
+        "unit_price": 1.3,
+        "cost": 7.800000000000001,
+        "product": "gpt_5_1_text_testing"
+      },
+      {
+        "cost": 1.5,
+        "product": "gpt_4_1_text_testing",
+        "unit_price": 1.5
+      }
+    ],
+    "combined_cost": 9.3
+  },
+  "chat_analysis": {
+    "user_sentiment": "Negative",
+    "custom_analysis_data": {},
+    "chat_successful": true,
+    "chat_summary": "The user called to request direct communication with a human and expressed a strong preference against using AI or software for bookings. The agent acknowledged the user's preferences, gathered relevant intake details, and confirmed that Jay, the human team member, would be informed of the user's request for a callback and lack of interest in booking today. The conversation ended amicably with the agent respecting the user's wishes."
+  },
+  "data_storage_setting": "everything"
+}

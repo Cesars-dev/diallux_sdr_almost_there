@@ -1,0 +1,43 @@
+{
+  "scenario": 1,
+  "turn": 4,
+  "chat_id": "chat_7e5598099766b8626b339e0c51f",
+  "caller_message": "Tomorrow morning works",
+  "agent_messages": [
+    {
+      "message_id": "message_42a08d25e4606c1a35f1d903",
+      "role": "agent",
+      "created_timestamp": 1784640651932,
+      "content": "Tomorrow morning works, got it.",
+      "metadata": {
+        "response_id": 5
+      }
+    },
+    {
+      "message_id": "message_79812a9422cada9506ca9fc1",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784640651933,
+      "tool_call_id": "call_BFAUyDJ9JidN5PFi6URgvSzh",
+      "name": "check_availability",
+      "arguments": "{\"start_time\":\"2026-07-22T00:00:00\",\"end_time\":\"2026-07-23T23:59:00\",\"timezone\":\"Europe/London\",\"execution_message\":\"Tomorrow morning works, got it.\"}",
+      "type": "check_availability_cal"
+    },
+    {
+      "message_id": "message_9412a752eec6be400e53fe34",
+      "role": "tool_call_result",
+      "created_timestamp": 1784640652500,
+      "tool_call_id": "call_BFAUyDJ9JidN5PFi6URgvSzh",
+      "content": "{\"availability_for_selected_time\":[{\"date\":\"Thursday, 2026 July 7/23/2026 British Summer Time\",\"availability_range\":[\"From 9:30 AM to 1:00 PM\",\"From 1:30 PM to 7:00 PM\"]}]}",
+      "successful": true
+    },
+    {
+      "message_id": "message_d4e722bd5822818f6d173903",
+      "role": "agent",
+      "created_timestamp": 1784640653850,
+      "content": "Closest I\u2019ve got is Thursday morning, between half nine and one. Sound okay?",
+      "metadata": {
+        "response_id": 6
+      }
+    }
+  ]
+}

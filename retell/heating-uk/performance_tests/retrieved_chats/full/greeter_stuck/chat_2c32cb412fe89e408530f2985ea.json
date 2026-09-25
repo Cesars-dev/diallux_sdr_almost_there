@@ -1,0 +1,96 @@
+{
+  "chat_id": "chat_2c32cb412fe89e408530f2985ea",
+  "chat_type": "api_chat",
+  "agent_id": "agent_ff9d4b9646a85b82d7ce8fd837",
+  "agent_version": 0,
+  "agent_name": "Multi State Agent",
+  "collected_dynamic_variables": {
+    "address_house_number": "",
+    "callback_requested": "false",
+    "intent_clear": "true",
+    "classified_intent": "boiler issue",
+    "address_street": "",
+    "past_customer": "false",
+    "greeting_exchanged": "true",
+    "intent_confirmed": "true",
+    "address_postcode": "",
+    "customer_name": "",
+    "address_city": ""
+  },
+  "chat_status": "ended",
+  "start_timestamp": 1784633834475,
+  "end_timestamp": 1784633841226,
+  "transcript": "User: Hi, I've had a headache all day and I'm worried it might be the boiler.\nAgent: British Heat Services, Tom speaking \u2014 are you smelling gas?British Heat Services, Tom speaking \u2014 are you smelling gas?\nUser: No, I don't smell gas. Just have a headache.\nAgent: Headache only, understood. Please call 0800 111 999 now.",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_6d389323dacc3eb14100f367",
+      "role": "user",
+      "created_timestamp": 1784633835146,
+      "content": "Hi, I've had a headache all day and I'm worried it might be the boiler."
+    },
+    {
+      "message_id": "message_73c97062d99f03e5d15ea907",
+      "role": "agent",
+      "created_timestamp": 1784633836608,
+      "content": "British Heat Services, Tom speaking \u2014 are you smelling gas?British Heat Services, Tom speaking \u2014 are you smelling gas?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_4973ca7b25e0308801bcc17f",
+      "role": "user",
+      "created_timestamp": 1784633837441,
+      "content": "No, I don't smell gas. Just have a headache."
+    },
+    {
+      "message_id": "message_483d54ea61b0b4c5080bf1bf",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784633839007,
+      "tool_call_id": "call_6LQpRirheCGzg1fwZI04JG2S",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_e40b10e832ee03e262158717",
+      "role": "tool_call_result",
+      "created_timestamp": 1784633839008,
+      "tool_call_id": "call_6LQpRirheCGzg1fwZI04JG2S",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"boiler issue\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_5413b4b9a82e1d2f59a23f29",
+      "role": "agent",
+      "created_timestamp": 1784633840316,
+      "content": "Headache only, understood. Please call 0800 111 999 now.",
+      "metadata": {
+        "response_id": 2
+      }
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/f4158d2fb5d5dc2ce1b268bc0f706275d45ad8a7531a08978cd6bd81bfc29895/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "combined_cost": 6.7,
+    "product_costs": [
+      {
+        "unit_price": 2.6,
+        "product": "gpt_5_4_text_testing",
+        "cost": 5.2
+      },
+      {
+        "unit_price": 1.5,
+        "product": "gpt_4_1_text_testing",
+        "cost": 1.5
+      }
+    ]
+  },
+  "chat_analysis": {
+    "chat_summary": "The user reported having a headache and expressed concern that it might be related to their boiler. The agent clarified whether the user smelled gas and, upon learning there was no gas smell, advised the user to call the emergency gas number for safety. The conversation was concise and focused on safety advice.",
+    "user_sentiment": "Neutral",
+    "custom_analysis_data": {},
+    "chat_successful": true
+  },
+  "data_storage_setting": "everything"
+}

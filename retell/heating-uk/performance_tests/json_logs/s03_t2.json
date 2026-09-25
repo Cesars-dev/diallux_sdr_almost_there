@@ -1,0 +1,34 @@
+{
+  "scenario": 3,
+  "turn": 2,
+  "chat_id": "chat_928f27c32f25fdc984d1794af42",
+  "caller_message": "My name is Sarah. The boiler's losing pressure. I'm at 14 Victoria Terrace, Newcastle.",
+  "agent_messages": [
+    {
+      "message_id": "message_485c77ae1bf91b3acb7a55aa",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639778737,
+      "tool_call_id": "call_jFsW1OviXV6Ld7bPG7ZnkIRt",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_348e34a1bf2fc6262c3280d6",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639778738,
+      "tool_call_id": "call_jFsW1OviXV6Ld7bPG7ZnkIRt",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Sarah\",\"classified_intent\":\"engineer visit\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"14\",\"address_street\":\"Victoria Terrace\",\"address_postcode\":\"NE4 5AB\",\"address_city\":\"Newcastle\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_a65d7a17e1e4d550ba71fcfc",
+      "role": "agent",
+      "created_timestamp": 1784639780834,
+      "content": "Sarah, boiler losing pressure at 14 Victoria Terrace, Newcastle \u2014 got it. Is that right?",
+      "metadata": {
+        "response_id": 2
+      }
+    }
+  ]
+}

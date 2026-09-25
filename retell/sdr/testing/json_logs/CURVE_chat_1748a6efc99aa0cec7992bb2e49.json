@@ -1,0 +1,109 @@
+{
+  "chat_id": "chat_1748a6efc99aa0cec7992bb2e49",
+  "chat_type": "api_chat",
+  "agent_id": "agent_edf1437704e976c53539c7effe",
+  "agent_version": 0,
+  "agent_name": "V7.5_lean",
+  "retell_llm_dynamic_variables": {
+    "today_date": "2026-08-25"
+  },
+  "collected_dynamic_variables": {},
+  "chat_status": "ended",
+  "start_timestamp": 1787706105440,
+  "end_timestamp": 1787706119154,
+  "transcript": "User: This is Frank. Whoever you people are, I want to know how you got this number.\nAgent: Frank, I hear you—getting an unexpected call can feel intrusive. Did you see an ad, fill out a form, or request info about missed calls recently?\nUser: None of your damn business. I didn’t ask for anything from you liars and thieves.\nAgent: I hear you, Frank—I’m not here to argue. Do you want me to remove your number from our list?\nUser: Yeah, remove it. Guarantees from outfits like yours evaporate when there's a problem. Show me a real customer I can call.\nAgent: Got it—I’ll take you off our list. Before I do, what’s the best business name to remove so we don’t contact you again?\nUser: None of your damn business. Just take my number off your list and don't bother me again.\nAgent: Understood, Frank—I won’t contact you again from Dialux. Is there anything else before I let you go?",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_a0262b78f015a3e223cd34dc",
+      "role": "user",
+      "created_timestamp": 1787706106072,
+      "content": "This is Frank. Whoever you people are, I want to know how you got this number."
+    },
+    {
+      "message_id": "message_c2574bfffaa74fed4b74e4e4",
+      "role": "agent",
+      "created_timestamp": 1787706107997,
+      "content": "Frank, I hear you—getting an unexpected call can feel intrusive. Did you see an ad, fill out a form, or request info about missed calls recently?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_7d0c11891bbe30798649978a",
+      "role": "user",
+      "created_timestamp": 1787706110683,
+      "content": "None of your damn business. I didn’t ask for anything from you liars and thieves."
+    },
+    {
+      "message_id": "message_fc314be1422aab09cf15c442",
+      "role": "agent",
+      "created_timestamp": 1787706112108,
+      "content": "I hear you, Frank—I’m not here to argue. Do you want me to remove your number from our list?",
+      "metadata": {
+        "response_id": 2
+      }
+    },
+    {
+      "message_id": "message_026ea011913ee68e30c31b6c",
+      "role": "user",
+      "created_timestamp": 1787706114063,
+      "content": "Yeah, remove it. Guarantees from outfits like yours evaporate when there's a problem. Show me a real customer I can call."
+    },
+    {
+      "message_id": "message_365454545ed80eae5800f7b7",
+      "role": "agent",
+      "created_timestamp": 1787706115570,
+      "content": "Got it—I’ll take you off our list. Before I do, what’s the best business name to remove so we don’t contact you again?",
+      "metadata": {
+        "response_id": 3
+      }
+    },
+    {
+      "message_id": "message_61fcdbb24f982f3bd83bb807",
+      "role": "user",
+      "created_timestamp": 1787706117389,
+      "content": "None of your damn business. Just take my number off your list and don't bother me again."
+    },
+    {
+      "message_id": "message_a4654d0103d1c3fc29b4fd5f",
+      "role": "agent",
+      "created_timestamp": 1787706118992,
+      "content": "Understood, Frank—I won’t contact you again from Dialux. Is there anything else before I let you go?",
+      "metadata": {
+        "response_id": 4
+      }
+    },
+    {
+      "message_id": "message_f9a37e37f83cf29e02ae93fb",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787706118993,
+      "tool_call_id": "call_iiUwhyXCwNg6chvGU5LReQWA",
+      "name": "end_call",
+      "arguments": "{\"execution_message\":\"Understood, Frank—I won’t contact you again from Dialux. Is there anything else before I let you go?\"}",
+      "type": "end_call"
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/1a9274449f2d5340263eeaf514e7c53588be46a02eb0d4e022b4eb922d03849d/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "product_costs": [
+      {
+        "product": "gpt_5_2_text_testing",
+        "cost": 7.2,
+        "unit_price": 1.8
+      },
+      {
+        "product": "gpt_4_1_text_testing",
+        "cost": 1.5,
+        "unit_price": 1.5
+      }
+    ],
+    "combined_cost": 8.7
+  },
+  "chat_analysis": {
+    "user_sentiment": "Negative",
+    "custom_analysis_data": {},
+    "chat_summary": "Frank received an unsolicited call and expressed anger and distrust toward the agent, demanding to have his number removed from the contact list. The agent acknowledged Frank's request and confirmed that his number would be removed, ending the conversation without further contact.",
+    "chat_successful": true
+  },
+  "data_storage_setting": "everything"
+}

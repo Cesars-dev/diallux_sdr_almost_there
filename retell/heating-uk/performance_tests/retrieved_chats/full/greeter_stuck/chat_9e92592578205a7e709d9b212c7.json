@@ -1,0 +1,82 @@
+{
+  "chat_id": "chat_9e92592578205a7e709d9b212c7",
+  "chat_type": "api_chat",
+  "agent_id": "agent_ff9d4b9646a85b82d7ce8fd837",
+  "agent_version": 0,
+  "agent_name": "Multi State Agent",
+  "collected_dynamic_variables": {
+    "address_house_number": "",
+    "callback_requested": "false",
+    "intent_clear": "true",
+    "classified_intent": "engineer visit request",
+    "address_street": "",
+    "past_customer": "false",
+    "greeting_exchanged": "true",
+    "intent_confirmed": "false",
+    "address_postcode": "90210",
+    "customer_name": "",
+    "address_incomplete": "true",
+    "address_city": ""
+  },
+  "chat_status": "ended",
+  "start_timestamp": 1784638466226,
+  "end_timestamp": 1784638471033,
+  "transcript": "User: Hi, I need an engineer. My postcode is 90210.\nAgent: Right, engineer visit \u2014 got it. That postcode looks non-UK. Are you in the UK?",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_977ef5e5cb6dc1ced5137729",
+      "role": "user",
+      "created_timestamp": 1784638466820,
+      "content": "Hi, I need an engineer. My postcode is 90210."
+    },
+    {
+      "message_id": "message_433b06602e3677c2ed04f8a3",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638468527,
+      "tool_call_id": "call_dhxsFTUtZFxb1GqblzYUdU56",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_d131c56c0f607cdae7e21496",
+      "role": "tool_call_result",
+      "created_timestamp": 1784638468528,
+      "tool_call_id": "call_dhxsFTUtZFxb1GqblzYUdU56",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"engineer visit request\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"90210\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_a0f57589d4fd72763f0b42af",
+      "role": "agent",
+      "created_timestamp": 1784638469789,
+      "content": "Right, engineer visit \u2014 got it. That postcode looks non-UK. Are you in the UK?",
+      "metadata": {
+        "response_id": 1
+      }
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/9429b4f17567f328f9b88c04988e191454ecf7509bdbf14e901265f035162a52/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "combined_cost": 4.1,
+    "product_costs": [
+      {
+        "unit_price": 2.6,
+        "product": "gpt_5_4_text_testing",
+        "cost": 2.6
+      },
+      {
+        "unit_price": 1.5,
+        "product": "gpt_4_1_text_testing",
+        "cost": 1.5
+      }
+    ]
+  },
+  "chat_analysis": {
+    "chat_summary": "The user requested an engineer visit and provided the postcode 90210. The agent clarified that the postcode appears to be non-UK and asked the user to confirm their location. No further action was taken as the agent awaited the user's response.",
+    "user_sentiment": "Neutral",
+    "custom_analysis_data": {},
+    "chat_successful": false
+  },
+  "data_storage_setting": "everything"
+}

@@ -1,0 +1,81 @@
+{
+  "chat_id": "chat_3975a5954d9707a704a05d06d46",
+  "chat_type": "api_chat",
+  "agent_id": "agent_b29a076e9a7295d407c8242390",
+  "agent_version": 0,
+  "agent_name": "Multi State Agent",
+  "collected_dynamic_variables": {
+    "address_house_number": "",
+    "callback_requested": "false",
+    "intent_clear": "true",
+    "classified_intent": "Boiler Breakdown",
+    "address_street": "",
+    "past_customer": "false",
+    "greeting_exchanged": "true",
+    "intent_confirmed": "false",
+    "address_postcode": "",
+    "customer_name": "",
+    "address_city": ""
+  },
+  "chat_status": "ended",
+  "start_timestamp": 1784632936414,
+  "end_timestamp": 1784632940658,
+  "transcript": "User: Hello? Is this the plumber? I think my heating's not working. Or is it the water? Hold on, let me check... yes, the heating. The radiators are cold.\nAgent: Right, heating not working and the radiators are cold.\n\nWhat\u2019s your postcode?",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_44a5b78cef379f8cb3c6edc5",
+      "role": "user",
+      "created_timestamp": 1784632937071,
+      "content": "Hello? Is this the plumber? I think my heating's not working. Or is it the water? Hold on, let me check... yes, the heating. The radiators are cold."
+    },
+    {
+      "message_id": "message_8c09771d9a5eea1e989e3637",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784632938592,
+      "tool_call_id": "call_GJ1r5vt82hwPDQjB1xN2gsNn",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_1eb95aca6b74c8b12f709d3a",
+      "role": "tool_call_result",
+      "created_timestamp": 1784632938593,
+      "tool_call_id": "call_GJ1r5vt82hwPDQjB1xN2gsNn",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"Boiler Breakdown\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_e2dd75bd0ba1fefa76146ebf",
+      "role": "agent",
+      "created_timestamp": 1784632939805,
+      "content": "Right, heating not working and the radiators are cold.\n\nWhat\u2019s your postcode?",
+      "metadata": {
+        "response_id": 1
+      }
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/5939280ba60b296a17235d89c160729e3b1bc7617daf9fe30b8c83740a977bf1/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "combined_cost": 4.1,
+    "product_costs": [
+      {
+        "unit_price": 2.6,
+        "product": "gpt_5_4_text_testing",
+        "cost": 2.6
+      },
+      {
+        "unit_price": 1.5,
+        "product": "gpt_4_1_text_testing",
+        "cost": 1.5
+      }
+    ]
+  },
+  "chat_analysis": {
+    "chat_summary": "The user contacted the agent regarding an issue with their heating, specifically mentioning that the radiators are cold. The agent confirmed the problem and requested the user's postcode to proceed further.",
+    "user_sentiment": "Neutral",
+    "custom_analysis_data": {},
+    "chat_successful": true
+  },
+  "data_storage_setting": "everything"
+}

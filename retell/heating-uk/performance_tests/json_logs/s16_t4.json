@@ -1,0 +1,34 @@
+{
+  "scenario": 16,
+  "turn": 4,
+  "chat_id": "chat_233eac3606cca3a3b5b78d5b5ce",
+  "caller_message": "25",
+  "agent_messages": [
+    {
+      "message_id": "message_64fce2a523f14e761768b7fe",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638669494,
+      "tool_call_id": "call_8chhsLJcg6665cbrQjJSngeO",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_68bdad467e2a8a4b1999175e",
+      "role": "tool_call_result",
+      "created_timestamp": 1784638669495,
+      "tool_call_id": "call_8chhsLJcg6665cbrQjJSngeO",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"James\",\"classified_intent\":\"Boiler Breakdown\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"25\",\"address_street\":\"\",\"address_postcode\":\"NE3 2TH\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_b2ddfd93b231739a30550b16",
+      "role": "agent",
+      "created_timestamp": 1784638670678,
+      "content": "25, got it. What's the street name?",
+      "metadata": {
+        "response_id": 4
+      }
+    }
+  ]
+}

@@ -1,0 +1,909 @@
+{
+  "chat_id": "chat_6fb49a65f6707f3edeeb2886c44",
+  "chat_type": "api_chat",
+  "agent_id": "agent_bc0665fd64d4f94573d0520cf7",
+  "agent_version": 0,
+  "agent_name": "V7.6_verify_state",
+  "retell_llm_dynamic_variables": {
+    "callback_number": "+13125551234",
+    "today_date": "2026-08-26"
+  },
+  "collected_dynamic_variables": {
+    "objection_type": "none",
+    "pain_frame": "losing patients after hours",
+    "avg_job_value": "650",
+    "data_verified": "true",
+    "missed_calls_weekly": "20",
+    "monthly_leak": "$28,000",
+    "first_name": "Maria",
+    "discovery_completed": "true",
+    "last_name": "Gonzales",
+    "inbound_channel": "Facebook/Meta ad",
+    "intake_completed": "true",
+    "interest_signal": "true",
+    "company_name": "Bright Smile Dental",
+    "selected_time": "2026-08-27T14:30:00",
+    "is_calling_best_number": "true",
+    "contact_details_completed": "true",
+    "call_volume": "about 20 after-hours voicemail calls a week",
+    "slot_verified": "true",
+    "callback_number": "+13125551234",
+    "industry": "healthcare / medical practice",
+    "interest_topic": "answering missed calls",
+    "booking_failed": "false",
+    "pain_points": "losing patients after hours, missed calls going unanswered after-hours, after-hours calls go straight to voicemail, callers hang up instead of leaving a message, risk of patients calling competitors",
+    "offer_completed": "true",
+    "pain_urgency": "high",
+    "booking_verified": "true",
+    "prospect_timezone": "America/Chicago",
+    "today_date": "2026-08-26",
+    "livecall_agreed": "true",
+    "booking_uid": "tosSDnWmg6qeeEx152rdMa",
+    "pattern_matched": "true",
+    "closer_completed": "true",
+    "interest_level": "high",
+    "previous_agent_state": "Booking",
+    "close_rate_pct": "50",
+    "current_agent_state": "Closing",
+    "weekly_leak": "$6,500"
+  },
+  "chat_status": "ended",
+  "start_timestamp": 1787746186981,
+  "end_timestamp": 1787746326353,
+  "transcript": "User: Hi — I saw your ad on Facebook about answering missed calls. I keep losing patients after hours, so I'm curious how it works.\nAgent: Got it — after-hours is where a lot of patients slip away. When your office is closed, where do those calls go right now—voicemail, answering service, or just ringing out?\nUser: Right now, the calls go straight to voicemail after hours. We get about 20 of those a week.\nAgent: Yeah, that makes sense — voicemail after hours is where people tend to move on fast. When those 20 calls hit voicemail, do they usually leave a message, or do they hang up and call somewhere else?\nUser: Most hang up, and I worry they might call a competitor instead.\nAgent: Mhm—yeah, that’s the scary part, because you never even get a chance to help them. Mind if I do a super quick 30‑second calculation on what those missed after-hours calls could be costing you?\nUser: Sure, go ahead. I estimate about half of those voicemails would book appointments if answered.\nAgent: Got it — and what’s your average value per booked appointment, roughly, in dollars?\nUser: Our average appointment value is around $650.\nAgent: Got it — if you booked even 50% of those 20 after-hours missed calls at about $650 each, that’s about **$6500 extra a week**… and that’s roughly **$28100/mo** over a month. Does that feel about right?\nUser: Yes, that sounds about right. Capturing those calls could really boost our monthly revenue significantly.\nAgent: Totally — and that’s exactly what Dialux is built to recover when your team can’t get to the phone. It’s a 20-minute walkthrough—what’s better for you, later today or tomorrow?\nUser: Tomorrow works best for me. Can you offer some afternoon slots for the live call?\nAgent: Absolutely — before I offer times, what time zone are you in: Eastern, Central, Mountain, or Pacific?\nUser: I'm in the Central time zone, America/Chicago.\nAgent: Perfect — Central time. What’s your first name?\nUser: Maria Gonzales.\nAgent: Got it, Maria — what’s the name of your practice?\nUser: It's Bright Smile Dental in Chicago.\nAgent: Perfect, thanks — and is the number you’re calling from the best contact number to reach you?\nUser: Yes, my best contact number is +13125551234.\nAgent: Perfect. So I have Maria Gonzales with Bright Smile Dental, a contact number on file, and Central time— is that all correct?\nUser: Yes, that's correct. Let's book the live call for tomorrow. What time slots are available in the afternoon?\nAgent: Yep — for tomorrow afternoon (Central), I can do **1:00 PM** or **2:30 PM**. Which works?\nUser: Let's go with 2:30 PM Central. Yes, that's perfect — please book it for the live call.\nAgent: So that’s **tomorrow (Thu, Aug 27) at 2:30 PM Central**, correct?\nUser: Yes, that's perfect — please book it. Looking forward to the live call.\nAgent: One moment while I confirm that.\nAgent: Thanks, Maria — you’re booked for **tomorrow (Thu, Aug 27) at 2:30 PM Central** with Jay, and you’ll receive an SMS text with the confirmation details so you can add it to your calendar or reschedule if you need to.  \n\nIs there anything else I can help you with?\nUser: Sure, take your time. I'm looking forward to getting this set up.\nAgent: Appreciate it, Maria — really glad you called. Jay’s looking forward to it, and you’ll see that SMS confirmation come through shortly. Have a great rest of your day. Bye!",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_ce868100180bdbbdbe63374f",
+      "role": "user",
+      "created_timestamp": 1787746187708,
+      "content": "Hi — I saw your ad on Facebook about answering missed calls. I keep losing patients after hours, so I'm curious how it works."
+    },
+    {
+      "message_id": "message_6e2b087494176ef6de13600e",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787746189465,
+      "tool_call_id": "call_vatk0kakiAX5ndl08bwNv9Kx",
+      "name": "extract_intake_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_5fa1976024944ab4d24a6938",
+      "role": "tool_call_result",
+      "created_timestamp": 1787746189466,
+      "tool_call_id": "call_vatk0kakiAX5ndl08bwNv9Kx",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"inbound_channel\":\"Facebook/Meta ad\",\"interest_topic\":\"answering missed calls\",\"pain_frame\":\"losing patients after hours\"}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_93e3881852859d7b836192ce",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787746190876,
+      "tool_call_id": "call_ahPG8FX9ivakh9V20jxdSJLb",
+      "name": "intake_completed",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_330d1bac576b425939fe9f31",
+      "role": "tool_call_result",
+      "created_timestamp": 1787746190877,
+      "tool_call_id": "call_ahPG8FX9ivakh9V20jxdSJLb",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"intake_completed\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_3b4e07818330653afec08479",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787746195235,
+      "tool_call_id": "call_GjVEksroJt7jj0vxBANKDC4D",
+      "name": "transition_to_Discovery",
+      "arguments": "{\"intake_completed\":true,\"pain_frame\":\"losing patients after hours\",\"inbound_channel\":\"Facebook/Meta ad\",\"interest_topic\":\"answering missed calls\"}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_0636a872e70058b7896212e6",
+      "role": "state_transition",
+      "created_timestamp": 1787746195236,
+      "former_state_name": "Intake",
+      "new_state_name": "Discovery"
+    },
+    {
+      "message_id": "message_3c1d13adff995f802fe495d4",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787746197696,
+      "tool_call_id": "call_wOA2SMylBaIjzivRC34Y9Amm",
+      "name": "extract_discovery_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_1d663849e65dab2f4777a9d9",
+      "role": "tool_call_result",
+      "created_timestamp": 1787746197697,
+      "tool_call_id": "call_wOA2SMylBaIjzivRC34Y9Amm",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"industry\":\"healthcare / medical practice\",\"pain_points\":\"losing patients after hours, missed calls going unanswered after-hours\",\"interest_signal\":true,\"pattern_matched\":true,\"call_volume\":\"\",\"pain_urgency\":\"high\"}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_5c9f3fd638494c2940f84873",
+      "role": "agent",
+      "created_timestamp": 1787746199460,
+      "content": "Got it — after-hours is where a lot of patients slip away. When your office is closed, where do those calls go right now—voicemail, answering service, or just ringing out?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_ce49687ca6ea9c8a80a1c2a2",
+      "role": "user",
+      "created_timestamp": 1787746201585,
+      "content": "Right now, the calls go straight to voicemail after hours. We get about 20 of those a week."
+    },
+    {
+      "message_id": "message_29e43e5b007e5f855155686a",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787746203338,
+      "tool_call_id": "call_JC9NWwBixzQIcYLeG4ykUL60",
+      "name": "extract_discovery_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_ab74f2ac732a576b5b82a44c",
+      "role": "tool_call_result",
+      "created_timestamp": 1787746203339,
+      "tool_call_id": "call_JC9NWwBixzQIcYLeG4ykUL60",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"industry\":\"healthcare / medical practice\",\"pain_points\":\"losing patients after hours, missed calls going unanswered after-hours, after-hours calls go straight to voicemail\",\"interest_signal\":true,\"pattern_matched\":true,\"call_volume\":\"about 20 after-hours voicemail calls a week\",\"pain_urgency\":\"high\"}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_0195a797a0bf3fd68c771f43",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787746204475,
+      "tool_call_id": "call_lzRinFUUTtKYyduaMBRnSujW",
+      "name": "discovery_completed",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_bf1fcabbe102ac2b583b241e",
+      "role": "tool_call_result",
+      "created_timestamp": 1787746204476,
+      "tool_call_id": "call_lzRinFUUTtKYyduaMBRnSujW",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"discovery_completed\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_9df9f18f1111569105ccb97e",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787746205899,
+      "tool_call_id": "call_zwdOBPQCoGsz6YzvTaOCfIs9",
+      "name": "transition_to_Closer",
+      "arguments": "{\"discovery_completed\":true,\"industry\":\"healthcare / medical practice\",\"interest_signal\":true,\"pattern_matched\":true,\"pain_points\":\"losing patients after hours, missed calls going unanswered after-hours, after-hours calls go straight to voicemail\"}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_e609e447d8899bf4a0754daa",
+      "role": "state_transition",
+      "created_timestamp": 1787746205900,
+      "former_state_name": "Discovery",
+      "new_state_name": "Closer"
+    },
+    {
+      "message_id": "message_2e8ceed64fde71f034f91aaa",
+      "role": "agent",
+      "created_timestamp": 1787746208315,
+      "content": "Yeah, that makes sense — voicemail after hours is where people tend to move on fast. When those 20 calls hit voicemail, do they usually leave a message, or do they hang up and call somewhere else?",
+      "metadata": {
+        "response_id": 2
+      }
+    },
+    {
+      "message_id": "message_8d08664c09dcd6be91ae6953",
+      "role": "user",
+      "created_timestamp": 1787746210301,
+      "content": "Most hang up, and I worry they might call a competitor instead."
+    },
+    {
+      "message_id": "message_b429f415bfb6f1ec8f7a3461",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787746212223,
+      "tool_call_id": "call_EipdrofyLoReb8yRgnDPD6ci",
+      "name": "extract_closer_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_246f5cacea52f32abb2cf3f1",
+      "role": "tool_call_result",
+      "created_timestamp": 1787746212224,
+      "tool_call_id": "call_EipdrofyLoReb8yRgnDPD6ci",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"objection_type\":\"none\",\"interest_level\":\"medium\",\"last_name\":\"\",\"monthly_leak\":\"\",\"pain_points\":\"losing patients after hours, missed calls going unanswered after-hours, after-hours calls go straight to voicemail, callers hang up instead of leaving a message, risk of patients calling competitors\"}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_0a0068c91b98c02eb04331a9",
+      "role": "agent",
+      "created_timestamp": 1787746218231,
+      "content": "Mhm—yeah, that’s the scary part, because you never even get a chance to help them. Mind if I do a super quick 30‑second calculation on what those missed after-hours calls could be costing you?",
+      "metadata": {
+        "response_id": 3
+      }
+    },
+    {
+      "message_id": "message_8c6fbe2d28685706b996d0ad",
+      "role": "user",
+      "created_timestamp": 1787746219859,
+      "content": "Sure, go ahead. I estimate about half of those voicemails would book appointments if answered."
+    },
+    {
+      "message_id": "message_61685c60f878076a783ababa",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787746224166,
+      "tool_call_id": "call_Gy99MPSkJ7DBRsmO6IOQPjut",
+      "name": "extract_leak_inputs",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_e5fce40650fc6a687d9c821a",
+      "role": "tool_call_result",
+      "created_timestamp": 1787746224167,
+      "tool_call_id": "call_Gy99MPSkJ7DBRsmO6IOQPjut",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"missed_calls_weekly\":\"20\",\"close_rate_pct\":\"50\",\"avg_job_value\":\"\"}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_c962d4d8cc823f575a4af0f2",
+      "role": "agent",
+      "created_timestamp": 1787746225592,
+      "content": "Got it — and what’s your average value per booked appointment, roughly, in dollars?",
+      "metadata": {
+        "response_id": 4
+      }
+    },
+    {
+      "message_id": "message_0efcccaa6dad8104157954a3",
+      "role": "user",
+      "created_timestamp": 1787746227271,
+      "content": "Our average appointment value is around $650."
+    },
+    {
+      "message_id": "message_06f9c237a86496de0e72c2fb",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787746228690,
+      "tool_call_id": "call_lv7hRu8PCFb5Zn09c2W2S1Gj",
+      "name": "extract_leak_inputs",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_c3e7a5eda8e2f9e4cc657fc1",
+      "role": "tool_call_result",
+      "created_timestamp": 1787746228691,
+      "tool_call_id": "call_lv7hRu8PCFb5Zn09c2W2S1Gj",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"missed_calls_weekly\":\"20\",\"close_rate_pct\":\"50\",\"avg_job_value\":\"650\"}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_39d0d3436302d33603fba34e",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787746230013,
+      "tool_call_id": "call_K71BTUTKjIkgZYUOfqotLsu9",
+      "name": "calculate_monthly_leak",
+      "arguments": "{}",
+      "type": "code"
+    },
+    {
+      "message_id": "message_ec80a217b440851652e1abf6",
+      "role": "tool_call_result",
+      "created_timestamp": 1787746230028,
+      "tool_call_id": "call_K71BTUTKjIkgZYUOfqotLsu9",
+      "content": "{\"ok\":true,\"weekly_leak\":\"6500\",\"monthly_leak\":\"28100\",\"inputs_used\":{\"missed_calls_weekly\":20,\"close_rate_pct\":50,\"avg_job_value\":650}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_fe9401fba4658dffa98616f3",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787746232512,
+      "tool_call_id": "call_9l5mXjoLbt7RJT1bIhEjE7HA",
+      "name": "extract_closer_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_4edee93f82cbae3bc96e0aed",
+      "role": "tool_call_result",
+      "created_timestamp": 1787746232513,
+      "tool_call_id": "call_9l5mXjoLbt7RJT1bIhEjE7HA",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"objection_type\":\"none\",\"interest_level\":\"medium\",\"last_name\":\"\",\"monthly_leak\":\"$28100/mo\",\"pain_points\":\"losing patients after hours, missed calls going unanswered after-hours, after-hours calls go straight to voicemail, callers hang up instead of leaving a message, risk of patients calling competitors\"}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_c10c8bf1420d5ed929967cf6",
+      "role": "agent",
+      "created_timestamp": 1787746234709,
+      "content": "Got it — if you booked even 50% of those 20 after-hours missed calls at about $650 each, that’s about **$6500 extra a week**… and that’s roughly **$28100/mo** over a month. Does that feel about right?",
+      "metadata": {
+        "response_id": 5
+      }
+    },
+    {
+      "message_id": "message_d418de2736db011162f19404",
+      "role": "user",
+      "created_timestamp": 1787746236749,
+      "content": "Yes, that sounds about right. Capturing those calls could really boost our monthly revenue significantly."
+    },
+    {
+      "message_id": "message_f33823508dde1904627d9a4e",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787746239002,
+      "tool_call_id": "call_91QVP5nJ0Bji5XStFtDH4QCg",
+      "name": "extract_closer_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_88bc1403fd481e881c465fe2",
+      "role": "tool_call_result",
+      "created_timestamp": 1787746239003,
+      "tool_call_id": "call_91QVP5nJ0Bji5XStFtDH4QCg",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"objection_type\":\"none\",\"interest_level\":\"high\",\"last_name\":\"\",\"monthly_leak\":\"$28100/mo\",\"pain_points\":\"losing patients after hours, missed calls going unanswered after-hours, after-hours calls go straight to voicemail, callers hang up instead of leaving a message, risk of patients calling competitors\"}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_77a3194db63699032f928e7f",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787746240420,
+      "tool_call_id": "call_jC8Pyqw4aLS0izegusACYmhJ",
+      "name": "closer_completed",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_7bcbda2ec9abce2712f7eeca",
+      "role": "tool_call_result",
+      "created_timestamp": 1787746240421,
+      "tool_call_id": "call_jC8Pyqw4aLS0izegusACYmhJ",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"closer_completed\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_e1317c31bd1f5d90c247cf63",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787746242003,
+      "tool_call_id": "call_QvZ1bO2nUxxF6lbw3Q7ex6So",
+      "name": "transition_to_Offer",
+      "arguments": "{\"pain_points\":\"losing patients after hours, missed calls going unanswered after-hours, after-hours calls go straight to voicemail, callers hang up instead of leaving a message, risk of patients calling competitors\",\"industry\":\"healthcare / medical practice\",\"interest_level\":\"high\",\"closer_completed\":true}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_cea4ef4cabd0dc89b326d71a",
+      "role": "state_transition",
+      "created_timestamp": 1787746242004,
+      "former_state_name": "Closer",
+      "new_state_name": "Offer"
+    },
+    {
+      "message_id": "message_8f1c57e69fbc922a169d81b6",
+      "role": "agent",
+      "created_timestamp": 1787746243722,
+      "content": "Totally — and that’s exactly what Dialux is built to recover when your team can’t get to the phone. It’s a 20-minute walkthrough—what’s better for you, later today or tomorrow?",
+      "metadata": {
+        "response_id": 6
+      }
+    },
+    {
+      "message_id": "message_f013d406c474164fd28b05bd",
+      "role": "user",
+      "created_timestamp": 1787746245681,
+      "content": "Tomorrow works best for me. Can you offer some afternoon slots for the live call?"
+    },
+    {
+      "message_id": "message_f9c363aadddc75d4537e76b7",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787746251123,
+      "tool_call_id": "call_DzRxby1iopmc69z9xkIc6Hob",
+      "name": "extract_offer_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_e6314205fcc400b8f6e0622f",
+      "role": "tool_call_result",
+      "created_timestamp": 1787746251124,
+      "tool_call_id": "call_DzRxby1iopmc69z9xkIc6Hob",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"livecall_agreed\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_c48e49c6da62eabed32ac2ca",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787746252239,
+      "tool_call_id": "call_Rx5edEGutYnb3xKOIGpgPimY",
+      "name": "offer_completed",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_f65bd200af804bdb68a7ad13",
+      "role": "tool_call_result",
+      "created_timestamp": 1787746252240,
+      "tool_call_id": "call_Rx5edEGutYnb3xKOIGpgPimY",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"offer_completed\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_67cc52107affadf46a97f694",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787746253355,
+      "tool_call_id": "call_rfeYC3VoHJoXgBRGwaDFz0y3",
+      "name": "transition_to_contact_details",
+      "arguments": "{\"offer_completed\":true,\"livecall_agreed\":true}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_1ed5c7390c83345e25da904d",
+      "role": "state_transition",
+      "created_timestamp": 1787746253356,
+      "former_state_name": "Offer",
+      "new_state_name": "contact_details"
+    },
+    {
+      "message_id": "message_a0282fb21806c7256e26ba61",
+      "role": "agent",
+      "created_timestamp": 1787746255762,
+      "content": "Absolutely — before I offer times, what time zone are you in: Eastern, Central, Mountain, or Pacific?",
+      "metadata": {
+        "response_id": 7
+      }
+    },
+    {
+      "message_id": "message_5f187dc620a3fd4b79f294bc",
+      "role": "user",
+      "created_timestamp": 1787746257503,
+      "content": "I'm in the Central time zone, America/Chicago."
+    },
+    {
+      "message_id": "message_b14b02911ca292210a6e2612",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787746259027,
+      "tool_call_id": "call_6ro1EmlqlP1hYbxEa7yy4VA8",
+      "name": "extract_contact_timezone",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_a96b31892c2aa63acfb7edb9",
+      "role": "tool_call_result",
+      "created_timestamp": 1787746259028,
+      "tool_call_id": "call_6ro1EmlqlP1hYbxEa7yy4VA8",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"prospect_timezone\":\"America/Chicago\"}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_aacf417f09bb8c7e869d0c29",
+      "role": "agent",
+      "created_timestamp": 1787746260435,
+      "content": "Perfect — Central time. What’s your first name?",
+      "metadata": {
+        "response_id": 8
+      }
+    },
+    {
+      "message_id": "message_f9687a0ef9441ebc6cfb8980",
+      "role": "user",
+      "created_timestamp": 1787746262015,
+      "content": "Maria Gonzales."
+    },
+    {
+      "message_id": "message_62f2748d196ad3ab51bf838b",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787746263680,
+      "tool_call_id": "call_a5QomtfFMB6gMwLjkgtjiG6U",
+      "name": "extract_person_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_ce20c2537ad8b22c266ff884",
+      "role": "tool_call_result",
+      "created_timestamp": 1787746263681,
+      "tool_call_id": "call_a5QomtfFMB6gMwLjkgtjiG6U",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"first_name\":\"Maria\",\"last_name\":\"Gonzales\",\"company_name\":\"\"}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_f345cf37c75a26d55bd94ffa",
+      "role": "agent",
+      "created_timestamp": 1787746264938,
+      "content": "Got it, Maria — what’s the name of your practice?",
+      "metadata": {
+        "response_id": 9
+      }
+    },
+    {
+      "message_id": "message_1199b66a25d2e53bd427882d",
+      "role": "user",
+      "created_timestamp": 1787746266404,
+      "content": "It's Bright Smile Dental in Chicago."
+    },
+    {
+      "message_id": "message_5191481f0e0e9c5f464d49eb",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787746268182,
+      "tool_call_id": "call_5NTcW0AxyPFjLUWtrELVzItp",
+      "name": "extract_person_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_2537029bda9327889e5add34",
+      "role": "tool_call_result",
+      "created_timestamp": 1787746268183,
+      "tool_call_id": "call_5NTcW0AxyPFjLUWtrELVzItp",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"first_name\":\"Maria\",\"last_name\":\"Gonzales\",\"company_name\":\"Bright Smile Dental\"}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_982abee1011a81260858905a",
+      "role": "agent",
+      "created_timestamp": 1787746269694,
+      "content": "Perfect, thanks — and is the number you’re calling from the best contact number to reach you?",
+      "metadata": {
+        "response_id": 10
+      }
+    },
+    {
+      "message_id": "message_1c01abe6c59bfd357cba9166",
+      "role": "user",
+      "created_timestamp": 1787746271662,
+      "content": "Yes, my best contact number is +13125551234."
+    },
+    {
+      "message_id": "message_350f7440bab17749a8384c0c",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787746273835,
+      "tool_call_id": "call_7Tl6Zjfg860oY2kCqHwXQG8a",
+      "name": "extract_reach_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_459215687cd480677280c1e5",
+      "role": "tool_call_result",
+      "created_timestamp": 1787746273836,
+      "tool_call_id": "call_7Tl6Zjfg860oY2kCqHwXQG8a",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"callback_number\":\"+13125551234\",\"is_calling_best_number\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_12fc0d54cfe9fd783c25bea9",
+      "role": "agent",
+      "created_timestamp": 1787746275208,
+      "content": "Perfect. So I have Maria Gonzales with Bright Smile Dental, a contact number on file, and Central time— is that all correct?",
+      "metadata": {
+        "response_id": 11
+      }
+    },
+    {
+      "message_id": "message_9ae9c8c6c458c90359252e1f",
+      "role": "user",
+      "created_timestamp": 1787746277115,
+      "content": "Yes, that's correct. Let's book the live call for tomorrow. What time slots are available in the afternoon?"
+    },
+    {
+      "message_id": "message_34a75c476a2a4c79a1f2d4a4",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787746278788,
+      "tool_call_id": "call_C6kGrbNrFCjY5jg3CYbRrolZ",
+      "name": "contact_details_completed",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_95a9ab43008c7b62714d667e",
+      "role": "tool_call_result",
+      "created_timestamp": 1787746278789,
+      "tool_call_id": "call_C6kGrbNrFCjY5jg3CYbRrolZ",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"contact_details_completed\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_bcd2fcf1418bdd27e17781a2",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787746280380,
+      "tool_call_id": "call_30yWucIBSx0yXbUGAWUEJXIl",
+      "name": "transition_to_ConfirmSlots",
+      "arguments": "{\"first_name\":\"Maria\",\"callback_number\":\"+13125551234\",\"prospect_timezone\":\"America/Chicago\",\"company_name\":\"Bright Smile Dental\",\"is_calling_best_number\":true,\"contact_details_completed\":true,\"last_name\":\"Gonzales\"}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_87f587f5a1382bc9e4e7f343",
+      "role": "state_transition",
+      "created_timestamp": 1787746280381,
+      "former_state_name": "contact_details",
+      "new_state_name": "ConfirmSlots"
+    },
+    {
+      "message_id": "message_23280ed2bf0fee9f4e9d4c4a",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787746282486,
+      "tool_call_id": "call_Hf59zKgGzmh9clKujTColyIv",
+      "name": "check_current_date",
+      "arguments": "{}",
+      "type": "custom"
+    },
+    {
+      "message_id": "message_f5c2e17c97e256c51e741c1d",
+      "role": "tool_call_result",
+      "created_timestamp": 1787746283071,
+      "tool_call_id": "call_Hf59zKgGzmh9clKujTColyIv",
+      "content": "{\"ok\":true,\"today\":\"2026-08-26\",\"timezone\":\"America/Mexico_City\",\"tz_abbrev\":\"CST\"}",
+      "successful": true
+    },
+    {
+      "message_id": "message_5c8608dfc69902ee53b56cb7",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787746285594,
+      "tool_call_id": "call_W5G73xYqYMYxpFz2V9cxVeVN",
+      "name": "query_livecall_slots",
+      "arguments": "{\"account_id\":\"diallux_live\",\"slot_target_date\":\"2026-08-27\",\"timezone\":\"America/Chicago\"}",
+      "type": "custom"
+    },
+    {
+      "message_id": "message_c97348d998e373bd7b6a3cbe",
+      "role": "tool_call_result",
+      "created_timestamp": 1787746286699,
+      "tool_call_id": "call_W5G73xYqYMYxpFz2V9cxVeVN",
+      "content": "{\"ok\":true,\"slots\":[{\"day\":\"2026-08-26\",\"time\":\"2026-08-26T19:00:00\",\"iso\":\"2026-08-27T00:00:00.000Z\"},{\"day\":\"2026-08-27\",\"time\":\"2026-08-27T10:00:00\",\"iso\":\"2026-08-27T15:00:00.000Z\"},{\"day\":\"2026-08-27\",\"time\":\"2026-08-27T10:45:00\",\"iso\":\"2026-08-27T15:45:00.000Z\"},{\"day\":\"2026-08-27\",\"time\":\"2026-08-27T11:30:00\",\"iso\":\"2026-08-27T16:30:00.000Z\"},{\"day\":\"2026-08-27\",\"time\":\"2026-08-27T12:15:00\",\"iso\":\"2026-08-27T17:15:00.000Z\"},{\"day\":\"2026-08-27\",\"time\":\"2026-08-27T13:00:00\",\"iso\":\"2026-08-27T18:00:00.000Z\"},{\"day\":\"2026-08-27\",\"time\":\"2026-08-27T13:45:00\",\"iso\":\"2026-08-27T18:45:00.000Z\"},{\"day\":\"2026-08-27\",\"time\":\"2026-08-27T14:30:00\",\"iso\":\"2026-08-27T19:30:00.000Z\"},{\"day\":\"2026-08-27\",\"time\":\"2026-08-27T15:15:00\",\"iso\":\"2026-08-27T20:15:00.000Z\"},{\"day\":\"2026-08-27\",\"time\":\"2026-08-27T16:00:00\",\"iso\":\"2026-08-27T21:00:00.000Z\"},{\"day\":\"2026-08-27\",\"time\":\"2026-08-27T16:45:00\",\"iso\":\"2026-08-27T21:45:00.000Z\"},{\"day\":\"2026-08-27\",\"time\":\"2026-08-27T17:30:00\",\"iso\":\"2026-08-27T22:30:00.000Z\"},{\"day\":\"2026-08-27\",\"time\":\"2026-08-27T18:15:00\",\"iso\":\"2026-08-27T23:15:00.000Z\"},{\"day\":\"2026-08-27\",\"time\":\"2026-08-27T19:00:00\",\"iso\":\"2026-08-28T00:00:00.000Z\"},{\"day\":\"2026-08-28\",\"time\":\"2026-08-28T10:00:00\",\"iso\":\"2026-08-28T15:00:00.000Z\"},{\"day\":\"2026-08-28\",\"time\":\"2026-08-28T10:45:00\",\"iso\":\"2026-08-28T15:45:00.000Z\"},{\"day\":\"2026-08-28\",\"time\":\"2026-08-28T11:30:00\",\"iso\":\"2026-08-28T16:30:00.000Z\"},{\"day\":\"2026-08-28\",\"time\":\"2026-08-28T12:15:00\",\"iso\":\"2026-08-28T17:15:00.000Z\"},{\"day\":\"2026-08-28\",\"time\":\"2026-08-28T13:00:00\",\"iso\":\"2026-08-28T18:00:00.000Z\"},{\"day\":\"2026-08-28\",\"time\":\"2026-08-28T13:45:00\",\"iso\":\"2026-08-28T18:45:00.000Z\"}]}",
+      "successful": true
+    },
+    {
+      "message_id": "message_291136dffff1b4f1e7f16f07",
+      "role": "agent",
+      "created_timestamp": 1787746288550,
+      "content": "Yep — for tomorrow afternoon (Central), I can do **1:00 PM** or **2:30 PM**. Which works?",
+      "metadata": {
+        "response_id": 12
+      }
+    },
+    {
+      "message_id": "message_55913cde06baacaa160fbcd9",
+      "role": "user",
+      "created_timestamp": 1787746290315,
+      "content": "Let's go with 2:30 PM Central. Yes, that's perfect — please book it for the live call."
+    },
+    {
+      "message_id": "message_4638c879e435f7cd48445f34",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787746292001,
+      "tool_call_id": "call_OXqjVcvU6xMbVaSJCWGrAFjt",
+      "name": "extract_confirm_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_8b11ee65ef4d918c747f8927",
+      "role": "tool_call_result",
+      "created_timestamp": 1787746292002,
+      "tool_call_id": "call_OXqjVcvU6xMbVaSJCWGrAFjt",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"selected_time\":\"2026-08-27T14:30:00\",\"prospect_timezone\":\"America/Chicago\"}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_a5eb3d1ddb55d26a1dcc5f4e",
+      "role": "agent",
+      "created_timestamp": 1787746293410,
+      "content": "So that’s **tomorrow (Thu, Aug 27) at 2:30 PM Central**, correct?",
+      "metadata": {
+        "response_id": 13
+      }
+    },
+    {
+      "message_id": "message_aa41acb10c54142cbccccdd2",
+      "role": "user",
+      "created_timestamp": 1787746295083,
+      "content": "Yes, that's perfect — please book it. Looking forward to the live call."
+    },
+    {
+      "message_id": "message_7aea6ddfc968475aaa9cd09e",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787746296775,
+      "tool_call_id": "call_Uo2eCRzL9cpdc4p7n8B8Gmgi",
+      "name": "validate_lead",
+      "arguments": "{\"avg_job_value\":650,\"callback_number\":\"+13125551234\",\"first_name\":\"Maria\",\"prospect_timezone\":\"America/Chicago\",\"selected_time\":\"2026-08-27T14:30:00\",\"last_name\":\"Gonzales\",\"missed_calls_per_week\":20,\"close_rate_percent\":50,\"company_name\":\"Bright Smile Dental\"}",
+      "type": "custom"
+    },
+    {
+      "message_id": "message_59ac5fb767a7872b7dd81edd",
+      "role": "tool_call_result",
+      "created_timestamp": 1787746297550,
+      "tool_call_id": "call_Uo2eCRzL9cpdc4p7n8B8Gmgi",
+      "content": "{\"ok\":true,\"data_complete\":true,\"slot_verified\":true,\"problems\":[],\"actions\":[],\"weekly_leak\":\"$6,500\",\"monthly_leak\":\"$28,000\",\"inputs_used\":{\"missed_calls_per_week\":20,\"close_rate_percent\":50,\"avg_job_value\":650}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_8032e809e0758917622ab0e4",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787746298900,
+      "tool_call_id": "call_FDTxcQLM8KnvKn8DIJgrHqf9",
+      "name": "transition_to_VerifyLead",
+      "arguments": "{\"prospect_timezone\":\"America/Chicago\",\"selected_time\":\"2026-08-27T14:30:00\",\"slot_verified\":true}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_e4770e3133010417c4efed65",
+      "role": "state_transition",
+      "created_timestamp": 1787746298901,
+      "former_state_name": "ConfirmSlots",
+      "new_state_name": "VerifyLead"
+    },
+    {
+      "message_id": "message_ceafe869a872221a74d1327b",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787746300497,
+      "tool_call_id": "call_4dB9tQpu6K65pwQzkSN64s3F",
+      "name": "verify_lead_data",
+      "arguments": "{\"first_name\":\"Maria\",\"company_name\":\"Bright Smile Dental\",\"last_name\":\"Gonzales\",\"callback_number\":\"+13125551234\",\"prospect_timezone\":\"America/Chicago\",\"selected_time\":\"2026-08-27T14:30:00\"}",
+      "type": "custom"
+    },
+    {
+      "message_id": "message_94d0d74419df2233f3a31a5f",
+      "role": "tool_call_result",
+      "created_timestamp": 1787746301203,
+      "tool_call_id": "call_4dB9tQpu6K65pwQzkSN64s3F",
+      "content": "{\"status\":\"ok\",\"data_verified\":true,\"problems\":[],\"actions\":[],\"first_name\":\"Maria\",\"callback_number\":\"+13125551234\",\"prospect_timezone\":\"America/Chicago\",\"selected_time\":\"2026-08-27T14:30:00\",\"last_name\":\"Gonzales\",\"company_name\":\"Bright Smile Dental\"}",
+      "successful": true
+    },
+    {
+      "message_id": "message_916671c0126dd12da409be53",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787746302966,
+      "tool_call_id": "call_mQJFoJmW7BXcr9PPcsuFCxq6",
+      "name": "transition_to_Booking",
+      "arguments": "{\"prospect_timezone\":\"America/Chicago\",\"data_verified\":true,\"selected_time\":\"2026-08-27T14:30:00\"}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_6ff3d1ada88a4cd4d3fbee40",
+      "role": "state_transition",
+      "created_timestamp": 1787746302967,
+      "former_state_name": "VerifyLead",
+      "new_state_name": "Booking"
+    },
+    {
+      "message_id": "message_f2c14a014345d7b0eb63779a",
+      "role": "agent",
+      "created_timestamp": 1787746306207,
+      "content": "One moment while I confirm that.",
+      "metadata": {
+        "response_id": 14
+      }
+    },
+    {
+      "message_id": "message_2bcbd1168ae770367a83a611",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787746306208,
+      "tool_call_id": "call_6tsfOPMhRjRP3OxVqwE80BUl",
+      "name": "create_livecall_booking",
+      "arguments": "{\"time\":\"2026-08-27T14:30:00\",\"timezone\":\"America/Chicago\",\"name\":\"Maria Gonzales\",\"email\":\"jaydiallux@gmail.com\",\"attendeePhoneNumber\":\"+13125551234\",\"title\":\"Dialux Live call for Bright Smile Dental\",\"notes\":\"Industry: healthcare / medical practice | Pain points: losing patients after hours, missed calls going unanswered after-hours, after-hours calls go straight to voicemail, callers hang up instead of leaving a message, risk of patients calling competitors\",\"execution_message\":\"One moment while I confirm that.\"}",
+      "type": "book_appointment_cal"
+    },
+    {
+      "message_id": "message_722c5f602b38bc5c13c7ef52",
+      "role": "tool_call_result",
+      "created_timestamp": 1787746310634,
+      "tool_call_id": "call_6tsfOPMhRjRP3OxVqwE80BUl",
+      "content": "{\"status\":\"Successfully booked an appointment.\",\"booking_id\":24345517,\"booking_uid\":\"tosSDnWmg6qeeEx152rdMa\"}",
+      "successful": true
+    },
+    {
+      "message_id": "message_509a0db81f99615f15218a16",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787746314560,
+      "tool_call_id": "call_8mS9bsSJpC8cGH1JQHErsFui",
+      "name": "record_booking_uid",
+      "arguments": "{\"booking_uid\":\"tosSDnWmg6qeeEx152rdMa\"}",
+      "type": "custom"
+    },
+    {
+      "message_id": "message_8b563a1c398186c0bb3f1328",
+      "role": "tool_call_result",
+      "created_timestamp": 1787746315540,
+      "tool_call_id": "call_8mS9bsSJpC8cGH1JQHErsFui",
+      "content": "{\"status\":\"ok\",\"booking_uid\":\"tosSDnWmg6qeeEx152rdMa\"}",
+      "successful": true
+    },
+    {
+      "message_id": "message_e062a7bcc87cc1b54885936b",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787746317096,
+      "tool_call_id": "call_65ca1Ufi6jSdSG0Mkm36seX5",
+      "name": "record_booking_outcome",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_2bedd4b751d2c72a464e246c",
+      "role": "tool_call_result",
+      "created_timestamp": 1787746317097,
+      "tool_call_id": "call_65ca1Ufi6jSdSG0Mkm36seX5",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"booking_verified\":true,\"booking_failed\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_9898c2ae59b2160aacb4ea7b",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787746319018,
+      "tool_call_id": "call_OLKoIALkA6ux7N8Joz9nhSBL",
+      "name": "transition_to_Closing",
+      "arguments": "{\"booking_verified\":true}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_a8cd37e55abbe20349c4022c",
+      "role": "state_transition",
+      "created_timestamp": 1787746319019,
+      "former_state_name": "Booking",
+      "new_state_name": "Closing"
+    },
+    {
+      "message_id": "message_4efeff4d11d1d37734a68b02",
+      "role": "agent",
+      "created_timestamp": 1787746321144,
+      "content": "Thanks, Maria — you’re booked for **tomorrow (Thu, Aug 27) at 2:30 PM Central** with Jay, and you’ll receive an SMS text with the confirmation details so you can add it to your calendar or reschedule if you need to.  \n\nIs there anything else I can help you with?",
+      "metadata": {
+        "response_id": 15
+      }
+    },
+    {
+      "message_id": "message_00d680d669801a821fa1ac1e",
+      "role": "user",
+      "created_timestamp": 1787746323476,
+      "content": "Sure, take your time. I'm looking forward to getting this set up."
+    },
+    {
+      "message_id": "message_6262db3aa8c3000246aa285b",
+      "role": "agent",
+      "created_timestamp": 1787746326280,
+      "content": "Appreciate it, Maria — really glad you called. Jay’s looking forward to it, and you’ll see that SMS confirmation come through shortly. Have a great rest of your day. Bye!",
+      "metadata": {
+        "response_id": 16
+      }
+    },
+    {
+      "message_id": "message_3d117475184b7c6a1bb8c0f3",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787746326281,
+      "tool_call_id": "call_qXBpPExcEofMjnkwuwvj7hQO",
+      "name": "end_call",
+      "arguments": "{\"execution_message\":\"Appreciate it, Maria — really glad you called. Jay’s looking forward to it, and you’ll see that SMS confirmation come through shortly. Have a great rest of your day. Bye!\"}",
+      "type": "end_call"
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/044948618a7c62419b67401a96687908a71d94b9d0a42999f5550f97a9c4480f/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "product_costs": [
+      {
+        "cost": 28.8,
+        "product": "gpt_5_2_text_testing",
+        "unit_price": 1.8
+      },
+      {
+        "unit_price": 1.5,
+        "cost": 1.5,
+        "product": "gpt_4_1_text_testing"
+      }
+    ],
+    "combined_cost": 30.3
+  },
+  "chat_analysis": {
+    "user_sentiment": "Positive",
+    "chat_successful": true,
+    "chat_summary": "The user, Maria Gonzales from Bright Smile Dental, inquired about a service to answer missed after-hours calls after seeing a Facebook ad. The agent gathered details about her practice's missed call volume and calculated potential lost revenue, then successfully scheduled a live demo call for the following afternoon. The conversation concluded with confirmation of the booking and the user expressing satisfaction and anticipation for the setup.",
+    "custom_analysis_data": {}
+  },
+  "data_storage_setting": "everything"
+}

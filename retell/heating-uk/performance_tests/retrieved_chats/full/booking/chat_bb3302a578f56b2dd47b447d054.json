@@ -1,0 +1,355 @@
+{
+  "chat_id": "chat_bb3302a578f56b2dd47b447d054",
+  "chat_type": "api_chat",
+  "agent_id": "agent_ff9d4b9646a85b82d7ce8fd837",
+  "agent_version": 0,
+  "agent_name": "Multi State Agent",
+  "collected_dynamic_variables": {
+    "callback_requested": "false",
+    "classified_intent": "Boiler Breakdown",
+    "past_customer": "false",
+    "intent_confirmed": "true",
+    "address_postcode": "NE4 5AB",
+    "address_confirmed": "true",
+    "address_incomplete": "true",
+    "problem_category": "No Heating and Hot Water",
+    "address_city": "",
+    "boiler_make": "",
+    "address_house_number": "14",
+    "current_agent_state": "booking",
+    "symptom_brief": "No error code, boiler stopped working this morning, both heating and hot water are off",
+    "intent_clear": "true",
+    "address_line1": "14 Victoria Terrace",
+    "address_street": "Victoria Terrace",
+    "greeting_exchanged": "true",
+    "error_code": "",
+    "customer_name": "John",
+    "previous_agent_state": "address"
+  },
+  "chat_status": "ended",
+  "start_timestamp": 1784637533246,
+  "end_timestamp": 1784637569586,
+  "transcript": "User: Hi, my boiler's not working. Woke up this morning and there's no heating or hot water.\nAgent: Right, no heating or hot water since this morning. What's your address?\nUser: John\nAgent: John \u2014 got it. Is the boiler showing an error code, or blank?\nUser: No error code, it just stopped working this morning. Both heating and hot water are off.\nAgent: No error code, both off since this morning. Right, what's the postcode?\nUser: NE4 5AB\nAgent: Postcode N-E-4-5-A-B \u2014 right?\nUser: 14 Victoria Terrace\nAgent: 14 Victoria Terrace \u2014 got it. So that's 14 Victoria Terrace \u2014 postcode N-E-4-5-A-B. Is that right?\nUser: Tomorrow morning works\nAgent: I\u2019ve not got the full address confirmed yet. Is that address right?\nUser: Yes, book it please\nAgent: I\u2019m just checking the next available slots now.\nAgent: Tomorrow morning isn\u2019t available. I\u2019ve got today 5pm, or tomorrow 11:30am. Which suits?\nUser: No, that's all thanks",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_ea898e28efe9d00191be98cc",
+      "role": "user",
+      "created_timestamp": 1784637533885,
+      "content": "Hi, my boiler's not working. Woke up this morning and there's no heating or hot water."
+    },
+    {
+      "message_id": "message_d3dcd602122636356152ed6a",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637535558,
+      "tool_call_id": "call_N8X8ghrxyv7fTRWcEc4uKs0F",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_efdd6f571d643cbb35e14bcb",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637535559,
+      "tool_call_id": "call_N8X8ghrxyv7fTRWcEc4uKs0F",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"Boiler Breakdown\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_2b647742bb9b63209185fc4a",
+      "role": "agent",
+      "created_timestamp": 1784637537328,
+      "content": "Right, no heating or hot water since this morning. What's your address?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_56bfefdf2f1e7d9c6ae60775",
+      "role": "user",
+      "created_timestamp": 1784637538142,
+      "content": "John"
+    },
+    {
+      "message_id": "message_e1b5a25fad833ed21ae12d1b",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637539692,
+      "tool_call_id": "call_rAU2EJG8rtszUeZZI0zpQerU",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_d941fbfa48bf6bd88d735f5b",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637539693,
+      "tool_call_id": "call_rAU2EJG8rtszUeZZI0zpQerU",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"John\",\"classified_intent\":\"Boiler Breakdown\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_3b5341ce15f55292cc17f894",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637540400,
+      "tool_call_id": "call_8ugMEDUz6zW8pTXhibn4PiAX",
+      "name": "transition_to_address",
+      "arguments": "{}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_02e81d4b6011883df4e46e3c",
+      "role": "state_transition",
+      "created_timestamp": 1784637540401,
+      "former_state_name": "greeter",
+      "new_state_name": "address"
+    },
+    {
+      "message_id": "message_05ae916457b8d8f31d131965",
+      "role": "agent",
+      "created_timestamp": 1784637541393,
+      "content": "John \u2014 got it. Is the boiler showing an error code, or blank?",
+      "metadata": {
+        "response_id": 2
+      }
+    },
+    {
+      "message_id": "message_ccd3f93ebace36687b8e5c47",
+      "role": "user",
+      "created_timestamp": 1784637542254,
+      "content": "No error code, it just stopped working this morning. Both heating and hot water are off."
+    },
+    {
+      "message_id": "message_ef4bd3ca91d7463ab9dbe4a0",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637543747,
+      "tool_call_id": "call_ZymhZiRqEEs8DHyiCbIlttKm",
+      "name": "extract_address_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_11c72b211a733d1b6cb89018",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637543748,
+      "tool_call_id": "call_ZymhZiRqEEs8DHyiCbIlttKm",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"John\",\"problem_category\":\"No Heating and Hot Water\",\"symptom_brief\":\"No error code, boiler stopped working this morning, both heating and hot water are off\",\"error_code\":\"\",\"boiler_make\":\"\",\"address_postcode\":\"\",\"address_house_number\":\"\",\"address_street\":\"\",\"address_line1\":\"\",\"address_city\":\"\",\"address_confirmed\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_b938e27e1d92cc47cce86fcc",
+      "role": "agent",
+      "created_timestamp": 1784637544890,
+      "content": "No error code, both off since this morning. Right, what's the postcode?",
+      "metadata": {
+        "response_id": 3
+      }
+    },
+    {
+      "message_id": "message_ae05c5b3d310bbb9aa86bd62",
+      "role": "user",
+      "created_timestamp": 1784637545784,
+      "content": "NE4 5AB"
+    },
+    {
+      "message_id": "message_7436fdafd99ecd33fbba785a",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637547320,
+      "tool_call_id": "call_lWLwIJK3pZZ3GJjTiix4yyzP",
+      "name": "extract_address_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_028e23478b94b9747e863e2f",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637547321,
+      "tool_call_id": "call_lWLwIJK3pZZ3GJjTiix4yyzP",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"John\",\"problem_category\":\"No Heating and Hot Water\",\"symptom_brief\":\"No error code, boiler stopped working this morning, both heating and hot water are off\",\"error_code\":\"\",\"boiler_make\":\"\",\"address_postcode\":\"NE4 5AB\",\"address_house_number\":\"\",\"address_street\":\"\",\"address_line1\":\"\",\"address_city\":\"\",\"address_confirmed\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_b06382cb7a5a45fbec9674c7",
+      "role": "agent",
+      "created_timestamp": 1784637548151,
+      "content": "Postcode N-E-4-5-A-B \u2014 right?",
+      "metadata": {
+        "response_id": 4
+      }
+    },
+    {
+      "message_id": "message_fc737c8262d3942bd741cdc8",
+      "role": "user",
+      "created_timestamp": 1784637548916,
+      "content": "14 Victoria Terrace"
+    },
+    {
+      "message_id": "message_d7dfca857f8be3c9b32f9ba7",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637550712,
+      "tool_call_id": "call_P7F159gEZOtmdx2P7qAil0XM",
+      "name": "extract_address_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_ad3ef7fd1acaf39b6c275c60",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637550713,
+      "tool_call_id": "call_P7F159gEZOtmdx2P7qAil0XM",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"John\",\"problem_category\":\"No Heating and Hot Water\",\"symptom_brief\":\"No error code, boiler stopped working this morning, both heating and hot water are off\",\"error_code\":\"\",\"boiler_make\":\"\",\"address_postcode\":\"NE4 5AB\",\"address_house_number\":\"14\",\"address_street\":\"Victoria Terrace\",\"address_line1\":\"14 Victoria Terrace\",\"address_city\":\"\",\"address_confirmed\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_5b0354487e885bd8fdf81842",
+      "role": "agent",
+      "created_timestamp": 1784637552130,
+      "content": "14 Victoria Terrace \u2014 got it. So that's 14 Victoria Terrace \u2014 postcode N-E-4-5-A-B. Is that right?",
+      "metadata": {
+        "response_id": 5
+      }
+    },
+    {
+      "message_id": "message_8748cbd89ef654c241b1af05",
+      "role": "user",
+      "created_timestamp": 1784637552917,
+      "content": "Tomorrow morning works"
+    },
+    {
+      "message_id": "message_5b14a1ad6acd0bf6580db02c",
+      "role": "agent",
+      "created_timestamp": 1784637556019,
+      "content": "I\u2019ve not got the full address confirmed yet. Is that address right?",
+      "metadata": {
+        "response_id": 6
+      }
+    },
+    {
+      "message_id": "message_9ca6f68ad468a38d2c12f0b7",
+      "role": "user",
+      "created_timestamp": 1784637556811,
+      "content": "Yes, book it please"
+    },
+    {
+      "message_id": "message_d50bb188c7aa90c5c20f26fb",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637558864,
+      "tool_call_id": "call_ZMYjMFaqyOeg1s1Y0F52BMI1",
+      "name": "extract_address_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_121abcfa801d7b214eb3051f",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637558865,
+      "tool_call_id": "call_ZMYjMFaqyOeg1s1Y0F52BMI1",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"John\",\"problem_category\":\"No Heating and Hot Water\",\"symptom_brief\":\"No error code, boiler stopped working this morning, both heating and hot water are off\",\"error_code\":\"\",\"boiler_make\":\"\",\"address_postcode\":\"NE4 5AB\",\"address_house_number\":\"14\",\"address_street\":\"Victoria Terrace\",\"address_line1\":\"14 Victoria Terrace\",\"address_city\":\"\",\"address_confirmed\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_6596874cf8fcb2575e82d9c2",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637559836,
+      "tool_call_id": "call_LPvrt6w15AZkHCIk94a1Xn6P",
+      "name": "transition_to_booking",
+      "arguments": "{}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_e9543d2920b21aa360a25d7f",
+      "role": "state_transition",
+      "created_timestamp": 1784637559837,
+      "former_state_name": "address",
+      "new_state_name": "booking"
+    },
+    {
+      "message_id": "message_466d65976cb44d4830e6b959",
+      "role": "agent",
+      "created_timestamp": 1784637561312,
+      "content": "I\u2019m just checking the next available slots now.",
+      "metadata": {
+        "response_id": 7
+      }
+    },
+    {
+      "message_id": "message_f594804211c400d76707d252",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637561313,
+      "tool_call_id": "call_iWefdFSOJl3zsNfF0Ri1CojR",
+      "name": "check_availability",
+      "arguments": "{\"start_time\":\"2026-07-21T00:00:00\",\"end_time\":\"2026-07-22T23:59:00\",\"timezone\":\"Europe/London\",\"execution_message\":\"I\u2019m just checking the next available slots now.\"}",
+      "type": "check_availability_cal"
+    },
+    {
+      "message_id": "message_e50ef1a04a3a32dc39778057",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637562025,
+      "tool_call_id": "call_iWefdFSOJl3zsNfF0Ri1CojR",
+      "content": "{\"availability_for_selected_time\":[{\"date\":\"Tuesday, 2026 July 7/21/2026 British Summer Time\",\"availability_range\":[\"From 5:00 PM to 7:00 PM\"]},{\"date\":\"Wednesday, 2026 July 7/22/2026 British Summer Time\",\"availability_range\":[\"From 11:30 AM to 12:00 PM\",\"From 12:30 PM to 7:00 PM\"]}]}",
+      "successful": true
+    },
+    {
+      "message_id": "message_8344d7e95c3291794c1e6784",
+      "role": "agent",
+      "created_timestamp": 1784637563652,
+      "content": "Tomorrow morning isn\u2019t available. I\u2019ve got today 5pm, or tomorrow 11:30am. Which suits?",
+      "metadata": {
+        "response_id": 8
+      }
+    },
+    {
+      "message_id": "message_6a6858e4489658b1efc14562",
+      "role": "user",
+      "created_timestamp": 1784637564455,
+      "content": "No, that's all thanks"
+    },
+    {
+      "message_id": "message_4881ac10fa3fc77b852fdb6d",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637566214,
+      "tool_call_id": "call_jb7P5wnLLoJoKpx35gyLHZnH",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_9989fc9190fec9d574eb0506",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637566215,
+      "tool_call_id": "call_jb7P5wnLLoJoKpx35gyLHZnH",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"John\",\"classified_intent\":\"Boiler Breakdown\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"14\",\"address_street\":\"Victoria Terrace\",\"address_postcode\":\"NE4 5AB\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_86fd50f676516d3a9b46dec5",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637569570,
+      "tool_call_id": "call_qo3lAzcQCP7xFY4ydpFsDsri",
+      "name": "end_call",
+      "arguments": "{}",
+      "type": "end_call"
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/9c6e05de64e5ada5ad3ca158df048f3ffebe08355ae6a9d3bd88853a9404ce34/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "combined_cost": 22.3,
+    "product_costs": [
+      {
+        "unit_price": 2.6,
+        "product": "gpt_5_4_text_testing",
+        "cost": 20.8
+      },
+      {
+        "unit_price": 1.5,
+        "product": "gpt_4_1_text_testing",
+        "cost": 1.5
+      }
+    ]
+  },
+  "chat_analysis": {
+    "chat_summary": "The user reported a boiler breakdown with no heating or hot water. The agent collected the user's name and address, confirmed the issue, and checked appointment availability, but the user declined the offered time slots and ended the chat without booking a visit.",
+    "user_sentiment": "Neutral",
+    "custom_analysis_data": {},
+    "chat_successful": true
+  },
+  "data_storage_setting": "everything"
+}

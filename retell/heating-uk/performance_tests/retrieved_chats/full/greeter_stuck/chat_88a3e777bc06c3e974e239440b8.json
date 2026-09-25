@@ -1,0 +1,91 @@
+{
+  "chat_id": "chat_88a3e777bc06c3e974e239440b8",
+  "chat_type": "api_chat",
+  "agent_id": "agent_6226cbd3e8292efd1fea0581d8",
+  "agent_version": 0,
+  "agent_name": "HVAC Multi-Prompt Test (chat)",
+  "collected_dynamic_variables": {
+    "greeting_exchanged": "true",
+    "intent_confirmed": "false",
+    "customer_name": "",
+    "intent_clear": "true",
+    "classified_intent": "possible_gas_emergency",
+    "past_customer": "false"
+  },
+  "chat_status": "ended",
+  "start_timestamp": 1784626681351,
+  "end_timestamp": 1784626688084,
+  "transcript": "User: Hi, I've had a headache all day and I'm worried it might be the boiler.\nAgent: Sorry to hear that. Are you smelling gas?\nUser: No, I don't smell gas. Just have a headache.\nAgent: Sorry about that. You\u2019re not smelling gas, just a headache.\n\nWhat can I help with regarding the boiler?",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_db07725b8bae2e15f2b91e55",
+      "role": "user",
+      "created_timestamp": 1784626681989,
+      "content": "Hi, I've had a headache all day and I'm worried it might be the boiler."
+    },
+    {
+      "message_id": "message_8a76cdec47fb4cda831e29ff",
+      "role": "agent",
+      "created_timestamp": 1784626683941,
+      "content": "Sorry to hear that. Are you smelling gas?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_e21b1b30f3fbf87f0420803f",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784626683942,
+      "tool_call_id": "call_PqleNIdckWO742gtd3ECHnFq",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_cc417931e5e37808677ede7e",
+      "role": "tool_call_result",
+      "created_timestamp": 1784626683943,
+      "tool_call_id": "call_PqleNIdckWO742gtd3ECHnFq",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"possible_gas_emergency\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_610a54e67caa8ea813cee16e",
+      "role": "user",
+      "created_timestamp": 1784626685529,
+      "content": "No, I don't smell gas. Just have a headache."
+    },
+    {
+      "message_id": "message_c2ec46351e6d12c6ea38b588",
+      "role": "agent",
+      "created_timestamp": 1784626687256,
+      "content": "Sorry about that. You\u2019re not smelling gas, just a headache.\n\nWhat can I help with regarding the boiler?",
+      "metadata": {
+        "response_id": 2
+      }
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/fa6622db2eb88eceffe3c741ff13f04e2a8cca56b3d2dfbea3f07e41c3bc486c/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "combined_cost": 6.7,
+    "product_costs": [
+      {
+        "unit_price": 2.6,
+        "product": "gpt_5_4_text_testing",
+        "cost": 5.2
+      },
+      {
+        "unit_price": 1.5,
+        "product": "gpt_4_1_text_testing",
+        "cost": 1.5
+      }
+    ]
+  },
+  "chat_analysis": {
+    "chat_summary": "The user reported having a headache and expressed concern that it might be related to their boiler. The agent clarified whether the user smelled gas and, upon learning they did not, asked how they could assist further regarding the boiler.",
+    "user_sentiment": "Neutral",
+    "custom_analysis_data": {},
+    "chat_successful": true
+  },
+  "data_storage_setting": "everything"
+}

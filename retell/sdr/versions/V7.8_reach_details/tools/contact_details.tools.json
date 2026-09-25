@@ -1,0 +1,115 @@
+[
+  {
+    "type": "extract_dynamic_variable",
+    "variables": [
+      {
+        "description": "Prospect's first name (may already exist from an earlier capture)",
+        "type": "string",
+        "name": "first_name"
+      },
+      {
+        "description": "Prospect's last name",
+        "name": "last_name",
+        "type": "string"
+      },
+      {
+        "type": "string",
+        "name": "company_name",
+        "description": "Company / business name (may already exist from an earlier capture)"
+      }
+    ],
+    "name": "extract_person_details",
+    "speak_after_execution": false,
+    "description": "Capture the caller's identity the moment it surfaces, in their own words: first_name (required), last_name (ask, optional - never invent), company_name."
+  },
+  {
+    "type": "extract_dynamic_variable",
+    "name": "extract_contact_timezone",
+    "speak_after_execution": true,
+    "variables": [
+      {
+        "type": "enum",
+        "choices": [
+          "America/New_York",
+          "America/Chicago",
+          "America/Denver",
+          "America/Los_Angeles"
+        ],
+        "name": "prospect_timezone",
+        "description": "One of: America/New_York | America/Chicago | America/Denver | America/Los_Angeles \u2014 mapped from the prospect's spoken friendly zone per the conversion table in this tool's description."
+      }
+    ],
+    "description": "Capture `{{prospect_timezone}}`. The prospect NEVER speaks IANA \u2014 they speak friendly names. Convert using this EXACT table, no guessing:\n\u2022 says \"Eastern\", \"EST\", \"EDT\" or \"New York time\" \u2192 store \"America/New_York\"\n\u2022 says \"Central\", \"CST\", \"CDT\" or \"Chicago time\" \u2192 store \"America/Chicago\"\n\u2022 says \"Mountain\", \"MST\", \"MDT\" or \"Denver time\" \u2192 store \"America/Denver\"\n\u2022 says \"Pacific\", \"PST\", \"PDT\" or \"LA / California time\" \u2192 store \"America/Los_Angeles\"\nConfirm with a yes/no question when possible (<So that's Central time, correct?>). If their zone is none of these four or unclear, ask which city they're near and match it to the closest of the four. Store ONLY these exact values."
+  },
+  {
+    "description": "Set contact_details_completed to true ONLY after: first name, last name, company, timezone, best number are all collected and verified AND phone_confirmed is true. Do not set it early.",
+    "variables": [
+      {
+        "type": "boolean",
+        "name": "contact_details_completed",
+        "description": "true ONLY after: first name, last name, company, timezone, best number are all collected and verified AND phone_confirmed is true."
+      }
+    ],
+    "name": "contact_details_completed",
+    "type": "extract_dynamic_variable",
+    "speak_after_execution": false
+  },
+  {
+    "type": "custom",
+    "name": "set_callback_number",
+    "description": "Records the callback number. Server normalizes to E.164 and writes callback_number. Responses: {\"status\":\"ok\",\"callback_number\":\"+1XXXXXXXXXX\"} = recorded, proceed; {\"status\":\"wrong_number\",\"action\":\"review_and_recapture\",\"instruction\":\"...\"} = not a valid 10-digit number \u2014 follow the instruction (retrieve the correct number from context, or ask the caller to repeat). Pass only digits the caller said.",
+    "url": "https://slots.diallux-ai.site/validator-function/set-callback-number",
+    "method": "POST",
+    "headers": {},
+    "timeout_ms": 15000,
+    "args_at_root": false,
+    "speak_after_execution": true,
+    "speak_during_execution": false,
+    "parameter_type": "json",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "callback_number": {
+          "type": "string",
+          "description": "The alternate number the caller just spoke, verbatim digits."
+        }
+      }
+    },
+    "response_variables": {
+      "callback_number": "callback_number",
+      "phone_confirmed": "phone_confirmed"
+    },
+    "max_retry": 1
+  },
+  {
+    "type": "custom",
+    "name": "record_reach_details",
+    "description": "Reports whether the number the caller is calling from is their best contact number. Arg: is_calling_best_number (true/false). Responses: {\"status\":\"ok\",\"is_calling_best_number\":<bool>,\"phone_confirmed\":<bool>}; {\"status\":\"invalid_answer\",\"instruction\":\"...\"} = the value was not a yes/no \u2014 ask the caller and call again.",
+    "url": "https://slots.diallux-ai.site/validator-function/record-reach-details",
+    "method": "POST",
+    "headers": {},
+    "timeout_ms": 15000,
+    "args_at_root": false,
+    "speak_after_execution": false,
+    "speak_during_execution": false,
+    "parameter_type": "json",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "is_calling_best_number": {
+          "type": "boolean",
+          "enum": [
+            true,
+            false
+          ],
+          "description": "Send true when the caller confirms the number they're calling from is the best contact number. Send false when they give an alternate number. Send exactly one \u2014 no other values."
+        }
+      }
+    },
+    "response_variables": {
+      "is_calling_best_number": "is_calling_best_number",
+      "phone_confirmed": "phone_confirmed"
+    },
+    "max_retry": 1
+  }
+]

@@ -1,0 +1,110 @@
+{
+  "chat_id": "chat_6593b0e176e949b78c4ca56cbb5",
+  "chat_type": "api_chat",
+  "agent_id": "agent_c3bed9963cf528c85f58d1d521",
+  "agent_version": 0,
+  "agent_name": "V7.2_production",
+  "retell_llm_dynamic_variables": {
+    "callback_number": "+12125550011",
+    "today_date": "2026-08-25"
+  },
+  "collected_dynamic_variables": {},
+  "chat_status": "ended",
+  "start_timestamp": 1787661889922,
+  "end_timestamp": 1787661906361,
+  "transcript": "User: Fine, tell me about— actually NO. You know what, forget it. This is bulls***, everyone just wants money, I'm done with this crap.\nAgent: I hear you — sounds like you’ve had a few too many people try to sell you something without actually listening.  \n\nBefore we hang up, do you want to vent for a second about what set you off here, or would you rather I just let you go?\nUser: Honestly, I'm just sick of automated responses. Get me a real person on the phone, NOW!\nAgent: Yeah, I get that — a lot of those systems feel cold and useless.  \n\nI’m Linda, and I handle the front end for Jay’s team at Dialux; if you’re open to it, I can set you up with a live call with Jay himself so you’re talking to a real person — do you actually want to explore what we do, or would you rather just end it here?\nUser: Fine, whatever. Just have someone call me tomorrow. I'm sick of this automated crap.\nAgent: Got it, I hear how frustrated you are, and that totally makes sense.  \n\nI’m actually an automated assistant on Jay’s team, and I can’t grab a human live right this second, but I can either:  \n- set up a specific time for a call with Jay, or  \n- pass along a request for a callback window tomorrow so the team reaches out.  \n\nWhich do you prefer — a set time on the calendar, or a general “tomorrow, sometime between X and Y” callback request?\nUser: Fine, just have someone call me tomorrow between 10 and 12. This crap is frustrating.\nAgent: Got it, I hear you — this stuff can be really frustrating. I’ll let the team know to give you a call tomorrow between 10 and 12 at this number, so you’re talking to a real person instead of one more automated system. If anything changes on your side, you can just ignore the call or let them know what works better. Thanks for hanging in there with me today — I’ll let you go now.",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_c6b235bcb49089ca87420afa",
+      "role": "user",
+      "created_timestamp": 1787661891033,
+      "content": "Fine, tell me about— actually NO. You know what, forget it. This is bulls***, everyone just wants money, I'm done with this crap."
+    },
+    {
+      "message_id": "message_fc0b08793c854ee6a39fac8a",
+      "role": "agent",
+      "created_timestamp": 1787661892856,
+      "content": "I hear you — sounds like you’ve had a few too many people try to sell you something without actually listening.  \n\nBefore we hang up, do you want to vent for a second about what set you off here, or would you rather I just let you go?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_bc14eb2b15923c054abd96f7",
+      "role": "user",
+      "created_timestamp": 1787661894965,
+      "content": "Honestly, I'm just sick of automated responses. Get me a real person on the phone, NOW!"
+    },
+    {
+      "message_id": "message_1011253b2f99707c0df83cbd",
+      "role": "agent",
+      "created_timestamp": 1787661896672,
+      "content": "Yeah, I get that — a lot of those systems feel cold and useless.  \n\nI’m Linda, and I handle the front end for Jay’s team at Dialux; if you’re open to it, I can set you up with a live call with Jay himself so you’re talking to a real person — do you actually want to explore what we do, or would you rather just end it here?",
+      "metadata": {
+        "response_id": 2
+      }
+    },
+    {
+      "message_id": "message_c25a933748c8e60b2c719ceb",
+      "role": "user",
+      "created_timestamp": 1787661898334,
+      "content": "Fine, whatever. Just have someone call me tomorrow. I'm sick of this automated crap."
+    },
+    {
+      "message_id": "message_ffaee5a548dc7b80123beec4",
+      "role": "agent",
+      "created_timestamp": 1787661900500,
+      "content": "Got it, I hear how frustrated you are, and that totally makes sense.  \n\nI’m actually an automated assistant on Jay’s team, and I can’t grab a human live right this second, but I can either:  \n- set up a specific time for a call with Jay, or  \n- pass along a request for a callback window tomorrow so the team reaches out.  \n\nWhich do you prefer — a set time on the calendar, or a general “tomorrow, sometime between X and Y” callback request?",
+      "metadata": {
+        "response_id": 3
+      }
+    },
+    {
+      "message_id": "message_c7a06da81429d4f8a9feba62",
+      "role": "user",
+      "created_timestamp": 1787661902370,
+      "content": "Fine, just have someone call me tomorrow between 10 and 12. This crap is frustrating."
+    },
+    {
+      "message_id": "message_c3e3494904ba91d6ba91fa86",
+      "role": "agent",
+      "created_timestamp": 1787661906303,
+      "content": "Got it, I hear you — this stuff can be really frustrating. I’ll let the team know to give you a call tomorrow between 10 and 12 at this number, so you’re talking to a real person instead of one more automated system. If anything changes on your side, you can just ignore the call or let them know what works better. Thanks for hanging in there with me today — I’ll let you go now.",
+      "metadata": {
+        "response_id": 4
+      }
+    },
+    {
+      "message_id": "message_b0a0b3b8fd500b58589919fc",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787661906304,
+      "tool_call_id": "call_7Yu0LxngElOEHbRuXYh1vHCP",
+      "name": "end_call",
+      "arguments": "{\"execution_message\":\"Got it, I hear you — this stuff can be really frustrating. I’ll let the team know to give you a call tomorrow between 10 and 12 at this number, so you’re talking to a real person instead of one more automated system. If anything changes on your side, you can just ignore the call or let them know what works better. Thanks for hanging in there with me today — I’ll let you go now.\"}",
+      "type": "end_call"
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/7df87fdf1d795423c4683a0b67c4a06a4de14c4988a6eb99d5d4c50d94ffd4fd/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "product_costs": [
+      {
+        "cost": 5.2,
+        "product": "gpt_5_1_text_testing",
+        "unit_price": 1.3
+      },
+      {
+        "product": "gpt_4_1_text_testing",
+        "unit_price": 1.5,
+        "cost": 1.5
+      }
+    ],
+    "combined_cost": 6.7
+  },
+  "chat_analysis": {
+    "chat_successful": true,
+    "user_sentiment": "Negative",
+    "chat_summary": "The user expressed strong frustration with automated systems and requested to speak with a real person. The agent acknowledged the user's frustration and arranged for a team member to call the user between 10 and 12 the next day. The conversation ended with the agent confirming the callback request and thanking the user for their patience.",
+    "custom_analysis_data": {}
+  },
+  "data_storage_setting": "everything"
+}

@@ -1,0 +1,27 @@
+CALLER: Before you start your pitch — is this one of those AI robots? Be straight with me.
+AGENT: Yeah, it is — I’m Linda, an AI assistant on Jay’s team at Dialux, and I handle the intro side so he can do the deep dive with you live.  
+
+What made you pick up the phone and call in today?
+CALLER: Great, a robot answering robots. Just have Jay, the actual human, call me back. I'm not booking anything with AI.
+AGENT: Got it, I hear you — you’d rather talk straight with Jay than book through me.  
+
+So I can let him know how urgent this is, what made you start looking for help with your calls right now?
+CALLER: I just need a human for clear communication. No urgency, just not dealing with software for bookings.
+  [extract_intake_details]
+  [intake_completed]
+  [transition_to_Discovery]
+AGENT: Mhm, makes sense — you want a real person handling things, not another layer of software.  
+
+When a customer calls and you’re busy or away from the phone, what usually happens to that call right now?
+CALLER: We handle calls directly. If missed, they leave a message, and we call back personally. Simple and straightforward.
+  [extract_discovery_details]
+AGENT: Got it, so either you or your team picks up, and if you miss it, voicemail and a personal call-back.  
+
+When you think about the last few weeks, have there been any callers who didn’t leave a message and you just never knew who they were?
+CALLER: Yeah, happens sometimes, but I'd rather miss a call than deal with an automated system. Just personal preference.
+AGENT: Totally hear you — you’d rather protect that personal feel, even if it means a few calls slip by.  
+
+Since you’re not looking to change how you book right now, is there anything specific you wanted Jay to explain, or should I just let him know you’re not interested at this time?
+CALLER: Just let Jay know I'm not interested now. Appreciate a real human callback, but no booking today.
+AGENT: Got it, I’ll let Jay know you’re not interested right now and that you prefer a human if anything changes down the line, and he can reach out to you at the number you’re calling from if needed. There’s nothing else you need to do on your side. Thanks for taking the time to explain your preferences — I’ll let you go here. Take care.
+  [end_call]

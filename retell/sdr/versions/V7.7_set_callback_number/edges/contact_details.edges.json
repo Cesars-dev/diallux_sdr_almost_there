@@ -1,0 +1,60 @@
+[
+  {
+    "destination_state_name": "ConfirmSlots",
+    "description": "When contact_details_completed, first_name, last_name, company_name, prospect_timezone, callback_number, is_calling_best_number, and phone_confirmed are all filled, transition to ConfirmSlots.",
+    "parameters": {
+      "properties": {
+        "company_name": {
+          "type": "string",
+          "description": "Company / business name"
+        },
+        "first_name": {
+          "type": "string",
+          "description": "Prospect's first name"
+        },
+        "prospect_timezone": {
+          "description": "Prospect's timezone in IANA format",
+          "type": "string",
+          "enum": [
+            "America/New_York",
+            "America/Chicago",
+            "America/Denver",
+            "America/Los_Angeles"
+          ]
+        },
+        "callback_number": {
+          "description": "The confirmed contact phone number (original inbound number or the alternate the user provided). Always populated.",
+          "type": "string"
+        },
+        "last_name": {
+          "description": "Prospect's last name",
+          "type": "string"
+        },
+        "is_calling_best_number": {
+          "description": "True if the calling number is best; False if an alternate was provided.",
+          "type": "boolean"
+        },
+        "phone_confirmed": {
+          "type": "boolean",
+          "description": "true ONLY after the caller gave a clear positive confirmation of their phone number."
+        },
+        "contact_details_completed": {
+          "type": "boolean",
+          "description": "true ONLY after: When first name, last name, company, timezone and best number are all collected and verified."
+        }
+      },
+      "type": "object",
+      "required": [
+        "contact_details_completed",
+        "first_name",
+        "last_name",
+        "company_name",
+        "prospect_timezone",
+        "callback_number",
+        "is_calling_best_number",
+        "phone_confirmed"
+      ]
+    },
+    "speak_during_transition": false
+  }
+]

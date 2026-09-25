@@ -1,0 +1,60 @@
+{
+  "scenario": 2,
+  "turn": 9,
+  "chat_id": "chat_e835587b8c4e27d962a033f1aff",
+  "caller_message": "Yes, book it",
+  "agent_messages": [
+    {
+      "message_id": "message_2a2a5f0666a410499d09a22f",
+      "role": "agent",
+      "created_timestamp": 1784639752985,
+      "content": "Right, I\u2019ve got your booking ready.",
+      "metadata": {
+        "response_id": 11
+      }
+    },
+    {
+      "message_id": "message_4e4f4be8bc7650911d8464c2",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639752986,
+      "tool_call_id": "call_w7CvTkyIIMDLC205TDHwSHh2",
+      "name": "book_calendar",
+      "arguments": "{\"time\":\"2026-07-22T17:30:00\",\"timezone\":\"Europe/London\",\"name\":\"Linda\",\"email\":\"jaydiallux@gmail.com\",\"attendeePhoneNumber\":null,\"title\":\"Annual Boiler Service \u2014 Linda\",\"notes\":\"CUSTOMER: Linda | ADDRESS: 10 Green Rd, Newcastle, NE4 5AB | PHONE: {{user_number}} | PROBLEM: Annual Boiler Service | SYMPTOMS: No issues, routine annual service\",\"guests\":null,\"rescheduleReason\":null,\"execution_message\":\"Right, I\u2019ve got your booking ready.\"}",
+      "type": "book_appointment_cal"
+    },
+    {
+      "message_id": "message_06775f187b3f58d5b04f18ce",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639757317,
+      "tool_call_id": "call_w7CvTkyIIMDLC205TDHwSHh2",
+      "content": "{\"status\":\"Successfully booked an appointment.\",\"booking_id\":22744289,\"booking_uid\":\"tdThoMoBdHL9Dt78bCcbeA\"}",
+      "successful": true
+    },
+    {
+      "message_id": "message_a211ef24ef2e0c0cdf1a59fc",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639759145,
+      "tool_call_id": "call_3Phc99vSzYvoUvsiW4qYnBYe",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_2c815ac0838694cadbcdf8a3",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639759146,
+      "tool_call_id": "call_3Phc99vSzYvoUvsiW4qYnBYe",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Linda\",\"classified_intent\":\"Annual Boiler Service\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":true,\"address_house_number\":\"10\",\"address_street\":\"Green Rd\",\"address_postcode\":\"NE4 5AB\",\"address_city\":\"Newcastle\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_84b842ef88b079bde76549ba",
+      "role": "agent",
+      "created_timestamp": 1784639760561,
+      "content": "Brilliant, you're booked in. Anything else I can help with?",
+      "metadata": {
+        "response_id": 12
+      }
+    }
+  ]
+}

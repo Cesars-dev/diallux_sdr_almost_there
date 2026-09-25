@@ -1,0 +1,131 @@
+{
+  "chat_id": "chat_86ff1bf3c3b130c8189c6304504",
+  "chat_type": "api_chat",
+  "agent_id": "agent_a2c81e038ca30c41c91cfab1bb",
+  "agent_version": 0,
+  "agent_name": "Multi State Agent",
+  "collected_dynamic_variables": {
+    "callback_requested": "false",
+    "classified_intent": "Heat Pump Enquiry",
+    "past_customer": "false",
+    "intent_confirmed": "true",
+    "address_postcode": "",
+    "address_city": "",
+    "address_house_number": "",
+    "current_agent_state": "address",
+    "intent_clear": "true",
+    "address_street": "",
+    "greeting_exchanged": "true",
+    "customer_name": "Alex",
+    "previous_agent_state": "greeter"
+  },
+  "chat_status": "ended",
+  "start_timestamp": 1784632694678,
+  "end_timestamp": 1784632704242,
+  "transcript": "User: Hi, I'm interested in getting a heat pump. What's the process?\nAgent: Heat pump enquiry, right. An estimator will talk you through the grant and eligibility.\nUser: Alex\nAgent: Alex, got it. What type of property is it?",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_53e4b26a7b37846bb03199e6",
+      "role": "user",
+      "created_timestamp": 1784632695376,
+      "content": "Hi, I'm interested in getting a heat pump. What's the process?"
+    },
+    {
+      "message_id": "message_c5255f30dd6c1bc9058fb70f",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784632697334,
+      "tool_call_id": "call_g9aBRVT3YRJarIe8zyYZumni",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_a76d64b3af4edbfabfc0f1fa",
+      "role": "tool_call_result",
+      "created_timestamp": 1784632697335,
+      "tool_call_id": "call_g9aBRVT3YRJarIe8zyYZumni",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"Heat Pump Enquiry\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_0516022b10e9fcd4c5f22d85",
+      "role": "agent",
+      "created_timestamp": 1784632698370,
+      "content": "Heat pump enquiry, right. An estimator will talk you through the grant and eligibility.",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_360ec744365cbde02feee1aa",
+      "role": "user",
+      "created_timestamp": 1784632699386,
+      "content": "Alex"
+    },
+    {
+      "message_id": "message_c3380b1946e2ce26c8d87791",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784632701174,
+      "tool_call_id": "call_qZhZzFQr63ufnbcySKvrgxna",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_3ceca2267f86262dfbf206c2",
+      "role": "tool_call_result",
+      "created_timestamp": 1784632701175,
+      "tool_call_id": "call_qZhZzFQr63ufnbcySKvrgxna",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Alex\",\"classified_intent\":\"Heat Pump Enquiry\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_d37175661628d899cdfa2f6d",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784632702139,
+      "tool_call_id": "call_66N6jIAJP2SVfHGFWSE3JJ3n",
+      "name": "transition_to_address",
+      "arguments": "{}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_41e51d2d0ceebd6c71194c14",
+      "role": "state_transition",
+      "created_timestamp": 1784632702140,
+      "former_state_name": "greeter",
+      "new_state_name": "address"
+    },
+    {
+      "message_id": "message_dad8a9e3c1993bccde012e85",
+      "role": "agent",
+      "created_timestamp": 1784632703335,
+      "content": "Alex, got it. What type of property is it?",
+      "metadata": {
+        "response_id": 2
+      }
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/922bbc429b7df3155eda1cfb4e96542c3d7088932686c851f323d17919a4fb6d/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "combined_cost": 6.7,
+    "product_costs": [
+      {
+        "unit_price": 2.6,
+        "product": "gpt_5_4_text_testing",
+        "cost": 5.2
+      },
+      {
+        "unit_price": 1.5,
+        "product": "gpt_4_1_text_testing",
+        "cost": 1.5
+      }
+    ]
+  },
+  "chat_analysis": {
+    "chat_summary": "The user expressed interest in getting a heat pump and asked about the process. The agent explained that an estimator would discuss grants and eligibility, confirmed the user's name as Alex, and proceeded to ask about the property type. The conversation progressed smoothly with clear intent and no issues.",
+    "user_sentiment": "Positive",
+    "custom_analysis_data": {},
+    "chat_successful": true
+  },
+  "data_storage_setting": "everything"
+}

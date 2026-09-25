@@ -1,0 +1,39 @@
+[
+  {
+    "description": "When discovery_completed, industry, pain_points, interest_signal, pattern_matched are all filled, transition to Closer.",
+    "speak_during_transition": false,
+    "destination_state_name": "Closer",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "industry": {
+          "type": "string",
+          "description": "Business industry"
+        },
+        "pain_points": {
+          "type": "string",
+          "description": "Comma-separated challenges discovered so far"
+        },
+        "interest_signal": {
+          "type": "boolean",
+          "description": "True when the prospect showed buying intent"
+        },
+        "pattern_matched": {
+          "type": "boolean",
+          "description": "True once they connected their pain to the phone gap"
+        },
+        "discovery_completed": {
+          "type": "boolean",
+          "description": "true ONLY after: When the industry is known, problems are collected, they've connected their pain to the phone gap, and they've shown intent."
+        }
+      },
+      "required": [
+        "discovery_completed",
+        "industry",
+        "pain_points",
+        "interest_signal",
+        "pattern_matched"
+      ]
+    }
+  }
+]

@@ -1,0 +1,34 @@
+{
+  "scenario": 4,
+  "turn": 1,
+  "chat_id": "chat_2e4ed008bd72076e54cbe064044",
+  "caller_message": "Hi, my boiler's making a funny noise. Can you send someone out? Oh, and how much is the call-out?",
+  "agent_messages": [
+    {
+      "message_id": "message_b004ca7bfb9ca795fbdb6b54",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639821895,
+      "tool_call_id": "call_FDwGZyWi1qHg9g33kHOG2sQ2",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_40f715394c413cbdabca8c22",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639821896,
+      "tool_call_id": "call_FDwGZyWi1qHg9g33kHOG2sQ2",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"Boiler Breakdown\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_65023bc713ae92b4eedace3e",
+      "role": "agent",
+      "created_timestamp": 1784639824207,
+      "content": "Funny noise from the boiler \u2014 got it.\n\nThe call-out is \u00a375 plus VAT weekdays, 8 till 6.\n\nCan I take the address?",
+      "metadata": {
+        "response_id": 1
+      }
+    }
+  ]
+}

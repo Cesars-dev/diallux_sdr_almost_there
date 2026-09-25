@@ -1,0 +1,76 @@
+{
+  "scenario": 10,
+  "turn": 3,
+  "chat_id": "chat_a5815d084aa7f0ac9dc5f01f123",
+  "caller_message": "Yes, that's right",
+  "agent_messages": [
+    {
+      "message_id": "message_c39a703dc7125cd29760fa5b",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639536851,
+      "tool_call_id": "call_g8V3Vix9ginjQzCrdqXZRLr0",
+      "name": "extract_address_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_3c2f3ce3e04df76303a9e205",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639536852,
+      "tool_call_id": "call_g8V3Vix9ginjQzCrdqXZRLr0",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Robert\",\"problem_category\":\"\",\"symptom_brief\":\"\",\"error_code\":\"\",\"boiler_make\":\"\",\"address_postcode\":\"NE4 4DD\",\"address_house_number\":\"25\",\"address_street\":\"Acacia Gardens\",\"address_line1\":\"25 Acacia Gardens\",\"address_city\":\"Newcastle\",\"address_confirmed\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_c82bb719814d91811ef0cfa5",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639538363,
+      "tool_call_id": "call_z51mPXDYEcnIrrc7qA8soJ5b",
+      "name": "transition_to_booking",
+      "arguments": "{}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_7b744c812666092a0fdfd8b9",
+      "role": "state_transition",
+      "created_timestamp": 1784639538364,
+      "former_state_name": "address",
+      "new_state_name": "booking"
+    },
+    {
+      "message_id": "message_996cc768702a9de3e5e24bfb",
+      "role": "agent",
+      "created_timestamp": 1784639540393,
+      "content": "I\u2019m just checking the next available service slots now.",
+      "metadata": {
+        "response_id": 3
+      }
+    },
+    {
+      "message_id": "message_c71a370dd1050f2cd0457ebe",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639540394,
+      "tool_call_id": "call_AH6m270d4ljVh5gMti4FozgW",
+      "name": "check_availability",
+      "arguments": "{\"start_time\":\"2026-07-21T00:00:00\",\"end_time\":\"2026-07-22T23:59:00\",\"timezone\":\"Europe/London\",\"execution_message\":\"I\u2019m just checking the next available service slots now.\"}",
+      "type": "check_availability_cal"
+    },
+    {
+      "message_id": "message_0ff030d6db794daf69410897",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639540867,
+      "tool_call_id": "call_AH6m270d4ljVh5gMti4FozgW",
+      "content": "{\"availability_for_selected_time\":[{\"date\":\"Wednesday, 2026 July 7/22/2026 British Summer Time\",\"availability_range\":[\"From 4:30 PM to 7:00 PM\"]}]}",
+      "successful": true
+    },
+    {
+      "message_id": "message_d015a46e8a6c8b387b5a9af7",
+      "role": "agent",
+      "created_timestamp": 1784639542918,
+      "content": "Right, I can do Wednesday afternoon between half four and seven. Does that suit?",
+      "metadata": {
+        "response_id": 4
+      }
+    }
+  ]
+}

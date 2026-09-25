@@ -1,0 +1,89 @@
+CALLER: Hello? Yeah... I got your card. You help with phones, right?
+  [extract_intake_details]
+AGENT: Yeah, we help with phones — got it. What were you hoping we could help with: missed calls, appointments, or something else going on with your phones right now?
+CALLER: Uh, yeah, missed calls mostly. A lot go to voicemail, I think. Maybe appointments too.
+  [extract_intake_details]
+AGENT: Got it — so missed calls, lots going to voicemail, and maybe some appointment issues too. What’s making this feel urgent for you right now — did something happen recently with a missed call or lost job that pushed you to look at this?
+CALLER: Uh, yeah, lost a couple jobs because I didn't get back to them quick enough, I guess.
+  [extract_intake_details]
+  [intake_completed]
+  [transition_to_Discovery]
+AGENT: Yeah, that stings when jobs slip away like that... Mhm. When those calls roll to voicemail, do people usually leave a message, or do they just call the next company?
+CALLER: Uh, some leave messages, yeah. But I think some just call someone else, don't they?
+  [extract_discovery_details]
+AGENT: Yeah, exactly — when they call someone else, that’s revenue just walking away. Roughly how many calls a week would you say are going to voicemail instead of getting picked up live?
+CALLER: Uh, I don't know, a bunch? Maybe ten? Fifteen? Hard to say.
+  [extract_discovery_details]
+AGENT: Makes sense — even “10–15ish” a week adds up fast. So when those calls come in and you’re out on a job, who’s supposed to be answering the phone right now — is it just you, or do you have anyone at the desk?
+CALLER: It's just me. No one else at the desk. I try to answer when I can.
+  [extract_discovery_details]
+AGENT: Got it — you’re juggling the field work and the phone by yourself. When you think about those 10–15 callers a week you’re missing, what would you ideally want to happen instead when you can’t pick up?
+CALLER: Uh, someone should answer, I guess, and maybe book them? Or at least let me know who called.
+  [extract_discovery_details]
+  [discovery_completed]
+  [transition_to_Closer]
+  [extract_closer_details]
+AGENT: Right, that makes total sense — you want every caller actually answered, booked if they’re serious, and a clear record of who called. Has anyone ever walked you through what those missed calls are costing you in dollars each month?
+CALLER: Uh, not really. I haven't thought about it like that before. I just know it's a problem.
+AGENT: Yeah, totally get that — most folks feel the problem before they see the numbers. Mind if we do a super quick ballpark together, just using your own numbers, to see what those missed calls might be costing you each month?
+CALLER: Uh, okay, I guess that could help. But I'm not sure about the numbers.
+  [extract_leak_inputs]
+AGENT: Makes sense — we’ll just use rough guesses, nothing precise. So ballpark, if 10–15 calls a week hit voicemail, what percent of those do you think would’ve actually booked a job if you’d answered — maybe 50%, 60%?
+CALLER: Uh, I have no idea — half? Maybe more? It's hard to say.
+  [extract_leak_inputs]
+AGENT: Gotcha — let’s roll with “about half” for now. And on average, what’s one job worth to you in dollars — are we talking closer to $400, $650, or $850 for a typical job?
+  [extract_leak_inputs]
+  [calculate_monthly_leak]
+  [extract_closer_details]
+  [closer_completed]
+  [transition_to_Offer]
+AGENT: Perfect, that helps. So with your own numbers, you’re leaking roughly 1.4 million a month in potential jobs just from those missed calls and slow callbacks — even if we’re off, it’s big. So… with that in mind, would you be open to a quick 20‑minute walkthrough this week where we show you exactly how we can stop those missed calls turning into lost jobs?
+CALLER: Uh, depends, maybe four hundred? Or five? It's not always the same, you know?
+AGENT: Yeah, totally, it jumps around job to job — we just needed a rough feel. So… given you’ve already lost a couple jobs from slow callbacks and you’re probably leaking thousands a month on missed calls, would you be open to that 20‑minute walkthrough this week so we can show you exactly how to stop those calls turning into lost jobs?
+CALLER: Uh, I guess I could do that. Can we pick a time that works?
+  [extract_offer_details]
+  [offer_completed]
+  [transition_to_contact_details]
+  [extract_person_details]
+AGENT: Makes sense, we can definitely pick a time that works. First thing I need so we can lock this in—what’s your first name?
+CALLER: Uh, it's Pedro. Just let me know when you want to talk, okay?
+  [extract_person_details]
+AGENT: Got it, Pedro, thanks. And what’s your last name?
+CALLER: Uh, it's Gomez. Do I need to give anything else? I'm not great with this stuff.
+  [extract_person_details]
+AGENT: Totally fair, Pedro Gomez, you’re doing fine. Just one more thing for the booking—what’s the name of your company?
+CALLER: Uh, it's Pedro's Landscaping. I know, not very original, but it works for now.
+  [extract_person_details]
+  [extract_reach_details]
+AGENT: Pedro's Landscaping works just fine. And is the number you’re calling from right now the best number to reach you for the confirmation text?
+CALLER: Uh, yeah, this number's fine. Just let me know what happens next, okay?
+  [extract_reach_details]
+AGENT: Mhm, got it—that this number’s best. And just so I can text you the confirmation, what’s the actual 10‑digit number for you?
+CALLER: Uh, it's 555-123-4567. You can text me there, I guess.
+  [extract_reach_details]
+  [extract_contact_timezone]
+  [contact_details_completed]
+  [transition_to_ConfirmSlots]
+  [check_current_date]
+CALLER: Mm-hmm.
+  [query_livecall_slots]
+AGENT: Mhm, thanks Pedro. So, for our demo call to walk through how we stop those missed calls from turning into lost landscaping jobs, would you rather do it later today or tomorrow?
+CALLER: Uh, maybe tomorrow? I need some time to think about it.
+  [query_livecall_slots]
+AGENT: Yeah, tomorrow works. I can get you in as soon as 10:45 in the morning or 4:00 in the afternoon, Central time—which one feels better for you?
+CALLER: Uh, let's go with 10:45 in the morning, I think. That should work, right?
+  [extract_confirm_details]
+  [verify_info]
+  [extract_confirm_details]
+  [verify_info]
+  [extract_slot_verified]
+  [transition_to_Booking]
+AGENT: One moment while I confirm that.
+  [create_livecall_booking]
+AGENT: One moment while I confirm that.
+  [create_livecall_booking]
+  [record_booking_uid]
+  [validate_booking]
+  [record_booking_outcome]
+AGENT: So, Pedro, the calendar’s giving me trouble locking in that 10:45 slot because it doesn’t like the phone number format, but we’ve got your time noted. We’ll give you a quick call on this same number within the hour to lock in tomorrow at 10:45. Is there anything else you need from me before we hop off for now?
+  [end_call]

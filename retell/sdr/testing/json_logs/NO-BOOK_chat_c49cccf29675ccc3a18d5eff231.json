@@ -1,0 +1,270 @@
+{
+  "chat_id": "chat_c49cccf29675ccc3a18d5eff231",
+  "chat_type": "api_chat",
+  "agent_id": "agent_87e4d5f08475e5bc558b2f390f",
+  "agent_version": 0,
+  "agent_name": "V7.7_set_callback_number",
+  "retell_llm_dynamic_variables": {
+    "today_date": "2026-08-26"
+  },
+  "collected_dynamic_variables": {
+    "inbound_channel": "Google search",
+    "pain_points": "Missing delivery orders after hours, After-hours calls go unanswered so customers order elsewhere",
+    "pattern_matched": "true",
+    "previous_agent_state": "Intake",
+    "interest_signal": "false",
+    "current_agent_state": "Discovery",
+    "industry": "Restaurant",
+    "intake_completed": "true",
+    "call_volume": "a handful each week",
+    "pain_urgency": "high",
+    "interest_topic": "Tell me more about your services.",
+    "pain_frame": "I miss delivery orders after hours."
+  },
+  "chat_status": "ended",
+  "start_timestamp": 1787806101642,
+  "end_timestamp": 1787806129184,
+  "transcript": "User: Hey — before anything: are you a robot? Be honest with me.\nAgent: Yeah, I am — I’m Linda, an AI assistant on Jay’s team at Dialux, and I help with the intro and setting up the live walkthroughs. What made you call today?\nUser: Okay, thanks for being honest. I found you through a Google search. Tell me more about your services.\nAgent: Got it — you found us on Google and want to hear more about our services. What’s going on in your business right now that made you start looking?\nUser: I miss delivery orders after hours. But really, am I talking to AI or a machine right now?\nAgent: You are—I'm an AI assistant, and I’ll be straight with you about that. When those after-hours delivery orders come in and no one answers, what typically happens—do they leave a voicemail, or just order somewhere else?\nUser: They usually just order somewhere else. Thanks for being straight with me. I'll think about it. Take care.\nAgent: I hear you—and yeah, if they’re ordering somewhere else when it rings out, that’s real revenue walking away. Before you go, roughly how many after-hours delivery calls do you think you miss in a typical week?\nUser: It's hard to say exactly, but probably a handful each week. Thanks for the chat, I'll consider this.\nAgent: Got it—a handful each week adds up fast if they’re ordering elsewhere. If you want, what kind of business is this (restaurant, pizza place, something else)?\nUser: It's a restaurant. Thanks for the info, I'll think it over. Appreciate your honesty. Take care.\nAgent: Totally—thanks for sharing that, and I’m glad you were straight with me too. If you decide you want to stop those after-hours delivery calls from going to a competitor, just give us a call back and we’ll walk you through what it would look like for your restaurant. Take care.",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_e52ce4db73c46620882024a4",
+      "role": "user",
+      "created_timestamp": 1787806102464,
+      "content": "Hey — before anything: are you a robot? Be honest with me."
+    },
+    {
+      "message_id": "message_96129c5380601e8007dd143a",
+      "role": "agent",
+      "created_timestamp": 1787806103819,
+      "content": "Yeah, I am — I’m Linda, an AI assistant on Jay’s team at Dialux, and I help with the intro and setting up the live walkthroughs. What made you call today?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_3b13ab576b35b10b326233bc",
+      "role": "user",
+      "created_timestamp": 1787806105788,
+      "content": "Okay, thanks for being honest. I found you through a Google search. Tell me more about your services."
+    },
+    {
+      "message_id": "message_4e926d4cac1d3056149a2a2c",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787806106731,
+      "tool_call_id": "call_3gejE5ke4YWQK5jOECfKZtny",
+      "name": "extract_intake_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_5927fdd7e472f7cae32f5037",
+      "role": "tool_call_result",
+      "created_timestamp": 1787806106732,
+      "tool_call_id": "call_3gejE5ke4YWQK5jOECfKZtny",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"inbound_channel\":\"Google search\",\"interest_topic\":\"Tell me more about your services.\",\"pain_frame\":\"\"}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_db71376a90d34b6e91adfa21",
+      "role": "agent",
+      "created_timestamp": 1787806107834,
+      "content": "Got it — you found us on Google and want to hear more about our services. What’s going on in your business right now that made you start looking?",
+      "metadata": {
+        "response_id": 2
+      }
+    },
+    {
+      "message_id": "message_d8c599493d0bc83835b744c8",
+      "role": "user",
+      "created_timestamp": 1787806109649,
+      "content": "I miss delivery orders after hours. But really, am I talking to AI or a machine right now?"
+    },
+    {
+      "message_id": "message_eeb5919d6873083b5d448009",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787806110819,
+      "tool_call_id": "call_kgqTHFc0Kgai4HiMRHIwwW83",
+      "name": "extract_intake_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_6bd8a410138ba7e0a9aa4bce",
+      "role": "tool_call_result",
+      "created_timestamp": 1787806110820,
+      "tool_call_id": "call_kgqTHFc0Kgai4HiMRHIwwW83",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"inbound_channel\":\"Google search\",\"interest_topic\":\"Tell me more about your services.\",\"pain_frame\":\"I miss delivery orders after hours.\"}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_01bd6c4dba7aefcf20280c35",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787806111735,
+      "tool_call_id": "call_7Rhd12TFpAniSKAfysPBDXps",
+      "name": "intake_completed",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_3814feec60a588214ad6ece8",
+      "role": "tool_call_result",
+      "created_timestamp": 1787806111736,
+      "tool_call_id": "call_7Rhd12TFpAniSKAfysPBDXps",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"intake_completed\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_bf94478a32d1a6837ac04799",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787806112907,
+      "tool_call_id": "call_9Uno7HMDEQQ8RLUgDIIkSknW",
+      "name": "transition_to_Discovery",
+      "arguments": "{\"pain_frame\":\"I miss delivery orders after hours.\",\"intake_completed\":true,\"interest_topic\":\"Tell me more about your services.\",\"inbound_channel\":\"Google search\"}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_5466246572a53ddae5d4697a",
+      "role": "state_transition",
+      "created_timestamp": 1787806112908,
+      "former_state_name": "Intake",
+      "new_state_name": "Discovery"
+    },
+    {
+      "message_id": "message_459fb27e77ef370b46e7c414",
+      "role": "agent",
+      "created_timestamp": 1787806114580,
+      "content": "You are—I'm an AI assistant, and I’ll be straight with you about that. When those after-hours delivery orders come in and no one answers, what typically happens—do they leave a voicemail, or just order somewhere else?",
+      "metadata": {
+        "response_id": 3
+      }
+    },
+    {
+      "message_id": "message_967e5b7982df5c6ad70f1259",
+      "role": "user",
+      "created_timestamp": 1787806116220,
+      "content": "They usually just order somewhere else. Thanks for being straight with me. I'll think about it. Take care."
+    },
+    {
+      "message_id": "message_22a2a4692a458321349c3ca0",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787806117933,
+      "tool_call_id": "call_dZKydBFDRahtL3a4BWyy07x9",
+      "name": "extract_discovery_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_30b18f08a939bb64d502b572",
+      "role": "tool_call_result",
+      "created_timestamp": 1787806117934,
+      "tool_call_id": "call_dZKydBFDRahtL3a4BWyy07x9",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"industry\":\"\",\"pain_points\":\"Missing delivery orders after hours, After-hours calls go unanswered so customers order elsewhere\",\"interest_signal\":false,\"pattern_matched\":true,\"call_volume\":\"\",\"pain_urgency\":\"high\"}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_f49cac3a07b13fcf7129c0e9",
+      "role": "agent",
+      "created_timestamp": 1787806119343,
+      "content": "I hear you—and yeah, if they’re ordering somewhere else when it rings out, that’s real revenue walking away. Before you go, roughly how many after-hours delivery calls do you think you miss in a typical week?",
+      "metadata": {
+        "response_id": 4
+      }
+    },
+    {
+      "message_id": "message_8573636e5cd1651e45da0e0b",
+      "role": "user",
+      "created_timestamp": 1787806121060,
+      "content": "It's hard to say exactly, but probably a handful each week. Thanks for the chat, I'll consider this."
+    },
+    {
+      "message_id": "message_c81212d2ef6c7db746212422",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787806122893,
+      "tool_call_id": "call_liKg39CSNYC4r6wk3sA1exLR",
+      "name": "extract_discovery_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_5859ada2942e23090eccae47",
+      "role": "tool_call_result",
+      "created_timestamp": 1787806122894,
+      "tool_call_id": "call_liKg39CSNYC4r6wk3sA1exLR",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"industry\":\"\",\"pain_points\":\"Missing delivery orders after hours, After-hours calls go unanswered so customers order elsewhere\",\"interest_signal\":false,\"pattern_matched\":true,\"call_volume\":\"a handful each week\",\"pain_urgency\":\"high\"}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_708300d952642299e5faa63e",
+      "role": "agent",
+      "created_timestamp": 1787806124089,
+      "content": "Got it—a handful each week adds up fast if they’re ordering elsewhere. If you want, what kind of business is this (restaurant, pizza place, something else)?",
+      "metadata": {
+        "response_id": 5
+      }
+    },
+    {
+      "message_id": "message_ff1e8e360e6c5d6692939094",
+      "role": "user",
+      "created_timestamp": 1787806125716,
+      "content": "It's a restaurant. Thanks for the info, I'll think it over. Appreciate your honesty. Take care."
+    },
+    {
+      "message_id": "message_446756022fa5e9a9c4a317d4",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787806127345,
+      "tool_call_id": "call_Qg1TpeD6Bumpd2UxfVFgml0X",
+      "name": "extract_discovery_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_a3a2208b26d84dec0e504f85",
+      "role": "tool_call_result",
+      "created_timestamp": 1787806127346,
+      "tool_call_id": "call_Qg1TpeD6Bumpd2UxfVFgml0X",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"industry\":\"Restaurant\",\"pain_points\":\"Missing delivery orders after hours, After-hours calls go unanswered so customers order elsewhere\",\"interest_signal\":false,\"pattern_matched\":true,\"call_volume\":\"a handful each week\",\"pain_urgency\":\"high\"}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_0f0170cddb73cf2b11991da8",
+      "role": "agent",
+      "created_timestamp": 1787806129130,
+      "content": "Totally—thanks for sharing that, and I’m glad you were straight with me too. If you decide you want to stop those after-hours delivery calls from going to a competitor, just give us a call back and we’ll walk you through what it would look like for your restaurant. Take care.",
+      "metadata": {
+        "response_id": 6
+      }
+    },
+    {
+      "message_id": "message_bcd10311990ac1e6ea59f1c1",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787806129131,
+      "tool_call_id": "call_J4hOLI5sWoqiaFVxVhIOfMD0",
+      "name": "end_call",
+      "arguments": "{\"execution_message\":\"Totally—thanks for sharing that, and I’m glad you were straight with me too. If you decide you want to stop those after-hours delivery calls from going to a competitor, just give us a call back and we’ll walk you through what it would look like for your restaurant. Take care.\"}",
+      "type": "end_call"
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/61bcdb3766ce4be5f3923ee094502c234e72c91230bd12b227def641067c0f30/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "combined_cost": 12.3,
+    "product_costs": [
+      {
+        "cost": 10.8,
+        "product": "gpt_5_2_text_testing",
+        "unit_price": 1.8
+      },
+      {
+        "product": "gpt_4_1_text_testing",
+        "cost": 1.5,
+        "unit_price": 1.5
+      }
+    ]
+  },
+  "chat_analysis": {
+    "user_sentiment": "Positive",
+    "custom_analysis_data": {},
+    "chat_successful": true,
+    "chat_summary": "The user inquired about the agent's nature and services, expressing concern about missing after-hours delivery orders at their restaurant. The agent provided honest responses, gathered relevant business pain points, and offered further assistance if the user decides to proceed. The conversation ended amicably with the user thanking the agent for their honesty."
+  },
+  "data_storage_setting": "everything"
+}

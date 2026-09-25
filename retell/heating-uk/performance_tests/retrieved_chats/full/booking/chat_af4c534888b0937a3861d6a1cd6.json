@@ -1,0 +1,357 @@
+{
+  "chat_id": "chat_af4c534888b0937a3861d6a1cd6",
+  "chat_type": "api_chat",
+  "agent_id": "agent_ff9d4b9646a85b82d7ce8fd837",
+  "agent_version": 0,
+  "agent_name": "Multi State Agent",
+  "collected_dynamic_variables": {
+    "callback_requested": "false",
+    "classified_intent": "Boiler Breakdown",
+    "past_customer": "false",
+    "intent_confirmed": "true",
+    "address_postcode": "NE1 1AA",
+    "address_confirmed": "true",
+    "address_incomplete": "true",
+    "problem_category": "Boiler Breakdown",
+    "address_city": "",
+    "boiler_make": "",
+    "address_house_number": "42",
+    "symptom_brief": "Boiler started making a noise",
+    "current_agent_state": "booking",
+    "intent_clear": "true",
+    "address_line1": "42 Grove St",
+    "address_street": "Grove St",
+    "greeting_exchanged": "true",
+    "error_code": "",
+    "customer_name": "Mike",
+    "previous_agent_state": "address"
+  },
+  "chat_status": "ended",
+  "start_timestamp": 1784638089861,
+  "end_timestamp": 1784638130840,
+  "transcript": "User: Hi, I need to book a boiler service. Actually wait \u2014 can I book a breakdown call-out instead? It's started making a noise.\nAgent: Right, boiler noise \u2014 no problem. What\u2019s the postcode?\nUser: Mike\nAgent: Mike \u2014 got it. What\u2019s the postcode?\nUser: 42 Grove St, NE1 1AA\nAgent: 42 Grove Street, NE1 1AA \u2014 got it. What town\u2019s that in?\nUser: Yes, that's right\nUser: Today works\nAgent: I\u2019m checking the nearest slots now.\nAgent: Today works \u2014 lovely. I\u2019ve got today 5:30pm, or tomorrow 1pm. Which suits?\nUser: Yes, book it\nAgent: Right, I\u2019m getting that booked in now.\nAgent: Brilliant, you\u2019re booked in. Anything else I can help with?\nUser: That's all, thanks",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_24d5e7e4878bbc02cfbdbac0",
+      "role": "user",
+      "created_timestamp": 1784638090538,
+      "content": "Hi, I need to book a boiler service. Actually wait \u2014 can I book a breakdown call-out instead? It's started making a noise."
+    },
+    {
+      "message_id": "message_fdab7e42ab7617d8bdcb8633",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638091775,
+      "tool_call_id": "call_cZEvoCxvKtQMXaxUYCA4bZvJ",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_dd7335e97dcae33ad9952b66",
+      "role": "tool_call_result",
+      "created_timestamp": 1784638091776,
+      "tool_call_id": "call_cZEvoCxvKtQMXaxUYCA4bZvJ",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"Boiler Breakdown\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_a0b09e816ab67974c61e1511",
+      "role": "agent",
+      "created_timestamp": 1784638093058,
+      "content": "Right, boiler noise \u2014 no problem. What\u2019s the postcode?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_4aab5784ec90a7a9bd48d5e5",
+      "role": "user",
+      "created_timestamp": 1784638093914,
+      "content": "Mike"
+    },
+    {
+      "message_id": "message_20de0d5c7b69d8c0d2af6afc",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638095150,
+      "tool_call_id": "call_0f6VGogGXzBmDftatZXo9iG3",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_3a79a96ba419ac65c573a12d",
+      "role": "tool_call_result",
+      "created_timestamp": 1784638095151,
+      "tool_call_id": "call_0f6VGogGXzBmDftatZXo9iG3",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Mike\",\"classified_intent\":\"Boiler Breakdown\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_8e2717d03054df8cc774e6d1",
+      "role": "agent",
+      "created_timestamp": 1784638096500,
+      "content": "Mike \u2014 got it. What\u2019s the postcode?",
+      "metadata": {
+        "response_id": 2
+      }
+    },
+    {
+      "message_id": "message_256ff5b6ff749bc6cc317d60",
+      "role": "user",
+      "created_timestamp": 1784638097282,
+      "content": "42 Grove St, NE1 1AA"
+    },
+    {
+      "message_id": "message_e6436821d979ab8892e914d1",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638098599,
+      "tool_call_id": "call_InnG9GMCcThsRH0EgIx8ZQVj",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_a145545f7521ce5abefefed5",
+      "role": "tool_call_result",
+      "created_timestamp": 1784638098600,
+      "tool_call_id": "call_InnG9GMCcThsRH0EgIx8ZQVj",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Mike\",\"classified_intent\":\"Boiler Breakdown\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"42\",\"address_street\":\"Grove St\",\"address_postcode\":\"NE1 1AA\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_f81a36984e351be969cca677",
+      "role": "agent",
+      "created_timestamp": 1784638099818,
+      "content": "42 Grove Street, NE1 1AA \u2014 got it. What town\u2019s that in?",
+      "metadata": {
+        "response_id": 3
+      }
+    },
+    {
+      "message_id": "message_525cf81c62db77e1d944b8c7",
+      "role": "user",
+      "created_timestamp": 1784638100656,
+      "content": "Yes, that's right"
+    },
+    {
+      "message_id": "message_63cba547563fb4de2eac7ba3",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638102185,
+      "tool_call_id": "call_YV6PjysBMAppojFTjAlurhAk",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_fa79240ce9169c724546855e",
+      "role": "tool_call_result",
+      "created_timestamp": 1784638102186,
+      "tool_call_id": "call_YV6PjysBMAppojFTjAlurhAk",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Mike\",\"classified_intent\":\"Boiler Breakdown\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"42\",\"address_street\":\"Grove St\",\"address_postcode\":\"NE1 1AA\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_1a1282cda8712cbe5b2eda10",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638103022,
+      "tool_call_id": "call_2b0rMrRzmJ14VaentX97E7Az",
+      "name": "transition_to_address",
+      "arguments": "{}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_82a95766c103dbbdc0e5dc6a",
+      "role": "state_transition",
+      "created_timestamp": 1784638103023,
+      "former_state_name": "greeter",
+      "new_state_name": "address"
+    },
+    {
+      "message_id": "message_ebf1b8dd8622a9c50e50da80",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638104963,
+      "tool_call_id": "call_4LYwxx8on8GXbSfOz51O28QU",
+      "name": "extract_address_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_d8df16bb269cc0d996b70a2c",
+      "role": "tool_call_result",
+      "created_timestamp": 1784638104964,
+      "tool_call_id": "call_4LYwxx8on8GXbSfOz51O28QU",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Mike\",\"problem_category\":\"Boiler Breakdown\",\"symptom_brief\":\"Boiler started making a noise\",\"error_code\":\"\",\"boiler_make\":\"\",\"address_postcode\":\"NE1 1AA\",\"address_house_number\":\"42\",\"address_street\":\"Grove St\",\"address_line1\":\"42 Grove St\",\"address_city\":\"\",\"address_confirmed\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_10b8fd663b674c4a4bd5c9c1",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638105748,
+      "tool_call_id": "call_mHPse3kcclpPVWQrjoI4RajN",
+      "name": "transition_to_booking",
+      "arguments": "{}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_e91f5f090ca5c3bd573b2a19",
+      "role": "state_transition",
+      "created_timestamp": 1784638105749,
+      "former_state_name": "address",
+      "new_state_name": "booking"
+    },
+    {
+      "message_id": "message_e7e5e45af98f5e556abce235",
+      "role": "user",
+      "created_timestamp": 1784638109389,
+      "content": "Today works"
+    },
+    {
+      "message_id": "message_7205b1f408987d40fd289363",
+      "role": "agent",
+      "created_timestamp": 1784638111216,
+      "content": "I\u2019m checking the nearest slots now.",
+      "metadata": {
+        "response_id": 4
+      }
+    },
+    {
+      "message_id": "message_b14e0f8613df7a1005fc35f4",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638111217,
+      "tool_call_id": "call_TORdnI6uFuVBWN02JpQylrM8",
+      "name": "check_availability",
+      "arguments": "{\"start_time\":\"2026-07-21T00:00:00\",\"end_time\":\"2026-07-22T23:59:00\",\"timezone\":\"Europe/London\",\"execution_message\":\"I\u2019m checking the nearest slots now.\"}",
+      "type": "check_availability_cal"
+    },
+    {
+      "message_id": "message_3aeee51d0fe57c1365bef9b9",
+      "role": "tool_call_result",
+      "created_timestamp": 1784638111850,
+      "tool_call_id": "call_TORdnI6uFuVBWN02JpQylrM8",
+      "content": "{\"availability_for_selected_time\":[{\"date\":\"Tuesday, 2026 July 7/21/2026 British Summer Time\",\"availability_range\":[\"From 5:30 PM to 7:00 PM\"]},{\"date\":\"Wednesday, 2026 July 7/22/2026 British Summer Time\",\"availability_range\":[\"From 1:00 PM to 7:00 PM\"]}]}",
+      "successful": true
+    },
+    {
+      "message_id": "message_bcca8bc468ee500b514e297c",
+      "role": "agent",
+      "created_timestamp": 1784638116439,
+      "content": "Today works \u2014 lovely. I\u2019ve got today 5:30pm, or tomorrow 1pm. Which suits?",
+      "metadata": {
+        "response_id": 5
+      }
+    },
+    {
+      "message_id": "message_a32d0f649da4d176cecfbc8a",
+      "role": "user",
+      "created_timestamp": 1784638117369,
+      "content": "Yes, book it"
+    },
+    {
+      "message_id": "message_74f82b807952ceeba8217b5d",
+      "role": "agent",
+      "created_timestamp": 1784638119287,
+      "content": "Right, I\u2019m getting that booked in now.",
+      "metadata": {
+        "response_id": 6
+      }
+    },
+    {
+      "message_id": "message_03f3673e4e0cdd0eeca2c0b9",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638119288,
+      "tool_call_id": "call_5PGPc3JLjwhvJ1HntUwAL299",
+      "name": "book_calendar",
+      "arguments": "{\"time\":\"2026-07-21T17:30:00\",\"timezone\":\"Europe/London\",\"name\":\"Mike\",\"email\":\"jaydiallux@gmail.com\",\"attendeePhoneNumber\":null,\"title\":\"Boiler Breakdown \u2014 Mike\",\"notes\":\"CUSTOMER: Mike | ADDRESS: 42 Grove St, , NE1 1AA | PHONE: {{user_number}} | PROBLEM: Boiler Breakdown | SYMPTOMS: Boiler started making a noise\",\"guests\":null,\"rescheduleReason\":null,\"execution_message\":\"Right, I\u2019m getting that booked in now.\"}",
+      "type": "book_appointment_cal"
+    },
+    {
+      "message_id": "message_fdec48ce88abd909711b1df0",
+      "role": "tool_call_result",
+      "created_timestamp": 1784638124254,
+      "tool_call_id": "call_5PGPc3JLjwhvJ1HntUwAL299",
+      "content": "{\"status\":\"Successfully booked an appointment.\",\"booking_id\":22742892,\"booking_uid\":\"wLWej2aesKtihQdPYRZjCz\"}",
+      "successful": true
+    },
+    {
+      "message_id": "message_fd05e59268cb159a2d119ed9",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638126264,
+      "tool_call_id": "call_HmdeNYUFMh39FPwKB2XlKAA0",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_52a6e8fa7137e0421744a8fe",
+      "role": "tool_call_result",
+      "created_timestamp": 1784638126265,
+      "tool_call_id": "call_HmdeNYUFMh39FPwKB2XlKAA0",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Mike\",\"classified_intent\":\"Boiler Breakdown\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"42\",\"address_street\":\"Grove St\",\"address_postcode\":\"NE1 1AA\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_794e2b120bc52316ab773b2c",
+      "role": "agent",
+      "created_timestamp": 1784638127628,
+      "content": "Brilliant, you\u2019re booked in. Anything else I can help with?",
+      "metadata": {
+        "response_id": 7
+      }
+    },
+    {
+      "message_id": "message_f48728bfb1a79a727cc85c8a",
+      "role": "user",
+      "created_timestamp": 1784638128460,
+      "content": "That's all, thanks"
+    },
+    {
+      "message_id": "message_4ee5854ecb2670d1e5d4d65d",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638129951,
+      "tool_call_id": "call_o0MuDItgliezZtcnv95Pqjhn",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_a95493327e203b628311ee70",
+      "role": "tool_call_result",
+      "created_timestamp": 1784638129952,
+      "tool_call_id": "call_o0MuDItgliezZtcnv95Pqjhn",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Mike\",\"classified_intent\":\"Boiler Breakdown\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"42\",\"address_street\":\"Grove St\",\"address_postcode\":\"NE1 1AA\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_7c459836972c0bf6541c0391",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638130830,
+      "tool_call_id": "call_LIkSrv7bU7ZyPeSatiB3OPuH",
+      "name": "end_call",
+      "arguments": "{}",
+      "type": "end_call"
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/5afd7f69de121b630d51c125f55ba0b9ad3645778b7ce6547d6e3c2ccde8104a/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "combined_cost": 19.7,
+    "product_costs": [
+      {
+        "unit_price": 2.6,
+        "product": "gpt_5_4_text_testing",
+        "cost": 18.2
+      },
+      {
+        "unit_price": 1.5,
+        "product": "gpt_4_1_text_testing",
+        "cost": 1.5
+      }
+    ]
+  },
+  "chat_analysis": {
+    "chat_summary": "The user requested to book a boiler breakdown call-out due to a noisy boiler. The agent collected the necessary details, confirmed the user's preferred appointment time, and successfully booked the service. The user confirmed that no further assistance was needed.",
+    "user_sentiment": "Positive",
+    "custom_analysis_data": {},
+    "chat_successful": true
+  },
+  "data_storage_setting": "everything"
+}

@@ -1,0 +1,50 @@
+{
+  "scenario": 18,
+  "turn": 4,
+  "chat_id": "chat_f6009bf759c3967f735485a1d73",
+  "caller_message": "Yes, that's correct",
+  "agent_messages": [
+    {
+      "message_id": "message_c8a9a5c32da6731786e854a0",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638742292,
+      "tool_call_id": "call_8JYM8Dv8ybPZ2oY2xmU66GG2",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_17c5e030bcb295eacf86a3c8",
+      "role": "tool_call_result",
+      "created_timestamp": 1784638742293,
+      "tool_call_id": "call_8JYM8Dv8ybPZ2oY2xmU66GG2",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Alex\",\"classified_intent\":\"Heat Pump Enquiry\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"12\",\"address_street\":\"Park Rd\",\"address_postcode\":\"NE7 7GG\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_4e21a4b398ae582ea2c07dc5",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638743555,
+      "tool_call_id": "call_OksjjeHs0AHzLukdsM8NSB15",
+      "name": "transition_to_address",
+      "arguments": "{}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_17083259a28d69430debc208",
+      "role": "state_transition",
+      "created_timestamp": 1784638743556,
+      "former_state_name": "greeter",
+      "new_state_name": "address"
+    },
+    {
+      "message_id": "message_3122d361bb8f7dd05672cc36",
+      "role": "agent",
+      "created_timestamp": 1784638745782,
+      "content": "Perfect.\n\nWhat property type is it?",
+      "metadata": {
+        "response_id": 4
+      }
+    }
+  ]
+}

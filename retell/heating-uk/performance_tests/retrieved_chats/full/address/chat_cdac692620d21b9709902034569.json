@@ -1,0 +1,232 @@
+{
+  "chat_id": "chat_cdac692620d21b9709902034569",
+  "chat_type": "api_chat",
+  "agent_id": "agent_ff9d4b9646a85b82d7ce8fd837",
+  "agent_version": 0,
+  "agent_name": "Multi State Agent",
+  "collected_dynamic_variables": {
+    "callback_requested": "false",
+    "classified_intent": "engineer visit request",
+    "past_customer": "false",
+    "intent_confirmed": "true",
+    "address_postcode": "NE4 5AB",
+    "address_confirmed": "false",
+    "address_incomplete": "true",
+    "problem_category": "Radiator / Pressure Issue",
+    "address_city": "",
+    "boiler_make": "",
+    "address_house_number": "",
+    "current_agent_state": "address",
+    "symptom_brief": "Boiler losing pressure, started today",
+    "intent_clear": "true",
+    "address_line1": "",
+    "address_street": "",
+    "greeting_exchanged": "true",
+    "error_code": "",
+    "customer_name": "Sarah",
+    "previous_agent_state": "greeter"
+  },
+  "chat_status": "ended",
+  "start_timestamp": 1784637433264,
+  "end_timestamp": 1784637453010,
+  "transcript": "User: Hi, I need an engineer. My postcode is N for Newcastle, E for Edward, four, five, A for Apple, B for Bob.\nAgent: Got it, engineer needed and postcode noted. What\u2019s the house number or property name?\nUser: My name is Sarah, the boiler's losing pressure\nAgent: Sarah, boiler losing pressure \u2014 got it. What\u2019s the gauge reading now?\nUser: Yes, that's correct\nAgent: Postcode N-E-4-5-A-B confirmed. What\u2019s the gauge reading now?\nUser: Today works\nAgent: Started today \u2014 thanks. Any visible water anywhere?\nUser: Yes, book it\nAgent: Right. What\u2019s the house number or property name?\nUser: That's all, thanks",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_1209248750b5b596c57013ed",
+      "role": "user",
+      "created_timestamp": 1784637433976,
+      "content": "Hi, I need an engineer. My postcode is N for Newcastle, E for Edward, four, five, A for Apple, B for Bob."
+    },
+    {
+      "message_id": "message_dc8aae9e294f36f0d1f6b00f",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637435648,
+      "tool_call_id": "call_2IQLSvz83H25zVLymTmGBWyq",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_d2bd3f9939e4d407321da476",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637435649,
+      "tool_call_id": "call_2IQLSvz83H25zVLymTmGBWyq",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"engineer visit request\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"NE4 5AB\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_eb13fc2c90a66dae7884efa0",
+      "role": "agent",
+      "created_timestamp": 1784637437107,
+      "content": "Got it, engineer needed and postcode noted. What\u2019s the house number or property name?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_75ed2cd52350b4d638b14701",
+      "role": "user",
+      "created_timestamp": 1784637437917,
+      "content": "My name is Sarah, the boiler's losing pressure"
+    },
+    {
+      "message_id": "message_c6756afe2d8ebb56eb575786",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637439438,
+      "tool_call_id": "call_uJLf9SDlMTVlJLS4koUJdqaP",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_fe20980ad3b064eb6f9578ea",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637439439,
+      "tool_call_id": "call_uJLf9SDlMTVlJLS4koUJdqaP",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Sarah\",\"classified_intent\":\"engineer visit request\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"NE4 5AB\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_0cce1967ef58cbb43689e260",
+      "role": "agent",
+      "created_timestamp": 1784637440312,
+      "content": "Sarah, boiler losing pressure \u2014 got it. What\u2019s the gauge reading now?",
+      "metadata": {
+        "response_id": 2
+      }
+    },
+    {
+      "message_id": "message_4e35512d43a659bd42f512ae",
+      "role": "user",
+      "created_timestamp": 1784637441080,
+      "content": "Yes, that's correct"
+    },
+    {
+      "message_id": "message_026951be756dbe19d39b6062",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637443823,
+      "tool_call_id": "call_3Sd7rSJnwkplgQ15CROIRrxH",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_f8dc67d436dbd4de3e50b710",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637443824,
+      "tool_call_id": "call_3Sd7rSJnwkplgQ15CROIRrxH",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Sarah\",\"classified_intent\":\"engineer visit request\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"NE4 5AB\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_0dc5ef9a0a80de5a6195e0d2",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637445110,
+      "tool_call_id": "call_W56AsOt1YwZlRjExPdFor1XI",
+      "name": "transition_to_address",
+      "arguments": "{}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_d84d85bd945c6cf5b3c89e61",
+      "role": "state_transition",
+      "created_timestamp": 1784637445111,
+      "former_state_name": "greeter",
+      "new_state_name": "address"
+    },
+    {
+      "message_id": "message_c9b027b425c2296e244ecaf2",
+      "role": "agent",
+      "created_timestamp": 1784637446152,
+      "content": "Postcode N-E-4-5-A-B confirmed. What\u2019s the gauge reading now?",
+      "metadata": {
+        "response_id": 3
+      }
+    },
+    {
+      "message_id": "message_b774ca411f6174c2baa217b3",
+      "role": "user",
+      "created_timestamp": 1784637446950,
+      "content": "Today works"
+    },
+    {
+      "message_id": "message_8116ced541b64acc8f552d60",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637448246,
+      "tool_call_id": "call_8yZd5C21TBuQyr3O2xwSNh8x",
+      "name": "extract_address_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_87ad9e0c206a783cc9cf073e",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637448247,
+      "tool_call_id": "call_8yZd5C21TBuQyr3O2xwSNh8x",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Sarah\",\"problem_category\":\"Radiator / Pressure Issue\",\"symptom_brief\":\"Boiler losing pressure, started today\",\"error_code\":\"\",\"boiler_make\":\"\",\"address_postcode\":\"NE4 5AB\",\"address_house_number\":\"\",\"address_street\":\"\",\"address_line1\":\"\",\"address_city\":\"\",\"address_confirmed\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_9226cefcfb07b7b8fa29cd30",
+      "role": "agent",
+      "created_timestamp": 1784637449383,
+      "content": "Started today \u2014 thanks. Any visible water anywhere?",
+      "metadata": {
+        "response_id": 4
+      }
+    },
+    {
+      "message_id": "message_bb03d7f1ba2432dd9395afca",
+      "role": "user",
+      "created_timestamp": 1784637450194,
+      "content": "Yes, book it"
+    },
+    {
+      "message_id": "message_c75836dd5c5779467a98c10d",
+      "role": "agent",
+      "created_timestamp": 1784637451414,
+      "content": "Right. What\u2019s the house number or property name?",
+      "metadata": {
+        "response_id": 5
+      }
+    },
+    {
+      "message_id": "message_315c7a95cc96819a640dea3e",
+      "role": "user",
+      "created_timestamp": 1784637452217,
+      "content": "That's all, thanks"
+    },
+    {
+      "message_id": "message_6a789981237c99a1b059ca34",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637452976,
+      "tool_call_id": "call_P7NuEh3BGtWBlYh6mVTgiajA",
+      "name": "end_call",
+      "arguments": "{}",
+      "type": "end_call"
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/e53ec0e7a9b746c46cf1430ca2efba07213184642458d719cad4a5384116cbe0/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "combined_cost": 14.5,
+    "product_costs": [
+      {
+        "unit_price": 2.6,
+        "product": "gpt_5_4_text_testing",
+        "cost": 13
+      },
+      {
+        "unit_price": 1.5,
+        "product": "gpt_4_1_text_testing",
+        "cost": 1.5
+      }
+    ]
+  },
+  "chat_analysis": {
+    "chat_summary": "The user, Sarah, requested an engineer visit for a boiler losing pressure at postcode NE4 5AB. The agent confirmed the issue and attempted to gather additional address details and gauge readings, but the user ended the conversation after confirming the booking request. The full address was not provided.",
+    "user_sentiment": "Neutral",
+    "custom_analysis_data": {},
+    "chat_successful": false
+  },
+  "data_storage_setting": "everything"
+}

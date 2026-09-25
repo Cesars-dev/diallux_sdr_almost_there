@@ -1,0 +1,110 @@
+{
+  "chat_id": "chat_03a97061ffd90bd5ca52cc55315",
+  "chat_type": "api_chat",
+  "agent_id": "agent_98150ff0c02db0a4d7fdc381fa",
+  "agent_version": 0,
+  "agent_name": "V6.8",
+  "retell_llm_dynamic_variables": {
+    "today_date": "2026-08-24",
+    "callback_number": "+12065550033"
+  },
+  "collected_dynamic_variables": {},
+  "chat_status": "ended",
+  "start_timestamp": 1787616421974,
+  "end_timestamp": 1787616436741,
+  "transcript": "User: Before you start your pitch — is this one of those AI robots? Be straight with me.\nAgent: Yeah, you guessed it — I’m Linda, an AI assistant on Jay’s team at Dialux, and I help with the intro and scheduling so he can do the deep-dive calls.  \n\nWhat made you pick up the phone and call in today?\nUser: Great, a robot answering robots. I want a real human callback. I don't schedule anything with software.\nAgent: Got it, I hear you — you want to talk to an actual person, not software.  \n\nSo I don’t waste your time: what’s the best way for Jay or someone from the team to follow up with you — quick call back, or do you prefer a text first to coordinate?\nUser: I'll wait for a human to call back. Just explain why you need my number. No scheduling with software.\nAgent: Makes sense, I hear you — no scheduling, just a human callback.  \n\nI only ask because if Jay or someone from the team misses your number on caller ID or it doesn’t come through correctly, we’d have no way to get back to you — are you okay with them using the number you’re calling from right now, or is there a better one you’d like them to use?\nUser: Use the number I'm calling from now. Just make sure a real person calls me back.\nAgent: Got it, we’ll have someone from the team give you a call back on this number you’re using right now, and they’ll be a real human. Before I let you go, is there anything else you want me to pass along to them about what you’re looking for?",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_0ec46dfacf731de74a772dd6",
+      "role": "user",
+      "created_timestamp": 1787616422593,
+      "content": "Before you start your pitch — is this one of those AI robots? Be straight with me."
+    },
+    {
+      "message_id": "message_0365ae36c7a0e9d6ff691318",
+      "role": "agent",
+      "created_timestamp": 1787616423948,
+      "content": "Yeah, you guessed it — I’m Linda, an AI assistant on Jay’s team at Dialux, and I help with the intro and scheduling so he can do the deep-dive calls.  \n\nWhat made you pick up the phone and call in today?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_020e85e757c71168067e8eba",
+      "role": "user",
+      "created_timestamp": 1787616426493,
+      "content": "Great, a robot answering robots. I want a real human callback. I don't schedule anything with software."
+    },
+    {
+      "message_id": "message_5148d0ded943c0e2089a8287",
+      "role": "agent",
+      "created_timestamp": 1787616428412,
+      "content": "Got it, I hear you — you want to talk to an actual person, not software.  \n\nSo I don’t waste your time: what’s the best way for Jay or someone from the team to follow up with you — quick call back, or do you prefer a text first to coordinate?",
+      "metadata": {
+        "response_id": 2
+      }
+    },
+    {
+      "message_id": "message_7c279743e547e472c0b8a926",
+      "role": "user",
+      "created_timestamp": 1787616430328,
+      "content": "I'll wait for a human to call back. Just explain why you need my number. No scheduling with software."
+    },
+    {
+      "message_id": "message_947e9ccb60ad7920558c3e9e",
+      "role": "agent",
+      "created_timestamp": 1787616433433,
+      "content": "Makes sense, I hear you — no scheduling, just a human callback.  \n\nI only ask because if Jay or someone from the team misses your number on caller ID or it doesn’t come through correctly, we’d have no way to get back to you — are you okay with them using the number you’re calling from right now, or is there a better one you’d like them to use?",
+      "metadata": {
+        "response_id": 3
+      }
+    },
+    {
+      "message_id": "message_d8f1adba658b3b941e313f0f",
+      "role": "user",
+      "created_timestamp": 1787616435049,
+      "content": "Use the number I'm calling from now. Just make sure a real person calls me back."
+    },
+    {
+      "message_id": "message_0a6a1a27575508e502030fd7",
+      "role": "agent",
+      "created_timestamp": 1787616436683,
+      "content": "Got it, we’ll have someone from the team give you a call back on this number you’re using right now, and they’ll be a real human. Before I let you go, is there anything else you want me to pass along to them about what you’re looking for?",
+      "metadata": {
+        "response_id": 4
+      }
+    },
+    {
+      "message_id": "message_4a88d6cbd08adec82b52a6bc",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787616436684,
+      "tool_call_id": "call_RZDQ6U3unWM1z8bC5HHTLSQ8",
+      "name": "end_call",
+      "arguments": "{\"execution_message\":\"Got it, we’ll have someone from the team give you a call back on this number you’re using right now, and they’ll be a real human. Before I let you go, is there anything else you want me to pass along to them about what you’re looking for?\"}",
+      "type": "end_call"
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/6f0a3135061ef2868b776178cf1cb5da855a5fd862f808d37558ce0788908477/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "combined_cost": 6.7,
+    "product_costs": [
+      {
+        "cost": 5.2,
+        "unit_price": 1.3,
+        "product": "gpt_5_1_text_testing"
+      },
+      {
+        "product": "gpt_4_1_text_testing",
+        "unit_price": 1.5,
+        "cost": 1.5
+      }
+    ]
+  },
+  "chat_analysis": {
+    "chat_summary": "The user expressed a strong preference to speak only with a human and refused to schedule anything with the AI assistant. The agent acknowledged the request, confirmed a human would call back using the user's current number, and asked if there was any additional information to pass along.",
+    "user_sentiment": "Negative",
+    "custom_analysis_data": {},
+    "chat_successful": true
+  },
+  "data_storage_setting": "everything"
+}

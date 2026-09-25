@@ -1,0 +1,208 @@
+{
+  "chat_id": "chat_794f7e8833d8890af461a590186",
+  "chat_type": "api_chat",
+  "agent_id": "agent_ff9d4b9646a85b82d7ce8fd837",
+  "agent_version": 0,
+  "agent_name": "Multi State Agent",
+  "collected_dynamic_variables": {
+    "address_house_number": "",
+    "callback_requested": "false",
+    "intent_clear": "true",
+    "classified_intent": "engineer visit request",
+    "address_street": "",
+    "past_customer": "false",
+    "greeting_exchanged": "true",
+    "intent_confirmed": "true",
+    "address_postcode": "NE4 5AB",
+    "customer_name": "Sarah",
+    "address_incomplete": "true",
+    "address_city": ""
+  },
+  "chat_status": "ended",
+  "start_timestamp": 1784637624934,
+  "end_timestamp": 1784637646361,
+  "transcript": "User: Hi, I need an engineer. My postcode is N for Newcastle, E for Edward, four, five, A for Apple, B for Bob.\nAgent: Got it, engineer visit and postcode N-E-4-5-A-B. What\u2019s the house number or name?\nUser: My name is Sarah, the boiler's losing pressure\nAgent: Sarah, boiler losing pressure \u2014 got it. What\u2019s the house number or name?\nUser: Yes, that's correct\nAgent: Boiler losing pressure, thanks. What\u2019s the house number or name?\nUser: Today works\nAgent: Today works, noted. What\u2019s the house number or name?\nUser: Yes, book it\nAgent: Booked intent, thanks. What\u2019s the house number or name?\nUser: That's all, thanks",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_4154d211824187756c8c7bee",
+      "role": "user",
+      "created_timestamp": 1784637625568,
+      "content": "Hi, I need an engineer. My postcode is N for Newcastle, E for Edward, four, five, A for Apple, B for Bob."
+    },
+    {
+      "message_id": "message_f4177f47c8dc1c243ffc24da",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637626981,
+      "tool_call_id": "call_Y2viJtyOyMDwBvJEDMw9gAUP",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_95f24e00c22dc666496d4445",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637626982,
+      "tool_call_id": "call_Y2viJtyOyMDwBvJEDMw9gAUP",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"engineer visit request\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"NE4 5AB\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_9f00e438f722f629459ace30",
+      "role": "agent",
+      "created_timestamp": 1784637628212,
+      "content": "Got it, engineer visit and postcode N-E-4-5-A-B. What\u2019s the house number or name?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_655d6ae9767be979b5962569",
+      "role": "user",
+      "created_timestamp": 1784637629145,
+      "content": "My name is Sarah, the boiler's losing pressure"
+    },
+    {
+      "message_id": "message_6c58d1c24fd43912066d1bd4",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637630912,
+      "tool_call_id": "call_zsShDgIko9m0Pn2l6gzqkwpw",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_32c155d7e0fa0ac91b71fb80",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637630913,
+      "tool_call_id": "call_zsShDgIko9m0Pn2l6gzqkwpw",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Sarah\",\"classified_intent\":\"engineer visit request\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"NE4 5AB\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_2b9d6667da3f5995ea289553",
+      "role": "agent",
+      "created_timestamp": 1784637632311,
+      "content": "Sarah, boiler losing pressure \u2014 got it. What\u2019s the house number or name?",
+      "metadata": {
+        "response_id": 2
+      }
+    },
+    {
+      "message_id": "message_6d1e37875b842e585c0d5227",
+      "role": "user",
+      "created_timestamp": 1784637633138,
+      "content": "Yes, that's correct"
+    },
+    {
+      "message_id": "message_8f35b8ffaf93c10229206e92",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637634929,
+      "tool_call_id": "call_l7WSAClRBH3Kv0JUwvmRrzE0",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_e2c4e2ec222f82ef27b0b5ef",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637634930,
+      "tool_call_id": "call_l7WSAClRBH3Kv0JUwvmRrzE0",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Sarah\",\"classified_intent\":\"engineer visit request\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"NE4 5AB\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_4ed6c45478555b16611fb242",
+      "role": "agent",
+      "created_timestamp": 1784637636495,
+      "content": "Boiler losing pressure, thanks. What\u2019s the house number or name?",
+      "metadata": {
+        "response_id": 3
+      }
+    },
+    {
+      "message_id": "message_de435f47c869d9ff6248ac1d",
+      "role": "user",
+      "created_timestamp": 1784637637203,
+      "content": "Today works"
+    },
+    {
+      "message_id": "message_45b240e30b28392800527461",
+      "role": "agent",
+      "created_timestamp": 1784637638786,
+      "content": "Today works, noted. What\u2019s the house number or name?",
+      "metadata": {
+        "response_id": 4
+      }
+    },
+    {
+      "message_id": "message_ac90acfca5629ac7963708d6",
+      "role": "user",
+      "created_timestamp": 1784637639581,
+      "content": "Yes, book it"
+    },
+    {
+      "message_id": "message_9a4081a03c51a2598bbe7213",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637641420,
+      "tool_call_id": "call_VjO5ptQtgEVPvSvGu1JD54Z9",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_e5e2276627990cef5bf6e1f8",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637641421,
+      "tool_call_id": "call_VjO5ptQtgEVPvSvGu1JD54Z9",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Sarah\",\"classified_intent\":\"engineer visit request\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"NE4 5AB\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_0b773ed81f220884818b5bc2",
+      "role": "agent",
+      "created_timestamp": 1784637644666,
+      "content": "Booked intent, thanks. What\u2019s the house number or name?",
+      "metadata": {
+        "response_id": 5
+      }
+    },
+    {
+      "message_id": "message_3734658566dc4a19ab5bc1d4",
+      "role": "user",
+      "created_timestamp": 1784637645506,
+      "content": "That's all, thanks"
+    },
+    {
+      "message_id": "message_70460f2af649c39d32ce5fc9",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637646353,
+      "tool_call_id": "call_Pq6ENpcz7AS3FZfi2TScbNuW",
+      "name": "end_call",
+      "arguments": "{}",
+      "type": "end_call"
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/ebde4d13c8bf212e963e3fd7a7649126648ad035bb1340602b76c8f2aa643583/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "combined_cost": 14.5,
+    "product_costs": [
+      {
+        "unit_price": 2.6,
+        "product": "gpt_5_4_text_testing",
+        "cost": 13
+      },
+      {
+        "unit_price": 1.5,
+        "product": "gpt_4_1_text_testing",
+        "cost": 1.5
+      }
+    ]
+  },
+  "chat_analysis": {
+    "chat_summary": "The user, Sarah, requested an engineer visit for a boiler losing pressure and provided her postcode. The agent repeatedly asked for the house number or name, but the user did not provide it and ended the conversation after confirming the booking. The booking could not be fully completed due to missing address details.",
+    "user_sentiment": "Neutral",
+    "custom_analysis_data": {},
+    "chat_successful": false
+  },
+  "data_storage_setting": "everything"
+}

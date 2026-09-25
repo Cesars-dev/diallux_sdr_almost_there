@@ -1,0 +1,151 @@
+{
+  "chat_id": "chat_f49c30ba6f1c5cc1f2ef90d2401",
+  "chat_type": "api_chat",
+  "agent_id": "agent_6226cbd3e8292efd1fea0581d8",
+  "agent_version": 0,
+  "agent_name": "HVAC Multi-Prompt Test (chat)",
+  "collected_dynamic_variables": {
+    "classified_intent": "Annual Boiler Service",
+    "past_customer": "false",
+    "intent_confirmed": "true",
+    "address_postcode": "",
+    "address_confirmed": "false",
+    "problem_category": "boiler service",
+    "address_city": "Newcastle",
+    "boiler_make": "",
+    "symptom_brief": "annual boiler service requested",
+    "current_agent_state": "address",
+    "intent_clear": "true",
+    "address_line1": "14 Victoria Terrace",
+    "greeting_exchanged": "true",
+    "error_code": "",
+    "customer_name": "",
+    "previous_agent_state": "greeter"
+  },
+  "chat_status": "ended",
+  "start_timestamp": 1784626641345,
+  "end_timestamp": 1784626652873,
+  "transcript": "User: Hi, I need a boiler service. I don't know my postcode off the top of my head.\nAgent: Annual boiler service, got it.\n\nSo this is for a boiler service, yeah?\nUser: It's 14 Victoria Terrace, Newcastle\nAgent: 14 Victoria Terrace, Newcastle, got it.\n\nWho am I speaking with?",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_433b710106aab782ce65ccb6",
+      "role": "user",
+      "created_timestamp": 1784626642000,
+      "content": "Hi, I need a boiler service. I don't know my postcode off the top of my head."
+    },
+    {
+      "message_id": "message_753e493bdbc63e34017fc59f",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784626643475,
+      "tool_call_id": "call_1Hkg6P2bFKQzmMC7UoviBnXa",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_e21143b64c9840c84aab8ad2",
+      "role": "tool_call_result",
+      "created_timestamp": 1784626643476,
+      "tool_call_id": "call_1Hkg6P2bFKQzmMC7UoviBnXa",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"Annual Boiler Service\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_17c38b5c9c44e72dacadd854",
+      "role": "agent",
+      "created_timestamp": 1784626644497,
+      "content": "Annual boiler service, got it.\n\nSo this is for a boiler service, yeah?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_ce05a007d508b5d59e5ece82",
+      "role": "user",
+      "created_timestamp": 1784626645355,
+      "content": "It's 14 Victoria Terrace, Newcastle"
+    },
+    {
+      "message_id": "message_5d3ed1d6dab0b5a723f44cb0",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784626646848,
+      "tool_call_id": "call_cmfe5hvBjQf8uagS2Upm9ztL",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_fe7f324c7c7cd2ded8578927",
+      "role": "tool_call_result",
+      "created_timestamp": 1784626646849,
+      "tool_call_id": "call_cmfe5hvBjQf8uagS2Upm9ztL",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"Annual Boiler Service\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_52893963208c4ce61f2e8f03",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784626647823,
+      "tool_call_id": "call_U6Ljr4AMBTNQwDxqbs8xqEu6",
+      "name": "transition_to_address",
+      "arguments": "{}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_c446590816073982094ee50a",
+      "role": "state_transition",
+      "created_timestamp": 1784626647824,
+      "former_state_name": "greeter",
+      "new_state_name": "address"
+    },
+    {
+      "message_id": "message_9c38d49e85134df67bc3fca9",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784626650904,
+      "tool_call_id": "call_YMIWjtYQyURXKDulgnYITaxh",
+      "name": "extract_address_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_ea7568a048d6ac234982d6a2",
+      "role": "tool_call_result",
+      "created_timestamp": 1784626650905,
+      "tool_call_id": "call_YMIWjtYQyURXKDulgnYITaxh",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"problem_category\":\"boiler service\",\"symptom_brief\":\"annual boiler service requested\",\"error_code\":\"\",\"boiler_make\":\"\",\"address_postcode\":\"\",\"address_line1\":\"14 Victoria Terrace\",\"address_city\":\"Newcastle\",\"address_confirmed\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_475330491b8ffc24cf9ebc29",
+      "role": "agent",
+      "created_timestamp": 1784626652125,
+      "content": "14 Victoria Terrace, Newcastle, got it.\n\nWho am I speaking with?",
+      "metadata": {
+        "response_id": 2
+      }
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/d2f121db2e720c522e0949439a01722fe2f56f807104ae8542c5fc6f89ea298f/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "combined_cost": 6.7,
+    "product_costs": [
+      {
+        "unit_price": 2.6,
+        "product": "gpt_5_4_text_testing",
+        "cost": 5.2
+      },
+      {
+        "unit_price": 1.5,
+        "product": "gpt_4_1_text_testing",
+        "cost": 1.5
+      }
+    ]
+  },
+  "chat_analysis": {
+    "chat_summary": "The user requested an annual boiler service but did not initially know their postcode. They provided their address (14 Victoria Terrace, Newcastle), and the agent confirmed the service type and address before asking for the user's name.",
+    "user_sentiment": "Neutral",
+    "custom_analysis_data": {},
+    "chat_successful": true
+  },
+  "data_storage_setting": "everything"
+}

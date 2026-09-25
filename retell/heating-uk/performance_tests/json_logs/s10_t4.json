@@ -1,0 +1,43 @@
+{
+  "scenario": 10,
+  "turn": 4,
+  "chat_id": "chat_a5815d084aa7f0ac9dc5f01f123",
+  "caller_message": "Today works",
+  "agent_messages": [
+    {
+      "message_id": "message_8b59b9aa78db1b0deccfc92f",
+      "role": "agent",
+      "created_timestamp": 1784639546175,
+      "content": "I\u2019m checking today\u2019s slots now.",
+      "metadata": {
+        "response_id": 5
+      }
+    },
+    {
+      "message_id": "message_d1193d22d863d2aa5c999f45",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639546176,
+      "tool_call_id": "call_HvDNwDxUd6kcIKN5gHLSL28Y",
+      "name": "check_availability",
+      "arguments": "{\"start_time\":\"2026-07-21T14:12:00\",\"end_time\":\"2026-07-21T23:59:00\",\"timezone\":\"Europe/London\",\"execution_message\":\"I\u2019m checking today\u2019s slots now.\"}",
+      "type": "check_availability_cal"
+    },
+    {
+      "message_id": "message_eabfd223fd60b5395c02d811",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639547096,
+      "tool_call_id": "call_HvDNwDxUd6kcIKN5gHLSL28Y",
+      "content": "{\"availability_for_selected_time\":\"No available slots for specified time range, but there are available slots on time range that's nearby.\",\"availability_nearby\":[{\"date\":\"Wednesday, 2026 July 7/22/2026 British Summer Time\",\"availability_range\":[\"From 4:30 PM to 7:00 PM\"]}]}",
+      "successful": true
+    },
+    {
+      "message_id": "message_c7ccf685a35971f83a4c1eca",
+      "role": "agent",
+      "created_timestamp": 1784639549252,
+      "content": "No slot today. I can do Wednesday between half four and seven. Does that work?",
+      "metadata": {
+        "response_id": 6
+      }
+    }
+  ]
+}

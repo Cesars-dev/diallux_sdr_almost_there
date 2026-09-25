@@ -1,0 +1,268 @@
+{
+  "chat_id": "chat_7f0bb74c88f02742b51608c33f2",
+  "chat_type": "api_chat",
+  "agent_id": "agent_87e4d5f08475e5bc558b2f390f",
+  "agent_version": 0,
+  "agent_name": "V7.7_set_callback_number",
+  "retell_llm_dynamic_variables": {
+    "today_date": "2026-08-27"
+  },
+  "collected_dynamic_variables": {
+    "call_volume": "",
+    "industry": "",
+    "current_agent_state": "Discovery",
+    "interest_topic": "save on insurance or something",
+    "pain_frame": "Everyone promises savings these days; not convinced",
+    "intake_completed": "true",
+    "inbound_channel": "voicemail",
+    "interest_signal": "false",
+    "previous_agent_state": "Intake",
+    "pattern_matched": "true",
+    "pain_points": "Calls wait when I’m busy; callers aren’t always answered right away; Some callers leave a message, some don’t",
+    "pain_urgency": "medium"
+  },
+  "chat_status": "ended",
+  "start_timestamp": 1787819552722,
+  "end_timestamp": 1787819594332,
+  "transcript": "User: Yeah, I got a voicemail from you people. This better be quick, I've got three jobs waiting.\nAgent: Got it — I’ll be quick. What caught your attention in the voicemail?\nUser: Honestly, my wife wanted me to call. Is this some kind of scam or what?\nAgent: No — not a scam. What did the voicemail say that made your wife want you to call back?\nUser: She thought we might save on insurance or something, but I'm not convinced. Everyone promises savings these days.\nAgent: Yeah, I hear you — “everyone promises savings” gets old fast. When calls come in while you’re on those jobs, what happens if no one picks up?\nUser: I handle it when I can. If not, they wait. What's that got to do with insurance?\nAgent: Makes sense — it ties in because when they “wait,” a lot of callers just hang up and you never get the chance to help them (or quote anything). When someone can’t reach you, do they usually leave a voicemail or just disappear?\nUser: Some leave a message, some don't. What's your point? I'm not seeing how this helps me.\nAgent: Totally fair — my point is the ones who don’t leave a message are usually lost jobs you never even get a shot at. Roughly how many calls a week hit voicemail or go unanswered?\nUser: That's none of your business. Why do you even need that info? Sounds fishy to me.\nAgent: Got it — I can see why you’d be cautious. I’m only asking because the call volume tells us whether missed calls are costing you real jobs or it’s basically a non-issue; would you rather answer as a range (like “a few” vs “dozens”) or should I just explain, in 20 seconds, what we do?\nUser: I don't have time for this. You're just selling something, aren't you? Goodbye.\nAgent: Totally understand — yes, we do sell a service that helps you catch the calls you miss while you’re on jobs. Thanks for taking a minute, and have a good rest of your day.",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_3ed5091286700c7e9709bfee",
+      "role": "user",
+      "created_timestamp": 1787819553355,
+      "content": "Yeah, I got a voicemail from you people. This better be quick, I've got three jobs waiting."
+    },
+    {
+      "message_id": "message_76c61a6d08da146e24ad9c8e",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787819555523,
+      "tool_call_id": "call_yBuip1Dgfb9DOeyQGdsrTQah",
+      "name": "extract_intake_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_b507b0ed3ff06388917a19be",
+      "role": "tool_call_result",
+      "created_timestamp": 1787819555524,
+      "tool_call_id": "call_yBuip1Dgfb9DOeyQGdsrTQah",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"inbound_channel\":\"voicemail\",\"interest_topic\":\"\",\"pain_frame\":\"\"}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_a3faf01a0652ae1a2d637330",
+      "role": "agent",
+      "created_timestamp": 1787819563073,
+      "content": "Got it — I’ll be quick. What caught your attention in the voicemail?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_8d82798437f74bdd9740dfc1",
+      "role": "user",
+      "created_timestamp": 1787819564711,
+      "content": "Honestly, my wife wanted me to call. Is this some kind of scam or what?"
+    },
+    {
+      "message_id": "message_aa57b4beae10173db19e8f50",
+      "role": "agent",
+      "created_timestamp": 1787819566718,
+      "content": "No — not a scam. What did the voicemail say that made your wife want you to call back?",
+      "metadata": {
+        "response_id": 2
+      }
+    },
+    {
+      "message_id": "message_4659190f07a9e31ebb325a3e",
+      "role": "user",
+      "created_timestamp": 1787819568226,
+      "content": "She thought we might save on insurance or something, but I'm not convinced. Everyone promises savings these days."
+    },
+    {
+      "message_id": "message_1f2b305086ce3de2aeef0ccb",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787819570102,
+      "tool_call_id": "call_ZSPymb1iBkCfNd0evJaOJu5w",
+      "name": "extract_intake_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_cddeff38fd9c2e12cd46442a",
+      "role": "tool_call_result",
+      "created_timestamp": 1787819570103,
+      "tool_call_id": "call_ZSPymb1iBkCfNd0evJaOJu5w",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"inbound_channel\":\"voicemail\",\"interest_topic\":\"save on insurance or something\",\"pain_frame\":\"Everyone promises savings these days; not convinced\"}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_2c742b2b25a09a42f907ca2f",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787819571517,
+      "tool_call_id": "call_pgF8JpbeMF4bpB5uJbsxsZkK",
+      "name": "intake_completed",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_93c28ece5679c3c00fc1b969",
+      "role": "tool_call_result",
+      "created_timestamp": 1787819571518,
+      "tool_call_id": "call_pgF8JpbeMF4bpB5uJbsxsZkK",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"intake_completed\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_f4f3955eafc36c4ca56bc1e7",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787819573872,
+      "tool_call_id": "call_8dxZRQZlDk9NOOcdyE9OKVxQ",
+      "name": "transition_to_Discovery",
+      "arguments": "{\"pain_frame\":\"Everyone promises savings these days; not convinced\",\"intake_completed\":true,\"interest_topic\":\"save on insurance or something\",\"inbound_channel\":\"voicemail\"}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_e0abd6242b3654c5e0dec8f1",
+      "role": "state_transition",
+      "created_timestamp": 1787819573873,
+      "former_state_name": "Intake",
+      "new_state_name": "Discovery"
+    },
+    {
+      "message_id": "message_bc48f5c255c8a0f9a82c47f7",
+      "role": "agent",
+      "created_timestamp": 1787819575597,
+      "content": "Yeah, I hear you — “everyone promises savings” gets old fast. When calls come in while you’re on those jobs, what happens if no one picks up?",
+      "metadata": {
+        "response_id": 3
+      }
+    },
+    {
+      "message_id": "message_c1c44b67a17a707bafcc2760",
+      "role": "user",
+      "created_timestamp": 1787819577183,
+      "content": "I handle it when I can. If not, they wait. What's that got to do with insurance?"
+    },
+    {
+      "message_id": "message_5d23170ce5f160acf97d269a",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787819579211,
+      "tool_call_id": "call_yGtYVIy50OnqgKeZwFRYqg5n",
+      "name": "extract_discovery_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_1ace955beead3e17e3e79d22",
+      "role": "tool_call_result",
+      "created_timestamp": 1787819579212,
+      "tool_call_id": "call_yGtYVIy50OnqgKeZwFRYqg5n",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"industry\":\"\",\"pain_points\":\"Calls wait when I’m busy; callers aren’t always answered right away\",\"interest_signal\":false,\"pattern_matched\":false,\"call_volume\":\"\",\"pain_urgency\":\"medium\"}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_3a99c7b90e939e9a09d7191c",
+      "role": "agent",
+      "created_timestamp": 1787819581404,
+      "content": "Makes sense — it ties in because when they “wait,” a lot of callers just hang up and you never get the chance to help them (or quote anything). When someone can’t reach you, do they usually leave a voicemail or just disappear?",
+      "metadata": {
+        "response_id": 4
+      }
+    },
+    {
+      "message_id": "message_14cbe02947e8f69429267e79",
+      "role": "user",
+      "created_timestamp": 1787819583145,
+      "content": "Some leave a message, some don't. What's your point? I'm not seeing how this helps me."
+    },
+    {
+      "message_id": "message_a0af5d2bff143bd6b229d700",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787819584949,
+      "tool_call_id": "call_8NQ4oeXf4CeRi5FaaPBVsHG0",
+      "name": "extract_discovery_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_ba8cb0a21f4234601f863686",
+      "role": "tool_call_result",
+      "created_timestamp": 1787819584950,
+      "tool_call_id": "call_8NQ4oeXf4CeRi5FaaPBVsHG0",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"industry\":\"\",\"pain_points\":\"Calls wait when I’m busy; callers aren’t always answered right away; Some callers leave a message, some don’t\",\"interest_signal\":false,\"pattern_matched\":true,\"call_volume\":\"\",\"pain_urgency\":\"medium\"}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_d5a5cf71c73febbda7d7e43f",
+      "role": "agent",
+      "created_timestamp": 1787819586559,
+      "content": "Totally fair — my point is the ones who don’t leave a message are usually lost jobs you never even get a shot at. Roughly how many calls a week hit voicemail or go unanswered?",
+      "metadata": {
+        "response_id": 5
+      }
+    },
+    {
+      "message_id": "message_b095efd6ad56486951264ba7",
+      "role": "user",
+      "created_timestamp": 1787819588052,
+      "content": "That's none of your business. Why do you even need that info? Sounds fishy to me."
+    },
+    {
+      "message_id": "message_3a98c11ec25d563376127850",
+      "role": "agent",
+      "created_timestamp": 1787819590463,
+      "content": "Got it — I can see why you’d be cautious. I’m only asking because the call volume tells us whether missed calls are costing you real jobs or it’s basically a non-issue; would you rather answer as a range (like “a few” vs “dozens”) or should I just explain, in 20 seconds, what we do?",
+      "metadata": {
+        "response_id": 6
+      }
+    },
+    {
+      "message_id": "message_960418a3be56c0f24c319649",
+      "role": "user",
+      "created_timestamp": 1787819591867,
+      "content": "I don't have time for this. You're just selling something, aren't you? Goodbye."
+    },
+    {
+      "message_id": "message_d2bc9ed01c1a830d1cd45748",
+      "role": "agent",
+      "created_timestamp": 1787819594291,
+      "content": "Totally understand — yes, we do sell a service that helps you catch the calls you miss while you’re on jobs. Thanks for taking a minute, and have a good rest of your day.",
+      "metadata": {
+        "response_id": 7
+      }
+    },
+    {
+      "message_id": "message_ab3f22526e60f23d2d2e7c98",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787819594292,
+      "tool_call_id": "call_8FSmmMmSObiZO92zzCYjeNFv",
+      "name": "end_call",
+      "arguments": "{\"execution_message\":\"Totally understand — yes, we do sell a service that helps you catch the calls you miss while you’re on jobs. Thanks for taking a minute, and have a good rest of your day.\"}",
+      "type": "end_call"
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/539118ca7f3e4304527d539e4d988be8b3bcc4b61c017d7822ac33303e1b9e24/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "combined_cost": 14.1,
+    "product_costs": [
+      {
+        "product": "gpt_5_2_text_testing",
+        "cost": 12.6,
+        "unit_price": 1.8
+      },
+      {
+        "cost": 1.5,
+        "product": "gpt_4_1_text_testing",
+        "unit_price": 1.5
+      }
+    ]
+  },
+  "chat_analysis": {
+    "user_sentiment": "Negative",
+    "chat_summary": "The user called back after receiving a voicemail, expressing skepticism and impatience. The agent attempted to explain the relevance of missed calls to potential lost business and introduced their service, but the user remained distrustful and ended the conversation abruptly. The agent maintained professionalism throughout, but the user was not receptive to the sales pitch.",
+    "custom_analysis_data": {},
+    "chat_successful": false
+  },
+  "data_storage_setting": "everything"
+}

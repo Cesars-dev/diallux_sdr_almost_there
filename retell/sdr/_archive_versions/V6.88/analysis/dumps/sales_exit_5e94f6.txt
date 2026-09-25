@@ -1,0 +1,65 @@
+CALLER: Hi, I got a flyer. How does this whole thing work exactly?
+  [extract_intake_details]
+AGENT: Got it, thanks for calling in off the flyer — you’re asking “How does this whole thing work exactly?” so let’s start there.  
+
+At a high level, we make sure when your phone rings and you or your staff can’t pick up, those calls still turn into booked appointments or captured opportunities instead of lost revenue.  
+
+So before I go deeper, what’s your situation right now — are you mainly worried about missed calls, or are you looking more for *extra* leads?
+CALLER: I mainly miss calls when I close early. How does your service work with my existing phone line?
+  [extract_intake_details]
+  [intake_completed]
+  [transition_to_Discovery]
+AGENT: Mhm, closing early is exactly where a lot of revenue slips away.  
+
+So with your current setup, when someone calls after you’ve closed early, does it just hit voicemail, or is there any kind of forwarding in place right now?
+CALLER: Right now, it just goes straight to voicemail when I'm not around.
+  [extract_discovery_details]
+AGENT: Got it, so when you’re not there it’s straight to voicemail — that’s exactly where we step in.  
+
+We tie into your existing number so after-hours or when you’re busy, callers get answered live, questions handled, and appointments or messages booked, then everything is sent to you so you’re not losing those opportunities.  
+
+To size this properly: roughly how many calls a week do you think are hitting voicemail instead of you?
+CALLER: I’d say around 15 to 20 calls a week. How much does this service cost, and how is it installed?
+  [extract_discovery_details]
+AGENT: Makes sense, 15–20 a week is a lot of opportunity going to voicemail.  
+
+On cost, most folks are somewhere in the low four figures per month, and it usually pays for itself with just a handful of recovered jobs; installation is light — we tie into your existing number with call forwarding, so you keep your same line and we handle the after-hours or missed calls.  
+
+So I can be more specific: what kind of work do you do — HVAC, appliance repair, something else?
+CALLER: It's a hardware store. So the four figures, is that flexible? I'm still just gathering information at this point.
+  [extract_discovery_details]
+  [discovery_completed]
+  [transition_to_Closer]
+AGENT: Yeah, that makes sense — totally fine to just gather info right now.  
+
+For a hardware store, pricing is flexible and depends on how many calls you want covered and how “live” you need us to be; the main thing is making sure it pays for itself on the calls you’re currently losing.  
+
+So with those 15–20 calls a week going to voicemail, do people usually call you back later, or do you feel like most of those just end up going to competitors or disappearing?
+CALLER: Some call back, but I'm sure we lose a few to competitors. Still weighing if this is worth it.
+  [extract_leak_inputs]
+AGENT: Yeah, that makes sense — if it goes to voicemail, a chunk will quietly drift to competitors.  
+
+Has anyone ever walked you through what those 15–20 missed calls a week actually add up to in dollars, or would you be open to a really quick calculation together?
+CALLER: I haven't calculated that before, but I'm not sure I'm ready to dive into numbers just yet.
+AGENT: Totally fair, you don’t have to dive into numbers right now.  
+
+So staying high-level, the whole point of our service is to turn those “we probably lost a few to competitors” calls into actual customers, without you hiring more staff or changing your number — if that gap stayed the same for the next 6–12 months, would that worry you, or does it feel manageable as-is?
+CALLER: It's a concern, but I want to explore options before deciding if changes are necessary.
+  [extract_closer_details]
+  [closer_completed]
+  [transition_to_Offer]
+  [extract_offer_details]
+AGENT: Yeah, that makes sense — it’s smart to look at a few options before changing anything.  
+
+So… to help you compare, we usually do a quick 20‑minute walkthrough where Jay shows exactly how this would plug into your existing line and what those missed calls could turn into for a hardware store like yours; would you be open to a short live call sometime this week to see it, or do you prefer to keep things as-is for now?
+CALLER: Let me think about it. I'm not ready to commit to a call right now.
+AGENT: Got it, totally hear you — you’re in “let me think about it” mode right now.  
+
+Real quick though… if I could guarantee you 5–10 extra booked customers a month from the calls you’re currently losing to voicemail, would that be worth 2 minutes to at least *look* at it with Jay this week?
+CALLER: I appreciate the offer, but I'll need to consider it. I'll call back if I decide to proceed.
+AGENT: Makes sense, I hear you — you’d rather think it over and call back if it feels right.  
+
+Before I let you go, is there anything specific you’d want more clarity on (how it connects to your existing line, how many calls we can cover, or ROI for a hardware store) that would help your decision?
+CALLER: Thanks for the info. I'll review it, and if I have more questions, I'll reach out.
+AGENT: Of course, that sounds good — I’m glad you called in and got some clarity today. If anything comes up or you want to walk through the numbers with Jay, just give us a ring. Have a great rest of your day.
+  [end_call]

@@ -1,0 +1,148 @@
+{
+  "chat_id": "chat_a6b6663cf7b3264dc7502d19bc9",
+  "chat_type": "api_chat",
+  "agent_id": "agent_ff9d4b9646a85b82d7ce8fd837",
+  "agent_version": 0,
+  "agent_name": "Multi State Agent",
+  "collected_dynamic_variables": {
+    "callback_requested": "false",
+    "classified_intent": "Heat Pump Enquiry",
+    "past_customer": "false",
+    "intent_confirmed": "true",
+    "address_postcode": "",
+    "address_city": "",
+    "address_house_number": "",
+    "current_agent_state": "address",
+    "intent_clear": "true",
+    "address_street": "",
+    "greeting_exchanged": "true",
+    "customer_name": "Alex",
+    "previous_agent_state": "greeter"
+  },
+  "chat_status": "ended",
+  "start_timestamp": 1784633561737,
+  "end_timestamp": 1784633573081,
+  "transcript": "User: Hi, I'm interested in getting a heat pump. What's the process?\nAgent: Heat pump enquiry, got it. An estimator will talk you through the process.\nUser: Alex\nAgent: Alex, lovely. Just to confirm, this is about a heat pump. Right.",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_cfa86057a58982f9777b6384",
+      "role": "user",
+      "created_timestamp": 1784633562368,
+      "content": "Hi, I'm interested in getting a heat pump. What's the process?"
+    },
+    {
+      "message_id": "message_d074929cfa803c4d66c21cb6",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784633564206,
+      "tool_call_id": "call_FEPiTDtuTzYwLLKCT5itcfzy",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_bf48224117fb49457073a66c",
+      "role": "tool_call_result",
+      "created_timestamp": 1784633564207,
+      "tool_call_id": "call_FEPiTDtuTzYwLLKCT5itcfzy",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"Heat Pump Enquiry\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_2b5f0c6b1dcdc032cf57581e",
+      "role": "agent",
+      "created_timestamp": 1784633565581,
+      "content": "Heat pump enquiry, got it. An estimator will talk you through the process.",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_7ad7556381c3f4fc0a2641ab",
+      "role": "user",
+      "created_timestamp": 1784633566418,
+      "content": "Alex"
+    },
+    {
+      "message_id": "message_87fff3cc30a8e9052aa79384",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784633567911,
+      "tool_call_id": "call_gDiJLDqAIyLoY5d183Q9IqTq",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_d76fb93abe63b9a41abfe97b",
+      "role": "tool_call_result",
+      "created_timestamp": 1784633567912,
+      "tool_call_id": "call_gDiJLDqAIyLoY5d183Q9IqTq",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Alex\",\"classified_intent\":\"Heat Pump Enquiry\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_c4071085c66b58beda012719",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784633569446,
+      "tool_call_id": "call_MwvzzfL6LIwU8vGO19YN4dCP",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_913e48302b5c15b42c007d23",
+      "role": "tool_call_result",
+      "created_timestamp": 1784633569447,
+      "tool_call_id": "call_MwvzzfL6LIwU8vGO19YN4dCP",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Alex\",\"classified_intent\":\"Heat Pump Enquiry\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_ab9b16f4888744966dd24ec0",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784633570822,
+      "tool_call_id": "call_ifTTBOuCHS7yzSBdWDWKvEgm",
+      "name": "transition_to_address",
+      "arguments": "{}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_abe84ead46d006ebb5adb755",
+      "role": "state_transition",
+      "created_timestamp": 1784633570823,
+      "former_state_name": "greeter",
+      "new_state_name": "address"
+    },
+    {
+      "message_id": "message_01bf40b401af55ead96071df",
+      "role": "agent",
+      "created_timestamp": 1784633572222,
+      "content": "Alex, lovely. Just to confirm, this is about a heat pump. Right.",
+      "metadata": {
+        "response_id": 2
+      }
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/b3317370f5773778c552304dd8288f51e8e9592a1cafd1699246f10483f8e923/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "combined_cost": 6.7,
+    "product_costs": [
+      {
+        "unit_price": 2.6,
+        "product": "gpt_5_4_text_testing",
+        "cost": 5.2
+      },
+      {
+        "unit_price": 1.5,
+        "product": "gpt_4_1_text_testing",
+        "cost": 1.5
+      }
+    ]
+  },
+  "chat_analysis": {
+    "chat_summary": "The user expressed interest in getting a heat pump and provided their name as Alex. The agent confirmed the enquiry and explained that an estimator would guide the user through the process, also confirming the user's intent regarding the heat pump.",
+    "user_sentiment": "Positive",
+    "custom_analysis_data": {},
+    "chat_successful": true
+  },
+  "data_storage_setting": "everything"
+}

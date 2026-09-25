@@ -1,0 +1,43 @@
+{
+  "source": "Cal.com v2 API — direct booking test (without Retell agent)",
+  "endpoint": "POST https://api.cal.com/v2/bookings",
+
+  "request_body": {
+    "eventTypeId": 6389911,
+    "start": "2026-07-22T10:00:00Z",
+    "attendee": {
+      "name": "Test User Kilo",
+      "email": "test.kilo@example.com",
+      "timeZone": "Europe/London",
+      "language": "en"
+    },
+    "location": "integration",
+    "metadata": {
+      "source": "api-test"
+    }
+  },
+
+  "response": {
+    "data": {
+      "id": 22729165,
+      "uid": "abxSZREsRZHMCngHbQcNiL",
+      "title": "HVAC_UK_appt between Jay at Diallux and Test User Kilo",
+      "status": "accepted",
+      "start": "2026-07-22T10:00:00.000Z",
+      "end": "2026-07-22T10:30:00.000Z",
+      "duration": 30,
+      "hosts": [{
+        "id": 1833776,
+        "name": "Jay at Diallux",
+        "email": "jaydiallux@gmail.com",
+        "timeZone": "America/Mexico_City"
+      }],
+      "attendees": [{
+        "name": "Test User Kilo",
+        "email": "test.kilo@example.com",
+        "timeZone": "Europe/London",
+        "language": "en"
+      }]
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "event_type_id": 6389911,
+  "cal_api_key": "${CAL_KEY_1}",
+  "timezone": "Europe/London",
+  "speak_after_execution": false,
+  "name": "check_availability",
+  "type": "check_availability_cal",
+  "description": "To query available appointment slots on the calendar.\n\nCRITICAL: This tool ALWAYS returns HTTP 200. A 200 does NOT mean success — you must READ the body and act on its contents, never assume.\n\nOn SUCCESS the body is: {\"ok\": true, \"slots\": [{\"day\": \"YYYY-MM-DD\", \"time\": \"YYYY-MM-DDTHH:MM:SS\", \"iso\": \"YYYY-MM-DDTHH:MM:SS.000Z\"}, ...]}\n- \"time\" = The value for booking.\n- \"iso\" = Reference only, not needed.\n- ONLY offer/book slots literally in the slots list.\n\nOn ERROR the body is: {\"ok\": false, \"error\": \"CODE\", \"message\": \"explanation\"} — please correct the call and retry:\n- \"no_start_time\": the day argument was missing. Retry with a concrete YYYY-MM-DD date.\n- \"invalid_slot_target_date\": the date was missformatted. Retry with a valid YYYY-MM-DD date.\n- \"no_availability_in_window\": no free slots in that window. Check the next available day and offer its closest slots.\n- \"upstream_unavailable\": the calendar is temporarily down. Say you'll retry shortly, then retry."
+}

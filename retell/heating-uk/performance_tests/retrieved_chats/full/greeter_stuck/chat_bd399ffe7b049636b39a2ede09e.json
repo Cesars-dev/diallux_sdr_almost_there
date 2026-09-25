@@ -1,0 +1,69 @@
+{
+  "chat_id": "chat_bd399ffe7b049636b39a2ede09e",
+  "chat_type": "api_chat",
+  "agent_id": "agent_ff9d4b9646a85b82d7ce8fd837",
+  "agent_version": 0,
+  "agent_name": "Multi State Agent",
+  "collected_dynamic_variables": {
+    "address_house_number": "",
+    "callback_requested": "false",
+    "intent_clear": "true",
+    "classified_intent": "possible gas/CO concern",
+    "address_street": "",
+    "past_customer": "false",
+    "greeting_exchanged": "true",
+    "intent_confirmed": "false",
+    "address_postcode": "",
+    "customer_name": "",
+    "address_incomplete": "false",
+    "address_city": ""
+  },
+  "chat_status": "ongoing",
+  "start_timestamp": 1784639656688,
+  "transcript": "User: Hi, I've had a headache all day and I'm worried it might be the boiler.\nAgent: Right \u2014 got it. Call the National Gas team on 0800 111 999.",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_dd102ca5e6b9cf5e210a1a84",
+      "role": "user",
+      "created_timestamp": 1784639657335,
+      "content": "Hi, I've had a headache all day and I'm worried it might be the boiler."
+    },
+    {
+      "message_id": "message_31126d0b94bbba7321fb9775",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639658879,
+      "tool_call_id": "call_5ihjewFTHuH5aIsKQ0JybnkA",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_fc317279b0c160a72918b3a1",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639658880,
+      "tool_call_id": "call_5ihjewFTHuH5aIsKQ0JybnkA",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"possible gas/CO concern\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_c74b9aee63a6dfedeabf2ab4",
+      "role": "agent",
+      "created_timestamp": 1784639660000,
+      "content": "Right \u2014 got it. Call the National Gas team on 0800 111 999.",
+      "metadata": {
+        "response_id": 1
+      }
+    }
+  ],
+  "chat_cost": {
+    "combined_cost": 2.6,
+    "product_costs": [
+      {
+        "unit_price": 2.6,
+        "product": "gpt_5_4_text_testing",
+        "cost": 2.6
+      }
+    ]
+  },
+  "data_storage_setting": "everything"
+}

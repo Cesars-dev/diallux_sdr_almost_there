@@ -1,0 +1,268 @@
+{
+  "chat_id": "chat_0c81eef31b9bd845b5117bd20e1",
+  "chat_type": "api_chat",
+  "agent_id": "agent_f724da044b38ca7e11098933ec",
+  "agent_version": 0,
+  "agent_name": "V7.3_craft_kb",
+  "retell_llm_dynamic_variables": {
+    "today_date": "2026-08-25"
+  },
+  "collected_dynamic_variables": {
+    "interest_topic": "got a voicemail from you people",
+    "pain_urgency": "medium",
+    "inbound_channel": "voicemail",
+    "pain_points": "doesn't want to talk about how calls are handled, worried this is just a sales pitch",
+    "interest_signal": "false",
+    "intake_completed": "true",
+    "previous_agent_state": "Intake",
+    "industry": "",
+    "current_agent_state": "Discovery",
+    "pain_frame": "this better be quick, I've got three jobs waiting",
+    "pattern_matched": "true",
+    "call_volume": ""
+  },
+  "chat_status": "ended",
+  "start_timestamp": 1787663836567,
+  "end_timestamp": 1787663873366,
+  "transcript": "User: Yeah, I got a voicemail from you people. This better be quick, I've got three jobs waiting.\nAgent: Got it — I’ll keep this tight. When a call comes in and you’re out on those three jobs, who’s actually picking up the phone for you?\nUser: That's my problem, not yours. Why do you need to know?\nAgent: Yeah, totally hear you — it *is* your world and your problem. The only reason I ask is we work with busy folks to stop losing jobs when calls slip through, so I’m trying to see if that’s actually happening for you or not… when you miss a call, do people usually call back, or do they go to someone else?\nUser: They usually call back, but why do you care? Sounds like you're just selling something.\nAgent: Mhm, I hear you — it *is* a sales call, I won’t pretend it’s not. We help busy owners keep jobs from slipping away when they’re tied up, so if most folks do call you back, do you ever have calls that hit voicemail and never return?\nUser: Yeah, sometimes. But that's part of the business, isn't it? Not seeing how you can change that.\nAgent: Makes sense, it *does* feel like “that’s just how it is” when you’re slammed on jobs. Roughly how many calls a week would you say end up on voicemail or unanswered?\nUser: That's none of your business. Why do you need that information anyway?\nAgent: Got it, I won’t pry on numbers. The only reason I ask is because we set things up so when you *can’t* grab the phone, that caller still gets handled instead of disappearing—would it even matter to you if those “sometimes” missed calls turned into booked jobs instead of maybes?\nUser: Everyone says that. What's the catch here? Feels like a scam to me.\nAgent: Yeah, I get why your guard’s up — lots of people overpromise. There’s no catch like contracts you can’t get out of or surprise fees; if it doesn’t clearly turn more of those missed calls into real jobs, it’s not worth your time… so what’s the *biggest* thing that would make this feel legit to you instead of “just another pitch”?\nUser: Honestly, nothing really. I've heard it all before. I don't have time for this, bye.\nAgent: Totally fair, I hear you and I won’t keep you — thanks for picking up, and if down the line you ever want to stop a few more of those missed calls turning into lost jobs, you can always get in touch. Take care out there today.",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_2009a1c39a3aa40dd59f2d36",
+      "role": "user",
+      "created_timestamp": 1787663837265,
+      "content": "Yeah, I got a voicemail from you people. This better be quick, I've got three jobs waiting."
+    },
+    {
+      "message_id": "message_9c0db0581fc050270e386426",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787663839494,
+      "tool_call_id": "call_uYb2adlj1Ym8XlD02S6A5LK6",
+      "name": "extract_intake_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_976de46a6426b204079403c2",
+      "role": "tool_call_result",
+      "created_timestamp": 1787663839495,
+      "tool_call_id": "call_uYb2adlj1Ym8XlD02S6A5LK6",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"inbound_channel\":\"voicemail\",\"interest_topic\":\"got a voicemail from you people\",\"pain_frame\":\"this better be quick, I've got three jobs waiting\"}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_89a6747c81f856dc1752a6b1",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787663840560,
+      "tool_call_id": "call_Qa0PFwr0cUAxc65LDPCzrn9O",
+      "name": "intake_completed",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_41e77d6efc9bcffbd6f998e2",
+      "role": "tool_call_result",
+      "created_timestamp": 1787663840566,
+      "tool_call_id": "call_Qa0PFwr0cUAxc65LDPCzrn9O",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"intake_completed\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_fd6bd302e5def7d88fc94f47",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787663841689,
+      "tool_call_id": "call_T9xYHO3vRoRBObYmsWanlnzm",
+      "name": "transition_to_Discovery",
+      "arguments": "{\"inbound_channel\":\"voicemail\",\"intake_completed\":true,\"pain_frame\":\"this better be quick, I've got three jobs waiting\",\"interest_topic\":\"got a voicemail from you people\"}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_d21024ddc818dcc27ddb1bbc",
+      "role": "state_transition",
+      "created_timestamp": 1787663841690,
+      "former_state_name": "Intake",
+      "new_state_name": "Discovery"
+    },
+    {
+      "message_id": "message_4773aaf6baecaa7a83549593",
+      "role": "agent",
+      "created_timestamp": 1787663843604,
+      "content": "Got it — I’ll keep this tight. When a call comes in and you’re out on those three jobs, who’s actually picking up the phone for you?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_f6fa9e6fa44a6e8b7328f407",
+      "role": "user",
+      "created_timestamp": 1787663845628,
+      "content": "That's my problem, not yours. Why do you need to know?"
+    },
+    {
+      "message_id": "message_3e7e064b01c7bc1a0eb5dce7",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787663847245,
+      "tool_call_id": "call_op9Szle0g1fk0TX20qaAudKJ",
+      "name": "extract_discovery_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_bb38c20c97c50a875f1650a8",
+      "role": "tool_call_result",
+      "created_timestamp": 1787663847246,
+      "tool_call_id": "call_op9Szle0g1fk0TX20qaAudKJ",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"industry\":\"\",\"pain_points\":\"doesn't want to talk about how calls are handled\",\"interest_signal\":false,\"pattern_matched\":false,\"call_volume\":\"\",\"pain_urgency\":\"medium\"}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_be23732af85dcdd60d4491a6",
+      "role": "agent",
+      "created_timestamp": 1787663849859,
+      "content": "Yeah, totally hear you — it *is* your world and your problem. The only reason I ask is we work with busy folks to stop losing jobs when calls slip through, so I’m trying to see if that’s actually happening for you or not… when you miss a call, do people usually call back, or do they go to someone else?",
+      "metadata": {
+        "response_id": 2
+      }
+    },
+    {
+      "message_id": "message_77a3992607d4c71dde2d2550",
+      "role": "user",
+      "created_timestamp": 1787663851489,
+      "content": "They usually call back, but why do you care? Sounds like you're just selling something."
+    },
+    {
+      "message_id": "message_96f6facf9b11542db74025f2",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787663854632,
+      "tool_call_id": "call_5YBg2uRisvnmNunVjk799lBY",
+      "name": "extract_discovery_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_91e9a20084a2072ad5675940",
+      "role": "tool_call_result",
+      "created_timestamp": 1787663854633,
+      "tool_call_id": "call_5YBg2uRisvnmNunVjk799lBY",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"industry\":\"\",\"pain_points\":\"doesn't want to talk about how calls are handled, worried this is just a sales pitch\",\"interest_signal\":false,\"pattern_matched\":false,\"call_volume\":\"\",\"pain_urgency\":\"medium\"}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_a01d519190e06bdcb665440f",
+      "role": "agent",
+      "created_timestamp": 1787663855990,
+      "content": "Mhm, I hear you — it *is* a sales call, I won’t pretend it’s not. We help busy owners keep jobs from slipping away when they’re tied up, so if most folks do call you back, do you ever have calls that hit voicemail and never return?",
+      "metadata": {
+        "response_id": 3
+      }
+    },
+    {
+      "message_id": "message_c720e9852b9042d8627ac59b",
+      "role": "user",
+      "created_timestamp": 1787663857970,
+      "content": "Yeah, sometimes. But that's part of the business, isn't it? Not seeing how you can change that."
+    },
+    {
+      "message_id": "message_c3847fda394743dad570618f",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787663859224,
+      "tool_call_id": "call_OznIe2iz0Wpn280DE4eVNJ2Z",
+      "name": "extract_discovery_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_b38d5244c9e5ba61afeb98dc",
+      "role": "tool_call_result",
+      "created_timestamp": 1787663859225,
+      "tool_call_id": "call_OznIe2iz0Wpn280DE4eVNJ2Z",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"industry\":\"\",\"pain_points\":\"doesn't want to talk about how calls are handled, worried this is just a sales pitch\",\"interest_signal\":false,\"pattern_matched\":true,\"call_volume\":\"\",\"pain_urgency\":\"medium\"}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_081b2ec4ccf5d26c15dd4fbe",
+      "role": "agent",
+      "created_timestamp": 1787663860507,
+      "content": "Makes sense, it *does* feel like “that’s just how it is” when you’re slammed on jobs. Roughly how many calls a week would you say end up on voicemail or unanswered?",
+      "metadata": {
+        "response_id": 4
+      }
+    },
+    {
+      "message_id": "message_36f97a479c1f11c137a8cb9d",
+      "role": "user",
+      "created_timestamp": 1787663862098,
+      "content": "That's none of your business. Why do you need that information anyway?"
+    },
+    {
+      "message_id": "message_5861fac86e1720d7924fbba1",
+      "role": "agent",
+      "created_timestamp": 1787663864826,
+      "content": "Got it, I won’t pry on numbers. The only reason I ask is because we set things up so when you *can’t* grab the phone, that caller still gets handled instead of disappearing—would it even matter to you if those “sometimes” missed calls turned into booked jobs instead of maybes?",
+      "metadata": {
+        "response_id": 5
+      }
+    },
+    {
+      "message_id": "message_c229b956b611cb3bfeb361af",
+      "role": "user",
+      "created_timestamp": 1787663866802,
+      "content": "Everyone says that. What's the catch here? Feels like a scam to me."
+    },
+    {
+      "message_id": "message_3feef36c1404f8bcec28b16f",
+      "role": "agent",
+      "created_timestamp": 1787663869837,
+      "content": "Yeah, I get why your guard’s up — lots of people overpromise. There’s no catch like contracts you can’t get out of or surprise fees; if it doesn’t clearly turn more of those missed calls into real jobs, it’s not worth your time… so what’s the *biggest* thing that would make this feel legit to you instead of “just another pitch”?",
+      "metadata": {
+        "response_id": 6
+      }
+    },
+    {
+      "message_id": "message_8d0b6a5132327f727bf07e26",
+      "role": "user",
+      "created_timestamp": 1787663871639,
+      "content": "Honestly, nothing really. I've heard it all before. I don't have time for this, bye."
+    },
+    {
+      "message_id": "message_6b98c06b454e5d4e28033f51",
+      "role": "agent",
+      "created_timestamp": 1787663873331,
+      "content": "Totally fair, I hear you and I won’t keep you — thanks for picking up, and if down the line you ever want to stop a few more of those missed calls turning into lost jobs, you can always get in touch. Take care out there today.",
+      "metadata": {
+        "response_id": 7
+      }
+    },
+    {
+      "message_id": "message_3d4f602260d427b38d292ce7",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787663873332,
+      "tool_call_id": "call_PGrUV4CA66yEsGRWPMRhE2Hb",
+      "name": "end_call",
+      "arguments": "{\"execution_message\":\"Totally fair, I hear you and I won’t keep you — thanks for picking up, and if down the line you ever want to stop a few more of those missed calls turning into lost jobs, you can always get in touch. Take care out there today.\"}",
+      "type": "end_call"
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/6ac1ed6fc5335ecd4842274c3b54844611c99cafe7f3ddca7420c8370adb2bf8/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "product_costs": [
+      {
+        "unit_price": 1.3,
+        "cost": 9.1,
+        "product": "gpt_5_1_text_testing"
+      },
+      {
+        "product": "gpt_4_1_text_testing",
+        "unit_price": 1.5,
+        "cost": 1.5
+      }
+    ],
+    "combined_cost": 10.6
+  },
+  "chat_analysis": {
+    "chat_successful": true,
+    "user_sentiment": "Negative",
+    "chat_summary": "The user received a sales call following a voicemail and expressed impatience and skepticism throughout the conversation. The agent attempted to explain the value proposition but the user remained uninterested, guarded, and ultimately ended the call. The agent acknowledged the user's concerns and ended the conversation politely.",
+    "custom_analysis_data": {}
+  },
+  "data_storage_setting": "everything"
+}

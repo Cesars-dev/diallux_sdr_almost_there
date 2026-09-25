@@ -1,0 +1,139 @@
+[
+  {
+    "description": "Returns today's REAL date in the system timezone (America/Mexico_City) as {{today_date}} (YYYY-MM-DD). Call it ONCE at the start \u2014 every date you compute (tomorrow, this week, next Monday) must be based on its result, never guessed.",
+    "speak_during_execution": false,
+    "args_at_root": false,
+    "timeout_ms": 15000,
+    "speak_after_execution": true,
+    "type": "custom",
+    "headers": {},
+    "method": "GET",
+    "response_variables": {
+      "today_date": "today"
+    },
+    "url": "https://slots.diallux-ai.site/today",
+    "name": "check_current_date",
+    "query_params": {
+      "tz": "America/Mexico_City"
+    },
+    "parameter_type": "json"
+  },
+  {
+    "parameter_type": "json",
+    "type": "custom",
+    "method": "POST",
+    "url": "https://slots.diallux-ai.site/check_availability",
+    "timeout_ms": 15000,
+    "response_variables": {
+      "requested_slot": "time"
+    },
+    "speak_after_execution": true,
+    "parameters": {
+      "properties": {
+        "timezone": {
+          "type": "string",
+          "description": "IANA timezone to return slot `time` values in \u2014 always pass {{prospect_timezone}}."
+        },
+        "account_id": {
+          "description": "Which calendar account to use. Fixed per agent \u2014 do not change.",
+          "type": "string"
+        },
+        "slot_target_date": {
+          "description": "ISO date (YYYY-MM-DD) of the day the prospect wants a slot for. If they say 'next Monday'/'tomorrow'/'this week', convert to the actual date before passing. Omit only for 'as soon as possible'.",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "headers": {},
+    "query_params": {},
+    "speak_during_execution": false,
+    "description": "Checks live-call availability and returns discrete slots ({day, time} \u2014 `time` is local in the requested timezone). Pass `slot_target_date` as YYYY-MM-DD for the day the prospect wants \u2014 convert 'tomorrow'/'next Monday' to the real date first; omit it only when they want the earliest possible. ALWAYS pass `timezone` = {{prospect_timezone}} so the returned `time` values are already in the prospect's zone \u2014 never convert or recompute them yourself. Every response is readable JSON: on {\"ok\": false} read `error` and `message` and follow the message.",
+    "args_at_root": false,
+    "name": "query_livecall_slots"
+  },
+  {
+    "description": "Capture the confirmed choice: selected_time verbatim after confirm; prospect_timezone if corrected. Never store guesses.",
+    "variables": [
+      {
+        "type": "string",
+        "name": "selected_time",
+        "description": "The chosen slot's `time` value, copied verbatim from query_livecall_slots output."
+      },
+      {
+        "name": "prospect_timezone",
+        "choices": [
+          "America/New_York",
+          "America/Chicago",
+          "America/Denver",
+          "America/Los_Angeles"
+        ],
+        "description": "Update ONLY if the prospect corrects their timezone during this phase.",
+        "type": "enum"
+      }
+    ],
+    "type": "extract_dynamic_variable",
+    "name": "extract_confirm_details",
+    "speak_after_execution": false
+  },
+  {
+    "description": "Deterministic data gate - the server verifies everything and sets {{slot_verified}} itself. Call it after the prospect confirms a slot and whenever you have upserted new values. The response body tells you what to DO: read `actions` and speak each 'Say: ...' line verbatim, one at a time, then re-capture their answer via extract_confirm_details (or apply a suggested E.164 value) and call validate_lead again. NEVER transition to Booking unless slot_verified is true. Never fabricate or reformat argument values - pass them exactly as captured.",
+    "args_at_root": false,
+    "speak_after_execution": true,
+    "parameter_type": "json",
+    "name": "validate_lead",
+    "headers": {},
+    "type": "custom",
+    "url": "https://slots.diallux-ai.site/validator-function/validate_lead",
+    "query_params": {},
+    "response_variables": {
+      "slot_verified": "slot_verified",
+      "weekly_leak": "weekly_leak",
+      "monthly_leak": "monthly_leak"
+    },
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "last_name": {
+          "description": "Pass {{last_name}} exactly as stored (may be [surname_not_provided]).",
+          "type": "string"
+        },
+        "first_name": {
+          "description": "Pass {{first_name}} exactly as stored.",
+          "type": "string"
+        },
+        "selected_time": {
+          "type": "string",
+          "description": "Pass {{selected_time}} verbatim (the confirmed slot)."
+        },
+        "missed_calls_per_week": {
+          "type": "integer",
+          "description": "Pass {{missed_calls_weekly}} exactly as stored."
+        },
+        "company_name": {
+          "type": "string",
+          "description": "Pass {{company_name}} exactly as stored."
+        },
+        "avg_job_value": {
+          "description": "Pass {{avg_job_value}} exactly as stored.",
+          "type": "integer"
+        },
+        "callback_number": {
+          "description": "Pass {{callback_number}} exactly as stored - never reformat.",
+          "type": "string"
+        },
+        "prospect_timezone": {
+          "type": "string",
+          "description": "Pass {{prospect_timezone}} exactly as stored."
+        },
+        "close_rate_percent": {
+          "description": "Pass {{close_rate_pct}} exactly as stored.",
+          "type": "integer"
+        }
+      }
+    },
+    "method": "POST",
+    "timeout_ms": 15000,
+    "speak_during_execution": false
+  }
+]

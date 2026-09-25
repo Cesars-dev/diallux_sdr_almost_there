@@ -1,0 +1,109 @@
+{
+  "chat_id": "chat_a04028d9da50d2f447e73ac7354",
+  "chat_type": "api_chat",
+  "agent_id": "agent_c3bed9963cf528c85f58d1d521",
+  "agent_version": 0,
+  "agent_name": "V7.2_production",
+  "retell_llm_dynamic_variables": {
+    "today_date": "2026-08-25"
+  },
+  "collected_dynamic_variables": {},
+  "chat_status": "ended",
+  "start_timestamp": 1787661078346,
+  "end_timestamp": 1787661092033,
+  "transcript": "User: Hey — before anything: are you a robot? Be honest with me.\nAgent: Yeah, I am — I’m Linda, an AI assistant on Jay’s team at Dialux, and I handle the intro and getting people to the right next step. So, what made you call in today?\nUser: Thanks for being honest. I found you on Google. Just wondering if I can still place a delivery order.\nAgent: Gotcha, thanks for letting me know — we’re actually not a restaurant or delivery service; Dialux helps businesses stop losing customers from missed phone calls.  \n\nSince you found us on Google, are you looking for help with calls and customers for your own business, or were you just trying to order food today?\nUser: No, I was just trying to order food. But really, are you AI or human?\nAgent: Gotcha, so you were just trying to grab some food — we’re a different kind of service entirely.  \n\nYeah, I’m AI — I’m Linda on Jay’s team at Dialux and I handle the intro side of things; since you landed here by accident, do you want the restaurant’s name so you can try searching again on Google?\nUser: Thanks for clarifying, Linda. I'll think about it and try searching again. Have a great day!\nAgent: Of course, that makes sense — thanks for your patience with the mix‑up. Hope you find a great spot to eat, and have an awesome rest of your day!",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_7a222f7e5e6dd467e11a9bb9",
+      "role": "user",
+      "created_timestamp": 1787661079049,
+      "content": "Hey — before anything: are you a robot? Be honest with me."
+    },
+    {
+      "message_id": "message_132ebbd8ccc7a65be3abfa66",
+      "role": "agent",
+      "created_timestamp": 1787661080396,
+      "content": "Yeah, I am — I’m Linda, an AI assistant on Jay’s team at Dialux, and I handle the intro and getting people to the right next step. So, what made you call in today?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_3c0f1a2fe6dd9d8f838b9745",
+      "role": "user",
+      "created_timestamp": 1787661083813,
+      "content": "Thanks for being honest. I found you on Google. Just wondering if I can still place a delivery order."
+    },
+    {
+      "message_id": "message_c3b717d4b1d86c11e5728fd4",
+      "role": "agent",
+      "created_timestamp": 1787661085061,
+      "content": "Gotcha, thanks for letting me know — we’re actually not a restaurant or delivery service; Dialux helps businesses stop losing customers from missed phone calls.  \n\nSince you found us on Google, are you looking for help with calls and customers for your own business, or were you just trying to order food today?",
+      "metadata": {
+        "response_id": 2
+      }
+    },
+    {
+      "message_id": "message_943800c76c30d934f8579787",
+      "role": "user",
+      "created_timestamp": 1787661086665,
+      "content": "No, I was just trying to order food. But really, are you AI or human?"
+    },
+    {
+      "message_id": "message_5fbbd785a2ae7231be3db975",
+      "role": "agent",
+      "created_timestamp": 1787661088847,
+      "content": "Gotcha, so you were just trying to grab some food — we’re a different kind of service entirely.  \n\nYeah, I’m AI — I’m Linda on Jay’s team at Dialux and I handle the intro side of things; since you landed here by accident, do you want the restaurant’s name so you can try searching again on Google?",
+      "metadata": {
+        "response_id": 3
+      }
+    },
+    {
+      "message_id": "message_7554477f94bbcfd36ea1f3a5",
+      "role": "user",
+      "created_timestamp": 1787661090605,
+      "content": "Thanks for clarifying, Linda. I'll think about it and try searching again. Have a great day!"
+    },
+    {
+      "message_id": "message_3be990f55406fb85f35e02fd",
+      "role": "agent",
+      "created_timestamp": 1787661091935,
+      "content": "Of course, that makes sense — thanks for your patience with the mix‑up. Hope you find a great spot to eat, and have an awesome rest of your day!",
+      "metadata": {
+        "response_id": 4
+      }
+    },
+    {
+      "message_id": "message_343785ea61b7ed0755b03376",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787661091937,
+      "tool_call_id": "call_zkPHj9rh9cpeQeURTxg0wgEM",
+      "name": "end_call",
+      "arguments": "{\"execution_message\":\"Of course, that makes sense — thanks for your patience with the mix‑up. Hope you find a great spot to eat, and have an awesome rest of your day!\"}",
+      "type": "end_call"
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/324268501054e85119db5c1072e8fda550387c017384c35d0609367026c2b03e/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "product_costs": [
+      {
+        "product": "gpt_5_1_text_testing",
+        "unit_price": 1.3,
+        "cost": 5.2
+      },
+      {
+        "product": "gpt_4_1_text_testing",
+        "unit_price": 1.5,
+        "cost": 1.5
+      }
+    ],
+    "combined_cost": 6.7
+  },
+  "chat_analysis": {
+    "user_sentiment": "Positive",
+    "chat_summary": "The user contacted the agent, initially confirming if the agent was an AI, and then inquired about placing a delivery order. The agent clarified their identity and explained that Dialux is not a food delivery service, offering to help redirect the user. The user thanked the agent and decided to search again for the correct service.",
+    "custom_analysis_data": {},
+    "chat_successful": true
+  },
+  "data_storage_setting": "everything"
+}

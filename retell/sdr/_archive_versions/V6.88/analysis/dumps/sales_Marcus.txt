@@ -1,0 +1,60 @@
+CALLER: Hi, we saw your service. Our intake calls after hours keep going to voicemail.
+  [extract_intake_details]
+  [intake_completed]
+  [transition_to_Discovery]
+AGENT: Got it, you’re dealing with intake calls after hours going straight to voicemail... that’s really common. After you close for the day, what usually happens to those callers — do they leave a message, or do they just call the next place?
+CALLER: Most leave a message, but we'd book about 70% if someone answered.
+  [extract_discovery_details]
+AGENT: Yeah, that makes sense—and 30% slipping away is a lot over a month. Roughly how many after-hours calls would you say are hitting voicemail in a typical week?
+CALLER: About 12 missed calls a week go to voicemail.
+  [extract_discovery_details]
+  [discovery_completed]
+  [transition_to_Closer]
+AGENT: Got it, 12 after-hours calls a week going to voicemail with a 70% chance you’d book if answered—that’s a lot of missed visits. Has anyone ever walked you through what that actually adds up to in lost revenue each month?
+CALLER: No, no one has walked us through that yet.
+  [extract_leak_inputs]
+AGENT: Makes sense, most clinics haven’t actually seen the numbers. So… what’s a typical new-client visit or urgent case worth to you on average—are we talking more like $150, $250, $400 per visit?
+CALLER: The average intake value for us is about $1,800.
+  [extract_leak_inputs]
+  [calculate_monthly_leak]
+  [extract_closer_details]
+  [closer_completed]
+  [transition_to_Offer]
+AGENT: Right, so with your numbers, those missed after-hours calls are leaking about **$65,400 a month** in potential revenue. So… to actually stop that leak and turn those into booked visits, would you be open to a quick 20‑minute walkthrough with Jay this week so you can see exactly how that would look for your clinic?
+CALLER: Yes, I am open to a live call this week to see how it would look for us.
+  [extract_offer_details]
+  [offer_completed]
+  [transition_to_contact_details]
+  [extract_person_details]
+AGENT: Awesome, that makes sense and this is exactly what the 20‑minute call with Jay is for. First thing—what’s your first name?
+CALLER: I'm Marcus Bell, partner at 'Bell & Associates Legal'.
+  [extract_person_details]
+  [extract_person_details]
+  [extract_reach_details]
+  [extract_contact_timezone]
+  [contact_details_completed]
+  [transition_to_ConfirmSlots]
+  [check_current_date]
+AGENT: Mhm, thanks Marcus—and thanks for clarifying the firm. Would you prefer to do that demo later today, or tomorrow?
+  [query_livecall_slots]
+AGENT: Got it, thanks for being flexible. Since today’s pretty tight, would tomorrow work for you for that 20‑minute call with Jay?
+CALLER: Tomorrow would work best for me. What's the latest time available?
+  [query_livecall_slots]
+AGENT: Makes sense—tomorrow’s wide open. I can get you in at 8:00 PM Eastern for that 20‑minute call with Jay; does that time work for you?
+CALLER: Yes, book it. 8:00 PM Eastern tomorrow works for me.
+  [extract_confirm_details]
+  [verify_info]
+  [extract_slot_verified]
+  [transition_to_Booking]
+AGENT: One moment while I confirm that.
+  [create_livecall_booking]
+  [record_booking_uid]
+  [validate_booking]
+  [record_booking_outcome]
+  [transition_to_Closing]
+AGENT: Thanks, Marcus! You'll receive an SMS text with the confirmation details — you can add it to your calendar in one click, or reschedule if you need to.
+
+Is there anything else I can help you with?
+
+Really glad you called. Jay's looking forward to it. Have a great day! Bye!
+  [end_call]

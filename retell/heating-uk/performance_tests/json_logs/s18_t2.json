@@ -1,0 +1,34 @@
+{
+  "scenario": 18,
+  "turn": 2,
+  "chat_id": "chat_f6009bf759c3967f735485a1d73",
+  "caller_message": "Alex",
+  "agent_messages": [
+    {
+      "message_id": "message_7cb6a6b194223aeeb9d9175a",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638734762,
+      "tool_call_id": "call_g25CPNM13zROWETNNBzCHZgq",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_a35004c0ba94629ed87ee477",
+      "role": "tool_call_result",
+      "created_timestamp": 1784638734763,
+      "tool_call_id": "call_g25CPNM13zROWETNNBzCHZgq",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Alex\",\"classified_intent\":\"Heat Pump Enquiry\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_2ce01ac23fb034f92579c824",
+      "role": "agent",
+      "created_timestamp": 1784638735993,
+      "content": "Alex \u2014 got it.\n\nWhat property type is it?",
+      "metadata": {
+        "response_id": 2
+      }
+    }
+  ]
+}

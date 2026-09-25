@@ -1,0 +1,80 @@
+[
+  {
+    "description": "When closer_completed, industry, pain_points, interest_level are all filled, transition to Offer.",
+    "speak_during_transition": false,
+    "destination_state_name": "Offer",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "industry": {
+          "type": "string",
+          "description": "Business industry"
+        },
+        "pain_points": {
+          "type": "string",
+          "description": "Comma-separated challenges (cumulative)"
+        },
+        "interest_level": {
+          "type": "string",
+          "enum": [
+            "high",
+            "medium",
+            "low"
+          ],
+          "description": "Prospect's interest level"
+        },
+        "monthly_leak": {
+          "type": "string",
+          "description": "Calculated monthly revenue loss, if the leak reveal ran"
+        },
+        "pain_urgency": {
+          "type": "string",
+          "enum": [
+            "high",
+            "medium",
+            "low"
+          ],
+          "description": "Urgency level"
+        },
+        "call_volume": {
+          "type": "string",
+          "description": "Approximate call volume"
+        },
+        "company_name": {
+          "type": "string",
+          "description": "Company name if known"
+        },
+        "first_name": {
+          "type": "string",
+          "description": "Prospect's first name if known"
+        },
+        "last_name": {
+          "type": "string",
+          "description": "Prospect's last name if known"
+        },
+        "objection_type": {
+          "type": "string",
+          "enum": [
+            "pricing",
+            "competitor",
+            "timing",
+            "industry_fit",
+            "none",
+            "other"
+          ],
+          "description": "Type of objection handled, if any"
+        },
+        "closer_completed": {
+          "type": "boolean",
+          "description": "true ONLY after: When their interest level is gauged after quantifying their loss."
+        }
+      },
+      "required": [
+        "closer_completed",
+        "industry",
+        "pain_points",
+        "interest_level"
+      ]
+    }
+  }
+]

@@ -1,0 +1,34 @@
+{
+  "scenario": 17,
+  "turn": 4,
+  "chat_id": "chat_ad6295d9b5e16e112226c1938d5",
+  "caller_message": "42",
+  "agent_messages": [
+    {
+      "message_id": "message_90415c0d09471b8f676c3797",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638707694,
+      "tool_call_id": "call_5GcE5tQBbaUQWyxmgVJPNWD4",
+      "name": "extract_address_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_d06080f3addc285c0d4f37d3",
+      "role": "tool_call_result",
+      "created_timestamp": 1784638707695,
+      "tool_call_id": "call_5GcE5tQBbaUQWyxmgVJPNWD4",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Priya\",\"problem_category\":\"Annual Boiler Service\",\"symptom_brief\":\"Routine annual boiler service requested\",\"error_code\":\"\",\"boiler_make\":\"\",\"address_postcode\":\"NE1 4AL\",\"address_house_number\":\"42\",\"address_street\":\"\",\"address_line1\":\"\",\"address_city\":\"\",\"address_confirmed\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_14b55b6c3bea12a01d7a11c0",
+      "role": "agent",
+      "created_timestamp": 1784638709640,
+      "content": "42, thanks. And the street name?",
+      "metadata": {
+        "response_id": 4
+      }
+    }
+  ]
+}

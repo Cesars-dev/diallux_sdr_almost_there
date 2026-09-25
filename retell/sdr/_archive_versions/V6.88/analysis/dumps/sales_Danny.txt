@@ -1,0 +1,96 @@
+CALLER: Hi, I saw your ad about missed calls. We lose calls after hours and I'm curious how it works.
+  [extract_intake_details]
+  [intake_completed]
+  [transition_to_Discovery]
+AGENT: Got it, thanks for calling in — a lot of people click that ad for the same reason.  
+
+So when you say “we lose calls after hours,” what actually happens to those calls right now — do they hit voicemail, ring out, or just get forwarded somewhere?
+CALLER: The calls usually go to voicemail after hours.
+  [extract_discovery_details]
+AGENT: Makes sense, most places have it set up that way.  
+
+When those after-hours calls hit voicemail, do people actually leave messages, or do they mostly hang up and you never hear from them again?
+CALLER: Most of them hang up, but some do leave messages.
+  [extract_discovery_details]
+AGENT: Yeah, that’s exactly what we hear — the best callers leave a message, the rest disappear.  
+
+So roughly how many after-hours calls a week would you say end up in that voicemail bucket?
+CALLER: About 15 missed calls a week end up going to voicemail.
+  [extract_discovery_details]
+AGENT: Got it, that’s a decent chunk of potential business slipping into voicemail.  
+
+Before I explain how we catch those after-hours calls for you, what kind of business are you running?
+CALLER: I run an auto repair shop in Austin, TX.
+  [extract_discovery_details]
+  [discovery_completed]
+  [transition_to_Closer]
+AGENT: Nice, Austin’s a busy car town — those missed calls are almost definitely real jobs.  
+
+When someone calls you after hours now, is it more like “my car just broke down, I need a tow,” or more “I need to schedule brakes / diagnostics for later this week”?
+CALLER: It's usually more about scheduling brakes or diagnostics for later in the week.
+AGENT: Gotcha, so mostly solid, schedule-able work you’re missing out on, not just random tire kickers.  
+
+Has anyone ever actually walked you through what those 15 missed calls a week might be costing you in real dollars?
+CALLER: No, but I estimate about 60% of those would book, and the average job value is around $450.
+  [extract_leak_inputs]
+  [calculate_monthly_leak]
+  [extract_closer_details]
+  [closer_completed]
+  [transition_to_Offer]
+AGENT: Right, so with your numbers, that’s roughly $17,500 a month walking away in those missed after-hours calls.  
+
+So… to actually plug that hole: it’s a 20‑minute walkthrough where we show you exactly how we turn those after-hours voicemails into booked brake/diagnostic jobs — what’s better for you, later today or sometime tomorrow?
+CALLER: Sometime tomorrow would work for me.
+  [extract_offer_details]
+  [offer_completed]
+  [transition_to_contact_details]
+AGENT: Nice, tomorrow works.  
+
+First thing — what’s your first name?
+CALLER: I'm Danny Reyes.
+  [extract_person_details]
+AGENT: Nice to meet you, Danny.  
+
+And what’s your last name, just so I get it right in the calendar?
+CALLER: Reyes, it's Danny Reyes.
+  [extract_person_details]
+AGENT: Got it, Danny Reyes, thanks.  
+
+And what’s the name of your auto repair shop?
+CALLER: The name of the shop is Precision Auto Care.
+  [extract_person_details]
+  [extract_contact_timezone]
+AGENT: Perfect, Precision Auto Care, got it.  
+
+Quick check — you’re on Central time there in Austin, right?
+CALLER: Yes, that's correct. We're on Central Time here in Austin.
+  [extract_contact_timezone]
+  [extract_reach_details]
+AGENT: Perfect, Central time it is.  
+
+And is the number you’re calling from now the best number to text you a confirmation for tomorrow’s walkthrough?
+  [extract_reach_details]
+  [contact_details_completed]
+  [transition_to_ConfirmSlots]
+  [check_current_date]
+  [query_livecall_slots]
+AGENT: Got it, thanks for confirming.  
+
+For tomorrow, I can get you in around 10:00am or 4:00pm Central for that 20‑minute walkthrough — which works better with your shop schedule?
+CALLER: No, the best contact number is +15123120001.
+AGENT: Mhm, thanks for clarifying — I’ve got that as your main number.  
+
+So for tomorrow, between 10:00am and 4:00pm Central, what window works best for that 20‑minute walkthrough?
+CALLER: Tomorrow at 2:00pm Central works for me.
+  [extract_confirm_details]
+  [verify_info]
+  [extract_slot_verified]
+  [transition_to_Booking]
+AGENT: One moment while I confirm that for you.
+  [create_livecall_booking]
+  [record_booking_uid]
+  [validate_booking]
+  [record_booking_outcome]
+  [transition_to_Closing]
+AGENT: Danny, you’re all set for tomorrow at 2:30pm Central with Jay for that 20-minute walkthrough. You’ll get an SMS confirmation shortly with the details, and you can reschedule from that link if anything changes. Is there anything else you need from me before we hang up today?
+  [end_call]

@@ -1,0 +1,24 @@
+[
+  {
+    "description": "When offer_completed, livecall_agreed are all filled, transition to contact_details.",
+    "destination_state_name": "contact_details",
+    "parameters": {
+      "properties": {
+        "offer_completed": {
+          "description": "true ONLY after: The moment they commit to the live call.",
+          "type": "boolean"
+        },
+        "livecall_agreed": {
+          "type": "boolean",
+          "description": "True when the live call path is chosen"
+        }
+      },
+      "type": "object",
+      "required": [
+        "offer_completed",
+        "livecall_agreed"
+      ]
+    },
+    "speak_during_transition": false
+  }
+]

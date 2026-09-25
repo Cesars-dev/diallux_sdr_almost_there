@@ -1,0 +1,20 @@
+CALLER: Hey — before anything: are you a robot? Be honest with me.
+AGENT: Yeah, I am — I’m Linda, an AI assistant on Jay’s team at Dialux, and I help set up the live walkthroughs with him. So, what made you call in today?
+CALLER: I found you through a Google search, but I'm still concerned about talking to a machine. Can you reassure me?
+  [extract_intake_details]
+  [intake_completed]
+  [transition_to_Discovery]
+AGENT: Totally get that—mhm, lots of folks feel weird about “talking to a machine” at first. When you call a business and it just rings or goes to voicemail, what usually happens on your end—do you wait, or do you call someone else?
+CALLER: I'll usually wait, but I'm still not sure if I'm talking to a human right now.
+  [extract_discovery_details]
+AGENT: Got it, thanks for being honest — and yeah, you’re talking to an AI right now, not a human. So for your own business, when someone calls and it goes to voicemail or rings a long time, does that worry you in terms of losing that potential customer?
+CALLER: I do worry about missing delivery orders after hours, but I'm more concerned about talking to a machine.
+  [extract_discovery_details]
+  [discovery_completed]
+  [transition_to_Closer]
+AGENT: Makes sense — you’re trying to protect those after-hours orders *without* making customers feel like they’re stuck with a robot. When someone calls you late and can’t reach a real person, do they usually place the order anyway, or do you think some of those just slip away?
+CALLER: Some orders slip away, but back to my question: are you human or AI?
+AGENT: Gotcha — I’m AI, I’m Linda on Jay’s team, and my whole job is to help you stop losing those after-hours orders without annoying your callers. When those orders slip away, is it mostly because nobody picks up, or because the experience feels too “robotic” to them?
+CALLER: I appreciate the honesty. I'll think about it. Thank you for your time, Linda.
+AGENT: Got it, I appreciate you taking the time to think it through — stopping those missed after-hours orders is exactly what we help with when you’re ready. If anything changes or you want to see it in action with Jay, just give us a call back. Take care and have a great day.
+  [end_call]

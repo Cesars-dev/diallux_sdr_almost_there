@@ -1,0 +1,63 @@
+{
+  "chat_id": "chat_adc3c49945113a503f4e9cd6d15",
+  "chat_type": "api_chat",
+  "agent_id": "agent_6226cbd3e8292efd1fea0581d8",
+  "agent_version": 0,
+  "agent_name": "HVAC Multi-Prompt Test (chat)",
+  "collected_dynamic_variables": {
+    "greeting_exchanged": "true",
+    "intent_confirmed": "false",
+    "customer_name": "",
+    "intent_clear": "true",
+    "classified_intent": "repair",
+    "past_customer": "false"
+  },
+  "chat_status": "ongoing",
+  "start_timestamp": 1784626226848,
+  "transcript": "User: Hi, my boiler is broken. No heating or hot water since last night.\nAgent: British Heat Services, Tom speaking. Right, no heating or hot water since last night.\n\nSo you\u2019re calling about a boiler breakdown, yeah?",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_22c72e5efe6bb97705c738b2",
+      "role": "user",
+      "created_timestamp": 1784626227494,
+      "content": "Hi, my boiler is broken. No heating or hot water since last night."
+    },
+    {
+      "message_id": "message_47a832c8cc35cf8a6c8e55a4",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784626229187,
+      "tool_call_id": "call_U7qrglyBdPS4m28FOeD5ju9h",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_35f5495403a692ef6438612c",
+      "role": "tool_call_result",
+      "created_timestamp": 1784626229188,
+      "tool_call_id": "call_U7qrglyBdPS4m28FOeD5ju9h",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"repair\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_f1c65cb9c0ac491794fe7bd7",
+      "role": "agent",
+      "created_timestamp": 1784626231290,
+      "content": "British Heat Services, Tom speaking. Right, no heating or hot water since last night.\n\nSo you\u2019re calling about a boiler breakdown, yeah?",
+      "metadata": {
+        "response_id": 1
+      }
+    }
+  ],
+  "chat_cost": {
+    "combined_cost": 2.6,
+    "product_costs": [
+      {
+        "unit_price": 2.6,
+        "product": "gpt_5_4_text_testing",
+        "cost": 2.6
+      }
+    ]
+  },
+  "data_storage_setting": "everything"
+}

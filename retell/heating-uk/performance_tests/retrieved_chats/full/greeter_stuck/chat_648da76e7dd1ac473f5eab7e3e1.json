@@ -1,0 +1,123 @@
+{
+  "chat_id": "chat_648da76e7dd1ac473f5eab7e3e1",
+  "chat_type": "api_chat",
+  "agent_id": "agent_6226cbd3e8292efd1fea0581d8",
+  "agent_version": 0,
+  "agent_name": "HVAC Multi-Prompt Test (chat)",
+  "collected_dynamic_variables": {
+    "greeting_exchanged": "true",
+    "intent_confirmed": "false",
+    "customer_name": "David",
+    "intent_clear": "true",
+    "classified_intent": "boiler repair",
+    "past_customer": "false"
+  },
+  "chat_status": "ended",
+  "start_timestamp": 1784626620986,
+  "end_timestamp": 1784626630927,
+  "transcript": "User: Hi, so my boiler's been playing up for ages \u2014 it's a Worcester, had it about 8 years, the engineer who fitted it said it might need a new diverter valve eventually, but we've been putting it off, and now it's making this clicking sound every time it fires up, and the hot water goes cold after about 5 minutes...\nAgent: British Heat Services, Tom speaking \u2014 how can I help?Got it \u2014 hot water goes cold after five minutes.\n\nSounds like your boiler\u2019s playing up with the hot water, right?\nUser: Yes, it's the Worcester boiler\nAgent: Worcester boiler, got it.\n\nSo you're calling about a boiler repair, yeah?\nUser: My name is David\nAgent: David, thank you.\n\nBoiler repair for your Worcester, yeah?",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_b4c91a21e69165c3112f0a76",
+      "role": "user",
+      "created_timestamp": 1784626621613,
+      "content": "Hi, so my boiler's been playing up for ages \u2014 it's a Worcester, had it about 8 years, the engineer who fitted it said it might need a new diverter valve eventually, but we've been putting it off, and now it's making this clicking sound every time it fires up, and the hot water goes cold after about 5 minutes..."
+    },
+    {
+      "message_id": "message_b315930e89ca1547694c18cd",
+      "role": "agent",
+      "created_timestamp": 1784626623358,
+      "content": "British Heat Services, Tom speaking \u2014 how can I help?Got it \u2014 hot water goes cold after five minutes.\n\nSounds like your boiler\u2019s playing up with the hot water, right?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_1a2461ff01eb79e456c7855c",
+      "role": "user",
+      "created_timestamp": 1784626624152,
+      "content": "Yes, it's the Worcester boiler"
+    },
+    {
+      "message_id": "message_99d7b8419aadf33f69209cf6",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784626625478,
+      "tool_call_id": "call_kv9vholgsDFbYdKJxRmjxqWo",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_df77f78fc68f0ab41b13f592",
+      "role": "tool_call_result",
+      "created_timestamp": 1784626625479,
+      "tool_call_id": "call_kv9vholgsDFbYdKJxRmjxqWo",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"boiler repair\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_cd0d60a3c5d931d31eebd90e",
+      "role": "agent",
+      "created_timestamp": 1784626626863,
+      "content": "Worcester boiler, got it.\n\nSo you're calling about a boiler repair, yeah?",
+      "metadata": {
+        "response_id": 2
+      }
+    },
+    {
+      "message_id": "message_36ec4e21db7d9e1de5c7307b",
+      "role": "user",
+      "created_timestamp": 1784626627706,
+      "content": "My name is David"
+    },
+    {
+      "message_id": "message_f4a834190880bd3fc2dcff9c",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784626629077,
+      "tool_call_id": "call_s0EWMyUDBS7973fDn5ruSMaN",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_c95e8b3e2e3f6f6d9e0ef088",
+      "role": "tool_call_result",
+      "created_timestamp": 1784626629078,
+      "tool_call_id": "call_s0EWMyUDBS7973fDn5ruSMaN",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"David\",\"classified_intent\":\"boiler repair\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_fff262daf70dd05557d8aab5",
+      "role": "agent",
+      "created_timestamp": 1784626630104,
+      "content": "David, thank you.\n\nBoiler repair for your Worcester, yeah?",
+      "metadata": {
+        "response_id": 3
+      }
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/1d3c98d7c80629b560a8672d264f4f48191f55314821779dbffd1d8a9b4ea7f9/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "combined_cost": 9.3,
+    "product_costs": [
+      {
+        "unit_price": 2.6,
+        "product": "gpt_5_4_text_testing",
+        "cost": 7.800000000000001
+      },
+      {
+        "unit_price": 1.5,
+        "product": "gpt_4_1_text_testing",
+        "cost": 1.5
+      }
+    ]
+  },
+  "chat_analysis": {
+    "chat_summary": "The user, David, reported issues with his 8-year-old Worcester boiler, including a clicking sound and hot water going cold after five minutes. The agent confirmed the boiler type and clarified the intent for a boiler repair. The conversation established the user's name and the nature of the problem.",
+    "user_sentiment": "Neutral",
+    "custom_analysis_data": {},
+    "chat_successful": true
+  },
+  "data_storage_setting": "everything"
+}

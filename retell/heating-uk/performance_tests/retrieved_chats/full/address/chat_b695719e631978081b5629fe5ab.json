@@ -1,0 +1,131 @@
+{
+  "chat_id": "chat_b695719e631978081b5629fe5ab",
+  "chat_type": "api_chat",
+  "agent_id": "agent_ff9d4b9646a85b82d7ce8fd837",
+  "agent_version": 0,
+  "agent_name": "Multi State Agent",
+  "collected_dynamic_variables": {
+    "callback_requested": "false",
+    "classified_intent": "engineer visit",
+    "past_customer": "false",
+    "intent_confirmed": "true",
+    "address_postcode": "NE4 5AB",
+    "address_city": "",
+    "address_house_number": "",
+    "current_agent_state": "address",
+    "intent_clear": "true",
+    "address_street": "",
+    "greeting_exchanged": "true",
+    "customer_name": "Sarah",
+    "previous_agent_state": "greeter"
+  },
+  "chat_status": "ended",
+  "start_timestamp": 1784633747352,
+  "end_timestamp": 1784633757889,
+  "transcript": "User: Hi, I need an engineer. My postcode is N for Newcastle, E for Edward, four, five, A for Apple, B for Bob.\nAgent: Right, engineer visit, postcode N-E-4-5-A-B \u2014 got it. What\u2019s the address?\nUser: My name is Sarah\nAgent: Sarah \u2014 thank you. What seems to be the issue?",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_69fba66b3437535823107c4f",
+      "role": "user",
+      "created_timestamp": 1784633747990,
+      "content": "Hi, I need an engineer. My postcode is N for Newcastle, E for Edward, four, five, A for Apple, B for Bob."
+    },
+    {
+      "message_id": "message_3c894729804bf2f3591cddb4",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784633749902,
+      "tool_call_id": "call_U4hfNfANSVWiPRObAcIWBdlO",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_75bf20acb2767443c2bdc24a",
+      "role": "tool_call_result",
+      "created_timestamp": 1784633749903,
+      "tool_call_id": "call_U4hfNfANSVWiPRObAcIWBdlO",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"engineer visit\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"NE4 5AB\",\"address_city\":\"\",\"callback_requested\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_8d1ace8017002c5222cc28e1",
+      "role": "agent",
+      "created_timestamp": 1784633751630,
+      "content": "Right, engineer visit, postcode N-E-4-5-A-B \u2014 got it. What\u2019s the address?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_831fbcd1830af7b69750e32b",
+      "role": "user",
+      "created_timestamp": 1784633752435,
+      "content": "My name is Sarah"
+    },
+    {
+      "message_id": "message_0ec85d36b903a04b0f449f1a",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784633754216,
+      "tool_call_id": "call_y7lf7EP59frrcweOm49bqDFS",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_cda07d4af3ad443d2176c59b",
+      "role": "tool_call_result",
+      "created_timestamp": 1784633754217,
+      "tool_call_id": "call_y7lf7EP59frrcweOm49bqDFS",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Sarah\",\"classified_intent\":\"engineer visit\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"NE4 5AB\",\"address_city\":\"\",\"callback_requested\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_66e077f5bdf504ce4a5020e0",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784633755386,
+      "tool_call_id": "call_LQBulY0SR74zWA5kscjDjOM5",
+      "name": "transition_to_address",
+      "arguments": "{}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_664a3f9a09a6315f9dd3b8bd",
+      "role": "state_transition",
+      "created_timestamp": 1784633755387,
+      "former_state_name": "greeter",
+      "new_state_name": "address"
+    },
+    {
+      "message_id": "message_01b958657d3d625f0d05aed1",
+      "role": "agent",
+      "created_timestamp": 1784633756984,
+      "content": "Sarah \u2014 thank you. What seems to be the issue?",
+      "metadata": {
+        "response_id": 2
+      }
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/47a7f876935c5670dddab7ff0946ca0fa1bfd72dd2e5756c6c6cc46566844377/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "combined_cost": 6.7,
+    "product_costs": [
+      {
+        "unit_price": 2.6,
+        "product": "gpt_5_4_text_testing",
+        "cost": 5.2
+      },
+      {
+        "unit_price": 1.5,
+        "product": "gpt_4_1_text_testing",
+        "cost": 1.5
+      }
+    ]
+  },
+  "chat_analysis": {
+    "chat_summary": "The user requested an engineer visit and provided their postcode and name. The agent confirmed the details and asked for more information about the issue. The conversation proceeded smoothly with clear intent and no technical issues.",
+    "user_sentiment": "Positive",
+    "custom_analysis_data": {},
+    "chat_successful": true
+  },
+  "data_storage_setting": "everything"
+}

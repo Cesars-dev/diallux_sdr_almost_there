@@ -1,0 +1,49 @@
+[
+  {
+    "name": "end_call",
+    "type": "end_call",
+    "description": "Ends the call gracefully after a confirmed outcome. Use it only when the conversation is truly finished: every query answered and every outcome settled (booking confirmed and the goodbye done, callback wrap-up complete, or the prospect clearly said goodbye). Always confirm next steps, ask if anything else is needed, say goodbye warmly, then end. NEVER use it mid-conversation to escape confusion, an objection, a failed tool call, or an unbooked prospect \u2014 every stage has a fallback; follow it instead."
+  },
+  {
+    "name": "extract_volunteered_details",
+    "description": "Capture identity details ONLY when the prospect volunteers them unprompted. Never ask for these directly \u2014 asking belongs to a later stage.",
+    "type": "extract_dynamic_variable",
+    "speak_after_execution": false,
+    "variables": [
+      {
+        "name": "first_name",
+        "type": "string",
+        "description": "Their first name, exactly as they said it."
+      },
+      {
+        "name": "last_name",
+        "type": "string",
+        "description": "Their last name if they volunteer it."
+      },
+      {
+        "name": "company_name",
+        "type": "string",
+        "description": "Company/business name as they call it."
+      },
+      {
+        "name": "industry",
+        "type": "enum",
+        "choices": [
+          "hvac",
+          "plumbing",
+          "electrical",
+          "roofing",
+          "landscaping",
+          "dental",
+          "legal",
+          "real_estate",
+          "automotive",
+          "home_remodeling",
+          "med_spa",
+          "other"
+        ],
+        "description": "Their trade/industry if evident from what they said."
+      }
+    ]
+  }
+]

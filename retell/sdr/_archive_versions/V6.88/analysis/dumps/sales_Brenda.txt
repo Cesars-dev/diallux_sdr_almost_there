@@ -1,0 +1,87 @@
+CALLER: Hi. Saw your ad. Honestly I doubt this is for us but go ahead.
+  [extract_intake_details]
+  [intake_completed]
+  [transition_to_Discovery]
+AGENT: Gotcha, I hear you — you *saw the ad* and you’re not really convinced this is for you.  
+
+So, when a call comes in and you or your team are tied up, what usually happens to that call — does it ring out, hit voicemail, or does someone always grab it?
+CALLER: We already have an answering service for that. What's different here?
+  [extract_discovery_details]
+AGENT: Got it, that helps — you’re already paying for an answering service.  
+
+Biggest thing our clients notice is this: instead of just “taking a message,” we actually move the call forward — booking the job/appointment, capturing full details, even sending it into your system right away so you don’t lose the opportunity.  
+
+When your answering service picks up now, are they mostly just relaying messages to you later, or are they actually booking things on your calendar and in your software?
+CALLER: They mostly just relay messages. But what’s this going to cost? Give me a number now or I'm done.
+AGENT: Makes sense — that’s what most answering services do, just pass along the message.  
+
+So I don’t waste your time: most of our clients land between about $300 and $800 a month, depending on call volume and how much you want us to handle; if I’m straight with you, roughly how many calls a day do you think are hitting that answering service?
+CALLER: Around 10 missed calls a week. 40% of those would book. $700 average value per booking. What's next?
+AGENT: Got it, that’s actually really clear — and there’s real money in those numbers.  
+
+So when those 10 missed calls a week hit your answering service now, are they usually calling you back later, or do you feel like a lot of them just move on to someone else once they don’t reach you live?
+CALLER: Most don't call back; they find someone else. That's why I'm considering alternatives, but I'm wary of sketchy startups.
+  [extract_discovery_details]
+  [discovery_completed]
+  [transition_to_Closer]
+  [extract_leak_inputs]
+  [calculate_monthly_leak]
+  [extract_closer_details]
+  [closer_completed]
+  [transition_to_Offer]
+AGENT: Yeah, that makes total sense — you’re losing real money to competitors, and you don’t want to gamble on some fly‑by‑night company.  
+
+So… given you’ve got about $12,100 a month walking out the door from those missed calls, would you be open to a quick 20‑minute walkthrough this week where we show you exactly how we’d plug that hole and how it’d work alongside (or instead of) your answering service — is later today or tomorrow better?
+CALLER: Tomorrow afternoon works. But I tried AI last year; it was garbage and wasted three months. Why is this different?
+  [extract_offer_details]
+  [offer_completed]
+  [transition_to_contact_details]
+AGENT: Got it, tomorrow afternoon works, and yeah… if you burned three months on bad AI, I don’t blame you for being wary.  
+
+So I can answer this properly: was that last system actually talking to callers on the phone, or was it more like chatbots/IVR menus bolted onto your phone line?
+CALLER: It was more like chatbots and IVR menus. It didn't handle live calls effectively at all.
+AGENT: Yeah, that tracks — most of those are just fancy phone trees, not something that can actually *handle* a live call.  
+
+What we do is different in two big ways: callers get a natural, back‑and‑forth conversation that can actually book the job on the spot, and it’s tuned specifically for service businesses like yours so it knows what to ask and what to do next, instead of feeling like a robot maze.  
+
+Since tomorrow afternoon works, can you remind me what kind of business you’re running so I can frame the walkthrough to the right types of calls you get?
+CALLER: It's a dental practice in Phoenix, Arizona. Tomorrow afternoon works; call me at +16025550017.
+  [extract_person_details]
+  [extract_reach_details]
+AGENT: Nice, that helps a ton — dental in Phoenix is exactly the kind of practice we’re built for.  
+
+Quick thing so I can lock in your walkthrough for tomorrow afternoon and text you a confirmation: what’s your first name?
+CALLER: Brenda. Looking forward to seeing how your service can improve what we have. Send the confirmation, please.
+  [extract_person_details]
+AGENT: Got it, Brenda — glad you’re open to seeing how we can tighten things up.  
+
+One last detail so I set the time right: since you’re in Phoenix, you’re on Mountain time, right?
+CALLER: Actually, it's Arizona time — we don't do daylight saving here. Looking forward to the call.
+  [extract_contact_timezone]
+  [contact_details_completed]
+  [transition_to_ConfirmSlots]
+  [check_current_date]
+  [query_livecall_slots]
+AGENT: Right, totally — Arizona time, no clock games, got it.  
+
+For tomorrow afternoon I can get you in at either 3:00 or 3:45 your time; which works better for you?
+CALLER: 3:00 Arizona time works perfectly. I'll expect the call then. Thank you for accommodating our timezone.
+  [extract_confirm_details]
+  [verify_info]
+  [verify_info]
+AGENT: Perfect, we’ll talk tomorrow at 3:00 your time.  
+
+Just to double-check, we’re calling you at that same number you gave earlier, ending in 0017, right?
+CALLER: Yes, that's correct. Call me at +16025550017 tomorrow at 3:00 Arizona time. Looking forward to it.
+  [extract_confirm_details]
+  [verify_info]
+  [extract_slot_verified]
+  [transition_to_Booking]
+AGENT: One moment while I confirm that on our side.
+  [create_livecall_booking]
+  [record_booking_uid]
+  [validate_booking]
+  [record_booking_outcome]
+  [transition_to_Closing]
+AGENT: Brenda, perfect — you’re all set for tomorrow at 3:00 Arizona time, and we’ll call you at that number ending in 0017. You’ll get a text in a moment with the confirmation details, and you can add it to your calendar or reschedule from there if anything changes. Really glad we got this booked; Jay’s looking forward to digging into your missed calls and showing you what we can do for your practice. Have a great rest of your day — bye for now!
+  [end_call]

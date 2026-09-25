@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dialux — Linda (live demo)</title>
+<style>
+  :root { --bg:#0f1115; --card:#171a21; --me:#2b6cb0; --bot:#232833; --txt:#e6e9ef; --sub:#8b93a5; }
+  * { box-sizing: border-box; margin: 0; }
+  body { background: var(--bg); color: var(--txt); font-family: system-ui, -apple-system, sans-serif;
+         display: flex; justify-content: center; min-height: 100vh; }
+  .app { width: 100%; max-width: 460px; display: flex; flex-direction: column; height: 100vh; }
+  header { padding: 18px 16px 12px; border-bottom: 1px solid #232833; }
+  header h1 { font-size: 17px; font-weight: 600; }
+  header p { font-size: 12.5px; color: var(--sub); margin-top: 3px; }
+  #chat { flex: 1; overflow-y: auto; padding: 16px; display: flex; flex-direction: column; gap: 10px; }
+  .msg { max-width: 82%; padding: 10px 13px; border-radius: 14px; font-size: 14px; line-height: 1.45;
+         white-space: pre-wrap; word-wrap: break-word; }
+  .bot { align-self: flex-start; background: var(--bot); border-bottom-left-radius: 4px; }
+  .me  { align-self: flex-end; background: var(--me); border-bottom-right-radius: 4px; }
+  .meta { align-self: center; font-size: 11px; color: var(--sub); }
+  form { display: flex; gap: 8px; padding: 12px; border-top: 1px solid #232833; }
+  input { flex: 1; background: #1d222c; border: 1px solid #2a3040; color: var(--txt);
+          border-radius: 10px; padding: 12px 14px; font-size: 14px; outline: none; }
+  input:focus { border-color: var(--me); }
+  button { background: var(--me); color: #fff; border: 0; border-radius: 10px;
+           padding: 0 18px; font-size: 14px; cursor: pointer; }
+  button:disabled { opacity: .5; }
+</style>
+</head>
+<body>
+<div class="app">
+  <header>
+    <h1>Linda — Dialux AI</h1>
+    <p>Missed-call rescue for local businesses · live demo, books a real call</p>
+  </header>
+  <div id="chat">
+    <div class="meta">Demo conversation — nothing is shared, booking goes to the team calendar</div>
+  </div>
+  <form id="f">
+    <input id="i" placeholder="Type your message…" autocomplete="off" autofocus>
+    <button id="b">Send</button>
+  </form>
+</div>
+<script>
+const chat = document.getElementById("chat");
+const form = document.getElementById("f");
+const input = document.getElementById("i");
+const btn = document.getElementById("b");
+let sessionId = null;
+
+function add(cls, text) {
+  const d = document.createElement("div");
+  d.className = "msg " + cls;
+  d.textContent = text;
+  chat.appendChild(d);
+  chat.scrollTop = chat.scrollHeight;
+  return d;
+}
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const text = input.value.trim();
+  if (!text) return;
+  input.value = "";
+  add("me", text);
+  const pending = add("bot", "…");
+  btn.disabled = true;
+  try {
+    const r = await fetch("/chat", {
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({session_id: sessionId, message: text}),
+    });
+    const d = await r.json();
+    sessionId = d.session_id;
+    pending.textContent = d.reply || "…";
+    if (d.booked) {
+      const m = document.createElement("div");
+      m.className = "meta";
+      m.textContent = "✔ appointment confirmed on the team calendar";
+      chat.appendChild(m);
+      chat.scrollTop = chat.scrollHeight;
+    }
+  } catch (err) {
+    pending.textContent = "Connection hiccup — try again.";
+  }
+  btn.disabled = false;
+  input.focus();
+});
+</script>
+</body>
+</html>

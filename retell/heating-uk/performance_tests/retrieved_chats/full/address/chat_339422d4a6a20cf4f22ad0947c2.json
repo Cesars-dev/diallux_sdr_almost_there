@@ -1,0 +1,209 @@
+{
+  "chat_id": "chat_339422d4a6a20cf4f22ad0947c2",
+  "chat_type": "api_chat",
+  "agent_id": "agent_ff9d4b9646a85b82d7ce8fd837",
+  "agent_version": 0,
+  "agent_name": "Multi State Agent",
+  "collected_dynamic_variables": {
+    "callback_requested": "false",
+    "classified_intent": "Annual Boiler Service",
+    "past_customer": "false",
+    "intent_confirmed": "true",
+    "address_postcode": "",
+    "address_incomplete": "true",
+    "address_city": "Newcastle",
+    "address_house_number": "14",
+    "current_agent_state": "address",
+    "intent_clear": "true",
+    "address_street": "Victoria Terrace",
+    "greeting_exchanged": "true",
+    "customer_name": "",
+    "previous_agent_state": "greeter"
+  },
+  "chat_status": "ended",
+  "start_timestamp": 1784638228179,
+  "end_timestamp": 1784638249844,
+  "transcript": "User: Hi, I need a boiler service. I don't know my postcode off the top of my head.\nAgent: Got it, boiler service. No problem. What\u2019s your address?\nUser: It's 14 Victoria Terrace, Newcastle\nAgent: 14 Victoria Terrace, Newcastle \u2014 got it. What\u2019s the postcode?\nUser: Yes, that's correct\nAgent: Thanks. Who am I speaking with?\nUser: Tomorrow works\nAgent: Tomorrow works \u2014 lovely. What\u2019s the postcode?\nUser: Yes, book it\nAgent: Brilliant. I still need the postcode first. What is it?\nUser: That's all, thanks",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_028fd5588eb88c09344b40b4",
+      "role": "user",
+      "created_timestamp": 1784638228860,
+      "content": "Hi, I need a boiler service. I don't know my postcode off the top of my head."
+    },
+    {
+      "message_id": "message_b844dc3be2019eb555e27668",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638230523,
+      "tool_call_id": "call_lBO85OgY4mydogTeaEAvvTWA",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_d4936924594fccc2e67b9f39",
+      "role": "tool_call_result",
+      "created_timestamp": 1784638230524,
+      "tool_call_id": "call_lBO85OgY4mydogTeaEAvvTWA",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"Annual Boiler Service\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_bf3345aa2863abc03d98857c",
+      "role": "agent",
+      "created_timestamp": 1784638232812,
+      "content": "Got it, boiler service. No problem. What\u2019s your address?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_ae4cceb5a492108bccdbf7d2",
+      "role": "user",
+      "created_timestamp": 1784638233630,
+      "content": "It's 14 Victoria Terrace, Newcastle"
+    },
+    {
+      "message_id": "message_71ed442a4752bf31db52f124",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638234930,
+      "tool_call_id": "call_o3tECSEEuLfIijqdn0e0AFtT",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_e8667d2af3f0fde1a2f6050f",
+      "role": "tool_call_result",
+      "created_timestamp": 1784638234931,
+      "tool_call_id": "call_o3tECSEEuLfIijqdn0e0AFtT",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"Annual Boiler Service\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"14\",\"address_street\":\"Victoria Terrace\",\"address_postcode\":\"\",\"address_city\":\"Newcastle\",\"callback_requested\":false,\"address_incomplete\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_439e684112dd22b2a7c9adef",
+      "role": "agent",
+      "created_timestamp": 1784638235994,
+      "content": "14 Victoria Terrace, Newcastle \u2014 got it. What\u2019s the postcode?",
+      "metadata": {
+        "response_id": 2
+      }
+    },
+    {
+      "message_id": "message_98e125a914732b376466e289",
+      "role": "user",
+      "created_timestamp": 1784638236760,
+      "content": "Yes, that's correct"
+    },
+    {
+      "message_id": "message_f9dbecce2f98e119e227a26f",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638241747,
+      "tool_call_id": "call_JpeuXVtoOwjndEXdaTTOORcw",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_5da15e2574dc556c05fbb860",
+      "role": "tool_call_result",
+      "created_timestamp": 1784638241748,
+      "tool_call_id": "call_JpeuXVtoOwjndEXdaTTOORcw",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"Annual Boiler Service\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"14\",\"address_street\":\"Victoria Terrace\",\"address_postcode\":\"\",\"address_city\":\"Newcastle\",\"callback_requested\":false,\"address_incomplete\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_f05be5c542d0ebe0b343b98f",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638242639,
+      "tool_call_id": "call_Bq0hs3bfDTFYrU62pp6u4qfB",
+      "name": "transition_to_address",
+      "arguments": "{}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_c31ff37ef4382e3e0047ab96",
+      "role": "state_transition",
+      "created_timestamp": 1784638242640,
+      "former_state_name": "greeter",
+      "new_state_name": "address"
+    },
+    {
+      "message_id": "message_1b175587e7bcbc5d4f960b2b",
+      "role": "agent",
+      "created_timestamp": 1784638243672,
+      "content": "Thanks. Who am I speaking with?",
+      "metadata": {
+        "response_id": 3
+      }
+    },
+    {
+      "message_id": "message_69d0733551afca083c0ac175",
+      "role": "user",
+      "created_timestamp": 1784638244525,
+      "content": "Tomorrow works"
+    },
+    {
+      "message_id": "message_225ad1ced0c7549cb6bb095a",
+      "role": "agent",
+      "created_timestamp": 1784638245649,
+      "content": "Tomorrow works \u2014 lovely. What\u2019s the postcode?",
+      "metadata": {
+        "response_id": 4
+      }
+    },
+    {
+      "message_id": "message_b9101892174231deab037893",
+      "role": "user",
+      "created_timestamp": 1784638246525,
+      "content": "Yes, book it"
+    },
+    {
+      "message_id": "message_8737f1774c4ab52159abb0b7",
+      "role": "agent",
+      "created_timestamp": 1784638248022,
+      "content": "Brilliant. I still need the postcode first. What is it?",
+      "metadata": {
+        "response_id": 5
+      }
+    },
+    {
+      "message_id": "message_debeab50dd7bc5380db2a3e3",
+      "role": "user",
+      "created_timestamp": 1784638248737,
+      "content": "That's all, thanks"
+    },
+    {
+      "message_id": "message_871414d8e44a225cea7e3b4d",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638249765,
+      "tool_call_id": "call_ayWnMqxlYZAUqqzAQ8QfDKOx",
+      "name": "end_call",
+      "arguments": "{}",
+      "type": "end_call"
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/463cf4e9c742de156a6c37752c15511657e6ff13e67a7d9b9740f2300868ad9b/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "combined_cost": 14.5,
+    "product_costs": [
+      {
+        "unit_price": 2.6,
+        "product": "gpt_5_4_text_testing",
+        "cost": 13
+      },
+      {
+        "unit_price": 1.5,
+        "product": "gpt_4_1_text_testing",
+        "cost": 1.5
+      }
+    ]
+  },
+  "chat_analysis": {
+    "chat_summary": "The user requested a boiler service but did not provide their postcode despite multiple prompts from the agent. The agent attempted to gather the necessary address details and confirm the booking, but the user ended the conversation without supplying the required information.",
+    "user_sentiment": "Neutral",
+    "custom_analysis_data": {},
+    "chat_successful": false
+  },
+  "data_storage_setting": "everything"
+}

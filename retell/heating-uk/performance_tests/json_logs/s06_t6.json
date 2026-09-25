@@ -1,0 +1,34 @@
+{
+  "scenario": 6,
+  "turn": 6,
+  "chat_id": "chat_e0d668f6f1163479c63cc1e307d",
+  "caller_message": "Newcastle",
+  "agent_messages": [
+    {
+      "message_id": "message_a5a5f441dc089dfe03913abe",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639952634,
+      "tool_call_id": "call_5PcVYrRDoK4bj4v1taTcuCiT",
+      "name": "extract_address_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_7c7b9b2316759ae2ef7be6a0",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639952635,
+      "tool_call_id": "call_5PcVYrRDoK4bj4v1taTcuCiT",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"David\",\"problem_category\":\"No Hot Water (but heating works)\",\"symptom_brief\":\"Clicking sound when boiler fires up; hot water goes cold after about 5 minutes\",\"error_code\":\"\",\"boiler_make\":\"Worcester\",\"address_postcode\":\"NE2 2BB\",\"address_house_number\":\"14\",\"address_street\":\"Station Road\",\"address_line1\":\"14 Station Road\",\"address_city\":\"Newcastle\",\"address_confirmed\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_9d1e50f188401963123f335d",
+      "role": "agent",
+      "created_timestamp": 1784639954137,
+      "content": "Newcastle, perfect.  \nSo that's 14 Station Road, Newcastle \u2014 postcode N-E-2 2-B-B. Is that right?",
+      "metadata": {
+        "response_id": 6
+      }
+    }
+  ]
+}

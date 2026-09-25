@@ -1,0 +1,41 @@
+[
+  {
+    "description": "When the prospect confirms a specific slot time and selected_time is populated, transition to SlotConfirm to book it.",
+    "speak_during_transition": false,
+    "destination_state_name": "SlotConfirm",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "selected_time": {
+          "type": "string",
+          "description": "The chosen slot's `time` value copied verbatim from query_livecall_slots output."
+        },
+        "prospect_timezone": {
+          "type": "string",
+          "description": "IANA timezone the slot time is expressed in."
+        }
+      },
+      "required": [
+        "selected_time",
+        "prospect_timezone"
+      ]
+    }
+  },
+  {
+    "description": "ONLY when booking_failed is true \u2014 the calendar was unreachable twice during slot search and the wrap-up fallback was spoken \u2014 transition to Closing.",
+    "speak_during_transition": false,
+    "destination_state_name": "Closing",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "booking_failed": {
+          "type": "boolean",
+          "description": "true ONLY after two consecutive calendar failures."
+        }
+      },
+      "required": [
+        "booking_failed"
+      ]
+    }
+  }
+]

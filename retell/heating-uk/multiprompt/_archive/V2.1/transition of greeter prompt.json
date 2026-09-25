@@ -1,0 +1,31 @@
+{
+  "destination_state_name": "address",
+  "description": "Transition when all greeter fields are populated",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "greeting_exchanged": {
+        "type": "boolean",
+        "description": "Whether greeting has been exchanged"
+      },
+      "intent_clear": {
+        "type": "boolean",
+        "description": "Whether the intent is understood"
+      },
+      "classified_intent": {
+        "type": "string",
+        "description": "Why the customer is calling",
+        "enum": ["booking", "quote", "other"]
+      },
+      "past_customer": {
+        "type": "boolean",
+        "description": "Whether the customer has used the service before"
+      }
+    },
+    "required": [
+      "greeting_exchanged",
+      "intent_clear",
+      "classified_intent"
+    ]
+  }
+}

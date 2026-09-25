@@ -1,0 +1,50 @@
+[
+  {
+    "description": "When booking_completed, booking_confirmed are all filled, transition to Closing.",
+    "speak_during_transition": false,
+    "destination_state_name": "Closing",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "booking_confirmed": {
+          "type": "boolean",
+          "description": "True after a successful create_livecall_booking."
+        },
+        "prospect_timezone": {
+          "type": "string",
+          "enum": [
+            "America/New_York",
+            "America/Chicago",
+            "America/Denver",
+            "America/Los_Angeles"
+          ],
+          "description": "Prospect's timezone in IANA format"
+        },
+        "first_name": {
+          "type": "string",
+          "description": "Prospect's first name"
+        },
+        "last_name": {
+          "type": "string",
+          "description": "Prospect's last name"
+        },
+        "company_name": {
+          "type": "string",
+          "description": "Company / business name"
+        },
+        "callback_number": {
+          "type": "string",
+          "description": "Confirmed contact number"
+        },
+        "booking_completed": {
+          "type": "boolean",
+          "description": "true ONLY after: Only after the booking is confirmed on the calendar."
+        }
+      },
+      "required": [
+        "booking_completed",
+        "booking_confirmed"
+      ]
+    }
+  }
+]

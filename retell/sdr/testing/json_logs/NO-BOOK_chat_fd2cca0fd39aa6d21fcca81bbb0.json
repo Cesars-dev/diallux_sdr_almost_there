@@ -1,0 +1,370 @@
+{
+  "chat_id": "chat_fd2cca0fd39aa6d21fcca81bbb0",
+  "chat_type": "api_chat",
+  "agent_id": "agent_f724da044b38ca7e11098933ec",
+  "agent_version": 0,
+  "agent_name": "V7.3_craft_kb",
+  "retell_llm_dynamic_variables": {
+    "today_date": "2026-08-25"
+  },
+  "collected_dynamic_variables": {
+    "discovery_completed": "true",
+    "pattern_matched": "true",
+    "pain_frame": "losing orders after hours when no one is available to handle them",
+    "industry": "restaurant",
+    "last_name": "",
+    "pain_urgency": "high",
+    "intake_completed": "true",
+    "interest_topic": "delivery orders after hours",
+    "objection_type": "none",
+    "pain_points": "losing orders after hours when no one is available to handle them, calls going straight to voicemail after hours, worrying about missed potential orders",
+    "inbound_channel": "Google search",
+    "current_agent_state": "Closer",
+    "monthly_leak": "",
+    "interest_level": "high",
+    "call_volume": "a few missed calls per week after hours (estimate)",
+    "previous_agent_state": "Discovery",
+    "interest_signal": "true"
+  },
+  "chat_status": "ended",
+  "start_timestamp": 1787663836553,
+  "end_timestamp": 1787663891998,
+  "transcript": "User: Hey — before anything: are you a robot? Be honest with me.\nAgent: Yeah, I am — I’m Linda, an AI assistant on Jay’s team here at Dialux, and I handle the intro and scheduling so Jay can do the in‑depth stuff live. So, what made you call in today?\nUser: Thanks for being honest, Linda. I found you through Google and have some questions about delivery orders after hours.\nAgent: Got it, thanks for sharing that — delivery orders after hours come up a lot. What’s the main thing you’re trying to fix there: are you losing orders when no one can pick up, or is it more about handling the volume that comes in late?\nUser: It's mainly about losing orders after hours when no one is available to handle them.\nAgent: Yeah, that makes total sense — that’s exactly the kind of thing we focus on. So when someone calls in after hours right now, where does that call actually go: straight to voicemail, forwarding to a cell, or just ringing out?\nUser: It usually goes straight to voicemail, but I worry about missing potential orders during late hours.\nAgent: Yeah, that’s exactly the trap a lot of people are in — voicemail doesn’t place the order, the customer just hangs up and moves on. Roughly how many calls a week would you say hit voicemail during those late hours?\nUser: Honestly, I'm not sure about the exact number, but it feels like a good few each week.\nAgent: Yeah, that’s totally fine — most people don’t have an exact count, they just feel it. What kind of business are you running so I can picture what a “missed” after‑hours order means for you — restaurant, HVAC, something else?\nUser: I run a restaurant, so missed orders mean lost revenue and unsatisfied customers looking for late-night dining options.\nAgent: Right, that hits twice — lost ticket and someone’s first impression of your place at 11 pm. When those late‑night callers hit voicemail, do they usually order online from you anyway, or are they more likely to just pick another restaurant?\nUser: They usually pick another restaurant, which is frustrating because it's a missed opportunity for us.\nAgent: Yeah, that’s rough — especially when you’ve already paid to earn that call. Has anyone ever actually walked you through what those missed late‑night orders might be costing you in dollars?\nUser: Not really, but I'm interested to know how it impacts my revenue. Still wondering: am I talking to AI?\nAgent: Totally fair to ask — yes, I’m an AI voice on Jay’s team, built just to handle these kinds of calls and get you to the right next step. Since you’re curious about the impact: mind if we do a quick, rough calculation together on what those missed late‑night orders might be costing you?\nUser: Thanks for being upfront. I'll think about it. Appreciate your help, but I'm not ready to book now.\nAgent: Totally understand, and thanks for walking through this with me today. If you ever want to dig into the numbers or see how we’d handle those late‑night orders for your restaurant, you can reach back out anytime and we’ll pick it up from there — no pressure at all.",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_52e5365c0e3f18229435f823",
+      "role": "user",
+      "created_timestamp": 1787663837213,
+      "content": "Hey — before anything: are you a robot? Be honest with me."
+    },
+    {
+      "message_id": "message_e99d4099ebe4ff93ce91fcac",
+      "role": "agent",
+      "created_timestamp": 1787663838839,
+      "content": "Yeah, I am — I’m Linda, an AI assistant on Jay’s team here at Dialux, and I handle the intro and scheduling so Jay can do the in‑depth stuff live. So, what made you call in today?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_723b36352c1304ef028cc63e",
+      "role": "user",
+      "created_timestamp": 1787663842267,
+      "content": "Thanks for being honest, Linda. I found you through Google and have some questions about delivery orders after hours."
+    },
+    {
+      "message_id": "message_c5871458a696cc497e5d5391",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787663844373,
+      "tool_call_id": "call_gAntYgYno1jAiUAI5bUmIoWq",
+      "name": "extract_intake_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_72d83d3bb8444223d45ba69e",
+      "role": "tool_call_result",
+      "created_timestamp": 1787663844374,
+      "tool_call_id": "call_gAntYgYno1jAiUAI5bUmIoWq",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"inbound_channel\":\"Google search\",\"interest_topic\":\"delivery orders after hours\",\"pain_frame\":\"\"}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_eacc40212bdf206d0ba9ebdb",
+      "role": "agent",
+      "created_timestamp": 1787663845993,
+      "content": "Got it, thanks for sharing that — delivery orders after hours come up a lot. What’s the main thing you’re trying to fix there: are you losing orders when no one can pick up, or is it more about handling the volume that comes in late?",
+      "metadata": {
+        "response_id": 2
+      }
+    },
+    {
+      "message_id": "message_dcb5091fa3770e6c2ef983a1",
+      "role": "user",
+      "created_timestamp": 1787663848093,
+      "content": "It's mainly about losing orders after hours when no one is available to handle them."
+    },
+    {
+      "message_id": "message_c8ed0ff84832ec42b35fd3e8",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787663849572,
+      "tool_call_id": "call_ARXNQgefaXXEH32bx44wONuy",
+      "name": "extract_intake_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_c7c53e8b31cb3c33085b3a2d",
+      "role": "tool_call_result",
+      "created_timestamp": 1787663849573,
+      "tool_call_id": "call_ARXNQgefaXXEH32bx44wONuy",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"inbound_channel\":\"Google search\",\"interest_topic\":\"delivery orders after hours\",\"pain_frame\":\"losing orders after hours when no one is available to handle them\"}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_f8a6576f399a583caccbba4f",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787663850610,
+      "tool_call_id": "call_SKscYaCY5dxTPH7fwugzZpbV",
+      "name": "intake_completed",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_79660b17f363a29ac717159b",
+      "role": "tool_call_result",
+      "created_timestamp": 1787663850611,
+      "tool_call_id": "call_SKscYaCY5dxTPH7fwugzZpbV",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"intake_completed\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_9c573101071cbad58eae7149",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787663852358,
+      "tool_call_id": "call_aR0Zt6ZuipcP70Kx07OpOZv1",
+      "name": "transition_to_Discovery",
+      "arguments": "{\"inbound_channel\":\"Google search\",\"intake_completed\":true,\"pain_frame\":\"losing orders after hours when no one is available to handle them\",\"interest_topic\":\"delivery orders after hours\"}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_545315cad220849582168ab1",
+      "role": "state_transition",
+      "created_timestamp": 1787663852359,
+      "former_state_name": "Intake",
+      "new_state_name": "Discovery"
+    },
+    {
+      "message_id": "message_1faad5ef287fc30a5f5f73c4",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787663853887,
+      "tool_call_id": "call_CHoGYCbsLSS6D4woCIeIReeN",
+      "name": "extract_discovery_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_a2cd5241277f5bebd66b38ce",
+      "role": "tool_call_result",
+      "created_timestamp": 1787663853888,
+      "tool_call_id": "call_CHoGYCbsLSS6D4woCIeIReeN",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"industry\":\"\",\"pain_points\":\"losing orders after hours when no one is available to handle them\",\"interest_signal\":true,\"pattern_matched\":false,\"call_volume\":\"\",\"pain_urgency\":\"high\"}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_73075261e7f177170888dbde",
+      "role": "agent",
+      "created_timestamp": 1787663855357,
+      "content": "Yeah, that makes total sense — that’s exactly the kind of thing we focus on. So when someone calls in after hours right now, where does that call actually go: straight to voicemail, forwarding to a cell, or just ringing out?",
+      "metadata": {
+        "response_id": 3
+      }
+    },
+    {
+      "message_id": "message_efb1e62583a430d21e4208f9",
+      "role": "user",
+      "created_timestamp": 1787663860930,
+      "content": "It usually goes straight to voicemail, but I worry about missing potential orders during late hours."
+    },
+    {
+      "message_id": "message_128745b11589c4ba6f956690",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787663862413,
+      "tool_call_id": "call_AuhcCyq2iih3UVSibnchiFiC",
+      "name": "extract_discovery_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_99b7ead2bdc1d1d3f6c5bc7b",
+      "role": "tool_call_result",
+      "created_timestamp": 1787663862414,
+      "tool_call_id": "call_AuhcCyq2iih3UVSibnchiFiC",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"industry\":\"\",\"pain_points\":\"losing orders after hours when no one is available to handle them, calls going straight to voicemail after hours, worrying about missed potential orders\",\"interest_signal\":true,\"pattern_matched\":true,\"call_volume\":\"\",\"pain_urgency\":\"high\"}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_9421a030fe45e963b0f41c9d",
+      "role": "agent",
+      "created_timestamp": 1787663864072,
+      "content": "Yeah, that’s exactly the trap a lot of people are in — voicemail doesn’t place the order, the customer just hangs up and moves on. Roughly how many calls a week would you say hit voicemail during those late hours?",
+      "metadata": {
+        "response_id": 4
+      }
+    },
+    {
+      "message_id": "message_28591281d96355f229323a62",
+      "role": "user",
+      "created_timestamp": 1787663865944,
+      "content": "Honestly, I'm not sure about the exact number, but it feels like a good few each week."
+    },
+    {
+      "message_id": "message_eb6d3e1298936597d33280ff",
+      "role": "agent",
+      "created_timestamp": 1787663867533,
+      "content": "Yeah, that’s totally fine — most people don’t have an exact count, they just feel it. What kind of business are you running so I can picture what a “missed” after‑hours order means for you — restaurant, HVAC, something else?",
+      "metadata": {
+        "response_id": 5
+      }
+    },
+    {
+      "message_id": "message_6605c64ed8210522444f9cbf",
+      "role": "user",
+      "created_timestamp": 1787663869269,
+      "content": "I run a restaurant, so missed orders mean lost revenue and unsatisfied customers looking for late-night dining options."
+    },
+    {
+      "message_id": "message_3286f75a1320616d1a6dfcc4",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787663871418,
+      "tool_call_id": "call_G24RJJWjjuKrQ97W6QOlJLCF",
+      "name": "extract_discovery_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_ef6b0c74e6c845ec564ffe42",
+      "role": "tool_call_result",
+      "created_timestamp": 1787663871419,
+      "tool_call_id": "call_G24RJJWjjuKrQ97W6QOlJLCF",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"industry\":\"restaurant\",\"pain_points\":\"losing orders after hours when no one is available to handle them, calls going straight to voicemail after hours, worrying about missed potential orders\",\"interest_signal\":true,\"pattern_matched\":true,\"call_volume\":\"a few missed calls per week after hours (estimate)\",\"pain_urgency\":\"high\"}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_1930b558cae7b0e937db11a0",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787663872435,
+      "tool_call_id": "call_WAdFN9l6kx9PQcWX1De8LNW5",
+      "name": "discovery_completed",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_50150e91b62e4ddde48c5807",
+      "role": "tool_call_result",
+      "created_timestamp": 1787663872436,
+      "tool_call_id": "call_WAdFN9l6kx9PQcWX1De8LNW5",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"discovery_completed\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_fd831691b9b7df4b1620d8cd",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787663873840,
+      "tool_call_id": "call_M9a5PqbRUcH8o5TYJ6ceOyhR",
+      "name": "transition_to_Closer",
+      "arguments": "{\"industry\":\"restaurant\",\"discovery_completed\":true,\"pattern_matched\":true,\"interest_signal\":true,\"pain_points\":\"losing orders after hours when no one is available to handle them, calls going straight to voicemail after hours, worrying about missed potential orders\"}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_26b8af449bcde311a59c8ef5",
+      "role": "state_transition",
+      "created_timestamp": 1787663873841,
+      "former_state_name": "Discovery",
+      "new_state_name": "Closer"
+    },
+    {
+      "message_id": "message_271611da23749ecaca192e38",
+      "role": "agent",
+      "created_timestamp": 1787663875798,
+      "content": "Right, that hits twice — lost ticket and someone’s first impression of your place at 11 pm. When those late‑night callers hit voicemail, do they usually order online from you anyway, or are they more likely to just pick another restaurant?",
+      "metadata": {
+        "response_id": 6
+      }
+    },
+    {
+      "message_id": "message_917e786eb59a5310ad4d1dd8",
+      "role": "user",
+      "created_timestamp": 1787663877619,
+      "content": "They usually pick another restaurant, which is frustrating because it's a missed opportunity for us."
+    },
+    {
+      "message_id": "message_52ed14b5edb16ebaa3338ca3",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787663879020,
+      "tool_call_id": "call_oFIW7mvcDLN1YLwRvY0Ysxms",
+      "name": "extract_closer_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_523c0f57ba9fe54cd4c0836a",
+      "role": "tool_call_result",
+      "created_timestamp": 1787663879021,
+      "tool_call_id": "call_oFIW7mvcDLN1YLwRvY0Ysxms",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"objection_type\":\"none\",\"interest_level\":\"high\",\"last_name\":\"\",\"monthly_leak\":\"\",\"pain_points\":\"losing orders after hours when no one is available to handle them, calls going straight to voicemail after hours, worrying about missed potential orders\"}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_bb79df0e139309de4bc4a224",
+      "role": "agent",
+      "created_timestamp": 1787663880970,
+      "content": "Yeah, that’s rough — especially when you’ve already paid to earn that call. Has anyone ever actually walked you through what those missed late‑night orders might be costing you in dollars?",
+      "metadata": {
+        "response_id": 7
+      }
+    },
+    {
+      "message_id": "message_dfe8ca77df2d9fc413a54d93",
+      "role": "user",
+      "created_timestamp": 1787663883268,
+      "content": "Not really, but I'm interested to know how it impacts my revenue. Still wondering: am I talking to AI?"
+    },
+    {
+      "message_id": "message_4c998b5ae6e4331aa83d6165",
+      "role": "agent",
+      "created_timestamp": 1787663886990,
+      "content": "Totally fair to ask — yes, I’m an AI voice on Jay’s team, built just to handle these kinds of calls and get you to the right next step. Since you’re curious about the impact: mind if we do a quick, rough calculation together on what those missed late‑night orders might be costing you?",
+      "metadata": {
+        "response_id": 8
+      }
+    },
+    {
+      "message_id": "message_8f8ac352014b54fbbfd19f54",
+      "role": "user",
+      "created_timestamp": 1787663889358,
+      "content": "Thanks for being upfront. I'll think about it. Appreciate your help, but I'm not ready to book now."
+    },
+    {
+      "message_id": "message_62c0f668f80f39cb6272acab",
+      "role": "agent",
+      "created_timestamp": 1787663891957,
+      "content": "Totally understand, and thanks for walking through this with me today. If you ever want to dig into the numbers or see how we’d handle those late‑night orders for your restaurant, you can reach back out anytime and we’ll pick it up from there — no pressure at all.",
+      "metadata": {
+        "response_id": 9
+      }
+    },
+    {
+      "message_id": "message_acd7ed9a84324279c70dae7e",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787663891958,
+      "tool_call_id": "call_EZOj57N6GMHX3FlOOLy5swl6",
+      "name": "end_call",
+      "arguments": "{\"execution_message\":\"Totally understand, and thanks for walking through this with me today. If you ever want to dig into the numbers or see how we’d handle those late‑night orders for your restaurant, you can reach back out anytime and we’ll pick it up from there — no pressure at all.\"}",
+      "type": "end_call"
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/195315c4cb5ca3e46a3eee68acf696ca883f90f48476e9f1c2a71d33a384b469/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "combined_cost": 13.2,
+    "product_costs": [
+      {
+        "cost": 11.700000000000001,
+        "unit_price": 1.3,
+        "product": "gpt_5_1_text_testing"
+      },
+      {
+        "product": "gpt_4_1_text_testing",
+        "unit_price": 1.5,
+        "cost": 1.5
+      }
+    ]
+  },
+  "chat_analysis": {
+    "chat_summary": "The user contacted the AI assistant to discuss issues with losing delivery orders after hours at their restaurant, as calls go to voicemail and potential customers often choose other restaurants. The agent gathered details about the user's pain points and business, offered to help calculate the revenue impact, and clarified their AI identity. The user appreciated the honesty but decided not to proceed further at this time.",
+    "custom_analysis_data": {},
+    "user_sentiment": "Positive",
+    "chat_successful": true
+  },
+  "data_storage_setting": "everything"
+}

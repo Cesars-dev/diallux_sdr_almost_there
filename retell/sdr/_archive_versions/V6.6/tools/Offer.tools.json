@@ -1,0 +1,73 @@
+[
+  {
+    "name": "extract_offer_details",
+    "description": "Capture the commitment: `{{livecall_agreed}}` = true the moment they agree to a live call this week. `{{callback_requested}}` = true ONLY if they ask Jay to call them back instead of booking. Call it the instant a commit signal lands — this is the gate.",
+    "type": "extract_dynamic_variable",
+    "speak_after_execution": true,
+    "variables": [
+      {
+        "name": "livecall_agreed",
+        "description": "True the moment the prospect agrees to a live call this week.",
+        "type": "boolean"
+      },
+      {
+        "name": "callback_requested",
+        "description": "True ONLY when the prospect asks Jay to call them back instead of booking a live call. Triggers the team-notification path (no slot is booked).",
+        "type": "boolean"
+      }
+    ]
+  },
+  {
+    "name": "notify_callback_telegram",
+    "description": "Notifies the Dialux team via Telegram that a prospect requested a callback instead of booking. Call it once when {{callback_requested}} = true, then wrap up the call warmly and end it. Do NOT book a slot. Sends the prospect's details so Jay can reach out.",
+    "type": "custom",
+    "method": "POST",
+    "url": "https://REPLACE_AT_DEPLOY.example/webhook/telegram-callback",
+    "headers": {},
+    "parameter_type": "json",
+    "query_params": {},
+    "args_at_root": false,
+    "timeout_ms": 15000,
+    "response_variables": {},
+    "speak_during_execution": false,
+    "speak_after_execution": true,
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "first_name": {
+          "type": "string",
+          "description": "Prospect's first name"
+        },
+        "last_name": {
+          "type": "string",
+          "description": "Prospect's last name if known"
+        },
+        "callback_number": {
+          "type": "string",
+          "description": "Best contact number to call back"
+        },
+        "industry": {
+          "type": "string",
+          "description": "Industry"
+        },
+        "pain_points": {
+          "type": "string",
+          "description": "Challenges discussed"
+        }
+      }
+    }
+  },
+  {
+    "name": "offer_completed",
+    "type": "extract_dynamic_variable",
+    "description": "Set offer_completed to true ONLY after: The moment they commit to the live call (or clearly request a callback instead). Do not set it early.",
+    "speak_after_execution": false,
+    "variables": [
+      {
+        "name": "offer_completed",
+        "type": "boolean",
+        "description": "true ONLY after: The moment they commit to the live call (or clearly request a callback instead)."
+      }
+    ]
+  }
+]

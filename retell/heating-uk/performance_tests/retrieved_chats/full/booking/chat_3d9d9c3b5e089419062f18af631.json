@@ -1,0 +1,425 @@
+{
+  "chat_id": "chat_3d9d9c3b5e089419062f18af631",
+  "chat_type": "api_chat",
+  "agent_id": "agent_ff9d4b9646a85b82d7ce8fd837",
+  "agent_version": 0,
+  "agent_name": "Multi State Agent",
+  "collected_dynamic_variables": {
+    "callback_requested": "false",
+    "classified_intent": "repair",
+    "past_customer": "false",
+    "intent_confirmed": "true",
+    "address_postcode": "NE2 2BB",
+    "address_confirmed": "true",
+    "address_incomplete": "false",
+    "problem_category": "No Hot Water (but heating works)",
+    "address_city": "",
+    "boiler_make": "Worcester",
+    "address_house_number": "14",
+    "symptom_brief": "Worcester boiler clicks when firing up and hot water goes cold after about 5 minutes",
+    "current_agent_state": "booking",
+    "intent_clear": "true",
+    "address_line1": "14 Station Road",
+    "address_street": "Station Road",
+    "greeting_exchanged": "true",
+    "error_code": "",
+    "customer_name": "David",
+    "previous_agent_state": "address"
+  },
+  "chat_status": "ended",
+  "start_timestamp": 1784637540372,
+  "end_timestamp": 1784637584030,
+  "transcript": "User: Hi, so my boiler's been playing up for ages \u2014 it's a Worcester, had it about 8 years, the engineer who fitted it said it might need a new diverter valve eventually, but we've been putting it off, and now it's making this clicking sound every time it fires up, and the hot water goes cold after about 5 minutes...\nAgent: Right, hot water goes cold after five minutes, with clicking. What\u2019s your address?\nUser: Yes, it's the Worcester boiler\nAgent: Worcester boiler, got it. Is the heating still working?\nUser: My name is David\nAgent: David, thanks. Is the heating still working?\nUser: NE2 2BB\nAgent: Postcode N-E-2-2-B-B, got it. What\u2019s the house number or property name?\nUser: 14 Station Road\nAgent: 14 Station Road. So that\u2019s 14 Station Road, postcode N-E-2-2-B-B. Is that right?\nUser: Yes, that's right\nAgent: I\u2019m checking the next available slots now.\nAgent: I\u2019ve got today between 5 and 7, or tomorrow afternoon. Which suits?\nUser: Tomorrow works\nAgent: Tomorrow works, lovely. Morning or afternoon?\nUser: Yes, book it\nAgent: Right, tomorrow afternoon. Is that right?\nUser: That's all, thanks\nAgent: Thanks, David. Take care.",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_f2abbc1421ff56fe7e6f81b0",
+      "role": "user",
+      "created_timestamp": 1784637541004,
+      "content": "Hi, so my boiler's been playing up for ages \u2014 it's a Worcester, had it about 8 years, the engineer who fitted it said it might need a new diverter valve eventually, but we've been putting it off, and now it's making this clicking sound every time it fires up, and the hot water goes cold after about 5 minutes..."
+    },
+    {
+      "message_id": "message_d4adbb7bebf62c0a5ac20352",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637542757,
+      "tool_call_id": "call_tNutv59YAKLPFYU3TUbhFFlk",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_716301a474e7578abe2278ee",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637542758,
+      "tool_call_id": "call_tNutv59YAKLPFYU3TUbhFFlk",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"repair\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_a1a4cffa39a4d6c722bb3470",
+      "role": "agent",
+      "created_timestamp": 1784637543973,
+      "content": "Right, hot water goes cold after five minutes, with clicking. What\u2019s your address?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_dfa4891050d99d48b4740123",
+      "role": "user",
+      "created_timestamp": 1784637544747,
+      "content": "Yes, it's the Worcester boiler"
+    },
+    {
+      "message_id": "message_a39a2fe1fdbc1cb58faac217",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637546227,
+      "tool_call_id": "call_GomV8Wm1KZWNyn2mKY8EecFC",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_540f1a51f9c472443d363fcd",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637546228,
+      "tool_call_id": "call_GomV8Wm1KZWNyn2mKY8EecFC",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"repair\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_55f7a2495cc00dab160e9470",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637549462,
+      "tool_call_id": "call_uv4xMTqpsbJZFqqKpDJEhpB1",
+      "name": "transition_to_address",
+      "arguments": "{}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_9b7518f9be11f8b0d5a46e7f",
+      "role": "state_transition",
+      "created_timestamp": 1784637549463,
+      "former_state_name": "greeter",
+      "new_state_name": "address"
+    },
+    {
+      "message_id": "message_49229d4d8f58fe1c309f0640",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637552671,
+      "tool_call_id": "call_x31140B8xa9jhrvuT98PC8BC",
+      "name": "extract_address_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_b0d1df358eeff99ff8cfa333",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637552672,
+      "tool_call_id": "call_x31140B8xa9jhrvuT98PC8BC",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"problem_category\":\"No Hot Water (but heating works)\",\"symptom_brief\":\"Worcester boiler clicks when firing up and hot water goes cold after about 5 minutes\",\"error_code\":\"\",\"boiler_make\":\"Worcester\",\"address_postcode\":\"\",\"address_house_number\":\"\",\"address_street\":\"\",\"address_line1\":\"\",\"address_city\":\"\",\"address_confirmed\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_b631af7c6201191cb4a3be5b",
+      "role": "agent",
+      "created_timestamp": 1784637553756,
+      "content": "Worcester boiler, got it. Is the heating still working?",
+      "metadata": {
+        "response_id": 2
+      }
+    },
+    {
+      "message_id": "message_ab9b5253598f3af063b0711e",
+      "role": "user",
+      "created_timestamp": 1784637554531,
+      "content": "My name is David"
+    },
+    {
+      "message_id": "message_893b32ad5f468575f5f98314",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637556321,
+      "tool_call_id": "call_W33JC65LiUpbsULx9DcXuiJx",
+      "name": "extract_address_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_2d377ea7e5b299e7b4ad92fa",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637556322,
+      "tool_call_id": "call_W33JC65LiUpbsULx9DcXuiJx",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"David\",\"problem_category\":\"No Hot Water (but heating works)\",\"symptom_brief\":\"Worcester boiler clicks when firing up and hot water goes cold after about 5 minutes\",\"error_code\":\"\",\"boiler_make\":\"Worcester\",\"address_postcode\":\"\",\"address_house_number\":\"\",\"address_street\":\"\",\"address_line1\":\"\",\"address_city\":\"\",\"address_confirmed\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_afc53a394ca7f28b3b4d9581",
+      "role": "agent",
+      "created_timestamp": 1784637557441,
+      "content": "David, thanks. Is the heating still working?",
+      "metadata": {
+        "response_id": 3
+      }
+    },
+    {
+      "message_id": "message_b2117e4ae7f9a57eeefe7d74",
+      "role": "user",
+      "created_timestamp": 1784637558189,
+      "content": "NE2 2BB"
+    },
+    {
+      "message_id": "message_e1825ac7b08d5dce4ba70fa4",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637560099,
+      "tool_call_id": "call_uvJ57sIMAILhLHUQjxsGB4zr",
+      "name": "extract_address_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_f9273e5ccf6a13228ffe7947",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637560100,
+      "tool_call_id": "call_uvJ57sIMAILhLHUQjxsGB4zr",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"David\",\"problem_category\":\"No Hot Water (but heating works)\",\"symptom_brief\":\"Worcester boiler clicks when firing up and hot water goes cold after about 5 minutes\",\"error_code\":\"\",\"boiler_make\":\"Worcester\",\"address_postcode\":\"NE2 2BB\",\"address_house_number\":\"\",\"address_street\":\"\",\"address_line1\":\"\",\"address_city\":\"\",\"address_confirmed\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_5f5149861e1cd2a67b3cf1e1",
+      "role": "agent",
+      "created_timestamp": 1784637561809,
+      "content": "Postcode N-E-2-2-B-B, got it. What\u2019s the house number or property name?",
+      "metadata": {
+        "response_id": 4
+      }
+    },
+    {
+      "message_id": "message_11d530b3bedfa0e9e6dd7ab2",
+      "role": "user",
+      "created_timestamp": 1784637562586,
+      "content": "14 Station Road"
+    },
+    {
+      "message_id": "message_653de95b61725cd1d9497bd1",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637564270,
+      "tool_call_id": "call_UUbvdOQegkFYAzN406A6cDG7",
+      "name": "extract_address_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_92093189e4e6b72808f89f4e",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637564271,
+      "tool_call_id": "call_UUbvdOQegkFYAzN406A6cDG7",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"David\",\"problem_category\":\"No Hot Water (but heating works)\",\"symptom_brief\":\"Worcester boiler clicks when firing up and hot water goes cold after about 5 minutes\",\"error_code\":\"\",\"boiler_make\":\"Worcester\",\"address_postcode\":\"NE2 2BB\",\"address_house_number\":\"14\",\"address_street\":\"Station Road\",\"address_line1\":\"14 Station Road\",\"address_city\":\"\",\"address_confirmed\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_442f365198b8bb6d2b7b50e1",
+      "role": "agent",
+      "created_timestamp": 1784637565623,
+      "content": "14 Station Road. So that\u2019s 14 Station Road, postcode N-E-2-2-B-B. Is that right?",
+      "metadata": {
+        "response_id": 5
+      }
+    },
+    {
+      "message_id": "message_f684b714004e933b2f22b2be",
+      "role": "user",
+      "created_timestamp": 1784637566486,
+      "content": "Yes, that's right"
+    },
+    {
+      "message_id": "message_64931198933e09e55d496b35",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637568067,
+      "tool_call_id": "call_8QC6nlOPdNzfXAYhwi8sZ6ro",
+      "name": "extract_address_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_6c337ed8247b54a5dc5e22e0",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637568068,
+      "tool_call_id": "call_8QC6nlOPdNzfXAYhwi8sZ6ro",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"David\",\"problem_category\":\"No Hot Water (but heating works)\",\"symptom_brief\":\"Worcester boiler clicks when firing up and hot water goes cold after about 5 minutes\",\"error_code\":\"\",\"boiler_make\":\"Worcester\",\"address_postcode\":\"NE2 2BB\",\"address_house_number\":\"14\",\"address_street\":\"Station Road\",\"address_line1\":\"14 Station Road\",\"address_city\":\"\",\"address_confirmed\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_38a24d5afb73d56708d4a583",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637569046,
+      "tool_call_id": "call_mPV9UWDiwT1zWdhXjA6W3Z0k",
+      "name": "transition_to_booking",
+      "arguments": "{}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_4885f978474210bca9e74e29",
+      "role": "state_transition",
+      "created_timestamp": 1784637569047,
+      "former_state_name": "address",
+      "new_state_name": "booking"
+    },
+    {
+      "message_id": "message_cce18d10c556ec27480835ad",
+      "role": "agent",
+      "created_timestamp": 1784637570576,
+      "content": "I\u2019m checking the next available slots now.",
+      "metadata": {
+        "response_id": 6
+      }
+    },
+    {
+      "message_id": "message_cb2be5b96800fefda3e650d9",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637570577,
+      "tool_call_id": "call_nk2nej81wgcK6mqkpFmpoPZ3",
+      "name": "check_availability",
+      "arguments": "{\"start_time\":\"2026-07-21T00:00:00\",\"end_time\":\"2026-07-22T23:59:00\",\"timezone\":\"Europe/London\",\"execution_message\":\"I\u2019m checking the next available slots now.\"}",
+      "type": "check_availability_cal"
+    },
+    {
+      "message_id": "message_08d7da74b72324f0dd3839dd",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637570757,
+      "tool_call_id": "call_nk2nej81wgcK6mqkpFmpoPZ3",
+      "content": "{\"availability_for_selected_time\":[{\"date\":\"Tuesday, 2026 July 7/21/2026 British Summer Time\",\"availability_range\":[\"From 5:00 PM to 7:00 PM\"]},{\"date\":\"Wednesday, 2026 July 7/22/2026 British Summer Time\",\"availability_range\":[\"From 11:30 AM to 12:00 PM\",\"From 12:30 PM to 7:00 PM\"]}]}",
+      "successful": true
+    },
+    {
+      "message_id": "message_a3bd2420d7daecd8d4200ace",
+      "role": "agent",
+      "created_timestamp": 1784637572142,
+      "content": "I\u2019ve got today between 5 and 7, or tomorrow afternoon. Which suits?",
+      "metadata": {
+        "response_id": 7
+      }
+    },
+    {
+      "message_id": "message_5460bdfb408c2a5ce28510ec",
+      "role": "user",
+      "created_timestamp": 1784637572973,
+      "content": "Tomorrow works"
+    },
+    {
+      "message_id": "message_1667b54791149eff2ed9fa7d",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637574878,
+      "tool_call_id": "call_JBcggHq4FhHWkh4QffMCCcLN",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_01af145bec2028ec3149c466",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637574879,
+      "tool_call_id": "call_JBcggHq4FhHWkh4QffMCCcLN",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"David\",\"classified_intent\":\"repair\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"14\",\"address_street\":\"Station Road\",\"address_postcode\":\"NE2 2BB\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_1934ffe17c1ac08ee4803ce0",
+      "role": "agent",
+      "created_timestamp": 1784637576199,
+      "content": "Tomorrow works, lovely. Morning or afternoon?",
+      "metadata": {
+        "response_id": 8
+      }
+    },
+    {
+      "message_id": "message_bb3acc57f9c43b6298d1cf17",
+      "role": "user",
+      "created_timestamp": 1784637576991,
+      "content": "Yes, book it"
+    },
+    {
+      "message_id": "message_0683b68123f44c5a12d85bc3",
+      "role": "agent",
+      "created_timestamp": 1784637578419,
+      "content": "Right, tomorrow afternoon. Is that right?",
+      "metadata": {
+        "response_id": 9
+      }
+    },
+    {
+      "message_id": "message_a0432382ba1d896a77fee48c",
+      "role": "user",
+      "created_timestamp": 1784637579231,
+      "content": "That's all, thanks"
+    },
+    {
+      "message_id": "message_acbefc7cb887614f746b8e22",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637581199,
+      "tool_call_id": "call_Uu8S93wZRdicpAgPzHcIV4kE",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_7a663fa60fc6f85c19ef2cba",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637581200,
+      "tool_call_id": "call_Uu8S93wZRdicpAgPzHcIV4kE",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"David\",\"classified_intent\":\"repair\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"14\",\"address_street\":\"Station Road\",\"address_postcode\":\"NE2 2BB\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_5313ce39d43d132936afe7d9",
+      "role": "agent",
+      "created_timestamp": 1784637582873,
+      "content": "Thanks, David. Take care.",
+      "metadata": {
+        "response_id": 10
+      }
+    },
+    {
+      "message_id": "message_7aeecd46fa6e4d2aebeb511b",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637582874,
+      "tool_call_id": "call_t2VI1wnKmvBa1vKveIvcUvnc",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_16e3c159ba4fbfe9aeb95d8f",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637582875,
+      "tool_call_id": "call_t2VI1wnKmvBa1vKveIvcUvnc",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"David\",\"classified_intent\":\"repair\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"14\",\"address_street\":\"Station Road\",\"address_postcode\":\"NE2 2BB\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_ebd120a8eb150ae445412519",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637583989,
+      "tool_call_id": "call_5kMjfGx4gJFdulNVlOeMH8ae",
+      "name": "end_call",
+      "arguments": "{}",
+      "type": "end_call"
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/c2df8a4e535c7f80d6e2c76bedf3acbbc54e6d8e879870a235d9b5868c0c23f9/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "combined_cost": 26,
+    "product_costs": [
+      {
+        "unit_price": 2.6,
+        "product": "gpt_5_4_text_testing",
+        "cost": 26
+      }
+    ]
+  },
+  "chat_analysis": {
+    "chat_summary": "The user reported an issue with their Worcester boiler, describing symptoms and providing their address details. The agent confirmed the problem, collected all necessary information, and successfully booked a repair appointment for the following afternoon. The user expressed satisfaction and ended the chat politely.",
+    "user_sentiment": "Positive",
+    "custom_analysis_data": {},
+    "chat_successful": true
+  },
+  "data_storage_setting": "everything"
+}

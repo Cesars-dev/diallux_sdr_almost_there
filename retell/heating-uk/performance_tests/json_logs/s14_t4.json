@@ -1,0 +1,34 @@
+{
+  "scenario": 14,
+  "turn": 4,
+  "chat_id": "chat_c853563d6d69fdfac1adfada062",
+  "caller_message": "5 Elm St, NE6 6FF",
+  "agent_messages": [
+    {
+      "message_id": "message_54cb97ada4d4e730be9c3ce4",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638613338,
+      "tool_call_id": "call_d7zSjCJTltwT1CYkDMzqiGNR",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_91da297bf067621b58c692a0",
+      "role": "tool_call_result",
+      "created_timestamp": 1784638613339,
+      "tool_call_id": "call_d7zSjCJTltwT1CYkDMzqiGNR",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Karen\",\"classified_intent\":\"boiler concern / possible breakdown\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"5\",\"address_street\":\"Elm St\",\"address_postcode\":\"NE6 6FF\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_c96ba803d610613ecaf02f95",
+      "role": "agent",
+      "created_timestamp": 1784638614773,
+      "content": "5 Elm St, NE6 6FF \u2014 got it. What town or city is that in?",
+      "metadata": {
+        "response_id": 4
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# env / secrets — NEVER commit
+.env
+*.env
+.env.*
+
+# deploy snapshots of superseded versions (contain the embedded Cal.com API key
+# of the retired native booking tool — current artifact is clean)
+retell/versions/01_baseline_e618dd12/DEPLOYED_llm_snapshot.json
+retell/versions/02_endcall_rule_REJECTED_2987eab9/DEPLOYED_llm_snapshot.json
+retell/versions/03_bold_constraint_CURRENT_f402d94d/DEPLOYED_llm_snapshot.json
+
+# runtime logs / transcripts
+lab/sim_logs/
+logs/
+*.log
+.DS_Store

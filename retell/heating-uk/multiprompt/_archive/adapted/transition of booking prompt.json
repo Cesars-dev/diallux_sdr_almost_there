@@ -1,0 +1,25 @@
+{
+  "type": "object",
+  "properties": {
+    "booking_confirmed": {
+      "type": "boolean",
+      "description": "Whether the booking has been confirmed"
+    },
+    "booking_ref": {
+      "type": "string",
+      "description": "Booking reference from Cal.com"
+    },
+    "call_closed": {
+      "type": "boolean",
+      "description": "Whether the call has been closed"
+    },
+    "callback_requested": {
+      "type": "boolean",
+      "description": "Set to true when customer rejects all slot offers"
+    }
+  },
+  "required": [
+    "booking_confirmed",
+    "call_closed"
+  ]
+}

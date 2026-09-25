@@ -1,0 +1,80 @@
+CALLER: Hey! So I'm Sofia — I run a real estate office here in Houston. Your ad was talking about missed calls? That's literally me.
+  [extract_intake_details]
+  [intake_completed]
+  [transition_to_Discovery]
+  [extract_discovery_details]
+AGENT: Got it, Sofia — missed calls are literally you, I hear that a lot from busy brokerages. When a buyer or seller calls and you can’t grab it in the moment, what usually happens to that call — voicemail, missed altogether, someone else picking it up?
+CALLER: Oh, voicemail usually, but sometimes I just miss them completely. I mean, maybe 25 or 30 a week?
+  [extract_discovery_details]
+  [discovery_completed]
+  [transition_to_Closer]
+  [extract_closer_details]
+AGENT: Mhm, makes sense — 25–30 a week going to voicemail or missed completely adds up fast. When those callers don’t get you live, do they usually end up calling back… or do you feel like they just move on to another agent or office?
+CALLER: Honestly, I'm not sure. Some call back, but I bet a lot just move on. It's frustrating!
+AGENT: Yeah, I hear you — not knowing which ones slipped away is the frustrating part. Has anyone ever walked you through what those missed calls are actually costing you in dollars, or has it mostly just been a gut feeling so far?
+CALLER: Mostly a gut feeling. No one's broken it down in dollars. I'm curious — tell me more about that!
+  [extract_leak_inputs]
+AGENT: Got it, so it’s been more of a “I know this hurts” feeling than real numbers. So ballpark for your office — of those 25–30 calls a week that hit voicemail or get missed, what percentage do you think would actually turn into a legit client or appointment if you answered live… maybe half, around 60%, what feels right?
+CALLER: Yeah, maybe around 50% could turn into clients. Honestly, a live answer could make a big difference.
+  [extract_leak_inputs]
+AGENT: Got it, 50% makes sense — a live answer is huge in real estate. And when you do land a new client from one of those calls, what’s that worth to you on average — are we talking more like $3,000, $5,000, $10,000+ in commission over the relationship?
+CALLER: Easily $5,000 to $10,000+ per client. That's why missing calls is a real pain for me!
+  [extract_leak_inputs]
+  [calculate_monthly_leak]
+  [extract_closer_details]
+AGENT: So with your own numbers, that’s roughly $6,325,000 a week walking out the door… and about $27,387,200 a month in potential commission tied to missed or voicemail calls. Does that feel about right given what you’re seeing day to day?
+CALLER: Wow, when you put it like that, it’s shocking. Yes, that sounds about right! I need a solution.
+  [extract_closer_details]
+  [closer_completed]
+  [transition_to_Offer]
+  [extract_offer_details]
+AGENT: Yeah… when you see the actual numbers, it’s a bit of a gut punch. So, Sofia, to stop that from happening, we do a quick 20‑minute walkthrough this week where Jay shows you exactly how those missed calls turn into booked clients instead — what’s better for you, later today or tomorrow?
+CALLER: Oh, I thought I was busy, but actually, tomorrow works! Let's book that walkthrough.
+  [extract_offer_details]
+  [offer_completed]
+  [transition_to_contact_details]
+  [extract_person_details]
+AGENT: Perfect, tomorrow it is — that’ll be a focused 20‑minute walkthrough with Jay, no commitment, just see it in action and then decide.  
+
+So, Sofia, quick thing so we can lock that in for you: what’s your last name?
+CALLER: Sure thing! It's Martinez, Sofia Martinez. Sorry, what time did we say? I want to make sure it's correct.
+  [extract_person_details]
+  [extract_contact_timezone]
+AGENT: Got it, Sofia Martinez, perfect. Quick check — you’re on Central time there in Houston, right?
+CALLER: Oh, right, Central Time, not Mountain — my bad! Let's reconfirm the time for tomorrow, please.
+  [extract_contact_timezone]
+  [extract_reach_details]
+AGENT: Mhm, no worries at all — we’ll keep everything in Central. So Sofia, is the number you’re calling from right now the best contact number to send your text confirmation for tomorrow’s walkthrough?
+CALLER: Yes, this number is perfect. Please send the confirmation here. Excited to finally get this sorted!
+  [extract_reach_details]
+  [contact_details_completed]
+  [transition_to_ConfirmSlots]
+  [check_current_date]
+  [query_livecall_slots]
+AGENT: Awesome, we’ll send everything to this number.  
+
+For tomorrow, I can get you in at 10:45am or 11:30am Central — which one works better for your 20‑minute walkthrough with Jay?
+CALLER: Let’s go with 10:45am Central. Just to confirm, that's for tomorrow, right? Excited to chat with Jay!
+  [extract_confirm_details]
+  [verify_info]
+  [verify_info]
+AGENT: Got it, tomorrow at 10:45am Central with Jay — that’s exactly what we’re booking.  
+
+One last thing so your confirmation goes through cleanly: can you read me your best cell number, digits only?
+CALLER: Sure thing, it's 7135551234. Thanks for setting this up — looking forward to solving this missed call chaos!
+  [extract_confirm_details]
+  [verify_info]
+  [extract_slot_verified]
+  [transition_to_Booking]
+AGENT: One moment while I confirm that for you.
+  [create_livecall_booking]
+  [record_booking_uid]
+  [validate_booking]
+  [record_booking_outcome]
+  [transition_to_Closing]
+AGENT: Thanks, Sofia! You're all set for tomorrow at 10:45am Central with Jay. You'll receive a text confirmation at 713‑555‑1234 in a moment — you can add it to your calendar in one click or reschedule if you need to.
+
+Is there anything else I can help you with?
+
+Really glad you called. Jay's looking forward to it. Have a great day! Bye!
+  [end_call]

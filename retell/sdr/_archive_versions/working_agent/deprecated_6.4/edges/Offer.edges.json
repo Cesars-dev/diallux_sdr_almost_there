@@ -1,0 +1,70 @@
+[
+  {
+    "description": "When offer_completed, livecall_agreed are all filled, transition to contact_details.",
+    "speak_during_transition": false,
+    "destination_state_name": "contact_details",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "livecall_agreed": {
+          "type": "boolean",
+          "description": "True when the live call path is chosen"
+        },
+        "interest_level": {
+          "type": "string",
+          "enum": [
+            "high",
+            "medium",
+            "low"
+          ],
+          "description": "Prospect's interest level"
+        },
+        "industry": {
+          "type": "string",
+          "description": "Business industry"
+        },
+        "pain_points": {
+          "type": "string",
+          "description": "Comma-separated challenges (cumulative)"
+        },
+        "monthly_leak": {
+          "type": "string",
+          "description": "Calculated monthly revenue loss, if known"
+        },
+        "pain_urgency": {
+          "type": "string",
+          "enum": [
+            "high",
+            "medium",
+            "low"
+          ],
+          "description": "Urgency level"
+        },
+        "call_volume": {
+          "type": "string",
+          "description": "Approximate call volume"
+        },
+        "company_name": {
+          "type": "string",
+          "description": "Company name if known"
+        },
+        "first_name": {
+          "type": "string",
+          "description": "Prospect's first name if known"
+        },
+        "last_name": {
+          "type": "string",
+          "description": "Prospect's last name if known"
+        },
+        "offer_completed": {
+          "type": "boolean",
+          "description": "true ONLY after: The moment they commit to the live call (or clearly request a callback instead)."
+        }
+      },
+      "required": [
+        "offer_completed",
+        "livecall_agreed"
+      ]
+    }
+  }
+]

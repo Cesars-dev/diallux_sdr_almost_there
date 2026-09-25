@@ -1,0 +1,339 @@
+{
+  "chat_id": "chat_34af32e58744e6dc3f2aa040b85",
+  "chat_type": "api_chat",
+  "agent_id": "agent_ff9d4b9646a85b82d7ce8fd837",
+  "agent_version": 0,
+  "agent_name": "Multi State Agent",
+  "collected_dynamic_variables": {
+    "callback_requested": "false",
+    "classified_intent": "Boiler Breakdown",
+    "past_customer": "false",
+    "intent_confirmed": "true",
+    "address_postcode": "NE3 2TH",
+    "address_confirmed": "true",
+    "problem_category": "Boiler Breakdown",
+    "address_city": "",
+    "boiler_make": "",
+    "address_house_number": "25",
+    "symptom_brief": "No heating since last night",
+    "current_agent_state": "booking",
+    "intent_clear": "true",
+    "address_line1": "25",
+    "address_street": "",
+    "greeting_exchanged": "true",
+    "error_code": "",
+    "customer_name": "James",
+    "previous_agent_state": "address"
+  },
+  "chat_status": "ended",
+  "start_timestamp": 1784633491405,
+  "end_timestamp": 1784633523522,
+  "transcript": "User: Hi, I need a breakdown call-out. No heating since last night.\nAgent: Right, no heating since last night \u2014 that's a pain. What's the address?\nUser: James\nAgent: James, got it. Is the boiler showing an error code?\nUser: NE3 2TH\nAgent: Postcode N-E-3 2-T-H, got it. What's the house number or property name?\nUser: 25\nAgent: House number 25, thanks. And the street name?\nUser: Yes that's right\nAgent: I\u2019m checking the next available slots now.\nAgent: Right, I've got today after 3pm or tomorrow morning. Which suits?\nUser: Tomorrow morning works\nAgent: James, got it. What's the street name?\nUser: Yes, book it\nAgent: Street name still missing. What's the street name?",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_ae9fd8a60e9771ef66fead36",
+      "role": "user",
+      "created_timestamp": 1784633492038,
+      "content": "Hi, I need a breakdown call-out. No heating since last night."
+    },
+    {
+      "message_id": "message_fe7ea97a016f9a71724983cc",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784633493424,
+      "tool_call_id": "call_9cBl4QOm2NeLAPC1pPsLawMA",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_f3625161b147ab0a4e542f88",
+      "role": "tool_call_result",
+      "created_timestamp": 1784633493425,
+      "tool_call_id": "call_9cBl4QOm2NeLAPC1pPsLawMA",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"Boiler Breakdown\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_1e54b346bccea83653cdc6a4",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784633494589,
+      "tool_call_id": "call_by5LrWxM8eoKwaIUuIPdOlcZ",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_5f6ce676bfa2af6a8e7979cd",
+      "role": "tool_call_result",
+      "created_timestamp": 1784633494590,
+      "tool_call_id": "call_by5LrWxM8eoKwaIUuIPdOlcZ",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"Boiler Breakdown\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_f21e96888e2fc340ca2f24c5",
+      "role": "agent",
+      "created_timestamp": 1784633496070,
+      "content": "Right, no heating since last night \u2014 that's a pain. What's the address?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_35e81ca99eabe9c64dda2bd8",
+      "role": "user",
+      "created_timestamp": 1784633496899,
+      "content": "James"
+    },
+    {
+      "message_id": "message_69d48c585d0171ba43bbd586",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784633498410,
+      "tool_call_id": "call_iVTXGuXK2VSJOwLSSswyZPj2",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_8ad702286818453396f9d84a",
+      "role": "tool_call_result",
+      "created_timestamp": 1784633498411,
+      "tool_call_id": "call_iVTXGuXK2VSJOwLSSswyZPj2",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"James\",\"classified_intent\":\"Boiler Breakdown\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_29b8ae080ace9336cee207ed",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784633499167,
+      "tool_call_id": "call_GU2e8m5REWizyeZz9G4ZLDyy",
+      "name": "transition_to_address",
+      "arguments": "{}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_2a227b2f2904b2422c2173b9",
+      "role": "state_transition",
+      "created_timestamp": 1784633499168,
+      "former_state_name": "greeter",
+      "new_state_name": "address"
+    },
+    {
+      "message_id": "message_c96424ab933e08494909538f",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784633500410,
+      "tool_call_id": "call_cZFvDAQWSTwS5VpAlP1pWvNA",
+      "name": "extract_address_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_0a7c62103e9443adf272103c",
+      "role": "tool_call_result",
+      "created_timestamp": 1784633500411,
+      "tool_call_id": "call_cZFvDAQWSTwS5VpAlP1pWvNA",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"James\",\"problem_category\":\"Boiler Breakdown\",\"symptom_brief\":\"No heating since last night\",\"error_code\":\"\",\"boiler_make\":\"\",\"address_postcode\":\"\",\"address_house_number\":\"\",\"address_street\":\"\",\"address_line1\":\"\",\"address_city\":\"\",\"address_confirmed\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_d6bcd0b32985d6beaaa7bbce",
+      "role": "agent",
+      "created_timestamp": 1784633501865,
+      "content": "James, got it. Is the boiler showing an error code?",
+      "metadata": {
+        "response_id": 2
+      }
+    },
+    {
+      "message_id": "message_ebdba74538ecdd564166d039",
+      "role": "user",
+      "created_timestamp": 1784633502703,
+      "content": "NE3 2TH"
+    },
+    {
+      "message_id": "message_d76aff7db4145a9137b4e9f0",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784633504851,
+      "tool_call_id": "call_AXwl1s7MzUAXswehbKwXgSNb",
+      "name": "extract_address_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_0ed20bda12d55f0a1b739c11",
+      "role": "tool_call_result",
+      "created_timestamp": 1784633504852,
+      "tool_call_id": "call_AXwl1s7MzUAXswehbKwXgSNb",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"James\",\"problem_category\":\"Boiler Breakdown\",\"symptom_brief\":\"No heating since last night\",\"error_code\":\"\",\"boiler_make\":\"\",\"address_postcode\":\"NE3 2TH\",\"address_house_number\":\"\",\"address_street\":\"\",\"address_line1\":\"\",\"address_city\":\"\",\"address_confirmed\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_967a6489135501fe131853c8",
+      "role": "agent",
+      "created_timestamp": 1784633505976,
+      "content": "Postcode N-E-3 2-T-H, got it. What's the house number or property name?",
+      "metadata": {
+        "response_id": 3
+      }
+    },
+    {
+      "message_id": "message_1db5139c9c5e8e60039cc22d",
+      "role": "user",
+      "created_timestamp": 1784633506784,
+      "content": "25"
+    },
+    {
+      "message_id": "message_97cdbb93cbfef86ca9d7184e",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784633508184,
+      "tool_call_id": "call_kq6NbizudB9cAjBfAVmci3qt",
+      "name": "extract_address_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_1a3ca1018c12ede70fb5d554",
+      "role": "tool_call_result",
+      "created_timestamp": 1784633508185,
+      "tool_call_id": "call_kq6NbizudB9cAjBfAVmci3qt",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"James\",\"problem_category\":\"Boiler Breakdown\",\"symptom_brief\":\"No heating since last night\",\"error_code\":\"\",\"boiler_make\":\"\",\"address_postcode\":\"NE3 2TH\",\"address_house_number\":\"25\",\"address_street\":\"\",\"address_line1\":\"\",\"address_city\":\"\",\"address_confirmed\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_fb3d7b4c664d13e3f422bfda",
+      "role": "agent",
+      "created_timestamp": 1784633509188,
+      "content": "House number 25, thanks. And the street name?",
+      "metadata": {
+        "response_id": 4
+      }
+    },
+    {
+      "message_id": "message_0be2ac9f4f70e85a2c2c6a05",
+      "role": "user",
+      "created_timestamp": 1784633510027,
+      "content": "Yes that's right"
+    },
+    {
+      "message_id": "message_2cccaf78969b2ed7acfe6139",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784633511690,
+      "tool_call_id": "call_SkyAK8liYNH4iU0IaxfLT2Zs",
+      "name": "extract_address_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_57206cc17dff317cbacdf8f6",
+      "role": "tool_call_result",
+      "created_timestamp": 1784633511691,
+      "tool_call_id": "call_SkyAK8liYNH4iU0IaxfLT2Zs",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"James\",\"problem_category\":\"Boiler Breakdown\",\"symptom_brief\":\"No heating since last night\",\"error_code\":\"\",\"boiler_make\":\"\",\"address_postcode\":\"NE3 2TH\",\"address_house_number\":\"25\",\"address_street\":\"\",\"address_line1\":\"25\",\"address_city\":\"\",\"address_confirmed\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_29aff2dcd31dcf549af199de",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784633512683,
+      "tool_call_id": "call_v30K0reIlbPb3dFGhgGM7eSM",
+      "name": "transition_to_booking",
+      "arguments": "{}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_959c9068a9ebac02810f0013",
+      "role": "state_transition",
+      "created_timestamp": 1784633512684,
+      "former_state_name": "address",
+      "new_state_name": "booking"
+    },
+    {
+      "message_id": "message_df145fb461c0b64e47bdc1c8",
+      "role": "agent",
+      "created_timestamp": 1784633513913,
+      "content": "I\u2019m checking the next available slots now.",
+      "metadata": {
+        "response_id": 5
+      }
+    },
+    {
+      "message_id": "message_13620d6a68cb056dcba4f5ed",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784633513914,
+      "tool_call_id": "call_gChdP8jB7a6nz8h6bKeAdl2i",
+      "name": "check_availability",
+      "arguments": "{\"start_time\":\"2026-07-21T00:00:00\",\"end_time\":\"2026-07-22T23:59:00\",\"timezone\":\"Europe/London\",\"execution_message\":\"I\u2019m checking the next available slots now.\"}",
+      "type": "check_availability_cal"
+    },
+    {
+      "message_id": "message_82d5e04db0c1e55442c52826",
+      "role": "tool_call_result",
+      "created_timestamp": 1784633514970,
+      "tool_call_id": "call_gChdP8jB7a6nz8h6bKeAdl2i",
+      "content": "{\"availability_for_selected_time\":[{\"date\":\"Tuesday, 2026 July 7/21/2026 British Summer Time\",\"availability_range\":[\"From 3:00 PM to 7:00 PM\"]},{\"date\":\"Wednesday, 2026 July 7/22/2026 British Summer Time\",\"availability_range\":[\"From 9:30 AM to 7:00 PM\"]}]}",
+      "successful": true
+    },
+    {
+      "message_id": "message_4601c6b97677ef76b9b1574c",
+      "role": "agent",
+      "created_timestamp": 1784633518253,
+      "content": "Right, I've got today after 3pm or tomorrow morning. Which suits?",
+      "metadata": {
+        "response_id": 6
+      }
+    },
+    {
+      "message_id": "message_6cc37527eb9a6fb194539e4c",
+      "role": "user",
+      "created_timestamp": 1784633519094,
+      "content": "Tomorrow morning works"
+    },
+    {
+      "message_id": "message_27d029baf04f287c70a56db7",
+      "role": "agent",
+      "created_timestamp": 1784633520395,
+      "content": "James, got it. What's the street name?",
+      "metadata": {
+        "response_id": 7
+      }
+    },
+    {
+      "message_id": "message_893ef91e98cb93272f3d062d",
+      "role": "user",
+      "created_timestamp": 1784633521320,
+      "content": "Yes, book it"
+    },
+    {
+      "message_id": "message_8d13f2a94ad545379f0e8795",
+      "role": "agent",
+      "created_timestamp": 1784633522686,
+      "content": "Street name still missing. What's the street name?",
+      "metadata": {
+        "response_id": 8
+      }
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/bac28fca805f9b3f2307b27b2a4159d69a21abb183b39553590311ccd191f086/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "combined_cost": 22.3,
+    "product_costs": [
+      {
+        "unit_price": 2.6,
+        "product": "gpt_5_4_text_testing",
+        "cost": 20.8
+      },
+      {
+        "unit_price": 1.5,
+        "product": "gpt_4_1_text_testing",
+        "cost": 1.5
+      }
+    ]
+  },
+  "chat_analysis": {
+    "chat_summary": "The user, James, reported a boiler breakdown with no heating since last night and provided their name, postcode, and house number. The agent confirmed the details and checked appointment availability, offering slots for today afternoon or tomorrow morning, with the user choosing tomorrow morning. However, the street name was not provided despite multiple requests, so the booking could not be fully completed.",
+    "user_sentiment": "Neutral",
+    "custom_analysis_data": {},
+    "chat_successful": false
+  },
+  "data_storage_setting": "everything"
+}

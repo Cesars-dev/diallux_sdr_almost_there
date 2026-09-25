@@ -1,0 +1,334 @@
+{
+  "chat_id": "chat_08545b6199aedcff245a6b62bbc",
+  "chat_type": "api_chat",
+  "agent_id": "agent_ff9d4b9646a85b82d7ce8fd837",
+  "agent_version": 0,
+  "agent_name": "Multi State Agent",
+  "collected_dynamic_variables": {
+    "callback_requested": "false",
+    "classified_intent": "Boiler Breakdown",
+    "past_customer": "false",
+    "intent_confirmed": "true",
+    "address_postcode": "NE4 5AB",
+    "address_confirmed": "true",
+    "address_incomplete": "false",
+    "problem_category": "Banging / Kettling / Rumbling Noise",
+    "address_city": "Newcastle",
+    "boiler_make": "",
+    "address_house_number": "7",
+    "symptom_brief": "Boiler making a rattling sound when it fires up",
+    "current_agent_state": "booking",
+    "intent_clear": "true",
+    "address_line1": "7 Oak Ave",
+    "address_street": "Oak Ave",
+    "greeting_exchanged": "true",
+    "error_code": "",
+    "customer_name": "Paul",
+    "previous_agent_state": "address"
+  },
+  "chat_status": "ended",
+  "start_timestamp": 1784639279491,
+  "end_timestamp": 1784639317154,
+  "transcript": "User: Hi, my boiler's making a funny noise. Can you send someone out? Oh, and how much is the call-out?\nAgent: Funny noise from the boiler \u2014 got it.\n\nWeekdays 8 to 6, it\u2019s \u00a375 plus VAT. Evenings and weekends, \u00a3120 plus VAT.\n\nWhat\u2019s the address?\nUser: My name is Paul. NE4 5AB, 7 Oak Ave, Newcastle. Making a rattling sound when it fires up.\nAgent: Paul, rattling when it fires up \u2014 got it.\n\nSo that\u2019s 7 Oak Ave, Newcastle \u2014 postcode N-E-4-5-A-B. Is that right?\nUser: Yes, that's correct\nAgent: I\u2019m just checking the next available slots now.\nAgent: Right, I\u2019ve got today at 6:30, or tomorrow at 3:30.\n\nWhich suits?\nUser: Tomorrow works\nAgent: Tomorrow at 3:30 \u2014 lovely.\n\nRight, Paul, I\u2019ve got 7 Oak Ave, Newcastle \u2014 postcode N-E-4 5-A-B \u2014 tomorrow at 3:30. Sound okay?\nUser: Yes, book it\nAgent: I\u2019m getting that booked in now.\nAgent: Brilliant, you\u2019re booked in.\n\nIs there anything else I can help you with?\nUser: That's all, thanks",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_a739a90aa0564735e9b0769e",
+      "role": "user",
+      "created_timestamp": 1784639280163,
+      "content": "Hi, my boiler's making a funny noise. Can you send someone out? Oh, and how much is the call-out?"
+    },
+    {
+      "message_id": "message_6e575c65545dbd242edc4d1f",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639281828,
+      "tool_call_id": "call_pOrTlYkDLuFJEKyvNdisyojH",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_f4ecaf141edb24f74159e6fe",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639281829,
+      "tool_call_id": "call_pOrTlYkDLuFJEKyvNdisyojH",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"Boiler Breakdown\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_148e5cfdef780afdd05df5d5",
+      "role": "agent",
+      "created_timestamp": 1784639283166,
+      "content": "Funny noise from the boiler \u2014 got it.\n\nWeekdays 8 to 6, it\u2019s \u00a375 plus VAT. Evenings and weekends, \u00a3120 plus VAT.\n\nWhat\u2019s the address?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_3584b34fd18868a946ca4db4",
+      "role": "user",
+      "created_timestamp": 1784639284070,
+      "content": "My name is Paul. NE4 5AB, 7 Oak Ave, Newcastle. Making a rattling sound when it fires up."
+    },
+    {
+      "message_id": "message_91e94228fa248c059fadcf79",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639285941,
+      "tool_call_id": "call_aXwqhNcntCpqZ7UaFfwfhKG3",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_4de87925b0afbf8c4d985468",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639285942,
+      "tool_call_id": "call_aXwqhNcntCpqZ7UaFfwfhKG3",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Paul\",\"classified_intent\":\"Boiler Breakdown\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"7\",\"address_street\":\"Oak Ave\",\"address_postcode\":\"NE4 5AB\",\"address_city\":\"Newcastle\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_a19a9fe7df10347b8c20c6c8",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639287054,
+      "tool_call_id": "call_C1MGPFvvm0olWk12CCtbZ4UV",
+      "name": "transition_to_address",
+      "arguments": "{}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_fa3e96ab8676da57c905005d",
+      "role": "state_transition",
+      "created_timestamp": 1784639287055,
+      "former_state_name": "greeter",
+      "new_state_name": "address"
+    },
+    {
+      "message_id": "message_fa5e9a2f666f693b72444fe4",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639289039,
+      "tool_call_id": "call_PuBvFpZogZx6MxFUyFeAoUQq",
+      "name": "extract_address_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_3ac7ede17eb4c7013e8fafc8",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639289040,
+      "tool_call_id": "call_PuBvFpZogZx6MxFUyFeAoUQq",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Paul\",\"problem_category\":\"Banging / Kettling / Rumbling Noise\",\"symptom_brief\":\"Boiler making a rattling sound when it fires up\",\"error_code\":\"\",\"boiler_make\":\"\",\"address_postcode\":\"NE4 5AB\",\"address_house_number\":\"7\",\"address_street\":\"Oak Ave\",\"address_line1\":\"7 Oak Ave\",\"address_city\":\"Newcastle\",\"address_confirmed\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_eec6c77941442915dd02a314",
+      "role": "agent",
+      "created_timestamp": 1784639290560,
+      "content": "Paul, rattling when it fires up \u2014 got it.\n\nSo that\u2019s 7 Oak Ave, Newcastle \u2014 postcode N-E-4-5-A-B. Is that right?",
+      "metadata": {
+        "response_id": 2
+      }
+    },
+    {
+      "message_id": "message_33c17b721ebd78e946c56c52",
+      "role": "user",
+      "created_timestamp": 1784639291466,
+      "content": "Yes, that's correct"
+    },
+    {
+      "message_id": "message_d9ce3c0b4b83e8c4d2f2ef0d",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639293174,
+      "tool_call_id": "call_C42Md5bvqndRuUgotbKlon4U",
+      "name": "extract_address_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_7aed6fdc2ed57488ff8abe1d",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639293175,
+      "tool_call_id": "call_C42Md5bvqndRuUgotbKlon4U",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Paul\",\"problem_category\":\"Banging / Kettling / Rumbling Noise\",\"symptom_brief\":\"Boiler making a rattling sound when it fires up\",\"error_code\":\"\",\"boiler_make\":\"\",\"address_postcode\":\"NE4 5AB\",\"address_house_number\":\"7\",\"address_street\":\"Oak Ave\",\"address_line1\":\"7 Oak Ave\",\"address_city\":\"Newcastle\",\"address_confirmed\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_337d2d6a7ad9a04ee15be8ec",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639294276,
+      "tool_call_id": "call_Jv9H3UCsaCpJsHx9aOmacDa1",
+      "name": "transition_to_booking",
+      "arguments": "{}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_781aa1589a45d825edc6e16c",
+      "role": "state_transition",
+      "created_timestamp": 1784639294277,
+      "former_state_name": "address",
+      "new_state_name": "booking"
+    },
+    {
+      "message_id": "message_79ccbd2c0c76e1159575fbc5",
+      "role": "agent",
+      "created_timestamp": 1784639298040,
+      "content": "I\u2019m just checking the next available slots now.",
+      "metadata": {
+        "response_id": 3
+      }
+    },
+    {
+      "message_id": "message_f57f58a88ca2b842900fd15e",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639298041,
+      "tool_call_id": "call_zQAlz2fcEOp8ArMXdaEv8SO7",
+      "name": "check_availability",
+      "arguments": "{\"start_time\":\"2026-07-21T00:00:00\",\"end_time\":\"2026-07-22T23:59:00\",\"timezone\":\"Europe/London\",\"execution_message\":\"I\u2019m just checking the next available slots now.\"}",
+      "type": "check_availability_cal"
+    },
+    {
+      "message_id": "message_e668de22f4ed0502652910af",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639298490,
+      "tool_call_id": "call_zQAlz2fcEOp8ArMXdaEv8SO7",
+      "content": "{\"availability_for_selected_time\":[{\"date\":\"Tuesday, 2026 July 7/21/2026 British Summer Time\",\"availability_range\":[\"From 6:30 PM to 7:00 PM\"]},{\"date\":\"Wednesday, 2026 July 7/22/2026 British Summer Time\",\"availability_range\":[\"From 3:30 PM to 7:00 PM\"]}]}",
+      "successful": true
+    },
+    {
+      "message_id": "message_4afd3a2cfe31a74de4d94d5c",
+      "role": "agent",
+      "created_timestamp": 1784639299783,
+      "content": "Right, I\u2019ve got today at 6:30, or tomorrow at 3:30.\n\nWhich suits?",
+      "metadata": {
+        "response_id": 4
+      }
+    },
+    {
+      "message_id": "message_fd7c4838e512a58358f20693",
+      "role": "user",
+      "created_timestamp": 1784639300747,
+      "content": "Tomorrow works"
+    },
+    {
+      "message_id": "message_7da107722b9ce872481bbf55",
+      "role": "agent",
+      "created_timestamp": 1784639302357,
+      "content": "Tomorrow at 3:30 \u2014 lovely.\n\nRight, Paul, I\u2019ve got 7 Oak Ave, Newcastle \u2014 postcode N-E-4 5-A-B \u2014 tomorrow at 3:30. Sound okay?",
+      "metadata": {
+        "response_id": 5
+      }
+    },
+    {
+      "message_id": "message_b0ee6f6adba432f528ce1e76",
+      "role": "user",
+      "created_timestamp": 1784639303278,
+      "content": "Yes, book it"
+    },
+    {
+      "message_id": "message_1c8347c9309b98454b5cb198",
+      "role": "agent",
+      "created_timestamp": 1784639305489,
+      "content": "I\u2019m getting that booked in now.",
+      "metadata": {
+        "response_id": 6
+      }
+    },
+    {
+      "message_id": "message_337cbb8159fecb699c98efec",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639305490,
+      "tool_call_id": "call_UsjvGG3sdVSwiO6woj4hty74",
+      "name": "book_calendar",
+      "arguments": "{\"time\":\"2026-07-22T15:30:00\",\"timezone\":\"Europe/London\",\"name\":\"Paul\",\"email\":\"jaydiallux@gmail.com\",\"attendeePhoneNumber\":null,\"title\":\"Banging / Kettling / Rumbling Noise \u2014 Paul\",\"notes\":\"CUSTOMER: Paul | ADDRESS: 7 Oak Ave, Newcastle, NE4 5AB | PHONE: {{user_number}} | PROBLEM: Banging / Kettling / Rumbling Noise | SYMPTOMS: Boiler making a rattling sound when it fires up\",\"guests\":null,\"rescheduleReason\":null,\"execution_message\":\"I\u2019m getting that booked in now.\"}",
+      "type": "book_appointment_cal"
+    },
+    {
+      "message_id": "message_49c41f4ecc405efe83f8119d",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639309691,
+      "tool_call_id": "call_UsjvGG3sdVSwiO6woj4hty74",
+      "content": "{\"status\":\"Successfully booked an appointment.\",\"booking_id\":22743888,\"booking_uid\":\"oo7kcdQkfFwp8r8VDT8mee\"}",
+      "successful": true
+    },
+    {
+      "message_id": "message_819bb9789114306f66ca2233",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639311425,
+      "tool_call_id": "call_7pSCL4QHqQMdkHV3ozdG1hok",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_c6cbdfcd5f80bd804a728b4c",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639311426,
+      "tool_call_id": "call_7pSCL4QHqQMdkHV3ozdG1hok",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Paul\",\"classified_intent\":\"Boiler Breakdown\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"7\",\"address_street\":\"Oak Ave\",\"address_postcode\":\"NE4 5AB\",\"address_city\":\"Newcastle\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_3ed79c0523e00d54d6b5fc17",
+      "role": "agent",
+      "created_timestamp": 1784639312802,
+      "content": "Brilliant, you\u2019re booked in.\n\nIs there anything else I can help you with?",
+      "metadata": {
+        "response_id": 7
+      }
+    },
+    {
+      "message_id": "message_2ffe5159fec3c3e029be91dc",
+      "role": "user",
+      "created_timestamp": 1784639313688,
+      "content": "That's all, thanks"
+    },
+    {
+      "message_id": "message_d63dfed86b7e3212d2359fc9",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639315779,
+      "tool_call_id": "call_5jm3YqZedm6DTf0z55KApJpQ",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_410e752116518d5f2ee6cc09",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639315780,
+      "tool_call_id": "call_5jm3YqZedm6DTf0z55KApJpQ",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Paul\",\"classified_intent\":\"Boiler Breakdown\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"7\",\"address_street\":\"Oak Ave\",\"address_postcode\":\"NE4 5AB\",\"address_city\":\"Newcastle\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_3cb2fdb824e01c5d63daa01d",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639317146,
+      "tool_call_id": "call_i9HAKh439drWGZo9FrOz6qgb",
+      "name": "end_call",
+      "arguments": "{}",
+      "type": "end_call"
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/eee543079b703ca7126deb73eb4d0008bc99e28a58201448481491b10161ea2a/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "combined_cost": 19.7,
+    "product_costs": [
+      {
+        "unit_price": 2.6,
+        "product": "gpt_5_4_text_testing",
+        "cost": 18.2
+      },
+      {
+        "unit_price": 1.5,
+        "product": "gpt_4_1_text_testing",
+        "cost": 1.5
+      }
+    ]
+  },
+  "chat_analysis": {
+    "chat_summary": "The user reported a boiler making a rattling noise and requested a call-out, inquiring about the cost. The agent provided pricing, confirmed the user's details and address, offered available appointment slots, and successfully booked a visit for the next day at 3:30 PM. The user confirmed the booking and ended the chat satisfied.",
+    "user_sentiment": "Positive",
+    "custom_analysis_data": {},
+    "chat_successful": true
+  },
+  "data_storage_setting": "everything"
+}

@@ -1,0 +1,108 @@
+{
+  "chat_id": "chat_31decee3301b35fb14000ca8b43",
+  "chat_type": "api_chat",
+  "agent_id": "agent_6226cbd3e8292efd1fea0581d8",
+  "agent_version": 0,
+  "agent_name": "HVAC Multi-Prompt Test (chat)",
+  "collected_dynamic_variables": {
+    "greeting_exchanged": "true",
+    "intent_confirmed": "false",
+    "customer_name": "Sarah",
+    "intent_clear": "true",
+    "classified_intent": "engineer visit",
+    "past_customer": "false"
+  },
+  "chat_status": "ended",
+  "start_timestamp": 1784626593596,
+  "end_timestamp": 1784626600816,
+  "transcript": "User: Hi, I need an engineer. My postcode is N for Newcastle, E for Edward, four, five, A for Apple, B for Bob.\nAgent: Hi \u2014 you need an engineer. What\u2019s the issue?\nUser: My name is Sarah\nAgent: Sarah, you need an engineer. I\u2019ve got your postcode as N-E-4-5-A-B, yeah?",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_1164af8d182e8a6851236040",
+      "role": "user",
+      "created_timestamp": 1784626594230,
+      "content": "Hi, I need an engineer. My postcode is N for Newcastle, E for Edward, four, five, A for Apple, B for Bob."
+    },
+    {
+      "message_id": "message_fa6647cee9910807bbd826b2",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784626595511,
+      "tool_call_id": "call_GT6FFGryRkfhoyBAiqRBlF6j",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_d0cd3f8adb5ac3d41a988715",
+      "role": "tool_call_result",
+      "created_timestamp": 1784626595512,
+      "tool_call_id": "call_GT6FFGryRkfhoyBAiqRBlF6j",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"engineer visit\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_2915f1bc19c0e9976e8153eb",
+      "role": "agent",
+      "created_timestamp": 1784626596627,
+      "content": "Hi \u2014 you need an engineer. What\u2019s the issue?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_3f96233c36577ae7d7173f56",
+      "role": "user",
+      "created_timestamp": 1784626597464,
+      "content": "My name is Sarah"
+    },
+    {
+      "message_id": "message_5debe64e5f5604a942370371",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784626598826,
+      "tool_call_id": "call_LG70bTuYZdPpFEugrdLwfvnZ",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_f1ecb1ccbfe3bed9a79c25d5",
+      "role": "tool_call_result",
+      "created_timestamp": 1784626598827,
+      "tool_call_id": "call_LG70bTuYZdPpFEugrdLwfvnZ",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Sarah\",\"classified_intent\":\"engineer visit\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_b6317b3d98f8193836c41d08",
+      "role": "agent",
+      "created_timestamp": 1784626600067,
+      "content": "Sarah, you need an engineer. I\u2019ve got your postcode as N-E-4-5-A-B, yeah?",
+      "metadata": {
+        "response_id": 2
+      }
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/a8d2c4ecc106c811db522893ad9cbae0c2a2a21cf5ea71df77885f4a50a72bd3/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "combined_cost": 6.7,
+    "product_costs": [
+      {
+        "unit_price": 2.6,
+        "product": "gpt_5_4_text_testing",
+        "cost": 5.2
+      },
+      {
+        "unit_price": 1.5,
+        "product": "gpt_4_1_text_testing",
+        "cost": 1.5
+      }
+    ]
+  },
+  "chat_analysis": {
+    "chat_summary": "The user, Sarah, requested an engineer and provided her postcode. The agent confirmed the postcode and clarified the user's intent, asking for more details about the issue.",
+    "user_sentiment": "Neutral",
+    "custom_analysis_data": {},
+    "chat_successful": true
+  },
+  "data_storage_setting": "everything"
+}

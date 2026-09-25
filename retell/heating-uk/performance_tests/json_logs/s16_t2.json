@@ -1,0 +1,34 @@
+{
+  "scenario": 16,
+  "turn": 2,
+  "chat_id": "chat_233eac3606cca3a3b5b78d5b5ce",
+  "caller_message": "James",
+  "agent_messages": [
+    {
+      "message_id": "message_524582a93acbbea7194b5a85",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638657836,
+      "tool_call_id": "call_EJlvrxMTYpptLqNkEOWFwuc7",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_99ae1b72c718d6cbd6c415e0",
+      "role": "tool_call_result",
+      "created_timestamp": 1784638657837,
+      "tool_call_id": "call_EJlvrxMTYpptLqNkEOWFwuc7",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"James\",\"classified_intent\":\"Boiler Breakdown\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_5bf48abc6538aa1dbc293115",
+      "role": "agent",
+      "created_timestamp": 1784638659051,
+      "content": "James, got it. What's the address?",
+      "metadata": {
+        "response_id": 2
+      }
+    }
+  ]
+}

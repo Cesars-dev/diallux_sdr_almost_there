@@ -1,0 +1,95 @@
+{
+  "chat_id": "chat_926e3433bff7001bf2c51506305",
+  "chat_type": "api_chat",
+  "agent_id": "agent_66df480ff8f240ee9e919d3b53",
+  "agent_version": 0,
+  "agent_name": "V7",
+  "retell_llm_dynamic_variables": {
+    "today_date": "2026-08-24",
+    "callback_number": "+12125550011"
+  },
+  "collected_dynamic_variables": {},
+  "chat_status": "ended",
+  "start_timestamp": 1787633922135,
+  "end_timestamp": 1787633931021,
+  "transcript": "User: Fine, tell me about— actually NO. You know what, forget it. This is bulls***, everyone just wants money, I'm done with this crap.\nAgent: Yeah, I hear you — sounds like you’ve had a few too many sales calls and you’re over it.  \n\nTotally okay if you want to walk away; before you hang up, do you want to tell me what set you off this time so at least I don’t waste your time the same way again?\nUser: It's all the same runaround. I need a real person, not another robot. Get me someone real!\nAgent: I get it — you want to talk to an actual human, not deal with another system.  \n\nI’m an AI assistant on Jay’s team, I help with the intro part; if you *were* to talk to a real person, is there something specific you’d want them to help you with, or do you just want to stop here?\nUser: I want a real person to call me tomorrow about my account issues. I'm tired of this runaround.\nAgent: Got it, you’re done with the runaround and you want a real person to call you tomorrow about your account issues. I’ll pass this along so a human from the team can follow up with you directly at this number tomorrow. Nothing else you need to do right now. Thanks for hanging in there, and I hope the next call actually helps you get this sorted.",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_4411c7d760ea7d0d3008ffc8",
+      "role": "user",
+      "created_timestamp": 1787633922755,
+      "content": "Fine, tell me about— actually NO. You know what, forget it. This is bulls***, everyone just wants money, I'm done with this crap."
+    },
+    {
+      "message_id": "message_4208bfc2d8886006e8cdfb36",
+      "role": "agent",
+      "created_timestamp": 1787633924230,
+      "content": "Yeah, I hear you — sounds like you’ve had a few too many sales calls and you’re over it.  \n\nTotally okay if you want to walk away; before you hang up, do you want to tell me what set you off this time so at least I don’t waste your time the same way again?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_b047c71cf8e1efea5388c101",
+      "role": "user",
+      "created_timestamp": 1787633926209,
+      "content": "It's all the same runaround. I need a real person, not another robot. Get me someone real!"
+    },
+    {
+      "message_id": "message_1b5d35310cb4356a1de771d6",
+      "role": "agent",
+      "created_timestamp": 1787633927809,
+      "content": "I get it — you want to talk to an actual human, not deal with another system.  \n\nI’m an AI assistant on Jay’s team, I help with the intro part; if you *were* to talk to a real person, is there something specific you’d want them to help you with, or do you just want to stop here?",
+      "metadata": {
+        "response_id": 2
+      }
+    },
+    {
+      "message_id": "message_f6a65f2ae56146905c661477",
+      "role": "user",
+      "created_timestamp": 1787633929400,
+      "content": "I want a real person to call me tomorrow about my account issues. I'm tired of this runaround."
+    },
+    {
+      "message_id": "message_ea53b8687a683d28fb1c828d",
+      "role": "agent",
+      "created_timestamp": 1787633930982,
+      "content": "Got it, you’re done with the runaround and you want a real person to call you tomorrow about your account issues. I’ll pass this along so a human from the team can follow up with you directly at this number tomorrow. Nothing else you need to do right now. Thanks for hanging in there, and I hope the next call actually helps you get this sorted.",
+      "metadata": {
+        "response_id": 3
+      }
+    },
+    {
+      "message_id": "message_94d87c1ce2f1cc96b0135f5b",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787633930983,
+      "tool_call_id": "call_5zuYurA2ZZUunOFqjWff30pN",
+      "name": "end_call",
+      "arguments": "{\"execution_message\":\"Got it, you’re done with the runaround and you want a real person to call you tomorrow about your account issues. I’ll pass this along so a human from the team can follow up with you directly at this number tomorrow. Nothing else you need to do right now. Thanks for hanging in there, and I hope the next call actually helps you get this sorted.\"}",
+      "type": "end_call"
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/35b02c3804abf8edcac9c75dbbc5b0437508b2f0e50aaa25882bd3d04c2570f9/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "product_costs": [
+      {
+        "cost": 3.9000000000000004,
+        "product": "gpt_5_1_text_testing",
+        "unit_price": 1.3
+      },
+      {
+        "cost": 1.5,
+        "unit_price": 1.5,
+        "product": "gpt_4_1_text_testing"
+      }
+    ],
+    "combined_cost": 5.4
+  },
+  "chat_analysis": {
+    "user_sentiment": "Negative",
+    "custom_analysis_data": {},
+    "chat_successful": true,
+    "chat_summary": "The user expressed frustration with automated systems and requested to speak with a real person about their account issues. The agent acknowledged the user's concerns and confirmed that a human team member would call the user the next day to address their issues. The conversation ended with the agent assuring the user that no further action was needed on their part."
+  },
+  "data_storage_setting": "everything"
+}

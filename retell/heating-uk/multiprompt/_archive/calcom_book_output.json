@@ -1,0 +1,41 @@
+{
+  "source": "Cal.com API response — booking created via Retell book_appointment_cal tool",
+  "note": "Fetched via GET /v2/bookings/{uid} after Retell tool_call_result indicated success",
+
+  "booking": {
+    "id": 22729270,
+    "uid": "gFps3DWTrGjbvJQ9mbk4Wn",
+    "title": "HVAC_UK_appt between Jay at Diallux and Dave Smith",
+    "description": "CUSTOMER: Dave Smith | ADDRESS: 14 Victoria Terrace, Newcastle, NE4 5AB | PHONE: 07700 900567 | PROBLEM: Boiler Breakdown | SYMPTOMS: No heating, boiler not working",
+    "status": "accepted",
+    "start": "2026-07-21T08:30:00.000Z",
+    "end": "2026-07-21T09:00:00.000Z",
+    "duration": 30,
+    "eventTypeId": 6389911,
+    "hosts": [
+      {
+        "name": "Jay at Diallux",
+        "email": "jaydiallux@gmail.com",
+        "timeZone": "America/Mexico_City"
+      }
+    ],
+    "attendees": [
+      {
+        "name": "Dave Smith",
+        "email": "no-email@example.com",
+        "timeZone": "Europe/London",
+        "language": "en",
+        "phoneNumber": "+447700900567"
+      }
+    ],
+    "location": "integration",
+    "meetingUrl": "integration",
+    "createdAt": "2026-07-21T06:11:37.788Z"
+  },
+
+  "retell_tool_call_result": {
+    "status": "Successfully booked an appointment.",
+    "booking_id": 22729270,
+    "booking_uid": "gFps3DWTrGjbvJQ9mbk4Wn"
+  }
+}

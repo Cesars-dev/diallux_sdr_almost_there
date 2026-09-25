@@ -1,0 +1,219 @@
+{
+  "chat_id": "chat_fa0cc157c37771b714680fba3da",
+  "chat_type": "api_chat",
+  "agent_id": "agent_663dda0046b81630fa0a2c1f0a",
+  "agent_version": 0,
+  "agent_name": "Dialux SDR V6.8",
+  "retell_llm_dynamic_variables": {
+    "today_date": "2026-08-24"
+  },
+  "collected_dynamic_variables": {
+    "intake_completed": "true",
+    "current_agent_state": "Discovery",
+    "previous_agent_state": "Intake",
+    "inbound_channel": "voicemail",
+    "industry": "",
+    "pain_points": "busy with three jobs waiting",
+    "call_volume": "",
+    "pain_urgency": "high",
+    "interest_signal": "false",
+    "pain_frame": "busy with three jobs waiting",
+    "interest_topic": "voicemail from you people",
+    "pattern_matched": "false"
+  },
+  "chat_status": "ended",
+  "start_timestamp": 1787576421521,
+  "end_timestamp": 1787576446767,
+  "transcript": "User: Yeah, I got a voicemail from you people. This better be quick, I've got three jobs waiting.\nAgent: Got it, sounds like you’re slammed — I’ll keep this tight.  \n\nWhen a call comes in while you’re out on those jobs, who’s actually picking it up right now?\nUser: That's none of your business. Why do you need to know that?\nAgent: Mhm, fair enough — I’m not trying to pry into how you run things.  \n\nThe only reason I asked is because when calls hit voicemail while you’re buried in jobs, that can be work — and money — walking away; does that ever happen to you where people just call the next guy instead?\nUser: Everyone says that. I've been in this business long enough to handle my calls just fine.\nAgent: Makes sense, you’ve been doing this a long time and clearly staying busy.  \n\nSo let me ask it a bit differently… when someone calls to *book* and you can’t pick up right then, do they usually call back later, or do they tend to go book with somebody else?\nUser: They usually wait. If they don't, then they weren't worth my time in the first place.\nAgent: Got it, so the ones who stick around are the ones you care about anyway.  \n\nSo if we could turn more of those “maybe” callers into booked jobs *without* you having to stop what you’re doing, would that even matter to you, or are you happy with things as they are?\nUser: Sounds like a sales pitch. I'm not buying it. Things work fine as they are.\nAgent: Totally fair — I hear you, you’re busy and not looking to change what’s already working.  \n\nBefore I let you get back to those jobs, is there *anything* about the phones that ever annoys you — even a little — or are you genuinely all set on that front?\nUser: Phones are fine. It's the calls like this that annoy me. I don't have time for it, bye.\nAgent: Totally understand — I’ll stop here and let you get back to your jobs. If you ever do want to turn more of those incoming calls straight into booked work without extra hassle, you know where to find us. Take care and have a good rest of your day.",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_12a360ae85ead843e1251ee4",
+      "role": "user",
+      "created_timestamp": 1787576422249,
+      "content": "Yeah, I got a voicemail from you people. This better be quick, I've got three jobs waiting."
+    },
+    {
+      "message_id": "message_649479beea837dc4e2e7361e",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787576423296,
+      "tool_call_id": "call_hvqdhmGaaiYYzDZlsKeMIWOZ",
+      "name": "extract_intake_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_039ad4d07e0bc09e22afb248",
+      "role": "tool_call_result",
+      "created_timestamp": 1787576423297,
+      "tool_call_id": "call_hvqdhmGaaiYYzDZlsKeMIWOZ",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"inbound_channel\":\"voicemail\",\"interest_topic\":\"voicemail from you people\",\"pain_frame\":\"busy with three jobs waiting\"}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_777b23df7e5df2aba69eac23",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787576424275,
+      "tool_call_id": "call_uNqwOEXuAUJwrCm47Mdol5py",
+      "name": "intake_completed",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_81c2b3b72e9adf62bef56fe8",
+      "role": "tool_call_result",
+      "created_timestamp": 1787576424276,
+      "tool_call_id": "call_uNqwOEXuAUJwrCm47Mdol5py",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"intake_completed\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_749763d81607e0c82ab71a48",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787576426689,
+      "tool_call_id": "call_6eBDuCAmCTqIK7QGShuzizxA",
+      "name": "transition_to_Discovery",
+      "arguments": "{\"intake_completed\":true,\"interest_topic\":\"voicemail from you people\",\"inbound_channel\":\"voicemail\",\"pain_frame\":\"busy with three jobs waiting\"}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_0f001ac657dc2526a3b293ff",
+      "role": "state_transition",
+      "created_timestamp": 1787576426690,
+      "former_state_name": "Intake",
+      "new_state_name": "Discovery"
+    },
+    {
+      "message_id": "message_02331ee67135ccf1c20d7479",
+      "role": "agent",
+      "created_timestamp": 1787576427688,
+      "content": "Got it, sounds like you’re slammed — I’ll keep this tight.  \n\nWhen a call comes in while you’re out on those jobs, who’s actually picking it up right now?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_783de3ef3487aab6f90debb8",
+      "role": "user",
+      "created_timestamp": 1787576429617,
+      "content": "That's none of your business. Why do you need to know that?"
+    },
+    {
+      "message_id": "message_249fb512ceb4acb15afebd53",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787576430966,
+      "tool_call_id": "call_CNJj0PSUTBCSesjHLpN7j0Y3",
+      "name": "extract_discovery_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_96e4ed5c154b0b14c7984f78",
+      "role": "tool_call_result",
+      "created_timestamp": 1787576430967,
+      "tool_call_id": "call_CNJj0PSUTBCSesjHLpN7j0Y3",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"industry\":\"\",\"pain_points\":\"busy with three jobs waiting\",\"interest_signal\":false,\"pattern_matched\":false,\"call_volume\":\"\",\"pain_urgency\":\"high\"}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_6518f77a35cfea8418d0ecfe",
+      "role": "agent",
+      "created_timestamp": 1787576433425,
+      "content": "Mhm, fair enough — I’m not trying to pry into how you run things.  \n\nThe only reason I asked is because when calls hit voicemail while you’re buried in jobs, that can be work — and money — walking away; does that ever happen to you where people just call the next guy instead?",
+      "metadata": {
+        "response_id": 2
+      }
+    },
+    {
+      "message_id": "message_d3d82070a014af21fc464982",
+      "role": "user",
+      "created_timestamp": 1787576435272,
+      "content": "Everyone says that. I've been in this business long enough to handle my calls just fine."
+    },
+    {
+      "message_id": "message_27e22a3f98f3d30503521406",
+      "role": "agent",
+      "created_timestamp": 1787576436668,
+      "content": "Makes sense, you’ve been doing this a long time and clearly staying busy.  \n\nSo let me ask it a bit differently… when someone calls to *book* and you can’t pick up right then, do they usually call back later, or do they tend to go book with somebody else?",
+      "metadata": {
+        "response_id": 3
+      }
+    },
+    {
+      "message_id": "message_2cc03d762b8b4f7585e1be13",
+      "role": "user",
+      "created_timestamp": 1787576438693,
+      "content": "They usually wait. If they don't, then they weren't worth my time in the first place."
+    },
+    {
+      "message_id": "message_3ff6fb2ef65fd72d070d811a",
+      "role": "agent",
+      "created_timestamp": 1787576440197,
+      "content": "Got it, so the ones who stick around are the ones you care about anyway.  \n\nSo if we could turn more of those “maybe” callers into booked jobs *without* you having to stop what you’re doing, would that even matter to you, or are you happy with things as they are?",
+      "metadata": {
+        "response_id": 4
+      }
+    },
+    {
+      "message_id": "message_2a391361d9c60ae479913188",
+      "role": "user",
+      "created_timestamp": 1787576442090,
+      "content": "Sounds like a sales pitch. I'm not buying it. Things work fine as they are."
+    },
+    {
+      "message_id": "message_8a015097d5d77e4fc1702bbf",
+      "role": "agent",
+      "created_timestamp": 1787576443473,
+      "content": "Totally fair — I hear you, you’re busy and not looking to change what’s already working.  \n\nBefore I let you get back to those jobs, is there *anything* about the phones that ever annoys you — even a little — or are you genuinely all set on that front?",
+      "metadata": {
+        "response_id": 5
+      }
+    },
+    {
+      "message_id": "message_6d410aa6830024d3c6b7229c",
+      "role": "user",
+      "created_timestamp": 1787576445373,
+      "content": "Phones are fine. It's the calls like this that annoy me. I don't have time for it, bye."
+    },
+    {
+      "message_id": "message_7122de8ce3d1a7ab4ec2ab5b",
+      "role": "agent",
+      "created_timestamp": 1787576446705,
+      "content": "Totally understand — I’ll stop here and let you get back to your jobs. If you ever do want to turn more of those incoming calls straight into booked work without extra hassle, you know where to find us. Take care and have a good rest of your day.",
+      "metadata": {
+        "response_id": 6
+      }
+    },
+    {
+      "message_id": "message_3c237568db14fe8477fa50b3",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787576446706,
+      "tool_call_id": "call_032JclPJlnBcZ8na4MNcHER5",
+      "name": "end_call",
+      "arguments": "{\"execution_message\":\"Totally understand — I’ll stop here and let you get back to your jobs. If you ever do want to turn more of those incoming calls straight into booked work without extra hassle, you know where to find us. Take care and have a good rest of your day.\"}",
+      "type": "end_call"
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/87695cbaa3f5a1234bbb587f7cf5fe8a5f65aa77ca06e34c1cfd76d6a7e65275/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "combined_cost": 9.3,
+    "product_costs": [
+      {
+        "product": "gpt_5_1_text_testing",
+        "unit_price": 1.3,
+        "cost": 7.800000000000001
+      },
+      {
+        "product": "gpt_4_1_text_testing",
+        "unit_price": 1.5,
+        "cost": 1.5
+      }
+    ]
+  },
+  "chat_analysis": {
+    "custom_analysis_data": {},
+    "chat_successful": true,
+    "user_sentiment": "Negative",
+    "chat_summary": "The user received a follow-up call after a voicemail and expressed frustration due to being busy with multiple jobs. The agent attempted to discuss potential improvements to the user's call handling process, but the user was uninterested and ended the conversation, stating satisfaction with their current system. The agent respected the user's wishes and concluded the call politely."
+  },
+  "data_storage_setting": "everything"
+}

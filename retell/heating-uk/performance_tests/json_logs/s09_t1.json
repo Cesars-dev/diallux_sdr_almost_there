@@ -1,0 +1,34 @@
+{
+  "scenario": 9,
+  "turn": 1,
+  "chat_id": "chat_eca04e109c82c68ce0756b914d3",
+  "caller_message": "Hi, I need a boiler service. I don't know my postcode off the top of my head.",
+  "agent_messages": [
+    {
+      "message_id": "message_dc5c7571385a35a2c59ed364",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639498113,
+      "tool_call_id": "call_NjBgZrGRUn96CDKunjoYvNwy",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_bf64ca788f3ec98baa310b5c",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639498114,
+      "tool_call_id": "call_NjBgZrGRUn96CDKunjoYvNwy",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"unknown\",\"classified_intent\":\"Annual Boiler Service\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_43d15e7fe3bf049c374de226",
+      "role": "agent",
+      "created_timestamp": 1784639499542,
+      "content": "Got it, boiler service. No problem. What\u2019s your address?",
+      "metadata": {
+        "response_id": 1
+      }
+    }
+  ]
+}

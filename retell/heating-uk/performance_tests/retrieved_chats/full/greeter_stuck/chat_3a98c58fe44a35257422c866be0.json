@@ -1,0 +1,76 @@
+{
+  "chat_id": "chat_3a98c58fe44a35257422c866be0",
+  "chat_type": "api_chat",
+  "agent_id": "agent_6226cbd3e8292efd1fea0581d8",
+  "agent_version": 0,
+  "agent_name": "HVAC Multi-Prompt Test (chat)",
+  "collected_dynamic_variables": {
+    "greeting_exchanged": "true",
+    "intent_confirmed": "false",
+    "customer_name": "",
+    "intent_clear": "true",
+    "classified_intent": "Boiler Breakdown",
+    "past_customer": "false"
+  },
+  "chat_status": "ended",
+  "start_timestamp": 1784626663444,
+  "end_timestamp": 1784626667533,
+  "transcript": "User: Hello? Is this the plumber? I think my heating's not working. Or is it the water? Hold on, let me check... yes, the heating. The radiators are cold.\nAgent: British Heat Services, Tom speaking. Right, your heating\u2019s not working and the radiators are cold.\n\nSo this is a boiler breakdown, yeah?",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_64e737dccad7a6cc34d38010",
+      "role": "user",
+      "created_timestamp": 1784626664087,
+      "content": "Hello? Is this the plumber? I think my heating's not working. Or is it the water? Hold on, let me check... yes, the heating. The radiators are cold."
+    },
+    {
+      "message_id": "message_d1375d6e0c9ef0a711cdcf32",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784626665305,
+      "tool_call_id": "call_yB4Jk8IK609M6ztp2rrzJmBa",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_fd7fa0e9b0fe3038418ccf9c",
+      "role": "tool_call_result",
+      "created_timestamp": 1784626665306,
+      "tool_call_id": "call_yB4Jk8IK609M6ztp2rrzJmBa",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"Boiler Breakdown\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_2c7f5e69ae1c6d8a71b83e57",
+      "role": "agent",
+      "created_timestamp": 1784626666705,
+      "content": "British Heat Services, Tom speaking. Right, your heating\u2019s not working and the radiators are cold.\n\nSo this is a boiler breakdown, yeah?",
+      "metadata": {
+        "response_id": 1
+      }
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/e4bd1df9913acd72369ae5e9ed3616dc62466ca5892ba44a68ef43b6589d893a/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "combined_cost": 4.1,
+    "product_costs": [
+      {
+        "unit_price": 2.6,
+        "product": "gpt_5_4_text_testing",
+        "cost": 2.6
+      },
+      {
+        "unit_price": 1.5,
+        "product": "gpt_4_1_text_testing",
+        "cost": 1.5
+      }
+    ]
+  },
+  "chat_analysis": {
+    "chat_summary": "The user contacted the agent to report that their heating was not working and the radiators were cold, indicating a boiler breakdown. The agent confirmed the issue and clarified the user's intent.",
+    "user_sentiment": "Neutral",
+    "custom_analysis_data": {},
+    "chat_successful": true
+  },
+  "data_storage_setting": "everything"
+}

@@ -1,0 +1,374 @@
+{
+  "chat_id": "chat_a299b73f51f946decd2d6d80eef",
+  "chat_type": "api_chat",
+  "agent_id": "agent_ff9d4b9646a85b82d7ce8fd837",
+  "agent_version": 0,
+  "agent_name": "Multi State Agent",
+  "collected_dynamic_variables": {
+    "callback_requested": "false",
+    "classified_intent": "Boiler Breakdown",
+    "past_customer": "false",
+    "intent_confirmed": "true",
+    "address_postcode": "NE3 2TH",
+    "address_confirmed": "true",
+    "problem_category": "Boiler Breakdown",
+    "address_city": "",
+    "boiler_make": "",
+    "address_house_number": "25",
+    "current_agent_state": "booking",
+    "symptom_brief": "No heating since last night",
+    "intent_clear": "true",
+    "address_line1": "25",
+    "address_street": "",
+    "greeting_exchanged": "true",
+    "error_code": "",
+    "customer_name": "James",
+    "previous_agent_state": "address"
+  },
+  "chat_status": "ended",
+  "start_timestamp": 1784633847390,
+  "end_timestamp": 1784633912756,
+  "transcript": "User: Hi, I need a breakdown call-out. No heating since last night.\nAgent: Right, no heating since last night \u2014 that\u2019s a pain. What\u2019s your postcode?\nUser: James\nAgent: James, got it. Is it just heating, or hot water as well?\nUser: NE3 2TH\nAgent: Postcode N-E-3, 2-T-H \u2014 got it. What's the house number or property name?\nUser: 25\nAgent: 25 \u2014 lovely. And the street name?\nUser: Yes that's right\nAgent: I\u2019m checking the next slots now.\nAgent: Right, I\u2019ve got today between 3 and 7, or tomorrow morning. Which suits?\nUser: Tomorrow morning works\nAgent: Right, tomorrow morning. James, I\u2019ve got 25 \u2014 postcode N-E-3 2-T-H \u2014 tomorrow morning. Sound okay?\nUser: Yes, book it\nAgent: I\u2019m booking that in now.\nAgent: Let me try that again.\nAgent: Brilliant, you\u2019re booked in. Is there anything else I can help you with?",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_b4dc933f3d18fa1485e9c7f0",
+      "role": "user",
+      "created_timestamp": 1784633848097,
+      "content": "Hi, I need a breakdown call-out. No heating since last night."
+    },
+    {
+      "message_id": "message_0f6002463d41801e66ebff85",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784633849408,
+      "tool_call_id": "call_HkTz6Jmfa4TfHoiQldSvECeh",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_ba5986fd600f0681bfb5fbd7",
+      "role": "tool_call_result",
+      "created_timestamp": 1784633849409,
+      "tool_call_id": "call_HkTz6Jmfa4TfHoiQldSvECeh",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"Boiler Breakdown\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_82beaa666cb737734f761545",
+      "role": "agent",
+      "created_timestamp": 1784633850541,
+      "content": "Right, no heating since last night \u2014 that\u2019s a pain. What\u2019s your postcode?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_1a239f6a418f6111d83be203",
+      "role": "user",
+      "created_timestamp": 1784633851382,
+      "content": "James"
+    },
+    {
+      "message_id": "message_491dd16f3266c0262841281b",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784633852791,
+      "tool_call_id": "call_ksm1HW612vGVxHRbDnvPBfC7",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_a11eb24c24fe5845e6c42b32",
+      "role": "tool_call_result",
+      "created_timestamp": 1784633852792,
+      "tool_call_id": "call_ksm1HW612vGVxHRbDnvPBfC7",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"James\",\"classified_intent\":\"Boiler Breakdown\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_60a2754ba5a93efb83a14481",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784633853942,
+      "tool_call_id": "call_Ie1xSniLzz9AbKbOjMIy5CTt",
+      "name": "transition_to_address",
+      "arguments": "{}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_7ce414d1a7225bdf10f0fb4b",
+      "role": "state_transition",
+      "created_timestamp": 1784633853943,
+      "former_state_name": "greeter",
+      "new_state_name": "address"
+    },
+    {
+      "message_id": "message_91bd11ea65ea92472fa68ab2",
+      "role": "agent",
+      "created_timestamp": 1784633855595,
+      "content": "James, got it. Is it just heating, or hot water as well?",
+      "metadata": {
+        "response_id": 2
+      }
+    },
+    {
+      "message_id": "message_96b21d7142fdf6b0b920be0a",
+      "role": "user",
+      "created_timestamp": 1784633856482,
+      "content": "NE3 2TH"
+    },
+    {
+      "message_id": "message_a7f33c35b1845888c17b4375",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784633857992,
+      "tool_call_id": "call_auw2rCQqxnHvoEZXm6eon7vT",
+      "name": "extract_address_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_8f753f1a5a0385f9340ad943",
+      "role": "tool_call_result",
+      "created_timestamp": 1784633857993,
+      "tool_call_id": "call_auw2rCQqxnHvoEZXm6eon7vT",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"James\",\"problem_category\":\"Boiler Breakdown\",\"symptom_brief\":\"No heating since last night\",\"error_code\":\"\",\"boiler_make\":\"\",\"address_postcode\":\"NE3 2TH\",\"address_house_number\":\"\",\"address_street\":\"\",\"address_line1\":\"\",\"address_city\":\"\",\"address_confirmed\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_a6b3b21a1783b80c663f1dff",
+      "role": "agent",
+      "created_timestamp": 1784633859149,
+      "content": "Postcode N-E-3, 2-T-H \u2014 got it. What's the house number or property name?",
+      "metadata": {
+        "response_id": 3
+      }
+    },
+    {
+      "message_id": "message_c3074169ebe886c698770cd3",
+      "role": "user",
+      "created_timestamp": 1784633859911,
+      "content": "25"
+    },
+    {
+      "message_id": "message_f37cb592b092da0bc61c19cd",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784633867587,
+      "tool_call_id": "call_dkY4hEprHt7IP6kKrXsJXmBj",
+      "name": "extract_address_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_647263e09cce325a7ae7bd56",
+      "role": "tool_call_result",
+      "created_timestamp": 1784633867588,
+      "tool_call_id": "call_dkY4hEprHt7IP6kKrXsJXmBj",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"James\",\"problem_category\":\"Boiler Breakdown\",\"symptom_brief\":\"No heating since last night\",\"error_code\":\"\",\"boiler_make\":\"\",\"address_postcode\":\"NE3 2TH\",\"address_house_number\":\"25\",\"address_street\":\"\",\"address_line1\":\"\",\"address_city\":\"\",\"address_confirmed\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_55723b8a4c2669193aaffe60",
+      "role": "agent",
+      "created_timestamp": 1784633868807,
+      "content": "25 \u2014 lovely. And the street name?",
+      "metadata": {
+        "response_id": 4
+      }
+    },
+    {
+      "message_id": "message_57473137c53ec5cfbab441c4",
+      "role": "user",
+      "created_timestamp": 1784633869658,
+      "content": "Yes that's right"
+    },
+    {
+      "message_id": "message_af85e60396ea92951ad1b4f4",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784633871190,
+      "tool_call_id": "call_QhRinMwK8SMRDUzEBgnyPgQ0",
+      "name": "extract_address_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_7de02141c4ac0bcaa96fb7cb",
+      "role": "tool_call_result",
+      "created_timestamp": 1784633871191,
+      "tool_call_id": "call_QhRinMwK8SMRDUzEBgnyPgQ0",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"James\",\"problem_category\":\"Boiler Breakdown\",\"symptom_brief\":\"No heating since last night\",\"error_code\":\"\",\"boiler_make\":\"\",\"address_postcode\":\"NE3 2TH\",\"address_house_number\":\"25\",\"address_street\":\"\",\"address_line1\":\"25\",\"address_city\":\"\",\"address_confirmed\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_620edfec6c9a69418c3c633b",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784633872208,
+      "tool_call_id": "call_PbSF7qxoW5DX7xSvZMG9mpl6",
+      "name": "transition_to_booking",
+      "arguments": "{}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_35f2e8386fe5777b99ca12a1",
+      "role": "state_transition",
+      "created_timestamp": 1784633872209,
+      "former_state_name": "address",
+      "new_state_name": "booking"
+    },
+    {
+      "message_id": "message_3681335a63dfad139e71156e",
+      "role": "agent",
+      "created_timestamp": 1784633873562,
+      "content": "I\u2019m checking the next slots now.",
+      "metadata": {
+        "response_id": 5
+      }
+    },
+    {
+      "message_id": "message_322fc27c1a5ed16bb8a82251",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784633873563,
+      "tool_call_id": "call_lycnmKPKh9kgj5uHdZlfgKTi",
+      "name": "check_availability",
+      "arguments": "{\"start_time\":\"2026-07-21T00:00:00\",\"end_time\":\"2026-07-22T23:59:00\",\"timezone\":\"Europe/London\",\"execution_message\":\"I\u2019m checking the next slots now.\"}",
+      "type": "check_availability_cal"
+    },
+    {
+      "message_id": "message_faaf7dcd88179c2b3ab78015",
+      "role": "tool_call_result",
+      "created_timestamp": 1784633875055,
+      "tool_call_id": "call_lycnmKPKh9kgj5uHdZlfgKTi",
+      "content": "{\"availability_for_selected_time\":[{\"date\":\"Tuesday, 2026 July 7/21/2026 British Summer Time\",\"availability_range\":[\"From 3:00 PM to 7:00 PM\"]},{\"date\":\"Wednesday, 2026 July 7/22/2026 British Summer Time\",\"availability_range\":[\"From 9:30 AM to 7:00 PM\"]}]}",
+      "successful": true
+    },
+    {
+      "message_id": "message_2e07c7ddb638247c149779b9",
+      "role": "agent",
+      "created_timestamp": 1784633878535,
+      "content": "Right, I\u2019ve got today between 3 and 7, or tomorrow morning. Which suits?",
+      "metadata": {
+        "response_id": 6
+      }
+    },
+    {
+      "message_id": "message_5e07d46c48080585275a86c9",
+      "role": "user",
+      "created_timestamp": 1784633879334,
+      "content": "Tomorrow morning works"
+    },
+    {
+      "message_id": "message_0efc8bf5943e0214a3629e87",
+      "role": "agent",
+      "created_timestamp": 1784633880673,
+      "content": "Right, tomorrow morning. James, I\u2019ve got 25 \u2014 postcode N-E-3 2-T-H \u2014 tomorrow morning. Sound okay?",
+      "metadata": {
+        "response_id": 7
+      }
+    },
+    {
+      "message_id": "message_542696c7cc8e925538ba6f46",
+      "role": "user",
+      "created_timestamp": 1784633881478,
+      "content": "Yes, book it"
+    },
+    {
+      "message_id": "message_52cacdd5461f91698623f308",
+      "role": "agent",
+      "created_timestamp": 1784633883608,
+      "content": "I\u2019m booking that in now.",
+      "metadata": {
+        "response_id": 8
+      }
+    },
+    {
+      "message_id": "message_6b58b3dd4c9fc46479ed52c8",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784633883609,
+      "tool_call_id": "call_ME6UtUEAS4GR3RhE9k8vTUut",
+      "name": "book_calendar",
+      "arguments": "{\"time\":\"2026-07-22T09:00:00\",\"timezone\":\"Europe/London\",\"name\":\"James\",\"email\":\"jaydiallux@gmail.com\",\"attendeePhoneNumber\":null,\"title\":\"Boiler Breakdown \u2014 James\",\"notes\":\"CUSTOMER: James | ADDRESS: 25, , NE3 2TH | PHONE: {{user_number}} | PROBLEM: Boiler Breakdown | SYMPTOMS: No heating since last night\",\"guests\":null,\"rescheduleReason\":null,\"execution_message\":\"I\u2019m booking that in now.\"}",
+      "type": "book_appointment_cal"
+    },
+    {
+      "message_id": "message_096bbd52893c4865f7004f1e",
+      "role": "tool_call_result",
+      "created_timestamp": 1784633886668,
+      "tool_call_id": "call_ME6UtUEAS4GR3RhE9k8vTUut",
+      "content": "{\"error\":\"Error calling Cal Booking API: Axios Error: error code: ERR_BAD_REQUEST, error message: Request failed with status code 400\\nresponse status: 400\\nresponse data: [{\\\"status\\\":\\\"1\\\",\\\"timestamp\\\":\\\"2\\\",\\\"path\\\":\\\"3\\\",\\\"error\\\":\\\"4\\\"},\\\"error\\\",\\\"2026-07-21T11:38:06.633Z\\\",\\\"/v2/bookings\\\",{\\\"code\\\":\\\"5\\\",\\\"message\\\":\\\"6\\\",\\\"details\\\":\\\"7\\\"},\\\"BadRequestException\\\",\\\"User either already has booking at this time or is not available\\\",{\\\"message\\\":\\\"6\\\",\\\"error\\\":\\\"8\\\",\\\"statusCode\\\":400},\\\"Bad Request\\\"]\"}",
+      "successful": false
+    },
+    {
+      "message_id": "message_3a19fa64a3df27b4ab087e43",
+      "role": "agent",
+      "created_timestamp": 1784633890502,
+      "content": "Let me try that again.",
+      "metadata": {
+        "response_id": 9
+      }
+    },
+    {
+      "message_id": "message_cee58c3bb595af087456104c",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784633890503,
+      "tool_call_id": "call_m10yHgVQkii7HEeoPifZK4qK",
+      "name": "book_calendar",
+      "arguments": "{\"time\":\"2026-07-22T10:00:00\",\"timezone\":\"Europe/London\",\"name\":\"James\",\"email\":\"jaydiallux@gmail.com\",\"attendeePhoneNumber\":null,\"title\":\"Boiler Breakdown \u2014 James\",\"notes\":\"CUSTOMER: James | ADDRESS: 25, , NE3 2TH | PHONE: {{user_number}} | PROBLEM: Boiler Breakdown | SYMPTOMS: No heating since last night\",\"guests\":null,\"rescheduleReason\":null,\"execution_message\":\"Let me try that again.\"}",
+      "type": "book_appointment_cal"
+    },
+    {
+      "message_id": "message_db52d12f3c4366c7d7e5bce1",
+      "role": "tool_call_result",
+      "created_timestamp": 1784633894323,
+      "tool_call_id": "call_m10yHgVQkii7HEeoPifZK4qK",
+      "content": "{\"status\":\"Successfully booked an appointment.\",\"booking_id\":22739956,\"booking_uid\":\"f456BgaM42q5yQSjwgdrq7\"}",
+      "successful": true
+    },
+    {
+      "message_id": "message_29c32990209f36d0f8be0c01",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784633895858,
+      "tool_call_id": "call_Bxeg1lOiNzFdoFlwqU1cF29s",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_9b92a2918928681c484098db",
+      "role": "tool_call_result",
+      "created_timestamp": 1784633895859,
+      "tool_call_id": "call_Bxeg1lOiNzFdoFlwqU1cF29s",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"James\",\"classified_intent\":\"Boiler Breakdown\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"25\",\"address_street\":\"\",\"address_postcode\":\"NE3 2TH\",\"address_city\":\"\",\"callback_requested\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_b425beaa90942ddc52f73d10",
+      "role": "agent",
+      "created_timestamp": 1784633911890,
+      "content": "Brilliant, you\u2019re booked in. Is there anything else I can help you with?",
+      "metadata": {
+        "response_id": 10
+      }
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/2267c25a20b33fbc858cc28c1c64f3ee4b36ca444d4caaf382c77825b7376718/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "combined_cost": 27.5,
+    "product_costs": [
+      {
+        "unit_price": 2.6,
+        "product": "gpt_5_4_text_testing",
+        "cost": 26
+      },
+      {
+        "unit_price": 1.5,
+        "product": "gpt_4_1_text_testing",
+        "cost": 1.5
+      }
+    ]
+  },
+  "chat_analysis": {
+    "chat_summary": "The user reported a boiler breakdown with no heating since last night and requested a call-out. The agent collected the user's details and address, checked appointment availability, and successfully booked a service visit for the next morning after an initial booking attempt failed. The agent confirmed the booking and offered further assistance.",
+    "user_sentiment": "Positive",
+    "custom_analysis_data": {},
+    "chat_successful": true
+  },
+  "data_storage_setting": "everything"
+}

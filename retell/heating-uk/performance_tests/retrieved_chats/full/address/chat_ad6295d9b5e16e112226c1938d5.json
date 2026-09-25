@@ -1,0 +1,294 @@
+{
+  "chat_id": "chat_ad6295d9b5e16e112226c1938d5",
+  "chat_type": "api_chat",
+  "agent_id": "agent_ff9d4b9646a85b82d7ce8fd837",
+  "agent_version": 0,
+  "agent_name": "Multi State Agent",
+  "collected_dynamic_variables": {
+    "callback_requested": "false",
+    "classified_intent": "Annual Boiler Service",
+    "past_customer": "false",
+    "intent_confirmed": "true",
+    "address_postcode": "NE1 4AL",
+    "address_confirmed": "false",
+    "address_incomplete": "false",
+    "problem_category": "Annual Boiler Service",
+    "address_city": "",
+    "boiler_make": "",
+    "address_house_number": "42",
+    "current_agent_state": "address",
+    "symptom_brief": "Routine annual boiler service requested",
+    "intent_clear": "true",
+    "address_line1": "",
+    "address_street": "",
+    "greeting_exchanged": "true",
+    "error_code": "",
+    "customer_name": "Priya",
+    "previous_agent_state": "greeter"
+  },
+  "chat_status": "ended",
+  "start_timestamp": 1784638691767,
+  "end_timestamp": 1784638727618,
+  "transcript": "User: Hi, I need a service on my boiler.\nAgent: Annual boiler service, got it. What\u2019s your name?\nUser: Priya\nAgent: Priya, thanks. Just confirming, this is for an annual boiler service. Right.\nUser: NE1 4AL\nAgent: Postcode N-E-1-4-A-L, got it. What\u2019s the house number or property name?\nUser: 42\nAgent: 42, thanks. And the street name?\nUser: Yes, correct\nAgent: Thanks. I need the street name.\nUser: Can't do tomorrow, I'm at work\nAgent: No problem \u2014 noted. I still need the street name.\nUser: Thursday's no good either, I'm busy that day\nAgent: No worries. I still need the street name.\nUser: No, that doesn't work either. I'm really busy this week.\nAgent: No problem. I still need the street name.\nUser: No sorry, none of those work.\nAgent: That\u2019s fine. I still need the street name.",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_a9cbc4c064524a9a772082fe",
+      "role": "user",
+      "created_timestamp": 1784638692461,
+      "content": "Hi, I need a service on my boiler."
+    },
+    {
+      "message_id": "message_9b869e858b8335f9fa8f77ba",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638694085,
+      "tool_call_id": "call_M8Ury43aNvACeJ1BBKhDWdad",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_c8fc9d328625850b14a50c8d",
+      "role": "tool_call_result",
+      "created_timestamp": 1784638694086,
+      "tool_call_id": "call_M8Ury43aNvACeJ1BBKhDWdad",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"Annual Boiler Service\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_2e079774a4f8b2d313e3bbd4",
+      "role": "agent",
+      "created_timestamp": 1784638695403,
+      "content": "Annual boiler service, got it. What\u2019s your name?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_8e43ac8f10a00e226bc218f4",
+      "role": "user",
+      "created_timestamp": 1784638696159,
+      "content": "Priya"
+    },
+    {
+      "message_id": "message_37b7dd67638738e34f1112e0",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638697823,
+      "tool_call_id": "call_4iAZgmFUy6ydUwnK1aEp5f2w",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_0c3ab6840299a98326889250",
+      "role": "tool_call_result",
+      "created_timestamp": 1784638697824,
+      "tool_call_id": "call_4iAZgmFUy6ydUwnK1aEp5f2w",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Priya\",\"classified_intent\":\"Annual Boiler Service\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_0d7e5b62c2f412be094d2859",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638699244,
+      "tool_call_id": "call_1WWUNvy7AYgsVAgGdy9fvO7p",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_5d5f8cf16f8fe7f94f692e03",
+      "role": "tool_call_result",
+      "created_timestamp": 1784638699245,
+      "tool_call_id": "call_1WWUNvy7AYgsVAgGdy9fvO7p",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Priya\",\"classified_intent\":\"Annual Boiler Service\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_e0de1c40f795475a67a1aefd",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638700094,
+      "tool_call_id": "call_0JN3MAikvRArOvsAgVaYS5Vc",
+      "name": "transition_to_address",
+      "arguments": "{}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_a901132d47ff843b49b0e462",
+      "role": "state_transition",
+      "created_timestamp": 1784638700095,
+      "former_state_name": "greeter",
+      "new_state_name": "address"
+    },
+    {
+      "message_id": "message_54888b50644f9947f71f3a75",
+      "role": "agent",
+      "created_timestamp": 1784638701373,
+      "content": "Priya, thanks. Just confirming, this is for an annual boiler service. Right.",
+      "metadata": {
+        "response_id": 2
+      }
+    },
+    {
+      "message_id": "message_948cfa183d56cb9e0ce03ec2",
+      "role": "user",
+      "created_timestamp": 1784638702154,
+      "content": "NE1 4AL"
+    },
+    {
+      "message_id": "message_6967e00866af36630c582dbc",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638703768,
+      "tool_call_id": "call_i6HaxtxMCQ5iAAZZHIdGG5gB",
+      "name": "extract_address_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_3562b7ff7bdaa6e3474cb6bc",
+      "role": "tool_call_result",
+      "created_timestamp": 1784638703769,
+      "tool_call_id": "call_i6HaxtxMCQ5iAAZZHIdGG5gB",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Priya\",\"problem_category\":\"Annual Boiler Service\",\"symptom_brief\":\"Routine annual boiler service requested\",\"error_code\":\"\",\"boiler_make\":\"\",\"address_postcode\":\"NE1 4AL\",\"address_house_number\":\"\",\"address_street\":\"\",\"address_line1\":\"\",\"address_city\":\"\",\"address_confirmed\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_a138afdeb08c7c9b73c1550a",
+      "role": "agent",
+      "created_timestamp": 1784638705039,
+      "content": "Postcode N-E-1-4-A-L, got it. What\u2019s the house number or property name?",
+      "metadata": {
+        "response_id": 3
+      }
+    },
+    {
+      "message_id": "message_4ed92ca19f7cc9115e422f7d",
+      "role": "user",
+      "created_timestamp": 1784638705912,
+      "content": "42"
+    },
+    {
+      "message_id": "message_90415c0d09471b8f676c3797",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638707694,
+      "tool_call_id": "call_5GcE5tQBbaUQWyxmgVJPNWD4",
+      "name": "extract_address_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_d06080f3addc285c0d4f37d3",
+      "role": "tool_call_result",
+      "created_timestamp": 1784638707695,
+      "tool_call_id": "call_5GcE5tQBbaUQWyxmgVJPNWD4",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Priya\",\"problem_category\":\"Annual Boiler Service\",\"symptom_brief\":\"Routine annual boiler service requested\",\"error_code\":\"\",\"boiler_make\":\"\",\"address_postcode\":\"NE1 4AL\",\"address_house_number\":\"42\",\"address_street\":\"\",\"address_line1\":\"\",\"address_city\":\"\",\"address_confirmed\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_14b55b6c3bea12a01d7a11c0",
+      "role": "agent",
+      "created_timestamp": 1784638709640,
+      "content": "42, thanks. And the street name?",
+      "metadata": {
+        "response_id": 4
+      }
+    },
+    {
+      "message_id": "message_180095e168c0a1ad91037fc3",
+      "role": "user",
+      "created_timestamp": 1784638710457,
+      "content": "Yes, correct"
+    },
+    {
+      "message_id": "message_aca310fb6404d8625076474d",
+      "role": "agent",
+      "created_timestamp": 1784638716099,
+      "content": "Thanks. I need the street name.",
+      "metadata": {
+        "response_id": 5
+      }
+    },
+    {
+      "message_id": "message_33d18dd8bab354540f0cdffc",
+      "role": "user",
+      "created_timestamp": 1784638716973,
+      "content": "Can't do tomorrow, I'm at work"
+    },
+    {
+      "message_id": "message_10d71c7aa9aab27b429c0a4b",
+      "role": "agent",
+      "created_timestamp": 1784638718847,
+      "content": "No problem \u2014 noted. I still need the street name.",
+      "metadata": {
+        "response_id": 6
+      }
+    },
+    {
+      "message_id": "message_b3248a23e4abd7614cdc5b34",
+      "role": "user",
+      "created_timestamp": 1784638719761,
+      "content": "Thursday's no good either, I'm busy that day"
+    },
+    {
+      "message_id": "message_974d04e5b0b8de013dd7428b",
+      "role": "agent",
+      "created_timestamp": 1784638721222,
+      "content": "No worries. I still need the street name.",
+      "metadata": {
+        "response_id": 7
+      }
+    },
+    {
+      "message_id": "message_ca47f364c1998f0448b69b8f",
+      "role": "user",
+      "created_timestamp": 1784638722051,
+      "content": "No, that doesn't work either. I'm really busy this week."
+    },
+    {
+      "message_id": "message_ec637abc312109e1174f0677",
+      "role": "agent",
+      "created_timestamp": 1784638723079,
+      "content": "No problem. I still need the street name.",
+      "metadata": {
+        "response_id": 8
+      }
+    },
+    {
+      "message_id": "message_3510c9c4d6cf05e6e267dc71",
+      "role": "user",
+      "created_timestamp": 1784638723951,
+      "content": "No sorry, none of those work."
+    },
+    {
+      "message_id": "message_8dee089667b56f2202365cd9",
+      "role": "agent",
+      "created_timestamp": 1784638726831,
+      "content": "That\u2019s fine. I still need the street name.",
+      "metadata": {
+        "response_id": 9
+      }
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/4cae8bf1a7c859b11a80630ff041b42b90dff42877610a913c4fe58178da56dc/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "combined_cost": 24.9,
+    "product_costs": [
+      {
+        "unit_price": 2.6,
+        "product": "gpt_5_4_text_testing",
+        "cost": 23.400000000000002
+      },
+      {
+        "unit_price": 1.5,
+        "product": "gpt_4_1_text_testing",
+        "cost": 1.5
+      }
+    ]
+  },
+  "chat_analysis": {
+    "chat_summary": "The user, Priya, requested an annual boiler service and provided her name, postcode, and house number. The agent repeatedly asked for the street name, but the user did not provide it and instead responded to scheduling attempts, indicating unavailability throughout the week. The agent was unable to proceed without the street name.",
+    "user_sentiment": "Neutral",
+    "custom_analysis_data": {},
+    "chat_successful": false
+  },
+  "data_storage_setting": "everything"
+}

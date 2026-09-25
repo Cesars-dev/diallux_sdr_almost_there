@@ -1,0 +1,128 @@
+{
+  "chat_id": "chat_ca5996c1a61932a8f4f2ad87d41",
+  "chat_type": "api_chat",
+  "agent_id": "agent_ff9d4b9646a85b82d7ce8fd837",
+  "agent_version": 0,
+  "agent_name": "Multi State Agent",
+  "collected_dynamic_variables": {
+    "address_house_number": "",
+    "callback_requested": "false",
+    "intent_clear": "true",
+    "classified_intent": "repair",
+    "address_street": "",
+    "past_customer": "false",
+    "greeting_exchanged": "true",
+    "intent_confirmed": "false",
+    "address_postcode": "",
+    "customer_name": "David",
+    "address_city": ""
+  },
+  "chat_status": "ended",
+  "start_timestamp": 1784633775327,
+  "end_timestamp": 1784633784825,
+  "transcript": "User: Hi, so my boiler's been playing up for ages \u2014 it's a Worcester, had it about 8 years, the engineer who fitted it said it might need a new diverter valve eventually, but we've been putting it off, and now it's making this clicking sound every time it fires up, and the hot water goes cold after about 5 minutes...\nAgent: Right, Worcester boiler, clicking noise, hot water goes cold after five minutes.  \n\nAre you smelling gas?\nUser: Yes, it's the Worcester boiler\nAgent: Sorry, I mean are you smelling gas?\nUser: My name is David\nAgent: David, got it.  \n\nAre you smelling gas?",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_73c3468a93ba85f9c9f848b9",
+      "role": "user",
+      "created_timestamp": 1784633775986,
+      "content": "Hi, so my boiler's been playing up for ages \u2014 it's a Worcester, had it about 8 years, the engineer who fitted it said it might need a new diverter valve eventually, but we've been putting it off, and now it's making this clicking sound every time it fires up, and the hot water goes cold after about 5 minutes..."
+    },
+    {
+      "message_id": "message_a51f45f1b04e6064ad341865",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784633777227,
+      "tool_call_id": "call_ZhY2IwvoKgwE2Mw0jlby2rvz",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_dfafa76e2ed9b5d6c12ea539",
+      "role": "tool_call_result",
+      "created_timestamp": 1784633777228,
+      "tool_call_id": "call_ZhY2IwvoKgwE2Mw0jlby2rvz",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"repair\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_a02f326516f1d2cbd2535b1b",
+      "role": "agent",
+      "created_timestamp": 1784633778489,
+      "content": "Right, Worcester boiler, clicking noise, hot water goes cold after five minutes.  \n\nAre you smelling gas?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_ebab9737971a23d3c4d3c659",
+      "role": "user",
+      "created_timestamp": 1784633779354,
+      "content": "Yes, it's the Worcester boiler"
+    },
+    {
+      "message_id": "message_b4cd01ba3a9c05c23ea8942b",
+      "role": "agent",
+      "created_timestamp": 1784633780674,
+      "content": "Sorry, I mean are you smelling gas?",
+      "metadata": {
+        "response_id": 2
+      }
+    },
+    {
+      "message_id": "message_fc10e3dfdc1cccc40f01634e",
+      "role": "user",
+      "created_timestamp": 1784633781528,
+      "content": "My name is David"
+    },
+    {
+      "message_id": "message_9061a0ecc0a5030222ce22f7",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784633782989,
+      "tool_call_id": "call_gCwRAFsvUqJQ23yBMjmgrsLP",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_2e4aa02f5aad6d02ca94cbd3",
+      "role": "tool_call_result",
+      "created_timestamp": 1784633782990,
+      "tool_call_id": "call_gCwRAFsvUqJQ23yBMjmgrsLP",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"David\",\"classified_intent\":\"repair\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_833b3ad39a048f598f35237b",
+      "role": "agent",
+      "created_timestamp": 1784633783921,
+      "content": "David, got it.  \n\nAre you smelling gas?",
+      "metadata": {
+        "response_id": 3
+      }
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/939e6ad3b7f246dd875bae5d792aa96edf14dca81a2b35b4d5c92801e57c36fc/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "combined_cost": 9.3,
+    "product_costs": [
+      {
+        "unit_price": 2.6,
+        "product": "gpt_5_4_text_testing",
+        "cost": 7.800000000000001
+      },
+      {
+        "unit_price": 1.5,
+        "product": "gpt_4_1_text_testing",
+        "cost": 1.5
+      }
+    ]
+  },
+  "chat_analysis": {
+    "chat_summary": "The user reported issues with their Worcester boiler, including a clicking noise and hot water going cold, and mentioned a possible diverter valve issue. The agent clarified the problem and repeatedly asked if the user was smelling gas, while also confirming the user's name as David. The conversation focused on gathering initial details for a potential repair.",
+    "user_sentiment": "Neutral",
+    "custom_analysis_data": {},
+    "chat_successful": true
+  },
+  "data_storage_setting": "everything"
+}

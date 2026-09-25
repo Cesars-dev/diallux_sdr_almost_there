@@ -1,0 +1,59 @@
+[
+  {
+    "name": "extract_contact_details",
+    "description": "Capture the verified contact details: `{{first_name}}`, `{{last_name}}`, `{{company_name}}`, `{{prospect_timezone}}` (IANA), `{{is_calling_best_number}}`, `{{callback_number}}`. Call it once multiple details are provided, and again before you're done. `{{callback_number}}` may already be seeded from the inbound call — update it only when the prospect gives a different number.",
+    "type": "extract_dynamic_variable",
+    "speak_after_execution": true,
+    "variables": [
+      {
+        "name": "first_name",
+        "description": "Prospect's first name (may already exist from an earlier capture)",
+        "type": "string"
+      },
+      {
+        "name": "last_name",
+        "description": "Prospect's last name",
+        "type": "string"
+      },
+      {
+        "name": "company_name",
+        "description": "Company / business name (may already exist from an earlier capture)",
+        "type": "string"
+      },
+      {
+        "name": "prospect_timezone",
+        "description": "Prospect's timezone in IANA format for scheduling. Speak the friendly name (Eastern/Central/Pacific/Mountain) aloud but store IANA.",
+        "type": "enum",
+        "choices": [
+          "America/New_York",
+          "America/Chicago",
+          "America/Denver",
+          "America/Los_Angeles"
+        ]
+      },
+      {
+        "name": "is_calling_best_number",
+        "description": "True if the user confirmed the number they're calling from is the best contact number. False if they provided an alternate number instead.",
+        "type": "boolean"
+      },
+      {
+        "name": "callback_number",
+        "description": "The prospect's contact number, seeded from the inbound call webhook. Update to the alternate number only when is_calling_best_number = false.",
+        "type": "string"
+      }
+    ]
+  },
+  {
+    "name": "contact_details_completed",
+    "type": "extract_dynamic_variable",
+    "description": "Set contact_details_completed to true ONLY after: When first name, last name, company, timezone and best number are all collected and verified. Do not set it early.",
+    "speak_after_execution": false,
+    "variables": [
+      {
+        "name": "contact_details_completed",
+        "type": "boolean",
+        "description": "true ONLY after: When first name, last name, company, timezone and best number are all collected and verified."
+      }
+    ]
+  }
+]

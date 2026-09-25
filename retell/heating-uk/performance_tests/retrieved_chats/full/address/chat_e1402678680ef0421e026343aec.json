@@ -1,0 +1,209 @@
+{
+  "chat_id": "chat_e1402678680ef0421e026343aec",
+  "chat_type": "api_chat",
+  "agent_id": "agent_ff9d4b9646a85b82d7ce8fd837",
+  "agent_version": 0,
+  "agent_name": "Multi State Agent",
+  "collected_dynamic_variables": {
+    "callback_requested": "false",
+    "classified_intent": "Boiler Breakdown",
+    "past_customer": "false",
+    "intent_confirmed": "true",
+    "address_postcode": "NE4 5AB",
+    "address_incomplete": "true",
+    "address_city": "",
+    "address_house_number": "14",
+    "current_agent_state": "address",
+    "intent_clear": "true",
+    "address_street": "",
+    "greeting_exchanged": "true",
+    "customer_name": "",
+    "previous_agent_state": "greeter"
+  },
+  "chat_status": "ended",
+  "start_timestamp": 1784638286085,
+  "end_timestamp": 1784638303818,
+  "transcript": "User: Hello? Is this the plumber? I think my heating's not working. Or is it the water? Hold on, let me check... yes, the heating. The radiators are cold.\nAgent: Right, the heating\u2019s not working and the radiators are cold.\n\nWhat\u2019s your postcode?\nUser: I'm at 14, NE4 5AB\nAgent: 14 and NE4 5AB \u2014 got it.\n\nWhat\u2019s the street name?\nUser: Yes, that's right\nAgent: Postcode confirmed.\n\nWhat\u2019s the street name?\nUser: Tomorrow works\nAgent: Tomorrow noted.\n\nWhat\u2019s the street name?\nUser: Yes, book it\nAgent: Cold radiators \u2014 book it, yes.\n\nWhat\u2019s the street name?\nUser: No, that's all",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_5584c931592f0aa16c086326",
+      "role": "user",
+      "created_timestamp": 1784638286744,
+      "content": "Hello? Is this the plumber? I think my heating's not working. Or is it the water? Hold on, let me check... yes, the heating. The radiators are cold."
+    },
+    {
+      "message_id": "message_6ad4a792437354517314f271",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638288272,
+      "tool_call_id": "call_dp7XLt44T52fukqUQg2tVBNS",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_2a62c9334f23be9b5f962474",
+      "role": "tool_call_result",
+      "created_timestamp": 1784638288273,
+      "tool_call_id": "call_dp7XLt44T52fukqUQg2tVBNS",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"Boiler Breakdown\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_987b3c54c621c2fd6bb373da",
+      "role": "agent",
+      "created_timestamp": 1784638289453,
+      "content": "Right, the heating\u2019s not working and the radiators are cold.\n\nWhat\u2019s your postcode?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_7b6e058e8aaf2f0ca393f806",
+      "role": "user",
+      "created_timestamp": 1784638290255,
+      "content": "I'm at 14, NE4 5AB"
+    },
+    {
+      "message_id": "message_bdc9a247e67330711294dc0c",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638292239,
+      "tool_call_id": "call_HWr9G98fDEQZj14s3kyQtTbp",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_f9465dc3ec56327ba9df62dd",
+      "role": "tool_call_result",
+      "created_timestamp": 1784638292240,
+      "tool_call_id": "call_HWr9G98fDEQZj14s3kyQtTbp",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"Boiler Breakdown\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"14\",\"address_street\":\"\",\"address_postcode\":\"NE4 5AB\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_653e76a0a407a33dd022e83a",
+      "role": "agent",
+      "created_timestamp": 1784638293628,
+      "content": "14 and NE4 5AB \u2014 got it.\n\nWhat\u2019s the street name?",
+      "metadata": {
+        "response_id": 2
+      }
+    },
+    {
+      "message_id": "message_b9ff024f6a6d3bb891f8e9ac",
+      "role": "user",
+      "created_timestamp": 1784638294448,
+      "content": "Yes, that's right"
+    },
+    {
+      "message_id": "message_5604ef0beecfd89024a2a890",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638295789,
+      "tool_call_id": "call_qL5OjCMkMlqmx8n459wPXhlA",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_c58a299a761242a0b63ffef9",
+      "role": "tool_call_result",
+      "created_timestamp": 1784638295790,
+      "tool_call_id": "call_qL5OjCMkMlqmx8n459wPXhlA",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"Boiler Breakdown\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"14\",\"address_street\":\"\",\"address_postcode\":\"NE4 5AB\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_01f6280abc06355983e9475e",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638296615,
+      "tool_call_id": "call_3qGLM5ER2p6ub70JiolH2EZm",
+      "name": "transition_to_address",
+      "arguments": "{}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_1a747b2d777acb2f8f186ff5",
+      "role": "state_transition",
+      "created_timestamp": 1784638296616,
+      "former_state_name": "greeter",
+      "new_state_name": "address"
+    },
+    {
+      "message_id": "message_9add9bbceda66d42d731a4f8",
+      "role": "agent",
+      "created_timestamp": 1784638298071,
+      "content": "Postcode confirmed.\n\nWhat\u2019s the street name?",
+      "metadata": {
+        "response_id": 3
+      }
+    },
+    {
+      "message_id": "message_84c985a7a7a247945b1f9f53",
+      "role": "user",
+      "created_timestamp": 1784638298935,
+      "content": "Tomorrow works"
+    },
+    {
+      "message_id": "message_7ab0e768b909b1d37e16a0e8",
+      "role": "agent",
+      "created_timestamp": 1784638300062,
+      "content": "Tomorrow noted.\n\nWhat\u2019s the street name?",
+      "metadata": {
+        "response_id": 4
+      }
+    },
+    {
+      "message_id": "message_f2db2781ef199d65ae994ee4",
+      "role": "user",
+      "created_timestamp": 1784638300942,
+      "content": "Yes, book it"
+    },
+    {
+      "message_id": "message_3d000df41404144ccb6edef8",
+      "role": "agent",
+      "created_timestamp": 1784638302219,
+      "content": "Cold radiators \u2014 book it, yes.\n\nWhat\u2019s the street name?",
+      "metadata": {
+        "response_id": 5
+      }
+    },
+    {
+      "message_id": "message_92119054e97420b5295c29d2",
+      "role": "user",
+      "created_timestamp": 1784638302975,
+      "content": "No, that's all"
+    },
+    {
+      "message_id": "message_f47a756435cea5db311ca7c3",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638303779,
+      "tool_call_id": "call_Xt8KJtolzokHcigOtpHRA0QK",
+      "name": "end_call",
+      "arguments": "{}",
+      "type": "end_call"
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/5683fea572ca6b61e06cf1b0dcb037895cd50083405cc38a47d73944fc61e730/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "combined_cost": 14.5,
+    "product_costs": [
+      {
+        "unit_price": 2.6,
+        "product": "gpt_5_4_text_testing",
+        "cost": 13
+      },
+      {
+        "unit_price": 1.5,
+        "product": "gpt_4_1_text_testing",
+        "cost": 1.5
+      }
+    ]
+  },
+  "chat_analysis": {
+    "chat_summary": "The user contacted the agent about a heating issue, specifically cold radiators, and provided their house number and postcode but did not provide the street name despite multiple requests. The user confirmed they wanted to book an appointment for tomorrow but ended the conversation without supplying the missing address detail.",
+    "user_sentiment": "Neutral",
+    "custom_analysis_data": {},
+    "chat_successful": false
+  },
+  "data_storage_setting": "everything"
+}

@@ -1,0 +1,101 @@
+[
+  {
+    "name": "extract_booking_details",
+    "description": "Corrections only: prospect_timezone if they correct it during booking, and the outage valve booking_failed=true ONLY after two consecutive calendar failures. selected_time is already set.",
+    "type": "extract_dynamic_variable",
+    "speak_after_execution": true,
+    "variables": [
+      {
+        "name": "prospect_timezone",
+        "description": "Prospect's timezone. Update ONLY if they correct it during booking. Conversion table \u2014 no guessing: Eastern/EST/EDT\u2192America/New_York \u00b7 Central/CST/CDT\u2192America/Chicago \u00b7 Mountain/MST/MDT\u2192America/Denver \u00b7 Pacific/PST/PDT\u2192America/Los_Angeles. Speak friendly names aloud, store these exact values.",
+        "type": "enum",
+        "choices": [
+          "America/New_York",
+          "America/Chicago",
+          "America/Los_Angeles",
+          "America/Denver"
+        ]
+      },
+      {
+        "name": "booking_failed",
+        "type": "boolean",
+        "description": "true ONLY after two consecutive calendar/tool failures in the slot-search phase."
+      }
+    ]
+  },
+  {
+    "name": "create_livecall_booking",
+    "description": "Creates the live call booking on Cal.com. CRITICAL: pass `time` as {{selected_time}} VERBATIM (bare local time in the prospect's zone \u2014 never recompute, never a UTC `iso`). Send `timezone` as {{prospect_timezone}} in IANA format. ALWAYS use email = jaydiallux@gmail.com (system shared attendee); name falls back to {{company_name}} when no name was provided; phoneNumber already E.164.",
+    "event_type_id": 3801235,
+    "cal_api_key": "${CAL_KEY_2}",
+    "cal_fields": [
+      {
+        "name": "name",
+        "description": "attendee name",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "email",
+        "description": "attendee email (system shared: jaydiallux@gmail.com)",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "attendeePhoneNumber",
+        "description": "phone number in E.164 format (from {{callback_number}})",
+        "type": "string",
+        "required": false
+      },
+      {
+        "name": "title",
+        "description": "what this meeting is about",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "notes",
+        "description": "additional notes (industry, pain points)",
+        "type": "string",
+        "required": false
+      }
+    ],
+    "type": "book_appointment_cal",
+    "speak_after_execution": true
+  },
+  {
+    "name": "record_booking_uid",
+    "type": "extract_dynamic_variable",
+    "description": "Immediately after create_livecall_booking responds, record its booking id/uid here VERBATIM from the response. If the response contained no id, leave it empty - never invent one.",
+    "speak_after_execution": false,
+    "variables": [
+      {
+        "name": "booking_uid",
+        "type": "string",
+        "description": "The booking's id/uid copied verbatim from the create_livecall_booking response."
+      }
+    ]
+  },
+  {
+    "name": "validate_booking",
+    "description": "Post-booking schema gate. Call ONLY AFTER record_booking_uid. Validates stored fields incl. the recorded booking id. Returns {valid, problems}. Call exactly ONCE per attempt.",
+    "type": "code",
+    "code": "const g = k => (dv[k] == null ? \"\" : String(dv[k])).trim();\nconst problems = [];\nfor (const k of [\"selected_time\"]) {\n  if (!g(k)) problems.push({field: k, issue: \"missing\"});\n}\nif (!/^\\+[1-9]\\d{6,14}$/.test(g(\"callback_number\"))) problems.push({field: \"callback_number\", issue: \"not E.164\"});\nif ([\"America/New_York\",\"America/Chicago\",\"America/Denver\",\"America/Los_Angeles\"].indexOf(g(\"prospect_timezone\")) < 0)\n  problems.push({field: \"prospect_timezone\", issue: \"not IANA\"});\nif (g(\"booking_uid\").length < 6) problems.push({field: \"booking_uid\", issue: \"calendar did not return an id\"});\nreturn { valid: problems.length === 0, problems };",
+    "timeout_ms": 5000,
+    "speak_during_execution": false,
+    "speak_after_execution": true
+  },
+  {
+    "name": "record_booking_outcome",
+    "type": "extract_dynamic_variable",
+    "description": "Record the outcome. Set booking_verified=true ONLY when validate_booking returned valid:true.",
+    "speak_after_execution": false,
+    "variables": [
+      {
+        "name": "booking_verified",
+        "type": "boolean",
+        "description": "true ONLY when validate_booking returned valid:true."
+      }
+    ]
+  }
+]

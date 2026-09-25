@@ -1,0 +1,67 @@
+{
+  "scenario": 1,
+  "turn": 2,
+  "chat_id": "chat_0dd084581e8b786151e4bcb44c6",
+  "caller_message": "John. NE4 5AB, 14 Victoria Terrace, Newcastle. No error code, just no heating or hot water.",
+  "agent_messages": [
+    {
+      "message_id": "message_ec192ce77141d666ece03e3b",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784641233776,
+      "tool_call_id": "call_spVIlKlRKxBUNOoJDCP2jr91",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_d9ffbf0dc7a3787d13ebea3a",
+      "role": "tool_call_result",
+      "created_timestamp": 1784641233777,
+      "tool_call_id": "call_spVIlKlRKxBUNOoJDCP2jr91",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"John\",\"classified_intent\":\"Boiler Breakdown\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"14\",\"address_street\":\"Victoria Terrace\",\"address_postcode\":\"NE4 5AB\",\"address_city\":\"Newcastle\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_24c6fbfca3cc185642cfec0c",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784641235380,
+      "tool_call_id": "call_00olzeskUqiHq8hazxwa8Y10",
+      "name": "transition_to_address",
+      "arguments": "{}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_10a77582d27cdd7fc656a269",
+      "role": "state_transition",
+      "created_timestamp": 1784641235381,
+      "former_state_name": "greeter",
+      "new_state_name": "address"
+    },
+    {
+      "message_id": "message_44bea207520871e487ead150",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784641237394,
+      "tool_call_id": "call_qFxjVKy9Q97CEQcGJujLJC5f",
+      "name": "extract_address_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_957fdfb72a86ceee0f95d677",
+      "role": "tool_call_result",
+      "created_timestamp": 1784641237395,
+      "tool_call_id": "call_qFxjVKy9Q97CEQcGJujLJC5f",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"John\",\"problem_category\":\"No Heating and Hot Water\",\"symptom_brief\":\"No heating or hot water since this morning, no error code\",\"error_code\":\"\",\"boiler_make\":\"\",\"address_postcode\":\"NE4 5AB\",\"address_house_number\":\"14\",\"address_street\":\"Victoria Terrace\",\"address_line1\":\"14 Victoria Terrace\",\"address_city\":\"Newcastle\",\"address_confirmed\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_52da30277d95827b20b616a2",
+      "role": "agent",
+      "created_timestamp": 1784641239150,
+      "content": "John, 14 Victoria Terrace, Newcastle \u2014 postcode N-E-4-5-A-B. Is that right?",
+      "metadata": {
+        "response_id": 2
+      }
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "chat_id": "chat_6f8aa4a276f851d36863817e2ae",
+  "chat_type": "api_chat",
+  "agent_id": "agent_a9a7205fa6085e1b0c0246ae60",
+  "agent_version": 0,
+  "agent_name": "V7.4_hard_gpt52",
+  "retell_llm_dynamic_variables": {
+    "callback_number": "+12125550011",
+    "today_date": "2026-08-25"
+  },
+  "collected_dynamic_variables": {},
+  "chat_status": "ended",
+  "start_timestamp": 1787666543946,
+  "end_timestamp": 1787666546775,
+  "transcript": "User: Fine, tell me about— actually NO. You know what, forget it. This is bulls***, everyone just wants money, I'm done with this crap.\nAgent: I hear you—sorry this has been such a frustrating experience. I won’t take more of your time; thanks for calling, and I hope the rest of your day goes a lot smoother. Bye.",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_2f2d3b8cc3aecaea866e4af5",
+      "role": "user",
+      "created_timestamp": 1787666544633,
+      "content": "Fine, tell me about— actually NO. You know what, forget it. This is bulls***, everyone just wants money, I'm done with this crap."
+    },
+    {
+      "message_id": "message_11e1e3b10ed1b337798cb3aa",
+      "role": "agent",
+      "created_timestamp": 1787666546769,
+      "content": "I hear you—sorry this has been such a frustrating experience. I won’t take more of your time; thanks for calling, and I hope the rest of your day goes a lot smoother. Bye.",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_71e4420bb854d49891fc014c",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787666546770,
+      "tool_call_id": "call_BZJuPyqX1jcwdM5XxueSNfID",
+      "name": "end_call",
+      "arguments": "{\"execution_message\":\"I hear you—sorry this has been such a frustrating experience. I won’t take more of your time; thanks for calling, and I hope the rest of your day goes a lot smoother. Bye.\"}",
+      "type": "end_call"
+    }
+  ],
+  "chat_cost": {
+    "product_costs": [
+      {
+        "unit_price": 1.8,
+        "cost": 1.8,
+        "product": "gpt_5_2_text_testing"
+      },
+      {
+        "cost": 1.5,
+        "unit_price": 1.5,
+        "product": "gpt_4_1_text_testing"
+      }
+    ],
+    "combined_cost": 3.3
+  },
+  "chat_analysis": {
+    "chat_summary": "The user expressed strong frustration and abruptly ended the conversation, stating dissatisfaction with the process and implying concerns about monetary motives. The agent acknowledged the user's frustration and ended the call politely.",
+    "custom_analysis_data": {},
+    "user_sentiment": "Negative",
+    "chat_successful": false
+  },
+  "data_storage_setting": "everything"
+}

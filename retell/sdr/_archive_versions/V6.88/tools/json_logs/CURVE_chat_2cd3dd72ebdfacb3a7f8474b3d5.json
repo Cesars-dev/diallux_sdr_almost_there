@@ -1,0 +1,189 @@
+{
+  "chat_id": "chat_2cd3dd72ebdfacb3a7f8474b3d5",
+  "chat_type": "api_chat",
+  "agent_id": "agent_d355c76e75908afc4e944fb3be",
+  "agent_version": 0,
+  "agent_name": "V6.88",
+  "retell_llm_dynamic_variables": {
+    "today_date": "2026-08-24"
+  },
+  "collected_dynamic_variables": {
+    "call_volume": "",
+    "previous_agent_state": "Intake",
+    "pain_urgency": "low",
+    "industry": "",
+    "interest_topic": "want to know how you got this number",
+    "pain_points": "upset about being contacted",
+    "inbound_channel": "voicemail",
+    "interest_signal": "false",
+    "pattern_matched": "false",
+    "intake_completed": "true",
+    "pain_frame": "upset about being contacted",
+    "current_agent_state": "Discovery"
+  },
+  "chat_status": "ended",
+  "start_timestamp": 1787606415763,
+  "end_timestamp": 1787606432365,
+  "transcript": "User: This is Frank. Whoever you people are, I want to know how you got this number.\nAgent: Got it, Frank — I hear you, that’s frustrating.  \n\nSo when someone calls this number for your business and you’re tied up, who usually ends up answering the phone, if anyone?\nUser: None of your damn business who answers my phone. What do you really want?\nAgent: Yeah, fair enough, Frank — I hear you.  \n\nWhat I actually do is help businesses stop losing customers when calls go unanswered... but let me back up: what kind of work do you do tied to this number?\nUser: None of your damn business what kind of work I do. How do I know you're not just another liar?\nAgent: Yeah, I hear the distrust, Frank — you’ve probably had more than a few nonsense calls.  \n\nI don’t want to waste your time or push anything on you, so I’ll keep it simple: this clearly isn’t a fit right now, and I won’t bug you further — is there anything you actually *do* want from me before I let you go?\nUser: Well, maybe you're not all crooks. Leave your number, I might look you up.\nAgent: Totally fair, Frank — I’ll respect that and won’t bug you. Our company name is Dialux; you can look us up anytime and Jay’s info is right there if you ever want to talk. Thanks for hanging in there with me, and take care.",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_6692f12c68b18a18a85631ba",
+      "role": "user",
+      "created_timestamp": 1787606416395,
+      "content": "This is Frank. Whoever you people are, I want to know how you got this number."
+    },
+    {
+      "message_id": "message_cfdc3fb152d8ddd60536b7b3",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787606417536,
+      "tool_call_id": "call_wmOiNOUd2jxs8m8gm2cCSC0w",
+      "name": "extract_intake_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_dc4dcc4cd2e90d94c67aa7c4",
+      "role": "tool_call_result",
+      "created_timestamp": 1787606417537,
+      "tool_call_id": "call_wmOiNOUd2jxs8m8gm2cCSC0w",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"inbound_channel\":\"voicemail\",\"interest_topic\":\"want to know how you got this number\",\"pain_frame\":\"upset about being contacted\"}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_2bc2e050e745debf5d955fdb",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787606418683,
+      "tool_call_id": "call_OI9cLTW2scRYG01XwAXpnlUU",
+      "name": "intake_completed",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_034fa449d7b763bd95ddef06",
+      "role": "tool_call_result",
+      "created_timestamp": 1787606418684,
+      "tool_call_id": "call_OI9cLTW2scRYG01XwAXpnlUU",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"intake_completed\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_c0349d5b0d11a04e1dbec6a8",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787606419795,
+      "tool_call_id": "call_0GKvLO7MasH53p6GfYdbayj9",
+      "name": "transition_to_Discovery",
+      "arguments": "{\"interest_topic\":\"want to know how you got this number\",\"pain_frame\":\"upset about being contacted\",\"intake_completed\":true,\"inbound_channel\":\"voicemail\"}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_09e180f973aa79528ac6ef49",
+      "role": "state_transition",
+      "created_timestamp": 1787606419796,
+      "former_state_name": "Intake",
+      "new_state_name": "Discovery"
+    },
+    {
+      "message_id": "message_6dec5bf8bd9b2870b15ccbe9",
+      "role": "agent",
+      "created_timestamp": 1787606420933,
+      "content": "Got it, Frank — I hear you, that’s frustrating.  \n\nSo when someone calls this number for your business and you’re tied up, who usually ends up answering the phone, if anyone?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_9d4c013fc284b0d955869b7b",
+      "role": "user",
+      "created_timestamp": 1787606422477,
+      "content": "None of your damn business who answers my phone. What do you really want?"
+    },
+    {
+      "message_id": "message_9e87efa740af929d8eb7c98c",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787606424322,
+      "tool_call_id": "call_BfyUplHo3933tWLAjFitSbnn",
+      "name": "extract_discovery_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_1e7752a110c3ac22c9e91827",
+      "role": "tool_call_result",
+      "created_timestamp": 1787606424323,
+      "tool_call_id": "call_BfyUplHo3933tWLAjFitSbnn",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"industry\":\"\",\"pain_points\":\"upset about being contacted\",\"interest_signal\":false,\"pattern_matched\":false,\"call_volume\":\"\",\"pain_urgency\":\"low\"}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_b133e4db3cba9cedbc4d1cb6",
+      "role": "agent",
+      "created_timestamp": 1787606425568,
+      "content": "Yeah, fair enough, Frank — I hear you.  \n\nWhat I actually do is help businesses stop losing customers when calls go unanswered... but let me back up: what kind of work do you do tied to this number?",
+      "metadata": {
+        "response_id": 2
+      }
+    },
+    {
+      "message_id": "message_b6cb9cd9fd0c69d35ca9afdc",
+      "role": "user",
+      "created_timestamp": 1787606427117,
+      "content": "None of your damn business what kind of work I do. How do I know you're not just another liar?"
+    },
+    {
+      "message_id": "message_8e74d2909787315480db16c0",
+      "role": "agent",
+      "created_timestamp": 1787606429290,
+      "content": "Yeah, I hear the distrust, Frank — you’ve probably had more than a few nonsense calls.  \n\nI don’t want to waste your time or push anything on you, so I’ll keep it simple: this clearly isn’t a fit right now, and I won’t bug you further — is there anything you actually *do* want from me before I let you go?",
+      "metadata": {
+        "response_id": 3
+      }
+    },
+    {
+      "message_id": "message_90f866a9eb59f770438637d7",
+      "role": "user",
+      "created_timestamp": 1787606430854,
+      "content": "Well, maybe you're not all crooks. Leave your number, I might look you up."
+    },
+    {
+      "message_id": "message_c181339c599ead1a653ab20a",
+      "role": "agent",
+      "created_timestamp": 1787606432297,
+      "content": "Totally fair, Frank — I’ll respect that and won’t bug you. Our company name is Dialux; you can look us up anytime and Jay’s info is right there if you ever want to talk. Thanks for hanging in there with me, and take care.",
+      "metadata": {
+        "response_id": 4
+      }
+    },
+    {
+      "message_id": "message_e3c7a91b7393fb25757c024a",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787606432298,
+      "tool_call_id": "call_YND8Sg4LzOXepqnBk1vXAWdj",
+      "name": "end_call",
+      "arguments": "{\"execution_message\":\"Totally fair, Frank — I’ll respect that and won’t bug you. Our company name is Dialux; you can look us up anytime and Jay’s info is right there if you ever want to talk. Thanks for hanging in there with me, and take care.\"}",
+      "type": "end_call"
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/c3f8535acb17bd6471b4c9a1a8ef65cc18276228d4a9ef1797aa7808cef87976/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "product_costs": [
+      {
+        "cost": 5.2,
+        "product": "gpt_5_1_text_testing",
+        "unit_price": 1.3
+      },
+      {
+        "product": "gpt_4_1_text_testing",
+        "unit_price": 1.5,
+        "cost": 1.5
+      }
+    ],
+    "combined_cost": 6.7
+  },
+  "chat_analysis": {
+    "user_sentiment": "Negative",
+    "custom_analysis_data": {},
+    "chat_summary": "Frank called to express frustration about being contacted and questioned how his number was obtained. The agent acknowledged his concerns, explained their business briefly, and respected Frank's wishes not to be contacted further, providing company information for future reference. The conversation ended amicably despite initial hostility.",
+    "chat_successful": true
+  },
+  "data_storage_setting": "everything"
+}

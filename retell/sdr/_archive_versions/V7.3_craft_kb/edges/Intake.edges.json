@@ -1,0 +1,34 @@
+[
+  {
+    "speak_during_transition": false,
+    "parameters": {
+      "properties": {
+        "pain_frame": {
+          "type": "string",
+          "description": "The angle that worries them"
+        },
+        "inbound_channel": {
+          "type": "string",
+          "description": "How they heard about Dialux"
+        },
+        "interest_topic": {
+          "type": "string",
+          "description": "What caught their attention, their words"
+        },
+        "intake_completed": {
+          "type": "boolean",
+          "description": "true ONLY after: When how they heard about us, what caught their attention, and what's worrying them are all captured."
+        }
+      },
+      "required": [
+        "intake_completed",
+        "inbound_channel",
+        "interest_topic",
+        "pain_frame"
+      ],
+      "type": "object"
+    },
+    "description": "When intake_completed, inbound_channel, interest_topic, pain_frame are all filled, transition to Discovery.",
+    "destination_state_name": "Discovery"
+  }
+]

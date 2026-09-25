@@ -1,0 +1,29 @@
+[
+  {
+    "speak_during_transition": false,
+    "description": "STRICT GATE: transition ONLY when the dynamic variable slot_verified currently equals true - i.e., the validate_lead service returned slot_verified:true on your most recent call to it. If your last validate_lead result said false or listed problems, you MUST NOT use this edge - speak the ask-lines instead. Never fill slot_verified from memory or assumption; only from the service verdict.",
+    "parameters": {
+      "required": [
+        "slot_verified",
+        "selected_time",
+        "prospect_timezone"
+      ],
+      "properties": {
+        "prospect_timezone": {
+          "type": "string",
+          "description": "IANA timezone of the selected time."
+        },
+        "slot_verified": {
+          "type": "boolean",
+          "description": "true ONLY when the validate_lead service returned slot_verified:true."
+        },
+        "selected_time": {
+          "type": "string",
+          "description": "The chosen slot's `time` value copied verbatim."
+        }
+      },
+      "type": "object"
+    },
+    "destination_state_name": "VerifyLead"
+  }
+]

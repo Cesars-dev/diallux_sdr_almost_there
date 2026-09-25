@@ -1,0 +1,240 @@
+{
+  "greeter": [
+    {
+      "name": "extract_greeter_values",
+      "description": "Extract intent and basic caller info during greeting.",
+      "variables": [
+        {
+          "name": "customer_name",
+          "type": "string",
+          "description": "The customer's full name"
+        },
+        {
+          "name": "classified_intent",
+          "description": "Why the customer is calling",
+          "type": "string",
+          "choices": [
+            "booking",
+            "quote",
+            "other"
+          ]
+        },
+        {
+          "name": "greeting_exchanged",
+          "type": "boolean",
+          "description": "Whether greeting has been exchanged"
+        },
+        {
+          "name": "intent_clear",
+          "type": "boolean",
+          "description": "Whether the intent is understood"
+        },
+        {
+          "name": "past_customer",
+          "type": "boolean",
+          "description": "Whether the customer has used the service before"
+        },
+        {
+          "name": "address_house_number",
+          "type": "string",
+          "description": "House number or property name e.g. '14' or 'Rose Cottage'"
+        },
+        {
+          "name": "address_street",
+          "type": "string",
+          "description": "Street name only e.g. 'Victoria Terrace' or 'Mill Lane'"
+        },
+        {
+          "name": "address_line1",
+          "type": "string",
+          "description": "Combined house number + street for booking notes"
+        },
+        {
+          "name": "address_city",
+          "type": "string",
+          "description": "City or town"
+        },
+        {
+          "name": "address_postcode",
+          "type": "string",
+          "description": "UK postcode"
+        }
+      ],
+      "type": "extract_dynamic_variable",
+      "speak_after_execution": true
+    }
+  ],
+  "address": [
+    {
+      "name": "extract_address_details",
+      "description": "Extract address, symptom details, problem category, and address confirmation.",
+      "variables": [
+        {
+          "name": "customer_name",
+          "type": "string",
+          "description": "The customer's full name"
+        },
+        {
+          "name": "classified_intent",
+          "description": "Why the customer is calling",
+          "type": "string",
+          "choices": [
+            "booking",
+            "quote",
+            "other"
+          ]
+        },
+        {
+          "name": "problem_category",
+          "type": "string",
+          "description": "Category of the heating issue"
+        },
+        {
+          "name": "symptom_brief",
+          "type": "string",
+          "description": "Brief description of symptoms"
+        },
+        {
+          "name": "error_code",
+          "type": "string",
+          "description": "Error code shown on boiler display if any"
+        },
+        {
+          "name": "boiler_make",
+          "type": "string",
+          "description": "Boiler brand if mentioned"
+        },
+        {
+          "name": "address_house_number",
+          "type": "string",
+          "description": "House number or property name e.g. '14' or 'Rose Cottage'"
+        },
+        {
+          "name": "address_street",
+          "type": "string",
+          "description": "Street name only e.g. 'Victoria Terrace' or 'Mill Lane'"
+        },
+        {
+          "name": "address_line1",
+          "type": "string",
+          "description": "Combined house number + street for booking notes"
+        },
+        {
+          "name": "address_city",
+          "type": "string",
+          "description": "City or town"
+        },
+        {
+          "name": "address_postcode",
+          "type": "string",
+          "description": "UK postcode"
+        },
+        {
+          "name": "address_confirmed",
+          "type": "boolean",
+          "description": "Whether the customer has confirmed their address"
+        }
+      ],
+      "type": "extract_dynamic_variable",
+      "speak_after_execution": true
+    }
+  ],
+  "booking": [
+    {
+      "event_type_id": 6389911,
+      "cal_api_key": "${CAL_KEY_1}",
+      "timezone": "Europe/London",
+      "speak_after_execution": true,
+      "name": "check_availability",
+      "description": "Check available appointment slots for the next 7 days",
+      "type": "check_availability_cal"
+    },
+    {
+      "event_type_id": 6389911,
+      "cal_api_key": "${CAL_KEY_1}",
+      "cal_fields": [
+        {
+          "name": "name",
+          "description": "attendee name",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "email",
+          "description": "attendee email \u2014 use jaydiallux@gmail.com as default",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "attendeePhoneNumber",
+          "description": "attendeePhoneNumber (E.164 format)",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "title",
+          "description": "title",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "notes",
+          "description": "notes",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "guests",
+          "description": "guests (valid email addresses)",
+          "type": "array",
+          "required": false
+        },
+        {
+          "name": "rescheduleReason",
+          "description": "rescheduleReason",
+          "type": "string",
+          "required": false
+        }
+      ],
+      "timezone": "Europe/London",
+      "speak_after_execution": true,
+      "name": "book_calendar",
+      "description": "Book a confirmed appointment slot via Cal.com API",
+      "location_type": "integration",
+      "type": "book_appointment_cal"
+    },
+    {
+      "name": "extract_booking_values",
+      "description": "Extract booking confirmation, reference, and call closure fields.",
+      "variables": [
+        {
+          "name": "customer_name",
+          "type": "string",
+          "description": "The customer's full name"
+        },
+        {
+          "name": "booking_confirmed",
+          "type": "boolean",
+          "description": "Whether the booking has been confirmed"
+        },
+        {
+          "name": "booking_ref",
+          "type": "string",
+          "description": "Booking reference from Cal.com"
+        },
+        {
+          "name": "call_closed",
+          "type": "boolean",
+          "description": "Whether the call has been closed"
+        },
+        {
+          "name": "callback_requested",
+          "type": "boolean",
+          "description": "Set to true when customer rejects all slot offers"
+        }
+      ],
+      "type": "extract_dynamic_variable",
+      "speak_after_execution": true
+    }
+  ]
+}

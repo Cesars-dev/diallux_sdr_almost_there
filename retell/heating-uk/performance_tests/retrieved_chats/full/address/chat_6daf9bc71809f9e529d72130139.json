@@ -1,0 +1,141 @@
+{
+  "chat_id": "chat_6daf9bc71809f9e529d72130139",
+  "chat_type": "api_chat",
+  "agent_id": "agent_ff9d4b9646a85b82d7ce8fd837",
+  "agent_version": 0,
+  "agent_name": "Multi State Agent",
+  "collected_dynamic_variables": {
+    "callback_requested": "false",
+    "classified_intent": "repair",
+    "past_customer": "false",
+    "intent_confirmed": "true",
+    "address_postcode": "",
+    "address_confirmed": "false",
+    "problem_category": "No Hot Water (but heating works)",
+    "address_city": "",
+    "boiler_make": "Worcester",
+    "address_house_number": "",
+    "symptom_brief": "Worcester boiler making a clicking sound when it fires up; hot water goes cold after about 5 minutes",
+    "current_agent_state": "address",
+    "intent_clear": "true",
+    "address_line1": "",
+    "address_street": "",
+    "greeting_exchanged": "true",
+    "error_code": "",
+    "customer_name": "",
+    "previous_agent_state": "greeter"
+  },
+  "chat_status": "ongoing",
+  "start_timestamp": 1784633203074,
+  "transcript": "User: Hi, so my boiler's been playing up for ages \u2014 it's a Worcester, had it about 8 years, the engineer who fitted it said it might need a new diverter valve eventually, but we've been putting it off, and now it's making this clicking sound every time it fires up, and the hot water goes cold after about 5 minutes...\nAgent: Right, Worcester boiler, clicking noise, hot water goes cold after five minutes.\n\nWhat\u2019s your postcode?\nUser: Yes, it's the Worcester boiler\nAgent: Worcester boiler, got it.\n\nIs the heating working normally?",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_fa0dce773f4fe124c99da3b6",
+      "role": "user",
+      "created_timestamp": 1784633203690,
+      "content": "Hi, so my boiler's been playing up for ages \u2014 it's a Worcester, had it about 8 years, the engineer who fitted it said it might need a new diverter valve eventually, but we've been putting it off, and now it's making this clicking sound every time it fires up, and the hot water goes cold after about 5 minutes..."
+    },
+    {
+      "message_id": "message_8a91352be00aeb18d1adad21",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784633205571,
+      "tool_call_id": "call_ATK4bQIt8UYT01zQ9AACiucb",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_314a35d4f276053ba574e09d",
+      "role": "tool_call_result",
+      "created_timestamp": 1784633205572,
+      "tool_call_id": "call_ATK4bQIt8UYT01zQ9AACiucb",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"repair\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_94102b132fff67a4c4b28ea9",
+      "role": "agent",
+      "created_timestamp": 1784633208307,
+      "content": "Right, Worcester boiler, clicking noise, hot water goes cold after five minutes.\n\nWhat\u2019s your postcode?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_b11a310d5bac81e79027c1f0",
+      "role": "user",
+      "created_timestamp": 1784633209126,
+      "content": "Yes, it's the Worcester boiler"
+    },
+    {
+      "message_id": "message_b6a4f2150ce0c95599944170",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784633210417,
+      "tool_call_id": "call_nGZJVPRHDYHTTA2zKGGuW9th",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_d5b410f473130d0d5eb3397f",
+      "role": "tool_call_result",
+      "created_timestamp": 1784633210418,
+      "tool_call_id": "call_nGZJVPRHDYHTTA2zKGGuW9th",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"repair\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_54a94601c27f0100326464ce",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784633211295,
+      "tool_call_id": "call_v4CIDPazMgPsk0MmevSp6KBJ",
+      "name": "transition_to_address",
+      "arguments": "{}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_599054fbf197dd01e2e20174",
+      "role": "state_transition",
+      "created_timestamp": 1784633211296,
+      "former_state_name": "greeter",
+      "new_state_name": "address"
+    },
+    {
+      "message_id": "message_0bc248ce691df07f3a55c039",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784633212916,
+      "tool_call_id": "call_339PmWY54j2jF8eP2rfLkcIG",
+      "name": "extract_address_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_ae9adf693d3cf68ad9a290ba",
+      "role": "tool_call_result",
+      "created_timestamp": 1784633212917,
+      "tool_call_id": "call_339PmWY54j2jF8eP2rfLkcIG",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"problem_category\":\"No Hot Water (but heating works)\",\"symptom_brief\":\"Worcester boiler making a clicking sound when it fires up; hot water goes cold after about 5 minutes\",\"error_code\":\"\",\"boiler_make\":\"Worcester\",\"address_postcode\":\"\",\"address_house_number\":\"\",\"address_street\":\"\",\"address_line1\":\"\",\"address_city\":\"\",\"address_confirmed\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_e7f2f6be6dc3076e03058b92",
+      "role": "agent",
+      "created_timestamp": 1784633214013,
+      "content": "Worcester boiler, got it.\n\nIs the heating working normally?",
+      "metadata": {
+        "response_id": 2
+      }
+    }
+  ],
+  "chat_cost": {
+    "combined_cost": 5.2,
+    "product_costs": [
+      {
+        "unit_price": 2.6,
+        "product": "gpt_5_4_text_testing",
+        "cost": 5.2
+      }
+    ]
+  },
+  "data_storage_setting": "everything"
+}

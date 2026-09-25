@@ -1,0 +1,58 @@
+[
+  {
+    "name": "extract_discovery_details",
+    "description": "Capture the bridging details: `{{industry}}`, `{{pain_points}}` (APPEND — keep every existing item), `{{interest_signal}}`, `{{pattern_matched}}`, `{{call_volume}}`, `{{pain_urgency}}`. Call it once when the four required values exist.",
+    "type": "extract_dynamic_variable",
+    "speak_after_execution": true,
+    "variables": [
+      {
+        "name": "industry",
+        "description": "Business industry or vertical (e.g. \"HVAC\", \"dental practice\", \"law firm\")",
+        "type": "string"
+      },
+      {
+        "name": "pain_points",
+        "description": "Comma-separated list of ALL problems mentioned. APPEND only — keep every existing item and add new ones. Never replace.",
+        "type": "string"
+      },
+      {
+        "name": "interest_signal",
+        "description": "True when the prospect asked how it works / how much / told me more, or showed clear buying intent.",
+        "type": "boolean"
+      },
+      {
+        "name": "pattern_matched",
+        "description": "True once the prospect connected their pain_frame to what happens when calls go unanswered.",
+        "type": "boolean"
+      },
+      {
+        "name": "call_volume",
+        "description": "Approximate call volume (can be qualitative: \"10-15 calls a day\", \"a lot\", \"dozens\")",
+        "type": "string"
+      },
+      {
+        "name": "pain_urgency",
+        "description": "Urgency from their signals: high if losing customers or money, medium if staff stressed, low if just exploring.",
+        "type": "enum",
+        "choices": [
+          "low",
+          "medium",
+          "high"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "discovery_completed",
+    "type": "extract_dynamic_variable",
+    "description": "Set discovery_completed to true ONLY after: When the industry is known, problems are collected, they've connected their pain to the phone gap, and they've shown intent. Do not set it early.",
+    "speak_after_execution": false,
+    "variables": [
+      {
+        "name": "discovery_completed",
+        "type": "boolean",
+        "description": "true ONLY after: When the industry is known, problems are collected, they've connected their pain to the phone gap, and they've shown intent."
+      }
+    ]
+  }
+]

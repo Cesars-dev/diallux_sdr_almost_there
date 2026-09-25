@@ -1,0 +1,67 @@
+{
+  "scenario": 4,
+  "turn": 2,
+  "chat_id": "chat_2e4ed008bd72076e54cbe064044",
+  "caller_message": "My name is Paul. NE4 5AB, 7 Oak Ave, Newcastle. Making a rattling sound when it fires up.",
+  "agent_messages": [
+    {
+      "message_id": "message_7d80872edc71747fb5281629",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639826903,
+      "tool_call_id": "call_6HeiiwRihivr7y90pQROPZ7X",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_365fee0fc49caf040e5406bd",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639826904,
+      "tool_call_id": "call_6HeiiwRihivr7y90pQROPZ7X",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Paul\",\"classified_intent\":\"Boiler Breakdown\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"7\",\"address_street\":\"Oak Ave\",\"address_postcode\":\"NE4 5AB\",\"address_city\":\"Newcastle\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_c750c1809576661502b3f986",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639827720,
+      "tool_call_id": "call_lTKuFrEOl76OpB1AahYx9vLF",
+      "name": "transition_to_address",
+      "arguments": "{}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_370e8d99f8b5ee9b3a4f049c",
+      "role": "state_transition",
+      "created_timestamp": 1784639827721,
+      "former_state_name": "greeter",
+      "new_state_name": "address"
+    },
+    {
+      "message_id": "message_e7a751def10a537315384a5e",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639829544,
+      "tool_call_id": "call_zv28bDDLGv7B1CSWJ2rjOtT6",
+      "name": "extract_address_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_6dc53427946be0134e76f3ae",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639829545,
+      "tool_call_id": "call_zv28bDDLGv7B1CSWJ2rjOtT6",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Paul\",\"problem_category\":\"Banging / Kettling / Rumbling Noise\",\"symptom_brief\":\"Boiler making a rattling sound when it fires up\",\"error_code\":\"\",\"boiler_make\":\"\",\"address_postcode\":\"NE4 5AB\",\"address_house_number\":\"7\",\"address_street\":\"Oak Ave\",\"address_line1\":\"7 Oak Ave\",\"address_city\":\"Newcastle\",\"address_confirmed\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_db103e88fc8e5cfd3cb6300a",
+      "role": "agent",
+      "created_timestamp": 1784639830848,
+      "content": "Paul \u2014 rattling when it fires up, got it.\n\nSo that's 7 Oak Ave, Newcastle \u2014 postcode N-E-4 5-A-B. Is that right?",
+      "metadata": {
+        "response_id": 2
+      }
+    }
+  ]
+}

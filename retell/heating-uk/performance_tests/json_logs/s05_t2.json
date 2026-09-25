@@ -1,0 +1,67 @@
+{
+  "scenario": 5,
+  "turn": 2,
+  "chat_id": "chat_c494fb17f78cbca2fc391d8179f",
+  "caller_message": "Mike. 42 Grove St, NE1 1AA, Newcastle. It's a rattling noise from the boiler.",
+  "agent_messages": [
+    {
+      "message_id": "message_93a17ca8e484534d606177a2",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639882081,
+      "tool_call_id": "call_uOYC96YHCVWn2NVMLPODZSkq",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_d48b16f1e0a36df564b3083a",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639882082,
+      "tool_call_id": "call_uOYC96YHCVWn2NVMLPODZSkq",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Mike\",\"classified_intent\":\"boiler breakdown\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"42\",\"address_street\":\"Grove St\",\"address_postcode\":\"NE1 1AA\",\"address_city\":\"Newcastle\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_d477063ee0c2a0ee2b3ce2c4",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639882958,
+      "tool_call_id": "call_5S6AOJxI2uPVbuY7hyl5jvUK",
+      "name": "transition_to_address",
+      "arguments": "{}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_a1e1560c7fe077b47a7b8945",
+      "role": "state_transition",
+      "created_timestamp": 1784639882959,
+      "former_state_name": "greeter",
+      "new_state_name": "address"
+    },
+    {
+      "message_id": "message_9f8940486e3bcbedf1d243f2",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639886766,
+      "tool_call_id": "call_CQCmtZs7tNNUDoi8I1CexJtW",
+      "name": "extract_address_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_a2edba0b7684a032efbc990d",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639886767,
+      "tool_call_id": "call_CQCmtZs7tNNUDoi8I1CexJtW",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Mike\",\"problem_category\":\"Banging / Kettling / Rumbling Noise\",\"symptom_brief\":\"Rattling noise from the boiler\",\"error_code\":\"\",\"boiler_make\":\"\",\"address_postcode\":\"NE1 1AA\",\"address_house_number\":\"42\",\"address_street\":\"Grove St\",\"address_line1\":\"42 Grove St\",\"address_city\":\"Newcastle\",\"address_confirmed\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_e92ac1a44f27f18e47ef0e79",
+      "role": "agent",
+      "created_timestamp": 1784639888132,
+      "content": "Mike, 42 Grove St, Newcastle \u2014 postcode N-E-1-1-A-A. Is that right?",
+      "metadata": {
+        "response_id": 2
+      }
+    }
+  ]
+}

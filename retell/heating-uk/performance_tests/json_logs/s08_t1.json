@@ -1,0 +1,34 @@
+{
+  "scenario": 8,
+  "turn": 1,
+  "chat_id": "chat_b20d0a656c4b348bd60cfa64aa4",
+  "caller_message": "Hi, I need an engineer. My postcode is 90210.",
+  "agent_messages": [
+    {
+      "message_id": "message_6609baa00ded3f4f35f60436",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639488319,
+      "tool_call_id": "call_SrwPvPY5CU3L4NAD16lbmgIQ",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_68069bd0121e78a5af42971c",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639488320,
+      "tool_call_id": "call_SrwPvPY5CU3L4NAD16lbmgIQ",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"engineer visit request\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"90210\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_65f2e896b0f16b3935ee313d",
+      "role": "agent",
+      "created_timestamp": 1784639493802,
+      "content": "Right, engineer visit \u2014 got it. That postcode looks non-UK. Are you in the UK?",
+      "metadata": {
+        "response_id": 1
+      }
+    }
+  ]
+}

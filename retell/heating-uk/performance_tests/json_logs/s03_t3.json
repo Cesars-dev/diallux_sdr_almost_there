@@ -1,0 +1,109 @@
+{
+  "scenario": 3,
+  "turn": 3,
+  "chat_id": "chat_928f27c32f25fdc984d1794af42",
+  "caller_message": "Yes, that's correct",
+  "agent_messages": [
+    {
+      "message_id": "message_00df921def808e1d091c3d69",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639786406,
+      "tool_call_id": "call_POH0u0qsyyAkYJdMyrajjniJ",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_19398aa5fb450dcfc1b76e63",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639786407,
+      "tool_call_id": "call_POH0u0qsyyAkYJdMyrajjniJ",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Sarah\",\"classified_intent\":\"engineer visit\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"14\",\"address_street\":\"Victoria Terrace\",\"address_postcode\":\"NE4 5AB\",\"address_city\":\"Newcastle\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_ca2b784d6836f47d75e4d637",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639787358,
+      "tool_call_id": "call_IZMPqCInzTDgGInJULypR5Up",
+      "name": "transition_to_address",
+      "arguments": "{}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_39c3a8e223859fe98ea92fc8",
+      "role": "state_transition",
+      "created_timestamp": 1784639787359,
+      "former_state_name": "greeter",
+      "new_state_name": "address"
+    },
+    {
+      "message_id": "message_29a519bdfd20fecfb64c274a",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639789702,
+      "tool_call_id": "call_2o3T2LwZ9emSY156TDTk2wTR",
+      "name": "extract_address_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_70e552e81ec22a289fdbf635",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639789703,
+      "tool_call_id": "call_2o3T2LwZ9emSY156TDTk2wTR",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Sarah\",\"problem_category\":\"boiler pressure issue\",\"symptom_brief\":\"boiler losing pressure\",\"error_code\":\"\",\"boiler_make\":\"boiler\",\"address_postcode\":\"NE4 5AB\",\"address_house_number\":\"14\",\"address_street\":\"Victoria Terrace\",\"address_line1\":\"14 Victoria Terrace\",\"address_city\":\"Newcastle\",\"address_confirmed\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_ded9170e312e3881946561e9",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639790894,
+      "tool_call_id": "call_EQAxWzfdyNN8deWKfjSmDFwg",
+      "name": "transition_to_booking",
+      "arguments": "{}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_2d5a7cb2176583c53d057c9d",
+      "role": "state_transition",
+      "created_timestamp": 1784639790895,
+      "former_state_name": "address",
+      "new_state_name": "booking"
+    },
+    {
+      "message_id": "message_8a9b46186fc05839ae463a39",
+      "role": "agent",
+      "created_timestamp": 1784639792003,
+      "content": "I\u2019m checking the next available engineer slots now.",
+      "metadata": {
+        "response_id": 3
+      }
+    },
+    {
+      "message_id": "message_f26e10e09cc0f5a99bdd17f7",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639792004,
+      "tool_call_id": "call_ejM9XHj8OBtfFXBdLfZIJHxA",
+      "name": "check_availability",
+      "arguments": "{\"start_time\":\"2026-07-21T00:00:00\",\"end_time\":\"2026-07-22T23:59:00\",\"timezone\":\"Europe/London\",\"execution_message\":\"I\u2019m checking the next available engineer slots now.\"}",
+      "type": "check_availability_cal"
+    },
+    {
+      "message_id": "message_da51bee478a55128d8971387",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639792498,
+      "tool_call_id": "call_ejM9XHj8OBtfFXBdLfZIJHxA",
+      "content": "{\"availability_for_selected_time\":[{\"date\":\"Wednesday, 2026 July 7/22/2026 British Summer Time\",\"availability_range\":[\"From 6:00 PM to 7:00 PM\"]}]}",
+      "successful": true
+    },
+    {
+      "message_id": "message_6646f892cdc0c91064fc91bd",
+      "role": "agent",
+      "created_timestamp": 1784639794170,
+      "content": "I\u2019ve got Wednesday between 6 and 7. Does that suit?",
+      "metadata": {
+        "response_id": 4
+      }
+    }
+  ]
+}

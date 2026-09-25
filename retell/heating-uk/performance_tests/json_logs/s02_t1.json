@@ -1,0 +1,50 @@
+{
+  "scenario": 2,
+  "turn": 1,
+  "chat_id": "chat_461f5cee61e28983d8222140add",
+  "caller_message": "Hi Tom, it's Linda \u2014 we did a service with you last March, time for the annual one again.",
+  "agent_messages": [
+    {
+      "message_id": "message_0993800eb56a471207b7db8b",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784640684062,
+      "tool_call_id": "call_wenc0q9eJDKaXwMpeki9IMtd",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_adfa50090072c60894bcc743",
+      "role": "tool_call_result",
+      "created_timestamp": 1784640684063,
+      "tool_call_id": "call_wenc0q9eJDKaXwMpeki9IMtd",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Linda\",\"classified_intent\":\"Annual Boiler Service\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":true,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_224fe9a6219ca30ea0d92361",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784640684909,
+      "tool_call_id": "call_U4aR2ElSK0qBLBONZM90HCKa",
+      "name": "transition_to_address",
+      "arguments": "{}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_b202d622de55b245ffcb4a0b",
+      "role": "state_transition",
+      "created_timestamp": 1784640684910,
+      "former_state_name": "greeter",
+      "new_state_name": "address"
+    },
+    {
+      "message_id": "message_087853f397a02de0893397d1",
+      "role": "agent",
+      "created_timestamp": 1784640690886,
+      "content": "Linda \u2014 annual service, got it. Just confirming, it's a boiler service?",
+      "metadata": {
+        "response_id": 1
+      }
+    }
+  ]
+}

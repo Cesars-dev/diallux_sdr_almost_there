@@ -1,0 +1,95 @@
+{
+  "chat_id": "chat_0c86570257dc0739364c440322b",
+  "chat_type": "api_chat",
+  "agent_id": "agent_df7e927686bd1fb1645c35530b",
+  "agent_version": 0,
+  "agent_name": "V7_personal_iteration2",
+  "retell_llm_dynamic_variables": {
+    "today_date": "2026-08-25",
+    "callback_number": "+12125550011"
+  },
+  "collected_dynamic_variables": {},
+  "chat_status": "ended",
+  "start_timestamp": 1787658770585,
+  "end_timestamp": 1787658781354,
+  "transcript": "User: Fine, tell me about— actually NO. You know what, forget it. This is bulls***, everyone just wants money, I'm done with this crap.\nAgent: Yeah, I hear you — sounds like you’ve had way too many people try to sell you stuff without actually helping.  \n\nBefore you hang this up completely, do you want to just tell me what’s got you this frustrated with all of this in the first place?\nUser: I'm sick of automated responses and bots. Get me a REAL person on the phone NOW, damn it!\nAgent: I get it — you’re tired of talking to machines and getting nowhere.  \n\nI’m actually an AI assistant on Jay’s team at Dialux, and my whole job is just to listen, keep this short, and get you to the right human if it’s worth your time — do you even still want to talk about your business, or do you just want to bail on this altogether?\nUser: Fine, just have someone call me tomorrow. I'm fed up with this crap but I'll give it one last shot.\nAgent: Got it, I hear you — we’ll have someone from the team reach out to you at this number tomorrow to talk things through properly. If you change your mind before then, you can just ignore the call and that’s totally fine too. Thanks for giving it one more shot with us, and I’ll let you go now — take care.",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_d76fb749215e145cd111e525",
+      "role": "user",
+      "created_timestamp": 1787658771281,
+      "content": "Fine, tell me about— actually NO. You know what, forget it. This is bulls***, everyone just wants money, I'm done with this crap."
+    },
+    {
+      "message_id": "message_7e692ee785f8d0f20dd07f04",
+      "role": "agent",
+      "created_timestamp": 1787658773404,
+      "content": "Yeah, I hear you — sounds like you’ve had way too many people try to sell you stuff without actually helping.  \n\nBefore you hang this up completely, do you want to just tell me what’s got you this frustrated with all of this in the first place?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_ee984f31c0d24dfb3bef88a1",
+      "role": "user",
+      "created_timestamp": 1787658775210,
+      "content": "I'm sick of automated responses and bots. Get me a REAL person on the phone NOW, damn it!"
+    },
+    {
+      "message_id": "message_7e797cb330d841eeec20b69c",
+      "role": "agent",
+      "created_timestamp": 1787658777769,
+      "content": "I get it — you’re tired of talking to machines and getting nowhere.  \n\nI’m actually an AI assistant on Jay’s team at Dialux, and my whole job is just to listen, keep this short, and get you to the right human if it’s worth your time — do you even still want to talk about your business, or do you just want to bail on this altogether?",
+      "metadata": {
+        "response_id": 2
+      }
+    },
+    {
+      "message_id": "message_2f3bf962e288680dc5ca7fb6",
+      "role": "user",
+      "created_timestamp": 1787658779411,
+      "content": "Fine, just have someone call me tomorrow. I'm fed up with this crap but I'll give it one last shot."
+    },
+    {
+      "message_id": "message_9c0d6e94fe62df8835e11940",
+      "role": "agent",
+      "created_timestamp": 1787658781275,
+      "content": "Got it, I hear you — we’ll have someone from the team reach out to you at this number tomorrow to talk things through properly. If you change your mind before then, you can just ignore the call and that’s totally fine too. Thanks for giving it one more shot with us, and I’ll let you go now — take care.",
+      "metadata": {
+        "response_id": 3
+      }
+    },
+    {
+      "message_id": "message_5fb63a280bd685d24330d981",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787658781276,
+      "tool_call_id": "call_oDdEGb8FbpaElxwVT2sFaNp9",
+      "name": "end_call",
+      "arguments": "{\"execution_message\":\"Got it, I hear you — we’ll have someone from the team reach out to you at this number tomorrow to talk things through properly. If you change your mind before then, you can just ignore the call and that’s totally fine too. Thanks for giving it one more shot with us, and I’ll let you go now — take care.\"}",
+      "type": "end_call"
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/46a09be97d216a8f24ef5e01589d58886d298a5793f074cb2411973268c1bcee/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "combined_cost": 5.4,
+    "product_costs": [
+      {
+        "cost": 3.9000000000000004,
+        "product": "gpt_5_1_text_testing",
+        "unit_price": 1.3
+      },
+      {
+        "unit_price": 1.5,
+        "cost": 1.5,
+        "product": "gpt_4_1_text_testing"
+      }
+    ]
+  },
+  "chat_analysis": {
+    "user_sentiment": "Negative",
+    "custom_analysis_data": {},
+    "chat_summary": "The user expressed strong frustration with automated systems and requested to speak with a real person. The agent acknowledged the user's concerns and arranged for a human team member to call the user the next day, providing reassurance and an option to opt out.",
+    "chat_successful": true
+  },
+  "data_storage_setting": "everything"
+}

@@ -1,0 +1,19 @@
+[
+  {
+    "parameters": {
+      "type": "object",
+      "required": [
+        "booking_verified"
+      ],
+      "properties": {
+        "booking_verified": {
+          "description": "true ONLY when record_booking_uid returned status ok and the calendar confirmed the booking.",
+          "type": "boolean"
+        }
+      }
+    },
+    "speak_during_transition": false,
+    "destination_state_name": "Closing",
+    "description": "When booking_verified is true - calendar accepted and validate_booking passed - transition to Closing."
+  }
+]

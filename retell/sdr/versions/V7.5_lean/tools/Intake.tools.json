@@ -1,0 +1,38 @@
+[
+  {
+    "description": "Capture the opening details: `{{inbound_channel}}`, `{{interest_topic}}` (their words, APPEND if more than one), `{{pain_frame}}`. Call it ONCE, when all three are captured.",
+    "speak_after_execution": true,
+    "variables": [
+      {
+        "type": "string",
+        "description": "How the prospect heard about Dialux (voicemail, cold outreach, Indeed job post, Facebook/Meta ad, search, other)",
+        "name": "inbound_channel"
+      },
+      {
+        "type": "string",
+        "name": "interest_topic",
+        "description": "What caught their attention, in their exact words. APPEND if more than one — never replace."
+      },
+      {
+        "description": "The angle that worries them — why they started looking right now",
+        "name": "pain_frame",
+        "type": "string"
+      }
+    ],
+    "name": "extract_intake_details",
+    "type": "extract_dynamic_variable"
+  },
+  {
+    "type": "extract_dynamic_variable",
+    "speak_after_execution": false,
+    "name": "intake_completed",
+    "variables": [
+      {
+        "description": "true ONLY after: When how they heard about us, what caught their attention, and what's worrying them are all captured.",
+        "name": "intake_completed",
+        "type": "boolean"
+      }
+    ],
+    "description": "Set intake_completed to true ONLY after: When how they heard about us, what caught their attention, and what's worrying them are all captured. Do not set it early."
+  }
+]

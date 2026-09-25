@@ -1,0 +1,257 @@
+{
+  "chat_id": "chat_5f2a69913171d71402ffaeebb21",
+  "chat_type": "api_chat",
+  "agent_id": "agent_ff9d4b9646a85b82d7ce8fd837",
+  "agent_version": 0,
+  "agent_name": "Multi State Agent",
+  "collected_dynamic_variables": {
+    "address_house_number": "12",
+    "callback_requested": "false",
+    "intent_clear": "true",
+    "classified_intent": "Heat Pump Enquiry",
+    "address_street": "Park Rd",
+    "past_customer": "false",
+    "greeting_exchanged": "true",
+    "intent_confirmed": "true",
+    "address_postcode": "NE7 7GG",
+    "customer_name": "Alex",
+    "address_incomplete": "true",
+    "address_city": ""
+  },
+  "chat_status": "ended",
+  "start_timestamp": 1784638047519,
+  "end_timestamp": 1784638072943,
+  "transcript": "User: Hi, I'm interested in getting a heat pump. What's the process?\nAgent: Right, heat pump enquiry \u2014 the estimator will talk you through it.\n\nWhat sort of property is it?\nUser: Alex\nAgent: Alex \u2014 got it. What sort of property is it?\nUser: 12 Park Rd, NE7 7GG\nAgent: 12 Park Rd, NE7 7GG \u2014 got it. Which town or city is that in?\nUser: Yes, that's correct\nAgent: Park Rd, NE7 7GG \u2014 thanks. Which town or city is that in?\nUser: Tomorrow works\nAgent: Tomorrow works \u2014 brilliant. Which town or city is 12 Park Rd in?\nUser: Yes, book it\nAgent: Right, heat pump booking. Which town or city is 12 Park Rd in?\nUser: That's all, thanks",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_a1af0ca92c8a4e544ea5c37f",
+      "role": "user",
+      "created_timestamp": 1784638048166,
+      "content": "Hi, I'm interested in getting a heat pump. What's the process?"
+    },
+    {
+      "message_id": "message_e9a703671b5a154e24f9507c",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638049628,
+      "tool_call_id": "call_vyvGQxJNwFiQQUTtOUeg7JUP",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_4905925e53e88ed89749f55d",
+      "role": "tool_call_result",
+      "created_timestamp": 1784638049629,
+      "tool_call_id": "call_vyvGQxJNwFiQQUTtOUeg7JUP",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"Heat Pump Enquiry\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_e4003574b398e46f4688c8f2",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638051082,
+      "tool_call_id": "call_ws4Y2QUNublGaRgTIP7Mb73r",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_345ed805555be6db918e8a6b",
+      "role": "tool_call_result",
+      "created_timestamp": 1784638051083,
+      "tool_call_id": "call_ws4Y2QUNublGaRgTIP7Mb73r",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"Heat Pump Enquiry\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_619508756ae70ded852b1d06",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638052705,
+      "tool_call_id": "call_hDHAxg3pZyFnMOEvenb4EBU8",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_13f32f19d2228f2acdc14f80",
+      "role": "tool_call_result",
+      "created_timestamp": 1784638052706,
+      "tool_call_id": "call_hDHAxg3pZyFnMOEvenb4EBU8",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"Heat Pump Enquiry\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_dbd101d5b5304fd9ac586c5c",
+      "role": "agent",
+      "created_timestamp": 1784638054015,
+      "content": "Right, heat pump enquiry \u2014 the estimator will talk you through it.\n\nWhat sort of property is it?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_121a7c2f800c6c9d109bd56d",
+      "role": "user",
+      "created_timestamp": 1784638054834,
+      "content": "Alex"
+    },
+    {
+      "message_id": "message_2406158d906fee55e78389b3",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638056235,
+      "tool_call_id": "call_JK4JYjQ0FeGtcVRszuRuwyGE",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_e3d26be488eb787245349eb4",
+      "role": "tool_call_result",
+      "created_timestamp": 1784638056236,
+      "tool_call_id": "call_JK4JYjQ0FeGtcVRszuRuwyGE",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Alex\",\"classified_intent\":\"Heat Pump Enquiry\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_40b83d9b884d0690296c254d",
+      "role": "agent",
+      "created_timestamp": 1784638058098,
+      "content": "Alex \u2014 got it. What sort of property is it?",
+      "metadata": {
+        "response_id": 2
+      }
+    },
+    {
+      "message_id": "message_cf9cf55f40364bf59da1d757",
+      "role": "user",
+      "created_timestamp": 1784638058958,
+      "content": "12 Park Rd, NE7 7GG"
+    },
+    {
+      "message_id": "message_8393ad43a9b540f7415fe847",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638060557,
+      "tool_call_id": "call_PsE1fF3H7rp7o93lq9V899Xg",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_e058204b19766fffbfccc411",
+      "role": "tool_call_result",
+      "created_timestamp": 1784638060558,
+      "tool_call_id": "call_PsE1fF3H7rp7o93lq9V899Xg",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Alex\",\"classified_intent\":\"Heat Pump Enquiry\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"12\",\"address_street\":\"Park Rd\",\"address_postcode\":\"NE7 7GG\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_021f181e652235218e83cc3e",
+      "role": "agent",
+      "created_timestamp": 1784638062075,
+      "content": "12 Park Rd, NE7 7GG \u2014 got it. Which town or city is that in?",
+      "metadata": {
+        "response_id": 3
+      }
+    },
+    {
+      "message_id": "message_d132d28cf704406ff6ad0ff8",
+      "role": "user",
+      "created_timestamp": 1784638062932,
+      "content": "Yes, that's correct"
+    },
+    {
+      "message_id": "message_67f77302a5269ceb8a1752f3",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638064751,
+      "tool_call_id": "call_ipYWXnsxV5Ldh9rLwoKK3Ziw",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_93eebe01b8bc1d33fe4f73be",
+      "role": "tool_call_result",
+      "created_timestamp": 1784638064752,
+      "tool_call_id": "call_ipYWXnsxV5Ldh9rLwoKK3Ziw",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Alex\",\"classified_intent\":\"Heat Pump Enquiry\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"12\",\"address_street\":\"Park Rd\",\"address_postcode\":\"NE7 7GG\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_8f76df3b4ad9649b21eaf1ce",
+      "role": "agent",
+      "created_timestamp": 1784638066394,
+      "content": "Park Rd, NE7 7GG \u2014 thanks. Which town or city is that in?",
+      "metadata": {
+        "response_id": 4
+      }
+    },
+    {
+      "message_id": "message_54c4e70ecfdd9e0d69f52465",
+      "role": "user",
+      "created_timestamp": 1784638067171,
+      "content": "Tomorrow works"
+    },
+    {
+      "message_id": "message_8b57905de4d3b2a0afc18f79",
+      "role": "agent",
+      "created_timestamp": 1784638068558,
+      "content": "Tomorrow works \u2014 brilliant. Which town or city is 12 Park Rd in?",
+      "metadata": {
+        "response_id": 5
+      }
+    },
+    {
+      "message_id": "message_65471d97e35bbd8f78c1ad18",
+      "role": "user",
+      "created_timestamp": 1784638069411,
+      "content": "Yes, book it"
+    },
+    {
+      "message_id": "message_1978437e308a7e7fca9814e9",
+      "role": "agent",
+      "created_timestamp": 1784638070693,
+      "content": "Right, heat pump booking. Which town or city is 12 Park Rd in?",
+      "metadata": {
+        "response_id": 6
+      }
+    },
+    {
+      "message_id": "message_77564930d569d5368af82b17",
+      "role": "user",
+      "created_timestamp": 1784638071624,
+      "content": "That's all, thanks"
+    },
+    {
+      "message_id": "message_6ae17ecc611f557a3f376fa7",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638072935,
+      "tool_call_id": "call_HE1CqCJdanM5Q8gzDJcXO9O4",
+      "name": "end_call",
+      "arguments": "{}",
+      "type": "end_call"
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/820309d9ded9694fcba2d179b1f94c400c045028d4deeb8ed5daba4e4d741674/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "combined_cost": 17.1,
+    "product_costs": [
+      {
+        "unit_price": 2.6,
+        "product": "gpt_5_4_text_testing",
+        "cost": 15.600000000000001
+      },
+      {
+        "unit_price": 1.5,
+        "product": "gpt_4_1_text_testing",
+        "cost": 1.5
+      }
+    ]
+  },
+  "chat_analysis": {
+    "chat_summary": "The user, Alex, inquired about getting a heat pump and provided their name and partial address (12 Park Rd, NE7 7GG). The agent attempted to confirm the town or city for the address and discussed booking an estimator visit for the next day, but the user did not provide the missing city information before ending the chat.",
+    "user_sentiment": "Neutral",
+    "custom_analysis_data": {},
+    "chat_successful": false
+  },
+  "data_storage_setting": "everything"
+}

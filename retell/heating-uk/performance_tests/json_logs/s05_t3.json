@@ -1,0 +1,76 @@
+{
+  "scenario": 5,
+  "turn": 3,
+  "chat_id": "chat_c494fb17f78cbca2fc391d8179f",
+  "caller_message": "Yes, that's right",
+  "agent_messages": [
+    {
+      "message_id": "message_3f694ac1a961eec3e9268473",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639890457,
+      "tool_call_id": "call_U2Qd2ktROE8tIUwPz2y0BTjg",
+      "name": "extract_address_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_270088c342db0310226e7f33",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639890458,
+      "tool_call_id": "call_U2Qd2ktROE8tIUwPz2y0BTjg",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Mike\",\"problem_category\":\"Banging / Kettling / Rumbling Noise\",\"symptom_brief\":\"Rattling noise from the boiler\",\"error_code\":\"\",\"boiler_make\":\"\",\"address_postcode\":\"NE1 1AA\",\"address_house_number\":\"42\",\"address_street\":\"Grove St\",\"address_line1\":\"42 Grove St\",\"address_city\":\"Newcastle\",\"address_confirmed\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_292d296a4c33d98d35aa6f93",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639891512,
+      "tool_call_id": "call_KnTU1JRKK8qKWlvhFaiG8pR1",
+      "name": "transition_to_booking",
+      "arguments": "{}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_ddaed68c6577edf263bc98cf",
+      "role": "state_transition",
+      "created_timestamp": 1784639891513,
+      "former_state_name": "address",
+      "new_state_name": "booking"
+    },
+    {
+      "message_id": "message_5827676634dcca6a0a012f96",
+      "role": "agent",
+      "created_timestamp": 1784639893162,
+      "content": "I\u2019m checking the nearest slots now.",
+      "metadata": {
+        "response_id": 3
+      }
+    },
+    {
+      "message_id": "message_a668cd72e0bf69437b68d8fc",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639893163,
+      "tool_call_id": "call_Xv7hPvnPFjnIuMUEMYWx7EzO",
+      "name": "check_availability",
+      "arguments": "{\"start_time\":\"2026-07-21T00:00:00\",\"end_time\":\"2026-07-22T23:59:00\",\"timezone\":\"Europe/London\",\"execution_message\":\"I\u2019m checking the nearest slots now.\"}",
+      "type": "check_availability_cal"
+    },
+    {
+      "message_id": "message_5d338f416a5404a5f5a01375",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639894213,
+      "tool_call_id": "call_Xv7hPvnPFjnIuMUEMYWx7EzO",
+      "content": "{\"availability_for_selected_time\":\"No available slots for specified time range, but there are available slots on time range that's nearby.\",\"availability_nearby\":[{\"date\":\"Thursday, 2026 July 7/23/2026 British Summer Time\",\"availability_range\":[\"From 9:00 AM to 7:00 PM\"]}]}",
+      "successful": true
+    },
+    {
+      "message_id": "message_126f870fe54c640ac3b0ac43",
+      "role": "agent",
+      "created_timestamp": 1784639895672,
+      "content": "I\u2019ve got Thursday between 9 and 1, or 3 and 7. Which suits?",
+      "metadata": {
+        "response_id": 4
+      }
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "chat_id": "chat_d18238a1e44844cf94bf2aee84c",
+  "chat_type": "api_chat",
+  "agent_id": "agent_ff9d4b9646a85b82d7ce8fd837",
+  "agent_version": 0,
+  "agent_name": "Multi State Agent",
+  "collected_dynamic_variables": {
+    "address_house_number": "",
+    "callback_requested": "false",
+    "intent_clear": "false",
+    "classified_intent": "",
+    "address_street": "",
+    "past_customer": "false",
+    "greeting_exchanged": "true",
+    "intent_confirmed": "false",
+    "address_postcode": "",
+    "customer_name": "",
+    "address_incomplete": "false",
+    "address_city": ""
+  },
+  "chat_status": "ended",
+  "start_timestamp": 1784637782681,
+  "end_timestamp": 1784637789349,
+  "transcript": "User: Hi, I think I smell gas near my boiler.\nAgent: British Heat Services, Tom speaking.\nAgent: Right \u2014 got it. If you smell gas, call 0800 111 999.\nUser: Yes, I can smell gas\nAgent: Give them a ring and they\u2019ll sort it from there.",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_5043cdb80e236411f7151922",
+      "role": "user",
+      "created_timestamp": 1784637783332,
+      "content": "Hi, I think I smell gas near my boiler."
+    },
+    {
+      "message_id": "message_804295c2ee97d47976ff6033",
+      "role": "agent",
+      "created_timestamp": 1784637785433,
+      "content": "British Heat Services, Tom speaking.",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_01cbb47fcf7d1c1e8adaeb3f",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637785434,
+      "tool_call_id": "call_luVdG3lYRTQXugPV2ePZQBKm",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_7395a255437b7f8e8acc8e66",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637785435,
+      "tool_call_id": "call_luVdG3lYRTQXugPV2ePZQBKm",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"\",\"greeting_exchanged\":true,\"intent_clear\":false,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_c667b3c64c8cd7ef0243f714",
+      "role": "agent",
+      "created_timestamp": 1784637786523,
+      "content": "Right \u2014 got it. If you smell gas, call 0800 111 999.",
+      "metadata": {
+        "response_id": 2
+      }
+    },
+    {
+      "message_id": "message_fb9379ebd1788fd51a7e409d",
+      "role": "user",
+      "created_timestamp": 1784637787315,
+      "content": "Yes, I can smell gas"
+    },
+    {
+      "message_id": "message_b176b83a3f8df193726efa7f",
+      "role": "agent",
+      "created_timestamp": 1784637788522,
+      "content": "Give them a ring and they\u2019ll sort it from there.",
+      "metadata": {
+        "response_id": 3
+      }
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/5ed4688c8a5ef1cb8aa02f9b790c69ba07755d0f370fcf9598b71a1ae3b12a57/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "combined_cost": 9.3,
+    "product_costs": [
+      {
+        "unit_price": 2.6,
+        "product": "gpt_5_4_text_testing",
+        "cost": 7.800000000000001
+      },
+      {
+        "unit_price": 1.5,
+        "product": "gpt_4_1_text_testing",
+        "cost": 1.5
+      }
+    ]
+  },
+  "chat_analysis": {
+    "chat_summary": "The user reported smelling gas near their boiler. The agent advised the user to immediately call the emergency gas line (0800 111 999) for safety. The conversation was brief and focused on ensuring the user's safety.",
+    "user_sentiment": "Neutral",
+    "custom_analysis_data": {},
+    "chat_successful": true
+  },
+  "data_storage_setting": "everything"
+}

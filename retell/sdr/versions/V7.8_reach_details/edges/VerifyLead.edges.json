@@ -1,0 +1,29 @@
+[
+  {
+    "speak_during_transition": false,
+    "description": "When data_verified is true - set by verify_lead_data - transition to Booking.",
+    "parameters": {
+      "type": "object",
+      "required": [
+        "data_verified",
+        "selected_time",
+        "prospect_timezone"
+      ],
+      "properties": {
+        "data_verified": {
+          "type": "boolean",
+          "description": "true ONLY when verify_lead_data returned status ok."
+        },
+        "selected_time": {
+          "type": "string",
+          "description": "The chosen slot's time, copied verbatim."
+        },
+        "prospect_timezone": {
+          "type": "string",
+          "description": "IANA timezone of the selected time."
+        }
+      }
+    },
+    "destination_state_name": "Booking"
+  }
+]

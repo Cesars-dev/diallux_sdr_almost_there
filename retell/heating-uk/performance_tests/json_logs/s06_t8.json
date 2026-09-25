@@ -1,0 +1,43 @@
+{
+  "scenario": 6,
+  "turn": 8,
+  "chat_id": "chat_e0d668f6f1163479c63cc1e307d",
+  "caller_message": "Tomorrow works",
+  "agent_messages": [
+    {
+      "message_id": "message_6be8e9cd0d633c2bd72a9d09",
+      "role": "agent",
+      "created_timestamp": 1784639966732,
+      "content": "I\u2019m checking tomorrow for you now.",
+      "metadata": {
+        "response_id": 9
+      }
+    },
+    {
+      "message_id": "message_23a848b50e166c05207edb16",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639966733,
+      "tool_call_id": "call_J0dDCjkbtezJYQlETtHvK8Ov",
+      "name": "check_availability",
+      "arguments": "{\"start_time\":\"2026-07-22T00:00:00\",\"end_time\":\"2026-07-22T23:59:00\",\"timezone\":\"Europe/London\",\"execution_message\":\"I\u2019m checking tomorrow for you now.\"}",
+      "type": "check_availability_cal"
+    },
+    {
+      "message_id": "message_6a438780d6df169192568059",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639967426,
+      "tool_call_id": "call_J0dDCjkbtezJYQlETtHvK8Ov",
+      "content": "{\"availability_for_selected_time\":\"No available slots for specified time range, but there are available slots on time range that's nearby.\",\"availability_nearby\":[{\"date\":\"Thursday, 2026 July 7/23/2026 British Summer Time\",\"availability_range\":[\"From 9:30 AM to 7:00 PM\"]}]}",
+      "successful": true
+    },
+    {
+      "message_id": "message_dc273a9a7a3d67d28b731c2b",
+      "role": "agent",
+      "created_timestamp": 1784639969337,
+      "content": "Tomorrow\u2019s full, I\u2019m afraid.  \nI\u2019ve got Thursday morning or Thursday afternoon \u2014 which works better?",
+      "metadata": {
+        "response_id": 10
+      }
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+[
+  {
+    "description": "Creates the live call booking on Cal.com. CRITICAL: pass `time` as {{selected_time}} VERBATIM (bare local time in the prospect's zone \u2014 never recompute, never a UTC `iso`). Send `timezone` as {{prospect_timezone}} in IANA format. ALWAYS use email = jaydiallux@gmail.com (system shared attendee); name falls back to {{company_name}} when no name was provided; phoneNumber already E.164.",
+    "cal_api_key": "${CAL_KEY_2}",
+    "type": "book_appointment_cal",
+    "event_type_id": 3801235,
+    "cal_fields": [
+      {
+        "type": "string",
+        "description": "attendee name",
+        "required": true,
+        "name": "name"
+      },
+      {
+        "name": "email",
+        "description": "attendee email",
+        "type": "string",
+        "required": false
+      },
+      {
+        "name": "attendeePhoneNumber",
+        "required": true,
+        "description": "attendeePhoneNumber (number must be valid number in e.164 format)",
+        "type": "string"
+      },
+      {
+        "name": "title",
+        "description": "title",
+        "type": "string",
+        "required": true
+      },
+      {
+        "type": "string",
+        "description": "notes",
+        "required": false,
+        "name": "notes"
+      }
+    ],
+    "name": "create_livecall_booking",
+    "location_type": "integration",
+    "speak_after_execution": true
+  },
+  {
+    "description": "Records the booking confirmation id. Call right after create_livecall_booking succeeds, passing booking_uid exactly as its result returned it (a 22-character code). The server verifies it against the calendar and records it itself - if it answers invalid_uid or uid_not_found, pass the uid again exactly as shown, up to three times; then treat it as calendar trouble. Never invent, shorten, or retype the uid.",
+    "args_at_root": false,
+    "speak_after_execution": true,
+    "name": "record_booking_uid",
+    "type": "custom",
+    "url": "https://slots.diallux-ai.site/validator-function/record-booking-uid",
+    "forced": false,
+    "response_variables": {
+      "booking_uid": "booking_uid"
+    },
+    "parameter_type": "json",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "booking_uid": {
+          "type": "string",
+          "description": "The booking_uid from create_livecall_booking's result, copied verbatim."
+        }
+      }
+    },
+    "method": "POST",
+    "headers": {},
+    "timeout_ms": 15000
+  },
+  {
+    "type": "extract_dynamic_variable",
+    "description": "Records the slot outcome. Set booking_verified=true ONLY when validate_booking returned valid:true. Set booking_failed=true ONLY after two consecutive calendar failures. Never set both.",
+    "speak_after_execution": false,
+    "variables": [
+      {
+        "name": "booking_verified",
+        "type": "boolean",
+        "description": "true ONLY when validate_booking returned valid:true."
+      },
+      {
+        "type": "boolean",
+        "description": "true ONLY after a second create_livecall_booking failure.",
+        "name": "booking_failed"
+      }
+    ],
+    "name": "record_booking_outcome"
+  }
+]

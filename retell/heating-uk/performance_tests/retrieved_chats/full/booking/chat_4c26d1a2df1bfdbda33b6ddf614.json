@@ -1,0 +1,355 @@
+{
+  "chat_id": "chat_4c26d1a2df1bfdbda33b6ddf614",
+  "chat_type": "api_chat",
+  "agent_id": "agent_ff9d4b9646a85b82d7ce8fd837",
+  "agent_version": 0,
+  "agent_name": "Multi State Agent",
+  "collected_dynamic_variables": {
+    "callback_requested": "false",
+    "classified_intent": "Annual Boiler Service",
+    "past_customer": "true",
+    "intent_confirmed": "true",
+    "address_postcode": "NE4 4DD",
+    "address_confirmed": "true",
+    "address_incomplete": "true",
+    "problem_category": "Annual Boiler Service",
+    "address_city": "",
+    "boiler_make": "",
+    "address_house_number": "25",
+    "current_agent_state": "booking",
+    "symptom_brief": "Customer requested a service",
+    "intent_clear": "true",
+    "address_line1": "25 Acacia Gardens",
+    "address_street": "Acacia Gardens",
+    "greeting_exchanged": "true",
+    "error_code": "",
+    "customer_name": "Robert",
+    "previous_agent_state": "address"
+  },
+  "chat_status": "ended",
+  "start_timestamp": 1784637822815,
+  "end_timestamp": 1784637864747,
+  "transcript": "User: Hi, I need a service. Can Dave come out? He did our boiler last year.\nAgent: Annual service with Dave \u2014 got it. What\u2019s your address?\nUser: Robert\nAgent: Robert \u2014 thanks. What\u2019s the address?\nUser: NE4 4DD\nAgent: NE4 4DD \u2014 got it. What\u2019s the house number and street?\nUser: 25 Acacia Gardens\nAgent: 25 Acacia Gardens \u2014 thanks. What\u2019s the town or city?\nUser: Yes, that's right\nAgent: Thanks. What\u2019s the town or city?\nUser: Today works\nAgent: Today noted. What\u2019s the town or city?\nUser: Yes, book it\nAgent: I\u2019m checking the nearest slots now.\nAgent: I\u2019ve got today from half five, or tomorrow from half twelve. Which suits?\nUser: That's all, thanks",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_17c50dc4923bc9b45f8798a2",
+      "role": "user",
+      "created_timestamp": 1784637823460,
+      "content": "Hi, I need a service. Can Dave come out? He did our boiler last year."
+    },
+    {
+      "message_id": "message_b7df1e434b50e4666cf3d094",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637825124,
+      "tool_call_id": "call_956GjcX2GajVF6l3Yo5ACG40",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_7b42b74350d4b6e7ae11fe5d",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637825125,
+      "tool_call_id": "call_956GjcX2GajVF6l3Yo5ACG40",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"Annual Boiler Service\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":true,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_d375a0da4225985b3803ebd4",
+      "role": "agent",
+      "created_timestamp": 1784637827167,
+      "content": "Annual service with Dave \u2014 got it. What\u2019s your address?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_e574ec866451ce34ed6740bc",
+      "role": "user",
+      "created_timestamp": 1784637828044,
+      "content": "Robert"
+    },
+    {
+      "message_id": "message_7a5a57c2946e9d20ebe82436",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637829593,
+      "tool_call_id": "call_rYFBSfkZLuynKHUfOQZuKUbv",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_bb01823d637c4a2278899273",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637829594,
+      "tool_call_id": "call_rYFBSfkZLuynKHUfOQZuKUbv",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Robert\",\"classified_intent\":\"Annual Boiler Service\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":true,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_85ee83609fd6e0cb50745505",
+      "role": "agent",
+      "created_timestamp": 1784637830925,
+      "content": "Robert \u2014 thanks. What\u2019s the address?",
+      "metadata": {
+        "response_id": 2
+      }
+    },
+    {
+      "message_id": "message_77d33a910f6f0af276f66d4f",
+      "role": "user",
+      "created_timestamp": 1784637831689,
+      "content": "NE4 4DD"
+    },
+    {
+      "message_id": "message_983ebd3e3eed5e1ce8fa9708",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637832944,
+      "tool_call_id": "call_ntXiB3aCEkcVTjlIwvxLxg10",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_664a325db78198d82d1b8add",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637832945,
+      "tool_call_id": "call_ntXiB3aCEkcVTjlIwvxLxg10",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Robert\",\"classified_intent\":\"Annual Boiler Service\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":true,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"NE4 4DD\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_2d97d8befb7453955d8b5400",
+      "role": "agent",
+      "created_timestamp": 1784637834335,
+      "content": "NE4 4DD \u2014 got it. What\u2019s the house number and street?",
+      "metadata": {
+        "response_id": 3
+      }
+    },
+    {
+      "message_id": "message_a8226140acf15220935ef6a6",
+      "role": "user",
+      "created_timestamp": 1784637835240,
+      "content": "25 Acacia Gardens"
+    },
+    {
+      "message_id": "message_33b70846ee6656fea872f8e9",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637836768,
+      "tool_call_id": "call_1WSwkWAEbwGGcMfLjkbHDHMR",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_941a2c2a5c5c36b1dde2f3bf",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637836769,
+      "tool_call_id": "call_1WSwkWAEbwGGcMfLjkbHDHMR",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Robert\",\"classified_intent\":\"Annual Boiler Service\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":true,\"address_house_number\":\"25\",\"address_street\":\"Acacia Gardens\",\"address_postcode\":\"NE4 4DD\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_05d02c5b6461417222722fc2",
+      "role": "agent",
+      "created_timestamp": 1784637837938,
+      "content": "25 Acacia Gardens \u2014 thanks. What\u2019s the town or city?",
+      "metadata": {
+        "response_id": 4
+      }
+    },
+    {
+      "message_id": "message_3377b9d79220fbbed53bd14c",
+      "role": "user",
+      "created_timestamp": 1784637838809,
+      "content": "Yes, that's right"
+    },
+    {
+      "message_id": "message_6f3f9dd8fac1595005c8f091",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637840494,
+      "tool_call_id": "call_A46xk8pKE8ysnGhv66aiLVkj",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_c01220af4edddfe6395a82d6",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637840495,
+      "tool_call_id": "call_A46xk8pKE8ysnGhv66aiLVkj",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Robert\",\"classified_intent\":\"Annual Boiler Service\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":true,\"address_house_number\":\"25\",\"address_street\":\"Acacia Gardens\",\"address_postcode\":\"NE4 4DD\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_89cb27261d97bbb2bc9f351b",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637841489,
+      "tool_call_id": "call_b7dKLOyigyRijtqXcSGltKf0",
+      "name": "transition_to_address",
+      "arguments": "{}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_1466429cd9977a140577855d",
+      "role": "state_transition",
+      "created_timestamp": 1784637841490,
+      "former_state_name": "greeter",
+      "new_state_name": "address"
+    },
+    {
+      "message_id": "message_5a76debe2ce1d47e6ed223be",
+      "role": "agent",
+      "created_timestamp": 1784637842813,
+      "content": "Thanks. What\u2019s the town or city?",
+      "metadata": {
+        "response_id": 5
+      }
+    },
+    {
+      "message_id": "message_29b6570d3a3811f8efdbfc76",
+      "role": "user",
+      "created_timestamp": 1784637843678,
+      "content": "Today works"
+    },
+    {
+      "message_id": "message_a1d7dde9d59345b129d0448c",
+      "role": "agent",
+      "created_timestamp": 1784637845068,
+      "content": "Today noted. What\u2019s the town or city?",
+      "metadata": {
+        "response_id": 6
+      }
+    },
+    {
+      "message_id": "message_16b9f54f92c35dfb0a971cb2",
+      "role": "user",
+      "created_timestamp": 1784637845847,
+      "content": "Yes, book it"
+    },
+    {
+      "message_id": "message_e8f320b10e6cb141f958d662",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637848017,
+      "tool_call_id": "call_AFQMxJ3Gh0RxvcmIDqOQGWP4",
+      "name": "extract_address_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_4b451f097c6ec7997daba89e",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637848018,
+      "tool_call_id": "call_AFQMxJ3Gh0RxvcmIDqOQGWP4",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Robert\",\"problem_category\":\"Annual Boiler Service\",\"symptom_brief\":\"Customer requested a service\",\"error_code\":\"\",\"boiler_make\":\"\",\"address_postcode\":\"NE4 4DD\",\"address_house_number\":\"25\",\"address_street\":\"Acacia Gardens\",\"address_line1\":\"25 Acacia Gardens\",\"address_city\":\"\",\"address_confirmed\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_ec019eb29feab6e6d31af1e1",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637848898,
+      "tool_call_id": "call_r2tOTNCS3D5QdNDzAe0c8C8f",
+      "name": "transition_to_booking",
+      "arguments": "{}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_aa8032373e575c9a5343cec6",
+      "role": "state_transition",
+      "created_timestamp": 1784637848899,
+      "former_state_name": "address",
+      "new_state_name": "booking"
+    },
+    {
+      "message_id": "message_e57e06f2eebd0f0c289f5568",
+      "role": "agent",
+      "created_timestamp": 1784637850557,
+      "content": "I\u2019m checking the nearest slots now.",
+      "metadata": {
+        "response_id": 7
+      }
+    },
+    {
+      "message_id": "message_a444bb68fe79e77045ceb2be",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637850558,
+      "tool_call_id": "call_nVBGqDoyga6tcBgSGrxvIBpW",
+      "name": "check_availability",
+      "arguments": "{\"start_time\":\"2026-07-21T00:00:00\",\"end_time\":\"2026-07-22T23:59:00\",\"timezone\":\"Europe/London\",\"execution_message\":\"I\u2019m checking the nearest slots now.\"}",
+      "type": "check_availability_cal"
+    },
+    {
+      "message_id": "message_e5da0d390b9ffecc156bc605",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637851084,
+      "tool_call_id": "call_nVBGqDoyga6tcBgSGrxvIBpW",
+      "content": "{\"availability_for_selected_time\":[{\"date\":\"Tuesday, 2026 July 7/21/2026 British Summer Time\",\"availability_range\":[\"From 5:30 PM to 7:00 PM\"]},{\"date\":\"Wednesday, 2026 July 7/22/2026 British Summer Time\",\"availability_range\":[\"From 12:30 PM to 7:00 PM\"]}]}",
+      "successful": true
+    },
+    {
+      "message_id": "message_6d38d3b81623446019e80dee",
+      "role": "agent",
+      "created_timestamp": 1784637860758,
+      "content": "I\u2019ve got today from half five, or tomorrow from half twelve. Which suits?",
+      "metadata": {
+        "response_id": 8
+      }
+    },
+    {
+      "message_id": "message_4ed7179e831dc5de3e81e33b",
+      "role": "user",
+      "created_timestamp": 1784637861868,
+      "content": "That's all, thanks"
+    },
+    {
+      "message_id": "message_e5b19f76b32c38932d308d99",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637863551,
+      "tool_call_id": "call_3ll6kyTsfz1BcGUvEBbh9PhP",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_bd5ab6fa82a3cafaec6d5809",
+      "role": "tool_call_result",
+      "created_timestamp": 1784637863552,
+      "tool_call_id": "call_3ll6kyTsfz1BcGUvEBbh9PhP",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Robert\",\"classified_intent\":\"Annual Boiler Service\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":true,\"address_house_number\":\"25\",\"address_street\":\"Acacia Gardens\",\"address_postcode\":\"NE4 4DD\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_061a0dc6712371e9c0211303",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784637864715,
+      "tool_call_id": "call_krFPeBqiTnNJszxtEu9bJoe7",
+      "name": "end_call",
+      "arguments": "{}",
+      "type": "end_call"
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/c03e20620db85919a5df2e18949479816eb70bf577a0e3262c2ae8d8c4c69056/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "combined_cost": 22.3,
+    "product_costs": [
+      {
+        "unit_price": 2.6,
+        "product": "gpt_5_4_text_testing",
+        "cost": 20.8
+      },
+      {
+        "unit_price": 1.5,
+        "product": "gpt_4_1_text_testing",
+        "cost": 1.5
+      }
+    ]
+  },
+  "chat_analysis": {
+    "chat_summary": "The user requested an annual boiler service with a specific technician, Dave, and provided their name and address details. The agent confirmed the service type, gathered the necessary address information, and offered available appointment slots. The user ended the chat after receiving the options.",
+    "user_sentiment": "Positive",
+    "custom_analysis_data": {},
+    "chat_successful": true
+  },
+  "data_storage_setting": "everything"
+}

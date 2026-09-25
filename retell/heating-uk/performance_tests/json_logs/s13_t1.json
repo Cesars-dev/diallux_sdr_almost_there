@@ -1,0 +1,34 @@
+{
+  "scenario": 13,
+  "turn": 1,
+  "chat_id": "chat_2435ab661ddba42fbd234c2a97b",
+  "caller_message": "Hi, I think I smell gas near my boiler.",
+  "agent_messages": [
+    {
+      "message_id": "message_9167dcd0ffa241b47eb51613",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639651776,
+      "tool_call_id": "call_btJVU04KYWoTNkyQ1QuJrT6L",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_8c728a588df2182b986f995b",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639651777,
+      "tool_call_id": "call_btJVU04KYWoTNkyQ1QuJrT6L",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"Boiler Breakdown\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_0fab584d55a41c5680eff174",
+      "role": "agent",
+      "created_timestamp": 1784639652857,
+      "content": "Right \u2014 got it. If you smell gas, call 0800 111 999.",
+      "metadata": {
+        "response_id": 1
+      }
+    }
+  ]
+}

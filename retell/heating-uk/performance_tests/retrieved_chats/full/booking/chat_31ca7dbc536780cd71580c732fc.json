@@ -1,0 +1,317 @@
+{
+  "chat_id": "chat_31ca7dbc536780cd71580c732fc",
+  "chat_type": "api_chat",
+  "agent_id": "agent_ff9d4b9646a85b82d7ce8fd837",
+  "agent_version": 0,
+  "agent_name": "Multi State Agent",
+  "collected_dynamic_variables": {
+    "callback_requested": "false",
+    "classified_intent": "boiler breakdown",
+    "past_customer": "false",
+    "intent_confirmed": "true",
+    "address_postcode": "NE3 3CC",
+    "address_confirmed": "true",
+    "address_incomplete": "false",
+    "problem_category": "boiler breakdown",
+    "address_city": "Newcastle",
+    "boiler_make": "",
+    "address_house_number": "1",
+    "symptom_brief": "boiler not heating properly",
+    "current_agent_state": "booking",
+    "intent_clear": "true",
+    "address_line1": "1 High St",
+    "address_street": "High St",
+    "greeting_exchanged": "true",
+    "error_code": "",
+    "customer_name": "Emma",
+    "previous_agent_state": "address"
+  },
+  "chat_status": "ended",
+  "start_timestamp": 1784639445572,
+  "end_timestamp": 1784639482110,
+  "transcript": "User: Hi, I need a plumber. Wait \u2014 are you a real person or one of those AI things?\nAgent: {\"tool_uses\":[{\"recipient_name\":\"functions.extract_user_details\",\"parameters\":{\"customer_name\":\"\",\"classified_intent\":\"plumbing service request\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":false}}]}I'm Tom, the AI virtual receptionist. You're after a plumber \u2014 how can I help?\nUser: My name is Emma. I'm at 1 High St, NE3 3CC, Newcastle. The boiler's not heating properly.\nAgent: Emma, 1 High St, Newcastle \u2014 got it. Is it showing an error code?\nUser: Yes, that's correct\nAgent: I\u2019m checking the next available slots now.\nAgent: Right \u2014 boiler not heating properly. I\u2019ve got today at 6:30pm, or tomorrow at 4:30pm. Which suits?\nUser: Today works\nAgent: Right, today works. Emma, I\u2019ve got 1 High St, Newcastle \u2014 postcode N-E-3 3-C-C \u2014 today at 6:30pm. Sound okay?\nUser: Yes, book it\nAgent: Booking that in now.\nAgent: Brilliant, you're booked in. Is there anything else I can help you with?\nUser: That's all, thanks",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_d665426a7a86b76d5fdb4a20",
+      "role": "user",
+      "created_timestamp": 1784639446220,
+      "content": "Hi, I need a plumber. Wait \u2014 are you a real person or one of those AI things?"
+    },
+    {
+      "message_id": "message_c34c4780106547c4d1026025",
+      "role": "agent",
+      "created_timestamp": 1784639448307,
+      "content": "{\"tool_uses\":[{\"recipient_name\":\"functions.extract_user_details\",\"parameters\":{\"customer_name\":\"\",\"classified_intent\":\"plumbing service request\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":false}}]}I'm Tom, the AI virtual receptionist. You're after a plumber \u2014 how can I help?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_fb03bafa3ed7d817e402ca64",
+      "role": "user",
+      "created_timestamp": 1784639449131,
+      "content": "My name is Emma. I'm at 1 High St, NE3 3CC, Newcastle. The boiler's not heating properly."
+    },
+    {
+      "message_id": "message_52bedec2123cf3ebd98ac5d8",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639451488,
+      "tool_call_id": "call_KcW274S1ktNZ5NGwdmTVb6rH",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_dd1daaaba0ffdee97ed7fad2",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639451489,
+      "tool_call_id": "call_KcW274S1ktNZ5NGwdmTVb6rH",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Emma\",\"classified_intent\":\"boiler breakdown\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"1\",\"address_street\":\"High St\",\"address_postcode\":\"NE3 3CC\",\"address_city\":\"Newcastle\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_0a0d89e302b1f8916dfc5c52",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639452423,
+      "tool_call_id": "call_G0SMoTCv2WMo8c7PPkzOlODF",
+      "name": "transition_to_address",
+      "arguments": "{}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_5b9026accb6f0c9d08db56f8",
+      "role": "state_transition",
+      "created_timestamp": 1784639452424,
+      "former_state_name": "greeter",
+      "new_state_name": "address"
+    },
+    {
+      "message_id": "message_792a37c2a4e80b89d3303f4b",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639454097,
+      "tool_call_id": "call_E9GUyGTE7XDVyHewZISo6gXq",
+      "name": "extract_address_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_b1b0c1a8f9d0d83fdccc71e7",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639454098,
+      "tool_call_id": "call_E9GUyGTE7XDVyHewZISo6gXq",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Emma\",\"problem_category\":\"boiler breakdown\",\"symptom_brief\":\"boiler not heating properly\",\"error_code\":\"\",\"boiler_make\":\"\",\"address_postcode\":\"NE3 3CC\",\"address_house_number\":\"1\",\"address_street\":\"High St\",\"address_line1\":\"1 High St\",\"address_city\":\"Newcastle\",\"address_confirmed\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_f224dee5cb89f08a16558ce2",
+      "role": "agent",
+      "created_timestamp": 1784639455305,
+      "content": "Emma, 1 High St, Newcastle \u2014 got it. Is it showing an error code?",
+      "metadata": {
+        "response_id": 2
+      }
+    },
+    {
+      "message_id": "message_b476fa31b1b0cffc57d545d1",
+      "role": "user",
+      "created_timestamp": 1784639456373,
+      "content": "Yes, that's correct"
+    },
+    {
+      "message_id": "message_3b4ec8faa0a1591a0de730fa",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639458070,
+      "tool_call_id": "call_v4lxlRDLGsJpSyHHYvIFVGLm",
+      "name": "extract_address_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_d91f77a6c7e11617821b0a1e",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639458071,
+      "tool_call_id": "call_v4lxlRDLGsJpSyHHYvIFVGLm",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Emma\",\"problem_category\":\"boiler breakdown\",\"symptom_brief\":\"boiler not heating properly\",\"error_code\":\"\",\"boiler_make\":\"\",\"address_postcode\":\"NE3 3CC\",\"address_house_number\":\"1\",\"address_street\":\"High St\",\"address_line1\":\"1 High St\",\"address_city\":\"Newcastle\",\"address_confirmed\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_91df0dc975e32d5f896a5db2",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639459144,
+      "tool_call_id": "call_gnUW1bS7VdguJatExFI1jf5I",
+      "name": "transition_to_booking",
+      "arguments": "{}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_c7359344a0d1d962c5045dcd",
+      "role": "state_transition",
+      "created_timestamp": 1784639459145,
+      "former_state_name": "address",
+      "new_state_name": "booking"
+    },
+    {
+      "message_id": "message_974bd7ab54027ca42f48a821",
+      "role": "agent",
+      "created_timestamp": 1784639460620,
+      "content": "I\u2019m checking the next available slots now.",
+      "metadata": {
+        "response_id": 3
+      }
+    },
+    {
+      "message_id": "message_7aa079db0c0b69cf087c0196",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639460621,
+      "tool_call_id": "call_BxNM2hVKf7sg9REC5k0r1BED",
+      "name": "check_availability",
+      "arguments": "{\"start_time\":\"2026-07-21T00:00:00\",\"end_time\":\"2026-07-22T23:59:00\",\"timezone\":\"Europe/London\",\"execution_message\":\"I\u2019m checking the next available slots now.\"}",
+      "type": "check_availability_cal"
+    },
+    {
+      "message_id": "message_1bde12e9f3f9b1ecc924902a",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639461233,
+      "tool_call_id": "call_BxNM2hVKf7sg9REC5k0r1BED",
+      "content": "{\"availability_for_selected_time\":[{\"date\":\"Tuesday, 2026 July 7/21/2026 British Summer Time\",\"availability_range\":[\"From 6:30 PM to 7:00 PM\"]},{\"date\":\"Wednesday, 2026 July 7/22/2026 British Summer Time\",\"availability_range\":[\"From 4:30 PM to 7:00 PM\"]}]}",
+      "successful": true
+    },
+    {
+      "message_id": "message_43c71299e008a5c72696ac75",
+      "role": "agent",
+      "created_timestamp": 1784639464246,
+      "content": "Right \u2014 boiler not heating properly. I\u2019ve got today at 6:30pm, or tomorrow at 4:30pm. Which suits?",
+      "metadata": {
+        "response_id": 4
+      }
+    },
+    {
+      "message_id": "message_e20bee446689aa1e45eac22a",
+      "role": "user",
+      "created_timestamp": 1784639465056,
+      "content": "Today works"
+    },
+    {
+      "message_id": "message_7604b0231c4676e5bfeb8a76",
+      "role": "agent",
+      "created_timestamp": 1784639467474,
+      "content": "Right, today works. Emma, I\u2019ve got 1 High St, Newcastle \u2014 postcode N-E-3 3-C-C \u2014 today at 6:30pm. Sound okay?",
+      "metadata": {
+        "response_id": 5
+      }
+    },
+    {
+      "message_id": "message_bdfdac2e2985a09e3e08b4ca",
+      "role": "user",
+      "created_timestamp": 1784639468355,
+      "content": "Yes, book it"
+    },
+    {
+      "message_id": "message_0162a3503163f9f67a15ed19",
+      "role": "agent",
+      "created_timestamp": 1784639471280,
+      "content": "Booking that in now.",
+      "metadata": {
+        "response_id": 6
+      }
+    },
+    {
+      "message_id": "message_9772c8228e8bd57ec71ea112",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639471281,
+      "tool_call_id": "call_DRSik4vq2TWbr7byLQhSmNtb",
+      "name": "book_calendar",
+      "arguments": "{\"time\":\"2026-07-21T18:30:00\",\"timezone\":\"Europe/London\",\"name\":\"Emma\",\"email\":\"jaydiallux@gmail.com\",\"attendeePhoneNumber\":null,\"title\":\"boiler breakdown \u2014 Emma\",\"notes\":\"CUSTOMER: Emma | ADDRESS: 1 High St, Newcastle, NE3 3CC | PHONE: {{user_number}} | PROBLEM: boiler breakdown | SYMPTOMS: boiler not heating properly\",\"guests\":null,\"rescheduleReason\":null,\"execution_message\":\"Booking that in now.\"}",
+      "type": "book_appointment_cal"
+    },
+    {
+      "message_id": "message_d899347078c3858017ee8ab6",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639475212,
+      "tool_call_id": "call_DRSik4vq2TWbr7byLQhSmNtb",
+      "content": "{\"status\":\"Successfully booked an appointment.\",\"booking_id\":22744039,\"booking_uid\":\"dVyTCmUUQYg4wFnz3E9par\"}",
+      "successful": true
+    },
+    {
+      "message_id": "message_c24ec376e51dc89c4e56976d",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639476953,
+      "tool_call_id": "call_1QbngLghEXhjxnQPlebCvBSp",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_e9ef8dbc9e79d42806d41852",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639476954,
+      "tool_call_id": "call_1QbngLghEXhjxnQPlebCvBSp",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Emma\",\"classified_intent\":\"boiler breakdown\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"1\",\"address_street\":\"High St\",\"address_postcode\":\"NE3 3CC\",\"address_city\":\"Newcastle\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_baf6ea8e427227471bfb029b",
+      "role": "agent",
+      "created_timestamp": 1784639478388,
+      "content": "Brilliant, you're booked in. Is there anything else I can help you with?",
+      "metadata": {
+        "response_id": 7
+      }
+    },
+    {
+      "message_id": "message_1560472c7b67d35e3ddbe2eb",
+      "role": "user",
+      "created_timestamp": 1784639479144,
+      "content": "That's all, thanks"
+    },
+    {
+      "message_id": "message_998ba1d3fd343dca3fd326cf",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639480542,
+      "tool_call_id": "call_MsNL1HMShrLClexgWWs5ftHF",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_697f7a65fc6fbaa2e985f2bb",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639480543,
+      "tool_call_id": "call_MsNL1HMShrLClexgWWs5ftHF",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Emma\",\"classified_intent\":\"boiler breakdown\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"1\",\"address_street\":\"High St\",\"address_postcode\":\"NE3 3CC\",\"address_city\":\"Newcastle\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_4b7ad88a8f60a0b6bed633e2",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639482103,
+      "tool_call_id": "call_d1eEjkYgU2Su4hM8yriFpbPu",
+      "name": "end_call",
+      "arguments": "{}",
+      "type": "end_call"
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/81a200342bc6ea983b9c7ee06a5945f5abce3dc6aa51a00bbd556812fbc87035/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "combined_cost": 19.7,
+    "product_costs": [
+      {
+        "unit_price": 2.6,
+        "product": "gpt_5_4_text_testing",
+        "cost": 18.2
+      },
+      {
+        "unit_price": 1.5,
+        "product": "gpt_4_1_text_testing",
+        "cost": 1.5
+      }
+    ]
+  },
+  "chat_analysis": {
+    "chat_summary": "The user, Emma, requested a plumber for a boiler that was not heating properly at her address in Newcastle. The agent confirmed the details, offered available appointment slots, and successfully booked a plumber for the same day at 6:30pm. The user confirmed the booking and ended the chat satisfied.",
+    "user_sentiment": "Positive",
+    "custom_analysis_data": {},
+    "chat_successful": true
+  },
+  "data_storage_setting": "everything"
+}

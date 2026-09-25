@@ -1,0 +1,63 @@
+[
+  {
+    "description": "When contact_details_completed, first_name, last_name, company_name, prospect_timezone, callback_number, is_calling_best_number are all filled, transition to Booking.",
+    "speak_during_transition": false,
+    "destination_state_name": "Booking",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "first_name": {
+          "type": "string",
+          "description": "Prospect's first name"
+        },
+        "last_name": {
+          "type": "string",
+          "description": "Prospect's last name"
+        },
+        "company_name": {
+          "type": "string",
+          "description": "Company / business name"
+        },
+        "prospect_timezone": {
+          "type": "string",
+          "enum": [
+            "America/New_York",
+            "America/Chicago",
+            "America/Denver",
+            "America/Los_Angeles"
+          ],
+          "description": "Prospect's timezone in IANA format"
+        },
+        "callback_number": {
+          "type": "string",
+          "description": "The confirmed contact phone number (original inbound number or the alternate the user provided). Always populated."
+        },
+        "is_calling_best_number": {
+          "type": "boolean",
+          "description": "True if the calling number is best; False if an alternate was provided."
+        },
+        "industry": {
+          "type": "string",
+          "description": "Business industry (for booking notes)"
+        },
+        "pain_points": {
+          "type": "string",
+          "description": "Comma-separated challenges (for booking notes)"
+        },
+        "contact_details_completed": {
+          "type": "boolean",
+          "description": "true ONLY after: When first name, last name, company, timezone and best number are all collected and verified."
+        }
+      },
+      "required": [
+        "contact_details_completed",
+        "first_name",
+        "last_name",
+        "company_name",
+        "prospect_timezone",
+        "callback_number",
+        "is_calling_best_number"
+      ]
+    }
+  }
+]

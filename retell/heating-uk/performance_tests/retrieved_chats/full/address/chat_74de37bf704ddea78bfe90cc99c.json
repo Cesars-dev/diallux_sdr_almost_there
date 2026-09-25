@@ -1,0 +1,199 @@
+{
+  "chat_id": "chat_74de37bf704ddea78bfe90cc99c",
+  "chat_type": "api_chat",
+  "agent_id": "agent_ff9d4b9646a85b82d7ce8fd837",
+  "agent_version": 0,
+  "agent_name": "Multi State Agent",
+  "collected_dynamic_variables": {
+    "callback_requested": "false",
+    "classified_intent": "Annual Boiler Service",
+    "past_customer": "true",
+    "intent_confirmed": "true",
+    "address_postcode": "",
+    "address_confirmed": "true",
+    "problem_category": "Annual Boiler Service",
+    "address_city": "",
+    "boiler_make": "",
+    "address_house_number": "14",
+    "current_agent_state": "address",
+    "symptom_brief": "Annual service due again",
+    "intent_clear": "true",
+    "address_line1": "14 Victoria Terrace",
+    "address_street": "Victoria Terrace",
+    "greeting_exchanged": "true",
+    "error_code": "",
+    "customer_name": "Linda",
+    "previous_agent_state": "greeter"
+  },
+  "chat_status": "ended",
+  "start_timestamp": 1784633726995,
+  "end_timestamp": 1784633743897,
+  "transcript": "User: Hi Tom, it's Linda \u2014 we did a service with you last March, time for the annual one again.\nAgent: Linda, annual service again \u2014 got it. What\u2019s the postcode?\nUser: Yes, same address \u2014 14 Victoria Terrace. Same as last time.\nAgent: 14 Victoria Terrace \u2014 lovely. What\u2019s the postcode?\nUser: Thursday afternoon works\nAgent: Right \u2014 before booking, what\u2019s the postcode?\nUser: Yes, sounds good\nAgent: Perfect. I still need the postcode to book it.\nUser: No, that's all thanks. Bye!",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_c5931c26505010a3375ad87e",
+      "role": "user",
+      "created_timestamp": 1784633727620,
+      "content": "Hi Tom, it's Linda \u2014 we did a service with you last March, time for the annual one again."
+    },
+    {
+      "message_id": "message_59aacf55d03e3304c14e1344",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784633729469,
+      "tool_call_id": "call_l1lrZCXQefKpm6N4bWWB798P",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_248b0657a08d38ae5edbfbb5",
+      "role": "tool_call_result",
+      "created_timestamp": 1784633729470,
+      "tool_call_id": "call_l1lrZCXQefKpm6N4bWWB798P",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Linda\",\"classified_intent\":\"Annual Boiler Service\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":true,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_74773c92d5a25ff37ba340da",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784633730670,
+      "tool_call_id": "call_NYaZ54PQgXPyidHTmvX5cWha",
+      "name": "transition_to_address",
+      "arguments": "{}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_919b7537cd321f87267779d1",
+      "role": "state_transition",
+      "created_timestamp": 1784633730671,
+      "former_state_name": "greeter",
+      "new_state_name": "address"
+    },
+    {
+      "message_id": "message_e96edd034a51da52a9fe3567",
+      "role": "agent",
+      "created_timestamp": 1784633731940,
+      "content": "Linda, annual service again \u2014 got it. What\u2019s the postcode?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_e0272c13a1a5f526136680d7",
+      "role": "user",
+      "created_timestamp": 1784633732744,
+      "content": "Yes, same address \u2014 14 Victoria Terrace. Same as last time."
+    },
+    {
+      "message_id": "message_8b2ea0da2bcba9f6ceff3445",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784633735170,
+      "tool_call_id": "call_cB1kAWOeZhmr5W8ykMbGLIhA",
+      "name": "extract_address_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_734438cea122cb29a1e796e0",
+      "role": "tool_call_result",
+      "created_timestamp": 1784633735171,
+      "tool_call_id": "call_cB1kAWOeZhmr5W8ykMbGLIhA",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Linda\",\"problem_category\":\"Annual Boiler Service\",\"symptom_brief\":\"Annual service due again\",\"error_code\":\"\",\"boiler_make\":\"\",\"address_postcode\":\"\",\"address_house_number\":\"14\",\"address_street\":\"Victoria Terrace\",\"address_line1\":\"14 Victoria Terrace\",\"address_city\":\"\",\"address_confirmed\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_bc875410f09d6cd6ebb6bdba",
+      "role": "agent",
+      "created_timestamp": 1784633736289,
+      "content": "14 Victoria Terrace \u2014 lovely. What\u2019s the postcode?",
+      "metadata": {
+        "response_id": 2
+      }
+    },
+    {
+      "message_id": "message_24270f7ce811b785bd0d7356",
+      "role": "user",
+      "created_timestamp": 1784633737100,
+      "content": "Thursday afternoon works"
+    },
+    {
+      "message_id": "message_af1ce19a54e871ccb1c2d33a",
+      "role": "agent",
+      "created_timestamp": 1784633738161,
+      "content": "Right \u2014 before booking, what\u2019s the postcode?",
+      "metadata": {
+        "response_id": 3
+      }
+    },
+    {
+      "message_id": "message_5e9ef7de4b27e3289f25a1b1",
+      "role": "user",
+      "created_timestamp": 1784633738996,
+      "content": "Yes, sounds good"
+    },
+    {
+      "message_id": "message_18aabdc5e0d4b9fa21f7421d",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784633740566,
+      "tool_call_id": "call_mxdWKuWiYOQlaqln1LJav8LT",
+      "name": "extract_address_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_9a5acbfd5bf67dc9ff78c518",
+      "role": "tool_call_result",
+      "created_timestamp": 1784633740567,
+      "tool_call_id": "call_mxdWKuWiYOQlaqln1LJav8LT",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Linda\",\"problem_category\":\"Annual Boiler Service\",\"symptom_brief\":\"Annual service due again\",\"error_code\":\"\",\"boiler_make\":\"\",\"address_postcode\":\"\",\"address_house_number\":\"14\",\"address_street\":\"Victoria Terrace\",\"address_line1\":\"14 Victoria Terrace\",\"address_city\":\"\",\"address_confirmed\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_41f11c5fb783ada5e9e8c680",
+      "role": "agent",
+      "created_timestamp": 1784633741837,
+      "content": "Perfect. I still need the postcode to book it.",
+      "metadata": {
+        "response_id": 4
+      }
+    },
+    {
+      "message_id": "message_64236237feee29433ea68b9b",
+      "role": "user",
+      "created_timestamp": 1784633742711,
+      "content": "No, that's all thanks. Bye!"
+    },
+    {
+      "message_id": "message_0af4c61936f5618a1993e238",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784633743891,
+      "tool_call_id": "call_CMzs8RImOlMVgioYLZLH2EEH",
+      "name": "end_call",
+      "arguments": "{}",
+      "type": "end_call"
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/137208451efa3f13f25e768f7b3165cf5a309c0a777ae3882b755110dac03624/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "combined_cost": 11.9,
+    "product_costs": [
+      {
+        "unit_price": 2.6,
+        "product": "gpt_5_4_text_testing",
+        "cost": 10.4
+      },
+      {
+        "unit_price": 1.5,
+        "product": "gpt_4_1_text_testing",
+        "cost": 1.5
+      }
+    ]
+  },
+  "chat_analysis": {
+    "chat_summary": "Linda contacted the agent to schedule her annual boiler service at the same address as last year. The agent repeatedly requested the postcode, but the user did not provide it and ended the conversation without completing the booking.",
+    "user_sentiment": "Neutral",
+    "custom_analysis_data": {},
+    "chat_successful": false
+  },
+  "data_storage_setting": "everything"
+}

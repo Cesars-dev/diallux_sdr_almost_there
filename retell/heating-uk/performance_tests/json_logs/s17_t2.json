@@ -1,0 +1,67 @@
+{
+  "scenario": 17,
+  "turn": 2,
+  "chat_id": "chat_ad6295d9b5e16e112226c1938d5",
+  "caller_message": "Priya",
+  "agent_messages": [
+    {
+      "message_id": "message_37b7dd67638738e34f1112e0",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638697823,
+      "tool_call_id": "call_4iAZgmFUy6ydUwnK1aEp5f2w",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_0c3ab6840299a98326889250",
+      "role": "tool_call_result",
+      "created_timestamp": 1784638697824,
+      "tool_call_id": "call_4iAZgmFUy6ydUwnK1aEp5f2w",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Priya\",\"classified_intent\":\"Annual Boiler Service\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_0d7e5b62c2f412be094d2859",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638699244,
+      "tool_call_id": "call_1WWUNvy7AYgsVAgGdy9fvO7p",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_5d5f8cf16f8fe7f94f692e03",
+      "role": "tool_call_result",
+      "created_timestamp": 1784638699245,
+      "tool_call_id": "call_1WWUNvy7AYgsVAgGdy9fvO7p",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Priya\",\"classified_intent\":\"Annual Boiler Service\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_e0de1c40f795475a67a1aefd",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638700094,
+      "tool_call_id": "call_0JN3MAikvRArOvsAgVaYS5Vc",
+      "name": "transition_to_address",
+      "arguments": "{}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_a901132d47ff843b49b0e462",
+      "role": "state_transition",
+      "created_timestamp": 1784638700095,
+      "former_state_name": "greeter",
+      "new_state_name": "address"
+    },
+    {
+      "message_id": "message_54888b50644f9947f71f3a75",
+      "role": "agent",
+      "created_timestamp": 1784638701373,
+      "content": "Priya, thanks. Just confirming, this is for an annual boiler service. Right.",
+      "metadata": {
+        "response_id": 2
+      }
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "scenario": 2,
+  "turn": 8,
+  "chat_id": "chat_e835587b8c4e27d962a033f1aff",
+  "caller_message": "Tomorrow works",
+  "agent_messages": [
+    {
+      "message_id": "message_515a63686d33310c1be8c74a",
+      "role": "agent",
+      "created_timestamp": 1784639747470,
+      "content": "I\u2019m checking tomorrow\u2019s slots now.",
+      "metadata": {
+        "response_id": 9
+      }
+    },
+    {
+      "message_id": "message_4f5117134e04c4bc29740f94",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639747471,
+      "tool_call_id": "call_zI0YJ99j9ptQZIjqE4zBaRTd",
+      "name": "check_availability",
+      "arguments": "{\"start_time\":\"2026-07-22T00:00:00\",\"end_time\":\"2026-07-23T23:59:00\",\"timezone\":\"Europe/London\",\"execution_message\":\"I\u2019m checking tomorrow\u2019s slots now.\"}",
+      "type": "check_availability_cal"
+    },
+    {
+      "message_id": "message_51da9dcd66df26f1239227d0",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639748099,
+      "tool_call_id": "call_zI0YJ99j9ptQZIjqE4zBaRTd",
+      "content": "{\"availability_for_selected_time\":[{\"date\":\"Wednesday, 2026 July 7/22/2026 British Summer Time\",\"availability_range\":[\"From 5:30 PM to 7:00 PM\"]},{\"date\":\"Thursday, 2026 July 7/23/2026 British Summer Time\",\"availability_range\":[\"From 9:00 AM to 7:00 PM\"]}]}",
+      "successful": true
+    },
+    {
+      "message_id": "message_322082f71c1c1edbbe05f826",
+      "role": "agent",
+      "created_timestamp": 1784639749541,
+      "content": "Tomorrow works \u2014 good. I can do Wednesday 5:30 to 7, or Thursday morning. Which suits?",
+      "metadata": {
+        "response_id": 10
+      }
+    }
+  ]
+}

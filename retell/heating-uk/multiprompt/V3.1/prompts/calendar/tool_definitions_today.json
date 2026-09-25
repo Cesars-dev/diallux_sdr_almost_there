@@ -1,0 +1,191 @@
+{
+  "general_tools": [],
+  "states": {
+    "slot_selection": {
+      "tools": [
+        {
+          "type": "custom",
+          "name": "check_availability",
+          "description": "To query available appointment slots on the calendar.\n\nCRITICAL: This tool ALWAYS returns HTTP 200. A 200 does NOT mean success — you must READ the body and act on its contents, never assume.\n\nOn SUCCESS the body is: {\"ok\": true, \"slots\": [{\"day\": \"YYYY-MM-DD\", \"time\": \"YYYY-MM-DDTHH:MM:SS\", \"iso\": \"YYYY-MM-DDTHH:MM:SS.000Z\"}, ...]}\n- \"time\" = The value for booking.\n- \"iso\" = Reference only, not needed.\n- ONLY offer/book slots literally in the slots list.\n\nOn ERROR the body is: {\"ok\": false, \"error\": \"CODE\", \"message\": \"explanation\"} — please correct the call and retry:\n- \"no_start_time\": the day argument was missing. Retry with a concrete YYYY-MM-DD date.\n- \"invalid_slot_target_date\": the date was missformatted. Retry with a valid YYYY-MM-DD date.\n- \"no_availability_in_window\": no free slots in that window. Check the next available day and offer its closest slots.\n- \"upstream_unavailable\": the calendar is temporarily down. Say you'll retry shortly, then retry.",
+          "url": "https://slots.diallux-ai.site/check_availability",
+          "method": "POST",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "account_id": {
+        "type": "string",
+        "description": "Which calendar account to use. Fixed per agent — do not change.",
+        "default": "diallux"
+      },
+      "slot_target_date": {
+        "type": "string",
+        "description": "ISO date (YYYY-MM-DD) of the day the caller wants a slot for."
+      }
+    }
+  },
+  "args_at_root": true,
+  "speak_after_execution": false
+        },
+        {
+          "name": "extract_slot_details",
+          "description": "Extract the selected slot details. Pass actual values \u2014 never empty arguments.",
+          "variables": [
+            {
+              "name": "selected_slot_start",
+              "type": "string",
+              "description": "ISO 8601 UTC with Z suffix \u2014 the exact start time from check_availability result. Required for transition."
+            },
+            {
+              "name": "selected_slot_label",
+              "type": "string",
+              "description": "The spoken form used when offering the slot, e.g. 'Thursday at 2 PM'"
+            }
+          ],
+          "type": "extract_dynamic_variable",
+          "speak_after_execution": false
+        },
+        {
+          "name": "trigger_slot_transition",
+          "description": "Trigger the transition to confirmation. Call ONLY after extract_slot_details has been called with non-null values.",
+          "variables": [
+            {
+              "name": "slot_selected",
+              "type": "boolean",
+              "description": "Set to true to transition to confirmation"
+            }
+          ],
+          "type": "extract_dynamic_variable",
+          "speak_after_execution": false
+        }
+      ]
+    },
+    "confirmation": {
+      "tools": [
+        {
+          "type": "custom",
+          "name": "check_availability",
+          "description": "To query available appointment slots on the calendar.\n\nCRITICAL: This tool ALWAYS returns HTTP 200. A 200 does NOT mean success — you must READ the body and act on its contents, never assume.\n\nOn SUCCESS the body is: {\"ok\": true, \"slots\": [{\"day\": \"YYYY-MM-DD\", \"time\": \"YYYY-MM-DDTHH:MM:SS\", \"iso\": \"YYYY-MM-DDTHH:MM:SS.000Z\"}, ...]}\n- \"time\" = The value for booking.\n- \"iso\" = Reference only, not needed.\n- ONLY offer/book slots literally in the slots list.\n\nOn ERROR the body is: {\"ok\": false, \"error\": \"CODE\", \"message\": \"explanation\"} — please correct the call and retry:\n- \"no_start_time\": the day argument was missing. Retry with a concrete YYYY-MM-DD date.\n- \"invalid_slot_target_date\": the date was missformatted. Retry with a valid YYYY-MM-DD date.\n- \"no_availability_in_window\": no free slots in that window. Check the next available day and offer its closest slots.\n- \"upstream_unavailable\": the calendar is temporarily down. Say you'll retry shortly, then retry.",
+          "url": "https://slots.diallux-ai.site/check_availability",
+          "method": "POST",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "account_id": {
+        "type": "string",
+        "description": "Which calendar account to use. Fixed per agent — do not change.",
+        "default": "diallux"
+      },
+      "slot_target_date": {
+        "type": "string",
+        "description": "ISO date (YYYY-MM-DD) of the day the caller wants a slot for."
+      }
+    }
+  },
+  "args_at_root": true,
+  "speak_after_execution": false
+        },
+        {
+          "name": "extract_confirm_details",
+          "description": "Extract and lock in confirmation details. Pass actual values \u2014 never empty arguments.",
+          "variables": [
+            {
+              "name": "selected_slot_start",
+              "type": "string",
+              "description": "ISO 8601 UTC with Z suffix \u2014 the new slot start time"
+            },
+            {
+              "name": "selected_slot_label",
+              "type": "string",
+              "description": "The new spoken form, e.g. 'Friday at 10 AM'"
+            },
+            {
+              "name": "booking_slot_string",
+              "type": "string",
+              "description": "Copy the exact value of selected_slot_start (ISO 8601 UTC). Required for transition."
+            }
+          ],
+          "type": "extract_dynamic_variable",
+          "speak_after_execution": false
+        },
+        {
+          "name": "trigger_confirm_transition",
+          "description": "Trigger the transition to booking. Call ONLY after extract_confirm_details has been called and customer has confirmed.",
+          "variables": [
+            {
+              "name": "booking_confirmed",
+              "type": "boolean",
+              "description": "Set to true ONLY after customer has confirmed the slot"
+            }
+          ],
+          "type": "extract_dynamic_variable",
+          "speak_after_execution": false
+        },
+        {
+          "name": "explicit_confirmation",
+          "description": "set explicit_confirmation to true ONLY when the customer has verbally confirmed the exact slot that was read back. Never set it to true after the customer merely gives a name or phone number, or says anything that is not an absolute clear yes. If there is no explicit verbal agreement, set it to false. --",
+          "variables": [
+            {
+              "name": "explicit_confirmation",
+              "type": "boolean",
+              "description": "true ONLY when the customer verbally confirmed/agreed to the slot offered"
+            }
+          ],
+          "type": "extract_dynamic_variable",
+          "speak_after_execution": false
+        }
+      ]
+    },
+    "booking": {
+      "tools": [
+        {
+          "type": "book_appointment_cal",
+          "name": "book_calendar",
+          "description": "Book a confirmed appointment via Cal.com.",
+          "cal_api_key": "${CAL_KEY_3}",
+          "event_type_id": 6522694,
+          "timezone": "Europe/London",
+          "cal_fields": [
+            {
+              "name": "name",
+              "description": "attendee name",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "email",
+              "description": "attendee email",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "attendeePhoneNumber",
+              "description": "attendeePhoneNumber (E.164 format)",
+              "type": "string",
+              "required": false
+            },
+            {
+              "name": "title",
+              "description": "event title",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "notes",
+              "description": "notes",
+              "type": "string",
+              "required": false
+            },
+            {
+              "name": "location",
+              "description": "address of the appointment",
+              "type": "string",
+              "required": false
+            }
+          ],
+          "location_type": "somewhereElse",
+          "speak_after_execution": false
+        }
+      ]
+    }
+  }
+}

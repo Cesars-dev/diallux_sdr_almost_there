@@ -1,0 +1,33 @@
+{
+  "source": "Retell built-in tool book_appointment_cal → Cal.com API",
+  "note": "Retell handles the Cal.com API call server-side. This is the Retell tool_call_invocation payload that maps to what Cal.com received.",
+
+  "retell_tool_call_arguments": {
+    "name": "Dave Smith",
+    "email": "no-email@example.com",
+    "attendeePhoneNumber": "+447700900567",
+    "title": "Boiler Breakdown — Dave Smith",
+    "notes": "CUSTOMER: Dave Smith | ADDRESS: 14 Victoria Terrace, Newcastle, NE4 5AB | PHONE: 07700 900567 | PROBLEM: Boiler Breakdown | SYMPTOMS: No heating, boiler not working",
+    "start": "2026-07-21T08:30:00Z",
+    "timeZone": "Europe/London"
+  },
+
+  "mapped_to_calcom_v2_api": {
+    "endpoint": "POST https://api.cal.com/v2/bookings",
+    "body": {
+      "eventTypeId": 6389911,
+      "start": "2026-07-21T08:30:00Z",
+      "attendee": {
+        "name": "Dave Smith",
+        "email": "no-email@example.com",
+        "timeZone": "Europe/London",
+        "language": "en",
+        "phoneNumber": "+447700900567"
+      },
+      "location": "integration",
+      "metadata": {
+        "source": "retell-ai"
+      }
+    }
+  }
+}

@@ -1,0 +1,67 @@
+CALLER: Hi — I saw your ad on Facebook about answering missed calls. I keep losing patients after hours, so I'm curious how it works.
+  [extract_intake_details]
+  [intake_completed]
+  [transition_to_Discovery]
+  [extract_discovery_details]
+AGENT: Got it, that makes total sense — after-hours is where a lot of revenue quietly disappears. So before I explain how it works, can you tell me a bit about your practice — what kind of patients you see and whether you’re solo or have a team answering the phones during the day?
+CALLER: I own Bright Smile Dental in Chicago; we see general dentistry patients. My front-desk team handles calls until 5pm.
+  [extract_discovery_details]
+AGENT: Mhm, that helps a lot, thanks for sharing. So after 5pm right now, when someone calls Bright Smile Dental with, say, a broken tooth or an urgent issue, what actually happens to that call — does it go to voicemail, an answering service, or just ring out?
+CALLER: After 5pm, calls go straight to voicemail, and we miss about 20 calls weekly.
+  [extract_discovery_details]
+  [discovery_completed]
+  [transition_to_Closer]
+AGENT: Yeah, that’s a lot of patients slipping through the cracks every week. And those 20 people who hit voicemail instead of a human — do they typically leave a message and wait, or are they more likely to just call the next dentist who’s open?
+CALLER: They often don't leave a message, and I'm worried they call the next available dentist instead.
+  [extract_closer_details]
+AGENT: Yeah, I hear you—that’s exactly where practices quietly lose patients and revenue. Has anyone ever walked you through what those missed calls are actually costing you each month, using your numbers?
+CALLER: No, I haven't had that analysis done. But I'm sure it's significant, given our appointment value.
+AGENT: Makes sense, most practices haven’t actually seen the numbers laid out. So, mind if we do a quick calculation together—takes like 30 seconds and we’ll use only your numbers?
+CALLER: Sure, let's do it. I estimate about half of those missed calls would book if someone answered.
+  [extract_leak_inputs]
+  [calculate_monthly_leak]
+AGENT: Got it, that’s helpful—about half would book if you caught them. So, ballpark, what’s your average appointment value for those patients—are we closer to $200, $300, or $400 per visit?
+CALLER: Our average appointment value is around $650.
+  [extract_leak_inputs]
+  [calculate_monthly_leak]
+  [extract_closer_details]
+  [closer_completed]
+  [transition_to_Offer]
+AGENT: Alright, so with your numbers, you’re quietly losing about $6,500 a week — roughly $28,000 a month — just from those missed calls after 5pm. So… would you be open to a quick 20‑minute walkthrough this week where we show you exactly how we stop those missed calls from turning into lost patients and what that could look like for Bright Smile Dental?
+CALLER: Yes, please book the live call so I can see how it works for Bright Smile Dental.
+  [extract_offer_details]
+  [offer_completed]
+  [transition_to_contact_details]
+  [extract_person_details]
+AGENT: Nice, that makes sense — we’ll walk through exactly how we stop those missed calls from turning into lost patients. First thing, what’s your first name?
+CALLER: My first name is Maria.
+  [extract_person_details]
+AGENT: Got it, Maria, thank you. And what’s your last name?
+CALLER: My last name is Gonzales.
+  [extract_person_details]
+  [extract_reach_details]
+AGENT: Perfect, Maria Gonzales at Bright Smile Dental — thanks. Quick check: you’re in Chicago, so you’re on Central time, right?
+CALLER: Yes, that's correct. I'm in Chicago, so I'm on Central time.
+  [extract_contact_timezone]
+  [contact_details_completed]
+  [transition_to_ConfirmSlots]
+  [check_current_date]
+AGENT: Alright, perfect, Central time. One moment while I check availability — would you prefer later today or tomorrow for the demo?
+CALLER: Tomorrow would be great. Please let me know what afternoon times are available.
+  [query_livecall_slots]
+AGENT: Makes sense, tomorrow afternoon works. I can get you in as soon as 2:30 or 3:15 tomorrow, Central time — which one fits better with your schedule?
+CALLER: Let's book it for 3:15 tomorrow, Central time.
+  [extract_confirm_details]
+  [verify_info]
+  [extract_slot_verified]
+  [transition_to_Booking]
+AGENT: One moment while I confirm that on our calendar.
+  [create_livecall_booking]
+  [record_booking_uid]
+  [validate_booking]
+  [record_booking_outcome]
+  [transition_to_Closing]
+AGENT: Thanks, Maria! You’re all set for tomorrow at 3:15 Central with Jay to walk through how we stop those missed calls from turning into lost patients at Bright Smile Dental. You’ll get an SMS confirmation with all the details — you can add it to your calendar in one tap or reschedule if something comes up.
+Is there anything else I can help you with today?
+Really glad you called. Jay’s looking forward to it. Have a great rest of your day. Bye!
+  [end_call]

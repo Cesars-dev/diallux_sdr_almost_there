@@ -1,0 +1,131 @@
+{
+  "chat_id": "chat_c077c1528e41b0cd5373fa85339",
+  "chat_type": "api_chat",
+  "agent_id": "agent_ff9d4b9646a85b82d7ce8fd837",
+  "agent_version": 0,
+  "agent_name": "Multi State Agent",
+  "collected_dynamic_variables": {
+    "callback_requested": "false",
+    "classified_intent": "Annual Boiler Service",
+    "past_customer": "true",
+    "intent_confirmed": "true",
+    "address_postcode": "",
+    "address_city": "",
+    "address_house_number": "",
+    "current_agent_state": "address",
+    "intent_clear": "true",
+    "address_street": "",
+    "greeting_exchanged": "true",
+    "customer_name": "Robert",
+    "previous_agent_state": "greeter"
+  },
+  "chat_status": "ended",
+  "start_timestamp": 1784633446726,
+  "end_timestamp": 1784633457069,
+  "transcript": "User: Hi, I need a service. Can Dave come out? He did our boiler last year.\nAgent: Annual service, and Dave saw you last year \u2014 lovely. What's your name?\nUser: Robert\nAgent: Robert \u2014 got it. Just to confirm, this is for an annual boiler service?",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_d189d55df7df9cc88f913659",
+      "role": "user",
+      "created_timestamp": 1784633447402,
+      "content": "Hi, I need a service. Can Dave come out? He did our boiler last year."
+    },
+    {
+      "message_id": "message_6a29b8809c77b79a4d9ad8ed",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784633448901,
+      "tool_call_id": "call_Q9bmxko0e5rIt73S3jY5xrwj",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_70c9cdb7d0e172a0848d565e",
+      "role": "tool_call_result",
+      "created_timestamp": 1784633448902,
+      "tool_call_id": "call_Q9bmxko0e5rIt73S3jY5xrwj",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"Annual Boiler Service\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":true,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_b0445ea002b474d900622648",
+      "role": "agent",
+      "created_timestamp": 1784633450300,
+      "content": "Annual service, and Dave saw you last year \u2014 lovely. What's your name?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_03f197699f6e105aa3b2d43b",
+      "role": "user",
+      "created_timestamp": 1784633451175,
+      "content": "Robert"
+    },
+    {
+      "message_id": "message_27b4e4d0db1020e976dd338c",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784633452843,
+      "tool_call_id": "call_OOx0eKLjWKA2HYevwvD7TYrv",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_0c84110e586c82449c216a75",
+      "role": "tool_call_result",
+      "created_timestamp": 1784633452844,
+      "tool_call_id": "call_OOx0eKLjWKA2HYevwvD7TYrv",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Robert\",\"classified_intent\":\"Annual Boiler Service\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":true,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_e2862acfbc7837363f0a62ab",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784633453727,
+      "tool_call_id": "call_cYNyFPuoBa6aBPYa1o6kBgNZ",
+      "name": "transition_to_address",
+      "arguments": "{}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_79fc9554cfaf84bb68746959",
+      "role": "state_transition",
+      "created_timestamp": 1784633453728,
+      "former_state_name": "greeter",
+      "new_state_name": "address"
+    },
+    {
+      "message_id": "message_6223708d69b0207501da145a",
+      "role": "agent",
+      "created_timestamp": 1784633456247,
+      "content": "Robert \u2014 got it. Just to confirm, this is for an annual boiler service?",
+      "metadata": {
+        "response_id": 2
+      }
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/8f9a49af7747a3236c8000ab4c82b1f5d35efc2a4542cc7cb58b29863f037344/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "combined_cost": 6.7,
+    "product_costs": [
+      {
+        "unit_price": 2.6,
+        "product": "gpt_5_4_text_testing",
+        "cost": 5.2
+      },
+      {
+        "unit_price": 1.5,
+        "product": "gpt_4_1_text_testing",
+        "cost": 1.5
+      }
+    ]
+  },
+  "chat_analysis": {
+    "chat_summary": "The user requested an annual boiler service and specifically asked for Dave, who serviced their boiler last year. The agent confirmed the user's name as Robert and clarified the service request, moving the conversation forward to confirm the details.",
+    "user_sentiment": "Positive",
+    "custom_analysis_data": {},
+    "chat_successful": true
+  },
+  "data_storage_setting": "everything"
+}

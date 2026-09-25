@@ -1,0 +1,75 @@
+[
+  {
+    "type": "extract_dynamic_variable",
+    "variables": [
+      {
+        "description": "Prospect's first name (may already exist from an earlier capture)",
+        "type": "string",
+        "name": "first_name"
+      },
+      {
+        "description": "Prospect's last name",
+        "name": "last_name",
+        "type": "string"
+      },
+      {
+        "type": "string",
+        "name": "company_name",
+        "description": "Company / business name (may already exist from an earlier capture)"
+      }
+    ],
+    "name": "extract_person_details",
+    "speak_after_execution": false,
+    "description": "Capture the caller's identity the moment it surfaces, in their own words: first_name (required), last_name (ask, optional - never invent), company_name."
+  },
+  {
+    "name": "extract_reach_details",
+    "description": "Contact facts. callback_number: the caller's contact number in E.164 (+1XXXXXXXXXX). Update it when the caller gives an alternate number or when validate_lead returns a suggestion for it.",
+    "speak_after_execution": false,
+    "variables": [
+      {
+        "description": "The prospect's contact number, seeded from the inbound call webhook. Update to the alternate number only when is_calling_best_number = false.",
+        "name": "callback_number",
+        "type": "string"
+      },
+      {
+        "description": "True if the user confirmed the number they're calling from is the best contact number. False if they provided an alternate number instead.",
+        "type": "boolean",
+        "name": "is_calling_best_number"
+      }
+    ],
+    "type": "extract_dynamic_variable"
+  },
+  {
+    "type": "extract_dynamic_variable",
+    "name": "extract_contact_timezone",
+    "speak_after_execution": true,
+    "variables": [
+      {
+        "type": "enum",
+        "choices": [
+          "America/New_York",
+          "America/Chicago",
+          "America/Denver",
+          "America/Los_Angeles"
+        ],
+        "name": "prospect_timezone",
+        "description": "One of: America/New_York | America/Chicago | America/Denver | America/Los_Angeles — mapped from the prospect's spoken friendly zone per the conversion table in this tool's description."
+      }
+    ],
+    "description": "Capture `{{prospect_timezone}}`. The prospect NEVER speaks IANA — they speak friendly names. Convert using this EXACT table, no guessing:\n• says \"Eastern\", \"EST\", \"EDT\" or \"New York time\" → store \"America/New_York\"\n• says \"Central\", \"CST\", \"CDT\" or \"Chicago time\" → store \"America/Chicago\"\n• says \"Mountain\", \"MST\", \"MDT\" or \"Denver time\" → store \"America/Denver\"\n• says \"Pacific\", \"PST\", \"PDT\" or \"LA / California time\" → store \"America/Los_Angeles\"\nConfirm with a yes/no question when possible (<So that's Central time, correct?>). If their zone is none of these four or unclear, ask which city they're near and match it to the closest of the four. Store ONLY these exact values."
+  },
+  {
+    "description": "Set contact_details_completed to true ONLY after: When first name, last name, company, timezone and best number are all collected and verified. Do not set it early.",
+    "variables": [
+      {
+        "type": "boolean",
+        "name": "contact_details_completed",
+        "description": "true ONLY after: When first name, last name, company, timezone and best number are all collected and verified."
+      }
+    ],
+    "name": "contact_details_completed",
+    "type": "extract_dynamic_variable",
+    "speak_after_execution": false
+  }
+]

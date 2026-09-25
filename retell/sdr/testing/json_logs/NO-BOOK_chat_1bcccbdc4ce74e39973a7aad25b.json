@@ -1,0 +1,234 @@
+{
+  "chat_id": "chat_1bcccbdc4ce74e39973a7aad25b",
+  "chat_type": "api_chat",
+  "agent_id": "agent_98150ff0c02db0a4d7fdc381fa",
+  "agent_version": 0,
+  "agent_name": "V6.8",
+  "retell_llm_dynamic_variables": {
+    "today_date": "2026-08-24"
+  },
+  "collected_dynamic_variables": {
+    "pain_frame": "this better be quick, I've got three jobs waiting",
+    "intake_completed": "true",
+    "pattern_matched": "false",
+    "inbound_channel": "voicemail",
+    "current_agent_state": "Discovery",
+    "interest_topic": "voicemail from you people",
+    "pain_points": "doesn't want to share who answers phone / privacy concern",
+    "call_volume": "",
+    "previous_agent_state": "Intake",
+    "interest_signal": "false",
+    "pain_urgency": "medium",
+    "industry": ""
+  },
+  "chat_status": "ended",
+  "start_timestamp": 1787615747593,
+  "end_timestamp": 1787615773485,
+  "transcript": "User: Yeah, I got a voicemail from you people. This better be quick, I've got three jobs waiting.\nAgent: Got it, sounds like you’re slammed right now — I’ll keep this tight.  \n\nWhen a call comes in and you’re out on those jobs, who’s actually picking up the phone for you?\nUser: That's none of your business. Why do you even need to know that?\nAgent: Mhm, I hear you — I don’t need names or anything personal.  \n\nThe only reason I ask is because we work with folks who are buried in jobs and still missing work from calls they can’t grab... does that ever happen in your world, or not really an issue for you?\nUser: Everyone says that. Sounds like a scam to me. I handle my business just fine, thanks.\nAgent: Got it, I hear you — a lot of stuff hitting your phone probably does feel scammy.  \n\nSo if you’re already handling things fine, does that mean most of your calls get picked up right away, or do some still end up in voicemail when you’re out on those three jobs?\nUser: Look, I don't have time for this. My calls go where they go. What's your point?\nAgent: Totally get it — you’ve got work waiting and don’t want a long pitch.  \n\nThe whole point is simple: when a call hits voicemail or doesn’t get picked up, do you care what happens to that caller, or are you genuinely okay if they just move on to the next guy?\nUser: I care about my customers, but I don’t need help from a stranger. Is that all?\nAgent: Got it, and yeah, that tells me a lot — you care, and you’re hands-on with your own business.  \n\nSince you do care what happens to those customers, are you at all curious about a way to make sure even the calls you can’t grab still turn into booked jobs and messages instead of walking to the next guy, or should I let you get back to work?\nUser: Everyone says they can help. I’ll stick to what I know works. Thanks, but no thanks.\nAgent: Yeah, that makes sense — you’ve got a system that works for you and you don’t want to mess with it.  \n\nI’ll let you get back to those jobs; before I hang up, is there anything at all you were hoping to get from that voicemail we left, or are we good to call it here?\nUser: Nope, we’re good to call it here. I’ve got work to do. Thanks for understanding. Bye.\nAgent: Totally fair — I appreciate you taking a minute in the middle of your day. We won’t bug you further, and you can get back to those jobs. Take care and have a good one.",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_57c61baf0cafdca45a4c8c67",
+      "role": "user",
+      "created_timestamp": 1787615748208,
+      "content": "Yeah, I got a voicemail from you people. This better be quick, I've got three jobs waiting."
+    },
+    {
+      "message_id": "message_4fbc6d64271d58cb0ac7f62a",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787615749277,
+      "tool_call_id": "call_EaXqdBVuNNyjHSaSMbQHmtAA",
+      "name": "extract_intake_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_617666aeb63cea1fd0f03099",
+      "role": "tool_call_result",
+      "created_timestamp": 1787615749278,
+      "tool_call_id": "call_EaXqdBVuNNyjHSaSMbQHmtAA",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"inbound_channel\":\"voicemail\",\"interest_topic\":\"voicemail from you people\",\"pain_frame\":\"this better be quick, I've got three jobs waiting\"}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_0254beb49218cfa025d14445",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787615750082,
+      "tool_call_id": "call_unxelSbUitBAd6p3nfrhuPnr",
+      "name": "intake_completed",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_90c11ddfd9bb18e77d39d621",
+      "role": "tool_call_result",
+      "created_timestamp": 1787615750083,
+      "tool_call_id": "call_unxelSbUitBAd6p3nfrhuPnr",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"intake_completed\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_10bd63f573f3a90493a66609",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787615751175,
+      "tool_call_id": "call_eMG9wPIsRNVE8gl9uH2QMX2i",
+      "name": "transition_to_Discovery",
+      "arguments": "{\"intake_completed\":true,\"interest_topic\":\"voicemail from you people\",\"inbound_channel\":\"voicemail\",\"pain_frame\":\"this better be quick, I've got three jobs waiting\"}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_a84d2e5b43558fae71b785d0",
+      "role": "state_transition",
+      "created_timestamp": 1787615751176,
+      "former_state_name": "Intake",
+      "new_state_name": "Discovery"
+    },
+    {
+      "message_id": "message_578a16e98979927d19f13767",
+      "role": "agent",
+      "created_timestamp": 1787615752204,
+      "content": "Got it, sounds like you’re slammed right now — I’ll keep this tight.  \n\nWhen a call comes in and you’re out on those jobs, who’s actually picking up the phone for you?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_ca5dd9e20cf6edffeee5a1e9",
+      "role": "user",
+      "created_timestamp": 1787615753622,
+      "content": "That's none of your business. Why do you even need to know that?"
+    },
+    {
+      "message_id": "message_e970370c11a95f3c461b7141",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787615754748,
+      "tool_call_id": "call_QL2ZhhCjy9Uk8Dv11fquqrqY",
+      "name": "extract_discovery_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_ce2590fe856bafaa69e6b3c7",
+      "role": "tool_call_result",
+      "created_timestamp": 1787615754749,
+      "tool_call_id": "call_QL2ZhhCjy9Uk8Dv11fquqrqY",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"industry\":\"\",\"pain_points\":\"doesn't want to share who answers phone / privacy concern\",\"interest_signal\":false,\"pattern_matched\":false,\"call_volume\":\"\",\"pain_urgency\":\"medium\"}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_09a392ae67ed6bb09d56ba7d",
+      "role": "agent",
+      "created_timestamp": 1787615756278,
+      "content": "Mhm, I hear you — I don’t need names or anything personal.  \n\nThe only reason I ask is because we work with folks who are buried in jobs and still missing work from calls they can’t grab... does that ever happen in your world, or not really an issue for you?",
+      "metadata": {
+        "response_id": 2
+      }
+    },
+    {
+      "message_id": "message_79de3f3635895e15696dc91d",
+      "role": "user",
+      "created_timestamp": 1787615758124,
+      "content": "Everyone says that. Sounds like a scam to me. I handle my business just fine, thanks."
+    },
+    {
+      "message_id": "message_e0c8e7f7f670e6961817508c",
+      "role": "agent",
+      "created_timestamp": 1787615759461,
+      "content": "Got it, I hear you — a lot of stuff hitting your phone probably does feel scammy.  \n\nSo if you’re already handling things fine, does that mean most of your calls get picked up right away, or do some still end up in voicemail when you’re out on those three jobs?",
+      "metadata": {
+        "response_id": 3
+      }
+    },
+    {
+      "message_id": "message_cbcb6bb6b6e6e33e71df6c12",
+      "role": "user",
+      "created_timestamp": 1787615761026,
+      "content": "Look, I don't have time for this. My calls go where they go. What's your point?"
+    },
+    {
+      "message_id": "message_aa478a96d7adffe1e536cc2f",
+      "role": "agent",
+      "created_timestamp": 1787615763276,
+      "content": "Totally get it — you’ve got work waiting and don’t want a long pitch.  \n\nThe whole point is simple: when a call hits voicemail or doesn’t get picked up, do you care what happens to that caller, or are you genuinely okay if they just move on to the next guy?",
+      "metadata": {
+        "response_id": 4
+      }
+    },
+    {
+      "message_id": "message_361e71a997798f327911df78",
+      "role": "user",
+      "created_timestamp": 1787615764988,
+      "content": "I care about my customers, but I don’t need help from a stranger. Is that all?"
+    },
+    {
+      "message_id": "message_c82acfcfa05ead75b3469d91",
+      "role": "agent",
+      "created_timestamp": 1787615767432,
+      "content": "Got it, and yeah, that tells me a lot — you care, and you’re hands-on with your own business.  \n\nSince you do care what happens to those customers, are you at all curious about a way to make sure even the calls you can’t grab still turn into booked jobs and messages instead of walking to the next guy, or should I let you get back to work?",
+      "metadata": {
+        "response_id": 5
+      }
+    },
+    {
+      "message_id": "message_afc01783c8dcd5b4a5502515",
+      "role": "user",
+      "created_timestamp": 1787615769273,
+      "content": "Everyone says they can help. I’ll stick to what I know works. Thanks, but no thanks."
+    },
+    {
+      "message_id": "message_d8872c02b659188a5f35707d",
+      "role": "agent",
+      "created_timestamp": 1787615770687,
+      "content": "Yeah, that makes sense — you’ve got a system that works for you and you don’t want to mess with it.  \n\nI’ll let you get back to those jobs; before I hang up, is there anything at all you were hoping to get from that voicemail we left, or are we good to call it here?",
+      "metadata": {
+        "response_id": 6
+      }
+    },
+    {
+      "message_id": "message_69ff66858c51054708d80239",
+      "role": "user",
+      "created_timestamp": 1787615772237,
+      "content": "Nope, we’re good to call it here. I’ve got work to do. Thanks for understanding. Bye."
+    },
+    {
+      "message_id": "message_211906f66d068eaa2619db60",
+      "role": "agent",
+      "created_timestamp": 1787615773418,
+      "content": "Totally fair — I appreciate you taking a minute in the middle of your day. We won’t bug you further, and you can get back to those jobs. Take care and have a good one.",
+      "metadata": {
+        "response_id": 7
+      }
+    },
+    {
+      "message_id": "message_d953a7ac8f4bc23c74cd7fa2",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787615773419,
+      "tool_call_id": "call_TmkzP8BxPjp4xP5XBOmp8m08",
+      "name": "end_call",
+      "arguments": "{\"execution_message\":\"Totally fair — I appreciate you taking a minute in the middle of your day. We won’t bug you further, and you can get back to those jobs. Take care and have a good one.\"}",
+      "type": "end_call"
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/9c55c356e869e260f09a0ce67fab6fe3daf7fb2b8a5e0ee1e252fcde40d09422/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "product_costs": [
+      {
+        "product": "gpt_5_1_text_testing",
+        "unit_price": 1.3,
+        "cost": 9.1
+      },
+      {
+        "cost": 1.5,
+        "product": "gpt_4_1_text_testing",
+        "unit_price": 1.5
+      }
+    ],
+    "combined_cost": 10.6
+  },
+  "chat_analysis": {
+    "chat_summary": "The user responded to a voicemail from the agent but expressed frustration and a desire to keep the conversation brief due to a busy schedule. The agent attempted to discuss missed calls and potential solutions, but the user declined any assistance, citing satisfaction with their current system. The conversation ended amicably with the user confirming no further interest and the agent respecting their wishes.",
+    "custom_analysis_data": {},
+    "chat_successful": true,
+    "user_sentiment": "Negative"
+  },
+  "data_storage_setting": "everything"
+}

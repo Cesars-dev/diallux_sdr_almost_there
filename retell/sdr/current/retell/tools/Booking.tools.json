@@ -1,0 +1,125 @@
+[
+  {
+    "description": "Books the confirmed live call on the held slot \u2014 the ONLY slot/booking authority. Default: time = {{selected_time}} VERBATIM (never a UTC iso), timezone = {{prospect_timezone}}, slot_reservation_uids = {{slot_reservation_uids}} verbatim, booking_intent = {{booking_intent}} verbatim, preferred_time = ''. Follow the response: status 'booked' \u2192 read booking_uid; 'book_failed' \u2192 follow its message, NEVER claim success. RESCHEDULE (caller wants a different time AFTER one was confirmed): call extract_booking_intent first, then this tool with booking_intent as stored and preferred_time = the caller's new time (time stays {{selected_time}}); on 'reschedule_options' offer exactly the returned times; when they pick one, call again with BOTH time AND preferred_time = the chosen option. CANCEL: extract_booking_intent first, then this tool; on 'released' confirm politely, never book.",
+    "args_at_root": false,
+    "speak_after_execution": true,
+    "name": "create_livecall_booking",
+    "type": "custom",
+    "url": "https://slots.diallux-ai.site/book-livecall",
+    "forced": false,
+    "response_variables": {
+      "booking_uid": "booking_uid",
+      "booking_verified": "booking_verified"
+    },
+    "parameter_type": "json",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "account_id": {
+          "type": "string",
+          "description": "Which calendar account to use. Fixed per agent — do not change."
+        },
+        "timezone": {
+          "type": "string",
+          "description": "IANA timezone — always {{prospect_timezone}}."
+        },
+        "time": {
+          "type": "string",
+          "description": "The confirmed slot's local time, copied verbatim from {{selected_time}} — never recompute, never a UTC iso."
+        },
+        "name": {
+          "type": "string",
+          "description": "attendee name: \"{{first_name}} {{last_name}}\" (or \"{{company_name}}\" if no name was provided)."
+        },
+        "email": {
+          "type": "string",
+          "description": "Always jaydiallux@gmail.com (system shared attendee)."
+        },
+        "attendeePhoneNumber": {
+          "type": "string",
+          "description": "{{callback_number}} (already E.164)."
+        },
+        "title": {
+          "type": "string",
+          "description": "title: \"Dialux Live call for {{company_name}}\""
+        },
+        "notes": {
+          "type": "string",
+          "description": "notes: \"Industry: {{industry}} | Pain points: {{pain_points}}\""
+        },
+        "slot_reservation_uids": {
+          "type": "string",
+          "description": "Pass {{slot_reservation_uids}} verbatim — the held slot uids. Never invent, shorten or modify them."
+        },
+        "booking_intent": {
+          "type": "string",
+          "description": "Pass {{booking_intent}} verbatim ('' when the caller never changed their mind)."
+        },
+        "preferred_time": {
+          "type": "string",
+          "description": "'' by default. Only on a reschedule: the caller's newly requested time (first ask), or the chosen option's time on the confirm turn (must equal time)."
+        }
+      }
+    },
+    "method": "POST",
+    "headers": {},
+    "timeout_ms": 15000
+  },
+  {
+    "type": "extract_dynamic_variable",
+    "description": "Call ONCE, only when the caller, AFTER a time was confirmed, either asks for a different time or backs out entirely. Never call it otherwise; never call it before a time was confirmed.",
+    "speak_after_execution": false,
+    "variables": [
+      {
+        "name": "booking_intent",
+        "type": "enum",
+        "choices": ["reschedule", "cancel"],
+        "description": "reschedule = caller wants a different time than the confirmed one; cancel = caller no longer wants the call."
+      }
+    ],
+    "name": "extract_booking_intent"
+  },
+  {
+    "description": "Records the booking confirmation id. Call right after create_livecall_booking succeeds, passing booking_uid exactly as its result returned it (a 22-character code). The server verifies it against the calendar and records it itself - if it answers invalid_uid or uid_not_found, pass the uid again exactly as shown, up to three times; then treat it as calendar trouble. Never invent, shorten, or retype the uid.",
+    "args_at_root": false,
+    "speak_after_execution": true,
+    "name": "record_booking_uid",
+    "type": "custom",
+    "url": "https://slots.diallux-ai.site/validator-function/record-booking-uid",
+    "forced": false,
+    "response_variables": {
+      "booking_uid": "booking_uid"
+    },
+    "parameter_type": "json",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "booking_uid": {
+          "type": "string",
+          "description": "The booking_uid from create_livecall_booking's result, copied verbatim."
+        }
+      }
+    },
+    "method": "POST",
+    "headers": {},
+    "timeout_ms": 15000
+  },
+  {
+    "type": "extract_dynamic_variable",
+    "description": "Records the slot outcome. Set booking_verified=true ONLY when validate_booking returned valid:true. Set booking_failed=true ONLY after two consecutive calendar failures. Never set both.",
+    "speak_after_execution": false,
+    "variables": [
+      {
+        "name": "booking_verified",
+        "type": "boolean",
+        "description": "true ONLY when validate_booking returned valid:true."
+      },
+      {
+        "type": "boolean",
+        "description": "true ONLY after a second create_livecall_booking failure.",
+        "name": "booking_failed"
+      }
+    ],
+    "name": "record_booking_outcome"
+  }
+]

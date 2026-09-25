@@ -1,0 +1,34 @@
+{
+  "scenario": 10,
+  "turn": 1,
+  "chat_id": "chat_a5815d084aa7f0ac9dc5f01f123",
+  "caller_message": "Hi, I need a service. Can Dave come out? He did our boiler last year.",
+  "agent_messages": [
+    {
+      "message_id": "message_ab0f24a59d5ecca5817ecdf2",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639523252,
+      "tool_call_id": "call_Dy4WU6zfZEJNbSCE7CyDwxi4",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_ed050518b6fb656b0c788106",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639523253,
+      "tool_call_id": "call_Dy4WU6zfZEJNbSCE7CyDwxi4",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"Annual Boiler Service\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":true,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_8c44f58adb4249dc136f7851",
+      "role": "agent",
+      "created_timestamp": 1784639524868,
+      "content": "Annual service, and Dave came last year \u2014 lovely. What's your postcode?",
+      "metadata": {
+        "response_id": 1
+      }
+    }
+  ]
+}

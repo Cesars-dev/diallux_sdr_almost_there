@@ -1,0 +1,34 @@
+{
+  "scenario": 17,
+  "turn": 3,
+  "chat_id": "chat_ad6295d9b5e16e112226c1938d5",
+  "caller_message": "NE1 4AL",
+  "agent_messages": [
+    {
+      "message_id": "message_6967e00866af36630c582dbc",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784638703768,
+      "tool_call_id": "call_i6HaxtxMCQ5iAAZZHIdGG5gB",
+      "name": "extract_address_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_3562b7ff7bdaa6e3474cb6bc",
+      "role": "tool_call_result",
+      "created_timestamp": 1784638703769,
+      "tool_call_id": "call_i6HaxtxMCQ5iAAZZHIdGG5gB",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Priya\",\"problem_category\":\"Annual Boiler Service\",\"symptom_brief\":\"Routine annual boiler service requested\",\"error_code\":\"\",\"boiler_make\":\"\",\"address_postcode\":\"NE1 4AL\",\"address_house_number\":\"\",\"address_street\":\"\",\"address_line1\":\"\",\"address_city\":\"\",\"address_confirmed\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_a138afdeb08c7c9b73c1550a",
+      "role": "agent",
+      "created_timestamp": 1784638705039,
+      "content": "Postcode N-E-1-4-A-L, got it. What\u2019s the house number or property name?",
+      "metadata": {
+        "response_id": 3
+      }
+    }
+  ]
+}

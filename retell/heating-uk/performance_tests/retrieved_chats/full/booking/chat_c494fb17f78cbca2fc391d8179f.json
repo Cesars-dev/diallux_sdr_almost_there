@@ -1,0 +1,334 @@
+{
+  "chat_id": "chat_c494fb17f78cbca2fc391d8179f",
+  "chat_type": "api_chat",
+  "agent_id": "agent_ff9d4b9646a85b82d7ce8fd837",
+  "agent_version": 0,
+  "agent_name": "Multi State Agent",
+  "collected_dynamic_variables": {
+    "callback_requested": "false",
+    "classified_intent": "boiler breakdown",
+    "past_customer": "false",
+    "intent_confirmed": "true",
+    "address_postcode": "NE1 1AA",
+    "address_confirmed": "true",
+    "address_incomplete": "false",
+    "problem_category": "Banging / Kettling / Rumbling Noise",
+    "address_city": "Newcastle",
+    "boiler_make": "",
+    "address_house_number": "42",
+    "symptom_brief": "Rattling noise from the boiler",
+    "current_agent_state": "booking",
+    "intent_clear": "true",
+    "address_line1": "42 Grove St",
+    "address_street": "Grove St",
+    "greeting_exchanged": "true",
+    "error_code": "",
+    "customer_name": "Mike",
+    "previous_agent_state": "address"
+  },
+  "chat_status": "ended",
+  "start_timestamp": 1784639875033,
+  "end_timestamp": 1784639918585,
+  "transcript": "User: Hi, I need to book a boiler service. Actually wait \u2014 can I book a breakdown call-out instead? It's started making a noise.\nAgent: Right, breakdown call-out for a boiler noise. What\u2019s your name?\nUser: Mike. 42 Grove St, NE1 1AA, Newcastle. It's a rattling noise from the boiler.\nAgent: Mike, 42 Grove St, Newcastle \u2014 postcode N-E-1-1-A-A. Is that right?\nUser: Yes, that's right\nAgent: I\u2019m checking the nearest slots now.\nAgent: I\u2019ve got Thursday between 9 and 1, or 3 and 7. Which suits?\nUser: Today works\nAgent: Right, no same-day slots. Thursday between 9 and 1, or 3 and 7?\nUser: Yes, book it\nAgent: Right, I\u2019ll get that booked now.\nAgent: Brilliant, you\u2019re booked in for Thursday morning. Anything else I can help with?\nUser: That's all, thanks",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_cfb65b90c4a1f1dd89916efe",
+      "role": "user",
+      "created_timestamp": 1784639875671,
+      "content": "Hi, I need to book a boiler service. Actually wait \u2014 can I book a breakdown call-out instead? It's started making a noise."
+    },
+    {
+      "message_id": "message_ed00c041154da6ced7f3d02e",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639878023,
+      "tool_call_id": "call_Dx4oKlmzrIp053pvDezuUfBx",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_dde3cfc12072647e5b87da91",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639878024,
+      "tool_call_id": "call_Dx4oKlmzrIp053pvDezuUfBx",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"\",\"classified_intent\":\"boiler breakdown\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":false,\"past_customer\":false,\"address_house_number\":\"\",\"address_street\":\"\",\"address_postcode\":\"\",\"address_city\":\"\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_dac6bf2e88f1a1fbffe67af8",
+      "role": "agent",
+      "created_timestamp": 1784639879400,
+      "content": "Right, breakdown call-out for a boiler noise. What\u2019s your name?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_b573bd2c40a2c0cca4556957",
+      "role": "user",
+      "created_timestamp": 1784639880410,
+      "content": "Mike. 42 Grove St, NE1 1AA, Newcastle. It's a rattling noise from the boiler."
+    },
+    {
+      "message_id": "message_93a17ca8e484534d606177a2",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639882081,
+      "tool_call_id": "call_uOYC96YHCVWn2NVMLPODZSkq",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_d48b16f1e0a36df564b3083a",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639882082,
+      "tool_call_id": "call_uOYC96YHCVWn2NVMLPODZSkq",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Mike\",\"classified_intent\":\"boiler breakdown\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"42\",\"address_street\":\"Grove St\",\"address_postcode\":\"NE1 1AA\",\"address_city\":\"Newcastle\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_d477063ee0c2a0ee2b3ce2c4",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639882958,
+      "tool_call_id": "call_5S6AOJxI2uPVbuY7hyl5jvUK",
+      "name": "transition_to_address",
+      "arguments": "{}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_a1e1560c7fe077b47a7b8945",
+      "role": "state_transition",
+      "created_timestamp": 1784639882959,
+      "former_state_name": "greeter",
+      "new_state_name": "address"
+    },
+    {
+      "message_id": "message_9f8940486e3bcbedf1d243f2",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639886766,
+      "tool_call_id": "call_CQCmtZs7tNNUDoi8I1CexJtW",
+      "name": "extract_address_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_a2edba0b7684a032efbc990d",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639886767,
+      "tool_call_id": "call_CQCmtZs7tNNUDoi8I1CexJtW",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Mike\",\"problem_category\":\"Banging / Kettling / Rumbling Noise\",\"symptom_brief\":\"Rattling noise from the boiler\",\"error_code\":\"\",\"boiler_make\":\"\",\"address_postcode\":\"NE1 1AA\",\"address_house_number\":\"42\",\"address_street\":\"Grove St\",\"address_line1\":\"42 Grove St\",\"address_city\":\"Newcastle\",\"address_confirmed\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_e92ac1a44f27f18e47ef0e79",
+      "role": "agent",
+      "created_timestamp": 1784639888132,
+      "content": "Mike, 42 Grove St, Newcastle \u2014 postcode N-E-1-1-A-A. Is that right?",
+      "metadata": {
+        "response_id": 2
+      }
+    },
+    {
+      "message_id": "message_fc66e3f3b69e528a50591ac3",
+      "role": "user",
+      "created_timestamp": 1784639888979,
+      "content": "Yes, that's right"
+    },
+    {
+      "message_id": "message_3f694ac1a961eec3e9268473",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639890457,
+      "tool_call_id": "call_U2Qd2ktROE8tIUwPz2y0BTjg",
+      "name": "extract_address_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_270088c342db0310226e7f33",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639890458,
+      "tool_call_id": "call_U2Qd2ktROE8tIUwPz2y0BTjg",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Mike\",\"problem_category\":\"Banging / Kettling / Rumbling Noise\",\"symptom_brief\":\"Rattling noise from the boiler\",\"error_code\":\"\",\"boiler_make\":\"\",\"address_postcode\":\"NE1 1AA\",\"address_house_number\":\"42\",\"address_street\":\"Grove St\",\"address_line1\":\"42 Grove St\",\"address_city\":\"Newcastle\",\"address_confirmed\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_292d296a4c33d98d35aa6f93",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639891512,
+      "tool_call_id": "call_KnTU1JRKK8qKWlvhFaiG8pR1",
+      "name": "transition_to_booking",
+      "arguments": "{}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_ddaed68c6577edf263bc98cf",
+      "role": "state_transition",
+      "created_timestamp": 1784639891513,
+      "former_state_name": "address",
+      "new_state_name": "booking"
+    },
+    {
+      "message_id": "message_5827676634dcca6a0a012f96",
+      "role": "agent",
+      "created_timestamp": 1784639893162,
+      "content": "I\u2019m checking the nearest slots now.",
+      "metadata": {
+        "response_id": 3
+      }
+    },
+    {
+      "message_id": "message_a668cd72e0bf69437b68d8fc",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639893163,
+      "tool_call_id": "call_Xv7hPvnPFjnIuMUEMYWx7EzO",
+      "name": "check_availability",
+      "arguments": "{\"start_time\":\"2026-07-21T00:00:00\",\"end_time\":\"2026-07-22T23:59:00\",\"timezone\":\"Europe/London\",\"execution_message\":\"I\u2019m checking the nearest slots now.\"}",
+      "type": "check_availability_cal"
+    },
+    {
+      "message_id": "message_5d338f416a5404a5f5a01375",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639894213,
+      "tool_call_id": "call_Xv7hPvnPFjnIuMUEMYWx7EzO",
+      "content": "{\"availability_for_selected_time\":\"No available slots for specified time range, but there are available slots on time range that's nearby.\",\"availability_nearby\":[{\"date\":\"Thursday, 2026 July 7/23/2026 British Summer Time\",\"availability_range\":[\"From 9:00 AM to 7:00 PM\"]}]}",
+      "successful": true
+    },
+    {
+      "message_id": "message_126f870fe54c640ac3b0ac43",
+      "role": "agent",
+      "created_timestamp": 1784639895672,
+      "content": "I\u2019ve got Thursday between 9 and 1, or 3 and 7. Which suits?",
+      "metadata": {
+        "response_id": 4
+      }
+    },
+    {
+      "message_id": "message_c52b1fc03ae4f7cb58d2a68b",
+      "role": "user",
+      "created_timestamp": 1784639896471,
+      "content": "Today works"
+    },
+    {
+      "message_id": "message_f54b43e615057e50b582cb16",
+      "role": "agent",
+      "created_timestamp": 1784639897900,
+      "content": "Right, no same-day slots. Thursday between 9 and 1, or 3 and 7?",
+      "metadata": {
+        "response_id": 5
+      }
+    },
+    {
+      "message_id": "message_9abf266bad961b5534fcbb15",
+      "role": "user",
+      "created_timestamp": 1784639898814,
+      "content": "Yes, book it"
+    },
+    {
+      "message_id": "message_dec7f084b3f312b8d1a7562c",
+      "role": "agent",
+      "created_timestamp": 1784639901212,
+      "content": "Right, I\u2019ll get that booked now.",
+      "metadata": {
+        "response_id": 6
+      }
+    },
+    {
+      "message_id": "message_513ca1a7d0f990fcbfca3974",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639901213,
+      "tool_call_id": "call_mTdZ3ZlKwQ954BzCy75pKLpq",
+      "name": "book_calendar",
+      "arguments": "{\"time\":\"2026-07-23T09:00:00\",\"timezone\":\"Europe/London\",\"name\":\"Mike\",\"email\":\"jaydiallux@gmail.com\",\"attendeePhoneNumber\":null,\"title\":\"Banging / Kettling / Rumbling Noise \u2014 Mike\",\"notes\":\"CUSTOMER: Mike | ADDRESS: 42 Grove St, Newcastle, NE1 1AA | PHONE: {{user_number}} | PROBLEM: Banging / Kettling / Rumbling Noise | SYMPTOMS: Rattling noise from the boiler\",\"guests\":null,\"rescheduleReason\":null,\"execution_message\":\"Right, I\u2019ll get that booked now.\"}",
+      "type": "book_appointment_cal"
+    },
+    {
+      "message_id": "message_0cb3376ba9165a0e6797deac",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639907455,
+      "tool_call_id": "call_mTdZ3ZlKwQ954BzCy75pKLpq",
+      "content": "{\"status\":\"Successfully booked an appointment.\",\"booking_id\":22744436,\"booking_uid\":\"pP4iExfH2XZRsLwqYrAzL3\"}",
+      "successful": true
+    },
+    {
+      "message_id": "message_40a2ff062dd889b303d9ed8d",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639909655,
+      "tool_call_id": "call_wnXXc63mLehpfI5T7t1uAXIW",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_af6a2695d90241e927bf2c5d",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639909656,
+      "tool_call_id": "call_wnXXc63mLehpfI5T7t1uAXIW",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Mike\",\"classified_intent\":\"boiler breakdown\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"42\",\"address_street\":\"Grove St\",\"address_postcode\":\"NE1 1AA\",\"address_city\":\"Newcastle\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_b9543fe01f147598da9babe8",
+      "role": "agent",
+      "created_timestamp": 1784639911257,
+      "content": "Brilliant, you\u2019re booked in for Thursday morning. Anything else I can help with?",
+      "metadata": {
+        "response_id": 7
+      }
+    },
+    {
+      "message_id": "message_f975ee9dcf1f3f966f461122",
+      "role": "user",
+      "created_timestamp": 1784639912101,
+      "content": "That's all, thanks"
+    },
+    {
+      "message_id": "message_65420d314b4ef498d49d5e31",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639917729,
+      "tool_call_id": "call_yrdSwGjT02B0itdBHa7dbgTX",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_14bec972010d2fd944e8bffe",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639917730,
+      "tool_call_id": "call_yrdSwGjT02B0itdBHa7dbgTX",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Mike\",\"classified_intent\":\"boiler breakdown\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":false,\"address_house_number\":\"42\",\"address_street\":\"Grove St\",\"address_postcode\":\"NE1 1AA\",\"address_city\":\"Newcastle\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_5bfc5c10b1b8352094721748",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639918578,
+      "tool_call_id": "call_LgYEjhZmxNIztIFhrfUGSmki",
+      "name": "end_call",
+      "arguments": "{}",
+      "type": "end_call"
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/02bb5fb5a0cd209ec5eaf68cfafc2b323cf23f8e9003c99af79bef6613b3fda8/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "combined_cost": 19.7,
+    "product_costs": [
+      {
+        "unit_price": 2.6,
+        "product": "gpt_5_4_text_testing",
+        "cost": 18.2
+      },
+      {
+        "unit_price": 1.5,
+        "product": "gpt_4_1_text_testing",
+        "cost": 1.5
+      }
+    ]
+  },
+  "chat_analysis": {
+    "chat_summary": "The user requested to book a boiler service but changed to a breakdown call-out due to a rattling noise. The agent confirmed the user's details, checked availability, and successfully booked an appointment for Thursday morning. The user confirmed the booking and ended the chat satisfied.",
+    "user_sentiment": "Positive",
+    "custom_analysis_data": {},
+    "chat_successful": true
+  },
+  "data_storage_setting": "everything"
+}

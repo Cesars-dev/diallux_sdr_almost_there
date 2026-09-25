@@ -1,0 +1,270 @@
+{
+  "chat_id": "chat_c9cb90e20d3f0654f07ec48204d",
+  "chat_type": "api_chat",
+  "agent_id": "agent_d355c76e75908afc4e944fb3be",
+  "agent_version": 0,
+  "agent_name": "V6.88",
+  "retell_llm_dynamic_variables": {
+    "today_date": "2026-08-24"
+  },
+  "collected_dynamic_variables": {
+    "discovery_completed": "true",
+    "pain_frame": "concerned about talking to a machine",
+    "pattern_matched": "true",
+    "pain_urgency": "medium",
+    "call_volume": "delivery orders after hours",
+    "inbound_channel": "Google search",
+    "interest_topic": "found you through a Google search",
+    "current_agent_state": "Closer",
+    "industry": "Residential/Commercial Security & Smart Home",
+    "previous_agent_state": "Discovery",
+    "intake_completed": "true",
+    "pain_points": "concerned about talking to a machine,missing delivery orders after hours",
+    "interest_signal": "true"
+  },
+  "chat_status": "ended",
+  "start_timestamp": 1787606136354,
+  "end_timestamp": 1787606166451,
+  "transcript": "User: Hey — before anything: are you a robot? Be honest with me.\nAgent: Yeah, I am — I’m Linda, an AI assistant on Jay’s team at Dialux, and I help set up the live walkthroughs with him. So, what made you call in today?\nUser: I found you through a Google search, but I'm still concerned about talking to a machine. Can you reassure me?\nAgent: Totally get that—mhm, lots of folks feel weird about “talking to a machine” at first. When you call a business and it just rings or goes to voicemail, what usually happens on your end—do you wait, or do you call someone else?\nUser: I'll usually wait, but I'm still not sure if I'm talking to a human right now.\nAgent: Got it, thanks for being honest — and yeah, you’re talking to an AI right now, not a human. So for your own business, when someone calls and it goes to voicemail or rings a long time, does that worry you in terms of losing that potential customer?\nUser: I do worry about missing delivery orders after hours, but I'm more concerned about talking to a machine.\nAgent: Makes sense — you’re trying to protect those after-hours orders *without* making customers feel like they’re stuck with a robot. When someone calls you late and can’t reach a real person, do they usually place the order anyway, or do you think some of those just slip away?\nUser: Some orders slip away, but back to my question: are you human or AI?\nAgent: Gotcha — I’m AI, I’m Linda on Jay’s team, and my whole job is to help you stop losing those after-hours orders without annoying your callers. When those orders slip away, is it mostly because nobody picks up, or because the experience feels too “robotic” to them?\nUser: I appreciate the honesty. I'll think about it. Thank you for your time, Linda.\nAgent: Got it, I appreciate you taking the time to think it through — stopping those missed after-hours orders is exactly what we help with when you’re ready. If anything changes or you want to see it in action with Jay, just give us a call back. Take care and have a great day.",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_64d6a2284cd8864f94093614",
+      "role": "user",
+      "created_timestamp": 1787606136980,
+      "content": "Hey — before anything: are you a robot? Be honest with me."
+    },
+    {
+      "message_id": "message_7751a46511bc4959d48a89d2",
+      "role": "agent",
+      "created_timestamp": 1787606138030,
+      "content": "Yeah, I am — I’m Linda, an AI assistant on Jay’s team at Dialux, and I help set up the live walkthroughs with him. So, what made you call in today?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_169e58bec3d5495a8423c5e7",
+      "role": "user",
+      "created_timestamp": 1787606140400,
+      "content": "I found you through a Google search, but I'm still concerned about talking to a machine. Can you reassure me?"
+    },
+    {
+      "message_id": "message_b84d8204090975599bb3cc89",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787606141422,
+      "tool_call_id": "call_wrElCLlLWj9h8WvwRPPh1M0C",
+      "name": "extract_intake_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_ac176a05cccb3a44406a0209",
+      "role": "tool_call_result",
+      "created_timestamp": 1787606141423,
+      "tool_call_id": "call_wrElCLlLWj9h8WvwRPPh1M0C",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"inbound_channel\":\"Google search\",\"interest_topic\":\"found you through a Google search\",\"pain_frame\":\"concerned about talking to a machine\"}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_fa007033b4c8270b5f45ceb2",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787606142380,
+      "tool_call_id": "call_nYNWGyiSKDQn9t6tKBXLUhII",
+      "name": "intake_completed",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_0eae667978a585cb72287226",
+      "role": "tool_call_result",
+      "created_timestamp": 1787606142381,
+      "tool_call_id": "call_nYNWGyiSKDQn9t6tKBXLUhII",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"intake_completed\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_544b4842a468a36cad0befc1",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787606143234,
+      "tool_call_id": "call_yvVLuAJXr4P9oxEvfmfJisSU",
+      "name": "transition_to_Discovery",
+      "arguments": "{\"interest_topic\":\"found you through a Google search\",\"pain_frame\":\"concerned about talking to a machine\",\"intake_completed\":true,\"inbound_channel\":\"Google search\"}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_5efd739cb803c9fcb3242365",
+      "role": "state_transition",
+      "created_timestamp": 1787606143235,
+      "former_state_name": "Intake",
+      "new_state_name": "Discovery"
+    },
+    {
+      "message_id": "message_e23e934e57ad3efe54ed51fb",
+      "role": "agent",
+      "created_timestamp": 1787606145488,
+      "content": "Totally get that—mhm, lots of folks feel weird about “talking to a machine” at first. When you call a business and it just rings or goes to voicemail, what usually happens on your end—do you wait, or do you call someone else?",
+      "metadata": {
+        "response_id": 2
+      }
+    },
+    {
+      "message_id": "message_098452e25eb250eb92c90b33",
+      "role": "user",
+      "created_timestamp": 1787606149178,
+      "content": "I'll usually wait, but I'm still not sure if I'm talking to a human right now."
+    },
+    {
+      "message_id": "message_4bddab23bc4ef665ee2d8fb1",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787606150410,
+      "tool_call_id": "call_6eOTrD1oGY3hVT5QkW2UrsmJ",
+      "name": "extract_discovery_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_e095b0f810b481f802fc9991",
+      "role": "tool_call_result",
+      "created_timestamp": 1787606150411,
+      "tool_call_id": "call_6eOTrD1oGY3hVT5QkW2UrsmJ",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"industry\":\"Residential/Commercial Security & Smart Home\",\"pain_points\":\"concerned about talking to a machine\",\"interest_signal\":false,\"pattern_matched\":false,\"call_volume\":\"\",\"pain_urgency\":\"low\"}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_ad9d91402036d2f9a0acbe14",
+      "role": "agent",
+      "created_timestamp": 1787606151978,
+      "content": "Got it, thanks for being honest — and yeah, you’re talking to an AI right now, not a human. So for your own business, when someone calls and it goes to voicemail or rings a long time, does that worry you in terms of losing that potential customer?",
+      "metadata": {
+        "response_id": 3
+      }
+    },
+    {
+      "message_id": "message_41c1ad8fdd7701be6ad77974",
+      "role": "user",
+      "created_timestamp": 1787606153855,
+      "content": "I do worry about missing delivery orders after hours, but I'm more concerned about talking to a machine."
+    },
+    {
+      "message_id": "message_82c484d7947c013a5313938f",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787606155553,
+      "tool_call_id": "call_gvaQyB6fM8ftmkqQm14JcFN6",
+      "name": "extract_discovery_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_172cb57b8a374ade182f9622",
+      "role": "tool_call_result",
+      "created_timestamp": 1787606155554,
+      "tool_call_id": "call_gvaQyB6fM8ftmkqQm14JcFN6",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"industry\":\"Residential/Commercial Security & Smart Home\",\"pain_points\":\"concerned about talking to a machine,missing delivery orders after hours\",\"interest_signal\":true,\"pattern_matched\":true,\"call_volume\":\"delivery orders after hours\",\"pain_urgency\":\"medium\"}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_cb27993a2e3a3d80970faff8",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787606156449,
+      "tool_call_id": "call_j9hjVGgHoFyzpLZcLwPHqQFb",
+      "name": "discovery_completed",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_32d09bb1dc4740373c17d9b3",
+      "role": "tool_call_result",
+      "created_timestamp": 1787606156450,
+      "tool_call_id": "call_j9hjVGgHoFyzpLZcLwPHqQFb",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"discovery_completed\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_ff74fa352c34763db416aee7",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787606157469,
+      "tool_call_id": "call_BR8yl3zPfhrxJW1XrTM09BQG",
+      "name": "transition_to_Closer",
+      "arguments": "{\"pain_points\":\"concerned about talking to a machine,missing delivery orders after hours\",\"pattern_matched\":true,\"industry\":\"Residential/Commercial Security & Smart Home\",\"discovery_completed\":true,\"interest_signal\":true}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_e4aad4b5492980612fde1883",
+      "role": "state_transition",
+      "created_timestamp": 1787606157470,
+      "former_state_name": "Discovery",
+      "new_state_name": "Closer"
+    },
+    {
+      "message_id": "message_fc4f62c45e734f1a95fced1c",
+      "role": "agent",
+      "created_timestamp": 1787606159242,
+      "content": "Makes sense — you’re trying to protect those after-hours orders *without* making customers feel like they’re stuck with a robot. When someone calls you late and can’t reach a real person, do they usually place the order anyway, or do you think some of those just slip away?",
+      "metadata": {
+        "response_id": 4
+      }
+    },
+    {
+      "message_id": "message_51b05ab41418537033888b34",
+      "role": "user",
+      "created_timestamp": 1787606160908,
+      "content": "Some orders slip away, but back to my question: are you human or AI?"
+    },
+    {
+      "message_id": "message_11d8189a342c1e7ff18b360a",
+      "role": "agent",
+      "created_timestamp": 1787606162824,
+      "content": "Gotcha — I’m AI, I’m Linda on Jay’s team, and my whole job is to help you stop losing those after-hours orders without annoying your callers. When those orders slip away, is it mostly because nobody picks up, or because the experience feels too “robotic” to them?",
+      "metadata": {
+        "response_id": 5
+      }
+    },
+    {
+      "message_id": "message_a64ece2e900f54dcc52a9b47",
+      "role": "user",
+      "created_timestamp": 1787606164758,
+      "content": "I appreciate the honesty. I'll think about it. Thank you for your time, Linda."
+    },
+    {
+      "message_id": "message_ceb5774fe3d0b785fb66407a",
+      "role": "agent",
+      "created_timestamp": 1787606166401,
+      "content": "Got it, I appreciate you taking the time to think it through — stopping those missed after-hours orders is exactly what we help with when you’re ready. If anything changes or you want to see it in action with Jay, just give us a call back. Take care and have a great day.",
+      "metadata": {
+        "response_id": 6
+      }
+    },
+    {
+      "message_id": "message_bb5b87159285671a2ba4dd8a",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787606166402,
+      "tool_call_id": "call_uTumK2zMUyGSMx9EA0CHOnQ3",
+      "name": "end_call",
+      "arguments": "{\"execution_message\":\"Got it, I appreciate you taking the time to think it through — stopping those missed after-hours orders is exactly what we help with when you’re ready. If anything changes or you want to see it in action with Jay, just give us a call back. Take care and have a great day.\"}",
+      "type": "end_call"
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/7cd03ebc0d2beed456ed728fe33c0a9eaabc5f07d1587b0a88203d2932be69a7/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "combined_cost": 9.3,
+    "product_costs": [
+      {
+        "product": "gpt_5_1_text_testing",
+        "unit_price": 1.3,
+        "cost": 7.800000000000001
+      },
+      {
+        "product": "gpt_4_1_text_testing",
+        "cost": 1.5,
+        "unit_price": 1.5
+      }
+    ]
+  },
+  "chat_analysis": {
+    "custom_analysis_data": {},
+    "chat_summary": "The user expressed concerns about interacting with an AI and repeatedly asked for reassurance about whether they were speaking to a human or a robot. The agent was transparent about being an AI and addressed the user's concerns while also discussing potential business pain points related to missed after-hours delivery orders. The user appreciated the honesty but decided to think about the service before proceeding further.",
+    "user_sentiment": "Neutral",
+    "chat_successful": true
+  },
+  "data_storage_setting": "everything"
+}

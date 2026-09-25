@@ -1,0 +1,538 @@
+{
+  "chat_id": "chat_8c6790182733830b1aca8213633",
+  "chat_type": "api_chat",
+  "agent_id": "agent_95e02efd34a529ecf2d5ac60a5",
+  "agent_version": 0,
+  "agent_name": "V6.90",
+  "retell_llm_dynamic_variables": {
+    "today_date": "2026-08-24",
+    "callback_number": "+13055550003"
+  },
+  "collected_dynamic_variables": {
+    "close_rate_pct": "45",
+    "call_volume": "around 25 calls a week",
+    "previous_agent_state": "Offer",
+    "last_name": "Petrov",
+    "pain_urgency": "high",
+    "first_name": "Boris",
+    "pain_frame": "on a job site and worried about missing calls",
+    "avg_job_value": "900",
+    "prospect_timezone": "America/New_York",
+    "weekly_leak": "10125",
+    "offer_completed": "true",
+    "discovery_completed": "true",
+    "callback_requested": "false",
+    "current_agent_state": "contact_details",
+    "pattern_matched": "true",
+    "pain_points": "missing about 25 calls a week, callers mostly hang up instead of leaving voicemail",
+    "livecall_agreed": "true",
+    "industry": "unknown",
+    "closer_completed": "true",
+    "is_calling_best_number": "true",
+    "missed_calls_weekly": "25",
+    "contact_details_completed": "false",
+    "intake_completed": "true",
+    "interest_topic": "help me catch missed calls",
+    "inbound_channel": "Facebook or online ad",
+    "monthly_leak": "$43,800/mo",
+    "objection_type": "none",
+    "interest_signal": "true",
+    "callback_number": "+13055550003",
+    "company_name": "",
+    "interest_level": "high"
+  },
+  "chat_status": "ended",
+  "start_timestamp": 1787627959627,
+  "end_timestamp": 1787628022336,
+  "transcript": "User: Make it quick, I'm on a job site. Forty-five seconds.\nAgent: Got it, I’ll keep this super tight.  \n\nHow’d you first come across us — was it a voicemail from Jay, an ad, or something you searched?\nUser: I saw an ad somewhere. Doesn't matter. What's the bottom line, how does this help me catch missed calls?\nAgent: Totally get it. We set up a system so when you can’t grab the phone, it still gets answered right away, books the job or takes the details, and texts you what came in so you’re not losing that customer.  \n\nMhm, to see if it even makes sense for you—on a busy day, how many calls would you say you miss while you’re on site?\nUser: Around 25 calls a week. What's the cost and how fast can this be set up?\nAgent: Gotcha, 25 a week adds up fast.  \n\nPricing depends a bit on your setup, but most folks your size land in the low thousands a month, and once we’ve got your script and routing nailed, we can usually have you live in about a week.  \n\nSo when those 25 callers don’t get you, are they mostly hanging up, or leaving voicemails you don’t get to until later?\nUser: Mostly hang up. Low thousands, huh? Can this actually book those 45% back or what?\nAgent: Got it, so they’re just disappearing.  \n\nYes—when it’s set up right, we’re typically recovering 40–60% of those missed calls into booked appointments or solid leads, and you get a text with the details so you can follow up if needed.  \n\nMind if I sanity-check the cost of those missed calls with your numbers real quick—like 20 seconds?\nUser: Fine, but make it snappy. I already know each job is $900, so what's the recovery worth?\nAgent: Right—at your numbers, that’s about 43 grand a month walking away if you’re missing 25 calls a week and could close 45%.  \n\nSo… it’s a 20‑minute walkthrough where we plug in *your* numbers and show exactly how many of those we can realistically recover—what’s better for you this week, later today or tomorrow?\nUser: Tomorrow morning, 8 AM sharp, Eastern. Make sure it's quick, I've got crews waiting. Number's +13055550003.\nAgent: Got it, tomorrow at 8 AM Eastern and we’ll keep it tight so you can get back to your crews.  \n\nQuick thing so we can lock this in—what’s your first name?\nUser: Boris. Make sure everything's ready. I don't have time for any delays.\nAgent: Got it, Boris.  \n\nQuick one—what’s your last name?\nUser: Petrov. Now, that's it. See you tomorrow. I have machines running, got to go.\nAgent: Got it, Boris Petrov. You’re all set for tomorrow at 8 AM Eastern, and we’ll keep it tight so you can get back to your crews. We’ll call you on the number you gave, no delays. Talk tomorrow.",
+  "message_with_tool_calls": [
+    {
+      "message_id": "message_feffba4129f14ca8e265244c",
+      "role": "user",
+      "created_timestamp": 1787627960253,
+      "content": "Make it quick, I'm on a job site. Forty-five seconds."
+    },
+    {
+      "message_id": "message_b84013259546762021fdd9ef",
+      "role": "agent",
+      "created_timestamp": 1787627961570,
+      "content": "Got it, I’ll keep this super tight.  \n\nHow’d you first come across us — was it a voicemail from Jay, an ad, or something you searched?",
+      "metadata": {
+        "response_id": 1
+      }
+    },
+    {
+      "message_id": "message_4ab4f00eba0bfa334453fce7",
+      "role": "user",
+      "created_timestamp": 1787627963601,
+      "content": "I saw an ad somewhere. Doesn't matter. What's the bottom line, how does this help me catch missed calls?"
+    },
+    {
+      "message_id": "message_0ba191f9d4b353b5a51a8e1c",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787627966644,
+      "tool_call_id": "call_eKaG53QNlLetTEW7AwaJ7b1A",
+      "name": "extract_intake_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_488c80e8ad5412ec8582510c",
+      "role": "tool_call_result",
+      "created_timestamp": 1787627966645,
+      "tool_call_id": "call_eKaG53QNlLetTEW7AwaJ7b1A",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"inbound_channel\":\"Facebook or online ad\",\"interest_topic\":\"help me catch missed calls\",\"pain_frame\":\"on a job site and worried about missing calls\"}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_392bef3e3a31858babd55125",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787627967625,
+      "tool_call_id": "call_uWu0yjL2imczmBHEninQ7kwT",
+      "name": "intake_completed",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_031eec9ebf2a0ddaa238f08f",
+      "role": "tool_call_result",
+      "created_timestamp": 1787627967626,
+      "tool_call_id": "call_uWu0yjL2imczmBHEninQ7kwT",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"intake_completed\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_233ac79b333fd7c39e3ec20b",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787627969044,
+      "tool_call_id": "call_n3UszNg3GHalMm5wCCz0ljuI",
+      "name": "transition_to_Discovery",
+      "arguments": "{\"interest_topic\":\"help me catch missed calls\",\"inbound_channel\":\"Facebook or online ad\",\"intake_completed\":true,\"pain_frame\":\"on a job site and worried about missing calls\"}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_fb3ceade6bdab147f27ac7ae",
+      "role": "state_transition",
+      "created_timestamp": 1787627969045,
+      "former_state_name": "Intake",
+      "new_state_name": "Discovery"
+    },
+    {
+      "message_id": "message_71bc304ced635ccd82e29b03",
+      "role": "agent",
+      "created_timestamp": 1787627970956,
+      "content": "Totally get it. We set up a system so when you can’t grab the phone, it still gets answered right away, books the job or takes the details, and texts you what came in so you’re not losing that customer.  \n\nMhm, to see if it even makes sense for you—on a busy day, how many calls would you say you miss while you’re on site?",
+      "metadata": {
+        "response_id": 2
+      }
+    },
+    {
+      "message_id": "message_7256552807300e5234f45011",
+      "role": "user",
+      "created_timestamp": 1787627972750,
+      "content": "Around 25 calls a week. What's the cost and how fast can this be set up?"
+    },
+    {
+      "message_id": "message_12e0a53af121d0a2aafd0f1f",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787627974185,
+      "tool_call_id": "call_JMcKngNE0Ma3FNHY1d6xlgYg",
+      "name": "extract_discovery_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_3a6edaa6a7fe2c820aba33e3",
+      "role": "tool_call_result",
+      "created_timestamp": 1787627974186,
+      "tool_call_id": "call_JMcKngNE0Ma3FNHY1d6xlgYg",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"industry\":\"unknown\",\"pain_points\":\"missing about 25 calls a week\",\"interest_signal\":true,\"pattern_matched\":false,\"call_volume\":\"around 25 calls a week\",\"pain_urgency\":\"high\"}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_32722b5e31effd4e628f812c",
+      "role": "agent",
+      "created_timestamp": 1787627976601,
+      "content": "Gotcha, 25 a week adds up fast.  \n\nPricing depends a bit on your setup, but most folks your size land in the low thousands a month, and once we’ve got your script and routing nailed, we can usually have you live in about a week.  \n\nSo when those 25 callers don’t get you, are they mostly hanging up, or leaving voicemails you don’t get to until later?",
+      "metadata": {
+        "response_id": 3
+      }
+    },
+    {
+      "message_id": "message_c7ae81f27b3a902e5e249fcb",
+      "role": "user",
+      "created_timestamp": 1787627978221,
+      "content": "Mostly hang up. Low thousands, huh? Can this actually book those 45% back or what?"
+    },
+    {
+      "message_id": "message_e5dfaf03537e5cf71976ec68",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787627979921,
+      "tool_call_id": "call_BkZkOo2PzV9D8jgeR2fVdPYF",
+      "name": "extract_discovery_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_e41664b9d7f96229d309bdd4",
+      "role": "tool_call_result",
+      "created_timestamp": 1787627979922,
+      "tool_call_id": "call_BkZkOo2PzV9D8jgeR2fVdPYF",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"industry\":\"unknown\",\"pain_points\":\"missing about 25 calls a week, callers mostly hang up instead of leaving voicemail\",\"interest_signal\":true,\"pattern_matched\":true,\"call_volume\":\"around 25 calls a week\",\"pain_urgency\":\"high\"}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_b17b874b5d1418e33368f564",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787627980754,
+      "tool_call_id": "call_ISB3Yoiyrl1N1x70QLT7eUCp",
+      "name": "discovery_completed",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_97764794c38863108246b259",
+      "role": "tool_call_result",
+      "created_timestamp": 1787627980755,
+      "tool_call_id": "call_ISB3Yoiyrl1N1x70QLT7eUCp",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"discovery_completed\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_3eb9547e31fe495d572bb6d3",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787627983286,
+      "tool_call_id": "call_ky8BLsW6iuWqmlCv2pHDnZq5",
+      "name": "transition_to_Closer",
+      "arguments": "{\"pain_points\":\"missing about 25 calls a week, callers mostly hang up instead of leaving voicemail\",\"pattern_matched\":true,\"interest_signal\":true,\"industry\":\"unknown\",\"discovery_completed\":true}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_539549bdca3c2595fe8bb2a7",
+      "role": "state_transition",
+      "created_timestamp": 1787627983287,
+      "former_state_name": "Discovery",
+      "new_state_name": "Closer"
+    },
+    {
+      "message_id": "message_95c4696a5aec3eff1e972a45",
+      "role": "agent",
+      "created_timestamp": 1787627985320,
+      "content": "Got it, so they’re just disappearing.  \n\nYes—when it’s set up right, we’re typically recovering 40–60% of those missed calls into booked appointments or solid leads, and you get a text with the details so you can follow up if needed.  \n\nMind if I sanity-check the cost of those missed calls with your numbers real quick—like 20 seconds?",
+      "metadata": {
+        "response_id": 4
+      }
+    },
+    {
+      "message_id": "message_7c28c98bc79373f3adce72c1",
+      "role": "user",
+      "created_timestamp": 1787627987153,
+      "content": "Fine, but make it snappy. I already know each job is $900, so what's the recovery worth?"
+    },
+    {
+      "message_id": "message_d302eab9d7ab18b074a69c46",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787627988777,
+      "tool_call_id": "call_bR3VGbJ3TWXwWkUG8bFkPAc3",
+      "name": "extract_leak_inputs",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_0418746c239622d04d3e1a27",
+      "role": "tool_call_result",
+      "created_timestamp": 1787627988778,
+      "tool_call_id": "call_bR3VGbJ3TWXwWkUG8bFkPAc3",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"missed_calls_weekly\":\"25\",\"close_rate_pct\":\"45\",\"avg_job_value\":\"900\"}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_e1dd360c78113c9a9da209d9",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787627990197,
+      "tool_call_id": "call_CjHiCGCpFzraz1rKbGCDT85Q",
+      "name": "calculate_monthly_leak",
+      "arguments": "{}",
+      "type": "code"
+    },
+    {
+      "message_id": "message_e9c69f08391163603c8caf4d",
+      "role": "tool_call_result",
+      "created_timestamp": 1787627990357,
+      "tool_call_id": "call_CjHiCGCpFzraz1rKbGCDT85Q",
+      "content": "{\"ok\":true,\"weekly_leak\":\"10125\",\"monthly_leak\":\"43800\",\"inputs_used\":{\"missed_calls_weekly\":25,\"close_rate_pct\":45,\"avg_job_value\":900}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_9896331a270bd548e2bd2368",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787627992356,
+      "tool_call_id": "call_SexR4c8lodTXX4wWov6O2AUV",
+      "name": "extract_closer_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_d8fa6aef2f6a8bd2020e119a",
+      "role": "tool_call_result",
+      "created_timestamp": 1787627992357,
+      "tool_call_id": "call_SexR4c8lodTXX4wWov6O2AUV",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"objection_type\":\"none\",\"interest_level\":\"high\",\"last_name\":\"\",\"monthly_leak\":\"$43,800/mo\",\"pain_points\":\"missing about 25 calls a week, callers mostly hang up instead of leaving voicemail\"}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_0b16d3d93aea71b1f2fb3223",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787627993498,
+      "tool_call_id": "call_WzAJ8yNigOtXyAQxGBihPSZz",
+      "name": "closer_completed",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_8488c59b1813f0da29ccb599",
+      "role": "tool_call_result",
+      "created_timestamp": 1787627993499,
+      "tool_call_id": "call_WzAJ8yNigOtXyAQxGBihPSZz",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"closer_completed\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_b8f15493793cc05d95fc8fa5",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787627994819,
+      "tool_call_id": "call_EQBRasxiTXMDvMeItnomn5KE",
+      "name": "transition_to_Offer",
+      "arguments": "{\"pain_points\":\"missing about 25 calls a week, callers mostly hang up instead of leaving voicemail\",\"closer_completed\":true,\"interest_level\":\"high\",\"industry\":\"unknown\"}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_1b4b483a7b6a7e4b7b39a04f",
+      "role": "state_transition",
+      "created_timestamp": 1787627994820,
+      "former_state_name": "Closer",
+      "new_state_name": "Offer"
+    },
+    {
+      "message_id": "message_d54709e1f8013484e33d18be",
+      "role": "agent",
+      "created_timestamp": 1787627997047,
+      "content": "Right—at your numbers, that’s about 43 grand a month walking away if you’re missing 25 calls a week and could close 45%.  \n\nSo… it’s a 20‑minute walkthrough where we plug in *your* numbers and show exactly how many of those we can realistically recover—what’s better for you this week, later today or tomorrow?",
+      "metadata": {
+        "response_id": 5
+      }
+    },
+    {
+      "message_id": "message_dc2887bc4f56ca504e8f09b4",
+      "role": "user",
+      "created_timestamp": 1787627999094,
+      "content": "Tomorrow morning, 8 AM sharp, Eastern. Make sure it's quick, I've got crews waiting. Number's +13055550003."
+    },
+    {
+      "message_id": "message_410d7349754a598921ee5e6c",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787628003178,
+      "tool_call_id": "call_vqBNP2Nmg1z7h4pFMqZncSA7",
+      "name": "extract_offer_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_7503a22c77171fc7e1e5434f",
+      "role": "tool_call_result",
+      "created_timestamp": 1787628003179,
+      "tool_call_id": "call_vqBNP2Nmg1z7h4pFMqZncSA7",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"livecall_agreed\":true,\"callback_requested\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_5bc8e4408bf844f894beac78",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787628004145,
+      "tool_call_id": "call_Qftz4YnxM8E6UScNpsMPwMJd",
+      "name": "offer_completed",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_66dd17750c728355ce827fe7",
+      "role": "tool_call_result",
+      "created_timestamp": 1787628004146,
+      "tool_call_id": "call_Qftz4YnxM8E6UScNpsMPwMJd",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"offer_completed\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_714f2d0a354b6d8ba95bf64b",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787628005094,
+      "tool_call_id": "call_7Wi7hryq3lbb8ig2MY1U03FB",
+      "name": "transition_to_contact_details",
+      "arguments": "{\"offer_completed\":true,\"livecall_agreed\":true}",
+      "is_state_transition": true
+    },
+    {
+      "message_id": "message_537c0803d949f9239d0c5d49",
+      "role": "state_transition",
+      "created_timestamp": 1787628005095,
+      "former_state_name": "Offer",
+      "new_state_name": "contact_details"
+    },
+    {
+      "message_id": "message_0cf87484e5831ab4fd780fa3",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787628006779,
+      "tool_call_id": "call_cQOCOU6je3YfGOXIxyqposER",
+      "name": "extract_reach_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_cfd1238be499dc342d3bf711",
+      "role": "tool_call_result",
+      "created_timestamp": 1787628006780,
+      "tool_call_id": "call_cQOCOU6je3YfGOXIxyqposER",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"callback_number\":\"+13055550003\",\"is_calling_best_number\":true}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_678a50ae883508e5736cbec8",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787628008353,
+      "tool_call_id": "call_G6Zxhu8gfwDZM06uGxyXFWGK",
+      "name": "extract_contact_timezone",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_79493d21f6388a2fa476b71e",
+      "role": "tool_call_result",
+      "created_timestamp": 1787628008354,
+      "tool_call_id": "call_G6Zxhu8gfwDZM06uGxyXFWGK",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"prospect_timezone\":\"America/New_York\"}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_9bbe96b54d46830aa081e8a7",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787628009429,
+      "tool_call_id": "call_tr8sBlnuWsukoptgze0HEWmg",
+      "name": "contact_details_completed",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_69201c265613cb68ee6ccf7b",
+      "role": "tool_call_result",
+      "created_timestamp": 1787628009430,
+      "tool_call_id": "call_tr8sBlnuWsukoptgze0HEWmg",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"contact_details_completed\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_43f61805e68dacba9779040f",
+      "role": "agent",
+      "created_timestamp": 1787628011359,
+      "content": "Got it, tomorrow at 8 AM Eastern and we’ll keep it tight so you can get back to your crews.  \n\nQuick thing so we can lock this in—what’s your first name?",
+      "metadata": {
+        "response_id": 6
+      }
+    },
+    {
+      "message_id": "message_823eef7596c592fdd402758a",
+      "role": "user",
+      "created_timestamp": 1787628013287,
+      "content": "Boris. Make sure everything's ready. I don't have time for any delays."
+    },
+    {
+      "message_id": "message_dfef2f4c78cb5fc04985928e",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787628014777,
+      "tool_call_id": "call_Z6QRnpXqBP83XPc3DNoQ9pF3",
+      "name": "extract_person_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_505d4724853065f12ba98dc5",
+      "role": "tool_call_result",
+      "created_timestamp": 1787628014778,
+      "tool_call_id": "call_Z6QRnpXqBP83XPc3DNoQ9pF3",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"first_name\":\"Boris\",\"last_name\":\"\",\"company_name\":\"\"}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_35b33214f1fc78a8b35f53ae",
+      "role": "agent",
+      "created_timestamp": 1787628016072,
+      "content": "Got it, Boris.  \n\nQuick one—what’s your last name?",
+      "metadata": {
+        "response_id": 7
+      }
+    },
+    {
+      "message_id": "message_7a29724ea211f7082282046e",
+      "role": "user",
+      "created_timestamp": 1787628018807,
+      "content": "Petrov. Now, that's it. See you tomorrow. I have machines running, got to go."
+    },
+    {
+      "message_id": "message_3368dd43ac79f863585b5d93",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787628020170,
+      "tool_call_id": "call_fyYiomZrzuJXfI0xSDJNS8bE",
+      "name": "extract_person_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_3249521907d9842587dd2cb7",
+      "role": "tool_call_result",
+      "created_timestamp": 1787628020171,
+      "tool_call_id": "call_fyYiomZrzuJXfI0xSDJNS8bE",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"first_name\":\"Boris\",\"last_name\":\"Petrov\",\"company_name\":\"\"}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_382b4826adc84c40a16e6b94",
+      "role": "agent",
+      "created_timestamp": 1787628022254,
+      "content": "Got it, Boris Petrov. You’re all set for tomorrow at 8 AM Eastern, and we’ll keep it tight so you can get back to your crews. We’ll call you on the number you gave, no delays. Talk tomorrow.",
+      "metadata": {
+        "response_id": 8
+      }
+    },
+    {
+      "message_id": "message_691bebe2138b1c13d5feb9f6",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1787628022255,
+      "tool_call_id": "call_yepQqC9Oiq8Ymdkya51osrrP",
+      "name": "end_call",
+      "arguments": "{\"execution_message\":\"Got it, Boris Petrov. You’re all set for tomorrow at 8 AM Eastern, and we’ll keep it tight so you can get back to your crews. We’ll call you on the number you gave, no delays. Talk tomorrow.\"}",
+      "type": "end_call"
+    }
+  ],
+  "knowledge_base_retrieved_contents_url": "https://dxc03zgurdly9.cloudfront.net/3f003761ade513c4eb3044d33b976a8215ed46039a1c2c8d011776e713b7eb88/knowledge_base_retrieved_contents.json",
+  "chat_cost": {
+    "product_costs": [
+      {
+        "cost": 10.4,
+        "product": "gpt_5_1_text_testing",
+        "unit_price": 1.3
+      },
+      {
+        "cost": 1.5,
+        "product": "gpt_4_1_text_testing",
+        "unit_price": 1.5
+      }
+    ],
+    "combined_cost": 11.9
+  },
+  "chat_analysis": {
+    "chat_summary": "The user, Boris Petrov, urgently inquired about a service to help recover missed calls while on a job site. The agent provided concise information about the solution, estimated costs, and potential recovery rates, then scheduled a follow-up call for the next morning at 8 AM Eastern. The user's contact details were confirmed and the call was efficiently concluded as requested.",
+    "user_sentiment": "Neutral",
+    "custom_analysis_data": {},
+    "chat_successful": true
+  },
+  "data_storage_setting": "everything"
+}

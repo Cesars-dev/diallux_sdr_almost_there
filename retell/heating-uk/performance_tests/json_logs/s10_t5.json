@@ -1,0 +1,60 @@
+{
+  "scenario": 10,
+  "turn": 5,
+  "chat_id": "chat_a5815d084aa7f0ac9dc5f01f123",
+  "caller_message": "Yes, book it",
+  "agent_messages": [
+    {
+      "message_id": "message_807fd4b76edbbfab51a77bb7",
+      "role": "agent",
+      "created_timestamp": 1784639553283,
+      "content": "Right, Robert \u2014 Wednesday between half four and seven at 25 Acacia Gardens, Newcastle \u2014 postcode N-E-4 4-D-D.",
+      "metadata": {
+        "response_id": 7
+      }
+    },
+    {
+      "message_id": "message_06c69ea9b481227700ef192a",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639553284,
+      "tool_call_id": "call_0uNLrAO9ypzCDedyJeSBgayZ",
+      "name": "book_calendar",
+      "arguments": "{\"time\":\"2026-07-22T16:30:00\",\"timezone\":\"Europe/London\",\"name\":\"Robert\",\"email\":\"jaydiallux@gmail.com\",\"attendeePhoneNumber\":null,\"title\":\" \u2014 Robert\",\"notes\":\"CUSTOMER: Robert | ADDRESS: 25 Acacia Gardens, Newcastle, NE4 4DD | PHONE: {{user_number}} | PROBLEM: Annual Boiler Service | SYMPTOMS: Annual service requested\",\"guests\":null,\"rescheduleReason\":null,\"execution_message\":\"Right, I\u2019m getting that booked in now.\"}",
+      "type": "book_appointment_cal"
+    },
+    {
+      "message_id": "message_15a4452db6a24429229b7ee5",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639558135,
+      "tool_call_id": "call_0uNLrAO9ypzCDedyJeSBgayZ",
+      "content": "{\"status\":\"Successfully booked an appointment.\",\"booking_id\":22744112,\"booking_uid\":\"2hT4MgMWFkjoAPjpLufVDK\"}",
+      "successful": true
+    },
+    {
+      "message_id": "message_f6ee6626aa7c0387321e5890",
+      "role": "tool_call_invocation",
+      "created_timestamp": 1784639561925,
+      "tool_call_id": "call_pFrINPipEFP0feai8JRrIyqI",
+      "name": "extract_user_details",
+      "arguments": "",
+      "type": "extract_dynamic_variable"
+    },
+    {
+      "message_id": "message_b145caec00cbe4c9361bb9ab",
+      "role": "tool_call_result",
+      "created_timestamp": 1784639561926,
+      "tool_call_id": "call_pFrINPipEFP0feai8JRrIyqI",
+      "content": "{\"status\":\"dynamic variable extracted\",\"variables\":{\"customer_name\":\"Robert\",\"classified_intent\":\"Annual Boiler Service\",\"greeting_exchanged\":true,\"intent_clear\":true,\"intent_confirmed\":true,\"past_customer\":true,\"address_house_number\":\"25\",\"address_street\":\"Acacia Gardens\",\"address_postcode\":\"NE4 4DD\",\"address_city\":\"Newcastle\",\"callback_requested\":false,\"address_incomplete\":false}}",
+      "successful": true
+    },
+    {
+      "message_id": "message_f73dfeb88161bd306c235294",
+      "role": "agent",
+      "created_timestamp": 1784639563825,
+      "content": "Brilliant, you're booked in. Anything else I can help with?",
+      "metadata": {
+        "response_id": 8
+      }
+    }
+  ]
+}
